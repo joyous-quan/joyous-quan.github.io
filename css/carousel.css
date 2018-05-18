@@ -12,6 +12,15 @@ a:hover{  text-decoration:none;  }
 input{border:none;outline:none;}
 img{border:none}
 
+
+header {height:60px; width:100%;background: #323232;overflow:hidden}
+header div {width:80%;margin:0 auto;}
+header div ul{float:right;}
+header div ul li,header div p.left {float:left;}
+header div ul li a {text-decoration: none; padding:0 40px;line-height:60px;color:#fff;font-size: 18px;}
+header div ul li a:hover {color:#fff;}
+/* end header */
+
 .lb_gl{margin-top: 60px;height:100%;}
 .container{width: 1024px;margin:0 auto;position: relative;}
 .pictureSlider{height: 518px;margin-bottom: 24px;}

@@ -8,6 +8,14 @@
 	<title>图片瀑布流特效</title>
 	<style>
           * { margin: 0; }
+          
+          header {height:60px; width:100%;background: #323232;overflow:hidden}
+          header div {width:80%;margin:0 auto;}
+          header div ul{float:right;}
+          header div ul li,header div p.left {float:left;}
+          header div ul li a {text-decoration: none; padding:0 40px;line-height:60px;color:#fff;font-size: 18px;}
+          header div ul li a:hover {color:#fff;}
+          /* end header */
           .jq22-container { margin-top: 50px; }
           #div1 { margin: auto; position: relative; }
           .box { float: left; padding: 10px; border: 1px solid #ccc; background: #f7f7f7; box-shadow: 0 0 8px #ccc; }
@@ -16,31 +24,44 @@
           </style>
 	</head>
 	<body>
-<div class="jq22-container">
-      <div class="jq22-content bgcolor-3">
-    <div id="div1">
-          <div class="box"><img src="../images/01.jpg" alt=""></div>
-          <div class="box"><img src="../images/02.jpg" alt=""></div>
-          <div class="box"><img src="../images/03.jpg" alt=""></div>
-          <div class="box"><img src="../images/04.jpg" alt=""></div>
-          <div class="box"><img src="../images/05.jpg" alt=""></div>
-          <div class="box"><img src="../images/06.jpg" alt=""></div>
-          <div class="box"><img src="../images/07.jpg" alt=""></div>
-          <div class="box"><img src="../images/08.jpg" alt=""></div>
-          <div class="box"><img src="../images/02.jpg" alt=""></div>
-          <div class="box"><img src="../images/03.jpg" alt=""></div>
-          <div class="box"><img src="../images/04.jpg" alt=""></div>
-          <div class="box"><img src="../images/05.jpg" alt=""></div>
-          <div class="box"><img src="../images/06.jpg" alt=""></div>
-          <div class="box"><img src="../images/07.jpg" alt=""></div>
-          <div class="box"><img src="../images/06.jpg" alt=""></div>
-          <div class="box"><img src="../images/07.jpg" alt=""></div>
-          <div class="box"><img src="../images/08.jpg" alt=""></div>
-          <div class="box"><img src="../images/02.jpg" alt=""></div>
-          <div class="box"><img src="../images/03.jpg" alt=""></div>
-          <div class="box"><img src="../images/04.jpg" alt=""></div>
-        </div>
-  </div>
+     <header>
+          <div>
+               <p class="left"></p>
+               <ul>
+                    <li><a href="../index.html">Home</a></li>
+                   <li><a href="show.html">Show</a></li>
+                   <li><a href="carousel.html">Carousel</a></li>
+                   <li><a href="zoom.html">Zoom</a></li>
+
+                   <li><a href="flowLoad.html">Flow</a></li>
+               </ul>
+          </div>         
+     </header>
+     <div class="jq22-container">
+          <div class="jq22-content bgcolor-3">
+               <div id="div1">
+                    <div class="box"><img src="../images/01.jpg" alt=""></div>
+                    <div class="box"><img src="../images/02.jpg" alt=""></div>
+                    <div class="box"><img src="../images/03.jpg" alt=""></div>
+                    <div class="box"><img src="../images/04.jpg" alt=""></div>
+                    <div class="box"><img src="../images/05.jpg" alt=""></div>
+                    <div class="box"><img src="../images/06.jpg" alt=""></div>
+                    <div class="box"><img src="../images/07.jpg" alt=""></div>
+                    <div class="box"><img src="../images/08.jpg" alt=""></div>
+                    <div class="box"><img src="../images/02.jpg" alt=""></div>
+                    <div class="box"><img src="../images/03.jpg" alt=""></div>
+                    <div class="box"><img src="../images/04.jpg" alt=""></div>
+                    <div class="box"><img src="../images/05.jpg" alt=""></div>
+                    <div class="box"><img src="../images/06.jpg" alt=""></div>
+                    <div class="box"><img src="../images/07.jpg" alt=""></div>
+                    <div class="box"><img src="../images/06.jpg" alt=""></div>
+                    <div class="box"><img src="../images/07.jpg" alt=""></div>
+                    <div class="box"><img src="../images/08.jpg" alt=""></div>
+                    <div class="box"><img src="../images/02.jpg" alt=""></div>
+                    <div class="box"><img src="../images/03.jpg" alt=""></div>
+                    <div class="box"><img src="../images/04.jpg" alt=""></div>
+               </div>
+          </div>
     </div>
 <script src="../js/jquery.min.js"></script> 
 <script src="../js/jquery.waterfall.js"></script> 
