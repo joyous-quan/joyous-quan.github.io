@@ -23,11 +23,7 @@ body{
     box-sizing: border-box; /*W3C标准*/
     background: #eee;
 }
-@media (max-width:960px){
-	.xBody{min-width: 740px;}
-     article {min-width: 500px;}
-     header div {min-width: 740px;}	
-}
+
 
 .xBody {
 	width:80%;
@@ -40,7 +36,7 @@ body{
 header {height:60px; width:100%;background: #323232;overflow:hidden}
 header div {width:80%;margin:0 auto;}
 header div ul{float:right;}
-header div ul li,header div p.left {float:left;}
+header div ul li,header div p.left {list-style:none;float:left;}
 header div ul li a {text-decoration: none; padding:0 40px;line-height:60px;color:#fff;font-size: 18px;}
 header div ul li a:hover {color:#fff;}
 /* end header */
@@ -53,4 +49,21 @@ aside dl dd a {text-decoration:none; font-size: 12px; color:#777;}
 aside dl dt img {height:100px;width:100px;border-radius: 50px;margin-bottom:16px;margin-top:20px;}
 article {width: calc(100% - 240px); float:left;background:#fff;}
 
+@media (max-width:960px){
+	.xBody{min-width: 740px;}
+     article {min-width: 500px;}
+     header div {min-width: 740px;}	
+}
 
+@media (max-width:414px){
+	.xBody{min-width: 400px;}
+     article {min-width: 400px;margin-top:15px;}
+     header div {min-width: 400px;}	
+     aside {width:400px;min-height:200px;background:#fff;padding-bottom:10px; float:left;background:#fff;}
+	header {height:60px; width:100%;background: #323232;overflow:hidden;}
+header div {width:80%;margin:0 auto;}
+header div ul{float:right;}
+header div ul li,header div p.left {list-style:none;float:left;}
+header div ul li a {text-decoration: none; padding:0 10px;line-height:60px;color:#fff;font-size: 14px;}
+
+}

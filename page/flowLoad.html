@@ -12,7 +12,7 @@
           header {height:60px; width:100%;background: #323232;overflow:hidden}
           header div {width:80%;margin:0 auto;}
           header div ul{float:right;}
-          header div ul li,header div p.left {float:left;}
+          header div ul li,header div p.left {list-style:none;float:left;}
           header div ul li a {text-decoration: none; padding:0 40px;line-height:60px;color:#fff;font-size: 18px;}
           header div ul li a:hover {color:#fff;}
           /* end header */
@@ -21,6 +21,16 @@
           .box { float: left; padding: 10px; border: 1px solid #ccc; background: #f7f7f7; box-shadow: 0 0 8px #ccc; }
           .box:hover { box-shadow: 0 0 10px #999; }
           .box img { width: 240px; }
+          @media (max-width:414px){
+               header div {min-width: 400px;}     
+               header {height:60px; width:100%;background: #323232;overflow:hidden;}
+               header div {width:80%;margin:0 auto;}
+               header div ul{float:right;}
+               header div ul li,header div p.left {list-style:none;float:left;}
+               header div ul li a {text-decoration: none; padding:0 10px;line-height:60px;color:#fff;font-size: 14px;}
+               .jq22-container .jq22-content{margin-left:5px;}
+               .box img { width: 160px; }
+          }
           </style>
 	</head>
 	<body>

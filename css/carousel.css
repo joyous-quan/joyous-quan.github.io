@@ -1,5 +1,6 @@
 body{font-family: microsoft yahei,Arial;margin:0;padding:0;
 	background:#c6b0a5;
+	width:100%;
 }
 h1,h2,h3,h4,h5,h6,ol,li,ul,p,dl,dt,dd{padding: 0;margin:0}
 ul,ol,li,dl,dt,dd{text-decoration: none;list-style: none}
@@ -14,14 +15,14 @@ img{border:none}
 
 
 header {height:60px; width:100%;background: #323232;overflow:hidden}
-header div {width:80%;margin:0 auto;}
+header div {margin:0 auto;}
 header div ul{float:right;}
-header div ul li,header div p.left {float:left;}
+header div ul li,header div p.left {list-style:none;float:left;}
 header div ul li a {text-decoration: none; padding:0 40px;line-height:60px;color:#fff;font-size: 18px;}
 header div ul li a:hover {color:#fff;}
 /* end header */
 
-.lb_gl{margin-top: 60px;height:100%;}
+.lb_gl{margin-top: 60px;height:100%;overflow: hidden;}
 .container{width: 1024px;margin:0 auto;position: relative;}
 .pictureSlider{height: 518px;margin-bottom: 24px;}
 .poster-item{background: #fff;height: 453px;width:336px;border-radius: 10px;padding:45px 23px 20px 23px;
@@ -41,3 +42,14 @@ header div ul li a:hover {color:#fff;}
 .in_page>img{width: 40px;height: 40px;}
 
 .check_more{width: 180px;height: 50px;line-height: 50px;text-align: center;color:#fff;background: #bc241d;margin:0 auto;display: block;}
+
+
+@media (max-width:414px){
+header div {min-width: 400px;}	
+header {height:60px; width:100%;background: #323232;overflow:hidden;}
+header div {width:80%;margin:0 auto;}
+header div ul{float:right;}
+header div ul li,header div p.left {list-style:none;float:left;}
+header div ul li a {text-decoration: none; padding:0 10px;line-height:60px;color:#fff;font-size: 14px;}
+
+}

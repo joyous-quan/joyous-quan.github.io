@@ -24,7 +24,7 @@ body{
     background: #eee;
 }
 
-header div img {width:100%;}
+header div img {height:100%; width:100%;}
 section div.title {width:85%;margin:0 auto; height:80px;line-height:90px;text-align:center;
 	font-size:20px;color:#aaa;border-bottom:1px #ddd solid;}
 section div.content{width:85%;margin:0 auto;}
@@ -38,3 +38,7 @@ section div.content{width:85%;margin:0 auto;}
 	-moz-transition: width 2s, height 2s, -moz-transform 2s;
 	-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
 	-o-transition: width 2s, height 2s,-o-transform 2s;}
+
+@media (max-width:414px){
+	header div img {height:100%; width:100%;}
+}
