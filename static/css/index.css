@@ -141,7 +141,7 @@ footer {height:100px;background: #111;}
 	/* nav */
 	.nav .layout {width:100%;}
 	.nav_header {padding-left:20px;}
-    .nav_content ul{display:flex;flex-direction:column;background:#111; }
+    .nav_content ul{display:flex;flex-direction:column;background:#000; }
     .nav_content .hidden_nav {display:block;}
 	.nav_content .nav_ul {display:none;}
     .hidden_nav li {width:90px;text-align:center;}
