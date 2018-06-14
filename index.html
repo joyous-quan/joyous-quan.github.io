@@ -2,57 +2,323 @@
 <html>
 <head>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="charset=utf-8">
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
-    <title></title>
+    <title>mobile test</title>
 
     <link rel="stylesheet" type="text/css" href="static/iconfont/iconfont.css">
     <link rel="stylesheet" type="text/css" href="static/css/index.css">
     <script type="text/javascript" src="static/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="static/js/index.js"></script>
-    <script type="text/javascript" src="static/js/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="static/js/sectionscroll.js"></script>
 
 </head>
 <body>
     <div class="top"><i class="iconfont icon-top"></i></div>
-    <div id="section1" class="header section section1">
-        <div class="layout sectionWrapper section1Wrapper fadeInDown">
-            <div class="header_nav">
+    <nav class="nav">
+        <div class="layout nav_content">
+            <div class="nav_header top">
+                <i class="iconfont el-icon-mobile-shouye"></i>
+                <a class="" href="javascript:;">AI应用市场</a>
+            </div>
+            <div>
+                <ul class="hidden_nav">
+                    <li><i class="iconfont el-icon-mobile-caidan1"></i></li>
+                </ul>
                 <ul class="nav_ul">
-                    <li class="scroll_li"><a href=" ">首页</a></li>
-                    <li class="scroll_li"><a href="javascript:;">目录一</a></li>
-                    <li class="scroll_li"><a href="javascript:;">目录二</a></li>
-                    <li class="scroll_li"><a href="javascript:;">目录三</a></li>
-                    <li class="scroll_li"><a href="javascript:;">目录四</a></li>
+                    <li class="scroll_li"><a href="javascript:;">首页</a></li>
+                    <li class="scroll_li"><a href="javascript:;">应用案例</a></li>
+                    <li class="scroll_li"><a href="javascript:;">入驻机构</a></li>
+                    <li class="scroll_li"><a href="javascript:;">合作伙伴</a></li>
+                    <li class="scroll_li"><a href="javascript:;">关于我们</a></li>
+                    <li class="scroll_li"><a href="javascript:;">联系方式</a></li>
                 </ul>
             </div>
-            <div class="header_con">
-                <h1></h1>
-                <p></p>
-                <div></div>
+        </div>
+    </nav>
+    <header id="section1" class="header section section1">
+        <ul class="header_content">
+            <li><h1><span>AILOB</span>-AI应用市场</h1></li>
+            <li>喜欢技术，热爱挑战</li>
+            <li>
+                <p><span><i class="iconfont el-icon-mobile-manage"></i></span></p>
+            </li>
+        </ul>
+    </header>
+    <div id="section2" class="case section section2">
+        <div class="layout case_content">
+            <div class="case_title">
+                <h2>应用案例<br>
+                    <span class="underline"></span>
+                </h2>
+                <p>主要涉及电商，金融，家装领域，包括PC端，手机端，微信端，移动APP端等等，主要技术是HTML+CSS+JS</p>
+            </div>
+            <ul class="cat">
+                <li><a href="#" data-filter="*" class="active">所有</a></li>
+                <li><a href="#" data-filter=".web">PC端</a></li>
+                <li><a href="#" data-filter=".app">移动端</a></li>
+                <li><a href="#" data-filter=".branding">响应式</a></li>
+            </ul>
+            <div class="row">
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                                <a href="http://www.ogmall.com/" target="_blank" title="欧工商城">欧工商城</a>
+                            </li>
+                            <li class="b">技术：html+css+js</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/01_002.jpg" class="img-responsive" alt="欧工商城">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                                <a href="http://www.caishulicai.com/" target="_blank" title="财树理财">财树理财</a>
+                            </li>
+                            <li class="b">技术：html+css+JQuery</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/02_002.jpg" class="img-responsive" alt="财树理财">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                                <a href="http://it.youzewang.com/" target="_blank" title="IT技术之家">IT技术之家</a>
+                            </li>
+                            <li class="b">技术：Bootstrap+JQuery</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/03.jpg" class="img-responsive" alt="IT技术之家">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                               <a href="http://99jiyin.com/" target="_blank" title="久久基因">久久基因</a>
+                            </li>
+                            <li class="b">技术：Bootstrap+JQuery</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/04.jpg" class="img-responsive" alt="久久基因">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                                <a href="http://www.ogmall.com/" target="_blank" title="欧工商城">欧工商城</a>
+                            </li>
+                            <li class="b">技术：html+css+js</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/05.jpg" class="img-responsive" alt="欧工商城">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                                <a href="http://www.caishulicai.com/" target="_blank" title="财树理财">财树理财</a>
+                            </li>
+                            <li class="b">技术：html+css+JQuery</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/06.jpg" class="img-responsive" alt="财树理财">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                                <a href="http://it.youzewang.com/" target="_blank" title="IT技术之家">IT技术之家</a>
+                            </li>
+                            <li class="b">技术：Bootstrap+JQuery</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/07.jpg" class="img-responsive" alt="IT技术之家">
+                    </div>
+                    <div class="row_list">
+                        <div class="hover-bg">
+                        </div>
+                        <ul class="hover-text">
+                            <li class="a">
+                               <a href="http://99jiyin.com/" target="_blank" title="久久基因">久久基因</a>
+                            </li>
+                            <li class="b">技术：Bootstrap+JQuery</li>
+                            <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
+                        </ul>
+                        <img src="static/images/08.jpg" class="img-responsive" alt="久久基因">
+                    </div>
+                    
+                    
             </div>
         </div>
     </div>
-    <div id="section2" class="business section section2">
-        <div class="layout sectionWrapper section1Wrapper">
-            
+    <div id="section3" class="organization section section3">
+        <div class="layout organization_content">
+            <div class="organization_title">
+                <h2>入驻机构<br>
+                    <span class="underline"></span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="row_img"> 
+                    <img src="static/images/about.png" class="img-responsive"> 
+                </div>
+                <div class="row_article"> 
+                    <i style="padding-top:10px;" class="iconfont el-icon-mobile-other"></i>
+                    <div class="padding-left">
+                        <h4>杭州中科院某某某研究所</h4>
+                        <p>杭州中科院某某某研究所成立于1949年11月，为中国自然科学最高学术机构、科学技术最高咨询机构、自然科学与高技术综合研究发展中心。</p>
+                    </div>
+                    <i class="iconfont el-icon-mobile-other"></i>
+                    <div class="padding-left">
+                        <h4>北京市某某研究中心</h4>
+                        <p>杭州中科院某某某研究所成立于1949年11月，为中国自然科学最高学术机构、科学技术最高咨询机构、自然科学与高技术综合研究发展中心。</p>
+                    </div>
+                    <i class="iconfont el-icon-mobile-other"></i>
+                    <div class="padding-left">
+                        <h4>国家某某某安全信息中心</h4>
+                        <p>杭州中科院某某某研究所成立于1949年11月，为中国自然科学最高学术机构、科学技术最高咨询机构、自然科学与高技术综合研究发展中心。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="organization_partner">
+            <div class="layout">
+                <div class="partner-box">
+                    <i class="iconfont el-icon-mobile-shouye"></i>
+                    <span class="count">25</span>
+                    <h4>TIME OF ESTABLISHMENT</h4>
+                </div> 
+                <div class="partner-box">
+                    <i class="iconfont el-icon-mobile-huiyuan"></i>
+                    <span class="count">100000</span>
+                    <h4>APPLIED QUANTITY</h4>
+                </div>
+                <div class="partner-box">
+                    <i class="iconfont el-icon-mobile-share"></i>
+                    <span class="count">4800</span>
+                    <h4>ADMISSION AGENCY</h4>
+                </div>
+                <div class="partner-box">
+                    <i class="iconfont el-icon-mobile-manage"></i>
+                    <span class="count">20</span>
+                    <h4>COOPERATIVE ENTERPRISE</h4>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="section3" class="case section section3">
-        <div class="layout sectionWrapper section1Wrapper">
-            
+    <div id="section4" class="partner section section4">
+        <div class="layout">
+            <div class="case_title">
+                <h2>合作伙伴<br>
+                    <span class="underline"></span>
+                </h2>
+                <p>热爱AI，热爱AI技术，专注于AI领域技术开发和用户体验</p>
+            </div>
+            <div class="partner_content">
+                <dl>
+                    <dt><img src="static/images/02.jpg" alt=""></dt>
+                    <dd><h3>浙江理工大学</h3></dd>
+                    <dd>电子信息工程</dd>
+                    <dd>主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程</dd>
+                </dl>
+                <dl>
+                    <dt><img src="static/images/02.jpg" alt=""></dt>
+                    <dd><h3>浙江理工大学</h3></dd>
+                    <dd>电子信息工程</dd>
+                    <dd>主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程</dd>
+                </dl>
+                <dl>
+                    <dt><img src="static/images/02.jpg" alt=""></dt>
+                    <dd><h3>浙江理工大学</h3></dd>
+                    <dd>电子信息工程</dd>
+                    <dd>主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程</dd>
+                </dl>
+                <dl>
+                    <dt><img src="static/images/02.jpg" alt=""></dt>
+                    <dd><h3>浙江理工大学</h3></dd>
+                    <dd>电子信息工程</dd>
+                    <dd>主要学习编程语言，前端技术，网站制作和开发，大学期间做过很多项目，很喜欢编程</dd>
+                </dl>
+            </div>
         </div>
     </div>
-    <div id="section4" class="about section section4">
-        <div class="about_con sectionWrapper section1Wrapper">
-           
+    <div id="section5" class="about section section5">
+        <div class="layout">
+            <div class="case_title">
+                <h2>关于我们<br>
+                    <span class="underline"></span>
+                </h2>
+            </div>
+            <ul class="about_content">
+                <li>
+                    <p>热爱AI，热爱AI技术，专注于AI领域技术开发和用户体验</p>
+                    <p>热爱AI，热爱AI技术，专注于AI领域技术开发和用户体验</p>
+                </li>
+                <li class="display_none">
+                    <p>专注于AI领域技术开发和用户体验</p>
+                    <p>热爱AI，专注于AI领域技术开发和用户体验</p>
+                </li>
+            </ul>
+            <div class="change_btn">
+                <span class="active"></span>
+                <span></span>
+            </div>
         </div>
     </div>
-    <div id="section5" class="contact section section5">
-        <div class="layout sectionWrapper section1Wrapper">
-            
+    <div id="section6" class="contact section section6">
+        <div class="contact_content">
+            <div class="case_title">
+                <h2>联系方式<br>
+                    <span class="underline"></span>
+                </h2>
+            </div>           
+            <div class="contact_div">
+                <dl>
+                    <dt><i class="iconfont el-icon-mobile-coordinates"></i></dt>
+                    <dd>上海市某某区某某路XX弄xx号</dd>
+                </dl>
+                <dl>
+                    <dt><i class="iconfont el-icon-mobile-mail"></i></dt>
+                    <dd>XXXXXXXXX@qq.com</dd>
+                </dl>
+                <dl>
+                    <dt><i class="iconfont el-icon-mobile-kefu"></i></dt>
+                    <dd>QQ:xxxxxxxx</dd>
+                </dl>
+            </div>
+            <div class="underline"></div>
+            <div class="contact_meg">
+                <h2>给我发邮件</h2>
+                <ul class="contact_ipt">
+                    <li><input type="text" name="" placeholder="姓名"></li>
+                    
+                   <li><input type="text" name="" placeholder="邮箱"></li>
+                </ul>
+                <textarea  name="" placeholder="内容" rows="7"></textarea>
+                <p><button>确认发送</button></p>
+            </div>
+                
         </div>
     </div>
+    <footer>
+        <ul class="footer_content layout">
+            <li>Copyright © 2018 AILOB-AI应用市场</li>
+            <li>
+                <i class="iconfont el-icon-mobile-tubiao209"></i>
+                <i class="iconfont el-icon-mobile-weixin"></i>
+                <i class="iconfont el-icon-mobile-qq"></i>
+                <i class="iconfont el-icon-mobile-weibo"></i>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
