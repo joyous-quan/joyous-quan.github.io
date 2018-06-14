@@ -140,14 +140,13 @@ footer {height:100px;background: #111;}
 	.layout {width:96%;}
 	/* nav */
     .nav_content ul{display:flex;flex-direction:column;background:#111; }
+    .nav_content .hidden_nav {display:block;}
+	.nav_content .nav_ul {display:none;}
+    .hidden_nav li {width:90px;text-align:center;}
+	/* header */
     .header_content li h1 {font-size:36px;}
     .header_content li {font-size:14px;}
     .header_content li p {}
-    .nav_content .hidden_nav {display:block;}
-    .hidden_nav li {width:90px;text-align:center;}
-	.nav_content .nav_ul {display:none;}
-	/* header */
-    .contact_content {width:78%;}
     /* case */
     .case_content .row {justify-content:space-around;}
     .case_content .row .row_list {width:350px;margin-bottom:20px;}
@@ -160,17 +159,19 @@ footer {height:100px;background: #111;}
     .partner_content dl {width:45%;margin:20px;padding:0;}
     /* about */
     .about_content {width:90%;white-space:nowrap;}
+
     /* contact */
+    .contact_content {width:78%;}
     .contact_div {flex-direction: column;justify-content:space-around;align-items:center;}
     .contact_div dl {margin-bottom:25px;text-align:center;width:100%;color:#555;}
     .contact_ipt {flex-direction:column;}
     .contact_ipt li {width:100%;}
 	.contact_ipt li:first-child{margin-bottom:15px;}
-    footer {height:60px;}
 
+    footer {height:60px;}
 	.footer_content {line-height:60px;font-size:12px;}
 	.footer_content li i {font-size:16px;}
-	input {border-color:;}
+
 }
 @media screen and (min-width: 768px) and (max-width: 1267px) {
 	/* case */
@@ -185,15 +186,14 @@ footer {height:100px;background: #111;}
 	.layout {width:92%;}
 	/* nav */
 	/* header */
+	.header_content li h1 {font-size:60px;}
 	/* case */
     /* organization */
-
 	.organization .row {flex-direction:column;}
 	.organization .row .row_img img {width:400px;}
     /* partner */
     .partner_content dl {width:35%;margin-bottom:30px;}
     /* about */
-
     /* contact */
 	.contact_content {width:70%;}
 }
@@ -203,14 +203,12 @@ footer {height:100px;background: #111;}
 	/* header */
 	/* case */
     /* organization */
-
 	.organization .row {flex-direction:column;}
 	.organization .row .row_img img {width:500px;}
     /* partner */
     .partner_content dl {width:35%;margin-bottom:30px;}
     /* about */
     /* contact */
-
 	.contact_content {width:60%;}
 }
 @media(min-width:1200px) {
