@@ -66,4 +66,10 @@ $(function (){
         $('.about_content ol').animate({"right" :"0"});
     })
 
+
+
+
+
+
+
 });
