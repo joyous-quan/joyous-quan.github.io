@@ -151,11 +151,9 @@ footer {height:100px;background: #111;}
 
 	/* nav */
 	.nav .layout {width:100%;}
-<<<<<<< HEAD
+
 	.nav_header {padding-left:15px;}
-=======
-	.nav_header {padding-left:20px;}
->>>>>>> 885245bc0613fb43e1f3a73bb800eebc40a1557b
+
     .nav_content ul{display:flex;flex-direction:column;background:#000; }
     .nav_content .hidden_nav {display:block;}
 	.nav_content .nav_ul {display:none;}
