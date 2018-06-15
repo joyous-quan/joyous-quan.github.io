@@ -10,13 +10,11 @@ $(function (){
         $('html,body').animate({scrollTop:0}, 500);
     });
 
-    /*var my_height = $(window).height();
-    $('.section').css({
+    //header 自适应浏览器高度
+    var my_height = $(window).height();
+    $('.header').css({
          height : my_height + "px"
     })
-    console.log($(window).height());
-    console.log($('.section').height());*/
-
 
    /* $('.hidden_nav').click(function(){
         $(".nav_ul").toggle()
@@ -43,7 +41,7 @@ $(function (){
     })
     $('.cat .web').click(function(){
         $('.row .branding').hide(1000);
-        $('.row .web').show();
+        $('.row .web').show(500);
     })
     $('.cat .branding').click(function(){
         $('.row .web').hide(1000);

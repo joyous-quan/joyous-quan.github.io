@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
     <title>mobile test</title>
 
     <link rel="stylesheet" type="text/css" href="static/iconfont/iconfont.css">
-    <link rel="stylesheet" type="text/css" href="static/css/aui-slide.css">
+    <link rel="stylesheet" type="text/css" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/index.css">
-    <script type="text/javascript" src="static/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="static/js/index.js"></script>
+    <script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
 
 </head>
 <body>
@@ -38,11 +40,13 @@
     </nav>
     <header id="section1" class="header section section1">
         <ul class="header_content">
-            <li><h1><span>AILOB</span>-AI应用市场</h1></li>
-            <li>喜欢技术，热爱挑战</li>
-            <li>
-                <p><span><i class="iconfont el-icon-mobile-manage"></i></span></p>
-            </li>
+            <ol>
+                <li><h1><span>AILOB</span>-AI应用市场</h1></li>
+                <li>喜欢技术，热爱挑战</li>
+                <li class="last">
+                    <span><i class="iconfont el-icon-mobile-manage"></i></span>
+                </li>
+            </ol>
         </ul>
     </header>
     <div id="section2" class="case section section2">
@@ -60,6 +64,7 @@
                 <li><a href="javascript:;" class="branding" data-filter=".branding">响应式</a></li>
             </ul>
             <div class="row">
+                <div class="row_div">
                     <div class="row_list web">
                         <div class="hover-bg">
                         </div>
@@ -155,9 +160,8 @@
                             <li class="c"><i class="iconfont el-icon-mobile-search"></i></li> 
                         </ul>
                         <img src="static/images/08.jpg" class="img-responsive" alt="久久基因">
-                    </div>
-                    
-                    
+                    </div> 
+                </div>             
             </div>
         </div>
     </div>
@@ -263,19 +267,29 @@
                     <span class="underline"></span>
                 </h2>
             </div>
-            <div id="aui-slide" class="about_content">
-                <ol class="aui-slide-wrap">
-                    <li class="aui-slide-node bg-dark">
+            <div class="about_content">
+                <ol class="owl-carousel owl-theme">
+                    <li class="item">
                         <p>热爱AI，热爱AI技术，专注于AI领域技术开发和用户体验</p>
                         <p>热爱AI，热爱AI技术，专注于AI领域技术开发和用户体验</p>
                     </li>
-                    <li class="aui-slide-node bg-dark">
+                    <li class="item">
                         <p>专注于AI领域技术开发和用户体验</p>
                         <p>热爱AI，专注于AI领域技术开发和用户体验</p>
                     </li>
                 </ol>
-                <div class="aui-slide-page-wrap"><!--分页容器--></div>
             </div>
+            <script>
+                $('.owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    responsive:{
+                        0:{
+                            items:1
+                        }
+                    }
+                })
+            </script>
         </div>
     </div>
     <div id="section6" class="contact section section6">
@@ -314,6 +328,7 @@
                 
         </div>
     </div>
+
     <footer>
         <ul class="footer_content layout">
             <li>Copyright © 2018 AILOB-AI应用市场</li>
@@ -326,18 +341,5 @@
         </ul>
     </footer>
 </body>
-<script type="text/javascript" src="static/js/aui-slide.js"></script>
-<script type="text/javascript">
-    var slide = new auiSlide({
-        container:document.getElementById("aui-slide"),
-        // "width":300,
-        "height":170,
-        "speed":500,
-        "autoPlay": 0, //自动播放
-        "loop":true,
-        "pageShow":true,
-        "pageStyle":'dot',
-        'dotPosition':'center'
-    })
-</script>
+
 </html>
