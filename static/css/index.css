@@ -33,7 +33,7 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
 .header_content li {color:#fff; font-size:18px;margin-top:10px;}
 .header_content li h1 {color:#F4D03F; font-size:70px;white-space:nowrap;}
 .header_content li h1 span {color:#fff;}
-.header_content ol .last {margin-top:50px;display:inline-block;text-align:center; height:70px; width:70px; 
+.header_content ol .last {margin-top:50px;display:inline-block;box-sizing:border-box;text-align:center; height:70px; width:70px; 
 		line-height:70px;border:2px solid rgba(255,255,255,.2); border-radius:70px;}
 .header_content ol .last span {display:inline-block;width:100%;height:100%;}
 .header_content ol .last span .iconfont {font-size: 26px; color:#F4D03F;}
