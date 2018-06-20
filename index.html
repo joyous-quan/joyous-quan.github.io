@@ -373,17 +373,4 @@ $(function(){
 
 </script>
 
-<script type="text/javascript">
-window.onload=function(){
-    var my_nav_ul = document.getElementById("my_nav_ul");
-    var nav_ul = document.getElementById("nav_ul")
-    document.addEventListener("click",function(){
-        nav_ul.style.display="none";
-    });
-   my_nav_ul.addEventListener("click",function(event){
-        event=event||window.event;
-        event.stopPropagation();
-    });
-};
-</script>
 </html>
