@@ -12,7 +12,7 @@ $(function (){
     //nav 点击切换目录
     $('.scroll_li').click(function (){
         var index = $(this).index();
-        var target = $('.section').eq(index).offset().top - 50;
+        var target = $('.section').eq(index).offset().top - 49;
         $('html,body').animate({scrollTop:target}, 500);
     });
 
@@ -24,16 +24,7 @@ $(function (){
         $('html,body').animate({scrollTop:$('.section2').offset().top}, 500);
     })
 
-    //header 自适应浏览器高度
-    var my_height = $(window).height();
-    $('.header').css({
-         height : my_height + "px"
-    })
-
-   /* $('.hidden_nav').click(function(){
-        $(".nav_ul").toggle()
-    }*/
-
+   
     //nav 显示 隐藏
     $('.hidden_nav').click(function(){
         if($(".nav_ul").css("display")=='none'){
