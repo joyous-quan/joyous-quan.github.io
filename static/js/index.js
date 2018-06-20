@@ -1,14 +1,28 @@
 $(function (){
+    //nav 效果
+    $(window).scroll(function() {
+        if ($(".nav").offset().top > 50) {
+            $(".nav").addClass("top-nav-collapse");
+        } else {
+            $(".nav").removeClass("top-nav-collapse");
+        }
+    });
+
+
     //nav 点击切换目录
     $('.scroll_li').click(function (){
         var index = $(this).index();
         var target = $('.section').eq(index).offset().top - 50;
         $('html,body').animate({scrollTop:target}, 500);
     });
-    //
+
     $('.top').click(function (){
         $('html,body').animate({scrollTop:0}, 500);
     });
+
+    $('.last').click(function(){
+        $('html,body').animate({scrollTop:$('.section2').offset().top}, 500);
+    })
 
     //header 自适应浏览器高度
     var my_height = $(window).height();
@@ -29,47 +43,39 @@ $(function (){
         }
     })
 
-    //
-    $('.cat li a').click(function(){
+
+    // Isotope Filter
+    var $container = $('.portfolio-items');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+    $('.cat li a').click(function() {
+        $('.cat .active').removeClass('active');
         $(this).addClass('active');
-        $(this).parent().siblings().find('a').removeClass('active');
-
-    })
-
-    $('.cat .all').click(function(){
-        $('.row_list').show(1000);
-    })
-    $('.cat .web').click(function(){
-        $('.row .branding').hide(1000);
-        $('.row .web').show(500);
-    })
-    $('.cat .branding').click(function(){
-        $('.row .web').hide(1000);
-        $('.row .branding').show(1000);
-    })
-    $('.cat .app').click(function(){
-        $('.row .web').hide(1000);
-        $('.row .branding').hide(1000);
-        $('.row .app').show(1000);
-    })
-
-    //
-    $('.change_btn span').click(function(){
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-    })
-    $('.change_btn .pre').click(function(){
-        $('.about_content ol').animate({"left" :"0"});
-    })
-
-    $('.change_btn .next').click(function(){
-        $('.about_content ol').animate({"right" :"0"});
-    })
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        return false;
+    });
 
 
-
-
-
+    //数字
+    $('.count').countUp({
+        delay: 10,
+        time: 2000
+    });
+   
 
 
 });
