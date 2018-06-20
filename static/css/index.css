@@ -152,7 +152,7 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
 .organization .organization_content {min-height:620px;} 
 .organization .row {-webkit-display:flex; display:flex;padding-top:10px;}
 .organization .row .row_img img {width:555px;}
-.organization .row_article {text-align:left;}
+.organization .row_article {text-align:left;margin-top:15px;}
 .organization .row_article .padding-left {padding-left:50px;padding-right:10px;}
 .organization .row_article .padding-left h4{margin:10px 0; font-size:18px;font-weight:normal;}
 .organization .row_article .padding-left p {margin:20px 0 30px;color:#444;}
