@@ -12,7 +12,7 @@ $(function (){
     //nav 点击切换目录
     $('.scroll_li').click(function (){
         var index = $(this).index();
-        var target = $('.section').eq(index).offset().top - 50;
+        var target = $('.section').eq(index).offset().top - 49;
         $('html,body').animate({scrollTop:target}, 500);
     });
 
