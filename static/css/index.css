@@ -302,6 +302,7 @@ footer {min-height:50px;background: #111;}
 }
 
 @media(max-width:480px){
+	.header_content {padding-top:50px;}
 	.case_content .row .row_div .row_list {width:98%;margin-left:1%;margin-bottom:20px;}
 	.hover-text li a {font-size:22px;}
 	.partner_content dl {margin:20px 0;}
