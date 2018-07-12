@@ -5,23 +5,40 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
 
 
 /* header */
-.header {
-    display:table;min-height:300px; height:100%; width:100%; 
-   /*  background-image: url(../images/succulent.jpg); */
+.nav {
+    height:80px;width:100%;padding-top:20px; position:fixed;top:0;left:0; z-index:99;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -ms-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+.nav div a.Cachet {line-height: 80px;font-size:24px;color:#fff;}
+.hidden {display:none;}
+.nav-menu {display:flex;display: -webkit-flex; /* Safari */justify-content: space-between;} 
+.navbar li {float:left;padding:0 16px;line-height: 80px;}
+.navbar li a {color:#fff;font-weight:400;}
+.navbar li.active a {color:#89d9d0;}
+.top-nav {
+    background:#fff;
+    border-bottom:1px solid #e5e5e5;padding-top:0;
+}
+.top-nav div a.Cachet {color:#323232;}
+.top-nav li a {color:#323232;}
+.header-bg {
+    display:table;min-height:300px; height:100%; width:100%;
+    background-image: url(../images/header_bg.jpg); 
     background-position:center center ;
     background-size:cover;
-    position: relative;
-
 }
-.nav {height:80px;width:100%;}
-.nav div a.Cachet {line-height: 80px;font-size:24px;}
-.hidden {display:none;}
-.nav-menu {display:flex;justify-content: space-between;} 
-.navbar li {float:left;padding:0 16px;line-height: 80px}
-
+.header {
+    height:100%; width:100%;
+    background-color:rgba(0, 0, 0, 0.3); 
+    position: relative;
+}
 .header-text {
     width:100%; height:300px;
     position:absolute;
+    opacity: 1; 
     top:0; right:0; left:0; bottom:0;
     margin:auto;
     text-align: center;
@@ -29,8 +46,10 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
 .header-text h1 {
     font-size:60px;
     margin-top:60px;
+    color:#fff;
+    font-weight:200;
 }
-.text-p {font-size:18px;margin-top:16px;}
+.text-p {font-size:18px;margin-top:16px;color:#fff;}
 .text-p a {
     display:inline-block;
     width:280px; height:50px;
@@ -42,19 +61,65 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
     line-height: 50px;
     margin-top:25px;
 }
+.down a i{
+    display:inline-block;
+    color:#fff;
+    height:40px;width:40px;
+    font-size:24px;
+    margin-top:80px;
+}
+.hover:hover {
+    background:#6cd0c4;
+}
+/* css3 自动无限缩放 */ 
+@-webkit-keyframes scaleDraw {
+    0% {
+        -webkit-transform:scale(1);
+        -moz-transform:scale(1);
+        -ms-transform:scale(1);
+        transform:scale(1);
+    }
+    25% {
+        -webkit-transform:scale(1.2);
+        -moz-transform:scale(1.2);
+        -ms-transform:scale(1.2);
+        transform:scale(1.2);
+    }
+    50% {
+        -webkit-transform:scale(1);
+        -moz-transform:scale(1);
+        -ms-transform:scale(1);
+        transform:scale(1);
+    }
+    75% {
+        -webkit-transform:scale(1.2);
+        -moz-transform:scale(1.2);
+        -ms-transform:scale(1.2);
+        transform:scale(1.2);
+    }
+}
+.down a:hover i{
+    animation: scaleDraw 5s ease-in-out 0s infinite ;
+    -webkit-animation: scaleDraw 5s ease-in-out 0s infinite ;
+    -moz-animation: scaleDraw 5s ease-in-out 0s infinite ;
+    -ms-animation: scaleDraw 5s ease-in-out 0s infinite ;
+    -o-animation: scaleDraw 5s ease-in-out 0s infinite ;
+}
+
+
 
 /* features */
 .features {
-    min-height:500px;
+    min-height:700px;
 }
 .features h2 {
     text-align:center;
     font-size:26px;
-    margin:80px 0;
+    margin:100px 0 80px;
 }
 .features_dl {
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .features_dl dl {
     display:inline-block;
@@ -67,7 +132,6 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
 .features_dl dl h4{
     margin:20px 0 10px;
 }
-
 .features_dl dl span{
     display:inline-block;
     height:45px;width:45px;
@@ -76,62 +140,197 @@ html,body{width:100%;height:100%; font-size:14px;font-family: "微软雅黑";}
     text-align:center;
     color: #89d9d0;
     margin-top:20px;
+    transition: .5s all ease;
 }
-.features_dl dl span:hover {
+.features_dl dl:hover span {
     color:#fff;
     background: #89d9d0;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* css3 自动无限缩放 */
-/* 
-@-webkit-keyframes scaleDraw {
-    0% {
-        -webkit-transform:scale(1);
-        -moz-transform:scale(1);
-        -ms-transform:scale(1);
-        transform:scale(1);
-    }
-    25% {
-        -webkit-transform:scale(1.4);
-        -moz-transform:scale(1.4);
-        -ms-transform:scale(1.4);
-        transform:scale(1.4);
-    }
-    50% {
-        -webkit-transform:scale(1);
-        -moz-transform:scale(1);
-        -ms-transform:scale(1);
-        transform:scale(1);
-    }
-    75% {
-        -webkit-transform:scale(1.4);
-        -moz-transform:scale(1.4);
-        -ms-transform:scale(1.4);
-        transform:scale(1.4);
-    }
+/* about us */
+.about-dl {
+    background:#ececec;
 }
-.header ul p:hover span img{
-    animation: scaleDraw 5s ease-in-out 0s infinite ;
-    -webkit-animation: scaleDraw 5s ease-in-out 0s infinite ;
-    -moz-animation: scaleDraw 5s ease-in-out 0s infinite ;
-    -ms-animation: scaleDraw 5s ease-in-out 0s infinite ;
-    -o-animation: scaleDraw 5s ease-in-out 0s infinite ;
+.about-dl dl {
+    display:flex;
 }
-*/
+.about-dl dl dt,.about-dl dl dd { 
+    display:inline-block;
+    width:50%;
+}
+.about-dl dl dt img {width:100%;height:100%;}
+.about-dl dl dd {
+    padding:80px;
+    box-sizing: border-box;
+}
+.about-dl dl dd h2{
+    font-size:30px;
+    font-weight:200;
+    margin-bottom:25px;
+}
+.about-dl dl dd p {
+    font-size:16px;
+    font-weight:200;
+    color:#868e96;
+    line-height:28px;
+    margin-bottom:20px;
+}
+.about-dl dl dd a {
+    display:inline-block;
+    height:42px;width:140px;
+    border-radius: 4px;
+    line-height: 42px;
+    font-size:17px;
+    text-align:center;
+    color: #fff;
+    background:#89d9d0;
+}
+.about-dl dl .hide {
+    display:none;
+}
+
+
+/* Testimonial */
+
+.testimonial{
+    min-height:500px;
+    padding-bottom:80px;
+}
+.testimonial h2 {
+    text-align:center;
+    font-size:26px;
+    margin-top:80px;
+}
+.testimonial > p {
+    text-align:center;
+    font-size:18px;
+    line-height:30px;
+    margin-top:10px;
+    color:#868e96;
+}
+.testimonial-dl {
+    display:flex;
+    justify-content: space-between;
+    margin-top:120px;
+}
+.testimonial-dl dl {
+    display:inline-block;
+    width:30%;
+}
+.testimonial-dl dl p {
+    color:#495057;
+    margin-top:-10px;
+    line-height: 30px;
+}
+.testimonial-dl dl .quotes {
+    font-size:90px;
+    color:#adb5bd;
+    font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;   
+}
+.testimonial-dl dl dt img {
+    height:60px; width:60px;
+    border-radius: 60px;
+    margin-top:20px;
+}
+.testimonial-dl dl dt h4 {
+    line-height: 40px;
+}
+.testimonial-dl dl dt p {
+    color:#adb5bd;
+}
+
+
+/* footer */
+footer {
+    margin-top:80px;
+    border-top:1px solid #e5e5e5;
+}
+.footer {
+    margin-top:80px;
+    display:flex;
+    justify-content: space-around;
+}
+.footer ul {
+    width:25%;
+}
+
+.footer ul li {
+    width:100%;
+    text-align:center;
+    line-height: 30px;
+}
+.footer ul li a {
+    color:#89d9d0;
+}
+.footer ul li:hover a {
+    color:#6cd0c4;
+}
+.copyright {
+    text-align: center;
+    color:#adb5bd;
+    margin:60px 0;
+}
+
+
+
+
+
+@media(max-width:991px){
+
+    .layout {width:85%;}
+    .header-text h1 {font-size:50px;}
+    .features_dl {flex-wrap: wrap;}
+    .features_dl dl {width:40%;margin-bottom:50px;}
+    .about-dl dl dd {
+        padding:70px 15px;
+    }
+    .about-dl dl .hide {display: none;}
+
+}
+
+@media(max-width:767px){
+
+    .layout {width:92%;}
+    .header-text h1 {font-size:40px;}
+    .nav div a.Cachet {font-size:22px;padding-left:20px;}
+    .text-p a {width:250px;height:44px;line-height: 44px}
+    .about-dl dl {flex-wrap: wrap;}
+    .about-dl dl dt,.about-dl dl dd { 
+        width:100%;
+    }
+    .about-dl dl dd {
+        padding:80px;
+    }
+    .about-dl dl .hide {display:block;}
+    .about-dl dl .last-dt {display:none;}
+    .testimonial-dl {flex-wrap: wrap; justify-content: space-around;}
+    .testimonial-dl dl {width:60%; margin-bottom:90px;}
+}
+
+@media(max-width:480px){
+    .layout {width:98%;}
+    .nav {padding-top:0;}
+    .header-text h1 {font-size:30px;}
+    .nav div a.Cachet {font-size:18px;}
+    .text-p {font-size:16px;}
+    .text-p a {font-size:14px; width:220px;height:38px;line-height: 38px}
+    .down a {font-size:24px;}
+    .features_dl {justify-content: space-around;}
+    .features_dl dl {width:80%;}
+    .about-dl dl dd h2 {font-size: 24px}
+    .about-dl dl dd p {font-size: 14px}
+    .about-dl dl dd a {font-size: 15px;height:38px;line-height: 38px;width:120px;}
+    .about-dl dl dd {
+        padding:40px 20px;
+    }
+    .testimonial-dl dl {width:70%;}
+    .testimonial > p {font-size: 16px}
+    .footer {flex-wrap: wrap; }
+    .footer ul {width:50%;margin-bottom:30px;}
+}
+
+
+
 
 
