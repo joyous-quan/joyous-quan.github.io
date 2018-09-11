@@ -1,0 +1,6 @@
+.ie_floatL {float:left;}
+.ie_floatR {float:right;}
+.points_dl dl.center {margin:0 100px;}
+.about-dl dl {overflow: hidden}
+.about-dl dl dt,.about-dl dl dd { float:left;}
+.testimonial-dl dl {padding:0 20px; box-sizing: border-box;}

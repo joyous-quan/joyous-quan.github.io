@@ -2,4 +2,4 @@
 
 A personal web page
 
-移动端 demo
+PC / 移动端 demo

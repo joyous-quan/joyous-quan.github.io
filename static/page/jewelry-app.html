@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jewelry app</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="applicable-device" content="mobile">
+	<meta name="apple-mobile-web-app-capdownload_statisticable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="red-translucent">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="share-title" content="">
+	<meta name="share-description" content="">
+	<meta name="share-image" content="">
+	<meta http-quiv="Cache-Control" content="no-transform">
+	<!--重定向 5秒后跳转到百度-->
+	<!-- <meta http-equiv="Refresh" content="5,url=http://baidu.com"> -->
+
+	<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+<script>
+//designWidth:设计稿的实际宽度值，需要根据实际设置
+//maxWidth:制作稿的最大宽度值，需要根据实际设置
+//这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+/*;(function(designWidth, maxWidth) {
+	var doc = document,
+	win = window,
+	docEl = doc.documentElement,
+	remStyle = document.createElement("style"),
+	tid;
+
+	function refreshRem() {
+		var width = docEl.getBoundingClientRect().width;
+		maxWidth = maxWidth || 540;
+		width>maxWidth && (width=maxWidth);
+		var rem = width * 100 / designWidth;
+		remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+	}
+
+	if (docEl.firstElementChild) {
+		docEl.firstElementChild.appendChild(remStyle);
+	} else {
+		var wrap = doc.createElement("div");
+		wrap.appendChild(remStyle);
+		doc.write(wrap.innerHTML);
+		wrap = null;
+	}
+	//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+	refreshRem();
+
+	win.addEventListener("resize", function() {
+		clearTimeout(tid); //防止执行两次
+		tid = setTimeout(refreshRem, 300);
+	}, false);
+
+	win.addEventListener("pageshow", function(e) {
+		if (e.persisted) { // 浏览器后退的时候重新计算
+			clearTimeout(tid);
+			tid = setTimeout(refreshRem, 300);
+		}
+	}, false);
+
+	if (doc.readyState === "complete") {
+		doc.body.style.fontSize = "16px";
+	} else {
+		doc.addEventListener("DOMContentLoaded", function(e) {
+			doc.body.style.fontSize = "16px";
+		}, false);
+	}
+})(640, 750);*/
+</script>
+<style type="text/css" media="screen">
+	
+*{padding: 0;margin: 0;}
+
+html{font-size:100px;color:#5a5a5a;}/*默认配置*/
+
+
+/*@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}} */
+
+/*
+使用px前的代码
+.btn{display:block;width: 250px;height:42px;line-height:42px;border-radius:5px;text-align:center;font-size:18px;background-color:#04BE02;color:#FFFFFF;margin: 50px;}
+*/
+/* 
+.btn{display:block;width: 25rem;height:4.2rem;line-height:4.2rem;border-radius:0.5rem;text-align:center;font-size:1.8rem;background-color:#04BE02;color:#FFFFFF;margin: 5rem auto;} */
+
+
+
+.header {height:.45rem;width:100%;background:#fff url(../images/jewelry/logo.png) no-repeat .15rem .05rem;background-size:45% 90%;position:fixed;top:0;left:0;z-index:99;overflow: hidden;}
+.menu {display:inline-block; float:right;height:.45rem;width:.45rem;background:rgba(0,0,0,.9);
+	color:#fff;font-size:.15rem;line-height:.45rem;text-align:center;font-weight:bold;}
+.bg-header {height:.45rem;}
+nav {height:1.85rem;width:100%;}
+nav img {height:1.85rem;width:100%;}
+
+
+h2 {font-size: .18rem;}
+p,h3{font-size: .16rem;}
+span,label{font-size: .14rem;}
+.section-item {display:inline-block;}
+.section_1 {position: relative;height:1.85rem;width:100%;}
+.section_1 .left_50,.section_1 .right_50{position:absolute;top:0;}
+.right_50 {right:0;}
+.left_50,.right_50 {width:50%;height:100%;}
+.e-box {height:.6rem;width:.6rem;background: #eee;position: absolute;top:0;right:0; }
+.left_50 h2,.right_50 h2 {font-size:.18rem;margin-top:.65rem;padding-left:.15rem;}
+.right_50 h2 {margin-top:.15rem;}
+.left_50 p,.right_50 p{font-size:.15rem;line-height:.3rem;padding:.08rem .1rem 0;}
+.right-top {position: absolute;top:-.65rem;height:1.25rem;width:100%; background:#fff;z-index:8;}
+.right-bottom {position: absolute;bottom:0;height:1.25rem;width:100%;}
+.right-bottom img {height:100%; width:100%;}
+
+.section_2,.section_3{height:1.2rem;width:100%;padding-top:.1rem;background:#eee;}
+.section_4 {height:.45rem;width:100%;padding-bottom:.1rem;overflow:hidden;background: #eee;}
+.left_65 {width:65%;height:100%;}
+.left_65 img,.section_3 .left_50>img,.right_50>img{height:100%;width:100%;}
+.right_35 {width:35%;height:100%;float:right;background:rgba(0,0,0,.9);}
+.right_35 p {font-size:.15rem;line-height:.3rem;color:#fff;padding:.15rem .1rem .1rem;}
+.section_3 .right_50,.section_4 .right_50 {width:48%;float:right;}
+.section_4 .left_50 {float:left;background-color: #fff;position: relative;}
+.section_4 .right_50 {background-color: #fff;position: relative;}
+.section_4 img {position:absolute; right:.15rem;top:.2rem;}
+
+.title {text-align:left;width:100%;}
+.title strong{text-align: left;display:inline-block;margin:.15rem;}
+.title span {display:inline-block;float:right;margin:.15rem;}
+.section_5 {height:6rem;width:100%;}
+.section_5 .left_50 {width:50%;float:left;height:3rem;margin-bottom:.15rem;}
+.section-dl {border:.01rem solid #e5e5e5;height:98%;width:90%;margin-left:5%;}
+.section-dl img{width: 100%;height:1.6rem;}
+.section-dl dd {text-align: center;}
+.lineation {text-decoration:line-through;}
+dd p {color:#888;}
+.price {color:#c8b070;}
+
+.section_6 {padding:.1rem 0;background: #eee;}
+
+
+
+
+</style>
+</head>
+<body>
+<!-- header start -->
+<header id="header" class="header">
+	<span class="menu">三</span>
+</header>
+<!-- header end -->
+
+<div class="bg-header">
+	
+</div>
+<!-- nav start -->
+<nav class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="../images/jewelry/banner1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../images/jewelry/banner2.jpg" alt=""></div>
+    </div>
+
+</nav>
+<!-- nav end -->
+
+<section class="section section_1">
+	<div class="section-item left_50">
+		<div class="e-box"></div>
+		<h2>产品中心</h2>
+		<p>开发了大量引领国内珠宝首饰行业潮流的新产品 
+		<br><img src="../images/jewelry/jt_1.png" alt="" >
+		</p>
+	</div>
+	<div class="section-item right_50">
+		<div class="right-top ">
+			<h2>Mou Jewelry</h2>
+			<p>打造世界一流名钻
+			<br>树立百年经典品牌
+			</p>
+		</div>
+		<div class="right-bottom">
+			<img src="../images/jewelry/company.jpg" alt="">
+		</div>
+	</div>	
+</section>
+
+<section class="section section_2">
+	<div class="section-item left_65">
+		<img src="../images/jewelry/tjcp_01.jpg" alt="">
+	</div>
+	<div class="section-item right_35">
+		<p>18K金镶嵌钻石<br>戒指 <br>
+			<img src="../images/jewelry/jt_m.png" alt="" >
+		</p>
+	</div>
+</section>
+
+<section class="section section_3">
+	<div class="section-item left_50">		
+		<img src="../images/jewelry/tjcp_02.jpg" alt="">
+	</div>
+	<div class="section-item right_50">
+		<img src="../images/jewelry/tjcp_03.jpg" alt="">
+	</div>
+</section>
+
+<section class="section section_4">
+	<div class="section-item left_50">		
+		<p>你是我的唯一<img src="../images/jewelry/jt_m.png" alt="" ></p>
+	</div>
+	<div class="section-item right_50">
+		<p>夏日之星<img src="../images/jewelry/jt_m.png" alt="" ></p>
+	</div>	
+</section>
+
+<section class="section section_5">
+	<p class="title">
+		<strong>推荐产品</strong> <span>MORE ++</span>
+	</p>
+	<div class="section-item left_50">		
+		<dl class="section-dl">
+			<dt><img src="../images/jewelry/c1.jpg" alt=""></dt>
+			<dd>
+				<h3>18K金镶嵌钻石项链</h3>
+				<p>市场价: <span class="lineation">15000.00</span>
+				<br>价格: <span class="price">12000.00</span></p>
+			</dd>
+		</dl>
+	</div>
+	<div class="section-item left_50">		
+		<dl class="section-dl">
+			<dt><img src="../images/jewelry/c2.jpg" alt=""></dt>
+			<dd>
+				<h3>18K金镶嵌钻石</h3>
+				<p>市场价: <span class="lineation">5200.00</span>
+				<br>价格: <span class="price">5000.00</span></p>
+			</dd>
+		</dl>
+	</div>
+	<div class="section-item left_50">		
+		<dl class="section-dl">
+			<dt><img src="../images/jewelry/c3.jpg" alt=""></dt>
+			<dd>
+				<h3>18K金镶嵌钻石项链</h3>
+				<p>市场价: <span class="lineation">15000.00</span>
+				<br>价格: <span class="price">12000.00</span></p>
+			</dd>
+		</dl>
+	</div>
+	<div class="section-item left_50">		
+		<dl class="section-dl">
+			<dt><img src="../images/jewelry/c4.jpg" alt=""></dt>
+			<dd>
+				<h3>18K金镶嵌钻石</h3>
+				<p>市场价: <span class="lineation">5200.00</span>
+				<br>价格: <span class="price">5000.00</span></p>
+			</dd>
+		</dl>
+	</div>	
+</section>
+
+<section class="section section_6">
+	<div class="section-item left_50">		
+		
+	</div>
+	<div class="section-item left_50">		
+		
+	</div>
+	<div class="section-item left_33">		
+		
+	</div>	
+	<div class="section-item left_34">		
+		
+	</div>
+	<div class="section-item left_33">		
+		
+	</div>
+</section>
+
+</body>
+</html>
+<!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	 var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+</script>

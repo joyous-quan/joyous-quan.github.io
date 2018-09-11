@@ -1,0 +1,93 @@
+
+
+/* 邮箱 电话 */
+.link {
+	height:3.78rem;
+	background: #fff;
+	line-height: 3.78rem;
+	font-size: 1.33rem;
+	white-space: nowrap;
+}
+.link .img-box {
+	position: relative;
+	top:.35rem;
+}
+.link .email {
+	color:#666;
+}
+.link .tel {
+	color:#eb6132;
+}
+
+
+/* banner */
+.banner{
+	height:16.62rem;
+	margin:.56rem 0;
+	width:92%;
+	overflow-x: auto;
+	position: relative;
+}
+.banner-con {
+	width:58rem;
+	padding-top:.56rem;
+	position: absolute;
+}
+.banner-con li {
+	height:15.50rem;
+	width:27.67rem;
+	margin-right:1.11rem;
+	float: left;
+}
+
+.white-bg {
+	background: #fff;
+}
+/* 登录 注册 */
+.btn-red {
+	margin-right:1rem;
+}
+
+/* section */
+.section {
+	margin-top:1.17rem;
+}
+.title {
+	font-size: 1.67rem;
+	height:4.06rem;
+	line-height: 4.06rem;
+}
+.sub-title {
+	-webkit-box-sizing:border-box; /* Safari */
+	-moz-box-sizing:border-box; /* Firefox */
+	box-sizing: border-box;
+	height:4.45rem;
+	font-size: 1.06rem;
+	padding-top:1.5rem;
+	border-top:.08rem solid #e0e0e0;
+}
+.sub-title a {
+	display: inline-block;
+	text-indent: 1rem;
+	border-left:.3rem solid #eb6132;
+}
+.sub-title .small-icon {
+	float:right;
+}
+.section .section-img-box {
+	border:.05rem solid #e0e0e0;
+	height:18.44rem;
+	width:100%;
+	border-radius:.6rem;
+	margin-bottom:1.67rem;
+	text-align: center;
+	line-height:18.44rem;
+}
+.section-img-box .img-box {
+	-webkit-box-sizing:border-box; /* Safari */
+	-moz-box-sizing:border-box; /* Firefox */
+	box-sizing: border-box;
+	padding:.05rem;
+	height:100%;
+	width:100%;
+}
