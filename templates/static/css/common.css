@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 html{font-size:10px}
 @media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
@@ -8,8 +9,6 @@ html{font-size:10px}
 @media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
 @media screen and (min-width:800px){html{font-size:25px}}
 
-
-@charset "utf-8";
 
 html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dd,dt,label,span,b {
 	margin:0;padding:0;
@@ -61,7 +60,6 @@ input,button,textarea{
 .position-a {
 	position: absolute;
 }
-
 span.img-box {
 	display:inline-block;
 }
@@ -98,7 +96,7 @@ span.img-box {
 .btn-blue {
 	background:#2180be;
 	color:#fff;
-	font-size: 1.11rem;
+	font-size: 1.2rem;
 	border-color:#2180be;
 }
 
@@ -152,9 +150,8 @@ span.img-box {
 	color:#fff;
 	font-size: 1rem;
 }
-
 .header-search {
- position: relative;
+ 	position: relative;
 }
 .header-search input {
 	width:100%;
@@ -186,8 +183,15 @@ color: #aaa;
 	right:1rem;
 	bottom:1rem;
 }
-
 /* header style end  */
+
+
+/* 查看更多 */
+.btn-blue span {
+	font-size: 1.7rem;
+	position: relative;
+	top:.15rem;
+}
 
 
 
@@ -201,8 +205,8 @@ color: #aaa;
 	text-align: center;
 }
 .to-top-icon {
-	height:1.15rem;
-	width:1.15rem;
+	height:1rem;
+	width:1rem;
 	margin-top:.65rem;
 }
 .warranty{
