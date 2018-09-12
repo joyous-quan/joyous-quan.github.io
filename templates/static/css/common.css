@@ -26,6 +26,8 @@ img {
 a {
 	text-decoration: none;
 	color: #000;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 ul,ol,li {
 	list-style: none;
@@ -42,7 +44,7 @@ input: -webkit-autofill{
 input:: -ms-clear,input:: -ms-reveal{
 	display: none;
 }
-input,button,textarea{
+button,textarea{
 	outline: none;
 }
 .border-box {
@@ -171,7 +173,8 @@ span.img-box {
 .sidebar .sub-title {
 	border-bottom: .08rem solid #e0e0e0;
 }
-.down-icon {
+.sub-title .down-icon {
+	width: 1.6rem;
 	padding-right: .9rem;
 }
 .right-icon {
@@ -200,6 +203,7 @@ span.img-box {
 .tips-circle {
 	display: inline-block;
 	padding: 0 .69rem;
+	font-size: 1rem;
 	color: #cbcbcb;
 }
 
@@ -255,6 +259,7 @@ span.img-box {
 }
 .header-search {
  	position: relative;
+ 	width:100%;
 }
 .header-search input {
 	width: 100%;
@@ -264,6 +269,7 @@ span.img-box {
 	background: #f3f3f3;
 	border: none;
 	border-radius: .5rem;
+	outline-color: #9fb1c4;
 }
 /* 搜索提示 placeholder */
 .header-search input:: -webkit-input-placeholder{ 
@@ -341,7 +347,7 @@ color: #aaa;
 }
 
 .footer-bar {
-	height: 24.54rem;
+	height: 24rem;
 	background: #4a4d52;
 }
 .footer-bar ul {
@@ -367,7 +373,7 @@ color: #aaa;
 	color: #fff;
 }
 .footer-message-top {
-	padding: 2.5rem 0 2.3rem;
+	padding: 2.5rem 0 2rem;
 }
 .brochure-img {
 	float: left;
