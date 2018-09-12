@@ -259,10 +259,10 @@ span.img-box {
 }
 .header-search {
  	position: relative;
-	margin: 0 4%;
+	text-align: center;
 }
 .header-search input {
-	width: 100%;
+	width: 92%;
 	height: 3.22rem;
 	text-indent: .8rem;
 	font-size: 1rem;
@@ -290,7 +290,7 @@ color: #aaa;
 }
 .header-search .small-icon {
 	position: absolute;
-	right: 1rem;
+	right: 6%;
 	bottom: 1rem;
 }
 /* header style end  */
