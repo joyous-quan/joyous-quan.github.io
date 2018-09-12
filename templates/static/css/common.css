@@ -74,7 +74,7 @@ span.img-box {
 	padding: 0 4%;
 }
 
-/*  btn style */
+/* ------------ btn style ------------ */
 .btn-box {
 	padding: 1.44rem 0;
 }
@@ -101,27 +101,26 @@ span.img-box {
 	color: #fff;
 	font-size: 1.2rem;
 	border-color: #2180be;
+	padding-bottom:.2rem;
 }
 
 
-/* 菜单导航  sub-title stytle */
+/*  ------------  菜单样式    sub-title stytle ------------ */
 .sub-title {
+	position: relative;
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
 	box-sizing: border-box;
-	height: 4.45rem;
+	min-height: 4.45rem;
 	padding-top: 1.5rem;
-	
 }
 .sub-title a {
 	display: inline-block;
-	max-width: 92%;
+	height: 100%;
+	width: 100%;
 	font-size: 1.06rem;	
 	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
-
 .tips-red {
 	display: inline-block;
 	height: .94rem;
@@ -130,12 +129,84 @@ span.img-box {
 	background: #eb6132;
 }
 .sub-title .small-icon {
-	float: right;
+	position: absolute;
+	right: 0;
+	top: 1.5rem;
+}
+
+/*   弹出层    侧边菜单  */
+.mask {
+	position: fixed; 
+	top: 0; left:-100%;
+	z-index: 100;
+	height: 100%;
+	width: 100%; 
+	background: rgba(25,25,25,.6);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.popups {
+	position: absolute;
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+	background: #fff;
+}
+
+/*    侧边菜单   */
+.sidebar {
+	width: 90%;
+	height: 100%;
+	overflow-y: auto;
+	padding: 1.75rem 1.75rem 1rem;
+	top: 0;
+	right: 0;
+}
+.sidebar .title {
+	font-size: 1.33rem
+}
+.sidebar .sub-title {
+	border-bottom: .08rem solid #e0e0e0;
+}
+.down-icon {
+	padding-right: .9rem;
+}
+.right-icon {
+	padding-right: .7rem;
+}
+.menu>li:last-child {
+	border: none;
+}
+.sub-menu {
+	display: none;
+	border-top: .08rem solid #e0e0e0;
+	margin-top: 1.5rem;
+}
+.del-sidebar {
+	height: 100%;
+	width: 100%;
+}
+.sub-menu .sub-title {
+	border: none;
+	background: #f3f3f3;
+	margin-bottom: .35rem;
+}
+.sub-menu li:last-child {
+	margin: 0;
+}
+.tips-circle {
+	display: inline-block;
+	padding: 0 .69rem;
+	color: #cbcbcb;
 }
 
 
 
-/* header style start */
+
+/* ------------ header style start ------------- */
 .header {
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
@@ -150,7 +221,7 @@ span.img-box {
 	height: 1.75rem;
 }
 .logo{
-	height: 1.75rem;
+	height: 2.08rem;
 }
 .header-top, .header-top ul,.link,.btn-box {
 	display: -webkit-flex; /* Safari */
@@ -225,7 +296,7 @@ color: #aaa;
 }
 
 
-/* footer stytle start */
+/* ------------ footer stytle start ------------ */
 /* 回到顶部 */
 .to-top {
 	background: #000;
@@ -296,7 +367,7 @@ color: #aaa;
 	color: #fff;
 }
 .footer-message-top {
-	padding: 2.5rem 0 3.3rem;
+	padding: 2.5rem 0 2.8rem;
 }
 .brochure-img {
 	float: left;
@@ -316,8 +387,6 @@ color: #aaa;
 	line-height: 2.9rem;
 	font-size: 1rem;
 	white-space: nowrap;
-	overflow:hidden;
-	text-overflow: ellipsis;
 }
 .footer-message-con li .img-box {
 	position: relative;
