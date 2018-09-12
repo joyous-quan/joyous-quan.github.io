@@ -47,6 +47,16 @@ input:: -ms-clear,input:: -ms-reveal{
 button,textarea{
 	outline: none;
 }
+
+[contenteditable = "true"], input, textarea {
+    -webkit-user-select: auto!important;
+    -khtml-user-select: auto!important;
+    -moz-user-select: auto!important;
+    -ms-user-select: auto!important;
+    -o-user-select: auto!important;
+    user-select: auto!important;
+}
+
 .border-box {
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
@@ -174,10 +184,11 @@ span.img-box {
 	border-bottom: .08rem solid #e0e0e0;
 }
 .sub-title .down-icon {
-	width: 1.6rem;
+	width: 1.55rem;
 	padding-right: .9rem;
 }
 .right-icon {
+	height: 1.65rem;
 	padding-right: .7rem;
 }
 .menu>li:last-child {
@@ -203,8 +214,13 @@ span.img-box {
 .tips-circle {
 	display: inline-block;
 	padding: 0 .69rem;
-	font-size: .8rem;
+	font-size: 1.2rem;
 	color: #cbcbcb;
+	transform: scale(.8,.8);
+	-ms-transform: scale(.8,.8);	/* IE 9 */
+	-webkit-transform: scale(.8,.8);	/* Safari 和 Chrome */
+	-o-transform: scale(.8,.8);	/* Opera */
+	-moz-transform: scale(.8,.8);
 }
 
 
