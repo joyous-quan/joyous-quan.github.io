@@ -203,7 +203,7 @@ span.img-box {
 .tips-circle {
 	display: inline-block;
 	padding: 0 .69rem;
-	font-size: 1rem;
+	font-size: .8rem;
 	color: #cbcbcb;
 }
 
@@ -259,7 +259,7 @@ span.img-box {
 }
 .header-search {
  	position: relative;
- 	width:100%;
+	margin: 0 4%;
 }
 .header-search input {
 	width: 100%;
@@ -347,7 +347,7 @@ color: #aaa;
 }
 
 .footer-bar {
-	height: 24rem;
+	height: 24.54rem;
 	background: #4a4d52;
 }
 .footer-bar ul {
@@ -368,7 +368,7 @@ color: #aaa;
 }
 
 .footer-message {
-	height: 23.64rem;
+	height: 22.5rem;
 	background: #202122;
 	color: #fff;
 }
