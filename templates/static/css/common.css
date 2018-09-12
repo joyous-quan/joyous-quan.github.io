@@ -82,7 +82,7 @@ span.img-box {
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
 	box-sizing: border-box;
-	height: 3.61rem;
+	height: 4rem;
 	width: 100%;
 	font-size: 1.33rem;
 	border-radius: .5rem;
@@ -341,7 +341,7 @@ color: #aaa;
 }
 
 .footer-bar {
-	height: 25.14rem;
+	height: 24.54rem;
 	background: #4a4d52;
 }
 .footer-bar ul {
@@ -367,7 +367,7 @@ color: #aaa;
 	color: #fff;
 }
 .footer-message-top {
-	padding: 2.5rem 0 2.8rem;
+	padding: 2.5rem 0 2.3rem;
 }
 .brochure-img {
 	float: left;
