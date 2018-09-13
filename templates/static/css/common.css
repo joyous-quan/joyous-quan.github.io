@@ -163,6 +163,95 @@ span.img-box,a.img-box {
 	width: 100%;
 }
 
+
+
+/* ------------  header style start  ------------- */
+.header {
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+	background: #fff;
+	height: 9.31rem;
+	padding-top: 1.67rem;
+	border-bottom: .12rem solid #eb6132;
+}
+.small-icon {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+.logo {
+	height: 2.08rem;
+}
+.header-top, .header-top ul,.link,.btn-box {
+	display: -webkit-flex; /* Safari */
+	display: flex;
+}
+.header-top,.link,.btn-box {
+	justify-content: space-between ;
+}
+.header-top {
+	height: 3rem;
+}
+.header-left li {
+	margin-right: 1rem;
+}
+.header-right li {
+	margin-left: .8rem;
+	margin-right: 1.5rem;
+}
+.cart-count {
+	position: absolute;
+	bottom: 1.3rem; 
+	right: -1.4rem;
+	height: 1.45rem;
+	width: 1.45rem;
+	background: #eb6123;
+	border-radius: 1.45rem;
+	line-height: 1.45rem;
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+}
+.header-search {
+ 	position: relative;
+	text-align: center;
+}
+.header-search div {
+	margin: 0 4%;
+}
+.header-search input {
+	width: 100%;
+	height: 3.22rem;
+	text-indent: .8rem;
+	font-size: 1rem;
+	background: #f3f3f3;
+	border-radius: .5rem;
+	border: .08rem solid #f3f3f3;
+    resize:none; 
+    -webkit-appearance:none;  /*清除浏览器默认的样式 */
+    line-height: normal;   /* 光标问题  */
+}
+/* 搜索提示 placeholder */
+.header-search input:: -webkit-input-placeholder{ 
+  	color: #aaa; /* WebKit browsers */
+} 
+.header-search input: -moz-placeholder{ 
+	color: #aaa; /* Mozilla Firefox 4 to 18 */
+} 
+.header-search input:: -moz-placeholder{ 
+  	color: #aaa; /* Mozilla Firefox 19+ */
+} 
+.header-search input: -ms-input-placeholder{ 
+ 	color: #aaa; /* Internet Explorer 10+ */ 
+}
+.header-search .small-icon {
+	position: absolute;
+	right: 5%;
+	bottom: 1rem;
+}
+
+
+
 /*  ------------  菜单样式    sub-title stytle ------------ */
 .sub-title {
 	position: relative;
@@ -249,90 +338,6 @@ span.img-box,a.img-box {
 .menu-con .title {
 	margin-bottom: .56rem;
 }
-
-
-/* ------------  header style start  ------------- */
-.header {
-	-webkit-box-sizing: border-box; /* Safari */
-	-moz-box-sizing: border-box; /* Firefox */
-	box-sizing: border-box;
-	background: #fff;
-	height: 9.31rem;
-	padding-top: 1.67rem;
-	border-bottom: .12rem solid #eb6132;
-}
-.small-icon {
-	width: 1.75rem;
-	height: 1.75rem;
-}
-.logo{
-	height: 2.08rem;
-}
-.header-top, .header-top ul,.link,.btn-box {
-	display: -webkit-flex; /* Safari */
-	display: flex;
-}
-.header-top,.link,.btn-box {
-	justify-content: space-between ;
-}
-.header-top {
-	height: 3rem;
-}
-.header-left li {
-	margin-right: 1rem;
-}
-.header-right li {
-	margin-left: .8rem;
-	margin-right: 1.5rem;
-}
-.cart-count {
-	position: absolute;
-	bottom: 1.3rem; 
-	right: -1.4rem;
-	height: 1.45rem;
-	width: 1.45rem;
-	background: #eb6123;
-	border-radius: 1.45rem;
-	line-height: 1.45rem;
-	text-align: center;
-	color: #fff;
-	font-size: 1rem;
-}
-.header-search {
- 	position: relative;
-	text-align: center;
-}
-.header-search input {
-	width: 92%;
-	height: 3.22rem;
-	text-indent: .8rem;
-	font-size: 1rem;
-	background: #f3f3f3;
-	border-radius: .5rem;
-	border: .08rem solid #f3f3f3;
-    resize:none; 
-    -webkit-appearance:none;  /*清除浏览器默认的样式 */
-    line-height: normal;   /* 光标问题  */
-}
-/* 搜索提示 placeholder */
-.header-search input:: -webkit-input-placeholder{ 
-  	color: #aaa; /* WebKit browsers */
-} 
-.header-search input: -moz-placeholder{ 
-	color: #aaa; /* Mozilla Firefox 4 to 18 */
-} 
-.header-search input:: -moz-placeholder{ 
-  	color: #aaa; /* Mozilla Firefox 19+ */
-} 
-.header-search input: -ms-input-placeholder{ 
- 	color: #aaa; /* Internet Explorer 10+ */ 
-}
-.header-search .small-icon {
-	position: absolute;
-	right: 5%;
-	bottom: 1rem;
-}
-
 
 
 /* ------------ footer stytle start ------------ */
