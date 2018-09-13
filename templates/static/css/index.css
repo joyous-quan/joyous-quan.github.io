@@ -43,9 +43,7 @@
 	height:100%;
 	width:100%;
 }
-.white-bg {
-	background: #fff;
-}
+
 /* 登录 注册 */
 .btn-red {
 	margin-right: 1rem;
@@ -79,4 +77,9 @@
 	padding: .05rem;
 	height: 100%;
 	width: 100%;
+}
+
+/* 查看更多 */
+.btn-blue span {
+	font-size: 1.7rem;
 }

@@ -1,0 +1,24 @@
+.category-title {
+	height: 4.11rem;
+	line-height: 4.11rem;
+	font-size: 1.67rem;
+}
+.category-card {
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+	min-height: 12rem;
+	padding: 1.72rem 0;
+	border-top: .08rem solid #e0e0e0;
+	font-size: 1rem;
+	line-height: 2rem;
+}
+.category-card p .products-number{
+	display: inline-block;
+	width: 38%;
+}
+.category-card h2 {
+	margin: 1rem 0 0.8rem;
+	font-size: 1.33rem;
+	color: #eb6132;
+}
