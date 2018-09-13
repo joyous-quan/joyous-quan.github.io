@@ -285,8 +285,12 @@ span.img-box {
 	background: #f3f3f3;
 	border-radius: .5rem;
 	border:none;
-	/* border: .08rem solid #f3f3f3; */
+	border: .08rem solid #f3f3f3;
 	outline-color: #9fb1c4;
+    resize:none; 
+    outline:none;  /*清除选中效果的默认蓝色边框 */
+    -webkit-appearance:none;  /*清除浏览器默认的样式 */
+    line-height: normal;   /* 光标问题  */
 }
 /* 搜索提示 placeholder */
 .header-search input:: -webkit-input-placeholder{ 
