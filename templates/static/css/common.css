@@ -44,7 +44,7 @@ input: -webkit-autofill{
 input:: -ms-clear,input:: -ms-reveal{
 	display: none;
 }
-button,textarea{
+input,button,textarea{
 	outline: none;
 }
 
@@ -213,14 +213,16 @@ span.img-box {
 }
 .tips-circle {
 	display: inline-block;
-	padding: 0 .69rem;
-	font-size: 1.2rem;
-	color: #cbcbcb;
-	-webkit-transform: scale(.7,.7);	/* Safari 和 Chrome */
-	-ms-transform: scale(.7,.7);	/* IE 9 */
-	-o-transform: scale(.7,.7);	/* Opera */
-	-moz-transform: scale(.7,.7);
-	transform: scale(.7,.7);
+	height: 1rem;
+	width: 1rem;
+	border-radius: 1rem;
+	margin: 0 .69rem;
+	background: #cbcbcb;
+	-webkit-transform: scale(.5,.5);	/* Safari 和 Chrome */
+	-ms-transform: scale(.5,.5);	/* IE 9 */
+	-o-transform: scale(.5,.5);	/* Opera */
+	-moz-transform: scale(.5,.5);
+	transform: scale(.5,.5);
 }
 
 
@@ -284,30 +286,23 @@ span.img-box {
 	font-size: 1rem;
 	background: #f3f3f3;
 	border-radius: .5rem;
-	border:none;
 	border: .08rem solid #f3f3f3;
-	outline-color: #9fb1c4;
     resize:none; 
-    outline:none;  /*清除选中效果的默认蓝色边框 */
     -webkit-appearance:none;  /*清除浏览器默认的样式 */
     line-height: normal;   /* 光标问题  */
 }
 /* 搜索提示 placeholder */
 .header-search input:: -webkit-input-placeholder{ 
- /* WebKit browsers */ 
-color: #aaa; 
+  	color: #aaa; /* WebKit browsers */
 } 
 .header-search input: -moz-placeholder{ 
-/* Mozilla Firefox 4 to 18 */ 
-color: #aaa; 
+	color: #aaa; /* Mozilla Firefox 4 to 18 */
 } 
 .header-search input:: -moz-placeholder{ 
- /* Mozilla Firefox 19+ */ 
-color: #aaa; 
+  	color: #aaa; /* Mozilla Firefox 19+ */
 } 
 .header-search input: -ms-input-placeholder{ 
- /* Internet Explorer 10+ */ 
-color: #aaa; 
+ 	color: #aaa; /* Internet Explorer 10+ */ 
 }
 .header-search .small-icon {
 	position: absolute;
