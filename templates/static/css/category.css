@@ -1,3 +1,25 @@
+/*  breadcrumb 面包屑 */
+.breadcrumb {
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+	height: 4rem;
+	line-height: 2rem;
+	padding: 1rem 0;
+	font-size: 1rem; 
+}
+.breadcrumb a {
+	color: #666;
+}
+.breadcrumb span {
+	color: #666;
+	padding: 0 0.35rem;
+}
+.breadcrumb a.current {
+	color: #bababa;
+}
+
+/* category-title */
 .category-title {
 	height: 4.11rem;
 	line-height: 4.11rem;
