@@ -48,7 +48,7 @@ button,textarea{
 	outline: none;
 }
 
-[contenteditable = "true"], input, textarea {
+input, textarea {
     -webkit-user-select: auto!important;
     -khtml-user-select: auto!important;
     -moz-user-select: auto!important;
@@ -284,8 +284,9 @@ span.img-box {
 	font-size: 1rem;
 	background: #f3f3f3;
 	border-radius: .5rem;
-	border: .08rem solid #f3f3f3;
-	outline: none;
+	border:none;
+	/* border: .08rem solid #f3f3f3; */
+	outline-color: #9fb1c4;
 }
 /* 搜索提示 placeholder */
 .header-search input:: -webkit-input-placeholder{ 
