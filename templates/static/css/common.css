@@ -216,11 +216,11 @@ span.img-box {
 	padding: 0 .69rem;
 	font-size: 1.2rem;
 	color: #cbcbcb;
-	transform: scale(.8,.8);
-	-ms-transform: scale(.8,.8);	/* IE 9 */
-	-webkit-transform: scale(.8,.8);	/* Safari 和 Chrome */
-	-o-transform: scale(.8,.8);	/* Opera */
-	-moz-transform: scale(.8,.8);
+	-webkit-transform: scale(.7,.7);	/* Safari 和 Chrome */
+	-ms-transform: scale(.7,.7);	/* IE 9 */
+	-o-transform: scale(.7,.7);	/* Opera */
+	-moz-transform: scale(.7,.7);
+	transform: scale(.7,.7);
 }
 
 
@@ -283,9 +283,9 @@ span.img-box {
 	text-indent: .8rem;
 	font-size: 1rem;
 	background: #f3f3f3;
-	border: none;
 	border-radius: .5rem;
-	outline-color: #9fb1c4;
+	border: .08rem solid #f3f3f3;
+	outline: none;
 }
 /* 搜索提示 placeholder */
 .header-search input:: -webkit-input-placeholder{ 

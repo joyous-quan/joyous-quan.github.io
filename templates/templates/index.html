@@ -35,7 +35,7 @@
             </ul>
         </div>
         <div class="header-search">
-            <input type="text" placeholder="CAS号; 产品名; 产品号; Target">
+            <input class="search-ipt" type="text" placeholder="CAS号; 产品名; 产品号; Target">
             <span class="img-box small-icon">
                 <img src="../static/images/header/search.png" alt="">
             </span>
@@ -485,6 +485,14 @@
 <script type="text/javascript">
 
 ;(function($){
+
+    //search 聚焦失焦
+    $('.search-ipt').focus(function(){
+        $(this).css("border-color","#9fb1c4");
+    });
+    $('.search-ipt').blur(function(){
+        $(this).css("border-color","#f3f3f3");
+    });
 
     //侧边菜单移入移出
     $('span.menu-icon').bind('touchstart', function(event){
