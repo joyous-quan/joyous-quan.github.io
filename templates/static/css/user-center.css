@@ -1,0 +1,115 @@
+
+/*  ------------  用户中心 stytle ------------ */
+.user-center-title {
+	height: 4.5rem;
+	line-height: 4.5rem;
+	background: #fff;
+	font-size: 1.33rem;
+	color: #666;
+}
+.user-center-con {
+	background: #fff;
+	margin: .56rem 0;
+}
+.user-center-con a {
+	position: relative;
+	display: block;
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+	min-height: 4.45rem;
+	padding-top: 1.5rem;
+	border-bottom: .08rem solid #f3f3f3;
+}
+.user-center-con a .right-icon {
+	position: absolute;
+	right: 0;
+}
+.user-center-txt {
+	position: relative;
+	left: .5rem;
+	bottom: .4rem;
+	font-size: 1rem;
+	color: #666;
+}
+
+/*  ------------ 我的订单 stytle ------------ */
+.title-con {
+	position: relative;
+	height: 3.5rem;
+	padding-top: 2rem;
+	background: #fff;
+	font-size: 1.33rem;
+	color: #666;
+	text-align: center;
+}
+.title-con .left-icon {
+	position: absolute;
+	left: 4%;
+}
+.table-box {
+	margin-top: .56rem;
+}
+.table-card {	
+	background: #fff;
+	margin-bottom: .56rem;
+}
+.table-card table {
+	width: 95%;
+	margin-left: 2.5%;
+}
+.table-card table td {
+	height: 3.75rem;
+	border-bottom: .08rem solid #f3f3f3;
+	font-size: 1rem;
+	color: #555;
+}
+.table-card td span {
+	font-size: .67rem;
+}
+.table-card td span.order-status {
+	font-size: .83rem;
+	position: relative;
+	bottom: .5rem;
+	left: .5rem;
+}
+.table-card table td.color-red {
+	color: #ff4d4d;
+}
+.my-order-con table tr:last-child td {
+	border: none;
+}
+
+/*  ------------ 我的询单 stytle ------------ */
+.message-box {
+	padding-top: 1rem;
+	color: #555;
+	font-size: .67rem;
+}
+.customer-message span{
+	display: inline-block;
+	text-indent: 1rem;
+}
+.session-box {
+	position: relative;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	border-radius: .5rem;
+	background: #f3f3f3;
+	text-indent: 1rem;
+	margin-top: 1.5rem;
+}
+.session-box .up-icon {
+	position: absolute;
+	top: -2rem;
+	left: 22%;
+}
+.reply-message {
+	font-size: 1rem;
+}
+.more-message {
+	display: inline-block;
+	padding: 1rem 0;
+	font-size: 1rem;
+	color: #1583d8;
+}

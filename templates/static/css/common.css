@@ -334,13 +334,36 @@ span.img-box,a.img-box {
 
 /* ------------ menu.html style start ------------- */
 .menu-con {
-	margin: .94rem 0;
+	margin-bottom: .94rem;
 	padding-top: 1rem;
 	padding-bottom: .5rem;
 	background: #fff;
 }
 .menu-con .title {
-	margin-bottom: .56rem;
+	padding-top: .5rem;
+	margin-bottom: .4rem;
+}
+
+
+/*  ------------ breadcrumb 面包屑  ------------ */
+.breadcrumb {
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+	height: 4rem;
+	line-height: 2rem;
+	padding: 1rem 0;
+	font-size: 1rem; 
+}
+.breadcrumb a {
+	color: #666;
+}
+.breadcrumb span {
+	color: #666;
+	padding: 0 0.35rem;
+}
+.breadcrumb a.current {
+	color: #bababa;
 }
 
 
@@ -449,3 +472,8 @@ span.img-box,a.img-box {
 	padding-top: .6rem;
 	font-size: .83rem;
 }
+
+
+
+
+
