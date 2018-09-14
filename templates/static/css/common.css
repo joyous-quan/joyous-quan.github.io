@@ -14,12 +14,13 @@ html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dd,dt,label,span,b {
 	margin: 0;padding: 0;
 }
 html,body {
-	background: #f3f3f3;
+	width: 100%;
 	min-width: 320px;
-	margin: 0; padding: 0;
+	background: #f3f3f3;
 	font-family: "微软雅黑";
 	color: #000;
 }
+
 header,footer {
 	display: block;
 }
@@ -39,12 +40,12 @@ button {
 	cursor: pointer;
 }
 /*input去掉黄色背景*/
-input: -webkit-autofill{ 
+input:-webkit-autofill{ 
 	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
-/* :: -ms-clear 是文本清除按钮 
-   :: -ms-reveal是密码查看按钮  */
-input:: -ms-clear,input:: -ms-reveal{
+/* ::-ms-clear 是文本清除按钮 
+   ::-ms-reveal是密码查看按钮  */
+input::-ms-clear,input::-ms-reveal{
 	display: none;
 }
 input,button,textarea{
@@ -231,16 +232,16 @@ span.img-box,a.img-box {
     line-height: normal;   /* 光标问题  */
 }
 /* 搜索提示 placeholder */
-.header-search input:: -webkit-input-placeholder{ 
+.header-search input::-webkit-input-placeholder{ 
   	color: #aaa; /* WebKit browsers */
 } 
-.header-search input: -moz-placeholder{ 
+.header-search input:-moz-placeholder{ 
 	color: #aaa; /* Mozilla Firefox 4 to 18 */
 } 
-.header-search input:: -moz-placeholder{ 
+.header-search input::-moz-placeholder{ 
   	color: #aaa; /* Mozilla Firefox 19+ */
 } 
-.header-search input: -ms-input-placeholder{ 
+.header-search input:-ms-input-placeholder{ 
  	color: #aaa; /* Internet Explorer 10+ */ 
 }
 .header-search .small-icon {
@@ -248,7 +249,6 @@ span.img-box,a.img-box {
 	right: 6%;
 	bottom: 1rem;
 }
-
 
 
 /*  ------------  菜单样式    sub-title stytle ------------ */
