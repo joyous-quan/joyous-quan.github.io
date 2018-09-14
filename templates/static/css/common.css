@@ -48,6 +48,11 @@ input:-webkit-autofill{
 input::-ms-clear,input::-ms-reveal{
 	display: none;
 }
+input {
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+}
 input,button,textarea{
 	outline: none;
 }

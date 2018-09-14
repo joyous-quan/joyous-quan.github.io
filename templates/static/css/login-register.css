@@ -45,10 +45,14 @@ input: -webkit-autofill{
 input::-ms-clear,input::-ms-reveal{
 	display: none;
 }
-input,button,textarea{
+input,button{
 	outline: none;
 }
-
+input {
+	-webkit-box-sizing: border-box; /* Safari */
+	-moz-box-sizing: border-box; /* Firefox */
+	box-sizing: border-box;
+}
 .layout {
 	padding: 0 4%;
 }
