@@ -129,7 +129,7 @@ input {
 	padding-top: .5rem;
 }
 .forgot a,.check {
-	font-size: .83rem;
+	font-size: .92rem;
 	color: #666;
 }
 .check {
@@ -139,18 +139,18 @@ input {
 }
 .check input[type="checkbox"] {
 	position: absolute;
-	width: .83rem;
-	height: .83rem;
+	width: .92rem;
+	height: .92rem;
 	background: #fff;
 	visibility: hidden;
 }
 .check input[type="checkbox"] +label {
 	display: inline-block;
-	width: .83rem;
-	height: .83rem; 
+	width: .92rem;
+	height: .92rem; 
 	margin-top: .15rem;
 	background:url(../../static/images/checked.png) no-repeat;
-	background-position: -0.8rem -0.1rem; 
+	background-position: -0.9rem -0.1rem; 
 	background-size: .83rem;
 	border: .08rem solid #999; 
 	position: absolute;
