@@ -45,14 +45,15 @@
     </div>
     <div class="layout banner">
         <ul class="banner-con border-box">
-            <li class="img-box"><img src="../../static/images/banner.png" alt=""></li>
-            <li class="img-box"><img src="../../static/images/banner.png" alt=""></li>
+            <li class="img-box"><img src="../../static/images/banner_1.png" alt=""></li>
+            <li class="img-box"><img src="../../static/images/banner_2.png" alt=""></li>
+            <li class="img-box"><img src="../../static/images/banner_3.png" alt=""></li>
         </ul>
     </div>
     <div class="layout white-bg">
         <div class="btn-box">
-            <button class="btn btn-red">登录</button>
-            <button class="btn btn-line">注册</button>
+            <button class="btn btn-red login-btn">登录</button>
+            <button class="btn btn-line register-btn">注册</button>
         </div>
     </div>
     <div class="layout section white-bg">
@@ -112,6 +113,19 @@
 
 <script type="text/javascript" src="../../static/js/zepto.js"></script>
 <script type="text/javascript" src="../../static/js/common.js"></script>
+<script>
+;(function($){
+    //登录
+    $('.logion-btn').bind('touchstart',function(event){
+       window.location.href = '../login-register/login.html';
+    })
+    //注册
+    $('.register-btn').bind('touchstart',function(event){
+       window.location.href = '../login-register/register.html';
+    })
+
+})(Zepto);
+</script>
 
 
 </body>
