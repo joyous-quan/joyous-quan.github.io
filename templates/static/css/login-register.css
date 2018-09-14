@@ -88,7 +88,7 @@ input {
 	font-size: 1rem;
 	color: #555;
 	background: #f3f3f3;
-	border-radius: .5rem;
+	border-radius: .25rem;
 	border: .08rem solid #f3f3f3;
     resize:none; 
     -webkit-appearance:none;  /*清除浏览器默认的样式 */
@@ -113,7 +113,7 @@ input {
 .code {
 	position: absolute;
 	right: .3rem;
-	top: 1.1rem;
+	top: 1.05rem;
 	height: 2.8rem;
 	width: 5.56rem;
 	background: #48bbfd;
