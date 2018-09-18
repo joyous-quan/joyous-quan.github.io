@@ -97,16 +97,19 @@
 }
 .session-box {
 	position: relative;
-	height: 3.5rem;
-	line-height: 3.5rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 3.5rem;
+	padding: .8rem 1rem;
+	line-height: 1.5rem;
 	border-radius: .5rem;
 	background: #f3f3f3;
-	text-indent: 1rem;
 	margin-top: 1.5rem;
 }
 .session-box .up-icon {
 	position: absolute;
-	top: -2rem;
+	top: -1rem;
 	left: 18%;
 }
 .reply-message {
@@ -158,11 +161,11 @@
 	background: #fff;
 }
 .CSNpharm-service dd .img-box {
-	left: -0.7rem;
+	left: -0.75rem;
 }
 .time {
 	text-align: center;
-	padding: 1rem 0;
+	padding: 1.5rem 0 1rem;
 	font-size: .83rem;
 	color: #fff;
 }
@@ -181,7 +184,7 @@
 	color: #fff;
 }
 .customer-question dd .img-box {
-	right: -0.7rem;
+	right: -0.75rem;
 }
 .customer-QA-icon {
 	height: 1rem;
@@ -229,7 +232,7 @@
 	margin-top: 78%;
 }
 .istop {
-	background: #ddd;
+	background: #f3f3f3;
 }
 .cancel {
 	background: #eb6132;
@@ -268,7 +271,7 @@
 }
 
 /*  ------------ 编辑个人信息 stytle ------------ */
-.edit-message-con table span {
+.edit-message-con table span,.personal-information-con table span {
 	color: #aaa;
 }
 .edit-message-con table input{
@@ -281,7 +284,7 @@
 .address-information-card {
 	background: #fff;
 	font-size: 1rem;
-	margin-bottom: .56rem;
+	margin-top: .56rem;
 }
 .address-information-title {
 	height: 3.75rem;
