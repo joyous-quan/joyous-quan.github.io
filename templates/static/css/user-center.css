@@ -70,7 +70,7 @@
 	color: #555;
 }
 .table-card td span {
-	font-size: .67rem;
+	font-size: .83rem;
 }
 .table-card td span.order-status {
 	font-size: .83rem;
@@ -89,7 +89,7 @@
 .message-box {
 	padding-top: 1rem;
 	color: #555;
-	font-size: .67rem;
+	font-size: .83rem;
 }
 .customer-message span{
 	display: inline-block;
@@ -112,7 +112,7 @@
 .reply-message {
 	font-size: 1rem;
 }
-.last-p a{
+.last-p a {
 	display: inline-block;
 	padding: 1rem 0 1.5rem;
 	font-size: 1rem;
