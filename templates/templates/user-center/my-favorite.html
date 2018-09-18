@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>我的收藏</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"> 
+    <meta name="format-detection" content="email=no"> 
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/user-center.css">
+</head>
+<body>
+
+ 
+ <!-- 主体 -->
+<div class="layout title-con">
+    <a href="JavaScript:history.go(-1)" class="img-box small-icon left-icon">
+        <img src="../../static/images/left.png" alt="">
+    </a>
+    <span class="title-txt">我的收藏</span>
+</div>
+<div class="table-box my-favorite-con">
+    <div class="my-favorite-card">
+        <div class="swiper-left">
+            <div class="table-card">
+                <table cellspacing="0" border="0">
+                    <colgroup>
+                        <col width="20%">
+                        <col>
+                        <col width="20%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><span>产品编号</span></td>
+                            <td>CSN13849</td>
+                            <td><span>CAS号</span></td>
+                            <td>1062368-62-0</td>
+                        </tr>
+                        <tr>
+                            <td><span>产品名</span></td>
+                            <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                        </tr>
+                        <tr>
+                            <td><span>描述</span></td>
+                            <td colspan="3">
+                                <p class="description">
+                                    LDN-193189 hydrochloride is a selective BMP signaling inhibitor,LDN-193189 hydrochloride is a selective BMP signaling inhibitor
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="hide-con">
+                    <div class="istop"><span>产品<br>置顶</span></div>
+                    <div class="cancel"><span>取消<br>收藏</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-left">
+        <div class="table-card">
+            <table cellspacing="0" border="0">
+                <colgroup>
+                    <col width="20%">
+                    <col>
+                    <col width="20%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td><span>产品编号</span></td>
+                        <td>CSN13849</td>
+                        <td><span>CAS号</span></td>
+                        <td>1062368-62-0</td>
+                    </tr>
+                    <tr>
+                        <td><span>产品名</span></td>
+                        <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                    </tr>
+                    <tr>
+                        <td><span>描述</span></td>
+                        <td colspan="3">
+                            <p class="description">
+                                LDN-193189 hydrochloride
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="hide-con">
+                <div class="istop"><span>产品<br>置顶</span></div>
+                <div class="cancel"><span>取消<br>收藏</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-left">
+        <div class="table-card">
+            <table cellspacing="0" border="0">
+                <colgroup>
+                    <col width="20%">
+                    <col>
+                    <col width="20%">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td><span>产品编号</span></td>
+                        <td>CSN13849</td>
+                        <td><span>CAS号</span></td>
+                        <td>1062368-62-0</td>
+                    </tr>
+                    <tr>
+                        <td><span>产品名</span></td>
+                        <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                    </tr>
+                    <tr>
+                        <td><span>描述</span></td>
+                        <td colspan="3">
+                            <p class="description">
+                                LDN-193189 hydrochloride is a selective BMP signaling inhibitor
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="hide-con">
+                <div class="istop"><span>产品<br>置顶</span></div>
+                <div class="cancel"><span>取消<br>收藏</span></div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="loading">
+    加载中...
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="../../static/js/zepto.js"></script>
+<script>
+
+;(function($){
+$('.table-card').bind('touchmove', function(event){
+
+    event.stopPropagation();
+    $(this).css({
+        "left" : "-45%"
+    });
+    $(this).parent().siblings().find('.table-card').css({
+        "left" : "0"
+    });
+
+})
+$('.table-card').bind('touchstart', function(event){
+
+    event.stopPropagation();
+    $(this).css({
+        "left" : "0"
+    });
+
+})
+
+})(Zepto);
+</script>   
+<!--
+<script>
+//侧滑显示删除按钮
+var expansion = null; //是否存在展开的list
+var container = $('.table-card');
+for(var i = 0; i < container.length; i++){    
+    var x, y, X, Y, swipeX, swipeY;
+    container[i].addEventListener('touchstart', function(event) {
+        x = event.changedTouches[0].pageX;
+        y = event.changedTouches[0].pageY;
+        swipeX = true;
+        swipeY = true ;
+        if(expansion){   //判断是否展开，如果展开则收起
+            expansion.className = "";
+        }        
+    });
+    container[i].addEventListener('touchmove', function(event){
+        
+        X = event.changedTouches[0].pageX;
+        Y = event.changedTouches[0].pageY;        
+        // 左右滑动
+        if(swipeX && Math.abs(X - x) - Math.abs(Y - y) > 0){
+            // 阻止事件冒泡
+            event.stopPropagation();
+            if(X - x > 10){   //右滑
+                event.preventDefault();
+                this.className = "";    //右滑收起
+            }
+            if(x - X > 10){   //左滑
+                event.preventDefault();
+                this.className = "swipeleft";   //左滑展开
+                expansion = this;
+            }
+            swipeY = false;
+        }
+        // 上下滑动
+        if(swipeY && Math.abs(X - x) - Math.abs(Y - y) < 0) {
+            swipeX = false;
+        }        
+    });
+}
+</script> -->
+
+
+
+</body>
+</html>

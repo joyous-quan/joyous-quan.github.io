@@ -11,17 +11,22 @@
 	background: #fff;
 	margin: .56rem 0;
 }
-.user-center-con a {
+.user-center-con li a {
 	position: relative;
-	display: block;
+	display: inline-block;
+	overflow: hidden;
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
 	box-sizing: border-box;
-	min-height: 4.45rem;
+	height: 4.45rem;
+	width: 100%;
 	padding-top: 1.5rem;
 	border-bottom: .08rem solid #f3f3f3;
 }
-.user-center-con a .right-icon {
+.user-center-con li:last-child a {
+	border: none;
+}
+.user-center-con li a .right-icon {
 	position: absolute;
 	right: 0;
 }
@@ -102,14 +107,295 @@
 .session-box .up-icon {
 	position: absolute;
 	top: -2rem;
-	left: 22%;
+	left: 18%;
 }
 .reply-message {
 	font-size: 1rem;
 }
-.more-message {
+.last-p a{
 	display: inline-block;
-	padding: 1rem 0;
+	padding: 1rem 0 1.5rem;
 	font-size: 1rem;
 	color: #1583d8;
+}
+.customer-answer{
+	text-align: right;
+}
+
+/*  ------------ 我的收藏 stytle ------------ */
+.customer-QA-con {
+	margin-top: 1.4rem;
+	font-size: 1rem;
+}
+.QA-img {
+	height: 3.11rem;
+	width: 3.11rem;
+	background: #fff;
+	border-radius: .25rem;
+}
+.message-con dl {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.message-con dd {
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 74%;
+	padding: .5rem;
+	line-height: 1.75rem;
+	border-radius: .6rem;
+}
+.message-con dd .img-box {
+	position: absolute;
+}
+.CSNpharm-service dd {
+	margin-left: 1.5rem;
+	background: #fff;
+}
+.CSNpharm-service dd .img-box {
+	left: -0.7rem;
+}
+.time {
+	text-align: center;
+	padding: 1rem 0;
+	font-size: .83rem;
+	color: #fff;
+}
+.time span {
+	display: inline-block;
+	padding: .5rem 1.4rem;
+	background: #ddd;
+	border-radius: 1.5rem;
+}
+.customer-question {
+	justify-content: flex-end;
+}
+.customer-question dd {
+	margin-right: 1.5rem;
+	background: #eb6132;
+	color: #fff;
+}
+.customer-question dd .img-box {
+	right: -0.7rem;
+}
+.customer-QA-icon {
+	height: 1rem;
+	width: 1rem;
+}
+
+
+/*  ------------ 我的收藏 stytle ------------ */
+.swiper-left {
+	
+}
+.my-favorite-card {
+	padding-left: 4%;
+	background: #fff;
+	overflow: hidden;
+}
+.my-favorite-card .table-card {
+	width: 145%;
+	position: relative;
+	-webkit-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+}
+.my-favorite-card .table-card table {
+	width: 62%;
+	border-bottom: .08rem solid #ddd;
+}
+.my-favorite-card .table-card:last-child table {
+	border: none;
+}
+.hide-con {
+	position: absolute;
+	width: 30%;
+	right: 0;
+	top: 0;
+	display: flex;
+	height: 100%;
+}
+.hide-con div {	
+	flex:1;
+	text-align: center;
+	font-size: 1rem;
+}
+.hide-con div span {
+	display: inline-block;
+	margin-top: 78%;
+}
+.istop {
+	background: #ddd;
+}
+.cancel {
+	background: #eb6132;
+	color: #fff;
+}
+.product-red-name {
+	font-weight: bold;
+	font-size: 1.33rem;
+	color: #eb6132!important;
+}
+.description {
+	margin: .8rem 0; 
+	max-height: 2.8rem;
+    overflow : hidden; 
+	display: -webkit-box; 
+	-webkit-box-orient: vertical; 
+	-webkit-line-clamp: 2;  
+}
+
+/*  ------------ 个人信息 stytle ------------ */
+
+.edit {
+	text-align: right;
+}
+.edit a {
+	padding-right: .6rem;
+	color: #aaa;
+	position: relative;
+}
+.edit-icon {
+	position: absolute;
+	right: 3.3rem;
+} 
+.edit-infor-btn-box {
+	padding: .5rem 5%;
+}
+
+/*  ------------ 编辑个人信息 stytle ------------ */
+.edit-message-con table span {
+	color: #aaa;
+}
+.edit-message-con table input{
+ border: none;
+ height: 100%;
+ width: 100%;
+}
+
+/*  ------------ 地址信息 stytle ------------ */
+.address-information-card {
+	background: #fff;
+	font-size: 1rem;
+	margin-bottom: .56rem;
+}
+.address-information-title {
+	height: 3.75rem;
+	line-height: 3.75rem;
+	border-bottom: .08rem solid #f3f3f3;
+	color: #aaa;
+}
+.address-information-card dl {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	border-bottom: .08rem solid #f3f3f3;
+}
+.address-information-card dl dt {
+	width:80%;
+	padding-right: 1rem;
+	line-height: 2rem;
+	margin: .5rem 0;
+}
+.address-information-card dl dd {
+	width: 3.2rem;
+}
+.address-information-card dl dd a {
+	display: inline-block;
+	height: 2.5rem; 
+	line-height: 2.5rem; 
+	margin-top: 50%;
+	padding-left: .6rem;
+	border-left: .08rem solid #f3f3f3;
+	color: #aaa;
+}
+.user-name {
+	display: inline-block;
+	width: 20%;
+	font-size: 1.33rem;
+}
+.default-text {
+	color: #eb6132;
+}
+.address {
+	text-align: center;
+}
+.address a {
+	color: #aaa;
+}
+.address .add-address-txt {
+	position: relative;
+	top: -0.5rem;
+	left: .3rem;
+}
+
+
+/*  ------------ 编辑地址信息 stytle ------------ */
+.save {
+	float: right;
+	color: #aaa; 
+	padding-right: .3rem;
+}
+.shipping-address-con {
+	margin-top: .56rem;
+}
+.edit-address-con .small-icon{
+	position: absolute;
+	right: 0;
+	top: 1rem;
+}
+.set-default,.del-addr {
+	background: #fff;
+	height: 3.89rem;
+	line-height: 3.89rem;
+	margin-bottom: .56rem;
+}
+.del-addr {
+	margin-top: 1rem;
+	color: #ea5413;
+}
+.set-default .float-R{
+	padding-top: .5rem;
+}
+
+/*  set default */
+.switch-checkbox {
+    display: none;
+} 
+.switch-label {
+    background-color: #ddd;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  	width: 3.9rem;
+  	height: 1.95rem;
+    border-radius: 1.95rem;
+    box-shadow: 0 0 0.08rem #ddd;
+}
+.switch-checkbox:checked~.switch-label .switch-circle {
+    left: 1.95rem;
+}
+.switch-circle {
+    position: absolute;
+    display: inline-block;
+    height: 1.95rem;
+    width: 1.95rem;
+    border-radius: 50%;
+    background-color: #fff;
+    /*过渡效果，可考虑不加*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.switch-checkbox:checked~.switch-label {
+    background: #60b5ea;
 }
