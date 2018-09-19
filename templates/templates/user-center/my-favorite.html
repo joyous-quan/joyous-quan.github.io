@@ -149,7 +149,7 @@
 <script>
 
 ;(function($){
-$('.table-card').bind('touchmove', function(event){
+$('.table-card').on('swipeLeft', function(event){
 
     event.stopPropagation();
     $(this).css({
@@ -171,6 +171,7 @@ $('.table-card').bind('touchstart', function(event){
 
 })(Zepto);
 </script>   
+
 
 
 

@@ -67,14 +67,14 @@
 .table-card table td {
 	height: 3.75rem;
 	border-bottom: .08rem solid #f3f3f3;
-	font-size: 1rem;
+	font-size: 1.11rem;
 	color: #555;
 }
 .table-card td span {
-	font-size: .83rem;
+	font-size: 1rem;
 }
 .table-card td span.order-status {
-	font-size: .83rem;
+	font-size: 1rem;
 	position: relative;
 	bottom: .5rem;
 	left: .5rem;
@@ -169,7 +169,7 @@
 .time {
 	text-align: center;
 	padding: 1.5rem 0 1rem;
-	font-size: .83rem;
+	font-size: 1rem;
 	color: #fff;
 }
 .time span {
@@ -228,7 +228,7 @@
 .hide-con div {	
 	flex:1;
 	text-align: center;
-	font-size: 1rem;
+	font-size: 1.11rem;
 }
 .hide-con div span {
 	display: inline-block;
@@ -286,7 +286,7 @@
 /*  ------------ 地址信息 stytle ------------ */
 .address-information-card {
 	background: #fff;
-	font-size: 1rem;
+	font-size: 1.11rem;
 	margin-top: .56rem;
 }
 .address-information-title {
