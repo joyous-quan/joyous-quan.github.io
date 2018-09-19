@@ -61,8 +61,8 @@
 	margin-bottom: .56rem;
 }
 .table-card table {
-	width: 95%;
-	margin-left: .5%;
+	width: 99%;
+	margin-left: 1%;
 }
 .table-card table td {
 	height: 3.75rem;
@@ -247,7 +247,7 @@
 	color: #eb6132!important;
 }
 .description {
-	margin: .8rem 0 .9rem; 
+	margin: .8rem 0 1rem; 
 	max-height: 2.8rem;
     overflow : hidden; 
 	display: -webkit-box; 
