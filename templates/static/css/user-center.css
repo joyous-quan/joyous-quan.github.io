@@ -26,15 +26,16 @@
 .user-center-con li:last-child a {
 	border: none;
 }
-.user-center-con li a .right-icon {
+.user-center-con a .right-icon {
 	position: absolute;
 	right: 0;
+	padding-right: 0;
 }
 .user-center-txt {
 	position: relative;
 	left: .5rem;
 	bottom: .4rem;
-	font-size: 1rem;
+	font-size: 1.22rem;
 	color: #666;
 }
 
@@ -61,7 +62,7 @@
 }
 .table-card table {
 	width: 95%;
-	margin-left: 2.5%;
+	margin-left: .5%;
 }
 .table-card table td {
 	height: 3.75rem;
@@ -93,7 +94,7 @@
 }
 .customer-message span{
 	display: inline-block;
-	text-indent: 1rem;
+	text-indent: .8rem;
 }
 .session-box {
 	position: relative;
@@ -125,7 +126,7 @@
 	text-align: right;
 }
 
-/*  ------------ 我的收藏 stytle ------------ */
+/*  ------------ 客户询单问答 stytle ------------ */
 .customer-QA-con {
 	margin-top: 1.4rem;
 	font-size: 1rem;
@@ -149,7 +150,8 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	max-width: 74%;
-	padding: .5rem;
+	padding: .6rem .6rem .5rem .8rem;
+	min-height: 1.75rem; 
 	line-height: 1.75rem;
 	border-radius: .6rem;
 }
@@ -162,6 +164,7 @@
 }
 .CSNpharm-service dd .img-box {
 	left: -0.75rem;
+	top: .8rem;
 }
 .time {
 	text-align: center;
@@ -185,6 +188,7 @@
 }
 .customer-question dd .img-box {
 	right: -0.75rem;
+	top: .8rem;
 }
 .customer-QA-icon {
 	height: 1rem;
@@ -194,11 +198,11 @@
 
 /*  ------------ 我的收藏 stytle ------------ */
 .swiper-left {
-	
+	padding-left: 4%;
+	margin-bottom:.67rem;
+	background: #fff;
 }
 .my-favorite-card {
-	padding-left: 4%;
-	background: #fff;
 	overflow: hidden;
 }
 .my-favorite-card .table-card {
@@ -208,10 +212,9 @@
 	transition:all 0.3s linear;
 }
 .my-favorite-card .table-card table {
-	width: 62%;
-	border-bottom: .08rem solid #ddd;
+	width: 65%;
 }
-.my-favorite-card .table-card:last-child table {
+.my-favorite-card table tr:last-child td{
 	border: none;
 }
 .hide-con {
@@ -244,7 +247,7 @@
 	color: #eb6132!important;
 }
 .description {
-	margin: .8rem 0; 
+	margin: .8rem 0 .9rem; 
 	max-height: 2.8rem;
     overflow : hidden; 
 	display: -webkit-box; 
@@ -298,6 +301,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	justify-content: space-between;
 	border-bottom: .08rem solid #f3f3f3;
 }
 .address-information-card dl dt {
@@ -364,7 +368,7 @@
 	color: #ea5413;
 }
 .set-default .float-R{
-	padding-top: .5rem;
+	padding-top: .55rem;
 }
 
 /*  set default */

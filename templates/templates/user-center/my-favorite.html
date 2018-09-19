@@ -30,9 +30,9 @@
             <div class="table-card">
                 <table cellspacing="0" border="0">
                     <colgroup>
-                        <col width="20%">
+                        <col width="17%">
                         <col>
-                        <col width="20%">
+                        <col width="15%">
                         <col>
                     </colgroup>
                     <tbody>
@@ -63,78 +63,78 @@
             </div>
         </div>
         <div class="swiper-left">
-        <div class="table-card">
-            <table cellspacing="0" border="0">
-                <colgroup>
-                    <col width="20%">
-                    <col>
-                    <col width="20%">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <td><span>产品编号</span></td>
-                        <td>CSN13849</td>
-                        <td><span>CAS号</span></td>
-                        <td>1062368-62-0</td>
-                    </tr>
-                    <tr>
-                        <td><span>产品名</span></td>
-                        <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
-                    </tr>
-                    <tr>
-                        <td><span>描述</span></td>
-                        <td colspan="3">
-                            <p class="description">
-                                LDN-193189 hydrochloride
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+            <div class="table-card">
+                <table cellspacing="0" border="0">
+                    <colgroup>
+                        <col width="17%">
+                        <col>
+                        <col width="15%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><span>产品编号</span></td>
+                            <td>CSN13849</td>
+                            <td><span>CAS号</span></td>
+                            <td>1062368-62-0</td>
+                        </tr>
+                        <tr>
+                            <td><span>产品名</span></td>
+                            <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                        </tr>
+                        <tr>
+                            <td><span>描述</span></td>
+                            <td colspan="3">
+                                <p class="description">
+                                    LDN-193189 hydrochloride
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="hide-con">
+                    <div class="istop"><span>产品<br>置顶</span></div>
+                    <div class="cancel"><span>取消<br>收藏</span></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="swiper-left">
-        <div class="table-card">
-            <table cellspacing="0" border="0">
-                <colgroup>
-                    <col width="20%">
-                    <col>
-                    <col width="20%">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <td><span>产品编号</span></td>
-                        <td>CSN13849</td>
-                        <td><span>CAS号</span></td>
-                        <td>1062368-62-0</td>
-                    </tr>
-                    <tr>
-                        <td><span>产品名</span></td>
-                        <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
-                    </tr>
-                    <tr>
-                        <td><span>描述</span></td>
-                        <td colspan="3">
-                            <p class="description">
-                                LDN-193189 hydrochloride is a selective BMP signaling inhibitor
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+        <div class="swiper-left">
+            <div class="table-card">
+                <table cellspacing="0" border="0">
+                    <colgroup>
+                        <col width="17%">
+                        <col>
+                        <col width="15%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><span>产品编号</span></td>
+                            <td>CSN13849</td>
+                            <td><span>CAS号</span></td>
+                            <td>1062368-62-0</td>
+                        </tr>
+                        <tr>
+                            <td><span>产品名</span></td>
+                            <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                        </tr>
+                        <tr>
+                            <td><span>描述</span></td>
+                            <td colspan="3">
+                                <p class="description">
+                                    LDN-193189 hydrochloride is a selective BMP signaling inhibitor
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="hide-con">
+                    <div class="istop"><span>产品<br>置顶</span></div>
+                    <div class="cancel"><span>取消<br>收藏</span></div>
+                </div>
+            </div>
             </div>
         </div>
-        </div>
-    </div>
 </div>
 <div class="loading">
     加载中...
@@ -146,10 +146,12 @@
 
 
 <script type="text/javascript" src="../../static/js/zepto.js"></script>
+<script type="text/javascript" src="../../static/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.mobile-1.4.5.js"></script>
 <script>
 
-;(function($){
-$('.table-card').bind('touchmove', function(event){
+(function($){
+$('.table-card').on('swipeLeft', function(event){
 
     event.stopPropagation();
     $(this).css({
@@ -169,7 +171,7 @@ $('.table-card').bind('touchstart', function(event){
 
 })
 
-})(Zepto);
+});
 </script>   
 <!--
 <script>
