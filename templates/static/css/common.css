@@ -101,13 +101,30 @@ span.img-box,a.img-box {
 .white-bg {
 	background: #fff;
 }
+.hide {
+	display: none;
+}
+.clear {
+	clear: both;
+}
 .layout {
 	padding: 0 4%;
 }
-
+.page-title {
+	height: 4.5rem;
+	line-height: 4.5rem;
+	background: #fff;
+	font-size: 1.33rem;
+	color: #666;
+	margin-bottom: .56rem;
+}
 /* ------------ btn style ------------ */
 .btn-box {
 	padding: 1.44rem 0;
+}
+a.btn {
+	display: inline-block;
+	line-height: 4rem;
 }
 .btn {
 	-webkit-box-sizing: border-box;
@@ -142,7 +159,6 @@ span.img-box,a.img-box {
 	color: #666;
 	text-align: center;
 }
-
 
 /* ------------ 侧边菜单 ------------ */
 .mask {
@@ -197,11 +213,14 @@ span.img-box,a.img-box {
 .logo {
 	height: 2.08rem;
 }
-.header-top, .header-top ul,.link,.btn-box {
-	display: -webkit-flex; /* Safari */
+.header-top, .header-top ul,.btn-box {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	display: flex;
 }
-.header-top,.link,.btn-box {
+.header-top,.btn-box {
 	justify-content: space-between ;
 }
 .header-top {
@@ -343,7 +362,7 @@ span.img-box,a.img-box {
 
 /* ------------ menu.html style start ------------- */
 .menu-con {
-	margin-bottom: .94rem;
+	margin-bottom: .56rem;
 	padding-top: 1rem;
 	padding-bottom: .5rem;
 	background: #fff;
@@ -363,6 +382,9 @@ span.img-box,a.img-box {
 	line-height: 2rem;
 	padding: 1rem 0;
 	font-size: 1rem; 
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 .breadcrumb a {
 	color: #666;
@@ -393,7 +415,7 @@ span.img-box,a.img-box {
 /* 价格优惠 */
 .warranty{
 	height: 12.08rem;
-	margin-top: 1.17rem;
+	margin-top: .56rem;
 	padding-top: .83rem;
 }
 .warranty ul{
@@ -483,6 +505,45 @@ span.img-box,a.img-box {
 }
 
 
+/* map style */
+.map-con {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	margin-bottom: .56rem;
+}
+.map-con ul {
+	width: 46%;
+}
+.map-con .sub-title {
+	border-bottom: .08rem solid #e0e0e0;
+}
+.map-con li:last-child {
+	border: none;
+}
 
-
-
+/* error style */
+.error-con {
+	margin: .56rem 0;
+	padding-bottom: 2rem;
+	text-align: center;
+}
+.error-con .img-box {
+	width: 60%;
+	padding-top: 2rem;
+}
+.error-con h1 {
+	font-size: 2.2rem;
+	font-weight: normal;
+	margin: 1.5rem 0 1rem;
+}
+.error-con p {
+	padding: 0 20%;
+	font-size: 1.11rem;
+	line-height: 1.6rem;
+	margin-bottom: 1.6rem;
+}

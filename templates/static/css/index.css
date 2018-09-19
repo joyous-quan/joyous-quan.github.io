@@ -1,6 +1,11 @@
-
 /* 邮箱 电话 */
 .link {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
 	height: 3.78rem;
 	background: #fff;
 	line-height: 3.78rem;
@@ -17,8 +22,6 @@
 .link .tel {
 	color: #eb6132;
 }
-
-
 /* banner */
 .banner{
 	height: 16.89rem;

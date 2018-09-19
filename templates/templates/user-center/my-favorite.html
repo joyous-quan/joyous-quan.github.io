@@ -44,7 +44,9 @@
                         </tr>
                         <tr>
                             <td><span>产品名</span></td>
-                            <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                            <td colspan="3">
+                                <a href="javascript:;" class="product-red-name">Pyrrolobenzodiazepine Dimer</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><span>描述</span></td>
@@ -80,7 +82,9 @@
                         </tr>
                         <tr>
                             <td><span>产品名</span></td>
-                            <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                            <td colspan="3">
+                                <a href="javascript:;" class="product-red-name">Pyrrolobenzodiazepine Dimer</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><span>描述</span></td>
@@ -116,7 +120,9 @@
                         </tr>
                         <tr>
                             <td><span>产品名</span></td>
-                            <td colspan="3" class="product-red-name">Pyrrolobenzodiazepine Dimer</td>
+                            <td colspan="3">
+                                <a href="javascript:;" class="product-red-name">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><span>描述</span></td>
@@ -147,9 +153,8 @@
 
 <script type="text/javascript" src="../../static/js/zepto.js"></script>
 <script>
-
 ;(function($){
-$('.table-card').on('swipeLeft', function(event){
+$('.table-card').bind('touchmove', function(event){
 
     event.stopPropagation();
     $(this).css({

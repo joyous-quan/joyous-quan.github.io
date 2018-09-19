@@ -1,0 +1,189 @@
+.products-con-top {
+	padding: 1rem 4%;
+	font-size: 1rem;
+	margin-bottom: .56rem;
+}
+.products-con-top li {
+	margin-bottom: 1rem;
+}
+.products-img {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 27.78rem;
+	width: 100%;
+	text-align: center;
+	line-height: 27.78rem;
+	border: .08rem solid #e0e0e0;
+}
+.products-con-top .product-name {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.products-con-top .prodect-num {
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.products-table {
+	padding: 1rem 4%;
+	font-size: 1rem;
+	margin-bottom: .56rem;
+}
+.products-table table {
+	width:100%;
+}
+.products-table table td {
+	height: 3.33rem;
+	text-align: center;
+}
+.products-table thead td {
+	background: #f3f3f3;
+}
+.products-table input {
+	width: 3rem;
+	height: 1.8rem;
+	border: none;
+	text-align: center;
+	background: #f3f3f3;
+}
+.product-btn-box {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+.flex1 {
+	flex: 1;
+}
+.flex3 {
+	flex: 3;
+	margin-right: 1rem;
+}
+.flex5 {
+	flex: 5;
+}
+.link {
+	overflow: hidden;
+	margin-bottom: .56rem;
+}
+.link>div{
+	width: 50%;
+	float:left;	
+	height: 3.78rem;
+	line-height: 3.78rem;
+	font-size: 1.33rem;
+	white-space: nowrap;	
+}
+.link .img-box {
+	position: relative;
+	top: .35rem;
+}
+.link a {
+	color: #555;
+}
+
+.purity-doc-con li {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 4.17rem;
+	padding-top: 1rem;
+}
+.purity-doc-title {
+	font-size: 1.33rem;
+	line-height: 4.17rem;
+	border-bottom: .08rem solid #e0e0e0;
+}
+.purity-batch {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: .08rem solid #e0e0e0;
+}
+.purity-batch select {
+	outline: none;
+	padding: .3rem .5rem;
+}
+.purity-batch select option {
+	width: 100%;
+}
+.download a {
+	display: inline-block;
+	text-align: center;
+	margin-right: 1.2rem;
+	margin-bottom: 2rem;
+}
+.download .small-icon {
+	height: 2rem;
+	width: 2rem;
+}
+.hide-card>li {
+	padding: 0 4%;
+	background: #fff;
+}
+.hide-card div {
+	height: 4.78rem;
+	margin-top: .56rem;
+	line-height: 4.78rem;
+	font-size: 1.33rem;
+}
+.hide-card ol {
+	border-top: .08rem solid #e0e0e0;
+	padding: 1rem 0 1.5rem;
+}
+.hide-card ol li {
+	min-height: 2.4rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.hide-card div .small-icon {
+	float: right;
+}
+.molarity p {
+	margin-bottom: .5rem;
+}
+.molarity p .molarity-txt {
+	display: inline-block;
+	width: 45%;
+}
+.molarity .btn {
+	margin-top: .5rem;
+}
+.inquiry-form {
+	margin: .56rem 0;
+	padding-bottom: 1.5rem;
+}
+.inquiry-form-title {
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 1.33rem;	
+}
+.inquiry-form-title span {
+	float: right;
+	color: #eb6132;
+	font-size: 1rem;
+}
+.inquiry-form input,.hide-card input,.inquiry-form textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 4rem;
+	border: none;
+	background: #f3f3f3;
+	padding:0 1rem;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+}
+.inquiry-form textarea {
+	font-family: Airl;
+	height: 10rem;
+	padding: .8rem 1rem;
+}
