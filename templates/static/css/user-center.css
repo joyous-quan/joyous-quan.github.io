@@ -90,7 +90,10 @@
 .message-box {
 	padding-top: 1rem;
 	color: #555;
-	font-size: .83rem;
+	font-size: .9rem;
+}
+.message-box span:last-child {
+	font-size: 1.11rem;
 }
 .customer-message span{
 	display: inline-block;
