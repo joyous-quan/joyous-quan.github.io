@@ -131,6 +131,7 @@ span.order-status {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	font-size: 1.11rem;
 	line-height: 3.75rem;
 }
 .look-detail .small-icon {
@@ -355,6 +356,7 @@ span.order-status {
 	border: none;
 	height: 100%;
 	width: 100%;
+	padding-left: 0;
 	font-size: 1.11rem;
 }
 

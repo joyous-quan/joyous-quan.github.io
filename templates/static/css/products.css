@@ -153,8 +153,44 @@
 	display: inline-block;
 	width: 45%;
 }
+.molarity label {
+	position: relative;
+}
+.molarity label select {
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	height: 2rem;
+	background: #f3f3f3;
+	outline: none;
+	border: none;
+}
+.molarity  select option {
+	outline: none;
+	border: none;
+}
 .molarity .btn {
 	margin-top: .5rem;
+}
+
+.technical-information table td{
+	padding: .8rem 0;
+	height: 3rem;
+	border-bottom: .08rem solid #e0e0e0;
+}
+
+.references a {
+	display: inline-block;
+	width: 100%;
+	color: #2180be;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: .08rem solid #e0e0e0;
+}
+.references li:last-child a{
+	border: none;
+	margin: 0;
 }
 .inquiry-form {
 	margin: .56rem 0;

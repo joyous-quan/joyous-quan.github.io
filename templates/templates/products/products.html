@@ -175,7 +175,6 @@
                 生物活性
                 <span class="img-box small-icon">
                     <img src="../../static/images/down.png" alt="">
-                    <img class="hide" src="../../static/images/up.png" alt="">
                 </span>
             </div>
             <ol class="hide bioactivity">
@@ -206,21 +205,49 @@
                     <p>
                         <span>质量</span>
                     </p>
-                    <input type="" name="">
+                    <label>
+                        <input type="text" name="concentration" id="Concentration">
+                        <select id="ConcUnits" name="ConcUnits">
+                            <option value="">fM</option> 
+                            <option value="">pM</option> 
+                            <option value="">nM</option> 
+                            <option value="">μM</option> 
+                            <option selected="" value="">mM</option> 
+                            <option value="">M</option>
+                        </select>
+                    </label>
                     <p>
                         <span class="molarity-txt">浓度</span>
                         <span class="img-box small-icon">
                             <img src="../../static/images/products/multiple-sign.png" alt="">
                         </span>
                     </p>
-                    <input type="" name="">
+                    <label>
+                        <input type="" name="">
+                        <select id="VolUnits" name="VolUnits">
+                            <option value="">nL</option> 
+                            <option value="">μL</option> 
+                            <option selected="" value="">mL</option> 
+                            <option value="">L</option>
+                        </select>
+                    </label>
                     <p>
                         <span class="molarity-txt">体积</span>
                         <span class="img-box small-icon">
                             <img src="../../static/images/products/multiple-sign.png" alt="">
                         </span>
                     </p>
-                    <input type="" name="">
+                    <label>
+                        <input type="text" name="mass" id="Mass">
+                        <select id="MassUnits" name="MassUnits">
+                            <option value="">pg</option> 
+                            <option value="">ng</option> 
+                            <option value="">μg</option> 
+                            <option selected="" value="">mg</option> 
+                            <option value="">g</option> 
+                            <option value="">kg</option>
+                        </select>
+                    </label>
                     <p>
                         <span class="molarity-txt">分子量</span>
                         <span class="img-box small-icon">
@@ -242,17 +269,68 @@
                     <img src="../../static/images/down.png" alt="">
                 </span>
             </div>
-            <ol class=" technical-information">
-                <li>
-                    
-                </li>
+            <ol class="hide technical-information">
+                <table cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="23%">分子量</td>
+                            <td colspan="3">587.63</td>
+                        </tr>
+                        <tr>
+                            <td>化学式</td>
+                            <td colspan="3">C28H40F3N3O7</td>
+                        </tr>
+                        <tr>
+                            <td>CAS号</td>
+                            <td colspan="3">951916-42-2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">体外</td>
+                            <td>DMSO</td>
+                            <td>Ethanol</td>
+                            <td>Water</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">≥32</td>
+                        </tr>
+                        <tr>
+                            <td><b>Shipping</b></td>
+                            <td colspan="3">Room temperature in continental US;  may vary elsewhere</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">稳定性</td>
+                            <td>Powder</td>
+                            <td>-20°C  <br> 4°C</td>
+                            <td>3 years <br> 2 years</td>
+                        </tr>
+                        <tr>
+                            <td>In solvent</td>
+                            <td>-80°C  <br> -20°C</td>
+                            <td>6 months <br> 1 months</td>
+                        </tr>
+                    </tbody>
+                </table>
             </ol>
         </li>
         <li>
-            参考文献
-            <span class="img-box small-icon">
-                <img src="../../static/images/down.png" alt="">
-            </span>
+            <div>
+                参考文献
+                <span class="img-box small-icon">
+                    <img src="../../static/images/down.png" alt="">
+                </span>
+            </div>
+            <ol class="hide references">
+                <li>
+                    <a href="">
+                        [1]Sanderson RJ, Hering MA, et al. In vivo drug-linker stability of an anti-CD30 dipeptide-linked auristatin immunoconjugate. Clin Cancer Res. 2005 Jan 15;11(2 Pt 1):843-52.
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        [1]Sanderson RJ, Hering MA, et al. In vivo drug-linker stability of an anti-CD30 dipeptide-linked auristatin immunoconjugate. Clin Cancer Res. 2005 Jan 15;11(2 Pt 1):843-52.
+                    </a>
+                </li>
+            </ol>
         </li>
     </ul>
     <div class="layout white-bg inquiry-form">
@@ -278,14 +356,16 @@
 <script>
 ;(function($){
 
-    //二级菜单显示隐藏
-    $('.products-bioactivity>li div').bind('touchstart',function(event){
+    
+    //显示隐藏
+    $('.hide-card>li div').bind('touchstart',function(event){
 
+        event.stopPropagation();
         $(this).parent().find('ol.hide').toggle();
-        $(this).parent().siblings().find('ol.hide').hide()
+        $(this).parent().siblings().find('ol.hide').hide();
 
     });
-
+    
 })(Zepto);
     
 </script>
