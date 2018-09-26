@@ -153,20 +153,18 @@
 	display: inline-block;
 	width: 45%;
 }
-.molarity label {
+.molarity div {
 	position: relative;
 }
-.molarity label input {
-	width: 100%;
-}
-.molarity label select {
+.molarity div select {
 	position: absolute;
 	right: 0;
 	top: 0;
 	z-index: 9;
 	text-align: center;
-	height: 2rem;
+	height: 4.7rem;
 	width: 5rem;
+	margin-right: .8rem;
 	background: #f3f3f3;
 	outline: none;
 	border: none;
@@ -227,4 +225,13 @@
 	font-family: Airl;
 	height: 10rem;
 	padding: .8rem 1rem;
+}
+.hide-card .ipt-kuang {
+	background: #f3f3f3;
+}
+.hide-card .ipt-kuang input{
+	width: 80%;
+}
+.hide-card .ipt-kuang select {
+	float: right;
 }
