@@ -85,7 +85,7 @@
 .link a {
 	color: #555;
 }
-
+.active {border-radius:#f3f3f3}
 .purity-doc-con li {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -156,12 +156,17 @@
 .molarity label {
 	position: relative;
 }
+.molarity label input {
+	width: 100%;
+}
 .molarity label select {
 	position: absolute;
 	right: 0;
 	top: 0;
+	z-index: 9;
 	text-align: center;
 	height: 2rem;
+	width: 5rem;
 	background: #f3f3f3;
 	outline: none;
 	border: none;
