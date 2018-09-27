@@ -113,13 +113,43 @@
 	justify-content: space-between;
 	border-bottom: .08rem solid #e0e0e0;
 }
-.purity-batch select {
+.purity-batch .float-L {
+	line-height: 2rem;
+}
+.select-box {
+	display: inline-block;
+	height: 2.64rem;
+	width: 10rem;
+	background: #f3f3f3;
+	position: relative;
+	text-align: right;
+	line-height: 2.64rem;
+}
+.select-box i {
+	font-size: 2rem;
+	padding-right: .4rem;
+	color: #555555;
+}
+.select-batch {
+	display: inline-block;
+	position: relative;
+	bottom: .4rem;
+}
+.select-box select {
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
 	outline: none;
+	border: none;
+	background: none;
 	padding: .3rem .5rem;
 }
-.purity-batch select option {
-	width: 100%;
-}
+
 .download a {
 	display: inline-block;
 	text-align: center;
@@ -167,9 +197,12 @@
 	display: inline-block;
 	width: 45%;
 }
+
+
 .molarity div {
-	position: relative;
+	position:relative;
 }
+
 .molarity div select {
 	position: absolute;
 	right: 0;
@@ -180,10 +213,6 @@
 	width: 5rem;
 	margin-top: 1.3rem;
 	background: #f3f3f3;
-	outline: none;
-	border: none;
-}
-.molarity  select option {
 	outline: none;
 	border: none;
 }

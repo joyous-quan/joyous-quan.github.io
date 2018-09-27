@@ -49,12 +49,19 @@ input::-ms-clear,input::-ms-reveal{
 	display: none;
 }
 input {
-	-webkit-box-sizing: border-box; /* Safari */
-	-moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 input,button,textarea{
 	outline: none;
+}
+select {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance:none;
+	appearance:none;
 }
 input, textarea {
     -webkit-user-select: auto!important;
