@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cn">
 <head>
-    <title>产品页面</title>
+    <title>缺货页面</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no"> 
@@ -51,36 +51,9 @@
         </li>
     </ul>
     <div class="layout white-bg products-table">
-        <table cellspacing="0" border="0">
-            <thead>
-                <tr>
-                    <td>规格</td>
-                    <td>价格</td>
-                    <td>库存</td>
-                    <td>数量</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1mg</td>
-                    <td>RMB 336</td>
-                    <td>>10 (in stock China)</td>
-                    <td><input type="number" value="1"></td>
-                </tr>
-                <tr>
-                    <td>1mg</td>
-                    <td>RMB 336</td>
-                    <td>>10 (in stock China)</td>
-                    <td><input type="number" value="1"></td>
-                </tr>
-                <tr>
-                    <td>1mg</td>
-                    <td>RMB 336</td>
-                    <td>>10 (in stock China)</td>
-                    <td><input type="number" value="1"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="products-stockout">
+            The item is temporarily out of stock. Please leave your email address and we will inform you when we have it in stock
+        </div>
         <ul class="product-btn-box">
             <li class="flex1">
                 <span class="img-box small-icon">
@@ -89,11 +62,8 @@
                 </span> <br>
                 收藏
             </li>
-            <li class="flex3">
-                <button class="btn btn-blue">询价</button>
-            </li>
             <li class="flex5">
-                <button class="btn btn-red">加入购物车</button>
+                <button class="btn btn-blue">询价</button>
             </li>
         </ul>
     </div>

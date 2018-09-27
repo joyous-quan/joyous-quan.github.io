@@ -24,7 +24,13 @@
 	font-weight: bold;
 	overflow: hidden;
 }
-
+.products-stockout {
+	padding: .6rem 1.2rem;
+	min-height: 7rem;
+	line-height: 2rem;
+	background: #fff0ea;
+	font-size: 1.33rem;
+}
 .products-table {
 	padding: 1rem 4%;
 	font-size: 1rem;
@@ -155,6 +161,7 @@
 .molarity .small-icon {
 	height: 1.5rem;
 	width: 1.5rem;
+	margin-top: .5rem;
 }
 .molarity p .molarity-txt {
 	display: inline-block;
@@ -201,45 +208,4 @@
 .references li:last-child a{
 	border: none;
 	margin: 0;
-}
-.inquiry-form {
-	margin: .56rem 0;
-	padding-bottom: 1.5rem;
-}
-.inquiry-form-title {
-	height: 4rem;
-	line-height: 4rem;
-	font-size: 1.33rem;	
-}
-.inquiry-form-title span {
-	float: right;
-	color: #eb6132;
-	font-size: 1rem;
-}
-.inquiry-form input,.hide-card input,.inquiry-form textarea {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 100%;
-	height: 4rem;
-	border: none;
-	background: #f3f3f3;
-	padding:0 1rem;
-	margin-bottom: 1rem;
-	font-size: 1rem;
-	border-radius: 0;
-}
-.inquiry-form textarea {
-	font-family: Airl;
-	height: 10rem;
-	padding: .8rem 1rem;
-}
-.hide-card .ipt-kuang {
-	background: #f3f3f3;
-}
-.hide-card .ipt-kuang input{
-	width: 80%;
-}
-.hide-card .ipt-kuang select {
-	float: right;
 }
