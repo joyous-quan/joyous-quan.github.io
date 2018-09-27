@@ -11,6 +11,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- 引入样式 -->
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css">
     <link rel="stylesheet" href="../../static/css/common.css">
     <link rel="stylesheet" href="../../static/css/products.css">
     <link rel="stylesheet" href="../../static/css/form.css">
@@ -126,13 +127,17 @@
         <li class="purity-doc-title">纯度和文档</li>
         <li class="purity-batch">
             <p class="float-L">Purity: 99.76%</p>
-            <p class="float-R">
-                Select Batch:
-                <select>
-                    <option>C30162310</option>
-                    <option>C30162310</option>
-                </select>
-            </p>
+            <div class="float-R">
+                <span class="select-batch">Select Batch:</span>
+                <div class="select-box">
+                    <i class="iconfont icon-sanjiao_down_s"></i>
+                    <select>
+                        <option>C30162310</option>
+                        <option>C30162312</option>
+                        <option>C30162313</option>
+                    </select>
+                </div>
+            </div>
         </li>
         <li class="download">
             <a href="javascript:;">
@@ -198,6 +203,7 @@
                         <span>质量</span>
                     </p>
                     <div class="ipt-kuang">
+                        <i class="iconfont icon-sanjiao_down_s"> </i>
                         <input type="text" name="">
                         <select id="concUnits" name="concUnits">
                             <option value="">fM</option> 
@@ -215,6 +221,7 @@
                         </span>
                     </p>
                     <div class="ipt-kuang">
+                        <i class="iconfont icon-sanjiao_down_s"> </i>
                         <input type="text" name="">
                         <select id="volUnits" name="volUnits">
                             <option value="">nL</option> 
@@ -230,6 +237,7 @@
                         </span>
                     </p>
                     <div class="ipt-kuang">
+                        <i class="iconfont icon-sanjiao_down_s"> </i>
                         <input type="text" name="" >
                         <select id="massUnits" name="massUnits">
                             <option value="">pg</option> 

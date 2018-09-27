@@ -125,6 +125,23 @@ span.img-box,a.img-box {
 	color: #666;
 	margin-bottom: .56rem;
 }
+
+/* ------- common title -------- */
+.title-con {
+	position: relative;
+	height: 3.5rem;
+	padding-top: 2rem;
+	background: #fff;
+	font-size: 1.33rem;
+	color: #666;
+	text-align: center;
+}
+.title-con .left-icon {
+	position: absolute;
+	left: 4%;
+}
+
+
 /* ------------ btn style ------------ */
 .btn-box {
 	padding: 1.44rem 0;
