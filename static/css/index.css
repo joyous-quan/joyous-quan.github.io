@@ -23,34 +23,11 @@
 	color: #eb6132;
 }
 /* banner */
-.circle { width:6rem; margin:30px auto;}
-.circle li{ display:inline-block; width:1rem; 
-	height:1rem; background: #ddd; margin:0 20px; 
+.banner{
+	height: 16.6rem;
+	overflow-x: hidden;
 }
 
-.banner{
-	height: 16.89rem;
-	overflow-x: hidden;
-	position: relative;
-}
-.banner-con {
-	margin: .56rem 0;
-	height: 15.77rem;
-	width: 279%;
-	position: absolute;
-}
-.banner-con li {
-	height: 15.77rem;
-	width: 31.83%;
-	border-radius: .5rem;
-	overflow:hidden;
-	margin-right: 1.5%;
-	float: left;
-}
-.banner-con li img {
-	height:100%;
-	width:100%;
-}
 
 /* 登录 注册 */
 .btn-red {
