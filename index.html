@@ -1,258 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="cn">
 <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
-    <title>Joyous-quan</title>
+    <title>首页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"> 
+    <meta name="format-detection" content="email=no"> 
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no">
 
-    <link rel="stylesheet" type="text/css" href="static/iconfont/iconfont.css">
-    <link rel="stylesheet" type="text/css" href="static/css/index.css">
-    <link rel="stylesheet" type="text/css" href="static/css/animate.css">
-    <!--[if lt IE 10]>
-    <link rel="stylesheet" href="static/css/common_ie.css"/>
-    <![endif]-->
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
 
-    <nav class="nav fixed-nav">
-        <div class=" nav-menu">
-            <div class="ie_floatL">
-                <a class="Cachet" href="templates/templates/page/index.html">Cachet</a>
-            </div>
-            <div class="ie_floatR ">
-                <p class="navbar-show hidden">
-                    <span><i class="iconfont icon-menu"></i></span>
-                </p>
-                <ul class="navbar ">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="static/page/template.html">Template</a></li>
-                    <li><a href="static/page/hobbies.html">Hobbies</a></li>
-                    <li><a href="static/page/about.html">About</a></li>
-                    <li><a href="static/page/contact.html">Contact</a></li>
-                </ul>
-            </div>
+        
+   
+
+<!-- header -->
+<div id="header"></div>
+<!-- 主体 -->
+    <div class="layout link">
+        <div>
+            <a class="email" href="mailto:sales@csnpharm.cn">
+                <span class="img-box small-icon">
+                    <img src="/static/images/header/email.png" alt="Email">
+                </span>
+                sales@csnpharm.cn
+            </a>
         </div>
-    </nav>
-    <div class="header">
-        <div class="header-text">
-            <h1>One Page &amp; Multi page Template</h1>
-            <p class="text-p">The man who has made up his mind to win will never say ' impossible '</p>
-            <p class="text-p wow fadeInUp"  data-wow-delay=".2s">
-                <a href="templates/page/index.html" class="hover">SEE ONEPAGE VERION</a> 
-            </p>
-            <div class="down wow fadeInUp"  data-wow-delay=".3s" >
-                <a href="javascript:;"><i class="iconfont icon-xiangxiazhankai"></i></a>
-            </div> 
+        <div>
+            <a class="tel" href="javascript:;">
+                <span class="img-box small-icon">
+                    <img src="/static/images/header/iphone.png" alt="Tel">
+                </span>
+                400-920-2911
+            </a>
         </div>
     </div>
-
-    <div class="section1 points">
-        <h2>Key Points</h2>
-        <div class="layout points_dl">
-            <dl class="wow fadeInUp"  data-wow-delay=".5s">
-                <dt><img src="static/images/jquery.png" alt=""></dt>
-                <dd>
-                    <h4>jQuery.js</h4>
-                    <p>jQuery是一个快速、简洁的JavaScript框架</p>
-                    <a href="http://jquery.com/" target="_blank"><i class="iconfont icon-youjiantou"></i></a>
-                </dd>
-            </dl>
-            <dl class="wow fadeInUp center"  data-wow-delay=".5s">
-                <dt><img src="static/images/animate.png" alt=""></dt>
-                <dd>
-                    <h4>Animate.css</h4>
-                    <p>一款强大的预设css3动画库 <br> &nbsp;</p>
-                    <a href="https://daneden.github.io/animate.css/" target="_blank"><i class="iconfont icon-youjiantou"></i></a>
-                </dd>
-            </dl>
-            <dl class="wow fadeInUp"  data-wow-delay=".5s">
-                <dt><img src="static/images/wow.png" alt=""></dt>
-                <dd>
-                    <h4>Wow.js</h4>  
-                    <p>让页面滚动更有趣，依赖animate.css库</p>
-                    <a href="http://mynameismatthieu.com/WOW/" target="_blank"><i class="iconfont icon-youjiantou"></i></a>
-                </dd>
-            </dl>
+    <div class="layout banner position-r">
+        <div class="slider-container">
+            <ul class="banner-con border-box slider">
+                <li class="img-box"><img src="/static/images/banner_1.png" alt=""></li>
+                <li class="img-box"><img src="/static/images/banner_2.png" alt=""></li>
+                <li class="img-box"><img src="/static/images/banner_3.png" alt=""></li>
+            </ul>
+        </div>
+        <ul class="circle">
+            <li></li><li></li><li></li>
+        </ul>
+        <div class="prev"></div>
+        <div class="next"></div>
+    </div>
+    <div class="layout white-bg">
+        <div class="btn-box">
+            <button class="btn btn-red login-btn">登录</button>
+            <button class="btn btn-line register-btn">注册</button>
         </div>
     </div>
-
-    <div class="section2 about-us">
-        <div class="about-dl">
-            <dl>
-                <dt class="wow fadeIn"  data-wow-delay=".2s"><img src="static/images/img_2.jpg" alt=""></dt>
-                <dd class="wow fadeInRight"  data-wow-delay=".2s">
-                    <h2>About Us</h2>
-                    <p>
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                    </p>
-                    <p>
-                        Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-                    </p>
-                    <a href="" title="" class="hover"> Read More</a>
-                </dd>
-            </dl>
-            <dl>
-
-                <dt class="wow fadeIn hide"  data-wow-delay=".2s"><img src="static/images/img_4.jpg" alt=""></dt>
-                <dd  class="wow fadeInLeft"  data-wow-delay=".2s">
-                    <h2>Created with love</h2>
-                    <p>
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                    </p>
-                    <p>
-                        Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-                    </p>
-                    <a href="" title="" class="hover"> Read More</a>
-                </dd>
-                <dt class="wow fadeIn last-dt"  data-wow-delay=".2s"><img src="static/images/img_4.jpg" alt=""></dt>
-            </dl>
+    <div class="layout section white-bg">
+        <div class="title">
+            信号通路
+        </div>
+        <div class="sub-title">
+            <a href=""><span class="tips-red"></span><b>Ubiquitin Signaling Pathway</b></a>
+            <span class="img-box small-icon">
+                <img src="/static/images/right.png" alt="link">
+            </span>
+        </div>
+        <div class="section-img-box">
+            <span class="img-box"><img src="/static/images/img.png" alt=""></span>
+        </div>
+        <div class="sub-title">
+            <a href=""><span class="tips-red"></span><b>Stem Cell Signaling Pathway</b></a>
+            <span class="img-box small-icon">
+                <img src="/static/images/right.png" alt="link">
+            </span>
+        </div>
+        <div class="section-img-box">
+            <span class="img-box"><img src="/static/images/img.png" alt=""></span>
+        </div>
+        <div class="sub-title">
+            <a href=""><span class="tips-red"></span><b>Protein Tyrosine Kinase-RTK Signaling Pathway</b></a>
+            <span class="img-box small-icon">
+                <img src="/static/images/right.png" alt="link">
+            </span>
+        </div>
+        <div class="section-img-box">
+            <span class="img-box"><img src="/static/images/img.png" alt=""></span>
+        </div>
+        <div class="sub-title">
+            <a href=""><span class="tips-red"></span><b>PI3K-AKT-mTOR Signaling Pathway</b></a>
+            <span class="img-box small-icon">
+                <img src="/static/images/right.png" alt="link">
+            </span>
+        </div>
+        <div class="section-img-box margin0">
+            <span class="img-box"><img src="/static/images/img.png" alt=""></span>
         </div>
     </div>
-
-    <div class="section3 testimonial">
-        <h2 class="wow fadeInUp" data-wow-delay=".2s">Testimonial</h2>
-        <p class="wow fadeInUp"  data-wow-delay=".2s">
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-            <br> there live the blind texts.
-        </p>
-        <div class="layout testimonial-dl">
-            <dl class="wow fadeInUp"  data-wow-delay=".3s">
-                <dd>
-                    <p class="quotes">“</p>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                </dd>
-                <dt>
-                    <img src="static/images/person_1.jpg" alt="">
-                    <h4>Garry Alexander</h4>
-                    <p>@garry</p>
-                </dt>
-            </dl>
-            <dl class="wow fadeInUp"  data-wow-delay=".3s">
-                <dd>
-                    <p class="quotes">“</p>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br> &nbsp;</p>
-                </dd>
-                <dt>
-                    <img src="static/images/person_3.jpg" alt="">
-                    <h4>Deborah Smith</h4>
-                    <p>@deborah</p>
-                </dt>
-            </dl>
-            <dl class="wow fadeInUp"  data-wow-delay=".3s">
-                <dd>
-                    <p class="quotes">“</p>
-                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                </dd>
-                <dt>
-                    <img src="static/images/person_2.jpg" alt="">
-                    <h4>James Robertson</h4>
-                    <p>@james</p>
-                </dt>
-            </dl>
+    <div class="layout white-bg">
+        <div class="btn-box">
+            <button class="btn btn-blue"><span>+ </span> 查看更多</button>
         </div>
     </div>
+  
 
-    <footer>
-        <div class="layout footer">
-            <ul>
-                <li><h4>Quick Links</h4></li>
-                <li><a href="" title="">Home</a></li>
-                <li><a href="" title="">About</a></li>
-                <li><a href="" title="">Services</a></li>
-                <li><a href="" title="">Contact</a></li>
-            </ul>
-            <ul>
-                <li><h4>Quick Links</h4></li>
-                <li><a href="" title="">Home</a></li>
-                <li><a href="" title="">About</a></li>
-                <li><a href="" title="">Services</a></li>
-                <li><a href="" title="">Contact</a></li>
-            </ul>
-            <ul>
-                <li><h4>Quick Links</h4></li>
-                <li><a href="" title="">Home</a></li>
-                <li><a href="" title="">About</a></li>
-                <li><a href="" title="">Services</a></li>
-                <li><a href="" title="">Contact</a></li>
-            </ul>
-            <ul>
-                <li><h4>Quick Links</h4></li>
-                <li><a href="" title="">Home</a></li>
-                <li><a href="" title="">About</a></li>
-                <li><a href="" title="">Services</a></li>
-                <li><a href="" title="">Contact</a></li>
-            </ul>
-        </div>
-        <p class="copyright">Copyright © 2018.Company name All rights reserved.</p>
-    </footer>
-    
-</body>
+<!-- footer -->
+<div id="footer"></div>
 
-<script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="static/js/wow.js"></script>
+
+
+
+<script type="text/javascript" src="/static/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/static/js/zepto.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 
 <script>
-
-    $(function(){
-        // 页面动态效果
-        var wow = new WOW({
-          　animateClass: 'animated',
-        });
-        wow.init();
-
-        //header 向下
-        var section_1 = $('.section1').offset().top -170;
-        $(".down").click(function(){
-            $('html,body').animate({scrollTop:section_1}, 500);
-        })
-
-        //nav 效果
-        $(window).scroll(function() {
-            if ($(".nav").offset().top > 80) {
-                $(".nav").addClass("top-nav");
-                $(".navbar-show i").addClass("black");
-                $(".navbar li").addClass("white")
-            } else {
-                $(".nav").removeClass("top-nav");
-                $(".navbar-show i").removeClass("black");
-                $(".navbar li").removeClass("white")
-            }
-        });
-
-        if($(".nav-menu").offsetWidth > 767 ){
-            $(".nav-menu").addClass("layout")
-        }
-
-        //
-        $(".navbar-show i").click(function(){
-            $(".navbar").toggle();
-        })
-
-        console.log($(".nav").offsetWidth )
+;(function($){
+    //登录
+    $('.login-btn').bind('touchstart',function(event){
+       window.location.href = '/templates/page/login-register/login.html';
+    })
+    //注册
+    $('.register-btn').bind('touchstart',function(event){
+       window.location.href = '/templates/page/login-register/register.html';
     })
 
+})(Zepto);
 </script>
 
-<script type="text/javascript"> 
+<script>
+     var flag = "left";
 
-//识别移动设备 ipad 
-/*
-$(function(){
-    var u = navigator.userAgent;
-    if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1||u.indexOf('iPhone') > -1||u.indexOf('Windows Phone') > -1||navigator.userAgent.indexOf("iPad")>-1) {
-           $(".row_list .hover-bg,.hover-text").css({'opacity':'1'});
-           
-           $(".row_list .hover-text li.a").css({'top':'30%'});
-           
-           $(".row_list .hover-text li.c").css({'top':'65%'});
-
-           $(".nav").css({'background':'#000','padding':'0'});
+    function my_scroll(container,prev,next,slider,speed,auto){
+        var container = $(container),
+            prev = $(prev),
+            next = $(next),
+            slider = $(slider),
+            speed = speed;
+        var w = slider.find('li').outerWidth(true);
+        prev.click(function(){
+            slider.animate({ marginLeft : -w },function(){
+                slider.find('li').eq(0).appendTo(slider);
+                slider.css({marginLeft : 0});
+            });
+            flag = "left";
+        });
+        next.click(function(){
+            slider.find('li:last').prependTo(slider);
+            slider.css({ marginLeft : -w });
+            slider.animate({ marginLeft : 0});
+            flag = "right";
+        })
+        if(auto == true) {
+            timer = setInterval(function(){
+                flag = "left" ? prev.click() : next.click();
+            },speed);
+            container.hover(
+                function(){clearInterval(timer)},
+                function(){
+                    timer = setInterval(function(){
+                        flag = "left" ? prev.click() : next.click();
+                    },speed);
+                }
+            )
         }
-});
+    }
+    my_scroll('.banner','.next','.prev','.slider', 3000, true);
 
-*/
+
+
 
 </script>
-
+</body>
 </html>
