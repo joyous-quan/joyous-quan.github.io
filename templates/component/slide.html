@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/static/owlCarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="/static/owlCarousel/owl.theme.default.min.css">
-
+    <style type="text/css">
+        .item{
+            margin-left: .8rem;
+        }
+    </style>
 </head>
 <body>
 <div class="banner-con border-box slider owl-carousel owl-theme">
@@ -20,7 +24,6 @@
     $(function(){
         $('.owl-carousel').owlCarousel({
             loop:true,
-            margin:10,
             autoplay:true,
             autoplayTimeout: 4000,
             responsive:{
