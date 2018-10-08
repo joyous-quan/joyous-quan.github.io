@@ -62,6 +62,9 @@
 	justify-content: space-between;
 	margin-top: 1rem;
 }
+.product-btn-box .flex1 {
+	padding-left: 1rem;
+}
 .flex1 {
 	flex: 1;
 }

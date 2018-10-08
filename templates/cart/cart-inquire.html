@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/form.css">
 </head>
-<body>
+<body class="background-none">
 
  
 <!-- 主体 -->
@@ -23,15 +23,13 @@
         <img src="/static/images/left.png" alt="">
     </a>
     <span class="title-txt">询价</span>
+    <span class="float-R color-red">*必填项</span>
 </div>
 
-<div class="layout white-bg inquiry-form">
-    <p class="inquiry-form-title"> <span>*必填项</span></p>
+<div class="layout inquiry-form">
     <input type="text" name="user" placeholder="*姓名">
     <input type="text" name="email" placeholder="*邮箱">
     <input type="text" name="tel" placeholder="*电话">
-    <input type="text" name="number" placeholder="*数量要求">
-    <input type="text" name="productName" placeholder="*产品名">
     <textarea name="text" placeholder="*留言内容"></textarea>
     <button class="btn btn-red">提交</button>
 </div>

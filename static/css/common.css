@@ -16,11 +16,12 @@ html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dd,dt,label,span,b {
 html,body {
 	width: 100%;
 	min-width: 320px;
-	background: #f3f3f3;
 	font-family: "微软雅黑";
 	color: #000;
 }
-
+body {
+	background: #f3f3f3;
+}
 header,footer {
 	display: block;
 }
@@ -95,6 +96,9 @@ input, textarea {
 .float-L {
 	float: left;
 }
+.border-B {
+	border-bottom:  .08rem solid #e0e0e0;
+}
 span.img-box,a.img-box {
 	display: inline-block;
 }
@@ -107,6 +111,9 @@ span.img-box,a.img-box {
 }
 .white-bg {
 	background: #fff;
+}
+.background-none {
+	background: none;
 }
 .hide {
 	display: none;
@@ -365,7 +372,7 @@ a.btn {
 	display: inline-block;
 	height: .94rem;
 	width: .25rem;
-	margin-right: 1rem;
+	margin-right: .9rem;
 	background: #eb6132;
 }
 .tips-circle {

@@ -13,6 +13,10 @@
 	color: #eb6132;
 	font-size: 1rem;
 }
+.title-con .color-red {
+	color: #eb6132;
+	font-size: 1rem;
+}
 .inquiry-form input,.hide-card input,.inquiry-form textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;

@@ -269,24 +269,24 @@ span.order-status {
 
 
 /*  ------------ 我的收藏 stytle ------------ */
-.swiper-left {
-	padding-left: 4%;
-	margin-bottom:.67rem;
-	background: #fff;
-}
 .my-favorite-card {
 	overflow: hidden;
 }
-.my-favorite-card .table-card {
+.swiper-left {
+	padding-left: 4%;
+	margin-bottom: .56rem;
+	background: #fff;
+}
+.swiper-left .table-card {
 	width: 145%;
 	position: relative;
 	-webkit-transition:all 0.3s linear;
 	transition:all 0.3s linear;
 }
-.my-favorite-card .table-card table {
+.swiper-left .table-card table {
 	width: 65%;
 }
-.my-favorite-card table tr:last-child td{
+.swiper-left table tr:last-child td{
 	border: none;
 }
 .hide-con {
@@ -294,17 +294,24 @@ span.order-status {
 	width: 30%;
 	right: 0;
 	top: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 	display: flex;
 	height: 100%;
 }
 .hide-con div {	
 	flex:1;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items:center;
+	justify-content:center;
 	text-align: center;
 	font-size: 1.11rem;
-}
-.hide-con div span {
-	display: inline-block;
-	margin-top: 78%;
 }
 .istop {
 	background: #f3f3f3;
