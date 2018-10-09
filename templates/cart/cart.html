@@ -237,9 +237,12 @@
 
 <script>
 ;(function($){
+   
 
-$('.table-card').bind('swipeLeft',function(event){
-    console.log("123")
+/**/
+
+$('.table-card').swipeLeft(function(event){
+    event.preventDefault();
     event.stopPropagation();
     $(this).css({
         "left" : "-45%"
@@ -247,10 +250,9 @@ $('.table-card').bind('swipeLeft',function(event){
     $(this).parent().siblings().find('.table-card').css({
         "left" : "0"
     });
-
 })
 $('.table-card').bind('touchstart', function(event){
-
+    event.preventDefault();
     event.stopPropagation();
     $(this).css({
         "left" : "0"
@@ -258,27 +260,20 @@ $('.table-card').bind('touchstart', function(event){
 
 })
 
-var ipt_val = $('.number input').val();
-
-if(ipt_val < 1){
-   ipt_val = 0 
-}else if(ipt_val <= 1){
-    $('.minus').css({
-        'color' : "#ddd"
-    })
-}else if(ipt_val >= 2){
-    $('.minus').css({
-        'color' : "#333"
-    })
-}
-
-
+/* 数值加减 */
 $('.number .minus').on('click', function(event){
-    $(this).parent().find('input').val() -1;
+    var num = Number($(this).parent().find('input').val());
+    $(this).parent().find('input').val(num - 1);
+    if(num <=1) {
+        $(this).parent().find('input').val(1);
+        $(this).css({ 'color' : "#ddd" })
+    }else{
+        $(this).css({ 'color' : "#333" })
+    }
 })
 $('.number .add').on('click', function(event){
-    $(this).parent().find('input').val() +1;
-
+    var num = Number($(this).parent().find('input').val());
+    $(this).parent().find('input').val(num + 1);
 })
 
 

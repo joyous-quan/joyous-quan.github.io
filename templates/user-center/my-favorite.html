@@ -152,10 +152,12 @@
 
 
 <script type="text/javascript" src="/static/js/zepto.js"></script>
+<script type="text/javascript" src="/static/js/touch.js"></script>
 <script>
 ;(function($){
-$('.table-card').bind('touchmove', function(event){
 
+$('.table-card').swipeLeft(function(event){
+    event.preventDefault();
     event.stopPropagation();
     $(this).css({
         "left" : "-45%"
@@ -163,10 +165,9 @@ $('.table-card').bind('touchmove', function(event){
     $(this).parent().siblings().find('.table-card').css({
         "left" : "0"
     });
-
 })
 $('.table-card').bind('touchstart', function(event){
-
+    event.preventDefault();
     event.stopPropagation();
     $(this).css({
         "left" : "0"
