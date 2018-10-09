@@ -232,12 +232,14 @@
 
 
 <script type="text/javascript" src="/static/js/zepto.js"></script>
+<script type="text/javascript" src="/static/js/touch.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
 
 <script>
 ;(function($){
-$('.table-card').bind('swipeLeft', function(event){
 
+$('.table-card').bind('swipeLeft',function(event){
+    console.log("123")
     event.stopPropagation();
     $(this).css({
         "left" : "-45%"
