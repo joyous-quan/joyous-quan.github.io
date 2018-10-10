@@ -242,7 +242,7 @@
 /**/
 
 $('.table-card').swipeLeft(function(event){
-    event.preventDefault();
+    //event.preventDefault();
     event.stopPropagation();
     $(this).css({
         "left" : "-45%"
@@ -252,7 +252,7 @@ $('.table-card').swipeLeft(function(event){
     });
 })
 $('.table-card').bind('touchstart', function(event){
-    event.preventDefault();
+    //event.preventDefault();
     event.stopPropagation();
     $(this).css({
         "left" : "0"
