@@ -30,7 +30,7 @@
     <div class="layout cart-title">
         <h1>我的购物车</h1>
     </div>
-    <div class="cart-con">
+    <div class="cart-con" id="test">
         <div class="swiper-left">
             <div class="table-card">
                 <table cellspacing="0" border="0">
@@ -233,16 +233,25 @@
 
 <script type="text/javascript" src="/static/js/zepto.js"></script>
 <script type="text/javascript" src="/static/js/touch.js"></script>
+<script type="text/javascript" src="/static/js/hammer.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
 
 <script>
+
+
+
 ;(function($){
    
+var test = document.querySelector('.table-card')
+var hammerTest = new Hammer(test);
+hammerTest.on('swipeleft', function(ev) {
+    console.log(ev.type);
 
-/**/
+});
 
-$('.table-card').swipeLeft(function(event){
-    event.preventDefault();
+/*
+$('.table-card').on('swipeleft',function(event){
+    
     event.stopPropagation();
     $(this).css({
         "left" : "-45%"
@@ -259,7 +268,7 @@ $('.table-card').bind('touchstart', function(event){
     });
 
 })
-
+*/
 /* 数值加减 */
 $('.number .minus').on('click', function(event){
     var num = Number($(this).parent().find('input').val());

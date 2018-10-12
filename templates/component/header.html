@@ -344,12 +344,12 @@
     });
 
     //侧边菜单移入移出
-    $('span.menu-icon').bind('touchstart', function(event){
+    $('span.menu-icon').on('touchstart', function(event){
         $('.sidebar-mask').css({
             "left" : "0"
         })
     });
-    $('.del-sidebar').bind('touchstart', function(event){
+    $('.del-sidebar').on('touchstart', function(event){
         $('.sidebar-mask').css({
             "left" : "-100%"
         })
@@ -357,7 +357,7 @@
     
 
     //二级菜单显示隐藏
-    $('.sub-title>div').bind('touchstart',function(event){
+    $('.sub-title>div').on('touchstart',function(event){
 
         $(this).parent().find('.sub-menu').toggle();
         $(this).parent().siblings().find('.sub-menu').hide()
@@ -365,7 +365,7 @@
     });
 
     //置顶
-    $('.to-top').bind('touchstart',function(event){
+    $('.to-top').on('touchstart',function(event){
 
         $(window).scrollTop(0).animate(1000);
 

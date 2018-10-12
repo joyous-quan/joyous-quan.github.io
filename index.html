@@ -110,11 +110,11 @@
 <script>
 ;(function($){
     //登录
-    $('.login-btn').bind('touchstart',function(event){
+    $('.login-btn').on('touchstart',function(event){
        window.location.href = '/templates/page/login-register/login.html';
     })
     //注册
-    $('.register-btn').bind('touchstart',function(event){
+    $('.register-btn').on('touchstart',function(event){
        window.location.href = '/templates/page/login-register/register.html';
     })
 

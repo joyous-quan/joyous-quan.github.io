@@ -166,7 +166,7 @@ $('.table-card').swipeLeft(function(event){
         "left" : "0"
     });
 })
-$('.table-card').bind('touchstart', function(event){
+$('.table-card').on('touchstart', function(event){
     event.preventDefault();
     event.stopPropagation();
     $(this).css({

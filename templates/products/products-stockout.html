@@ -337,7 +337,7 @@
 
     
     //显示隐藏
-    $('.hide-card>li div').bind('touchstart',function(event){
+    $('.hide-card>li div').on('touchstart',function(event){
 
         event.stopPropagation();
         $(this).parent().find('ol.hide').toggle();
