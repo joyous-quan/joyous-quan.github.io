@@ -69,6 +69,8 @@
         color: #fff;
         text-align: center;
     }
+
+
 </style>
 
 
@@ -86,6 +88,7 @@
             </a>
         </div>
     </div>
+    <div class="addit delete" style="right:3rem">删除</div>
     <div class="addit delete">删除</div>
 </div>
 <div style="position: relative">
@@ -167,10 +170,10 @@
 	$(function(){
 	    $('.apply').on("swipeleft", function (event) {//左滑显示隐藏按键
 		    event.stopPropagation();
-	        $(this).animate({left: '-3rem'}, 200, 'linear');
+	        $(this).animate({left: '-6rem'}, 200, 'linear');
 	        $(this).siblings('.addit').animate({width: '3rem'}, 200, 'linear');
 	    });
-	    $('.apply').on("swiperight", function (event) {//右滑恢复
+	    $('.apply').on("swiperight tap", function (event) {//右滑恢复
 		    event.stopPropagation();
 	        $(this).animate({left: '0'}, 200, 'linear');
 	        $(this).siblings('.addit').animate({width: '0'}, 200, 'linear');

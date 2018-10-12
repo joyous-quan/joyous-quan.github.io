@@ -272,46 +272,56 @@ span.order-status {
 .my-favorite-card {
 	overflow: hidden;
 }
+
+
+
+.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0}
 .swiper-left {
 	padding-left: 4%;
 	margin-bottom: .56rem;
 	background: #fff;
+	position: relative;
 }
 .swiper-left .table-card {
-	width: 145%;
 	position: relative;
-	-webkit-transition:all 0.3s linear;
-	transition:all 0.3s linear;
+	-webkit-transition:all 0.2s linear;
+	transition:all 0.2s linear;
 }
 .swiper-left .table-card table {
-	width: 65%;
+	width: 94%;
 }
 .swiper-left table tr:last-child td{
 	border: none;
 }
 .hide-con {
-	position: absolute;
-	width: 30%;
-	right: 0;
-	top: 0;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	position: absolute;
+	right: 0;
+	top:0;
 	height: 100%;
+	background: #f3f3f3;
 }
 .hide-con div {	
-	flex:1;
+	display: inline-block;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	flex: 1;
 	align-items:center;
 	justify-content:center;
 	text-align: center;
 	font-size: 1.11rem;
+	width: 0;
+	overflow: hidden;
+	height: 100%;
 }
 .istop {
 	background: #f3f3f3;
