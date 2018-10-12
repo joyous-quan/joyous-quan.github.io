@@ -58,11 +58,12 @@
         display: block;
     }
     .addit {
-        height: 3.1rem;
-        line-height: 3.1rem;
+        height: 4rem;
+        line-height: 4rem;
+        width:0;
+        overflow: hidden;
         position: absolute;
         right: 0rem;
-        width: 0rem;
         top: 0;
         background: red;
         color: #fff;
@@ -155,7 +156,7 @@
             </a>
         </div>
     </div>
-    <div class="addit delete">删除</div>
+   <div class="addit delete">删除</div>
 </div>
 
 <script src="/static/js/zepto.js"></script>
@@ -165,16 +166,14 @@
 <script>
 	$(function(){
 	    $('.apply').on("swipeleft", function (event) {//左滑显示隐藏按键
-		event.stopPropagation();
-	        //console.log("lll")
+		    event.stopPropagation();
 	        $(this).animate({left: '-3rem'}, 200, 'linear');
 	        $(this).siblings('.addit').animate({width: '3rem'}, 200, 'linear');
-	        // $(this).parent('li').siblings('li').find('.apply').animate({left: '0'}, 200).siblings('.addit').animate({width: '0'}, 200);
 	    });
 	    $('.apply').on("swiperight", function (event) {//右滑恢复
-		event.stopPropagation();
+		    event.stopPropagation();
 	        $(this).animate({left: '0'}, 200, 'linear');
-	        $(this).siblings('.addit').animate({width: '0rem'}, 200, 'linear');
+	        $(this).siblings('.addit').animate({width: '0'}, 200, 'linear');
 	    });
 	    $('.delete').on("tap", function () { //删除
 	        $(this).parent().remove();
