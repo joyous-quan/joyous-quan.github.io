@@ -66,8 +66,8 @@
                 </table>
             </div>
             <div class="hide-con">
-                <div class="istop"><span>加入<br>收藏</span></div>
-                <div class="cancel"><span>删除</span></div>
+                <div class="istop cart-istop"></div>
+                <div class="cancel cart-cancel"></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -109,8 +109,8 @@
                 </table>
             </div>
             <div class="hide-con">
-                <div class="istop"><span>加入<br>收藏</span></div>
-                <div class="cancel"><span>删除</span></div>
+                <div class="istop cart-istop"></div>
+                <div class="cancel cart-cancel"></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -152,8 +152,8 @@
                 </table>
             </div>
             <div class="hide-con">
-                <div class="istop"><span>加入<br>收藏</span></div>
-                <div class="cancel"><span>删除</span></div>
+                <div class="istop cart-istop"></div>
+                <div class="cancel cart-cancel"></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -195,8 +195,8 @@
                 </table>
             </div>
             <div class="hide-con">
-                <div class="istop"><span>加入<br>收藏</span></div>
-                <div class="cancel"><span>删除</span></div>
+                <div class="istop cart-istop"></div>
+                <div class="cancel cart-cancel"></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -239,43 +239,30 @@
 
 
 <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="/static/js/zepto.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/swipe-left.js"></script>
+
 <script>
-$(function(){
-    $('.table-card').on("swipeleft", function (event) {//左滑显示隐藏按键
-        event.stopPropagation();
-        $('.table-card').animate({left: '0'}, 200, 'linear');
-        $('.hide-con').animate({width: '0'}, 200, 'linear');
-        $(this).animate({left: '-32%'}, 200, 'linear');
-        $(this).parent().find('.hide-con').animate({width: '32%'});
-    });
-    $('.table-card').on("swiperight tap", function (event) {//右滑恢复
-        event.stopPropagation();
-        $(this).animate({left: '0'}, 200, 'linear');
-        $(this).parent().find('.hide-con').animate({width: '0'});
-    });
-    $('.cancel').on("tap", function () { //删除
-        $(this).parent().parent().remove();
-    });
-
+;(function($){
     /* 数值加减 */
-$('.number .minus').on('click', function(event){
-    var num = Number($(this).parent().find('input').val());
-    $(this).parent().find('input').val(num - 1);
-    if(num <=1) {
-        $(this).parent().find('input').val(1);
-        $(this).css({ 'color' : "#ddd" })
-    }else{
-        $(this).css({ 'color' : "#333" })
-    }
-})
-$('.number .add').on('click', function(event){
-    var num = Number($(this).parent().find('input').val());
-    $(this).parent().find('input').val(num + 1);
-})
+    $('.number .minus').on('click', function(event){
+        var num = Number($(this).parent().find('input').val());
+        $(this).parent().find('input').val(num - 1);
+        if(num <=1) {
+            $(this).parent().find('input').val(1);
+            $(this).css({ 'color' : "#ddd" })
+        }else{
+            $(this).css({ 'color' : "#333" })
+        }
+    })
+    $('.number .add').on('click', function(event){
+        var num = Number($(this).parent().find('input').val());
+        $(this).parent().find('input').val(num + 1);
+    })
 
-})
+})(Zepto);
 
 </script>  
   

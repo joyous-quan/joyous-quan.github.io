@@ -61,9 +61,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+            <div class="hide-con ">
+                <div class="istop favorite-istop"></div>
+                <div class="cancel favorite-cancel"></div>
             </div>
         </div>
         <div class="swiper-left">
@@ -99,9 +99,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+            <div class="hide-con ">
+                <div class="istop favorite-istop"></div>
+                <div class="cancel favorite-cancel"></div>
             </div>
         </div>
         <div class="swiper-left">
@@ -137,9 +137,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+            <div class="hide-con ">
+                <div class="istop favorite-istop"></div>
+                <div class="cancel favorite-cancel"></div>
             </div>
         </div>
         <div class="swiper-left">
@@ -179,9 +179,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+            <div class="hide-con ">
+                <div class="istop favorite-istop"></div>
+                <div class="cancel favorite-cancel"></div>
             </div>
         </div>
         <div class="swiper-left">
@@ -217,9 +217,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="hide-con">
-                <div class="istop"><span>产品<br>置顶</span></div>
-                <div class="cancel"><span>取消<br>收藏</span></div>
+            <div class="hide-con ">
+                <div class="istop favorite-istop"></div>
+                <div class="cancel favorite-cancel"></div>
             </div>
         </div>
 
@@ -239,27 +239,7 @@
 
 <script src="/static/js/jquery-3.3.1.min.js"></script>
 <script src="/static/js/jquery.mobile-1.4.5.min.js"></script>
-<script>
-$(function(){
-    $('.table-card').on("swipeleft", function (event) {//左滑显示隐藏按键
-        event.stopPropagation();
-        $('.table-card').animate({left: '0'}, 200, 'linear');
-        $('.hide-con').animate({width: '0'}, 200, 'linear');
-        $(this).animate({left: '-32%'}, 200, 'linear');
-        $(this).parent().find('.hide-con').animate({width: '32%'});
-    });
-    $('.table-card').on("swiperight tap", function (event) {//右滑恢复
-        event.stopPropagation();
-        $(this).animate({left: '0'}, 200, 'linear');
-        $(this).parent().find('.hide-con').animate({width: '0'});
-    });
-    $('.cancel').on("tap", function () { //删除
-        $(this).parent().parent().remove();
-    });
-
-})
-
-</script>   
+<script type="text/javascript" src="/static/js/swipe-left.js"></script>
 
 
 
