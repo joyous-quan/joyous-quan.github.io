@@ -238,12 +238,9 @@
 
 
 
-
-<script type="text/javascript" src="/static/js/zepto.js"></script>
+<script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
-
-<script src="/static/js/jquery-3.3.1.min.js"></script>
-<script src="/static/js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.mobile-1.4.5.min.js"></script>
 <script>
 $(function(){
     $('.table-card').on("swipeleft", function (event) {//左滑显示隐藏按键
@@ -262,15 +259,7 @@ $(function(){
         $(this).parent().parent().remove();
     });
 
-})
-
-</script>  
-<script>
-
-
-
-;(function($){
-/* 数值加减 */
+    /* 数值加减 */
 $('.number .minus').on('click', function(event){
     var num = Number($(this).parent().find('input').val());
     $(this).parent().find('input').val(num - 1);
@@ -286,8 +275,10 @@ $('.number .add').on('click', function(event){
     $(this).parent().find('input').val(num + 1);
 })
 
-})(Zepto);
-</script>   
+})
+
+</script>  
+  
 
 
 
