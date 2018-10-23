@@ -11,55 +11,16 @@
 .cart-con {
 	overflow: hidden;
 }
-.swiper-left {
-	padding-left: 4%;
-	/* margin-bottom: .56rem; */
-	background: #fff;
+.cart-con .swiper-left {
+	margin-bottom: 0;
 }
-.swiper-left .table-card {
-	width: 145%;
-	position: relative;
-	-webkit-transition:all 0.3s linear;
-	transition:all 0.3s linear;
+.cart-con .table-card {
+	padding: .6rem 0;
 }
-.swiper-left .table-card table {
-	width: 65%;
-}
-.table-card table td {
-	height: 3.75rem;
-    font-size: 1.11rem;
-    color: #555;
-}
-.hide-con {
-	position: absolute;
-	width: 30%;
-	right: 0;
-	top: 0;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	height: 100%;
-}
-.hide-con div {	
-	flex:1;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	align-items:center;
-	justify-content:center;
-	text-align: center;
+.cart-con .table-card td {
 	font-size: 1.11rem;
-}
-.istop {
-	background: #f3f3f3;
-}
-.cancel {
-	background: #eb6132;
-	color: #fff;
+	line-height: 2rem;
+	padding: .4rem 0;
 }
 .products-name a{
 	font-size: 1.33rem
@@ -71,6 +32,12 @@
 	font-size: 1.45rem
 }
 .cart-con table .number {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
 	font-size: 1.5rem;
 }
 .cart-con table .number input {
@@ -80,6 +47,12 @@
 	width: 2.5rem;
 	text-align: center;
 	font-size: 1.11rem;
+}
+.cart-con table .number span {
+	padding: 0 .5rem;
+}
+.cart-con table .number .minus {
+	font-size: 1.6rem;
 }
 .settlement-con {
 	background: #fff;

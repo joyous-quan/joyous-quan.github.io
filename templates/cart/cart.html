@@ -30,7 +30,7 @@
     <div class="layout cart-title">
         <h1>我的购物车</h1>
     </div>
-    <div class="cart-con" id="test">
+    <div class="cart-con">
         <div class="swiper-left">
             <div class="table-card">
                 <table cellspacing="0" border="0">
@@ -47,25 +47,27 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="products-name">
-                                <a href="javascript:;">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
+                                <a href="/index.html">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" class="price">
                                 RMB <b>336</b>
                             </td>
-                            <td align="right" class="number">
-                                <span class="minus">-</span>
-                                <input type="number" name="" value="1">
-                                <span class="add">+</span>
+                            <td>
+                               <div class="number">
+                                    <span class="minus">-</span>
+                                    <input type="number" name="" value="1">
+                                    <span class="add">+</span>
+                               </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="hide-con">
-                    <div class="istop"><span>加入<br>收藏</span></div>
-                    <div class="cancel"><span>删除</span></div>
-                </div>
+            </div>
+            <div class="hide-con">
+                <div class="istop"><span>加入<br>收藏</span></div>
+                <div class="cancel"><span>删除</span></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -95,18 +97,20 @@
                             <td colspan="2" class="price">
                                 RMB <b>336</b>
                             </td>
-                            <td align="right" class="number">
-                                <span class="minus">-</span>
-                                <input type="number" name="" value="2">
-                                <span class="add">+</span>
+                            <td>
+                               <div class="number">
+                                    <span class="minus">-</span>
+                                    <input type="number" name="" value="1">
+                                    <span class="add">+</span>
+                               </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="hide-con">
-                    <div class="istop"><span>加入<br>收藏</span></div>
-                    <div class="cancel"><span>删除</span></div>
-                </div>
+            </div>
+            <div class="hide-con">
+                <div class="istop"><span>加入<br>收藏</span></div>
+                <div class="cancel"><span>删除</span></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -136,18 +140,20 @@
                             <td colspan="2" class="price">
                                 RMB <b>336</b>
                             </td>
-                            <td align="right" class="number">
-                                <span class="minus">-</span>
-                                <input type="number" name="" value="1">
-                                <span class="add">+</span>
+                            <td>
+                               <div class="number">
+                                    <span class="minus">-</span>
+                                    <input type="number" name="" value="1">
+                                    <span class="add">+</span>
+                               </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="hide-con">
-                    <div class="istop"><span>加入<br>收藏</span></div>
-                    <div class="cancel"><span>删除</span></div>
-                </div>
+            </div>
+            <div class="hide-con">
+                <div class="istop"><span>加入<br>收藏</span></div>
+                <div class="cancel"><span>删除</span></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -177,18 +183,20 @@
                             <td colspan="2" class="price">
                                 RMB <b>336</b>
                             </td>
-                            <td align="right" class="number">
-                                <span class="minus">-</span>
-                                <input type="number" name="" value="1">
-                                <span class="add">+</span>
+                            <td>
+                               <div class="number">
+                                    <span class="minus">-</span>
+                                    <input type="number" name="" value="1">
+                                    <span class="add">+</span>
+                               </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="hide-con">
-                    <div class="istop"><span>加入<br>收藏</span></div>
-                    <div class="cancel"><span>删除</span></div>
-                </div>
+            </div>
+            <div class="hide-con">
+                <div class="istop"><span>加入<br>收藏</span></div>
+                <div class="cancel"><span>删除</span></div>
             </div>
         </div>
         <div class="layout white-bg">
@@ -213,7 +221,7 @@
         <li class="border-B">
             <a href="/templates/cart/freight-and-policy.html" title="">隐私和安全：<span>隐私政策</span>
                 <span class="img-box small-icon float-R">
-                    <img src="/static/images/right.png" alt="">
+                    <img src="/static/img/right.png" alt="">
                 </span>
             </a>
         </li>
@@ -232,43 +240,36 @@
 
 
 <script type="text/javascript" src="/static/js/zepto.js"></script>
-<script type="text/javascript" src="/static/js/touch.js"></script>
-<script type="text/javascript" src="/static/js/hammer.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
 
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(function(){
+    $('.table-card').on("swipeleft", function (event) {//左滑显示隐藏按键
+        event.stopPropagation();
+        $('.table-card').animate({left: '0'}, 200, 'linear');
+        $('.hide-con').animate({width: '0'}, 200, 'linear');
+        $(this).animate({left: '-32%'}, 200, 'linear');
+        $(this).parent().find('.hide-con').animate({width: '32%'});
+    });
+    $('.table-card').on("swiperight tap", function (event) {//右滑恢复
+        event.stopPropagation();
+        $(this).animate({left: '0'}, 200, 'linear');
+        $(this).parent().find('.hide-con').animate({width: '0'});
+    });
+    $('.cancel').on("tap", function () { //删除
+        $(this).parent().parent().remove();
+    });
+
+})
+
+</script>  
 <script>
 
 
 
 ;(function($){
-   
-var test = document.querySelector('.table-card')
-var hammerTest = new Hammer(test);
-hammerTest.on('swipeleft', function(ev) {
-    console.log(ev.type);
-
-});
-
-/*
-$('.table-card').on('swipeleft',function(event){
-    
-    event.stopPropagation();
-    $(this).css({
-        "left" : "-45%"
-    });
-    $(this).parent().siblings().find('.table-card').css({
-        "left" : "0"
-    });
-})
-$('.table-card').bind('touchstart', function(event){
-    //event.preventDefault();
-    event.stopPropagation();
-    $(this).css({
-        "left" : "0"
-    });
-
-})
-*/
 /* 数值加减 */
 $('.number .minus').on('click', function(event){
     var num = Number($(this).parent().find('input').val());
@@ -284,7 +285,6 @@ $('.number .add').on('click', function(event){
     var num = Number($(this).parent().find('input').val());
     $(this).parent().find('input').val(num + 1);
 })
-
 
 })(Zepto);
 </script>   
