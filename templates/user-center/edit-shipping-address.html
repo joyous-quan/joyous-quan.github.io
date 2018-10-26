@@ -11,6 +11,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- 引入样式 -->
+    <link rel="stylesheet" href="/static/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/user-center.css">
 </head>
@@ -19,8 +20,8 @@
  
  <!-- 主体 -->
 <div class="layout title-con">
-    <a href="JavaScript:history.go(-1)" class="img-box small-icon left-icon">
-        <img src="/static/img/left.png" alt="">
+    <a href="JavaScript:history.go(-1)" class="back-icon">
+        <i class="iconfont icon-fanhui"></i>
     </a>
     <span class="title-txt">编辑送货地址</span>
     <a href="javascript:;" class="save">保存</a>
@@ -44,10 +45,12 @@
                 <tr>
                     <td><span>选择地区</span></td>
                     <td class="position-r">
-                        <input type="text" name="" value="1055">
-                        <span class="img-box small-icon">
-                            <img src="/static/img/right.png" alt="">
-                        </span>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <i class="iconfont icon-gengduo"></i>
                     </td>
                 </tr>
                 <tr>

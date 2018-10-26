@@ -185,7 +185,7 @@
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
-.hide-card div .small-icon {
+.hide-card div .icon-xiangxia{
 	float: right;
 }
 .molarity p {
@@ -194,16 +194,15 @@
 .molarity .margin-top {
 	margin-top: .8rem;
 }
-.molarity .small-icon {
-	height: 1.5rem;
-	width: 1.5rem;
-	margin-top: .5rem;
+.molarity .icon-cha,.molarity .icon-shuzhibiaochi {
+	position: relative;
+	top: .4rem;
+	color: #b6b6b6;
 }
 .molarity p .molarity-txt {
 	display: inline-block;
 	width: 45%;
 }
-
 
 .molarity .ipt-kuang {
 	position: relative;

@@ -143,11 +143,13 @@ span.img-box,a.img-box {
 	color: #666;
 	text-align: center;
 }
-.title-con .left-icon {
+.title-con .back-icon {
 	position: absolute;
 	left: 4%;
 }
-
+.title-con .back-icon i {
+	font-size: 1.8rem;
+}
 
 /* ------------ btn style ------------ */
 .btn-box {
@@ -334,24 +336,23 @@ a.btn {
 	font-size: 1.06rem;	
 	white-space: nowrap;
 }
-.sub-title .small-icon {
+.icon-gengduo,.icon-fanhui,.icon-xiangxia {
+	font-size: 1.5rem;
+	color: #c6c6c6;
+}
+.sub-title i {
 	position: absolute;
-	right: 0;
-	top: 1.5rem;
+	right:0; top: 1.5rem;
+	padding-right: .5rem;
+}
+.sub-menu .sub-title i {
+	padding-right:1rem;
 }
 .menu .title {
 	font-size: 1.33rem
 }
 .menu .sub-title {
 	border-bottom: .08rem solid #e0e0e0;
-}
-.sub-title .down-icon {
-	width: 1.55rem;
-	padding-right: .9rem;
-}
-.right-icon {
-	height: 1.65rem;
-	padding-right: .7rem;
 }
 .menu>li:last-child {
 	border: none;

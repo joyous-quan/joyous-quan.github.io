@@ -63,10 +63,15 @@ input {
 	max-height: 100%;
 	max-width: 100%;
 }
-.left-icon {
+.back-icon {
+	display: inline-block;
 	width: 1.75rem;
 	height: 1.75rem;
 	margin-top: 2rem;
+}
+.back-icon i {
+	font-size: 1.8rem;
+	color: #c6c6c6;
 }
 .logo-box {
 	text-align: center;
@@ -147,7 +152,7 @@ input {
 	width: .92rem;
 	height: .92rem; 
 	margin-top: .2rem;
-	background:url(/static/images/checked.png) no-repeat;
+	background:url(/static/img/checked.png) no-repeat;
 	background-position: -0.9rem -0.1rem; 
 	background-size: .83rem;
 	border: .08rem solid #999; 

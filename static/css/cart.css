@@ -87,13 +87,10 @@
 	display: block;
 	line-height: 4rem;
 }
-.border-B a span {
+.cart-companion .border-B span {
 	color: #2180be;
 }
-.border-B .img-box {
-	position: relative;
-	top: .5rem;
-}
+
 
 /* 运费和政策 */
 .freight-policy-txt {
@@ -129,8 +126,9 @@
 .privacy-policy li a{
 	line-height: 4.45rem;
 }
-.privacy-policy-con .sub-title .img-box {
-	top: .56rem;
+.privacy-policy-con .sub-title i {
+	top: 0;
+	padding-right: 2rem;
 }
 
 /* 我们如何使用收集的信息 */
