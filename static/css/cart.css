@@ -8,7 +8,7 @@
 	font-size: 1.33rem;
 	font-weight: normal;
 }
-.cart-con {
+.cart-con,body {
 	overflow-x: hidden;
 }
 .cart-con .swiper-left {

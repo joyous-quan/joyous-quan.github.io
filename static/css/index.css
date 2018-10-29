@@ -27,7 +27,13 @@
 	height: 18rem;
 	overflow-x: hidden;
 }
-
+.banner{
+    padding-top: .7rem;
+}
+.item{
+    margin-top: .1rem;
+    margin-left: .7rem;
+}
 
 /* 登录 注册 */
 .btn-red {

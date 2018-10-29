@@ -11,7 +11,7 @@ $(function(){
         var fc = '<span>取消<br>收藏</span>';
         $('.cart-istop').html(ci);
         $('.cart-cancel').html(cc);
-        $('.favorite-istop').html(fa);
+        $('.favorite-istop').html(fi);
         $('.favorite-cancel').html(fc);
     });
     $('.table-card').on("swiperight tap", function (event) {//右滑恢复
