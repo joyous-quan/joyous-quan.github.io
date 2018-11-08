@@ -594,6 +594,7 @@ a.btn {
 }
 .swiper-left .table-card {
 	position: relative;
+	touch-action: none;
 	-webkit-transition:all 0.2s linear;
 	transition:all 0.2s linear;
 }

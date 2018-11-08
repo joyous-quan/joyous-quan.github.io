@@ -52,6 +52,9 @@
 .section .sub-title {
 	border-top: .08rem solid #e0e0e0;
 }
+.section .sub-title i {
+	padding-right:0;
+}
 .section .section-img-box {
 	border: .05rem solid #e0e0e0;
 	height: 18.44rem;

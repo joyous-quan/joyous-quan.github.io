@@ -1,4 +1,6 @@
 $(function(){
+
+    
 	$('.table-card').on("swipeleft", function (event) {//左滑显示隐藏按键
         event.stopPropagation();
         $('.table-card').animate({left: '0'}, 200, 'linear');
