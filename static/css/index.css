@@ -52,6 +52,12 @@
 .section .sub-title {
 	border-top: .08rem solid #e0e0e0;
 }
+.section .sub-title b {
+	display: inline-block;
+	width: 93%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 .section .sub-title i {
 	padding-right:0;
 }

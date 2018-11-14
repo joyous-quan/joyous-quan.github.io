@@ -12,10 +12,7 @@ html{font-size: 10px}
 @media screen and (min-width: 750px) and (max-width: 799px){html{font-size: 23.5px}}
 @media screen and (min-width: 800px){html{font-size: 25px}}
 
-
-html,body,p,span,b {
-	margin: 0;padding: 0;
-}
+html,body,p,span,b { margin: 0;padding: 0; }
 html,body {
 	width: 100%;
 	min-width: 320px;
@@ -23,42 +20,27 @@ html,body {
 	font-family: "微软雅黑";
 	color: #000;
 }
-img {
-	border: none;
-}
+img { border: none; }
 a {
 	text-decoration: none;
 	color: #000;
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-button {
-	cursor: pointer;
-}
+button { cursor: pointer;}
 /*input去掉黄色背景*/
-input: -webkit-autofill{ 
-	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
-}
+input: -webkit-autofill{ -webkit-box-shadow: 0 0 0px 1000px #fff inset;}
 /* ::-ms-clear 是文本清除按钮 
    ::-ms-reveal是密码查看按钮  */
-input::-ms-clear,input::-ms-reveal{
-	display: none;
-}
-input,button{
-	outline: none;
-}
+input::-ms-clear,input::-ms-reveal{ display: none; }
+input,button{ outline: none; }
 input {
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
 	box-sizing: border-box;
 }
-.layout {
-	padding: 0 4%;
-}
-
-.img-box {
-	display: inline-block;
-}
+.layout { padding: 0 4%; }
+.img-box { display: inline-block; }
 .img-box img {
 	max-height: 100%;
 	max-width: 100%;
@@ -73,15 +55,9 @@ input {
 	font-size: 1.8rem;
 	color: #c6c6c6;
 }
-.logo-box {
-	text-align: center;
-}
-.logo {
-	height: 2.8rem;
-}
-.login-register-con{
-	padding: 4%;
-}
+.logo-box { text-align: center; }
+.logo { height: 2.8rem; }
+.login-register-con{ padding: 4%; }
 .input-box input {
 	height: 3.8rem;
 	width: 100%;
@@ -109,9 +85,7 @@ input {
 .input-box input:-ms-input-placeholder{ 
  	color: #c0c0c0; /* Internet Explorer 10+ */ 
 }
-.code-box {
-	position: relative;
-}
+.code-box { position: relative; }
 .code {
 	position: absolute;
 	right: .45rem;
@@ -129,7 +103,7 @@ input {
 .forgot {
 	text-align: right;
 	height: 3rem;
-	padding-top: .5rem;
+	padding-top: 1rem;
 }
 .forgot a,.check {
 	font-size: 1rem;
