@@ -9,5 +9,9 @@ $(function(){
 
         $(this).animate({ "left": "0" },500)
 
+    }).tap(function(){
+
+        $(this).animate({ "left": "0" },500)
+
     })
 })
