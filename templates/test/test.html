@@ -14,17 +14,13 @@
     </style>
  
     <!-- zepto的基础模块  必须导入的-->
-    <script type="text/javascript" src='/static/js/zepto.js'></script>
-    
+    <script type="text/javascript" src='/static/js/tooljs/zepto.js'></script>
     <!-- 如果使用事件 需要导入event -->
-    <script type="text/javascript" src='/static/js/event.js'></script>
- 
+    <script type="text/javascript" src='/static/js/tooljs/event.js'></script>
     <!-- 导入 animate的模块 -->
-    <script type="text/javascript" src='/static/js/fx.js'></script>
- 
+    <script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
     <!-- 移动端事件 需要导入touch.js -->
-    <script type="text/javascript" src='/static/js/touch.js'></script>
- 
+    <script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
     <script type="text/javascript">
         $(function () {
             // 为li标签绑定click事件
@@ -52,6 +48,13 @@
             // $('li').doubleTap(function(){
             //  console.log('我被双击了');
             // })
+
+
+            const app = document.querySelector('#app');
+            const hammertime = new Hammer(app);
+            hammertime.on('pan', function(ev) {
+              console.log(ev);
+            });
  
         })
     </script>

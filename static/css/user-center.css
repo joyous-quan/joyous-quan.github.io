@@ -1,5 +1,4 @@
-
-/*  ------------  用户中心 stytle ------------ */
+/*  ----  用户中心 stytle ---- */
 .user-center-con {
 	background: #fff;
 	margin-bottom: .56rem;
@@ -31,8 +30,7 @@
 	font-size: 1.22rem;
 	color: #666;
 }
-
-/*  ------------ 我的订单 stytle ------------ */
+/*  ---- header stytle ---- */
 .title-con {
 	position: relative;
 	height: 3.5rem;
@@ -46,125 +44,89 @@
 	position: absolute;
 	left: 4%;
 }
-.table-box {
-	margin-top: .56rem;
-}
-.table-card {	
+
+/*  ---- 我的订单 stytle ---- */
+.com-card {
 	background: #fff;
-	margin-bottom: .56rem;
-}
-.table-card table {
-	width: 99%;
-	margin-left: 1%;
-}
-.table-card table td {
-	height: 3.75rem;
-	border-bottom: .08rem solid #f3f3f3;
+	margin-top: .56rem;
+	padding: 0 4%;
 	font-size: 1.11rem;
-	color: #555;
 }
-.table-card td span {
+.com-card span {
 	font-size: .9rem;
+	color:#555;
 }
-span.order-status {
-	font-size: 1rem;
+.com-card .img-box {
 	position: relative;
-	bottom: .5rem;
-	left: .5rem;
+	top: .5rem;
+	margin-right: .3rem;
 }
-.table-card table td.color-red {
-	color: #ff4d4d;
+.order-card li {
+	height: 3.75rem;
+	line-height: 3.75rem;
+	border-bottom: .08rem solid #f3f3f3;
+	white-space: nowrap;
+	overflow: hidden;
 }
-.my-order-con table tr:last-child td {
-	border: none;
+.order-card li:last-child,.trace-msg dd:last-child，.addr-msg dd:last-child { border:none;}
+.order-card li p {
+	float: left;
+	width: 50%;
+}
+.order-card span {
+	display: inline-block;
+	width: 5rem; 
+}
+.order-card span.width6{
+	width: 6.2rem;
+}
+.order-card .look-details a {
+	display: block;
 }
 
-/*  ------------ 我的询单 stytle ------------ */
-.message-box {
-	padding-top: 1rem;
-	color: #555;
-	font-size: .9rem;
+/*  ---- 订单详情 stytle ---- */
+.order-detial-status{
+	height: 3.75rem;
+	line-height: 3.75rem;
+	overflow: hidden;
 }
-.message-box span:last-child {
-	font-size: 1.11rem;
-}
-.customer-message span{
-	display: inline-block;
-	text-indent: .8rem;
-}
-.session-box {
-	position: relative;
+/*跟踪信息*/
+.trace-msg dd,.addr-msg dd {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	min-height: 3.5rem;
-	padding: .8rem 1rem;
-	line-height: 1.5rem;
-	border-radius: .5rem;
-	background: #f3f3f3;
-	margin-top: 1.5rem;
+	overflow: hidden;
+	min-height: 3.75rem; 
+	padding: .8rem 0;
+	border-bottom: .08rem solid #f3f3f3;
 }
-.session-box .up-icon {
-	position: absolute;
-	top: -1rem;
-	left: 18%;
-}
-.reply-message {
-	font-size: 1rem;
-}
-.last-p a {
-	display: inline-block;
-	padding: 1rem 0 1.5rem;
-	font-size: 1rem;
-	color: #1583d8;
-}
-.customer-answer{
-	text-align: right;
-}
-
-
-/*  ------------ 订单详情 stytle ------------ */
-.color555 {
-	color: #555;
-}
-.look-detail {
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	font-size: 1.11rem;
+.trace-msg-title {
+	height: 5.33rem;
 	line-height: 3.75rem;
 }
-.look-detail .small-icon {
-	margin-top: .5rem;
+.trace-msg .float-L {
+	line-height: 1.6rem; 
 }
-.order-detial-status .order-status{
-	font-size: 1.11rem;
-	color: #000;
-}
-.order-detial-con .order-detial-status span{
-	font-size: 1.11rem;
-}
-.order-detial-con table td {
-	color: #000;
-}
-.order-detial-con table td span {
+.trace-msg  p.float-L { 
+	padding-right: 1rem;
+	font-size: .9rem;
 	color: #555;
 }
-.trace-message table td p {
-	margin: .5rem 0;
-	font-size: 1.11rem
+.trace-msg  div.float-L {
+	max-width: 84%;
 }
-.trace-message table td {
+/* 产品清单 */
+.product-list thead td {
+	line-height: 3.75rem;
+}
+.product-list td {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 3.75rem;
 	padding: .8rem 0;
+	border-bottom: .08rem solid #f3f3f3;
 }
-.order-detial-con .addr-msg{
-	line-height: 1.2rem;
-}
-.order-detial-con .addr-msg span{
-	color: #000;
-	font-size: 1.11rem
-}
-
 .product-list td p{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -174,31 +136,86 @@ span.order-status {
 	justify-content: space-between;
 	padding-top: .8rem;
 }
+.product-list td .product-name {
+	font-size: 1.33rem;
+}
+.product-list p i {
+	font-style:normal;
+}
 .count {
 	min-width: 2.2rem;
 	text-align: center; 
 }
-.product-list td,.billing-address td {
-	padding-bottom: .8rem;
-}
-.billing-address td {
-	padding-top: .8rem;
-}
-.order-detial-con .billing-address-title,.order-detial-con .product-list-title {
-	padding-bottom: 0;
-}
-.product-list td .product-name {
+.product-list .price b {
+	color: #000;
 	font-size: 1.33rem;
 }
-.product-list td b {
-	font-size: 1.33rem;
+.product-list .color555 {
+	color:#555;
 }
 .product-list td.total,.product-list td.total span {
 	color: #000;
 	font-size: 1.33rem;
 }
+/*地址信息*/
+.addr-msg dt {
+	font-size: .9rem;
+	color:#555;
+	border-bottom: .08rem solid #f3f3f3;
+	height: 3.75rem;
+	line-height: 3.75rem;
+}
+.addr-msg dd {
+	font-size: 1.11rem;
+}
+.addr-msg dd span {
+	color:#000;
+	font-size: 1.33rem;
+}
 
-/*  ------------ 客户询单问答 stytle ------------ */
+/*  ---- 我的询单 stytle ---- */
+.inquire-con .msg-con {
+	padding: 0 4%;
+	background: #fff;
+}
+.msg-box {
+	padding-top: 1rem;
+	line-height: 1.5rem;
+	font-size: 1.11rem;
+}
+.msg-box p {
+	padding: 0 1rem;
+}
+.msg-box span {
+	font-size: .9rem;
+	color:#555;
+}
+.msg-box .session-box {
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 3.5rem;
+	padding: .8rem 1rem;
+	border-radius: .5rem;
+	background: #f3f3f3;
+	margin-top: 1.5rem;
+}
+.session-box .up-icon {
+	position: absolute;
+	top: -1rem;
+	left: 18%;
+}
+.last-p a {
+	display: inline-block;
+	padding: 1rem 0 1.5rem;
+	color: #1583d8;
+}
+.customer-answer{
+	text-align: right;
+}
+
+/*  ---- 客户询单问答 stytle ---- */
 .customer-QA-con {
 	margin-top: 1.4rem;
 	font-size: 1rem;
@@ -209,14 +226,14 @@ span.order-status {
 	background: #fff;
 	border-radius: .25rem;
 }
-.message-con dl {
+.msg-con dl {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 }
-.message-con dd {
+.msg-con dd {
 	position: relative;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -227,7 +244,7 @@ span.order-status {
 	line-height: 1.75rem;
 	border-radius: .6rem;
 }
-.message-con dd .img-box {
+.msg-con dd .img-box {
 	position: absolute;
 }
 .CSNpharm-service dd {
@@ -267,56 +284,79 @@ span.order-status {
 	width: 1rem;
 }
 
-
-/*  ------------ 我的收藏 stytle ------------ */
-.my-favorite-card {
-	overflow: hidden;
+/*  ---- 个人信息 stytle ---- */
+.info-com {
+    font-size: 1.11rem;
+    color: #555;
 }
-
-
-/*  ------------ 个人信息 stytle ------------ */
-
+.info-com article {
+	margin-top: .56rem;
+	background: #fff;
+}
+.info-com p {
+	height: 3.75rem;
+	line-height: 3.75rem;
+    border-bottom: .08rem solid #f3f3f3;
+}
+.info-com p span {
+	display: inline-block;
+	width: 12%;
+	color: #aaa;
+}
 .edit {
 	text-align: right;
+	height: 3.75rem;
+	line-height: 3.75rem;
 }
 .edit a {
 	padding-right: .6rem;
 	color: #aaa;
+}
+.edit i {
+	font-size: 2.4rem;
+}
+.edit span {
 	position: relative;
-}
-.edit-icon {
-	position: absolute;
-	right: 3.3rem;
-} 
-.edit-infor-btn-box {
-	padding: .5rem 5%;
+	bottom: .5rem;
 }
 
-/*  ------------ 编辑个人信息 stytle ------------ */
-.edit-message-con table span,.personal-information-con table span {
-	color: #aaa;
+/*  ---- 编辑个人信息 stytle ---- */
+.info-com input{
+	width: 86%;
+    border: none;
+    line-height: 3rem;
+    font-size: 1.11rem;
+    color: #555;
+    font-family: "微软雅黑";
 }
-.edit-message-con table input{
-	border: none;
-	height: 100%;
-	width: 100%;
-	padding-left: 0;
-	font-size: 1.11rem;
+.edit-btn-box {
+	padding: 1rem 5%;
 }
 
-/*  ------------ 地址信息 stytle ------------ */
-.address-information-card {
+/*  ---- 修改密码 stytle ---- */
+.change-password-con p span {
+	width: 21%;
+}
+.change-password-con input {
+	width: 77%;
+}
+
+/*  ---- 地址信息 stytle ---- */
+.addr-info-con {
+	background: none;
+}
+.addr-info-card {
 	background: #fff;
 	font-size: 1.11rem;
 	margin-top: .56rem;
 }
-.address-information-title {
+.addr-info-card header {
 	height: 3.75rem;
 	line-height: 3.75rem;
 	border-bottom: .08rem solid #f3f3f3;
 	color: #aaa;
 }
-.address-information-card dl {
+.addr-info-card article {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -325,84 +365,86 @@ span.order-status {
 	justify-content: space-between;
 	border-bottom: .08rem solid #f3f3f3;
 }
-.address-information-card dl dt {
+.addr-info-card article p{
 	width:80%;
 	padding-right: 1rem;
 	line-height: 2rem;
 	margin: .5rem 0;
 }
-.address-information-card dl dd {
-	width: 3.2rem;
-}
-.address-information-card dl dd a {
+.user-name {
 	display: inline-block;
+	padding-right: .8rem;
+	font-size: 1.33rem;
+}
+.color-red { color: #eb6132; }
+.addr-info-card article a{
+	width: 3.2rem;
+	display: block;
 	height: 2.5rem; 
 	line-height: 2.5rem; 
-	margin-top: 50%;
+	margin-top: 6%;
 	padding-left: .6rem;
 	border-left: .08rem solid #f3f3f3;
 	color: #aaa;
 }
-.user-name {
-	display: inline-block;
-	width: 20%;
-	font-size: 1.33rem;
-}
-.default-text {
-	color: #eb6132;
-}
-.address {
+.add-addr {
+	display: block;
 	text-align: center;
-}
-.address a {
 	color: #aaa;
+	height: 2.5rem;
+	padding: .5rem 0;
 }
-.address .add-address-txt {
+.add-addr i{
 	position: relative;
-	top: -0.5rem;
-	left: .3rem;
+	top: .15rem;
+	font-size: 1.6rem;
 }
 
-
-/*  ------------ 编辑地址信息 stytle ------------ */
+/*  ---- 编辑地址信息 stytle ---- */
 .save {
 	float: right;
 	color: #aaa; 
 	padding-right: .3rem;
 }
-.shipping-address-con {
-	margin-top: .56rem;
+.edit-addr-con p span {
+	width: 18%;
 }
-.edit-address-con select {
-	height:100%;
-	width:100%;
+.edit-addr-con input {
+	width: 80%;
+}
+.edit-addr-con select {
+	position: absolute;
+	left: 18%;
+	top: .8rem;
+	width: 80%;
+	height: 60%;
+	background: none;
 	outline: none;
 	border: none;
+    font-size: 1.11rem;
+    color: #555;
+    font-family: "微软雅黑";
 }
-.edit-address-con i {
-	position: absolute;
-	right:0;
-	top: 1rem;
+.edit-addr-con p i {
+	float:right;
 	padding-right: .5rem;
 }
 .set-default,.del-addr {
 	background: #fff;
 	height: 3.89rem;
 	line-height: 3.89rem;
-	margin-bottom: .56rem;
+	margin: .56rem 0;
 }
 .del-addr {
+	display: block;
 	margin-top: 1rem;
 	color: #ea5413;
 }
 .set-default .float-R{
 	padding-top: .55rem;
 }
-
 /*  set default */
-.switch-checkbox {
-    display: none;
-} 
+.switch-checkbox { display: none;} 
 .switch-label {
     background-color: #ddd;
     display: inline-block;
@@ -423,14 +465,17 @@ span.order-status {
     width: 1.95rem;
     border-radius: 50%;
     background-color: #fff;
-    /*过渡效果，可考虑不加*/
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: all 0.3s; /*过渡效果，可考虑不加*/
 }
-
 .switch-checkbox:checked~.switch-label {
     background: #60b5ea;
+}
+
+/*  ---- 我的收藏 stytle ---- */
+.my-favorite-card {
+	overflow: hidden;
 }

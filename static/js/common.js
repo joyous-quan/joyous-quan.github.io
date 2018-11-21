@@ -1,12 +1,36 @@
 ;(function($){
 
-    $("#header").load("/templates/component/header.html");
-    $("#footer").load("/templates/component/footer.html");
-    
+   $(document).ready(function(){
+     console.log($('.to-top').offsetTop)
+   })
     //TOP
-	$(document).on("click", ".to-top", function () {
+	$(document).on("touchstart", ".to-top", function () {
  		$(window).scrollTop(0);
  	})
+
+	//首页input
+ 	$(document).on("focus", ".search-ipt", function () {
+ 		$(this).css("border-color","#9fb1c4");
+ 	})
+ 	$(document).on("blur", ".search-ipt", function () {
+ 		$(this).css("border-color","#f3f3f3");
+ 	})
+
+    //侧边菜单移入移出
+    $(document).on('touchstart','span.menu-icon', function(event){
+        $('.sidebar-mask').css({ "left" : "0" })
+    });
+    $(document).on('touchstart','.del-sidebar', function(event){
+        $('.sidebar-mask').css({ "left" : "-100%" })
+    });
+    
+    //二级菜单显示隐藏
+    $(document).on('touchstart','.sub-title>div',function(event){
+        $(this).parent().find('.sub-menu').toggle();
+        $(this).parent().siblings().find('.sub-menu').hide()
+    });
+
+
 
 
 })(Zepto);

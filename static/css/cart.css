@@ -1,26 +1,18 @@
 .cart-title {
 	background: #fff;
 }
-.cart-title h1 {
+.cart-title h2 {
 	height: 4.71rem;
 	line-height: 4.71rem;
 	border-bottom: .08rem solid #e0e0e0;
 	font-size: 1.33rem;
 	font-weight: normal;
 }
-.cart-con,body {
+.cart-con {
 	overflow-x: hidden;
 }
 .cart-con .swiper-left {
-	margin-bottom: 0;
-}
-.cart-con .table-card {
-	padding: .6rem 0;
-}
-.cart-con .table-card td {
-	font-size: 1.11rem;
-	line-height: 2rem;
-	padding: .4rem 0;
+	margin: 0;
 }
 .products-name a{
 	font-size: 1.33rem
@@ -54,6 +46,7 @@
 .cart-con table .number .minus {
 	font-size: 1.4rem;
 }
+
 .settlement-con {
 	background: #fff;
 }
@@ -91,78 +84,3 @@
 	color: #2180be;
 }
 
-
-/* 运费和政策 */
-.freight-policy-txt {
-	font-size: 1.11rem;
-	line-height: 2rem;
-	padding: 0 1rem;
-	text-align: justify;
-}
-.freight-img {
-	height: 4.56rem;
-	padding: 1rem;
-}
-/* 隐私政策 */
-.privacy-policy-txt {
-	min-height: 5rem;
-	font-size: 1rem;
-	line-height: 1.8rem;
-	text-align: justify;
-	margin: .56rem 0;
-	padding: 1.2rem 0.5rem 1.4rem;
-}
-.privacy-policy-con li {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding:0 4%;
-	background: #fff;
-	margin-bottom: .56rem;
-}
-.privacy-policy-con li a {
-	font-size: 1.33rem;
-}
-.privacy-policy li a{
-	line-height: 4.45rem;
-}
-.privacy-policy-con .sub-title i {
-	top: 0;
-	padding-right: 2rem;
-}
-
-/* 我们如何使用收集的信息 */
-.use-information-title {
-	height: 4.45rem;
-	line-height: 4.45rem;
-}
-.use-information {
-	margin-top: .56rem;
-}
-.use-information .sub-title p {
-	line-height: 1.8rem;
-	font-size: 1rem;
-}
-.use-information .sub-title {
-	padding-top: .5rem;
-	padding-bottom: 1rem;
-}
-.use-information .sub-title a {
-	line-height: 2.5rem;
-}
-/* 联系我们 */
-.contact-us-title {
-	margin-top: 1rem;
-	font-size: 1.33rem;
-	height: 2.65rem;
-}
-.contact-us-con .flex{
-	justify-content: space-between;
-}
-.contact-us-con div {
-	height: 3rem;
-}
-.contact-us-con .img-box {
-	position: relative;
-	top: .5rem;
-}

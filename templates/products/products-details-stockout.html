@@ -18,13 +18,11 @@
 </head>
 <body>
 
-
-
 <!-- header -->
-<div id="header"></div>
+<header id="header"></header>
   
 <!-- 主体 -->
-<div class="layout">
+<nav class="layout">
     <div class="breadcrumb">
         <a href="/index.html">首页</a><span> /</span>
         <a href="">Cytoskeleton</a><span> /</span>
@@ -32,8 +30,8 @@
         <a href="">Tubulin & ADC Toxin</a><span> /</span>
         <a href="" class="current">Tubulin & ADC Toxin</a>
     </div>
-</div>
-<div class="products-con">
+</nav>
+<section class="products-con">
     <ul class="white-bg products-con-top">
         <li>
             <span class="img-box products-img">
@@ -52,9 +50,9 @@
         </li>
     </ul>
     <div class="layout white-bg products-table">
-        <div class="products-stockout">
+        <article class="products-stockout">
             The item is temporarily out of stock. Please leave your email address and we will inform you when we have it in stock
-        </div>
+        </article>
         <ul class="product-btn-box">
             <li class="flex1">
                 <span class="img-box small-icon">
@@ -306,22 +304,22 @@
         <textarea name="text" placeholder="*留言内容"></textarea>
         <button class="btn btn-red">提交</button>
     </div>
-</div>
+</section>
 
 <!-- footer -->
-<div id="footer"></div>
+<footer id="footer"></footer>
 
 
+<script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
+<script type="text/javascript" src="/static/js/load-header-footer.js"></script>
+<script type="text/javascript" src='/static/js/tooljs/event.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
 
-
-
-<script type="text/javascript" src="/static/js/zepto.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
-
 <script>
 ;(function($){
-
-    
+  
     //显示隐藏
     $('.hide-card>li div').on('touchstart',function(event){
 
@@ -331,10 +329,8 @@
 
     });
     
-})(Zepto);
-    
+})(Zepto);  
 </script>
-
 
 </body>
 </html>

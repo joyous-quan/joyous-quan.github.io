@@ -16,13 +16,15 @@
     <link rel="stylesheet" href="/static/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/index.css">
+
+
 </head>
 <body>   
 
-<!-- header -->
-<div id="header"></div>
-<!-- 主体 -->
-    <div class="layout link">
+    <!-- header -->
+    <header id="header"></header>
+    <!-- 主体 -->
+    <section class="layout link">
         <div>
             <a class="email" href="mailto:sales@csnpharm.cn">
                 <span class="img-box small-icon">
@@ -39,21 +41,21 @@
                 400-920-2911
             </a>
         </div>
-    </div>
-    <div class="banner">
+    </section>
+    <section class="banner">
         <div class="banner-con border-box slider owl-carousel owl-theme">
-            <div class="item"><a href="" title=""><img src="/static/img/banner_1.png" alt=""></a></div>
-            <div class="item"><a href="" title=""><img src="/static/img/banner_2.png" alt=""></a></div>
-            <div class="item"><a href="" title=""><img src="/static/img/banner_3.png" alt=""></a></div>
+            <div class="item"><img src="/static/img/banner_1.png" alt=""></div>
+            <div class="item"><img src="/static/img/banner_2.png" alt=""></div>
+            <div class="item"><img src="/static/img/banner_3.png" alt=""></div>
         </div>
-    </div>
-    <div class="layout white-bg">
+    </section>
+    <section class="layout white-bg">
         <div class="btn-box">
-            <button class="btn btn-red login-btn">登录</button>
-            <button class="btn btn-line register-btn">注册</button>
+            <a href="/templates/login-register/login.html" class="btn btn-red login-btn">登录</a>
+            <a href="/templates/login-register/register.html" class="btn btn-line register-btn">注册</a>
         </div>
-    </div>
-    <div class="layout section white-bg">
+    </section>
+    <section class="layout section white-bg">
         <div class="title">
             信号通路
         </div>
@@ -85,50 +87,29 @@
         <div class="section-img-box margin0">
             <span class="img-box"><img src="/static/img/img.png" alt=""></span>
         </div>
-    </div>
-    <div class="layout white-bg">
+    </section>
+    <section class="layout white-bg">
         <div class="btn-box">
             <button class="btn btn-blue"><span>+ </span> 查看更多</button>
         </div>
-    </div>
+    </section>
   
-<!-- footer -->
-<div id="footer"></div>
+    <!-- footer -->
+    <footer id="footer"></footer>
 
 
-<script src="/static/js/jquery-3.3.1.min.js"></script>
+
+<script src="/static/js/tooljs/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/owlCarousel/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/static/js/zepto.js"></script>
+<script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
+<script type="text/javascript" src="/static/js/load-header-footer.js"></script>
+<script type="text/javascript" src='/static/js/tooljs/event.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
+
+
 <script type="text/javascript" src="/static/js/common.js"></script>
-<script>
-    $(function(){
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin: 5,
-            autoplay:true,
-            autoplayTimeout: 4000,
-            responsive:{
-                0:{
-                    items:1.1
-                }
-            }
-        })
-    })
-</script>
-
-<script>
-;(function($){
-    //登录
-    $('.login-btn').on('touchstart',function(event){
-       window.location.href = '/templates/login-register/login.html';
-    })
-    //注册
-    $('.register-btn').on('touchstart',function(event){
-       window.location.href = '/templates/login-register/register.html';
-    })
-
-})(Zepto);
-</script>
+<script type="text/javascript" src="/static/js/index.js"></script>
 
 
 </body>

@@ -19,202 +19,158 @@
 
  
  <!-- 主体 -->
-<div class="layout title-con">
+<header class="layout title-con">
     <a href="JavaScript:history.go(-1)" class="back-icon">
         <i class="iconfont icon-fanhui"></i>
     </a>
     <span class="title-txt">订单详情</span>
-</div>
-<div class="table-box order-detial-con">
-    <div class="layout table-card order-detial-status">
-        <table cellspacing="0" border="0">
-            <tbody>
-                <tr>
-                    <td align="left">
-                        <span class="img-box small-icon">
-                            <img src="/static/img/user-center/time.png" alt="">
-                        </span>
-                        <span class="order-status">
-                            您的订单正在处理...
-                        </span>
-                    </td>
-                    <td align="right">
-                        <span>订单状态: 已支付</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="layout table-card">
-        <table cellspacing="0" border="0">
-            <colgroup>
-                <col width="15%">
-                <col>
-                <col width="19%">
-                <col>
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td><span>订单编号</span></td>
-                    <td>25212522133</td>
-                    <td><span>客户订单号</span></td>
-                    <td>856623212</td>
-                </tr>
-                <tr>
-                    <td><span>下单时间</span></td>
-                    <td colspan="3">2018-09-01 11:10:56</td>
-                </tr>
-                <tr>
-                    <td><span>付款时间</span></td>
-                    <td colspan="3">2018-09-01 11:10:56</td>
-                </tr>
-                <tr>
-                    <td><span>到货时间</span></td>
-                    <td colspan="3">2018-09-01 11:10:56</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="layout table-card trace-message">
-        <table cellspacing="0" border="0">
-            <colgroup>
-                <col width="15%">
-                <col>
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td colspan="2">跟踪信息</td>
-                </tr>
-                <tr>
-                    <td><span>送货地址</span></td>
-                    <td class="addr-msg">
-                        <span>陈小小</span> <span >15000113269</span>
-                        <p>上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span>运输方式</span></td>
-                    <td class="addr-msg">
-                        <span class="user-name">陈小小</span> <span >15000113269</span>
-                        <p>上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td><span>物流公司</span></td>
-                    <td>
-                        UPS xxxxxxxxxxxxxxxxxxxx
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="layout table-card product-list">
-        <table cellspacing="0" border="0">
-            <colgroup>
-                <col width="">
-                <col>
-            </colgroup>
+</header>
+<section>
+    <dl class="com-card order-detial-status">
+        <dt class="float-L">
+            <a href="javascript:;" class="img-box small-icon">
+                <img src="/static/img/user-center/time.png" alt="">
+            </a>
+            <span>您的订单正在处理...</span>
+        </dt>
+        <dt class="float-R">
+            <span>订单状态：</span>已支付
+        </dt>
+    </dl>
+    <ul class="com-card order-card">
+        <li>
+            <p><span>订单编号</span>25212522133</p>
+            <p><span class="width6">客户订单号</span>856623212</p>
+        </li>
+        <li>
+            <span>下单时间</span>2018-09-01 11:10:56
+        </li>
+        <li>
+            <span>付款</span>2018-09-01 11:11:56
+        </li>
+        <li>
+            <span>到货时间</span>2018-09-03 11:10:56
+        </li>
+    </ul>
+    <dl class="com-card trace-msg">
+        <dd class="trace-msg-title">跟踪信息</dd>
+        <dd>
+            <p class="float-L">
+                送货地址
+            </p>
+            <div class="float-L">
+                陈小小 15000113269 <br>
+                上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203
+            </div>
+        </dd>
+        <dd>
+            <p class="float-L">
+                运输方式
+            </p>
+            <div class="float-L">
+                顺丰快递
+            </div>
+        </dd>
+        <dd>
+            <p class="float-L">
+                物流公司
+            </p>
+            <div class="float-L">
+                UPS xxxxxxxxxxxxxxxxxxxxxx
+            </div>
+        </dd>
+    </dl>
+    <div class="com-card product-list">
+        <table>
             <thead>
                 <tr>
-                    <td colspan="2" class="product-list-title">产品清单</td>
+                    <td colspan="2">产品清单</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td colspan="2">
                         <p>
-                            <span>CSN20045</span>
-                            <span>1222490-34-7</span>
-                            <span>1mg</span>
+                            <i>CSN20045</i>
+                            <i>1222490-34-7</i>
+                            <i>1mg</i>
                         </p>
                         <p>
-                            <a href="" class="product-name">Pyrrolobenzodiazepine Dimer</a>
+                            <a href="" class="product-name">1-Isopropyl-5-(4,4,5,5-tetramethyl-1,3,2-dioxaborolan-2-yl)-1H-pyrazole</a>
                         </p>
                         <p>
-                            <span>RNB <b>336</b></span>
-                            <span class="count">1</span>
+                            <span class="price">RNB <b>336</b></span>
+                            <i class="count">1</i>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <p>
-                            <span>CSN20045</span>
-                            <span>1222490-34-7</span>
-                            <span>1mg</span>
+                            <i>CSN20045</i>
+                            <i>1222490-34-7</i>
+                            <i>1mg</i>
                         </p>
                         <p>
-                            <a href=""  class="product-name">Pyrrolobenzodiazepine Dimer</a>
+                            <a href="" class="product-name">1-Isopropyl-5-(4,4,5,5-tetramethyl-1,3,2-dioxaborolan-2-yl)-1H-pyrazole</a>
                         </p>
                         <p>
-                            <span>RNB <b>336</b></span>
-                            <span class="count">1</span>
+                            <span class="price">RNB <b>336</b></span>
+                            <i class="count">1</i>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <p>
-                            <span>CSN20045</span>
-                            <span>1222490-34-7</span>
-                            <span>1mg</span>
+                            <i>CSN20045</i>
+                            <i>1222490-34-7</i>
+                            <i>1mg</i>
                         </p>
                         <p>
-                            <a href=""  class="product-name">Pyrrolobenzodiazepine Dimer</a>
+                            <a href="" class="product-name">1-Isopropyl-5-(4,4,5,5-tetramethyl-1,3,2-dioxaborolan-2-yl)-1H-pyrazole</a>
                         </p>
                         <p>
-                            <span>RNB <b>336</b></span>
-                            <span class="count">11</span>
+                            <span class="price">RNB <b>336</b></span>
+                            <i class="count">1</i>
                         </p>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="color555">
                         小计 ( 4项 ) : <span>RMB1680.00</span>
                     </td>
-                    <td>
+                    <td class="color555">
                         运费 : <span>RMB45.00</span>
                     </td>
                 </tr>
                 <tr>
-                    <td class="total">
+                    <td colspan="2" class="total">
                         合计 : <span>RMB1725.00</span>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="layout table-card billing-address">
-        <table cellspacing="0" border="0">
-            <tbody>
-                <tr>
-                    <td class="billing-address-title"><span>账单地址</span></td>
-                </tr>
-                <tr>
-                    <td class="addr-msg">
-                        <span class="user-name">陈小小</span> <span >15000113269</span>
-                        <p>上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203</p>
-                    </td>
-                </tr>
-                 <tr>
-                    <td class="addr-msg">
-                        <span class="user-name">陈小小</span> <span >15000113269</span>
-                        <p>上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div> 
-</div>
+    <dl class="com-card addr-msg">
+        <dt>账单地址</dt>
+        <dd>
+            <span>陈小小</span> 15000113269 <br>
+            上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203惠南镇陶桥路488号5幢，201203
+        </dd>
+        <dt>送货地址</dt>
+        <dd>
+            <span>陈小小</span> 15000113269 <br>
+            上海 上海市 浦东新区 惠南镇陶桥路488号5幢，201203
+        </dd>
+    </dl>
+</section>
 
 
-
-
-
-
-<script type="text/javascript" src="/static/js/zepto.js"></script>
-
-
+<script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
+<script type="text/javascript" src='/static/js/tooljs/event.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
 
 </body>
 </html>

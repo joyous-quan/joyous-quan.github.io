@@ -14,22 +14,24 @@
     <link rel="stylesheet" href="/static/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/css/login-register.css">
 
-    <script type="text/javascript" src="/static/js/zepto.js"></script>
+    <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
 
 </head>
 <body>
 
 <!-- 主体 -->
 <div class="layout">
-    <a href="JavaScript:history.go(-1)" class="back-icon">
-        <i class="iconfont icon-fanhui"></i>
-    </a>
-    <div class="logo-box">
-        <a href="/index.html" class="img-box logo">
-            <img src="/static/img/logo.png" alt="">
+    <header>
+        <a href="JavaScript:history.go(-1)" class="back-icon">
+            <i class="iconfont icon-fanhui"></i>
         </a>
-    </div>
-    <div class="login-register-con">
+        <div class="logo-box">
+            <a href="/index.html" class="img-box logo">
+                <img src="/static/img/logo.png" alt="">
+            </a>
+        </div>
+    </header><!-- /header -->
+    <section class="login-register-con">
         <div class="input-box">
             <input type="text" name="email" placeholder="邮箱">
             <input type="password" name="password" placeholder="密码">
@@ -45,7 +47,7 @@
             <button class="btn btn-red login-btn">登录</button>
             <button class="btn btn-line register-btn">注册</button>
         </div>
-    </div>
+    </section>
 </div>
 
 <script>
