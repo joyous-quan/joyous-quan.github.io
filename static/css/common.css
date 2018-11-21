@@ -503,6 +503,7 @@ a.btn {
 }
 .hide-con {
 	width: 28%;
+	height:100%;
 	display: flex;
 	overflow: hidden;
 	background: #f3f3f3;
@@ -549,7 +550,7 @@ a.btn {
 .swiper-left .description {
 	margin: .8rem 0 1rem; 
 	max-height: 2.8rem;
-    overflow : hidden; 
+        overflow : hidden; 
 	display: -webkit-box; 
 	-webkit-box-orient: vertical; 
 	-webkit-line-clamp: 2;  
