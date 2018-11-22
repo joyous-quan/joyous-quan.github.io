@@ -13,8 +13,6 @@
     <!-- 引入样式 -->
     <link rel="stylesheet" href="/static/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/css/login-register.css">
-    
-    <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
 
 </head>
 <body>
@@ -33,28 +31,23 @@
     </header>
     <section class="login-register-con">
         <div class="input-box">
-            <input type="text" name="user" placeholder="用户名">
-            <input type="text" name="email" placeholder="邮箱">
-            <input type="password" name="password" placeholder="密码">
+            <input type="text" class="ipt" placeholder="用户名">
+            <input type="text" class="ipt" placeholder="邮箱">
+            <input type="password" class="ipt" placeholder="密码">
         </div>
         <p class="check">
-            <input type="checkbox" name="check" id="check" checked><label for="check"></label>
+            <input type="checkbox" id="check" checked><label for="check"></label>
             <span>给我发电子邮件关于回滚，特价，热门新商品，礼品创意等等。</span>
         </p>
         <div class="btn-box">
-            <button class="btn btn-red register-btn">注册</button>
+            <button class="btn btn-red">注册</button>
             <button class="btn btn-line login-btn">登录</button>
         </div>
     </section>
 </div>
 
-<script>
-;(function($){
-    $('.login-btn').on('touchstart',function(event){
-       window.location.href = 'login.html';
-    })
-})(Zepto);   
-</script>
+<script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
+<script type="text/javascript" src="/static/js/login-register.js"></script>
 
 </body>
 </html>

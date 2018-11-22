@@ -1,8 +1,4 @@
 ;(function($){
-
-   $(document).ready(function(){
-     console.log($('.to-top').offsetTop)
-   })
     //TOP
 	$(document).on("touchstart", ".to-top", function () {
  		$(window).scrollTop(0);
@@ -29,8 +25,6 @@
         $(this).parent().find('.sub-menu').toggle();
         $(this).parent().siblings().find('.sub-menu').hide()
     });
-
-
 
 
 })(Zepto);

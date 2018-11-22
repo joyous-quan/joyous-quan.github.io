@@ -48,7 +48,7 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="products-name">
-                                <a href="/templates/products/products-details.html">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
+                                <a href="javascript:;">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
                             </td>
                         </tr>
                         <tr>
@@ -88,7 +88,7 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="products-name">
-                                <a href="/templates/products/products-details.html">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
+                                <a href="javascript:;">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
                             </td>
                         </tr>
                         <tr>
@@ -128,7 +128,7 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="products-name">
-                                <a href="/templates/products/products-details.html">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
+                                <a href="javascript:;">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
                             </td>
                         </tr>
                         <tr>
@@ -226,30 +226,29 @@
 
 <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
 <script type="text/javascript" src="/static/js/load-header-footer.js"></script>
-<script type="text/javascript" src='/static/js/tooljs/event.js'></script>
-<script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
-<script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
+<script type="text/javascript" src='/static/js/tooljs/jquery-3.3.1.min.js'></script> 
+<script type="text/javascript" src='/static/js/tooljs/jquery.touchSwipe.js'></script>
 
-<script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/swipeleft.js"></script>
+
 
 <script type="text/javascript">
     $(function () {
-
         /* 数值加减 */
-        $('.number .minus').on('click', function(event){
+        $('.number .minus').on('touchstart', function(event){
             var num = Number($(this).parent().find('input').val());
             $(this).parent().find('input').val(num - 1);
             if(num <=1) {
                 $(this).parent().find('input').val(1);
                 $(this).css({ 'color' : "#ddd" })
-            }else{
-                $(this).css({ 'color' : "#333" })
             }
         })
-        $('.number .add').on('click', function(event){
+        $('.number .add').on('touchstart', function(event){
             var num = Number($(this).parent().find('input').val());
             $(this).parent().find('input').val(num + 1);
+            if(num >=1) {
+                $('.number .minus').css({ 'color' : "#333" })
+            }
         })
     })
 </script>

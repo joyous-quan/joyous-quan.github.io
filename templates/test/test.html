@@ -6,6 +6,57 @@
     <title>Document</title>
  
     <style type="text/css">
+/*     *{
+margin: 0;
+padding: 0;
+}
+html,body{
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+.container{
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top: 0%;
+}
+.container .page{
+height: 100%;
+position: relative;
+}
+.container .page0{
+background-color: blue;
+}
+.container .page1{
+background-color: pink;
+}
+.container .page2{
+background-color: yellow;
+}
+.container .page3{
+background-color: green;
+}
+.container .page4{
+background-color: tomato;
+}
+.xiangxiatishi{
+position: fixed;
+bottom: 20px;
+left: 50%;
+-webkit-transform:translateX(-50%);
+-webkit-animation:dong 1s linear 0s infinite alternate;
+}
+ 
+@-webkit-keyframes dong{
+from{
+    bottom:20px;
+}
+to{
+    bottom: 60px;
+}
+} */
         li{
             list-style: none;
             font-size: 18px;
@@ -13,15 +64,16 @@
         }
     </style>
  
-    <!-- zepto的基础模块  必须导入的-->
-    <script type="text/javascript" src='/static/js/tooljs/zepto.js'></script>
-    <!-- 如果使用事件 需要导入event -->
-    <script type="text/javascript" src='/static/js/tooljs/event.js'></script>
-    <!-- 导入 animate的模块 -->
-    <script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
-    <!-- 移动端事件 需要导入touch.js -->
-    <script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
-    <script type="text/javascript">
+    <!-- zepto的基础模块  必须导入的-
+    <script type="text/javascript" src='/static/js/tooljs/zepto.js'></script>-->
+    <!-- 如果使用事件 需要导入event 
+    <script type="text/javascript" src='/static/js/tooljs/event.js'></script>-->
+    <!-- 导入 animate的模块 
+    <script type="text/javascript" src='/static/js/tooljs/fx.js'></script>-->
+    <!-- 移动端事件 需要导入touch.js 
+    <script type="text/javascript" src='/static/js/tooljs/touch.js'></script>-->
+    
+    <!-- <script type="text/javascript">
         $(function () {
             // 为li标签绑定click事件
             // $('li').on('click',function(){
@@ -43,28 +95,123 @@
             }).swipeRight(function(){
                 $(this).text('想的真好');
             })
- 
+     
             // 移动端双击事件  移动端很少使用双击
             // $('li').doubleTap(function(){
             //  console.log('我被双击了');
             // })
-
-
+    
+    
             const app = document.querySelector('#app');
             const hammertime = new Hammer(app);
             hammertime.on('pan', function(ev) {
               console.log(ev);
             });
- 
+    
+            var hammertime = new Hammer(myElement, myOptions);
+            hammertime.on('pan', function(ev) {
+                console.log(ev);
+            });
+     
+    
         })
-    </script>
+    </script> -->
 </head>
 <body>
-    <ul>
-        <li>西兰花炒蛋很好吃</li>
-        <li>西兰花炒蛋很好吃</li>
-        <li>西兰花炒蛋很好吃</li>
-        <li>西兰花炒蛋很好吃</li>
+      <div class="container">
+        <div class="page page0 cur"><h1>你好，我是0号屏幕</h1>
+        </div>
+ 
+        <div class="page page1">
+            <h1>你好，我是1号屏幕</h1>
+            <!-- <img class="no1" src="img/1.png" />
+            <img class="no2" src="img/2.png" /> -->
+        </div>
+        <div class="page page2"><h1>你好，我是2号屏幕</h1></div>
+        <div class="page page3"><h1>你好，我是3号屏幕</h1></div>
+        <div class="page page4"><h1>你好，我是4号屏幕</h1></div>
+    </div>
+ 
+    <img  class="xiangxiatishi" src="img/prompt.png" alt="向下来一下~"/>
+    <ul class="test">
+        <li>西兰花炒蛋很好吃<span>span</span></li>
+        <li>西兰花炒蛋很好吃<span>span</span></li>
+        <li>西兰花炒蛋很好吃<span>span</span></li>
+        <li>西兰花炒蛋很好吃<span>span</span></li>
     </ul>
+    <div id="test" style="height:200px; background:#C63;-webkit-user-select:none; text-align:center; line-height:200px; color:#fff">swipe 的dome</div>
+    <div id="test2" style="height:200px; background:#C63; margin-top:20px;-webkit-user-select:none; text-align:center; line-height:200px; color:#fff">swipeStatus的dome</div>
+    <script type="text/javascript" src='/static/js/tooljs/jquery-3.3.1.min.js'></script>
+    <script type="text/javascript" src='/static/js/tooljs/jquery.touchSwipe.js'></script>
+    <script>
+
+        $(document).ready(
+            $(".test li").swipe({
+                swipe:function(event, direction, distance, duration, fingerCount) {
+                    if(direction == "left"){
+                        $(this).css({"background" : "pink"})
+                    }
+                    if(direction == "right"){
+                        $(this).css({"background" : "#eee"})
+                    }
+                }
+            })
+
+            /*function() {
+                var nowpage = 0;
+                //给最大的盒子增加事件监听
+                $(".container").swipe(
+                    {
+                        swipe:function(event, direction, distance, duration, fingerCount) {
+                             if(direction == "up"){
+                                nowpage = nowpage + 1;
+                             }else if(direction == "down"){
+                                nowpage = nowpage - 1;
+                             }
+ 
+                             if(nowpage > 4){
+                                nowpage = 4;
+                             }
+ 
+                             if(nowpage < 0){
+                                nowpage = 0;
+                             }
+ 
+                            $(".container").animate({"top":nowpage * -100 + "%"},400);
+ 
+                            $(".page").eq(nowpage).addClass("cur").siblings().removeClass("cur");
+                        }
+                    }
+                );
+            }*/
+        );
+        /*$(function(){
+            $("#test").swipe( {
+                swipe:function(event, direction, distance, duration, fingerCount) {
+                    $(this).text("你用"+fingerCount+"个手指以"+duration+"秒的速度向" + direction + "滑动了" +distance+ "像素 " );
+                },
+            });
+                //swipeStatus的dome
+            $("#test2").swipe( {
+                swipeStatus:function(event, phase, direction, distance, duration,fingerCount) {
+                    $(this).text("你用"+fingerCount+"个手指以"+duration+"秒的速度向" + direction + "滑动了" +distance+ "像素 " +"你在"+phase+"中");
+                },
+            });
+        })*/
+
+    </script>
+
+    <!-- <script type="text/javascript" src='/static/quojs/quo.js'></script>
+    <script>
+        $$('li').tap(function() {
+            // affects "span" children/grandchildren
+            $$('span', this).style('color', 'red');
+        });
+    
+        //.swipeLeft(function);
+        $$('li').swipeLeft(function(){
+            $$(this).html("西兰花")
+        })
+    </script> -->
 </body>
 </html>

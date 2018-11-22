@@ -42,11 +42,11 @@
 }
 .cart-con table .number span {
 	padding: 0 .5rem;
+	font-size: 1.2rem;
 }
-.cart-con table .number .minus {
-	font-size: 1.4rem;
+.number .minus {
+	transform: scaleX(1.5);
 }
-
 .settlement-con {
 	background: #fff;
 }
