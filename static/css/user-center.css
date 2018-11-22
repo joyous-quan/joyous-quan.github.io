@@ -324,7 +324,7 @@
 .info-com input{
 	width: 86%;
     border: none;
-    padding: 0;
+    margin-left: -0.56rem;
     font-size: 1.11rem;
     color: #555;
     font-family: "微软雅黑";
