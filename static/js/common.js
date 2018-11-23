@@ -28,7 +28,6 @@
         $(this).parent().find('.sub-menu').toggle();
         $(this).parent().siblings().find('.sub-menu').hide();
 
-        return false;
     });
 
 
