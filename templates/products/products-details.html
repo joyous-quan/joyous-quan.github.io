@@ -39,7 +39,7 @@
             </span>
         </li>
         <li>
-            <a href="" class="product-name">Mc-MMAE</a>
+            <h1>1-Methyl-3-(4,4,5,5-tetramethyl-1,3,2-dioxaborolan-2-yl)-1H-pyrazole</h1>
         </li>
         <li class="prodect-num">
             <p class="float-L">产品号.: CSN18492</p>
@@ -50,7 +50,7 @@
         </li>
     </ul>
     <div class="layout white-bg products-table">
-        <table cellspacing="0" border="0">
+        <table>
             <thead>
                 <tr>
                     <td>规格</td>
@@ -62,21 +62,39 @@
             <tbody>
                 <tr>
                     <td>1mg</td>
-                    <td>RMB 336</td>
+                    <td>RMB 336.00</td>
                     <td>>10 (in stock China)</td>
-                    <td><input type="number" value="1"></td>
+                    <td>
+                        <div class="number">
+                            <span class="minus">-</span>
+                            <input type="number" value="1">
+                            <span class="add">+</span>
+                       </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5mg</td>
+                    <td>RMB 1608.00</td>
+                    <td>>10 (in stock China)</td>
+                    <td>
+                        <div class="number">
+                            <span class="minus">-</span>
+                            <input type="number" value="1">
+                            <span class="add">+</span>
+                       </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>1mg</td>
-                    <td>RMB 336</td>
+                    <td>RMB 336.00</td>
                     <td>>10 (in stock China)</td>
-                    <td><input type="number" value="1"></td>
-                </tr>
-                <tr>
-                    <td>1mg</td>
-                    <td>RMB 336</td>
-                    <td>>10 (in stock China)</td>
-                    <td><input type="number" value="1"></td>
+                    <td>
+                        <div class="number">
+                            <span class="minus">-</span>
+                            <input type="number" value="1">
+                            <span class="add">+</span>
+                       </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -85,8 +103,7 @@
                 <p class="img-box small-icon">
                     <img class="show" src="/static/img/xin.png" alt="">
                     <img class="hide" src="/static/img/xin-red.png" alt="">
-                </p>
-                收藏
+                </p>收藏
             </li>
             <li class="flex3">
                 <button class="btn btn-blue">询价</button>
@@ -207,7 +224,7 @@
                     </p>
                     <div class="ipt-kuang">
                         <i class="iconfont icon-sanjiao_down_s"> </i>
-                        <input type="text" name="">
+                        <input type="text" class="ipt">
                         <select id="concUnits" name="concUnits">
                             <option value="">fM</option> 
                             <option value="">pM</option> 
@@ -223,7 +240,7 @@
                     </p>
                     <div class="ipt-kuang">
                         <i class="iconfont icon-sanjiao_down_s"> </i>
-                        <input type="text" name="">
+                        <input type="text" class="ipt">
                         <select id="volUnits" name="volUnits">
                             <option value="">nL</option> 
                             <option value="">μL</option> 
@@ -237,7 +254,7 @@
                     </p>
                     <div class="ipt-kuang">
                         <i class="iconfont icon-sanjiao_down_s"> </i>
-                        <input type="text" name="" >
+                        <input type="text" class="ipt">
                         <select id="massUnits" name="massUnits">
                             <option value="">pg</option> 
                             <option value="">ng</option> 
@@ -251,7 +268,7 @@
                         <span class="molarity-txt">分子量</span>
                         <i class="iconfont icon-shuzhibiaochi"></i>
                     </p>
-                    <input type="text" name="">
+                    <input type="text" >
                     <p>
                         *在准备库存解决方案时，请始终使用所发现的产物的分子量通过标签和MSDS / COA(可在产品页面上获得)。
                     </p>
@@ -265,7 +282,7 @@
                 <i class="iconfont icon-xiangxia"></i>
             </div>
             <ol class="hide technical-information">
-                <table cellspacing="0" border="0">
+                <table>
                     <tbody>
                         <tr>
                             <td width="23%">分子量</td>
@@ -328,10 +345,10 @@
     </ul>
     <div class="layout white-bg inquiry-form">
         <p class="inquiry-form-title">询价 <span>*必填项</span></p>
-        <input type="text" name="user" placeholder="*姓名">
-        <input type="text" name="email" placeholder="*邮箱">
-        <input type="text" name="tel" placeholder="*电话">
-        <textarea name="text" placeholder="*留言内容"></textarea>
+        <input type="text" class="ipt" placeholder="*姓名">
+        <input type="text" class="ipt" placeholder="*邮箱">
+        <input type="text" class="ipt" placeholder="*电话">
+        <textarea class="ipt" placeholder="*留言内容"></textarea>
         <button class="btn btn-red">提交</button>
     </div>
 </section>
@@ -342,25 +359,10 @@
 
 <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
 <script type="text/javascript" src="/static/js/load-header-footer.js"></script>
-<script type="text/javascript" src='/static/js/tooljs/event.js'></script>
-<script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
-<script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
 
 <script type="text/javascript" src="/static/js/common.js"></script>
-<script>
-;(function($){
-   
-    //显示隐藏
-    $('.hide-card>li div').on('touchstart',function(event){
+<script type="text/javascript" src="/static/js/products.js"></script>
 
-        event.stopPropagation();
-        $(this).parent().find('ol.hide').toggle();
-        $(this).parent().siblings().find('ol.hide').hide();
-
-    });
-
-})(Zepto);  
-</script>
 
 </body>
 </html>

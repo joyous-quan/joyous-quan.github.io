@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cn">
 <head>
-    <title>购物车询价页面</title>
+    <title>关于我们</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="format-detection" content="telephone=no"> 
@@ -13,30 +13,35 @@
     <!-- 引入样式 -->
     <link rel="stylesheet" href="/static/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/css/common.css">
-    <link rel="stylesheet" href="/static/css/form.css">
 </head>
-<body class="background-none">
+<body>
 
- 
+
+<!-- header -->
+<header id="header"></header>
+  
 <!-- 主体 -->
-<header class="layout title-con">
-    <a href="JavaScript:history.go(-1)" class="back-icon">
-        <i class="iconfont icon-fanhui"></i>
-    </a>
-    <span class="title-txt">询价</span>
-    <span class="float-R color-red">*必填项</span>
-</header>
-
-<section class="layout inquiry-form">
-    <input type="text" class="ipt" placeholder="*姓名">
-    <input type="text" class="ipt" placeholder="*邮箱">
-    <input type="text" class="ipt" placeholder="*电话">
-    <textarea class="ipt" placeholder="*留言内容"></textarea>
-    <button class="btn btn-red">提交</button>
+<!-- 主体 -->
+<nav class="layout">
+    <div class="breadcrumb">
+        <a href="/index.html">首页</a><span> /</span>
+        <a href="" class="current">关于我们</a>
+    </div>
+</nav>
+<div class="layout page-title">
+    网址地图
+</div>
+<section>
+  
 </section>
+
+<!-- footer -->
+<footer id="footer"></footer>
 
 
 <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
+<script type="text/javascript" src="/static/js/load-header-footer.js"></script>
+
 <script type="text/javascript" src="/static/js/common.js"></script>
 
 </body>

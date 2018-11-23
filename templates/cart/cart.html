@@ -28,9 +28,7 @@
     </div>
 </nav>
 <section>
-    <header class="layout cart-title">
-        <h2>我的购物车</h2>
-    </header>
+    <header class="layout cart-title">我的购物车</header>
     <section class="cart-con">
         <div class="swiper-left">
             <section>
@@ -48,17 +46,17 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="products-name">
-                                <a href="javascript:;">Pyrrolobenzodiazepine Dimer Pyrrolobenzodiazepine Dimer</a>
+                                <a href="javascript:;">Pyrrolobenzodiazepine Dimer</a>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" class="price">
-                                RMB <b>336</b>
+                                RMB <b>336.00</b>
                             </td>
                             <td>
                                <div class="number">
                                     <span class="minus">-</span>
-                                    <input type="number" name="" value="1">
+                                    <input type="number" value="1">
                                     <span class="add">+</span>
                                </div>
                             </td>
@@ -93,12 +91,12 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="price">
-                                RMB <b>336</b>
+                                RMB <b>336.00</b>
                             </td>
                             <td>
                                <div class="number">
                                     <span class="minus">-</span>
-                                    <input type="number" name="" value="1">
+                                    <input type="number" value="1">
                                     <span class="add">+</span>
                                </div>
                             </td>
@@ -133,12 +131,12 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="price">
-                                RMB <b>336</b>
+                                RMB <b>336.00</b>
                             </td>
                             <td>
                                <div class="number">
                                     <span class="minus">-</span>
-                                    <input type="number" name="" value="1">
+                                    <input type="number" value="1">
                                     <span class="add">+</span>
                                </div>
                             </td>
@@ -173,12 +171,12 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="price">
-                                RMB <b>336</b>
+                                RMB <b>336.00</b>
                             </td>
                             <td>
                                <div class="number">
                                     <span class="minus">-</span>
-                                    <input type="number" name="" value="1">
+                                    <input type="number" value="1">
                                     <span class="add">+</span>
                                </div>
                             </td>
@@ -195,9 +193,9 @@
     </section>
     <footer class="settlement-con">
         <ul class="layout">
-            <li class="border-B">小计(4项)：RMB1344</li>
-            <li class="border-B">运费：RMB149</li>
-            <li class="total">合计：RMB1493</li>
+            <li class="border-B">小计(4项)：RMB1344.00</li>
+            <li class="border-B">运费：RMB149.00</li>
+            <li class="total">合计：RMB1493.00</li>
             <li><button type="submit" class="btn btn-red">结算</button></li>
         </ul>
     </footer>
@@ -229,29 +227,32 @@
 <script type="text/javascript" src='/static/js/tooljs/jquery-3.3.1.min.js'></script> 
 <script type="text/javascript" src='/static/js/tooljs/jquery.touchSwipe.js'></script>
 
+<script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/swipeleft.js"></script>
-
-
-<script type="text/javascript">
-    $(function () {
-        /* 数值加减 */
-        $('.number .minus').on('touchstart', function(event){
-            var num = Number($(this).parent().find('input').val());
-            $(this).parent().find('input').val(num - 1);
-            if(num <=1) {
-                $(this).parent().find('input').val(1);
-                $(this).css({ 'color' : "#ddd" })
-            }
-        })
-        $('.number .add').on('touchstart', function(event){
-            var num = Number($(this).parent().find('input').val());
-            $(this).parent().find('input').val(num + 1);
-            if(num >=1) {
-                $('.number .minus').css({ 'color' : "#333" })
-            }
-        })
+<script>
+;(function($){
+    /* 数值加减 */
+    $('.number .minus').on('touchstart', function(event){
+        var num = Number($(this).parent().find('input').val());
+        $(this).parent().find('input').val(num - 1);
+        if(num <=1) {
+            $(this).parent().find('input').val(1);
+            $(this).css({ 'color' : '#ddd' })
+        }
     })
+    $('.number .add').on('touchstart', function(event){
+        var num = Number($(this).parent().find('input').val());
+        $(this).parent().find('input').val(num + 1);
+        if(num >=1) {
+            $('.number .minus').css({ 'color' : '#333' })
+        }
+    })
+
+
+})(Zepto);
 </script>
+
+
 
 </body>
 </html>

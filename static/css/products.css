@@ -1,6 +1,5 @@
 .products-con-top {
 	padding: 1rem 4%;
-	font-size: 1rem;
 	margin-bottom: .56rem;
 }
 .products-con-top li {
@@ -16,9 +15,8 @@
 	line-height: 27.78rem;
 	border: .08rem solid #e0e0e0;
 }
-.products-con-top .product-name {
-	font-size: 2rem;
-	font-weight: bold;
+.products-con-top h1 {
+	font-size: 1.67rem;
 }
 .products-con-top .prodect-num {
 	font-weight: bold;
@@ -33,11 +31,7 @@
 }
 .products-table {
 	padding: 1rem 4%;
-	font-size: 1rem;
 	margin-bottom: .56rem;
-}
-.products-table table {
-	width:100%;
 }
 .products-table table td {
 	height: 3.33rem;
@@ -46,13 +40,25 @@
 .products-table thead td {
 	background: #f3f3f3;
 }
-.products-table input {
-	width: 3rem;
-	height: 1.8rem;
-	border: none;
-	text-align: center;
-	background: #f3f3f3;
+.products-table .number {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.5rem;
 }
+.products-table .number input {
+	border: none;
+	background: #f3f3f3;
+	height: 1.5rem;
+	width: 2.5rem;
+	text-align: center;
+	font-size: 1.11rem;
+}
+.products-table .number span {
+	padding: 0 .5rem;
+	line-height: 1.5rem;
+	font-size: 1.2rem;
+}
+.number .minus { transform: scaleX(1.2); }
 .product-btn-box {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -64,6 +70,9 @@
 }
 .product-btn-box .flex1 {
 	padding-left: 1rem;
+}
+.product-btn-box .img-box {
+	padding-top: .56rem;
 }
 .flex1 {
 	flex: 1;
@@ -91,16 +100,14 @@
 	position: relative;
 	top: .35rem;
 }
-.link a {
-	color: #555;
-}
+.link a,.purity-doc-con,.purity-doc-con a,.hide-card,.inquiry-form-title { color: #555; }
 .active {border-radius:#f3f3f3}
 .purity-doc-con li {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	min-height: 4.17rem;
-	padding-top: 1rem;
+	padding-top: .7rem;
 }
 .purity-doc-title {
 	font-size: 1.33rem;
@@ -117,9 +124,8 @@
 	border-bottom: .08rem solid #e0e0e0;
 }
 .purity-batch .float-L {
-	line-height: 2rem;
+	line-height: 2.4rem;
 }
-
 /* select option */
 .select-box {
 	display: inline-block;
@@ -152,20 +158,18 @@
 	outline: none;
 	border: none;
 	background: none;
+	font-size: 1rem;
 	padding: .3rem .5rem;
 }
-
-
 .download a {
-	display: inline-block;
 	text-align: center;
-	margin-right: 1rem;
-	margin-bottom: 2rem;
+	margin: .5rem 1rem 1.2rem 0;
 }
 .download .small-icon {
 	height: 2rem;
 	width: 2rem;
 }
+
 .hide-card>li {
 	padding: 0 4%;
 	background: #fff;
@@ -180,23 +184,25 @@
 	border-top: .08rem solid #e0e0e0;
 	padding: 1rem 0 1.5rem;
 }
+.hide-card .technical-information {
+	padding-top:0;
+}
 .hide-card ol li {
-	min-height: 2.4rem;
-	font-size: 1rem;
+	min-height: 2rem;
 	line-height: 1.5rem;
 }
 .hide-card div i{
 	float: right;
 }
 .molarity p {
-	margin-bottom: .5rem;
+	margin: .56rem 0;
 }
 .molarity .margin-top {
 	margin-top: .8rem;
 }
 .molarity .icon-cha,.molarity .icon-shuzhibiaochi {
 	position: relative;
-	top: .4rem;
+	top: .2rem;
 	color: #b6b6b6;
 }
 .molarity p .molarity-txt {
@@ -205,6 +211,8 @@
 }
 
 .molarity .ipt-kuang {
+	height: 4rem;
+	line-height: 4rem;
 	position: relative;
 	text-align: right;
 }
@@ -215,10 +223,9 @@
 	right: 3.8rem;
 }
 .molarity .ipt-kuang input {
-	position: absolute;
-	left: 0; top: 0;
-	width: 80%;
+	width: 100%;
 	height: 100%;
+	margin:0;
 	background: none;
 }
 .ipt-kuang select {
@@ -247,7 +254,6 @@
 }
 
 .references a {
-	display: inline-block;
 	width: 100%;
 	color: #2180be;
 	margin-bottom: 1rem;

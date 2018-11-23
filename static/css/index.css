@@ -16,52 +16,44 @@
 	position: relative;
 	top: .35rem;
 }
-.link .email {
-	color: #666;
-}
-.link .tel {
-	color: #eb6132;
-}
+.link .email { color: #666; }
+.link .tel { color: #eb6132; }
 /* banner */
 .banner{
 	height: 18rem;
 	overflow: hidden;
-}
-.banner{
-    padding-top: .7rem;
+	padding-top: .7rem;
 }
 .item{
     margin-top: .1rem;
     margin-left: .7rem;
 }
-
 /* 登录 注册 */
-.btn-red {
-	margin-right: 1rem;
-}
-
+.btn-red { margin-right: 1rem; }
 /* section   信号通路*/
-.section {
-	margin-top: 1rem;
+.signal-path {
+	background: #fff; 
+	margin-top: 1rem; 
 }
-.title {
+.signal-path header {
 	font-size: 1.67rem;
 	height: 4.06rem;
 	line-height: 4.06rem;
 }
-.section .sub-title {
+.signal-path a {
+	display: block;
 	border-top: .08rem solid #e0e0e0;
 }
-.section .sub-title b {
+.signal-path .sub-title b {
 	display: inline-block;
 	width: 93%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.section .sub-title i {
+.signal-path .sub-title i {
 	padding-right:0;
 }
-.section .section-img-box {
+.signal-path .path-img-box {
 	border: .05rem solid #e0e0e0;
 	height: 18.44rem;
 	width: 100%;
@@ -70,7 +62,7 @@
 	text-align: center;
 	line-height: 18.44rem;
 }
-.section-img-box .img-box {
+.path-img-box .img-box {
 	-webkit-box-sizing: border-box; /* Safari */
 	-moz-box-sizing: border-box; /* Firefox */
 	box-sizing: border-box;

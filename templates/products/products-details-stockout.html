@@ -39,7 +39,7 @@
             </span>
         </li>
         <li>
-            <a href="" class="product-name">Mc-MMAE</a>
+            <h1>Mc-MMAE</h1>
         </li>
         <li class="prodect-num">
             <p class="float-L">产品号.: CSN18492</p>
@@ -55,11 +55,10 @@
         </article>
         <ul class="product-btn-box">
             <li class="flex1">
-                <span class="img-box small-icon">
+                <p class="img-box small-icon">
                     <img class="show" src="/static/img/xin.png" alt="">
                     <img class="hide" src="/static/img/xin-red.png" alt="">
-                </span> <br>
-                收藏
+                </p>收藏
             </li>
             <li class="flex5">
                 <button class="btn btn-blue">询价</button>
@@ -235,7 +234,7 @@
                 <i class="iconfont icon-xiangxia"></i>
             </div>
             <ol class="hide technical-information">
-                <table cellspacing="0" border="0">
+                <table>
                     <tbody>
                         <tr>
                             <td width="23%">分子量</td>
@@ -298,10 +297,10 @@
     </ul>
     <div class="layout white-bg inquiry-form">
         <p class="inquiry-form-title">询价 <span>*必填项</span></p>
-        <input type="text" name="user" placeholder="*姓名">
-        <input type="text" name="email" placeholder="*邮箱">
-        <input type="text" name="tel" placeholder="*电话">
-        <textarea name="text" placeholder="*留言内容"></textarea>
+        <input type="text" class="ipt" placeholder="*姓名">
+        <input type="text" class="ipt" placeholder="*邮箱">
+        <input type="text" class="ipt" placeholder="*电话">
+        <textarea class="ipt" placeholder="*留言内容"></textarea>
         <button class="btn btn-red">提交</button>
     </div>
 </section>
@@ -312,25 +311,9 @@
 
 <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
 <script type="text/javascript" src="/static/js/load-header-footer.js"></script>
-<script type="text/javascript" src='/static/js/tooljs/event.js'></script>
-<script type="text/javascript" src='/static/js/tooljs/fx.js'></script>
-<script type="text/javascript" src='/static/js/tooljs/touch.js'></script>
 
 <script type="text/javascript" src="/static/js/common.js"></script>
-<script>
-;(function($){
-  
-    //显示隐藏
-    $('.hide-card>li div').on('touchstart',function(event){
-
-        event.stopPropagation();
-        $(this).parent().find('ol.hide').toggle();
-        $(this).parent().siblings().find('ol.hide').hide();
-
-    });
-    
-})(Zepto);  
-</script>
+<script type="text/javascript" src="/static/js/products.js"></script>
 
 </body>
 </html>

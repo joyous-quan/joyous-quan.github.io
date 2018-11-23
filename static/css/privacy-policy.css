@@ -1,7 +1,6 @@
 /* 隐私政策 */
 .privacy-policy-txt {
 	min-height: 5rem;
-	font-size: 1rem;
 	line-height: 1.8rem;
 	text-align: justify;
 	margin: .56rem 0;
@@ -38,7 +37,6 @@
 	padding: 1rem;
 }
 
-
 /* 我们如何使用收集的信息 */
 .use-info-title {
 	height: 4.45rem;
@@ -49,7 +47,6 @@
 }
 .use-info .sub-title p {
 	line-height: 1.8rem;
-	font-size: 1rem;
 }
 .use-info .sub-title {
 	padding-top: .5rem;
@@ -58,6 +55,7 @@
 .use-info .sub-title a {
 	line-height: 2.5rem;
 }
+
 /* 联系我们 */
 .contact-us-title {
 	margin-top: 1rem;
