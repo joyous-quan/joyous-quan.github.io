@@ -254,6 +254,7 @@ span.img-box { display: inline-block;}
 	padding-right: .5rem;
 }
 .sub-menu .sub-title i { padding-right:1rem; }
+.sidebar .menu { overflow-y:auto; }
 .menu .title { font-size: 1.33rem; }
 .menu .sub-title { border-bottom: .08rem solid #e0e0e0;}
 .menu>li:last-child { border: none; }
