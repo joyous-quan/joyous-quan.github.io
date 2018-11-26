@@ -1,3 +1,4 @@
+/* 关于我们 */
 .about-common section {
 	padding: 0 4%;
 	background: #fff;
@@ -19,14 +20,23 @@
 .margin-B { margin-bottom: 1rem; }
 /* 联系我们 */
 .contact-us-con header { border-bottom: none; }
-.about-common a { height: 3rem; }
-.about-common div a {
+.contact-us-con a { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	height: 3rem; 
+	padding-left: 2.2rem;
+}
+.contact-us-con div a {
 	width: 50%;
 	float: left;
 }
-.about-common .img-box {
-	position: relative;
-	top: .5rem;
+.contact-us-con .addr { margin-bottom: 2rem; }
+.contact-us-con .img-box {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 /* 摩尔计算器 */
 .molarity p {
@@ -169,7 +179,7 @@
 .tab-content tr:first-child td {
 	border-top: .08rem solid #e0e0e0;
 }
-/*  */
+/* 药理学术语 */
 .pharmacological-con section {
 	background: none;
 	display: flex;
