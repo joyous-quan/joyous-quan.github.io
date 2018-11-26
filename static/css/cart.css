@@ -1,10 +1,8 @@
 .cart-title {
-	background: #fff;
-	height: 4.71rem;
-	line-height: 4.71rem;
+	height: 4.5rem;
+	line-height: 4.5rem;
 	border-bottom: .08rem solid #e0e0e0;
 	font-size: 1.33rem;
-	font-weight: normal;
 }
 .cart-con {
 	overflow-x: hidden;

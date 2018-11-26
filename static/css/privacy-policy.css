@@ -65,7 +65,8 @@
 .contact-us-con .flex{
 	justify-content: space-between;
 }
-.contact-us-con div {
+.contact-us-con a {
+	display: block;
 	height: 3rem;
 }
 .contact-us-con .img-box {
