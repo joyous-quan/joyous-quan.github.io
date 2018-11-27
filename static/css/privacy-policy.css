@@ -1,10 +1,11 @@
 /* 隐私政策 */
 .privacy-policy-txt {
-	min-height: 5rem;
+	min-height: 2rem;
 	line-height: 1.8rem;
 	text-align: justify;
 	margin: .56rem 0;
 	padding: 1.2rem 0.5rem 1.4rem;
+	color: #555;
 }
 .privacy-policy-con li {
 	-webkit-box-sizing: border-box;
