@@ -10,19 +10,25 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="/static/owlCarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="/static/owlCarousel/owl.theme.default.min.css">
+<!--     <link rel="stylesheet" href="/static/owlCarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="/static/owlCarousel/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="/static/iconfont/iconfont.css">
     <link rel="stylesheet" href="/static/css/common.css">
     <link rel="stylesheet" href="/static/css/index.css">
 
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="/static/mint-ui/style.css">
+    <!-- 引入组件库 -->
+    <script src="/static/js/tooljs/vue.js"></script>
+    <script src="/static/mint-ui/index.js"></script>
 
 </head>
-<body>   
+<body> 
 
     <!-- header -->
     <header id="header"></header>
+
+
     <!-- 主体 -->
     <section class="layout link">
         <a class="email" href="mailto:sales@csnpharm.cn">
@@ -38,12 +44,17 @@
             400-920-2911
         </a>
     </section>
-    <section class="banner">
-        <div class="banner-con border-box slider owl-carousel owl-theme">
+    <section id="app" class="layout banner">
+        <mt-swipe :show-indicators="false">
+            <mt-swipe-item><img src="/static/img/banner_1.png" alt=""></mt-swipe-item>
+            <mt-swipe-item><img src="/static/img/banner_2.png" alt=""></mt-swipe-item>
+            <mt-swipe-item><img src="/static/img/banner_3.png" alt=""></mt-swipe-item>
+        </mt-swipe>
+        <!-- <div class="banner-con border-box slider owl-carousel owl-theme">
             <div class="item"><img src="/static/img/banner_1.png" alt=""></div>
             <div class="item"><img src="/static/img/banner_2.png" alt=""></div>
             <div class="item"><img src="/static/img/banner_3.png" alt=""></div>
-        </div>
+        </div> -->
     </section>
     <section class="layout white-bg">
         <div class="btn-box">
@@ -86,17 +97,27 @@
         </div>
     </section>
   
+
+
     <!-- footer -->
     <footer id="footer"></footer>
 
 
-<script src="/static/js/tooljs/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/static/owlCarousel/owl.carousel.min.js"></script>
+<!-- <script src="/static/js/tooljs/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/static/owlCarousel/owl.carousel.min.js"></script> -->
 <script type="text/javascript" src="/static/js/tooljs/zepto.js"></script>
 <script type="text/javascript" src="/static/js/load-header-footer.js"></script>
 
 <script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/index.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  methods: {
+    
+  }
+}) 
 
+</script>
 </body>
 </html>
