@@ -1,0 +1,83 @@
+.cart-title {
+	height: 4.5rem;
+	line-height: 4.5rem;
+	border-bottom: .08rem solid #e0e0e0;
+	font-size: 1.33rem;
+}
+.cart-con {
+	overflow-x: hidden;
+}
+.cart-con .swiper-left {
+	margin: 0;
+}
+.products-name a{
+	font-size: 1.33rem
+}
+.cart-con table .price {
+	color: #eb6132;
+}
+.price b {
+	font-size: 1.45rem
+}
+.cart-con table .number {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.5rem;
+}
+.cart-con table .number input {
+	border: none;
+	background: #eee;
+	height: 1.5rem;
+	width: 2.5rem;
+	text-align: center;
+	font-size: 1.11rem;
+}
+.cart-con table .number span {
+	padding: 0 .5rem;
+	line-height: 1.5rem;
+	font-size: 1.2rem;
+}
+.number .minus {
+	transform: scaleX(1.2);
+}
+.settlement-con {
+	background: #fff;
+}
+.settlement-con ul {
+	height: 9.83rem;
+}
+.settlement-con ul li {
+	width: 50%;
+	float: left;
+	height: 4.56rem;
+	line-height: 4.56rem;
+	font-size: 1.22rem
+}
+.settlement-con ul li.total {
+	font-size: 1.33rem;
+}
+.settlement-con .btn {
+	margin-top: .56rem;
+}
+.cart-companion {
+	background: #fff;
+	margin: .56rem 0;
+	padding-bottom: 1rem;
+}
+.cart-companion li {
+	height: 4rem;
+	padding: .56rem 0;
+	line-height: 2rem;
+}
+.cart-companion li a{
+	display: block;
+	line-height: 4rem;
+}
+.cart-companion .border-B span {
+	color: #2180be;
+}
+
