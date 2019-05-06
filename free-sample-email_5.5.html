@@ -47,11 +47,14 @@
 	.paddingL {padding-left:2.2%;}
 	.footer img { position: relative;top:5px; }
 	.paddingT30 b { font-size:18px; }
-
+	@media only screen and (max-width:769px){
+		.paddingT30 b { font-size:17px; }
+		.footer span {min-width:20%;}
+	}
 	@media only screen and (max-width:540px){
 		body { font-size: 14px; }
 		.header { padding-top:15px; }
-		.header p { margin:0 0 5px; white-space:nowrap;transform: scaleX(.65);position: relative;left:-25px;}
+		.header p { margin:0 0 5px; white-space:nowrap;}
 		table td {word-break: break-all;padding:5px;font-size:13px;}
 		.footer span { min-width:48%; }
 		.paddingL {padding-left:0;}
@@ -61,14 +64,23 @@
 		.btn { width:200px;font-size: 16px;margin:10px 0 35px; }
 		.paddingT30 b { font-size:16px; }
 	}
+	@media only screen and (max-width:415px){
+		.header p { transform: scaleX(.67);position: relative;left:-25px;}
+	}
 	@media only screen and (max-width:376px){
-		.header p { transform: scaleX(.6);left:-35px;}
+		.header p { transform: scaleX(.62);left:-35px;}
+	}
+	@media only screen and (max-width:361px){
+		.header p { transform: scaleX(.6);left:-36px;}
 	}
 	@media only screen and (max-width:321px){
+		body { font-size: 12px; }
 		.header span { font-size:12px; }
+		.header p { transform: scaleX(.62);left: -31px; }
 		.btn img { width:22px; }
 		.btn { width:180px;font-size:14px;margin:8px 0 25px; }
 		.btn span { top:-3px; }
+		table td {font-size:11px;}
 		.footer span img{ width:20px; }
 		.footer span { max-width:45%;font-size:12px; }
 		.paddingT30 { padding-top:15px; }
