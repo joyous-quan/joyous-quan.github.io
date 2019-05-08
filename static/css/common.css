@@ -11,7 +11,7 @@ html{font-size: 10px}
 
 html,body,h1,h2,h3,h4,p,ul,ol,li,dl,dd,dt,label,span,b {margin:0;padding:0;}
 html,body { width:100%; min-width:320px; }
-body { max-width:1025px;background: #f3f3f3; font-family:"Microsoft YaHei",Arial; color:#000;}
+body {background: #f3f3f3; font-family:"Microsoft YaHei",Arial; color:#000;}
 img { border: none; }
 header,footer,nav,section,aside,article { display: block;}
 a {
