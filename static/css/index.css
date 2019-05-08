@@ -73,33 +73,4 @@
 }
 
 /* 查看更多 */
-.btn-blue span {
-	font-size: 1.7rem;
-}
-
-/* @media screen and (min-width:768px) {
-	.banner{
-		height: 17rem;
-	}
-}
-@media screen and (min-width: 900px){
-	.banner{
-		height: 18.4rem;
-	}
-}
-@media screen and (max-width: 376px) {
-	.banner{
-		height: 16.5rem;
-	}
-}
-@media screen and (max-width: 361px) {
-	.banner{
-		height: 15.8rem;
-	}
-}
-@media screen and (max-width: 321px) {
-	.banner{
-		height: 14.1rem;
-	}
-}
- */
+.btn-blue span { font-size: 1.7rem; }
