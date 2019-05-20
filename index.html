@@ -20,34 +20,38 @@
 	.positionA { position: absolute; }
 	.container { max-width:850px;margin:0 auto; }
 	.header {  position:relative;border-top:3px solid #005BAB;padding:15px 20px 8px 30px; }
-	.header .positionA { bottom:15px;right:10px; }
-	.header .positionA a{ color:#707070; }
-	.banner { background:#80D7F9;text-align:center;min-height:100px; }
-	.banner a { display:inline-block;font-size:34px;color:#005BAB;font-weight:600;letter-spacing:.5px;padding:35px 0 30px; }
+	.header .positionA { bottom:15px;right:10px; font-size:16px; }
+	.header .positionA a{ color:#707070;}
+	.banner { background:#80D7F9;text-align:center;min-height:60px; }
+	.banner a { display:inline-block;font-size:34px;color:#005BAB;font-weight:600;letter-spacing:.5px;padding:60px 0; }
 	.banner a strong { font-weight:900; }
-	.banner a span { font-size:20px;font-weight:200; }
 
-	.content { background:#e3f3fc; padding:0 30px;overflow:hidden; }
+	.content {overflow:hidden; }
 	.content .white-bg { padding:15px 20px;background:#fff;overflow:hidden;}
 	.content .white-bg p { font-size:16px;line-height:24px;text-align:justify; }
-	.content div.floatL { width:58%; overflow:hidden; }
-	.content div.floatR { width:38%; overflow:hidden; }
+	.content div.floatL { width:56%; overflow:hidden; }
+	.content div.floatR { width:40%; overflow:hidden; }
 	.content .con-title { display:inline-block;font-size:22px;color:#005BAB;font-weight:bold;height:40px; }
 	.content .con-title span { font-size:20px; }
-	.content table td { font-size:12px; }
+	.content table td { font-size:12px;padding-left:5px; }
 	.content table .blue-btn { font-size:14px;display:inline-block;border-radius:2px;margin-bottom:5px;background:#3e9be2;font-weight:600;color:#fff;padding:3px 8px 5px;}
 	.content table .more-a { color:#005BAB;font-weight:bold; }
-	.content table .border-td { font-size:14px;color:#005BAB;font-weight:bold;border-top:solid 2px #c5e3f3;padding-top:5px; }
+	.content table .border-td { font-size:14px;color:#005BAB;font-weight:bold;padding-top:5px; }
 	.content table .border-td  span { display:inline-block;padding:5px 0;font-weight:normal;color:#707070; }
 	.content table .gray-border { width:34%; }
 	.content table .gray-border a {display:block;border:1px solid #ddd; }
 	.content table .nowrap-td { padding-left:10px;white-space: nowrap;width:74px; }
-	.content div.floatR .txt-p { font-size:16px;color:#707070;line-height:24px; margin-bottom:20px;text-align:justify;}
+	.content table .tel-email-td {background:#80D7F9;padding:10px 14px;white-space:nowrap;font-size:20px;line-height:26px;color:#005BAB;}
+	.content table .tel-email-td a{ font-size:20px;color:#005BAB; }
+	.content table .padding-td {background:#1986D8;padding:16px 14px 12px;}
+	.content table .padding-td a {font-size:30px;color:#fff;}
+	.content div.floatR .txt-p { font-size:16px;color:#707070;line-height:24px; margin-bottom:20px;}
 	.content div.floatR .bulk-btn {display:inline-block;background:#ec4d58;padding:20px;font-size:30px;color:#fff; }
 
-	.nav-table {overflow:hidden;margin:15px 0;border-top:solid 2px #005BAB; }
-	.nav-table div.floatL,.nav-table div.floatR { width:44%; }
-	.nav-table p { overflow: hidden; }
+	.nav-table {overflow:hidden;margin:15px 0;padding:0 20px;}
+	.nav-table div.floatL { width:50%; }
+	.nav-table div.floatR { width:40%; }
+	.nav-table p { overflow: hidden;line-height: 40px; }
 	.nav-table p a { color:#005BAB;font-size:16px;white-space:nowrap;line-height:24px; }
 	.nav-table .nav-title {  padding-top:10px; }
 	.nav-table .nav-title a{ font-size:20px;font-weight: bold;}
@@ -57,28 +61,34 @@
 	.footer { padding:20px 0;background:#044A8E; }
 	.footer table td { color:#fff;line-height:20px; }
 	.footer-td { padding-top:5px; }
-
-
+	.paddingB15 { padding-bottom:15px; }
+	.floatR .floatR-title {display: inline-block;padding-bottom:5px; font-size:16px;font-weight:bold;color:#666;}
 @media only screen and (max-width:415px){
 	.header { padding:15px 15px 8px; }
-	.header .positionA { width:200px;text-align:right;bottom:10px; }
-    .banner a { font-size: 20px; }
+	.header .positionA { width:200px;text-align:right;bottom:10px;font-size:12px; }
+    .banner a { font-size: 19px;  padding:30px 0;}
 	.banner a span { font-size:14px;}
 
-	.content { padding:0 12px; }
 	.content .white-bg { padding:8px 12px;}
 	.content .white-bg p { font-size:14px;line-height:18px; }
 	.content .con-title { font-size:18px;height:30px;padding-top:10px; }
 	.content .con-title span { font-size:16px; }
-	.content div.floatR .txt-p { font-size:14px;line-height:18px; margin-bottom:10px;}
+	.content div.floatR .txt-p { font-size:14px;line-height:18px; margin-bottom:0;}
 	.content div.floatR .bulk-btn { padding:15px;font-size:20px; }
 	.content div.floatL,.content div.floatR { width:100%; }
 	.content table .gray-border { width:30%; }
 	.content table .nowrap-td { padding-left:6px;width:68px; }
+	.content table .tel-email-td {padding:8px 10px;font-size:18px;line-height:22px;}
+	.content table .tel-email-td a{ font-size:18px; }
+	.content table .padding-td {padding:12px 10px 10px;}
+	.content table .padding-td a {font-size:26px;}
 	.last-span_1 { display: inline-block;padding-bottom:14px; }
-	.nav-table p a { font-size:15px;line-height:22px; }
-	.nav-table .nav-title a{ font-size:18px;}
+	.nav-table p { line-height: 24px; }
+	.nav-table p a { font-size:14px;line-height:22px; }
+	.nav-table .nav-title a{ font-size:17px;}
+	.paddingB15 { padding-bottom:5px; }
 
+	.nav-table {padding:0 10px 10px;margin-top:0;}
 	.footer { padding:10px 0; }
 	.footer table td { font-size:12px;line-height:18px; }
 	.footer table td img { width:30px; }
@@ -86,11 +96,12 @@
 @media only screen and (max-width:321px){
 	body { font-size: 12px; }
 	.logo {max-width: 35%;}
-	.banner a { font-size: 16px; padding:25px 0 20px; }
+	.banner a { font-size: 16px; padding:25px 0; }
 	.banner a span { font-size:12px;}
 	.content table .blue-btn {font-size:12px;}
 	.footer table { transform: scale(.9); }
 	.last-span { display: inline-block;padding-bottom:14px; }
+	.nav-table p a { font-size:13px;line-height:20px; }
 }
 
 </style>
@@ -106,24 +117,20 @@
 	</div>
 	<div class="banner">
 		<a href="https://www.bldpharm.com/Heterocyclic-Building-Blocks.html" target="_blank">
-			BLDpharm New Product in May 2019 
+			BLDpharm New Products in May 2019 
 			<br><strong>Heterocyclic Building Blocks</strong>
-			<br><span>(268 New Products this month)</span>
 		</a>
 	</div>
 	<div class="content">
 		<div class="white-bg">
-			<p>Found in 2014, BLD Pharmatech Ltd. is a leading supplier and manufacturer of research chemicals to pharmaceutical companies, universities, biotech companies, healthcare industries, contract research organizations etc. Over 200+ new products updated per month in BLDpharm. Update and synchronize according to the new research finding.</p>
+			<p class="paddingB15">Found in 2014, BLD Pharmatech Ltd. is a leading supplier and manufacturer of research chemicals to pharmaceutical companies, universities, biotech companies, healthcare industries, contract research organizations etc. Over 1,000 novel chemicals are continuetely added into BLD's product list on a monthly basis. Our selected products are extremely apply to current frontier and spotlight research topics. BLDpharm presents you 268 new heterocyclic building blocks products this month.</p>
 			<div class="floatL">
-				<a class="con-title" href="https://www.bldpharm.com/NewProducts.html" target="_blank">New Products<span> >></span> </a>
+				<a class="con-title" href="https://www.bldpharm.com/NewProducts.html" target="_blank">New Products</a>
 				<table border="0" cellspacing="0" style="width:100%;">
 					<tbody>
 						<tr>
-							<td colspan="2">
-								<a href="https://www.bldpharm.com/Morpholines.html" target="_blank" class="blue-btn">&nbsp;Morpholines&nbsp;</a>
-							</td>
-							<td align="right">
-								<a href="https://www.bldpharm.com/Morpholines.html" target="_blank" class="more-a">MORE >> </a>
+							<td colspan="3">
+								<a href="https://www.bldpharm.com/Morpholines.html" target="_blank" class="blue-btn">&nbsp;Morpholines&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9658;</a>
 							</td>
 						</tr>
 						<tr>
@@ -133,38 +140,43 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="gray-border">
+							<td class="gray-border" rowspan="7">
 								<a href="https://www.bldpharm.com/products/145127-38-4.html" target="_blank"><img src="https://www.bldpharm.com/static/img/product/145127-38-4.png" border="none;"></a>
 							</td>
-							<td class="nowrap-td">
-								purity
-								<br>MDL NO
-								<br>Signal Word
-								<br>Formula
-								<br>M.W.
-								<br>B.P.
-								<br><span class="last-span">Storage</span>
-							</td>
-							<td>
-								98%
-								<br>MFCD07772812
-								<br>Warning
-								<br>C<sub>11</sub>H<sub>15</sub>NO<sub>2</sub>
-								<br>193.24
-								<br>379.6±42.0°C at 760 mmHg
-								<br>Sealed in dry, Room Temperature
-							</td>
+							<td width="70px;">Purity:</td>
+							<td>98%</td>
+						</tr>
+						<tr>
+							<td>MDL No.:</td>
+							<td>MFCD07772812</td>
+						</tr>
+						<tr>
+							<td style="white-space:nowrap;">Signal Word:</td>
+							<td>Warning</td>
+						</tr>
+						<tr>
+							<td>Formula:</td>
+							<td>C<sub>11</sub>H<sub>15</sub>NO<sub>2</sub></td>
+						</tr>
+						<tr>
+							<td>M.W.:</td>
+							<td>193.24</td>
+						</tr>
+						<tr>
+							<td>B.P.:</td>
+							<td>379.6±42.0°C at 760 mmHg</td>
+						</tr>
+						<tr>
+							<td>Storage:</td>
+							<td>Sealed in dry, Room Temperature</td>
 						</tr>
 					</tbody>
 				</table>
 				<table border="0" cellspacing="0" style="width:100%;margin-top:15px;">
 					<tbody>
 						<tr>
-							<td colspan="2">
-								<a href="https://www.bldpharm.com/Pyrazoles.html" target="_blank" class="blue-btn">&nbsp;Pyrazoles&nbsp;</a>
-							</td>
-							<td align="right">
-								<a href="https://www.bldpharm.com/Pyrazoles.html" target="_blank" class="more-a">MORE >> </a>
+							<td colspan="3">
+								<a href="https://www.bldpharm.com/Pyrazoles.html" target="_blank" class="blue-btn">&nbsp;Pyrazoles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9658;</a>
 							</td>
 						</tr>
 						<tr>
@@ -174,38 +186,43 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="gray-border">
+							<td class="gray-border" rowspan="7">
 								<a href="https://www.bldpharm.com/products/17827-61-1.html" target="_blank"><img src="https://www.bldpharm.com/static/img/product/17827-61-1.png" border="none;"></a>
 							</td>
-							<td class="nowrap-td">
-								purity
-								<br>MDL NO
-								<br>Signal Word
-								<br>Formula
-								<br>M.W.
-								<br>B.P.
-								<br>Storage
-							</td>
-							<td>
-								98%
-								<br>MFCD04967358
-								<br>Warning
-								<br>C<sub>6</sub>H<sub>8</sub>N<sub>2</sub>O<sub>2</sub>
-								<br>140.14
-								<br>221.6°C at 760 mmHg
-								<br>Sealed in dry,2-8°C
-							</td>
+							<td width="70px;">Purity:</td>
+							<td>98%</td>
+						</tr>
+						<tr>
+							<td>MDL No.:</td>
+							<td>MFCD04967358</td>
+						</tr>
+						<tr>
+							<td style="white-space:nowrap;">Signal Word:</td>
+							<td>Warning</td>
+						</tr>
+						<tr>
+							<td>Formula:</td>
+							<td>C<sub>6</sub>H<sub>8</sub>N<sub>2</sub>O<sub>2</sub></td>
+						</tr>
+						<tr>
+							<td>M.W.:</td>
+							<td>140.14</td>
+						</tr>
+						<tr>
+							<td>B.P.:</td>
+							<td>221.6°C at 760 mmHg</td>
+						</tr>
+						<tr>
+							<td>Storage:</td>
+							<td>Sealed in dry,2-8°C</td>
 						</tr>
 					</tbody>
 				</table>
 				<table border="0" cellspacing="0" style="width:100%;margin-top:15px;">
 					<tbody>
 						<tr>
-							<td colspan="2">
-								<a href="https://www.bldpharm.com/Imidazoles.html" target="_blank" class="blue-btn">&nbsp;Imidazoles&nbsp;</a>
-							</td>
-							<td align="right">
-								<a href="https://www.bldpharm.com/Imidazoles.html" target="_blank" class="more-a">MORE >> </a>
+							<td colspan="3">
+								<a href="https://www.bldpharm.com/Imidazoles.html" target="_blank" class="blue-btn">&nbsp;Imidazoles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9658;</a>
 							</td>
 						</tr>
 						<tr>
@@ -215,37 +232,91 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="gray-border">
+							<td class="gray-border" rowspan="7">
 								<a href="https://www.bldpharm.com/products/92507-97-6.html" target="_blank"><img src="https://www.bldpharm.com/static/img/product/92507-97-6.png" border="none;"></a>
 							</td>
-							<td class="nowrap-td">
-								purity
-								<br>MDL NO
-								<br>Signal Word
-								<br>Formula
-								<br>M.W.
-								<br>B.P.
-								<br><span class="last-span_1">Storage</span>
-							</td>
-							<td>
-								99+%
-								<br>MFCD03093290
-								<br>Warning
-								<br>C<sub>7</sub>H<sub>13</sub>ClN<sub>2</sub>
-								<br>160.65
-								<br>-
-								<br>Inert atmosphere, Room Temperature
-							</td>
+							<td width="70px;">Purity:</td>
+							<td>99+%</td>
+						</tr>
+						<tr>
+							<td>MDL No.:</td>
+							<td>MFCD03093290</td>
+						</tr>
+						<tr>
+							<td style="white-space:nowrap;">Signal Word:</td>
+							<td>Warning</td>
+						</tr>
+						<tr>
+							<td>Formula:</td>
+							<td>C<sub>7</sub>H<sub>13</sub>ClN<sub>2</sub></td>
+						</tr>
+						<tr>
+							<td>M.W.:</td>
+							<td>160.65</td>
+						</tr>
+						<tr>
+							<td>B.P.:</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Storage:</td>
+							<td>Inert atmosphere, Room Temperature</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<div class="floatR">
-				<a class="con-title" href="https://www.bldpharm.com/custom-synthesis.html" target="_blank">Custom Synthesis<span> >></span> </a>
-				<p class="txt-p">
-					BLDpharm designs services that covers all aspects of the pharmaceutical industry chain including: synthesis of pharmaceutically active compounds and reference compounds, synthetic routes, documents and data query services. BLDpharm has specialized in scale up process to answer the increasing demand of bulk chemicals. We can scale up your demand for any specific compound and design a personalized process with BLDpharm dedicated R&D team. Our chemists already developed 800+ products available now in bulk and kilo-scale quantity. BLDpharm is dedicated to developing more kilo scale products.
-				</p>
-				<a href="https://www.bldpharm.com/bulk-products.html" target="_blank" class="bulk-btn">Bulk <br> Products >></a>
+				<table class="txt-p" border="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<td style="font-family:Arial;font-size:14px;color:#707070;line-height:20px;">
+								<a href="https://www.bldpharm.com/about-us.html" target="_blank" class="floatR-title">Our Services</a>
+								<br>• Catalog Products
+								<br>• Custom Synthesis
+								<br>• Scale-up & Process Development
+								<br>• Quality Control System
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top: 10px;font-family:Arial;font-size:14px;color:#707070;line-height:20px;">
+								<a href="https://www.bldpharm.com/qa-qc.html" target="_blank" class="floatR-title">We ensure the quality of each batch through:</a>
+								<br>• Raw material testing
+								<br>• Intermediate compound quality testing
+								<br>• Product quality testing
+								<br>• Sample retention of each batch for at least half a year
+								<br>• Certificate of Analysis (CoA) is provided for each product
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top: 10px;padding-bottom:15px;font-family:Arial;font-size:14px;color:#707070;line-height:20px;">
+								<a href="https://www.bldpharm.com/qa-qc.html" target="_blank" class="floatR-title">Our quality control techniques include</a>
+								<br>• HNMR; CNMR
+								<br>• HPLC, TLC, GS
+								<br>• LC-MS
+								<br>• IR, UV
+								<br>• Polarimetry
+								<br>• Trace metal content analysis
+								<br>• Elemental analysis
+								<br>• Titration (acid titration, alkaline titration)
+								<br>• Amino acid analysis
+							</td>
+						</tr>
+						<tr>
+							<td class="tel-email-td">
+								<span>Phone: +86-21-61629022</span><br>
+								<a href="mailto:sales@bldpharm.com">Email: sales@bldpharm.com</a>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="padding-td">
+								<a href="https://www.bldpharm.com/bulk-products.html" target="_blank">Bulk Products >></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<div class="nav-table">
@@ -297,20 +368,20 @@
 				<tr>
 					<td>
 						<img src="https://www.bldpharm.com/static/img/email/foot-01.png" alt="" border="none;">
-						<br>OVERNIGHT DELIVERY 
+						<br>FAST DELIVERY 
 					</td>
 					<td>
 						<img src="https://www.bldpharm.com/static/img/email/foot-02.png" alt="" border="none;">
-						<br>FAST & SAFE DELIVERY WORLDWIDE
+						<br>QUALITY GUARANTEED
 					</td>
 					<td>
 						<img src="https://www.bldpharm.com/static/img/email/foot-03.png" alt="" border="none;">
-						<br>REWARDS PROGRAM
+						<br>COMPETITIVE PRICE
 					</td>
 				</tr>
 				<tr>
 					<td colspan="3" class="footer-td">
-						© Copyright 2013-2018 Bldpharm, Ltd. All Rights Reserved.
+						© Copyright 2013-2019 Bldpharm. All Rights Reserved.
 					</td>
 				</tr>
 			</tbody>
