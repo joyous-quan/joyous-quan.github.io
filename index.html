@@ -16,7 +16,7 @@ em { font-style:normal;display:inline-block;width:90px;white-space:nowrap;}
 textarea {outline:none;-webkit-appearance:none;border-radius:0;resize:none;padding:5px;}
 input[type="text"] { -webkit-appearance:none;border-radius:0;}
 input[type="radio"],input[type="checkbox"]{margin-right:3px; }
-.container { max-width: 800px;margin:0 auto;padding:15px 20px 30px 40px;background:#fff;}
+.container { max-width: 800px;margin:0 auto;padding:15px 20px 40px 40px;background:#fff;}
 p.width48 { padding-bottom:10px; }
 p.width48 input[type="text"],.width60 input[type="text"] { width:68%; }
 .width48 { display:inline-block;width:48%; }
@@ -35,7 +35,7 @@ h4 { padding-top:20px;font-size:16px; }
 	h2 { font-size: 18px;letter-spacing: 2px;}
 	h4 { padding-top:14px; }
 	h4 ,.parttwo p { font-size:15px;}
-	.container { padding:10px 15px 20px } 
+	.container { padding:10px 15px 40px } 
 	.partone div { padding-top:0; }
 	.partone div span,.parttwo div span { padding-right:8px;}
 	.partone div span { padding-top:10px;padding-left:8px;padding-right:0; }
@@ -43,10 +43,10 @@ h4 { padding-top:20px;font-size:16px; }
 	.width60 input[type="text"],p.width48 input[type="text"] { width:64%; }
 	.parttwo div { padding-left:10px; }
 	.parttwo div textarea { width:88%;}
-	.btn { margin-top:20px;padding:8px 45px;font-size:15px;}
+	.btn { margin-top:20px;font-size:15px;}
 	.inlineblock { width:100%;display: inline-block;padding-bottom:10px; }
-	.block_span { display: block!important; }
-	input[type="radio"],input[type="checkbox"]{margin-right:0px; }
+	.block_span { display: block!important;padding-top:3px; }
+	input[type="radio"],input[type="checkbox"]{margin-right:1px; }
 
 }
 @media only screen and (max-width:321px){ 
@@ -205,7 +205,7 @@ h4 { padding-top:20px;font-size:16px; }
 				<span><input type="checkbox" id="delivery"><label for="delivery">货期</label></span>
 				<span><input type="checkbox" id="saleService"><label for="saleService">售后服务</label></span>
 				<span><input type="checkbox" id="exchange"><label for="exchange">退换方便</label></span>
-				<span><input type="checkbox" id="other"><label for="other">其他</label><input type="text"></span>
+				<span class="block_span"><input type="checkbox" id="other"><label for="other">其他</label><input type="text"></span>
 			</div>
 			<p>3.3 您最常订购的国产试剂品牌</p>
 			<div>
@@ -213,10 +213,12 @@ h4 { padding-top:20px;font-size:16px; }
 				<span><input type="checkbox" id="sy"><label for="sy">韶远</label></span>
 				<span><input type="checkbox" id="ald"><label for="ald">阿拉丁</label></span>
 				<span><input type="checkbox" id="ly"><label for="ly">乐研</label></span>
-				<span><input type="checkbox" id="ynk"><label for="ynk">易诺凯</label></span>
-				<span><input type="checkbox" id="xes"><label for="xes">希恩斯</label></span>
-				<span><input type="checkbox" id="tt"><label for="tt">泰坦</label></span>
-				<span><input type="checkbox" id="lbjx"><label for="lbjx">览博精选</label></span>
+				<span class="block_span">
+					<span><input type="checkbox" id="ynk"><label for="ynk">易诺凯</label></span>
+					<span><input type="checkbox" id="xes"><label for="xes">希恩斯</label></span>
+					<span><input type="checkbox" id="tt"><label for="tt">泰坦</label></span>
+					<span><input type="checkbox" id="lbjx"><label for="lbjx">览博精选</label></span>
+				</span>
 			</div>
 			<p>3.4 您最喜欢这些品牌的原因：</p>
 			<div>
@@ -238,7 +240,7 @@ h4 { padding-top:20px;font-size:16px; }
 			</div>
 		</div>
 		<div class="parttwo">
-			<p>您的建议：<span style="font-size:14px;">（建议被采纳以后即可获得100元京东卡）</span> </p>
+			<p>您的建议: <span style="font-size:14px;">(建议被采纳以后即可获得100元京东卡)</span></p>
 			<div>
 				<textarea></textarea>
 			</div>
