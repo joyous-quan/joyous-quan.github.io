@@ -12,7 +12,7 @@
 *{ margin:0; padding:0; font-family: "Microsoft Yahei",Arial;font-size:14px;}
 body { background:#f5f5f5; }
 h2 {font-size:20px;text-align: center;padding:10px 0 20px;letter-spacing:5px;}
-b { font-weight:normal;display:inline-block;width:90px;white-space:nowrap;}
+.width90 { display:inline-block;width:90px;white-space:nowrap;}
 textarea {outline:none;-webkit-appearance:none;border-radius:0;resize:none;padding:5px;}
 input[type="text"] { -webkit-appearance:none;border-radius:0;}
 input[type="radio"],input[type="checkbox"]{margin-right:3px; }
@@ -66,14 +66,14 @@ h4 { padding-top:20px;font-size:16px; }
 	<div class="content">
 		<div class="partone">
 			<p class="width48 inlineblock">
-				<b>客户单位名称</b><input type="text">
+				<span class="width90">客户单位名称</span><input type="text">
 			</p>
 			<p class="width60">
-				<span class="width48 inlineblock"><b style="letter-spacing:3.6px;">联系人姓名</b><input type="text"></span>
-				<span class="width48 inlineblock"><b style="letter-spacing:9px;">联系电话</b><input type="text"></span>
+				<span class="width48 inlineblock"><span class="width90" style="letter-spacing:3.6px;">联系人姓名</span><input type="text"></span>
+				<span class="width48 inlineblock"><span class="width90" style="letter-spacing:9px;">联系电话</span><input type="text"></span>
 			</p>
 			<div>
-				<b>客户单位属性</b>
+				<span class="width90">客户单位属性</span>
 				<span class="inlineblock only-check">
 					<span><input type="radio" name="unitstate" id="unitstate1"><label for="unitstate1">外企</label></span>
 					<span><input type="radio" name="unitstate" id="unitstate2"><label for="unitstate2">私营企业</label></span>
