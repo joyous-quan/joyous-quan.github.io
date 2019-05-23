@@ -39,7 +39,9 @@
 	.partthree p { padding-top:10px; }
 	.partthree p span { display:inline-block;width:118px; }
 	.partthree p input { width:82%;height:32px; }
-	.btn { margin-top:25px;border:none;background:#015bab;padding:10px 60px;color:#fff;font-size:16px;font-weight:bold; }
+	.btn { margin-top:25px;border:none;background:#015bab;padding:10px 80px;color:#fff;font-size:16px;font-weight:bold; }
+
+	.ipt_tips { display:none;position:fixed;top:0;right:0;left:0;bottom:0;margin:auto;background:#fabe00;color:#fff;height:45px;width:160px;text-align:center;line-height:45px;font-size:18px; }
 
 	@media only screen and (max-width:769px){
 		.partthree p input { width:79%; }
@@ -63,7 +65,7 @@
 		.logo { width:150px;padding-top:17px;}
 		.header .floatR a,.header .floatR b { font-size: 12px;} 
 		h2 { font-size:20px; }
-		.btn { padding:6px 60px;font-size:15px; }
+		.btn { padding:6px 70px;font-size:15px; }
 
 	}
 </style>
@@ -518,16 +520,38 @@
 	<div class="partthree">
 		<h4>Comments and Suggestions</h4>
 		<textarea></textarea>
-		<p><span>Name and Title:</span><input type="text"></p>
-		<p><span>Company Name:</span><input type="text"></p>
-		<p><span>Phone No:</span><input type="text"></p>
-		<p><span>Fax No:</span><input type="text"></p>
-		<p><span>Email:</span><input type="text"></p>
-		<p><span>Date:</span><input type="text"></p>
+		<p><span>Name and Title:</span><input type="text" class="partthree_ipt"></p>
+		<p><span>Company Name:</span><input type="text" class="partthree_ipt"></p>
+		<p><span>Phone No.:</span><input type="text" class="partthree_ipt"></p>
+		<p><span>Fax No.:</span><input type="text" class="partthree_ipt"></p>
+		<p><span>Email:</span><input type="text" class="partthree_ipt"></p>
+		<p><span>Date:</span><input type="text" class="partthree_ipt"></p>
 	</div>
 	<div style="text-align:center;">
-		<button class="btn" type="submit">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+		<button class="btn" type="submit">Subimt</button>
+	</div>
+	<div class="ipt_tips">
+		Not empty
 	</div>
 </div>
+
+<script>
+	$(function(){
+		function inputblur(){
+			if($('.partthree_ipt').val() == ''){
+				$('.ipt_tips').show()
+			}else {
+				$('.ipt_tips').hide()
+			}
+
+		}
+		$('.btn').click(function(){
+			inputblur();
+		})
+		$('.ipt_tips').click(function(){
+			$(this).hide();
+		})
+	})
+</script>
 </body>
 </html>
