@@ -35,11 +35,10 @@
 	table thead td:first-child { padding-left:10px; }
 	table tbody td:first-child { padding-left:25px; }
 
-	.partthree {  }
-	textarea {width:96.8%;outline:none;-webkit-appearance:none;border-radius:0;resize:none;padding:5px;height:60px;}
+	textarea {width:96.8%;outline:none;-webkit-appearance:none;border-radius:0;resize:none;padding:5px;height:60px;border:1px solid #aaa;}
 	.partthree p { padding-top:10px; }
 	.partthree p span { display:inline-block;width:118px; }
-	.partthree p input { width:82%; }
+	.partthree p input { width:82%;height:32px; }
 	.btn { margin-top:25px;border:none;background:#015bab;padding:10px 60px;color:#fff;font-size:16px;font-weight:bold; }
 
 	@media only screen and (max-width:769px){
@@ -47,10 +46,10 @@
 	}
 	@media only screen and (max-width:415px){
 		.logo { width:200px;padding-top:8px; }
-		.container {padding:15px 10px;}
+		.container {padding:15px 10px 35px;}
 		.con-txt p span{ font-size:13px; }
 		table td { height:26px;font-size:13px; }
-		table thead td { font-size:12px; }
+		table thead td span{ display:inline-block;font-size:12px;padding:3px 0; }
 		table thead td:first-child { padding-left:6px; }
 		table tbody td:first-child { padding-left:15px; }
 		h2 { font-size:22px; }
@@ -120,7 +119,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>1. Price</td>
+					<td><span>1. Price</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -166,7 +165,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>2. Lead-time</td>
+					<td><span>2. Lead-time</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -212,7 +211,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>3. Quality of Products</td>
+					<td><span>3. Quality of Products</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -242,7 +241,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>4. Delivery</td>
+					<td><span>4. Delivery</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -288,7 +287,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>5. Shipping and Packing</td>
+					<td><span>5. Shipping and Packing</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -342,7 +341,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>6. Service Quality</td>
+					<td><span>6. Service Quality</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -396,7 +395,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>7. Payment Term</td>
+					<td><span>7. Payment Term</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -426,7 +425,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>8. Compared to other suppliers, what do you think of our products and services?</td>
+					<td><span>8. Compared to other suppliers, what do you think of our products and services?</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
@@ -496,7 +495,7 @@
 			</colgroup>
 			<thead>
 				<tr>
-					<td>9. Overall, how satisfied are you with our services?</td>
+					<td><span>9. Overall, how satisfied are you with our services?</span></td>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
