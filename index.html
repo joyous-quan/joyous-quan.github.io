@@ -7,165 +7,166 @@
 	<meta name="renderer" content="webkit"/>
 	<meta name="format-detection" content="telephone=no"/>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="shortcut icon" href="https://www.csnpharm.com/static/img/csnpharm.ico" type="image/x-icon">
-<style>
-	* { margin:0;padding:0;}
-	body { font-family: Arial;color:#575757;font-size:14px;line-height:24px;background: #eee;}
-	a { text-decoration:none;color:#575757; }
-	img { max-width:100%;border:none; }
-	ul,li { list-style: none;-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;box-sizing: border-box;}
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.ambeed.com/static/img/ambeed.ico">
+<style type="text/css">
+	ul,li{margin:0;padding:0;list-style:none;}
+	h1,h2,dl,dd,dt,p { margin:0;padding:0; }
+	body{ margin:0 ;padding:0;background:#eee;font-family:Arial;font-size:14px;color:#222;}
+	a { text-decoration:none;color:#222;}
+	img {max-width:100%;border:none;}
+	table { width:100%;border-collapse:collapse;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box; }
+	.container { max-width:850px;margin:0 auto;overflow:hidden;background:#fff;padding:20px 30px 15px;-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  }
+	.ul-nav li { float:left; padding:10px; }
+	.ul-nav li a { font-size:16px;font-weight:bold; }
+	h1 { position:relative;font-size:34px;color:#f38900;letter-spacing: 1px;vertical-align:bottom;margin:15px 0 10px; }
+	h1 span{ font-size:50px;}
+	.btn { position:absolute;right:0;bottom:8px;padding:12px 20px;border-radius:25px;color:#fff;font-size:16px;background-color: #F38900; }
+	h2 { font-size:24px;margin:15px 0 8px; }
+	.text-p { line-height:26px;color:#555;font-size:16px;margin-bottom:10px;text-align:justify;}
+	.floatBox { overflow:hidden; }
 	.floatL { float:left; }
 	.floatR { float:right; }
-	.clearBoth:after{display:block;height:0;content:" ";clear:both;visibility:hidden;}
-	.clearBoth { zoom:1; }
-	div.clearBoth { text-align:justify; }
-	.clearBoth div.floatL { width:55%; }
-	.clearBoth div.floatR { width:40%; }
-	.container { margin:0 auto; max-width:850px;min-width:320px;padding:1% 2% 2%;background: #fff;
-		-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-	.header { overflow:hidden;position: relative;padding-top:10px; }
-	.header p { margin-top:20px;max-width:70%;text-align:right;white-space:nowrap;}
-	.header a { color:#333; }
-	.header .positionA { position: absolute;right:0;bottom:3px;font-size:16px; }
-	.banner { padding-top:10px;text-align:center; }
-	.banner img { max-width:100%;width:100%; }
-	div.floatL p { margin-top:2px; }
-	h2 ,h2 a{ color:#187FC3;font-size:20px;margin-bottom:5px; }
-	h2 { margin:20px 0 5px; }
-	div.floatL b { padding-left:12px; }
-	.F16 { color:#187FC3;font-size:16px; }
-	.clearBoth li.floatL { width:33%;line-height:26px;white-space:nowrap; }
-	.clearBoth li.floatR { line-height:26px;}
-	.paddingR15 { padding-right:15px; }
-	.freeH2  { position: relative; }
-	.freeH2 img { position: absolute; bottom:-3px;left:125px;}
-	.footer { border-top:2px solid #ffb798;margin-top:30px;padding-top:5px; }
-	.footer a,.footer span{color:#ea6133;display:inline-block;width:25%;float:left;white-space:nowrap;}
-	.alignR { text-align:right; }
-	.colorRed {color:#ea6133;}
+	.con-img { overflow:hidden;margin-bottom:10px;}
+	.con-img dl { float:left;width:32%;}
+	.con-img dl:nth-child(2) {margin:0 2%;}
+	dd strong { font-size:14px;color:#222; }
+	dd p { margin-top:10px;font-size:12px;color:#707070; }
+	.website a { color:#f38900; }
+	.footer { border-top: 2px solid #f38900;font-size:16px;color:#707070;margin-top:20px;padding-top:10px; }
+	.footer span { display:inline-block;padding-right:38px;white-space:nowrap; }
+	.footer a { font-size:16px;color:#707070;white-space:nowrap; }
+
+@media only screen and (max-width:769px){
+	.container { padding:20px 20px 10px; }
+	.ul-nav li { padding:10px 5px; }
+	.footer span { padding-right:17px; }
+}
+@media only screen and (max-width:415px){
+	.logo {display:inline-block;max-width:42%}
+	.container { padding:15px 10px 10px; }
+	.ul-nav li { padding:4px 8px; }
+	.ul-nav li a { font-size:14px; }
+	h1 { font-size:20px;letter-spacing:0; }
+	h1 span { font-size:28px; }
+	.btn  { font-size:12px; padding:8px 12px; }
+	h2 { font-size:18px;margin-top:10px;margin-bottom:4px; }
+	.text-p { line-height:20px;font-size:14px;margin-bottom:8px;}
+	.con-img dl { width:100%;text-align:center;}
+	.con-img dl:nth-child(2) {margin:0 }
+	.marginB10 dd p{ margin-bottom:10px; }
 	
-	@media only screen and (max-width:415px){
-		body { line-height:20px; }
-		.header p { transform: scaleX(.67);position:relative;left:-25px;margin:10px 0 4px;}
-		.header .floatL { padding-top:10px; }
-		.header .positionA { font-size:14px; }
-		.banner { padding-top:5px;}
-		h2 ,h2 a{ font-size:18px;margin-bottom:3px; }
-		h2 { margin-top:12px; }
-		.clearBoth div.floatL,.clearBoth div.floatR { width:100%; }
-		.freeH2 img { width:32px; }
-		.clearBoth li.floatL { width:45%;line-height:24px; }
-		.clearBoth li.floatR { float:left;width:100%;padding:0; }
-		.paddingR15 p { width: 55%;float:right;white-space:nowrap;}
-		.F16 { font-size:15px; }
-		.footer { margin-top:20px; }
-		.footer .alignL{ text-align:left;}
-		.footer a,.footer span { width:50%;font-size:12px; }
-		.star { transform: scale(.9); }
-		
-	}
-	@media only screen and (max-width:376px){
-		.header { padding-top:0px; }
-		.header p { transform: scaleX(.62);left:-35px;}
-		.clearBoth li.floatL { width:40%; }
-		.paddingR15 p { width: 60%;}
-		h2 ,h2 a{ font-size:17px;margin-bottom:3px; }
-		.freeH2 img { width:30px;left:110px; }
-		
-	}
-	@media only screen and (max-width:361px){
-		body { font-size: 13px;line-height:18px; }
-		.header p { transform: scaleX(.6);left:-22px;}
-		.footer { margin-top:15px;border-width:1px; }
-	}
-	@media only screen and (max-width:321px){
-		body { font-size: 12px; }
-		.header .positionA { font-size:13px; }
-		.banner { padding-top:0; }
-		.header p { transform: scaleX(.62);left: -31px; }
-		h2 { margin-top:10px; }
-		h2 ,h2 a{ font-size:16px; }
-		.freeH2 img { width:28px;left:106px; }
-		.footer { margin-top:12px;}
-	}
+	.footer ,.footer a{ font-size:14px; }
+	.footer span { padding-bottom:5px; }
+	.footer .span-floatR { float:right; padding-right:0;}
+}
+@media only screen and (max-width:376px){
+	.ul-nav li { padding:3px 7px; }
+	.ul-nav li a { font-size:13px; }
+	h1 { font-size:19px; margin:15px 0 8px;}
+	h1 span { font-size:24px; }
+	.btn  { padding:7px 11px;bottom:5px; }
+}
+@media only screen and (max-width:361px){
+	h1 { font-size:18px; margin:12px 0 4px;}
+	h1 span { font-size:24px; }
+	.btn  { padding:5px 9px;bottom:6px; }
+}
+@media only screen and (max-width:321px){
+	.ul-nav li { padding:3px 4px; }
+	.ul-nav li a { font-size:12px; }
+	h1 { margin:10px 0 2px;letter-spacing: -0.5px;}
+	h1 span { font-size:22px; }
+	.btn  {transform: scaleX(0.85); right:-9px;}
+	h2 { font-size:17px;margin-top:8px;margin-bottom:2PX;}
+	.text-p { line-height:18px;font-size:13px; }
+	.footer ,.footer a{ font-size:12px; }
+}
+
 </style>
 </head>
-
 <body>
 <div class="container">
-	<div class="header">
-		<a style="width:30%;" class="floatL"  href="http://csnpharm.com/" target="_blank"><img src="http://csnpharm.com/static/img/emailHtml/CSN-emailHtml-logo.png"></a>
-		<p class="floatR">
-			<a target="_blank" href="https://www.csnpharm.com/pathways.html">Inhibitors&nbsp;·&nbsp;</a>
-			<a target="_blank" href="https://www.csnpharm.com/pathways.html">Agonists&nbsp;·&nbsp;</a>
-			<a target="_blank" href="https://www.csnpharm.com/natural-product.html">Natural products&nbsp;·&nbsp;</a>
-			<a target="_blank" href="https://www.csnpharm.com/screening-libraries.html">Screening Libraries</a>
-		</p>
-		<a href="http://csnpharm.com/" target="_blank" class="positionA">www.csnpharm.com</a>
-	</div>
-	<div class="banner">
-		<a href="https://csnpharm.com/NewProducts.html" target="_blank" style="text-decoration:none;"><img src="http://csnpharm.com/static/img/emailHtml/banner-New-products-Aug2019.png" alt="" border="none"></a>
-	</div>
-	<div class="clearBoth">
-		<div class="floatL">
-			<h2><a href="https://www.csnpharm.com/hdac.html" target="_blank">HDAC Inhibitor</a></h2>
-			<a href="https://www.csnpharm.com/panobinostat.html" target="_blank" class="F16">Panobinostat</a><b>[ 404950-80-7 ]</b>
-			<p>Panobinostat is a broad-spectrum <span class="colorRed">HDAC</span> inhibitor with <span class="colorRed">IC50</span> of 5 nM in a cell-free assay.</p>
-			
-			<h2><a href="https://www.csnpharm.com/cdk.html" target="_blank">CDK Inhibitor</a></h2>
-			<a href="https://www.csnpharm.com/roscovitine.html" target="_blank" class="F16">Roscovitine</a><b>[ 186692-46-6 ]</b>
-			<p>Roscovitine is a potent and selective <span class="colorRed">CDK</span> inhibitor for <span class="colorRed">Cdc2</span>, <span class="colorRed">CDK2</span> and <span class="colorRed">CDK5</span> with <span class="colorRed">IC50</span> of 0.65 μM, 0.7 μM and 0.16 μM and shows little effect on <span class="colorRed">CDK4/6</span>.</p>
-
-			<h2><a href="https://www.csnpharm.com/fak.html" target="_blank">FAK Inhibitor</a></h2>
-			<a href=" https://www.csnpharm.com/pf-562271-besylate.html" target="_blank" class="F16">PF-562271 Besylate </a><b>[ 939791-38-5 ]</b>
-			<p>PF-562271 besylate is a potent, ATP-competitive, reversible inhibitor of <span class="colorRed">FAK</span> with <span class="colorRed">IC50</span> of 1.5 nM, ~10-fold less potent for <span class="colorRed">Pyk2</span> than <span class="colorRed">FAK</span> and > 100-fold selectivity against other protein kinases, except for some <span class="colorRed">CDKs</span>.</p>
-
-			<h2><a href="https://www.csnpharm.com/akt.html" target="_blank">Akt Inhibitor</a></h2>
-			<a href=" https://www.csnpharm.com/perifosine.html" target="_blank" class="F16">Perifosine</a><b>[ 157716-52-4 ]</b>
-			<p>Perifosine is an <span class="colorRed">Akt</span> inhibitor with <span class="colorRed">IC50</span> of 4.7 μM, targets pleckstrin homology domain of <span class="colorRed">Akt</span>.</p>
-		</div>
-		<div class="floatR">
-			<h2><a href="https://www.csnpharm.com/" target="_blank">About CSNpharm</a></h2>
-			CSNpharm is committed to providing you with high quality products and outstanding services. We supply over 5,000 bioactive compounds including inhibitors, agonists, natural products, PROTACs and screening libraries for scientific use.
-
-			<h2>Why CSNpharm?</h2>
-			<span class="colorRed star">★&nbsp;</span>Over 5,000 bioactive compounds in stock.
-			<br><span class="colorRed star">★&nbsp;</span>Release 100+ new products per month.
-			<br><span class="colorRed star">★&nbsp;</span>High purity & competitive prices.
-			<br><span class="colorRed star">★&nbsp;</span>Professional tech support all day.
-			<br><span class="colorRed star">★&nbsp;</span>LC/MS, NMR and HPLC report provided.
-
-			<h2 class="freeH2"><a href="https://www.csnpharm.com/free-sample.html" target="_blank">Free Sample <img src="http://csnpharm.com/static/img/emailHtml/CSN-free-sample-about.png" alt="" border="none"></a></h2>
-			Customers can request free samples of our inhibitors.
-
-			<h2><a href="https://www.csnpharm.com/protacs-product.html" target="_blank">PROTAC Tools</a></h2>
-			<a href="https://www.csnpharm.com/protacs-product.html" target="_blank"><img src="http://csnpharm.com/static/img/emailHtml/New-products-Aug2019.png" alt="" border="none"></a>
-		</div>
-	</div>
-	<a href="https://www.csnpharm.com/NewProducts.html" target="_blank" style="text-decoration:none;"><h2 >Other New Products This Month</a></h2>
-	<ul class="clearBoth">
-		<li class="floatL">
-			<span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/epigenetics.html" target="_blank">Epigenetics(20)</a>
-			<br><span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/pi3k_akt_mtor.html" target="_blank">PI3K/Akt/mTOR(14)</a>
-			<br><span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/cell-cycle.html" target="_blank">Cell Cycle(13)</a>
+	<a href="https://www.ambeed.com/" target="_blank" class="logo"><img src="https://www.ambeed.com/static/img/logo.png" border="none" alt="logo"></a>
+	<ul class="floatBox ul-nav">
+		<li>
+			<a href="https://www.ambeed.com/chemistry.html" target="_blank">Chemicals</a>
 		</li>
-		<li class="floatL">
-			<span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/apoptosis.html" target="_blank">Apoptosis(9)</a>
-			<br><span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/tgf-beta-smad.html" target="_blank">TGF-beta/Smad(9)</a>
-			<br><span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/mapk_erk-pathway.html" target="_blank">MAPK/ERK Pathway(8)</a>
+		<li>
+			<a href="https://www.ambeed.com/pharmaceutical-intermediate.html" target="_blank">Pharmaceutical Intermediates</a>
 		</li>
-		<li class="floatR paddingR15">
-			<span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/cytoskeleton.html" target="_blank">Cytoskeleton(4)</a>
-			<p><span class="colorRed star">★&nbsp;</span><a href="https://www.csnpharm.com/protein-tyrosine-kinase_rtk.html" target="_blank">Protein Tyrosine Kinase/RTK(10)</a></p>
+		<li>
+			<a href="https://www.ambeed.com/inhibitors-agonists.html" target="_blank">Inhibitors/Agonists</a>
+		</li>
+		<li>
+			<a href="https://www.ambeed.com/material-science.html" target="_blank">Material Science</a>
+		</li>
+		<li>
+			<a href="https://www.ambeed.com/life-science.html" target="_blank">Life Science</a>
 		</li>
 	</ul>
-	<div class="footer clearBoth">
-		<a href="mailto:sales@csnpharm.com">E-mail: sales@csnpharm.com</a>
-		<span class="alignR">Phone: +1-708-781-1677</span> 
-	    <span class="alignR alignL">Fax: +1-708-286-6026</span>
-	    <a class="alignR" href="http://csnpharm.com/" target="_blank">Web: www.csnpharm.com</a>
+	<div>
+		<a href="https://www.ambeed.com/"  target="_blank"><img src="ACS-meeting-Aug2019.png" alt=""></a>
+		<h1>Ambeed at booth <span >#1338</span><a href="https://www.acs.org/content/acs/en/meetings/national-meeting/agenda.html" target="_blank" class="btn">Meeting Schedule</a></h1>
+		<p class="text-p">
+			We here invite you to attend ACS National Meeting & Expo and meet Ambeed at booth #1338.
+		</p>
+		<p class="text-p">
+			ACS National Meeting & Expo is going to be held between August 25 - 29, 2019 at the San Diego Convention Center in 111 West Harbor Drive, San Diego USA.
+		</p>
+		<p class="text-p">
+			The San Diego Convention Center is located downtown along majestic San Diego Bay with the vibrant Gaslamp Quarter and the San Diego Padres' PETCO Park at our doorstep.
+		</p>
+		<h2>About Ambeed</h2>
+		<p class="text-p">
+			We provide a robust catalog of products including building blocks, advanced intermediates, inhibitors, amino acids and peptides, catalysts and ligands, natural products, nucleotides etc. We provide customers with bulk manufacturing and can source most materials. 
+		</p>
 	</div>
+    <div class="con-img">
+    	<dl class="marginB10">
+    		<dt>
+    			<a href="https://www.ambeed.com/heterocyclic-building-blocks.html" target="_blank">
+					<img src="https://www.ambeed.com/static/img/email/HeterocyclicBuildingBlocks.png">
+				</a>
+    		</dt>
+    		<dd>
+    			<strong >Heterocyclic Building Blocks</strong>
+				<p>Browse Ambeed’s Heterocyclic Building Blocks to find products in Acridines, Azaindoles, Azepanes/Diazepanes, Azetidines, Baran...</p>
+    		</dd>
+    	</dl>
+    	<dl class="marginB10">
+    		<dt>
+    			<a href="https://www.ambeed.com/pharmaceutical-intermediate.html" target="_blank">
+					<img src="https://www.ambeed.com/static/img/email/PharmaceuticalIntermediateCenter.png">
+				</a>
+    		</dt>
+    		<dd>
+    			<strong>Pharmaceutical Intermediate Center</strong>
+				<p>Click to check our compounds which are key intermediates in pharmaceutical industries.</p>
+    		</dd>
+    	</dl>
+    	<dl>
+    		<dt>
+    			<a href="https://www.ambeed.com/organoboron.html" target="_blank">
+					<img src="https://www.ambeed.com/static/img/email/BoronicAcidsEsters.png">
+				</a>
+    		</dt>
+    		<dd>
+    			<strong>Boronic Acids & Esters</strong>
+				<p>Boronic acids and their esters are highly considered compounds for the design of new drugs, enter & view our recommended products.</p>
+    		</dd>
+    	</dl>
+    </div>
+	<p class="website">
+		<a href="https://www.ambeed.com/" target="_blank">view more at www.ambeed.com</a>
+	</p>
+	<div class="footer">
+		<span>Phone: 630-580-1088</span>
+		<span class="span-floatR">Fax: 630-581-0788</span>
+		<a href="mailto:sales@ambeed.com">E-mail: sales@ambeed.com </a>
+		<a style="float:right;" href="https://www.ambeed.com/" target="_blank">Web: www.ambeed.com</a>
+	</div>		
 </div>
 </body>
 </html>
