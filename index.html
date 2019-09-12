@@ -7,179 +7,236 @@
 	<meta name="renderer" content="webkit"/>
 	<meta name="format-detection" content="telephone=no"/>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="shortcut icon" href="https://www.csnpharm.com/static/img/csnpharm.ico" type="image/x-icon">
-<style>
-	* { margin:0;padding:0;}
-	body { font-family: Arial;color:#575757;font-size:14px;line-height:24px;background: #eee;}
-	a { text-decoration:none;color:#575757; }
-	img { max-width:100%;border:none; }
-	.F16 { font-size:16px; }
-	.paddingT15 { padding-top:15px; }
-	.paddingB15 { padding-bottom:15px; }
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.ambeed.com/static/img/ambeed.ico">
+<style type="text/css">
+	ul,li{margin:0 ;padding:0;list-style:none;}
+	body{ margin:0 ;padding:0;background:#eee;font-family:Arial;font-size:14px;color:#222;}
+	a { text-decoration:none;color:#222;}
+	img {max-width:100%;border:none;}
+	table { width:100%; border-collapse:collapse;-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;box-sizing: border-box; }
+	.container { max-width:850px;margin:0 auto;overflow:hidden;background:#fff;padding:20px 30px 10px;-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  }
+	.ul-nav li { float:left; padding:10px; }
+	.ul-nav li a { font-size:16px;font-weight:bold; }
+	h2 { color:#333333;font-size:24px;margin-bottom:8px; }
+	.text-p { line-height:24px;color:#555;font-size:16px;margin-top:0;text-align:justify; }
+	.floatBox { overflow:hidden; }
 	.floatL { float:left; }
 	.floatR { float:right; }
-	.clearBoth:after{display:block;height:0;content:" ";clear:both;visibility:hidden;}
-	.clearBoth { zoom:1; }
-	div.clearBoth { text-align:justify; }
-	.clearBoth div.floatL { width:50%; }
-	.clearBoth div.floatR { width:45%; }
-	.container { margin:0 auto; max-width:850px;min-width:320px;padding:1% 2% 2%;background: #fff;
-		-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-	.header { overflow:hidden;position: relative;padding-top:10px; }
-	.header .positionA { position:absolute;right:0;bottom:3px;font-size:18px;color:#187FC3; }
-	.banner { padding-top:10px;text-align:center; }
-	.banner img { max-width:100%;width:100%; }
-	.text-div p { margin-top:15px; }
-	.products-div { line-height: 22px; }
-	.products-div .F16 {display:inline-block;width:192px;margin-bottom:3px;color:#187FC3;text-decoration:underline;}
-	.products-div span { padding-right:20px; }
-	h2 ,h2 a{ color:#187FC3;font-size:24px;margin-bottom:5px; }
-	h2 { margin:20px 0 5px; }
-	h3 ,h3 a{ color:#187FC3;font-size:18px; }
-	h3 { margin:15px 0 4px; }
-	.menu-div  { margin-bottom:20px; }
-	.menu-div a{ color:#187FC3;font-size:16px;line-height:30px; }
-	.blue-bg {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding:10px;background:#B3E8FF;color:#187FC3;font-size:24px;text-align:center;font-weight:bold;white-space:nowrap;}
-	.blue-bg span { font-size:40px; }
-	.red-bg { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background:#FCEFEB;padding:10px 15px 20px;}
-	.red-bg a {font-size:24px;font-weight: bold;}
-	.red-bg a span{ position: relative;top:-5px;padding-right:10px; }
-	.red-bg a, .red-bg b{color:#ea6133;}
+	.width60 { width:60%; }
+	.bg-div { background: #FFF9DE;overflow:hidden;color:#444;font-size:12px;line-height:20px;margin-bottom:10px; }
+	.bg-div .floatL { width:35%; }
+	.bg-div .floatR { width:62%;line-height:24px;padding-top:10px;  }
+	.bg-div .floatR span { display:inline-block;min-width:160px; }
+	.product-name { padding-bottom:10px; }
+	.blue-dot {color:#2EA7E0;font-size:16px;font-weight:bold;}
+	.gray-dot {color:#999999;font-size:16px;font-weight:bold;}
+	.width36 { width:36%; }
+	.width36 p { color:#555;font-size:16px;line-height:30px;margin-top:0; }
+	.delivery-div {overflow: hidden;}
+	.delivery-div img,.delivery-div .floatL-div{float:left;padding-right:10px;}
+	.delivery-div .floatL-div {color:#555;font-size:18px;line-height:38px; }
+	.footer-nav li { float:left;min-width:25%;padding-right:15px; }
+	.footer-nav li a { color:#f29600;font-size:16px;font-weight:bold;line-height:32px;white-space:nowrap; }
+	.footer { border-top: 2px solid #f29600;font-size:16px;color:#707070;margin-top:20px;padding-top:10px; }
+	.footer span { display:inline-block;padding-right:38px;white-space:nowrap; }
+	.footer a { font-size:16px;color:#707070;white-space:nowrap; }
 
-	.footer { border-top:2px solid #187FC3;margin-top:30px;padding-top:5px; }
-	.alignR { text-align:right; }
-	.footer a,.footer span{color:#187FC3;display:inline-block;width:25%;float:left;white-space:nowrap;}
+@media only screen and (max-width:769px){
+	.container { padding:20px 20px 10px; }
+	.ul-nav li { padding:10px 5px; }
+	.footer span { padding-right:17px; }
+}
+@media only screen and (max-width:415px){
+	.logo {display:inline-block;max-width:42%}
+	.container { padding:15px 10px 10px; }
+	.ul-nav { padding-bottom:5px; }
+	.ul-nav li { padding:5px 15px 0 0; }
+	.ul-nav li a { font-size:12px; }
+	h2 { font-size:18px;margin-top:10px;margin-bottom:4px; }
+	.text-p { line-height:20px;font-size:14px;margin-bottom:8px; }
+	.floatBox .floatL, .floatBox .floatR { width:100%;}
+	.bg-div .floatL { width:33%; }
+	.bg-div .floatR { width:64%;line-height:20px;  }
+	.product-name { padding-bottom:6px; }
+	.delivery-div img{ width:24px;padding-right:6px;}
+	.delivery-div .floatL-div {font-size:14px;line-height:32px;}
+	.width36 p { font-size:14px;line-height:24px; }
+	.footer-nav li a { font-size:13px;line-height:24px; }
+	.footer-nav li:nth-child(even) { float:left;white-space:nowrap; }
+	.footer-nav li:nth-child(odd) { float:right;width:36%;}
+	.footer ,.footer a{ font-size:14px; }
+	.footer span { padding-bottom:5px; }
+	.footer .span-floatR { float:right; padding-right:0;}
+}
+@media only screen and (max-width:376px){
+	.ul-nav li a { font-size:13px; }
+	.width36 p { line-height:22px; }
+	.footer-nav li a { font-size:12px;line-height:20px; }
+	.bg-div .floatR span {min-width:130px; }
 
-	
-	@media only screen and (max-width:415px){
-		body { line-height:20px; }
-		.paddingT15 { padding-top:10px; }
-		.paddingB15 { padding-bottom:10px; }
-		.header .floatL { padding-top:10px; }
-		.header .positionA { font-size:14px; }
-		.banner { padding-top:5px;}
-		.products-div .F16 { width:180px;margin:0;}
-		h2 ,h2 a,.red-bg a{ font-size:18px;margin-bottom:3px; }
-		h2 { margin-top:12px; }
-		h3 ,h3 a{ font-size:16px;margin-bottom:1px; }
-		.clearBoth div.floatL,.clearBoth div.floatR { width:100%; }
-		.img-div{-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;padding:15px 60px 0; }
-		.blue-bg { font-size:18px; }
-		.blue-bg span { font-size:28px; }
-		.red-bg img { width:30px; }
-		.F16 { font-size:15px; }
-		.menu-div a { line-height:24px;font-size:15px; }
-		.footer { margin-top:20px; }
-		.footer .alignL{ text-align:left;}
-		.footer a,.footer span { width:50%;font-size:12px; }
-	}
-	@media only screen and (max-width:376px){
-		.header { padding-top:0px; }
-		h2 ,h2 a,.red-bg a{ font-size:17px;margin-bottom:3px; }
-		h3 ,h3 a{ font-size:15px;margin-bottom:1px; }
-		.products-div .F16 { width:160px; }
-		.blue-bg span { font-size:26px; }
-		.img-div{ padding:15px 50px 0; }
-	}
-	@media only screen and (max-width:361px){
-		body { font-size: 13px;line-height:18px; }
-		.paddingT15 { padding-top:5px; }
-		.paddingB15 { padding-bottom:5px; }
-		.footer { margin-top:15px;border-width:1px; }
-	}
-	@media only screen and (max-width:321px){
-		body { font-size: 12px; }
-		.paddingT15 { padding-top:0px; }
-		.paddingB15 { padding-bottom:0px; }
-		.header .positionA { font-size:13px; }
-		.banner { padding-top:0; }
-		h2 { margin-top:10px; }
-		h2 ,h2 a,.red-bg a{ font-size:16px; }
-		h3 ,h3 a{ font-size:14px;margin-bottom:1px; }
-		.products-div .F16 { width:140px; }
-		.blue-bg span { font-size:24px; }
-		.img-div{ padding:12px 30px 0; }
-		.footer { margin-top:12px;}
-	}
+}
+@media only screen and (max-width:321px){
+	.ul-nav li { padding:3px 8px 0 0; }
+	.ul-nav li a { font-size:12px; }
+	h2 { font-size:17px;margin-top:8px; }
+	.text-p { line-height:20px;font-size:12px;margin-bottom:6px; }
+	.width36 p { font-size:12px;line-height:20px; }
+	.delivery-div img{ width:20px;padding-right:4px;}
+	.delivery-div .floatL-div {font-size:13px;line-height:28px;}
+	.footer-nav li { transform: scale(.9); }.width36 p { font-size:14px;line-height:24px; }
+	.footer ,.footer a{ font-size:12px; }
+	.footer { border-top: 1px solid #f29600;}
+	.bg-div .floatR { padding:5px 0; line-height: 18px;}
+	.bg-div .floatR span {min-width:120px; }
+}
+
 </style>
 </head>
 <body>
 <div class="container">
-	<div class="header">
-		<a style="width:30%;" class="floatL"  href="http://csnpharm.com/" target="_blank"><img src="http://csnpharm.com/static/img/emailHtml/CSN-emailHtml-logo.png"></a>
-		<a href="http://csnpharm.com/" target="_blank" class="positionA">www.csnpharm.com</a>
-	</div>
-	<div class="banner">
-		<a href="http://ibro2019.org/" target="_blank"><img src="https://csnpharm.com/static/img/emailHtml/IBRO-Meeting-Sept2019.png" alt="" border="none"></a>
-	</div>
-	<div class="text-div">
-		<p>The IBRO World Congress is one of the most prestigious international meetings attended by over 3500 neuroscientists from around the world. It is a fascinating opportunity to share the latest information and knowledge in the diverse areas of the brain research and neuroscience.</p>
-		<p>CSNpharm participates IBRO as one of the sponsors, we supplies over 12,000 bioactive compounds including inibitors, agonists, PROTACs, natural products and screening libraries for laborartory and scientific use.</p>
-	</div>
-	<h2 class="paddingB15">Products in Neurological Disease &amp; Neuroscience Research</h2>
-	<div class="clearBoth">
-		<div class="floatL products-div">
-			<h3 style="margin-top:0;"><a href="https://www.csnpharm.com/secretase.html" target="_blank">Secretase Inhibitor</a></h3>
-			<a class="F16" href="https://www.csnpharm.com/products/semagacestat.html" target="_blank">Semagacestat</a>
-			<span>CSN16909</span>425386-60-3
-			<p>Semagacestat is an inhibitor of γ-secretase. It inhibits Aβ42, Aβ38, Aβ40 and the Notch signaling with IC50 of 10 nM, 12 nM, 12.1 nM and 14.1 nM.</p>
-
-			<h3><a href="https://www.csnpharm.com/dopamine-receptor.html" target="_blank">Dopaminergic Neurotoxin</a></h3>
-			<a class="F16" href="https://www.csnpharm.com/products/mptp-hydrochloride.html" target="_blank">MPTP HCl</a>
-			<span>CSN17271</span>23007-85-4
-			<p>MPTP HCl is a neurotoxin that causes symptoms similar to parkinson's disease by destroying dopamine-producing nerve cells in the substantia nigra. It is widely used in the study of various animal models of Parkinson's disease.</p>
-
-			<h3><a href="https://www.csnpharm.com/mt-receptor.html" target="_blank">MT Receptor Agonist</a></h3>
-			<a class="F16" href="https://www.csnpharm.com/products/melatonin.html" target="_blank">Melatonin</a>
-			<span>CSN11710</span>73-31-4
-			<p>Melatonin is a hormone which plays a role in natural sleep-wake cycle and also a ATF6 blocker.</p>
-
-			<h3><a href="https://www.csnpharm.com/5-ht-receptor.html" target="_blank">5-HT Receptor Agonist</a></h3>
-			<a class="F16" href="https://www.csnpharm.com/products/rizatriptan-benzoate.html" target="_blank">Rizatriptan Benzoate</a>
-			<span>CSN18707</span>145202-66-0
-			<p>Rizatriptan Benzoate is a triptan-class 5-HT1 receptor agonist, used to treat migraine headaches.</p>
-		</div>
-		<div class="floatR img-div">
-			<a href="https://www.csnpharm.com/" target="_blank">
-				<img src="https://csnpharm.com/static/img/emailHtml/IBRO-Meeting-Sept2019-2.png" alt="" border="none">
-			</a>
-			<div class="blue-bg">CSNpharm Booth: <span>#87</span></div>
-		</div>
-	</div>
-	<h2 class="paddingT15">Major Pathways in Neurological Disease &amp; Neuroscience Research</h2>
-	<div class="clearBoth menu-div">
-		<div class="floatL">
-			<a href="https://www.csnpharm.com/autophagy-pathway.html" target="_blank">Autophagy (45)</a><br>
-			<a href="https://www.csnpharm.com/dna-damage.html" target="_blank">DNA Damage (176)</a><br>
-			<a href="https://www.csnpharm.com/epigenetics.html" target="_blank">Epigenetics (426)</a><br>
-			<a href="https://www.csnpharm.com/immunology_inflammation.html" target="_blank">Immunology/Inflammation (473)</a><br>
-			<a href="https://www.csnpharm.com/nf-kb.html" target="_blank">NF-κB (78)</a><br>
-			<a href="https://www.csnpharm.com/protein-tyrosine-kinase_rtk.html" target="_blank">Protein Tyrosine Kinase/RTK (477)</a>
-		</div>
-		<div class="floatR">
-			<a href="https://www.csnpharm.com/cell-cycle.html" target="_blank">Cell Cycle (626)</a><br>
-			<a href="https://www.csnpharm.com/endocrinology_hormones.html" target="_blank">Endocrinology/Hormones (214)</a><br>
-			<a href="https://www.csnpharm.com/gpcr_g-protein-pathway.html" target="_blank">GPCR/G Protein (503)</a><br>
-			<a href="https://www.csnpharm.com/membrane-transporter_ion-channel.html" target="_blank">Membrane Transporter/Ion Channel (432)</a><br>
-			<a href="https://www.csnpharm.com/neuronal-signaling.html" target="_blank">Neuronal Signaling (1284)</a><br>
-			<a href="https://www.csnpharm.com/tgf-beta-smad.html" target="_blank">TGF-beta/Smad (86)</a>
-		</div>
-	</div>
-	<div class="red-bg">
-		<a href="https://www.csnpharm.com/free-sample.html" target="_blank"><span>About CSNpharm</span><img src="http://csnpharm.com/static/img/emailHtml/CSN-free-sample-about.png" alt="" border="none"></a>
-		<p>
-			CSNpharm is committed to providing you with high quality products and outstanding services. 
-			<br>Customers can request <b>samples</b> for <b>free</b> of our products.
+	<a href="https://www.ambeed.com/" target="_blank" class="logo"><img src="https://www.ambeed.com/static/img/logo.png" border="none" alt="logo"></a>
+	<ul class="floatBox ul-nav">
+		<li>
+			<a href="https://www.ambeed.com/chemistry.html" target="_blank">Chemicals</a>
+		</li>
+		<li>
+			<a href="https://www.ambeed.com/pharmaceutical-intermediate.html" target="_blank">Pharmaceutical Intermediates</a>
+		</li>
+		<li>
+			<a href="https://www.ambeed.com/inhibitors-agonists.html" target="_blank">Inhibitors/Agonists</a>
+		</li>
+		<li>
+			<a href="https://www.ambeed.com/material-science.html" target="_blank">Material Science</a>
+		</li>
+		<li>
+			<a href="https://www.ambeed.com/life-science.html" target="_blank">Life Science</a>
+		</li>
+	</ul>
+	<div>
+		<a href="https://www.ambeed.com/"  target="_blank"><img src="https://www.ambeed.com/static/img/email/banner-Sept2019.png" alt=""></a>
+		<h2>About Us</h2>
+		<p class="text-p">
+			We provide a robust catalog of products including building blocks, advanced intermediates, inhibitors, amino acids and peptides, catalysts and ligands, natural products, nucleotides etc. We provide customers with bulk manufacturing and can source most materials. 
 		</p>
 	</div>
-	<div class="footer clearBoth">
-		<a href="mailto:sales@csnpharm.com">E-mail: sales@csnpharm.com</a>
-		<span class="alignR">Phone: +1-708-781-1677</span> 
-	    <span class="alignR alignL">Fax: +1-708-286-6026</span>
-	    <a class="alignR" href="http://csnpharm.com/" target="_blank">Web: www.csnpharm.com</a>
+	<div class="floatBox">
+		<div class="floatL width60">
+			<h2>Recommended Products</h2>
+			<div class="bg-div">
+				<div class="floatL">
+					<a href="https://www.ambeed.com/products/60-19-5.html" target="_blank"><img src="https://www.ambeed.com/static/img/email/60-19-5.png" alt=""></a>
+				</div>
+				<div class="floatR">
+					<span class="product-name">4-(2-Aminoethyl)phenol hydrochloride</span>
+					<br><span>CAS No.: 60-19-5</span>Purity: 97%
+					<br>Catalog No.: A233197
+					<br>Formula : C8H12ClNO
+					<br>MDL No.: MFCD00012901
+				</div>
+			</div>
+			<div class="bg-div">
+				<div class="floatL">
+					<a href="https://www.ambeed.com/products/118-55-8.html" target="_blank"><img src="https://www.ambeed.com/static/img/email/118-55-8.png" alt=""></a>
+				</div>
+				<div class="floatR">
+					<span class="product-name">Phenyl Salicylate</span>
+					<br><span>CAS No.: 118-55-8</span>Purity: 98%
+					<br>Catalog No.: A426987
+					<br>Formula : C13H10O3
+					<br>MDL No.: MFCD00002213
+				</div>
+			</div>
+			<div class="bg-div">
+				<div class="floatL">
+					<a href="https://www.ambeed.com/products/6192-44-5.html" target="_blank"><img src="https://www.ambeed.com/static/img/email/6192-44-5.png" alt=""></a>
+				</div>
+				<div class="floatR">
+					<span class="product-name">2-Phenoxyethyl acetate</span>
+					<br><span>CAS No.: 6192-44-5</span>Purity: 98+%
+					<br>Catalog No.: A835879
+					<br>Formula : C10H12O3
+					<br>MDL No.: MFCD00059336
+				</div>
+			</div>
+			<div class="bg-div">
+				<div class="floatL">
+					<a href="https://www.ambeed.com/products/2603-10-3.html" target="_blank"><img src="https://www.ambeed.com/static/img/email/2603-10-3.png" alt=""></a>
+				</div>
+				<div class="floatR">
+					<span class="product-name">Methyl N-Phenylcarbamate</span>
+					<br><span>CAS No.: 2603-10-3</span>Purity: 98%
+					<br>Catalog No.: A194993
+					<br>Formula : C8H9NO2
+					<br>MDL No. : MFCD00027552
+				</div>
+			</div>
+		</div>
+		<div class="floatR width36 ">
+			<h2>Our Advantages</h2>
+			<div class="delivery-div">
+				<img src="https://www.ambeed.com/static/img/email/delivery.png" alt="">
+				<div class="floatL-div">
+					50,000+ INVENTORIES
+					<br>
+					COMPETITIVE PRICE
+					<br>
+					1-2 DAYS FAST DELIVERY
+				</div>
+			</div>
+			<h2>Available  Reactions</h2>
+			<p>
+				<span class="blue-dot">&bull; </span>Polyc ondensation, Halogenation
+				<br><span class="blue-dot">&bull; </span>Cyanation, Esterification
+				<br><span class="blue-dot">&bull; </span>Nitration, Diazotization
+				<br><span class="blue-dot">&bull; </span>Amination, Alkylation
+				<br><span class="blue-dot">&bull; </span>Oxidation, Grignard's reaction
+				<br><span class="blue-dot">&bull; </span>Oxidation, Suzuki Coupling reaction
+				<br><span class="blue-dot">&bull; </span>Lithiation, Friedel-Crafts reaction
+				<br><span class="blue-dot">&bull; </span>Hydrogenation (Pd / C, Pt)
+				<br><span class="blue-dot">&bull; </span>Reduction (NaBH4, Fe, etc.)	
+			</p>
+			<h2>Experimental Facilities</h2>
+			<p>
+				<span class="blue-dot">&bull; </span>Glass Reactor Vessel
+				<br><span class="blue-dot">&bull; </span>Autoclave
+				<br><span class="blue-dot">&bull; </span>Rotary Evaporator
+				<br><span class="blue-dot">&bull; </span>Rotary vane vacuum pump
+				<br><span class="blue-dot">&bull; </span>Kilo labs
+			</p>
+		</div>
 	</div>
+	<div>
+		<h2>Other New Products This Month</h2>
+		<ul class="footer-nav floatBox">
+			<li class="width36">
+				<span class="gray-dot">&bull;</span> <a href="https://www.ambeed.com/amines.html" target="_blank">Amines(41)</a>
+			</li>
+			<li>
+				<span class="gray-dot">&bull;</span> <a href="https://www.ambeed.com/amides.html" target="_blank">Amides(37)</a>
+			</li>
+			<li>
+				<span class="gray-dot">&bull;</span> <a href="https://www.ambeed.com/esters.html" target="_blank">Esters(22)</a>
+			</li>
+			<li class="width36">
+				<span class="gray-dot">&bull;</span> <a href="https://www.ambeed.com/fluorinated-building-blocks.html" target="_blank">Fluorinated Building Blocks(21)</a>
+			</li>
+			<li>
+				<span class="gray-dot">&bull;</span> <a href="https://www.ambeed.com/bromides.html" target="_blank">Bromides(20)</a>
+			</li>
+			<li>
+				<span class="gray-dot">&bull;</span> <a href="https://www.ambeed.com/chlorides.html" target="_blank">Chlorides(19)</a>
+			</li>
+		</ul>
+		<div class="footer">
+			<span>Phone: 630-580-1088</span>
+			<span class="span-floatR">Fax: 630-581-0788</span>
+			<a href="mailto:sales@ambeed.com">E-mail: sales@ambeed.com </a>
+			<a style="float:right;" href="https://www.ambeed.com/" target="_blank">Web: www.ambeed.com</a>
+		</div>
+	</div>		
 </div>
 </body>
 </html>
