@@ -22,7 +22,7 @@ input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}
 .floatL{float:left!important}
 
 /* head */
-.head{position:fixed;top:0;left:0;z-index:10;width:100%;height:90px;min-width:320px;background:#cbe0f9}
+.head{position:fixed;top:0;left:0;z-index:10;width:100%;height:90px;min-width:320px;background:#bae3f9}
 .head_left{float:left}
 .head_left img{padding-top:10px}
 .head_right{float:right;line-height:90px}
