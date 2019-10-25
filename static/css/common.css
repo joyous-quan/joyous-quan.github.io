@@ -28,7 +28,7 @@ input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}
 .head_right{float:right;line-height:90px}
 .head_right li{float:left;padding-left:30px}
 .head_right li a{display:inline-block;font-weight:700;font-size:16px;line-height:28px}
-.head_right li a:hover{border-bottom:2px solid #333}
+.head_right li a:hover{color:#e97800}
 .hide-menu{display:none}
 /*main*/
 .main{padding-top:20px}
