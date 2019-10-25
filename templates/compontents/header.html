@@ -1,0 +1,32 @@
+<div class="head">
+	<div class="layout clearfloat">
+		<div class="head_left">
+			<a class="logo" href="/"><img src="/static/img/logo.png" alt=""></a>
+		</div>
+		<div class="head_right">
+			<ul class="hide-menu">
+				<li><img src="/static/img/menu.png" alt=""></li>
+			</ul>
+			<ul class="show-menu">
+				<li class="about-us"><a href="/">ABOUT US</a></li>
+				<li class="product"><a href="/templates/page/product.html">PRODUCT</a></li>
+				<li class="partner"><a href="/templates/page/partners.html">PARTNERS</a></li>
+				<li class="news"><a href="/templates/page/news.html">NEWS</a></li>
+				<li class="company"><a href="/templates/page/contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+<script>
+$(function(){
+	//显示 隐藏
+    $('.hide-menu img').on('click',function(){
+    	//$(".show-menu").toggle()
+        if($(".show-menu").css("display")=='none'){
+            $(".show-menu").slideDown();
+        }else{
+            $(".show-menu").slideUp();
+        }
+    })
+})	  
+</script>
+</div>
