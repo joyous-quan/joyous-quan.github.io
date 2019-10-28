@@ -14,34 +14,48 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/common.css">
 	<link rel="stylesheet" type="text/css" href="/static/swiper/swiper.css">
 	<style type="text/css">
-		.about-us a{color:#e97800; }
+		.home {background:#0d6bb1}
+		.home a{color:#fff; }	
 		/* .banner */
-		.banner{margin:0 auto;max-height:500px;text-align:center;}
-		.swiper-slide{max-height:500px}
+		.banner{margin:0 auto;max-height:600px;text-align:center;}
+		.banner img { width:100%; }
+		.swiper-slide{max-height:600px}
 		.swiper-pagination-bullet { width:10px;height:10px; }
-		/* .swiper-button-next{right:5%}
-		.swiper-button-prev{left:5%}	 */
+		.swiper-button-next{right:5%}
+		.swiper-button-prev{left:5%}
+		.common-title{text-align: center;}
+		.more {font-weight:bold;color:#0d6bb1}
+		.width50 { float:left;width:50%; }
+		.lightblue-bg{background:#f4f5fa;padding:30px 0;}
+		.contact-box dl { width:33.33%;float:left;padding:2%;text-align:center; }
+		.height150 {height:150px;}
+		@media only screen and (max-width:770px){
+			.swiper-button-next,.swiper-button-prev{display:none;}
+			.width50 {padding:0 2%;}
+			.width50,.contact-box dl  { width:100%; }
+			.lightblue-bg{padding:20px 0;}
+			.height150 {height:50px;}
+		}
 </style>
 </head>
 <body>
 <div class="mybody">
 	<header id="header"></header>
-	<div class="layout">
-		<div class="banner swiper-container">
-			<ul class="swiper-wrapper">
-				<li class="swiper-slide"><img src="/static/img/img_7.jpg" alt=""></li>
-				<li class="swiper-slide"><img src="/static/img/img_8.jpg" alt=""></li>
-			</ul>
-        	<!-- Add Pagination -->
-        	<div class="swiper-pagination swiper-pagination-white"></div>
-			<!-- Add Arrows
-				        <div class="swiper-button-next swiper-button-white"></div>
-				        <div class="swiper-button-prev swiper-button-white"></div> -->
-		</div>
+	<div class="banner swiper-container">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide"><img src="/static/img/img_2.jpg" alt=""></li>
+			<li class="swiper-slide"><img src="/static/img/img_7.jpg" alt=""></li>
+			<li class="swiper-slide"><img src="/static/img/img_8.jpg" alt=""></li>
+		</ul>
+    	<!-- Add Pagination -->
+    	<div class="swiper-pagination swiper-pagination-white"></div>
+		<!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
 	</div>
 	<div class="main">
 		<div class="layout">
-			<h2 class="common-title">ABOUT US</h2>
+			<h2 class="common-title">About Us</h2>
 			<p class="common-text">
 				SunBy Pharma, Committed to supplying pharmaceutical intermediates, located in Hyderabad, the sixth biggest city and well-known manufacturer center in India.
 			</p>
@@ -54,7 +68,46 @@
 			<p class="common-text">
 				In future, SunBy Pharma will build large-scale products and services network channel, help customers to shorten products development cycle, reduce R&D and production cost, achieve win-win situation.
 			</p>
+			<p class="common-text">
+				<a href="/about.html" class="more">More >></a>
+			</p>
 			
+		</div>
+		<div class="lightblue-bg">
+			<div class="layout clearfloat">
+				<div class="width50">
+					<h2 class="common-title">Product</h2>
+					<p class="common-text">
+						Now company cooperates with BLD pharma, which is the biggest pharmaceutical intermediate supplier and manufacturer from China, to develop India pharmaceutical market, we do our best to meet the different needs of customers at different stages.
+					</p>
+					<p class="common-text">
+						<a href="/product.html" class="more">More >></a>
+					</p>
+				</div>
+				<div class="width50">
+					<div class="floatR">
+						<img src="/static/img/img_1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layout">
+			<div class="height150"></div>
+			<h2 class="common-title">Contact</h2>
+			<div class="clearfloat contact-box">
+				<dl>
+					<dt><img src="/static/img/tel.png" alt=""></dt>
+					<dd>Tel: xx-xxxx-xxxx</dd>
+				</dl>
+				<dl>
+					<dt><img src="/static/img/email.png" alt=""></dt>
+					<dd>Email: xxxxxxxxxxx</dd>
+				</dl>
+				<dl>
+					<dt><img src="/static/img/addr.png" alt=""></dt>
+					<dd>Address: xxxxx xxxxx xxx xxxx xxxx xxxx xx  xxx xxxx xxxxxxx</dd>
+				</dl> 
+			</div>
 		</div>
 	</div>
 
@@ -67,10 +120,10 @@
 $(function(){
 	//轮播
 	var swiper = new Swiper('.swiper-container', {
-		 pagination: '.swiper-pagination',
+		pagination: '.swiper-pagination',
         paginationClickable: '.swiper-pagination',
-	   /* nextButton: '.swiper-button-next',
-	    prevButton: '.swiper-button-prev',*/
+	    nextButton: '.swiper-button-next',
+	    prevButton: '.swiper-button-prev',
 	    spaceBetween: 30,
 	    autoplay : 5000,
 	    loop : true,
