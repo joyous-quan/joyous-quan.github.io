@@ -1,0 +1,16 @@
+/* products list 公共样式*/
+.products_title{border-top:2px solid #333}
+.products_title thead th{text-align:left;line-height:50px}
+.products_list table{margin-bottom:10px;border-top:2px solid #f1f1f1;border-bottom:2px solid #f1f1f1}
+.products_list td{padding:15px 0 0 30px}
+.products_img{padding:0!important;background:#f1f1f1}
+.products_img a{display:block;width:150px;height:150px}
+.products_name{display:inline-block;width:100%;min-height:40px}
+.products_name:hover{color:#1c79e1}
+
+
+/*new products*/
+.new_products_breadcrumb{background:url(/static/img/breadcrumb/NewProducts.png) no-repeat center}
+
+/*scale up commercial manufacture list*/
+.scale_up_commercial_manufacture_list_breadcrumb{background:url(/static/img/breadcrumb/ScaleUpCommercialManufactureList.png) no-repeat center}
