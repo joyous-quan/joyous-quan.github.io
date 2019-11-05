@@ -13,7 +13,7 @@
 .services_move_left{left:15%;border-bottom-color:#3490ff}
 .services_move_middle{left:49%;border-bottom-color:#1c79e1}
 .services_move_right{left:83%;border-bottom-color:#005bac}
-.services_box{position:relative;top:-30px}
+.services_box{position:relative;top:-2px}
 .services_change li{float:left;width:33.33%;height:285px;text-align:center}
 .services_change li a{color:#fff;font-size:30px}
 .services_change li p{height:180px}
