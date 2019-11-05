@@ -57,16 +57,28 @@ body{overflow-x:hidden;min-width:1300px}
 .search_btn{float:right;display:inline-block;width:50px;height:40px;background:url(/static/img/head/icon_search.png) no-repeat center}
 /* 登录 会员 收藏 购物车 按钮 */
 .icons{float:right;text-align:right}
-.icons a{display:inline-block;width:36px;height:36px}
+.icons a{position:relative;display:inline-block;width:36px;height:36px}
+.icons a span{position:absolute;bottom:-28px;display:none;padding:3px 8px;border-radius:2px;background:#fff;color:#015cac;text-align:center;white-space:nowrap;font-size:12px}
+.icons a span::before{position:absolute;top:-4px;width:8px;height:8px;background:#fff;content:'';transform:rotate(45deg)}
+.icons a:hover span{display:block}
 .account{margin-left:10px;background:url(/static/img/head/icon_account.png) no-repeat center}
 .account:hover{background:url(/static/img/head/icon_account_on.png) no-repeat center}
+.account span{left:-10px}
+.account span::before{left:24px}
 .login{margin-left:14px;background:url(/static/img/head/icon_login.png) no-repeat center}
 .login:hover{background:url(/static/img/head/icon_login_on.png) no-repeat center}
+.login span{left:-9px}
+.login span::before{left:22px}
 .favorites{margin-left:10px;background:url(/static/img/head/icon_favorites.png) no-repeat center}
 .favorites:hover{background:url(/static/img/head/icon_favorites_on.png) no-repeat center}
-.cart{margin-left:8px;position:relative;right:-3px;background:url(/static/img/head/icon_cart.png) no-repeat center}
+.favorites span{left:-14px}
+.favorites span::before{left:28px}
+.cart{right:-3px;margin-left:8px;background:url(/static/img/head/icon_cart.png) no-repeat center}
 .cart:hover{background:url(/static/img/head/icon_cart_on.png) no-repeat center}
-.cart_count{position:relative;top:-13px;display:inline-block;display:none;width:26px;height:26px;border-radius:26px;background:#ffef00;color:#1c79e1;text-align:center;font-weight:bold;font-size:14px;line-height:26px}
+.cart span{left:0}
+.cart span::before{left:16px}
+.cart_count{position:relative;top:-13px;display:inline-block;display:none;width:26px;height:26px;border-radius:26px;background:#ffef00;color:#1c79e1;text-align:center;font-weight:700;font-size:14px;line-height:26px}
+
 /* BLD 头部菜单 */
 .ISO2015,.logo{display:inline-block;padding-top:20px}
 .head_menu{position:absolute;top:90px;bottom:0;width:100%;height:90px}
