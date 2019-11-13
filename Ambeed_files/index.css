@@ -1,0 +1,102 @@
+.banner-box{position:relative;overflow:hidden;padding-bottom:10px;max-height:300px;background:#311448;background:url(https://www.ambeed.com/static/img/banner_bg.png) no-repeat center}
+.slide-banner{float:left;max-width:950px;max-height:290px}
+/* Ambeed index ---- Sign in */
+.home-sign{right:0;bottom:10px;z-index:2;overflow:hidden;padding:15px;width:250px;height:290px;background:#fff}
+.home-sign .f18{font-size:18px}
+.home-sign .ipt{margin:2px 0 5px;padding:0 8px;width:100%;height:34px;border:1px solid #ddd;border-radius:2px;font-size:13px}
+.home-sign .forgot{padding-bottom:3px;text-align:right}
+.forgot a{color:#f39800;font-size:12px}
+.forgot a:hover{text-decoration:underline}
+.checkbox input[type=checkbox]+label{background-color:#eee}
+.checkbox .f12{padding-left:25px;font-size:12px}
+.home-sign .btn{margin-top:5px;width:100%;height:36px;font-weight:700;line-height:36px}
+.home-sign .sign-btn{background:#f39800;color:#fff}
+.home-sign .account-btn{border:1px solid #fdd000;line-height:34px}
+.accout-tips{margin-bottom:8px;border-bottom:1px solid #ddd;text-align:center}
+.accout-tips span{position:relative;top:6px;display:inline-block;padding:0 8px;background:#fff}
+.logged-in{text-align:center}
+.logged-in h3{overflow:hidden;padding-top:15px;text-overflow:ellipsis;white-space:nowrap;font-size:18px}
+.logged-in p{margin:10px 0 18px;padding-bottom:8px;border-bottom:1px #ddd dashed;color:#888}
+.logged-icon a{float:left;display:block;margin-bottom:15px;width:50%;color:#888;text-align:center}
+.logged-icon a:hover{color:#f39800}
+.logged-icon a span{display:inline-block;width:100%}
+/* Ambeed index ---- We Can Provide */
+.what-title{margin-top:30px;padding:0 10px;min-height:40px;font-size:26px}
+.what-content{overflow:hidden}
+.what-content dl{float:left;padding:10px;width:25%}
+.what-content dd{color:#999;font-size:12px;line-height:16px}
+.what-content dd a{display:block;overflow:hidden;padding-top:5px;text-overflow:ellipsis;white-space:nowrap;font-weight:700;font-size:14px;line-height:20px}
+/* Ambeed index ---- WE ARE EXPERTS IN PROVIDING ADVANCED ORGANIC CHEMICALS TO HELP OUR CLIENTS ON SCIENTIFIC RESEARCH*/
+.experts-container{margin-top:30px;min-height:135px;background:#f2f2f2;text-align:center}
+.experts-title{padding-top:20px;font-weight:400;font-size:20px}
+.width950{overflow:hidden;margin:0 auto;max-width:950px}
+.experts-content dt img{max-width:42px}
+.experts-content dl{float:left;padding:10px 20px;width:33.3%}
+.experts-content dd{padding-top:5px;font-size:16px;line-height:20px}
+/* Ambeed index ---- Techology & Products */
+.techology{overflow:hidden;margin-top:30px;margin-bottom:25px;min-height:290px;border:1px solid #d6d6d6}
+.techology li{float:left;padding:10px 20px;}
+.techology h2{padding:15px 0;font-size:26px}
+.techology p{overflow:hidden;max-width:675px;text-overflow:ellipsis;white-space:nowrap;font-size:16px;line-height:28px}
+.techology a{display:block;color:#f39800;text-align:right}
+.techology li:last-child a{padding-bottom:10px;}
+/* Ambeed index ---- Recommended Products  ---- New Products */
+.title-h4{margin:10px 0;min-height:46px;border-bottom:1px solid #f39800}
+.title-h4 a{display:inline-block;padding:0 10px;height:36px;border-radius:4px;background:#f39800;color:#fff;font-size:16px;line-height:36px}
+.title-h4 a span{display:inline-block;margin-left:8px;padding-left:10px;height:36px;-webkit-box-shadow:5px 0 8px #e58c00 inset;-moz-box-shadow:5px 0 8px #e58c00 inset;box-shadow:5px 0 8px #e58c00 inset}
+.single-menu-detail-con dl{float:left;margin:0 .5% 1%;padding:6px;width:19%;min-height:350px;border:1px solid #ddd;border-radius:4px}
+.a_img_box,.sales-dl dt{display:block;background:#fff}
+.a_img_box{text-align:center}
+.menu-detail-txt{border-top:1px solid #ddd}
+.menu-detail-xin{padding-top:5px;height:25px}
+.menu-detail-xin{padding-top:5px;height:25px}
+.single-menu-detail-con .xin-click{float:right}
+.xin-click{cursor:pointer}
+.tips{display:inline-block;margin-right:6px;padding:2px 5px;border:1px solid #999;border-radius:4px;background:#fff;font-size:12px}
+.lab_New{border-color:#f39800;color:#f39800}
+.lab_Deals,.lab_Sales{border-color:#ff5226;color:#ff5226}
+.xin-tips{top:-42px;right:-68px;z-index:2;display:none;padding:8px 12px;border-radius:4px;background:#ffe100;-webkit-box-shadow:0 0 10px rgba(25,25,25,.6);-moz-box-shadow:0 0 10px rgba(25,25,25,.6);box-shadow:0 0 10px rgba(25,25,25,.6);color:#222;white-space:nowrap}
+.xin-b-shadow{top:-10px;right:4px;z-index:3;display:none}
+.xin-click:not(.isFavorites):hover .xin-b-shadow,.xin-click:not(.isFavorites):hover .xin-tips{display:block}
+.sales-text{display:flex;overflow:hidden;padding:5px 0;width:100%;text-align:center;white-space:nowrap;font-size:14px;justify-content:space-between}
+.sales-text span{padding-right:12px;font-size:12px}
+.product-name{overflow:hidden;margin-bottom:5px;height:24px;text-overflow:ellipsis;white-space:nowrap;line-height:24px}
+.menu-detail-txt h2{float:left;margin-top:4px;height:28px;font-size:18px;line-height:28px}
+.sales-dl .btn{right:10px;bottom:0;left:auto;width:60px;background:#f39800}
+
+/* ============================== Ambeed index mobile @media ================================ */
+
+@media only screen and (max-width:1025px){
+    .banner-box{padding:0;background:0 0}
+    .banner-box .layout{padding:0}
+    .what-content dl{padding:5px}
+    .what-content dd{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .techology{margin:20px 2% 0;width:96%}
+    .techology li{max-width:50%;padding:5px 10px;}
+    .single-menu-detail-con dl{width:24%}
+}
+@media only screen and (max-width:900px){
+    .what-content dl{width:33%}
+    .single-menu-detail-con dl{width:32%}
+    .what-title{margin-top:20px;min-height:30px;font-size:24px}
+    .techology h2{font-size:24px}
+}
+@media only screen and (max-width:765px){
+    .techology li{max-width:100%}
+    .techology li:first-child{text-align:center}
+    .techology p{font-size:14px;line-height:26px}
+    .techology h2,.what-title{font-size:22px}
+}
+@media only screen and (max-width:680px){
+    .what-content dl{width:50%}
+    .single-menu-detail-con dl{width:49%}
+}
+@media only screen and (max-width:450px){
+    .techology li,.what-content dl{width:100%}
+    .what-content dl{text-align:center}
+    .experts-title{font-size:16px}
+    .experts-content dt img{max-width:34px}
+    .experts-content dd{font-size:14px}
+    .single-menu-detail-con dl{width:99%}
+    .a_img_box img{max-width:250px}
+}

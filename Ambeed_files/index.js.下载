@@ -1,0 +1,105 @@
+$(function(){
+    //加载广告
+    $.ajax({
+        url: '/webapi/v1/adm/advertising?type=1',
+        type: 'GET',
+        async: true,
+        success: function (response) {
+            try{
+                $("#ad_img").attr("src", response.value.ad_url);
+                $("#ad_hyperlink").attr("href", response.value.ad_hyperlink);
+            }catch (e){}
+        }
+    });
+
+    _DoAjaxAsyncTrue('GET',{},'/webapi/v1/getSlideshow',function(res){
+        if(!isempty(res)){
+            $("#ul_banner_box").html(res);
+            //轮播图
+            var mySwiper = new Swiper('.menu_swiper',{
+                pagination: '.menu_swiper .dv_pages',
+                autoplay : 10000,
+                speed:1000,
+                paginationClickable:true,
+                loop : ($(".menu_swiper li").length>1)?true:false
+            });
+            //此方法为模拟的，hover到分页器的小圆点后自动触发其本身的click事件
+              $(".menu_swiper .dv_pages span").hover(function() {
+                  $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
+                  mySwiper.stopAutoplay();
+              },function(){
+                   mySwiper.startAutoplay();
+              });
+             $(".menu_swiper .swiper-slide").hover(function(){
+                    mySwiper.stopAutoplay();
+              },function(){
+                   mySwiper.startAutoplay();
+              });
+            $(".menu_swiper li a").click(function(){
+                var href=$(this).attr("to_href");
+                if(!isempty(href)){
+                    if(href=="/indexJsDraw.html"){
+                    aBox._urlbox('/indexJsDraw.html',null,745,373);
+                    }else{
+                        _aClickOpenWindow(href);
+                    }
+                }
+            });
+        }
+    });
+
+    //登录操作
+    $(".not-login .sign-btn").click(function(){
+        var user=$("#ipt_idx_username").val();
+        if(/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/.test(user)){
+            var pwd=$("#ipt_idx_password").val();
+            if(pwd.length>5&&pwd.length<19){
+                var isSave=$("#keep").is(":checked")?true:false;
+                _DoAjaxAsyncTrue('POST',{"email":user,"password":pwd,"isSave":isSave}, '/webapi/v1/user/login', function () {
+                    window.location.href="/";
+                });
+            }else{aBox._warn('Passwords must be at least 6 characters.');}
+        }else{aBox._warn('Enter a valid email address.');}
+    });
+
+	//关闭广告
+	$('.poster-del').click(function(){
+		$('.poster').css({
+			"display":"none"
+		}).animate(2000)
+	});
+
+    //structure-search
+    $('.structure-search').click(function(){
+        $('.mask').css({"display" : "block"})
+    });
+    
+    $('.del-mask').click(function(){
+        $('.mask').css({"display" : "none"})
+    });
+
+    $(".header-left .menu").remove();
+    //menu 二级菜单
+    $(".menu-item").hover(function(){
+        $(this).addClass('menu-item-active');
+        $(this).find('> a').css({"color": "#222222","text-decoration":"underline"});
+        $(this).find(".submenu").css({ "display" : "block" });
+        $("body").addClass("body_mask body_mask2") ;
+    },function(){
+        $(this).removeClass('menu-item-active');
+        $(this).find('> a').css({"color": "#555","text-decoration":"none"});
+        $(this).find(".submenu").css({ "display" : "none" });
+        $("body").removeClass("body_mask body_mask2") ;
+    });
+    //menu 三级菜单
+    $(".submenu-item").hover(function(){
+        $(this).find(".sub-menu-item").css({ "display" : "block" });
+        $(this).find(".left-shadow").css({ "display" : "block" });
+    },function(){
+        $(this).find(".sub-menu-item").css({ "display" : "none" });
+        $(this).find(".left-shadow").css({ "display" : "none" });
+    });
+
+    _loadAllPoriceByBDs();//加载整页价格信息,绑定查询库存方法
+    if($(".sales-con dl").length>0){$(".sales").show();}
+});
