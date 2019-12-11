@@ -1,0 +1,18 @@
+/*BLD一级菜单灰色色块 */
+.gray_bg{margin-bottom:20px;padding:20px 30px;background:#f5f5f5;line-height:36px}
+.gray_bg h3{font-size:18px}
+.gray_bg ul li{float:left;overflow:hidden;padding-right:20px;width:25%;text-overflow:ellipsis;white-space:nowrap}
+.gray_bg ul li span{padding-right:6px;font-weight:900}
+.gray_bg ul li:hover a,.gray_bg ul li:hover span{color:#1c79e1}
+
+/*BLD 二级菜单 */
+.white_bg{margin:0 -5px}
+.white_bg li{float:left;overflow:hidden;padding:5px;width:33.33%;text-overflow:ellipsis;white-space:nowrap}
+.white_bg li a{display:block;overflow:hidden;padding:0 10px 0 88px;height:60px;background:#f5f5f5 url(/static/img/menu_bg.png) no-repeat left center;text-overflow:ellipsis;white-space:nowrap;line-height:60px}
+.white_bg li a:hover{background-color:#fff;-webkit-box-shadow:1px 1px 8px rgba(30,144,255,.5);-moz-box-shadow:1px 1px 8px rgba(30,144,255,.5);box-shadow:1px 1px 8px rgba(30,144,255,.5);color:#1c79e1}
+
+/*chemistry 页面 */
+.chemistry_breadcrumb{background:url(/static/img/breadcrumb/Chemistry.png) no-repeat center}
+
+/*life science 页面 */
+.life_science_breadcrumb{background:url(/static/img/breadcrumb/LifeScience.png) no-repeat center}

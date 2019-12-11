@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BLDpharm - Scale Up Commercial Manufacture List</title>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="msapplication-tap-highlight" content="no"/> 
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/products.css">
+</head>
+<body>
+<div class="BLDbody">
+	<div id="header"></div>
+	<div class="breadcrumb scale_up_commercial_manufacture_list_breadcrumb">
+		<h2>Scale Up Commercial Manufacture List</h2>
+		<p><a href="/">Home</a><span class="oblique_line">/</span><a href="/templates/about/scale-up-commercial-manufacture.html">Scale Up Commercial Manufacture</a><span class="oblique_line">/</span>Scale Up Commercial Manufacture List</p>
+	</div>
+	<div class="layout">
+		<h2 class="content_title">Scale Up Commercial Manufacture List</h2>
+		<table class="products_title">
+			<colgroup>
+				<col width="13.7%">
+				<col >
+				<col width="12%">
+				<col width="14%">
+				<col width="7.8%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>Chemical Structure</th>
+					<th>Cat. No.</th>
+					<th>CAS. No.</th>
+					<th>Formula</th>
+					<th> M.W</th>
+				</tr>
+			</thead>
+		</table>
+		<div class="products_list">
+			<!-- <table>
+				<tbody>
+					<tr>
+						<td width="11.5%" class="products_img" rowspan="2"><a href=""><img src="/static/img/products/286961-14-6.png" alt=""></a></td>
+						<td width="52.5%">BD33046</td>
+						<td width="12%">286961-14-6</td>
+						<td width="14%">C16H28BNO4</td>
+						<td width="10%">205.98</td>
+					</tr>
+					<tr>
+						<td colspan="4">tert-Butyl 4-(4,4,5,5-tetramethyl-1,3,2-dioxaborolan-2-yl)-5,6-dihydropyridine-1(2H)-carboxylate</td>
+					</tr>	
+				</tbody>
+			</table> -->
+		</div>
+		<div class="page">
+			<a href="javascript:;" class="page_prev"></a>
+			Page&nbsp;<span class="page_number">1</span>&nbsp;of&nbsp;<span class="page_total">20</span>
+			<a href="javascript:;" class="page_next"></a>
+		</div>
+	</div>
+
+	<div id="footer"></div>
+</div>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script>
+$(function(){
+    $.ajax({
+        type: "GET",
+        url: "/static/data/products.json",
+        dataType: "json", 
+        success: function(res) {
+            //1.加载数据成功 进行字符串拼接
+            $(".products_list").html("");
+            $.each(res,function (idx,item) {
+                $(".products_list").append(
+                	'<table>'+
+						'<tbody><tr>'+
+						'<td width="11.5%" class="products_img" rowspan="2"><a href=""><img src="'+ item.img +'" alt=""></a></td>'+
+						'<td width="52.5%">'+item.Cat+'</td>'+
+						'<td width="12%">'+item.Cas+'</td>'+
+						'<td width="14%">'+item.Formula+'</td>'+
+						'<td width="10%">'+item.Mw+'</td>'+
+						'</tr><tr>'+
+						'<td colspan="4"><a href="" class="products_name">'+item.Name+'</a></td>'+
+						'</tr></tbody>'+
+					'</table>'
+                )     
+            })
+        },
+        error: function(){ alert("error") }        
+    });
+})
+</script>
+
+</body>
+</html>
