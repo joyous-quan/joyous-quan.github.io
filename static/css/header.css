@@ -194,6 +194,7 @@ body{position:relative;padding-bottom:400px;width:100%;min-width:320px;min-width
 }
 
 @media only screen and (max-width:610px){
+	body{padding-bottom:500px;}
 	.head-contact{display:none;}
 	.logo_box{ padding-top:14px;min-width:140px;}
 	.head_search {top: 52px;width:86%;}
@@ -206,7 +207,6 @@ body{position:relative;padding-bottom:400px;width:100%;min-width:320px;min-width
 	.footer-con ul{width:100%;}
 }
 @media only screen and (max-width:410px){
-	body{padding-bottom:500px;}
 	.logo_box{min-width:120px;}
 	.head_icon_box .head_favorites{display:none}
 	.head_cart{margin:0;}
