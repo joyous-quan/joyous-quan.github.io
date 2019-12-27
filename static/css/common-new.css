@@ -14,7 +14,7 @@
 .btn{display:inline-block;height:30px;min-width:60px;border-radius:2px;text-align:center;line-height:30px}
 .popups{position:absolute;top:0;right:0;left:0;bottom:0;margin:auto;background:#fff}
 .lab_New{border-color:#f39800;color:#f39800}
-.tips{display:inline-block;padding:2px 5px;margin-right:6px;border-radius:4px;font-size:12px;border:1px solid #999;background:#fff}
+.tips{display:inline-block;padding:2px 5px;margin-right:6px;border-radius:4px;font-size:12px;border:1px solid #eee;background:#fff}
 
 .single-menu-detail-con dl{float:left;margin:0 .5% 1%;padding:6px;width:19%;border:1px solid #ddd;border-radius:4px}
 .a_img_box,.sales-dl dt{display:block;background:#fff}
