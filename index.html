@@ -22,10 +22,16 @@
 
 	
 	<!-- <link rel="stylesheet" type="text/css" href="https://www.ambeed.comhttps://www.ambeed.com/static/css/common.css"> -->
+	<link rel="stylesheet" type="text/css" href="/static/swiper/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/common-new.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/header.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
 	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/swiper/swiper.min.js"></script>
+<style>
+.swiper-pagination-bullets{padding-right:20px;text-align:right;}
+.swiper-pagination-bullet-active{background:#fff}
+</style>
 </head>
 <body>
 <div class="Ambeed_body">
@@ -35,11 +41,17 @@
 <div class="clear"></div>
 <div class="banner-box">
 	<div class="layout">
-		<div class="inlne-block menu-box float-left"></div>
-		<div class="inlne-block banner float-left">
-			<div class="slide-banner swiper-container menu_swiper">
-			<img src="https://www.ambeed.com/static/img/banner/free-shipping.png">
+		<div class="menu-box float-left"></div>
+		<div class="banner slide-banner swiper-container">
+	        <div class="swiper-wrapper">
+				<img class="swiper-slide" src="https://www.ambeed.com/static/img/banner/deposit-client-promo.png" alt="">
+				<img class="swiper-slide" src="https://www.ambeed.com/static/img/banner/ambeed-december-only.png" alt="">
+				<img class="swiper-slide" src="https://www.ambeed.com/static/img/banner/banner1.png" alt="">
+				<img class="swiper-slide" src="https://www.ambeed.com/static/img/banner/Online-banner.png" alt="">
+	            <img class="swiper-slide" src="https://www.ambeed.com/static/img/banner/free-shipping.png" alt="">
 			</div>
+			<!-- Add Pagination -->
+        	<div class="swiper-pagination"></div>
 		</div>
 	</div>
 </div>
@@ -421,5 +433,14 @@
 	<div id="footer"></div>
 </div>
 	<script src="/static/js/common.js"></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        autoplay: 5000,
+        loop: true
+    });
+    </script>
 </body>
 </html>
