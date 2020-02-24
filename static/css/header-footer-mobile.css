@@ -19,7 +19,7 @@ body{min-width:320px;}
 .show_menu,.hide_menu{top:7px;}
 .show_submenu,.hide_submenu{top:0;}
 .hide_menu,.hide_submenu{display:none}
-.subnav-dl{position:relative;}
+.subnav-dl{position:relative;padding:10px 0;}
 .subnav-dl .title-a {display:block;}
 .subnav-dl dd{padding:0;}
 .subnav-dl dd a{padding-left:20px;}
