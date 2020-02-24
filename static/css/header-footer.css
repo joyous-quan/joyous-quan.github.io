@@ -1,0 +1,148 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{-webkit-text-size-adjust:none;-ms-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none}
+body,html{margin:0;padding:0;width:100%}
+body{color:#222;font-size:14px;font-family:Arial}
+dd,dl,dt,form,h1,h2,h3,h4,h5,h6,img,label,li,ol,p,ul{margin:0;padding:0}
+a{outline:none;color:#222;text-decoration:none}
+li,ul,ol{list-style:none}
+input,select,textarea{margin:0;padding:0;border-radius:0;color:#222;font-size:14px;font-family:Arial}
+input:focus,textarea:focus{outline:0}
+input::-ms-clear,input::-ms-reveal{display:none}
+input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}
+input::-webkit-input-placeholder{color:#bbb}
+input:-ms-input-placeholder{color:#bbb}
+input:-moz-placeholder{color:#bbb}
+input::-moz-placeholder{color:#bbb}
+textarea::-webkit-input-placeholder{color:#bbb}
+textarea:-ms-input-placeholder{color:#bbb}
+textarea:-moz-placeholder{color:#bbb}
+textarea::-moz-placeholder{color:#bbb}
+img{max-width:100%;max-height:100%;border:none}
+table{max-width:100%;border-collapse:collapse}
+footer,header{display:block}
+body{position:relative;padding-bottom:400px;width:100%;min-width:1200px;min-height:1000px;min-height:100vh}
+.footer{position:absolute;bottom:0;left:0;width:100%;min-height:200px}
+.layout,.width1200{margin:0 auto;max-width:1200px}
+.clear:after,.clearfloat:after{clear:both;display:block;visibility:hidden;height:0;content:" "}
+.clear,.clearfloat{zoom:1}
+.floatL,.float_L{float:left}
+.floatR,.float_R{float:right}
+.hidden{display:none!important}
+
+/*遮罩层*/
+.search_ipt_mask{position:fixed;left:0;z-index:5;display:none;width:100%;height:100%;background:#000;opacity:.6;filter:alpha(opacity=60)}
+.body_mask .search_ipt_mask{display:block}
+.header_shadow{border-bottom:1px solid #ddd;-webkit-box-shadow:0 0 5px #aaa;-moz-box-shadow:0 0 5px #aaa;box-shadow:0 0 5px #aaa;}
+/*header   start*/
+.header{padding-top:80px}
+.fixed_header{min-height:80px;}
+.fixed_header{z-index: 9;position:fixed;top:0;left:0;width:100%;background:#fff}
+#head{position: relative;z-index: 10}
+.header_top{padding-bottom:5px}
+.logo_box{float:left;padding-top:20px;max-width:20%}
+/*nav*/
+.header_right{float:right;width:76%;padding-top:10px}
+.head-nav{float:left;min-width:60%;white-space:nowrap}
+.head-nav a{display:inline-block;margin-right:3%;line-height:20px}
+.head-nav a:hover{text-decoration:underline}
+/*contact 电话邮箱*/
+.head-contact{float:right}
+.head-contact a{display:inline-block;padding-left:24px;min-height:20px;line-height:20px}
+.head_tel{padding-right:20px;background:url(https://www.ambeed.com/static/img/hd_tel.png) no-repeat left center}
+.head_email{background:url(https://www.ambeed.com/static/img/hd_email.png) no-repeat left center}
+/*search 搜索*/
+.head_search{position:relative;z-index:7;float:left;width:70%}
+.search_ipt_box{position:relative;width:80%}
+.head_search_ipt{padding:0 40px 0 12px;width:100%;height:36px;border:none;background:#fef2dd;vertical-align:middle;}
+.dv_keyword_list{position:absolute;display:none;width:80%}
+.dv_keyword_list dd{position:relative;margin:0;padding:0 15px;height:30px;background:#fff;line-height:30px}
+.dv_keyword_list dd a{display:inline-block;overflow:hidden;max-width:80%;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
+#searchResult_List label{float:right;display:inline-block;width:85px;height:30px;cursor:pointer}
+.dv_keyword_list dd span{float:right;color:#999;font-size:12px;cursor:pointer}
+.dd_search_history .sp_nav_delete,.dv_keyword_list dd:hover .sp_nav_record{display:none}
+.dv_keyword_list dd:hover{background:#eee}
+.dv_keyword_list dd:hover .sp_nav_delete{display:block}
+.head_search_img{position:absolute;top:0;right:0;width:36px;height:36px;background:#f39800 url(https://www.ambeed.com/static/img/search.png) no-repeat center}
+.head_structure_btn{position:absolute;bottom:0;right:-110px;border-bottom:1px solid #f39800;color:#f39800;white-space:nowrap}
+.head_searches_btn{width:100%;display:none;padding:0 10px;height:30px;border-top:1px solid #ddd;background:#fff}
+.head_searches_btn a{display:inline-block;margin:7px 0 0 10px;padding-right:10px;border-right:1px solid #aaa;color:#0272d0;font-size:12px;line-height:16px}
+.head_searches_btn a:hover{text-decoration:underline}
+.head_searches_btn .a_structure_search{border-right:none}
+/*登录收藏购物车*/
+.head_icon_box{float:right}
+.head_icon_box a,.head_icon_box span{float:left;display:inline-block;height:36px}
+.head_personal_info{padding-left:30px;background:url(https://www.ambeed.com/static/img/people.png) no-repeat left center}
+.head_login{width:110px;line-height:36px}
+.head_login a{overflow:hidden;padding-left:4px;width:68px;text-overflow:ellipsis;white-space:nowrap}
+.head_favorites{padding-left:30px;background:url(https://www.ambeed.com/static/img/xin.png) no-repeat left center}
+.head_cart{position:relative;margin-left:15px;padding-left:36px;background:url(https://www.ambeed.com/static/img/cart.png) no-repeat left center}
+.head_cart_count{position:absolute;top:0;right:0;width:22px;height:22px!important;border:1px solid #fff;border-radius:22px;background:#000;color:#fff;text-align:center;line-height:20px}
+/*menu 菜单*/
+.header_bottom{min-height:40px;background:#222;width:100%;}
+.nav-dl a{display:block}
+.subnav-dl dd a.title-a{color:#555}
+.subnav-dl{display:none;background:#fff;}
+.nav-title{padding:8px 0;color:#fff;white-space:nowrap;font-weight:700;line-height:24px}
+.subnav-dl dd{overflow:hidden;}
+.subnav-dl a{overflow:hidden;margin:5px 0;color:#999;text-overflow:ellipsis;white-space:nowrap;font-size:12px;line-height:18px}
+.nav-dl{position:relative;z-index:2;float:left;min-width:14%}
+.pharmaceutical-dl{width:23%}
+.inhibitors-dl{width:17%}
+.material-dl{width:17%}
+.life-dl{width:15%}
+.subnav-dl dd{float:left\9;width:25%\9;overflow:hidden;}
+.material-dl .subnav-dl dd{width:33%\9;}
+.subnav-dl a:hover{color:#f39800;text-decoration:underline}
+.nav-dl:hover .nav-title{height:40px;border-top:1px solid #222;color:#333;}
+.nav-dl:hover .nav-title span,.nav-dl:hover span{border:none}
+.first_span{position:absolute;height:24px;top:8px;border-left:1px #555 solid;}
+.nav-dl .nav-title span{display:block;border-right:1px #555 solid}
+.chemistry-dl .nav-title{padding-left:64px;background:url(https://www.ambeed.com/static/img/head-nav/nav-1.png) no-repeat 24px center}
+.chemistry-dl:hover .nav-title{background:#fff url(https://www.ambeed.com/static/img/head-nav/nav-01.png) no-repeat 24px center}
+.pharmaceutical-dl .nav-title{padding-left:52px;background:url(https://www.ambeed.com/static/img/head-nav/nav-2.png) no-repeat 26px center}
+.pharmaceutical-dl:hover .nav-title{background:#fff url(https://www.ambeed.com/static/img/head-nav/nav-02.png) no-repeat 26px center}
+.inhibitors-dl .nav-title{padding-left:56px;background:url(https://www.ambeed.com/static/img/head-nav/nav-3.png) no-repeat 15px center}
+.inhibitors-dl:hover .nav-title{background:#fff url(https://www.ambeed.com/static/img/head-nav/nav-03.png) no-repeat 15px center}
+.material-dl .nav-title{padding-left:60px;background:url(https://www.ambeed.com/static/img/head-nav/nav-4.png) no-repeat 20px center}
+.material-dl:hover .nav-title{background:#fff url(https://www.ambeed.com/static/img/head-nav/nav-04.png) no-repeat 20px center}
+.life-dl .nav-title{padding-left:76px;background:url(https://www.ambeed.com/static/img/head-nav/nav-5.png) no-repeat 18px center}
+.life-dl:hover .nav-title{background:#fff url(https://www.ambeed.com/static/img/head-nav/nav-05.png) no-repeat 18px center}
+.contact-dl .nav-title{padding-left:58px;background:url(https://www.ambeed.com/static/img/head-nav/contact-1.png) no-repeat 30px center}
+.contact-dl:hover .nav-title{background:#fff url(https://www.ambeed.com/static/img/head-nav/contact-01.png) no-repeat 30px center}
+.inhibitors-dl .subnav-dl,.life-dl .subnav-dl,.material-dl .subnav-dl{width:680px;column-count:3;column-gap:1em;-moz-column-count:3;-webkit-column-count:3;-moz-column-gap:1em;-webkit-column-gap:1em}
+.life-dl .subnav-dl,.material-dl .subnav-dl{right:0}
+.subnav-dl dd{text-overflow:ellipsis;white-space:nowrap;break-inside:avoid;-moz-page-break-inside:avoid;-webkit-column-break-inside:avoid}
+.subnav-dl{position:absolute;overflow-y:hidden;padding:10px;width:910px;-webkit-box-shadow:0 5px 8px rgba(36,50,56,.4);-moz-box-shadow:0 5px 8px rgba(36,50,56,.4);box-shadow:0 5px 8px rgba(36,50,56,.4);column-count:4;column-gap:1em;-moz-column-count:4;-webkit-column-count:4;-moz-column-gap:1em;-webkit-column-gap:1em}
+.mobile_show,.show_menu,.hide_menu,.show_submenu,.hide_submenu{display:none;}
+
+/* fixed-sidebar */
+.fixed-sidebar{display:none;position:fixed;right:0;bottom:10%;z-index:5;width:36px;background:#888}
+.fixed-sidebar li{position:relative;height:36px}
+.fixed-sidebar li a{position:absolute;top:0;right:0;height:36px;min-width:36px;color:#fff;white-space:nowrap}
+.fixed-sidebar .underline{position:absolute;right:3px;bottom:2px;width:30px;height:1px;background:#acacac}
+.fixed-a:hover .fixed-txt{right:36px;left:auto}
+.fixed-a:hover .left{background:#333}
+.fixed-sidebar .fixed-txt{position:absolute;left:36px;display:table-cell;padding:0 10px;height:36px;background:#333;font-weight:700;line-height:36px}
+.fixed-sidebar .left{display:inline-block;width:36px;height:36px;text-align:center;line-height:36px}
+.fixed-sidebar img{padding-top:3px;width:24px}
+.sidebar_account img{padding-top:5px}
+.sidebar_count{position:absolute;top:1px;right:1px;display:inline-block;width:20px;height:20px;border-radius:20px;background:#333;color:#fff;border:1px solid #888;text-align:center;font-size:12px;line-height:20px}
+.header_cart{font-style:normal;visibility: hidden;}
+.sidebar_top{width:36px;height:36px;background:url(https://www.ambeed.com/static/img/com_top.png) no-repeat top center}
+.sidebar_top:hover{background-color:#333}
+
+
+/*footer */
+.footer{background:#f5f5f5;padding:40px 0 10px;border-top:1px solid #ccc;}
+.foot_nav{overflow:hidden;}
+.footer-con ul{float:left;line-height:30px;}
+.footer-con a{color: #666;}
+.footer-con a:hover{text-decoration: underline;}
+.footer-con  b a{cursor: default;}
+.footer-con  b a:hover{text-decoration:none;}
+.footer-con .foot_left{min-width:30%;}
+.footer-con .foot_right{float:right;min-width:20%;}
+.foot_partner{padding:20px 0 6px;margin-top:20px;border-top:2px solid #ccc;}
+.foot_copy{color:#666;}
+
+

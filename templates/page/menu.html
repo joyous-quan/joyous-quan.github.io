@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="">
+<style>
+*{margin:0;padding:0;-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+body{font-size:14px;}
+li{list-style:none;}
+a{text-decoration:none;color:#fff;}
+.layout{max-width:1200px;margin:0 auto;}
+.header_bottom{min-height:40px;background:#222;width:100%;}
+.root_li ul{display:none;}
+.root_li a {display: block;}
+@media only screen and (min-width:1025px){
+    .layout{width:1200px;}
+    body{min-width:1200px;}
+    .header{padding-top:80px}
+    .fixed_header{min-height:80px;}
+    .fixed_header{z-index: 9;position:fixed;top:0;left:0;width:100%;background:#fff}
+    /*menu 菜单*/
+    .mobile_show{display:none}
+    .fixed_menu{width:1032;float:left;}
+    .contact_us_menu{width:168px;border-right:1px #555 dashed;float:right;}
+    .root_li{position:relative;float:left;line-height:40px;height:40px;border-left:1px #555 dashed;}
+    .root_li a {display: block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .root_li>a,.contact_us_menu a{font-weight:bold;color:#ddd;}
+    .root_li>ul{width:910px;-webkit-box-shadow:0 5px 8px rgba(36,50,56,.4);-moz-box-shadow:0 5px 8px rgba(36,50,56,.4);box-shadow:0 5px 8px rgba(36,50,56,.4);left:0;line-height:24px;padding:10px;font-size:12px;}
+    .Chemistry>ul,.PharmaceuticalIntermediate>ul{column-count:4;column-gap:1em;-moz-column-count:4;-webkit-column-count:4;-moz-column-gap:1em;-webkit-column-gap:1em}
+    .InhibitorsAgonists>ul,.MaterialScience>ul,.LifeScience>ul{width:680px;column-count:3;column-gap:1em;-moz-column-count:3;-webkit-column-count:3;-moz-column-gap:1em;-webkit-column-gap:1em}
+    .parent_li{break-inside:avoid;-moz-page-break-inside:avoid;-webkit-column-break-inside:avoid}
+    .MaterialScience>ul,.LifeScience>ul{left:auto;right:0;}
+    .root_li>ul a{color:#333;}
+    .root_li:hover>a,.contact_us_menu:hover a{color:#333;}
+    .root_li:hover,.contact_us_menu:hover{border-color:#fff;background:#fff}
+    .root_li i{display:none}
+    .parent_li>a{font-weight: bold}
+    .parent_li ul a{color:#888;}
+    .Chemistry>a{width:167px;padding-left:64px;background:url(https://www.ambeed.com/static/img/head-nav/nav-1.png) no-repeat 24px center}
+    .Chemistry:hover>a{background:url(https://www.ambeed.com/static/img/head-nav/nav-01.png) no-repeat 24px center}
+    .PharmaceuticalIntermediate>a{width:275px;padding-left:52px;background:url(https://www.ambeed.com/static/img/head-nav/nav-2.png) no-repeat 26px center}
+    .PharmaceuticalIntermediate:hover>a{background:url(https://www.ambeed.com/static/img/head-nav/nav-02.png) no-repeat 26px center}
+    .InhibitorsAgonists>a{width:203px;padding-left:56px;background:url(https://www.ambeed.com/static/img/head-nav/nav-3.png) no-repeat 15px center}
+    .InhibitorsAgonists:hover>a{background:url(https://www.ambeed.com/static/img/head-nav/nav-03.png) no-repeat 15px center}
+    .MaterialScience>a{width:203px;padding-left:60px;background:url(https://www.ambeed.com/static/img/head-nav/nav-4.png) no-repeat 20px center}
+    .MaterialScience:hover>a{background:url(https://www.ambeed.com/static/img/head-nav/nav-04.png) no-repeat 20px center}
+    .LifeScience>a{width:179px;padding-left:75px;background:url(https://www.ambeed.com/static/img/head-nav/nav-5.png) no-repeat 18px center}
+    .LifeScience:hover>a{background:url(https://www.ambeed.com/static/img/head-nav/nav-05.png) no-repeat 18px center}
+    .contact_us_menu>a {width:166px;height:40px;line-height:40px;padding-left:58px;background:url(https://www.ambeed.com/static/img/head-nav/contact-1.png) no-repeat 30px center;}
+    .contact_us_menu>a:hover{background:url(https://www.ambeed.com/static/img/head-nav/contact-01.png) no-repeat 30px center}
+    
+    .root_li:hover>ul{
+        position: absolute;
+        display: block;
+    }
+}
+@media only screen and (max-width:1200px){
+    .layout{padding:0 2%}
+}
+@media only screen and (max-width:1025px){
+    .fixed_menu_mask{/* display:none; */position:fixed;top:0;left:0;z-index:9;background: #222;opacity:.6;width:100%;height:100%;}
+    .fixed_menu{position:fixed;top:0;/* right:-85%; */z-index:10;width:85%;height:100%;padding:20px;background: #fff;overflow-y: auto;-webkit-transition:all ease .3s;-moz-transition:all ease .3s;-o-transition:all ease .3s;transition:all ease .3s}
+    .root_li{border-bottom:1px solid #eee;}
+    .parent_ul{border-top:1px solid #eee;}
+    .fixed_menu li{position:relative;}
+    .fixed_menu li a{height:36px;line-height:35px;padding-right:35px;}
+    .fixed_menu li i{position: absolute;right:0;top:0;width:35px;height:35px;line-height:35px;font-style: normal;font-weight:600;color:#f39800;font-size:16px;text-align:center;}
+    .root_li>a{font-weight:600}
+    .parent_ul li a{padding-left:20px;}
+    .son_ul li a{padding-left:40px;color:#888;}
+    .hide_menu {display:none;}
+    .fixed_menu a {color:#333;}
+}
+</style>
+</head>
+<body>
+<div class="header_bottom">
+        <div class="layout header_menu">
+            <div class="mobile_show">
+                <img class="mobile_menu_show" src="/static/img/mobile_menu.png" alt="">
+            </div>
+            <div class="fixed_menu_mask"></div>
+            <ul class="fixed_menu" id="root_ul"></ul>
+            <div class="contact_us_menu"><a href="">Contact Us</a></div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/jquery.1.12.0.js"></script>
+<script>
+$(function () {
+    $.ajax({
+        type: 'GET',
+        url: '/static/data/menu.json',
+        dataType: 'json', 
+        success: function(res) {
+            tree(res);
+            console.log(res);
+        },
+        error: function(){ alert('error') } 
+    })
+
+    function tree(data) {
+        for (var i = 0; i < data.length; i++) {
+            //var data2 = data[i];
+            if (data[i].relation == 'root') {
+                $('#root_ul').append('<li class="root_li ' + data[i].type + '" data-name="' + data[i].type + '"><a href="' + data[i].url + '">' + data[i].name + '</a><i class="show_menu">&#x2B;</i><i class="hide_menu">&minus;</i></li>');
+            } else {
+                var children = $('li [data-name="' + data[i].parenttype + '"]').children('ul');
+                if (children.length == 0) {
+                    $('li[data-name="' + data[i].parenttype + '"]').append('<ul class="son_ul"></ul>')
+                }
+                $('li[data-name="' + data[i].parenttype + '"] > ul').append(
+                    '<li class="son_li" data-name="' + data[i].name + '">' +
+                    '<a href="' + data[i].url + '">' +data[i].name + '</a></li>')
+            }
+            for (var j = 0; j < data[i].child.length; j++) {
+                var child = data[i].child[j];
+                var children = $('li[data-name="' + child.parenttype + '"]').children('ul');
+                if (children.length == 0) {
+                    $('li[data-name="' + child.parenttype + '"]').append('<ul class="parent_ul"></ul>')
+                }
+                $('li[data-name="' + child.parenttype + '"] > ul').append(
+                    '<li class="parent_li" data-name="' + child.type + '">' +
+                    '<a href="' + data[i].url + '">' + child.name + ' &#xBB;</a><i class="show_menu">&#x2B;</i><i class="hide_menu">&minus;</i></li>')
+                var child2 = data[i].child[j].child;
+                tree(child2)
+            }
+            tree(data[i]);
+        }
+        menuToggle()
+    }
+    function menuToggle(){
+        //mobile menu 
+        $('.mobile_menu_show').click(function(){
+            $('.fixed_menu_mask').show()
+            $('.fixed_menu').addClass('fixed_menu_show')
+        });
+        $('.fixed_menu_mask').click(function(){
+            $('.fixed_menu_mask').hide()
+            $('.fixed_menu').removeClass('fixed_menu_show')
+        });
+        $('.show_menu').click(function(){
+            $(this).hide().siblings('.hide_menu').show();
+            $(this).parent().find('>ul').slideDown();
+            $(this).parent().siblings().find('>ul').slideUp();
+            $(this).parent().siblings().find('.hide_menu').hide();
+            $(this).parent().siblings().find('.show_menu').show();
+        });
+        $('.hide_menu').click(function(){
+            $(this).hide().siblings('.show_menu').show();
+            $(this).parent().find('>ul').slideUp()
+        });
+        
+    }
+
+});
+</script>
+
+</body>
+</html>
+
+
