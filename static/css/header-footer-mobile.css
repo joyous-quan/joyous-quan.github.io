@@ -29,7 +29,7 @@ body{min-width:320px;}
 .fixed_menu{position:fixed;top:0;right:-85%;z-index:10;min-width:270px;width:85%;height:100%;padding:20px;background: #fff;overflow-y: auto;-webkit-transition:all ease .3s;-moz-transition:all ease .3s;-o-transition:all ease .3s;transition:all ease .3s}
 .fixed_menu_show{right:0;}
 .dv_keyword_list{width:100%;}
-.mobile_show,.show_menu,.hide_menu,.show_submenu,.hide_submenu{display:block;}
+.mobile_show{display:block;}
 @media only screen and (max-width:1025px){
 .head_search {top:73px;}
 }

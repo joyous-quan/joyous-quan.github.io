@@ -35,44 +35,4 @@
 
 
 
-@media only screen and (min-width:1025px){
-    /*  Ambeed products card */
-    .single-menu-detail-con dl{min-height:350px;}
-}
 
-@media only screen and (max-width:1025px){
-    .layout,.width1200{padding:0 2%}
-    /*  Ambeed products card */
-    .single-menu-detail-con dl{width:24%}
-    .xin-tips{right:-26px;}
-}
-@media only screen and (max-width:960px){
-    /*  Ambeed products card */
-    .single-menu-detail-con dl{width:32%}
-}
-@media only screen and (max-width:680px){
-    /*  Ambeed products card */
-    .single-menu-detail-con dl{width:49%}
-    .xin-tips{right:-15px;}
-}
-@media only screen and (max-width:500px){
-    /*  Ambeed products card */
-    .single-menu-detail-con dl{width:99%;padding:0 6px 0 0;}
-    .menu-detail-img{float:left;width:42%;border-radius:4px;overflow:hidden}
-    .menu-detail-txt{float:left;width:58%;padding-top:3%;}
-    .menu-detail-txt{border-top:none}
-    .menu-detail-txt h2{font-size:16px;}
-}
-@media only screen and (max-width:370px){
-    /*  Ambeed products card */
-    .menu-detail-img{float:left;width:40%}
-    .menu-detail-txt{float:left;width:60%}
-    .sales-text span{padding-right:6px;}
-    .product-name{margin-bottom:0;}
-    .menu-detail-txt h2{font-size:15px;}
-    .sales-dl .btn{height:28px;line-height:28px;}
-}
-@media only screen and (max-width:340px){
-    /*  Ambeed products card */
-    .menu-detail-txt{padding-top:1%;}
-}

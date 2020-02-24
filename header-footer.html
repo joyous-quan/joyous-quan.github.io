@@ -20,37 +20,33 @@
 	<meta name="mobile-agent" content="format=html5;url=http://localhost/"/>
 	<!-- End of Baidu Transcode -->
 
-	
-	<link rel="stylesheet" type="text/css" href="/static/swiper/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/header-footer.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/common-new.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
 	<script src="/static/js/jquery.min.js"></script>
 	<script src="/static/js/common.js"></script>
 	<script>
 		//根据设备加载不同的样式
-    var setStyle = function(cssArr){
-        var i= 0,len = cssArr.length;
-        for(i;i<len;i++){
-            document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
-        }
-    };
-    // 判断是否移动端
-    function goPAGE() {
-        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-            // window.location.href="移动端url";
-            console.log("mobile");
-            //判断访问环境是 移动端 则加载以下样式
-            setStyle(['/static/css/header-footer-mobile.css']);
-        }
-        else {
-            // window.location.href="pc端url"; 
-            console.log("pc")
-            //判断访问环境是 移动端 则加载以下样式
-            setStyle(['/static/css/header-footer-pc.css']);
-        }
-    }
-    goPAGE();
+		var setStyle = function(cssArr){
+			var i= 0,len = cssArr.length;
+			for(i;i<len;i++){
+				document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+			}
+		};
+		// 判断是否移动端
+		function goPAGE() {
+			if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+				// window.location.href="移动端url";
+				console.log("mobile");
+				//判断访问环境是 移动端 则加载以下样式
+				setStyle(['/static/css/header-footer-mobile.css']);
+			}else {
+				// window.location.href="pc端url"; 
+				console.log("pc")
+				//判断访问环境是 移动端 则加载以下样式
+				setStyle(['/static/css/header-footer-pc.css']);
+			}
+		}
+		goPAGE();
 	</script>
 </head>
 <body>
