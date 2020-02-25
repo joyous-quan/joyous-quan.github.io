@@ -1,6 +1,6 @@
 $(function(){
 	$("#header").load("/templates/modules/header.html");
-	$("#footer").load("/templates/modules/footer.html");
+	$("#footer").load("/templates/component/footer.html");
 
  	$(window).scroll(function() {
        var st = $(this).scrollTop(),sh = 200;
