@@ -17,6 +17,7 @@
 	.activity-form .bg-purple{background:#8049ff;border-color:#8049ff;}
 	.activity-rule p{padding-bottom:10px;line-height: 24px;}
 	.activity-form .wechat-form{padding-top:0;}
+	.activity-form .wechat-form label{padding:0 0 10px;}
 </style>
 </head>
 <body class="lightpurple">
@@ -48,7 +49,7 @@
 </body>
 <script src="http://csnpharm.cn/static/js/jquery.min.js"></script>
 <script>
-$('.change-btn').click(function(){
+$('.change-btn').on('click',function(){
 	$(this).parent().parent().toggleClass('hide').siblings().toggleClass('hide')
 })
 </script>
