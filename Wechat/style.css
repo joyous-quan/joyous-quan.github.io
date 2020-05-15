@@ -4,7 +4,7 @@ body,html{width:100%;}
 body{min-height:100vh;background:#fff2ed;color:#010101;font-size:14px;font-family:Arial;}
 a{text-decoration:none;}
 img{max-width:100%;}
-input{-webkit-appearance:none;background: transparent;}
+input{-webkit-appearance:none;background:#fff;}
 input::-ms-clear,input::-ms-reveal{display:none}
 .theme-color{color:#f46b47;}
 .text-tips{float:right;padding-top:5px;}
