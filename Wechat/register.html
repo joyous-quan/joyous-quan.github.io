@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="renderer" content="webkit">
+	<meta name="robots" content="index,follow">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#f46b47">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 class="h1_logo"><a href="/"><svg width="208" height="67"><image xlink:href="http://csnpharm.cn/static/img/logo.svg" src="http://csnpharm.cn/static/img/logo.png" width="208" height="67"></image></svg></a></h1>
+	<div class="wechat-content">
+		<h2 class="h2_title">会员注册</h2>
+		<div class="wechat-form">
+			<span class="text-tips theme-color">*为必填项</span>
+			<label><span class="theme-color">*</span>姓<input type="text" id="fname"><small></small></label>
+			<label><span class="theme-color">*</span>名<input type="text" id="lname"><small></small></label>
+			<label><span class="theme-color">*</span>注册账户（手机号或邮箱地址）<input type="text" id="email"><small></small></label>
+			<label><span class="theme-color">*</span>密码<input type="password" name="" id="password"><small></small></label>
+			<button id="btn">注册</button>
+		</div>
+	</div>
+</body>
+
+<script>
+var fname = document.getElementById('fname');
+var lname = document.getElementById('lname');
+var email = document.getElementById('email');
+var password = document.getElementById('password');
+
+function showSuccess(input){
+	const iptControl = input.parentElement;
+	const small = iptControl.querySelector('small');
+	small.innerHTML = '';
+}
+function showError(input,msg){
+	const iptControl = input.parentElement;
+	const small = iptControl.querySelector('small');
+	small.innerHTML = msg;
+}
+function validform(inputArr){
+	inputArr.forEach( function(input) {
+		if (input.value == '') {
+			showError(input, '*为必填项');
+		}else{
+			showSuccess(input);
+		}
+	});
+}
+
+document.getElementById('btn').addEventListener('click',function(){
+	validform([fname,lname,email,password])
+})
+
+
+
+</script>
+</html>
