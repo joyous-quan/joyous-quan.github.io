@@ -20,24 +20,58 @@
 			<li class="left">xx 商城</li>
 		</ul>
     </div>
-    <div class="container content">
-        <div class="layout con">
-            <div class="mycar">
-                <a href="cart.html">我的购物车</a> 
-            </div>
-            <h3><a href="/index.html">产品列表</a> / <span style="color:#c5998e;">产品详情</span></h3>
-            
-            <div class="product_list clearfloat">
-            </div>
-        </div>
-    </div>
+    <div class="product_list clearfloat">
+            <ul class="ul" pid="1"><li class="float_l"><img src="./img/1.png"></li>
+                <li>MPN: AA003DMZ</li><li class="float_r"> CAS:2391-56-2  MDL:MFCD01632139  Name:1,5-BIS(4-AMINOPHENOXY)PENTANE</li><li class="float_r">产品英文名：<span class="pName">1,5-BIS(4-AMINOPHENOXY)PENTANE</span></li><li class="float_r">价格：USD<span class="price">206.00</span></li><li class="float_r"> 数量：<input style="width:36px;height:20px;text-align:center;" type="number" value="1" min="1" max="99"></li><li class="float_r"><a href="javascript:;" class="btn details-btn" onclick="addCart()">加入购物车</a></li></ul></div>
     <div style="height:150px;"></div>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Name:1,5-BIS(4-AMINOPHENOXY)PENTANE",
+  "image": [
+        "https://joyous-quan.github.io/img/1.png"
+   ],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Fred Benson"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "bestRating": "100",
+    "ratingCount": "10",
+    "ratingValue": "90"
+  },
+  "description": " CAS:2391-56-2  MDL:MFCD01632139  Name:1,5-BIS(4-AMINOPHENOXY)PENTANE",
+  "mpn": "AA003DMZ",
+  "brand": {
+    "@type": "Thing",
+    "name": "AABLOCKS"
+  },
+    "sku": "AA003DMZ",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "169.00",
+      "highPrice": "206.00",
+      "priceCurrency": "USD",
+      "offerCount": "8"
+    }
+}
+</script>
 <!--cookie操作的js库-->
 <script src="./js/jquery.js" ></script>
 <script src="./js/cookie.js"></script>
 <script src="./js/server.js"></script>
-<script>
+<!-- <script>
 $(function(){
     //获取url中的参数
     /*function getUrlParam(name) {
@@ -116,6 +150,6 @@ function addCart() {
     $('#ccount').html( getTotalCount());    
 }
 
-</script>
+</script> -->
 </body>
 </html>
