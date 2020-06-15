@@ -57,9 +57,9 @@
                         "@context": "https://joyous-quan.github.io",
                         "@type": "Product",
                         "CNname": "5-溴-1,3-二氟-2-硝基苯",
-           		"name": "5-Bromo-1,3-difluoro-2-nitrobenzene",
-            		"productID": "1",
-        		"image": "https://joyous-quan.github.io/img/1.png"
+						"name": "5-Bromo-1,3-difluoro-2-nitrobenzene",
+						"productID": "1",
+						"image": "https://joyous-quan.github.io/img/1.png"
                     }
                 },
                 {"@context": "https://joyous-quan.github.io",
@@ -69,21 +69,21 @@
                         "@context": "https://joyous-quan.github.io",
                         "@type": "Product",
                         "CNname": "1-Boc-吡咯-2-硼酸",
-           		"name": "N-Boc-2-Pyrroleboronic acid",
-            		"productID": "2",
-        		"image": "https://joyous-quan.github.io/img/2.png"
+						"name": "N-Boc-2-Pyrroleboronic acid",
+						"productID": "2",
+						"image": "https://joyous-quan.github.io/img/2.png"
                     }
                 },
                 {"@context": "https://joyous-quan.github.io",
                     "@type": "ProductItem",
-                    "position": 1,
+                    "position": 3,
                     "item": {
                         "@context": "https://joyous-quan.github.io",
                         "@type": "Product",
                         "CNname": "4-甲氧基苯基氯甲酸酯",
-           		"name": "4-Methoxyphenyl carbonochloridate",
-            		"productID": "3",
-        		"image": "https://joyous-quan.github.io/img/3.png"
+						"name": "4-Methoxyphenyl carbonochloridate",
+						"productID": "3",
+						"image": "https://joyous-quan.github.io/img/3.png"
                     }
                 }
             ]
@@ -103,13 +103,13 @@
                 $(".product_list").html("");
                 $.each(res,function (idx,item) {
                     $(".product_list").append(
-                        "<dl><dt><a href='details.html?id="
+                        "<dl><dt><a href='product-list.html?id="
                         + item.id + "'><img src='"
                         + item.img + "'></a></dt><dd><a href='#'>"
                         + item.ENname + "</a><p><b>"
                         + item.price1 + "</b> &nbsp; <span>"
                         + item.price3 + "</span></p><strong>"
-                        + item.num + "</strong><a class='details-btn' href='details.html?id="
+                        + item.num + "</strong><a class='details-btn' href='product-list.html?id="
                         + item.id + "'>详情</a></dd></dl>"
                     )     
                 })
