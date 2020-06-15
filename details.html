@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>DEMO - 产品详情页</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc" />
+    <style type="text/css" media="screen">
+        .float_l{width:30%;background:#e5e5e5;padding:20px;}
+        .float_r{width:68%;margin-top:10px;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="layout header_nav">
+			<li class="left">xx 商城</li>
+		</ul>
+    </div>
+    <div class="container content">
+        <div class="layout con">
+            <div class="mycar">
+                <a href="cart.html">我的购物车</a> 
+            </div>
+            <h3><a href="/index.html">产品列表</a> / <span style="color:#c5998e;">产品详情</span></h3>
+            
+            <div class="product_list clearfloat">
+            </div>
+        </div>
+    </div>
+    <div style="height:150px;"></div>
+
+<!--cookie操作的js库-->
+<script src="./js/jquery.js" ></script>
+<script src="./js/cookie.js"></script>
+<script src="./js/server.js"></script>
+<script>
+$(function(){
+    //获取url中的参数
+    /*function getUrlParam(name) {
+       var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)'); //构造一个含有目标参数的正则表达式对象
+       var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+       if (r != null) return unescape(r[2]); return null; //返回参数值
+    }*/
+    function getUrlParam(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+        var r = window.location.search.substr(1).match(reg);
+        if(r != null) return unescape(r[2]);
+        return null;
+    }
+
+   //接收URL中的参数Id
+   var id = getUrlParam('id');
+    $.ajax({
+        type:'get',
+        url:'./data/cart.json',
+        dataType:'json',
+        success:function(res,status){
+            $.each(res, function(idx,item) {
+                //根据id获取详情数据
+                if(id == item.id){
+                    var str = "<ul class='ul' pid='"+item.id+"'><li class='float_l'><img src='"+item.img+"'/></li>"
+                        +"<li class='float_r'>产品中文名："+item.CNname+"(请以英文为准,中文仅做参考)</li>"
+                        +"<li class='float_r'>产品英文名：<span class='pName'>"+item.ENname+"</span></li>"
+                        +"<li class='float_r'>价格：$<span class='price'>"+item.price1+"</span></li>"
+                        +"<li class='float_r'> 数量：<input style='width:36px;height:20px;text-align:center;' type='number' value='1' min='1' max='99'></li>"
+                        +"<li class='float_r'><a href='javascript:;' class='btn details-btn' onclick='addCart()'>加入购物车</a></li></ul>";
+                }
+                $('.product_list').append(str);
+                
+            });
+           
+        }
+    })
+
+});
+
+function addCart() {
+    var listStr = cookieObj.get("datas_cart");
+    if(!listStr) { 
+        cookieObj.set({
+            name: "datas_cart",
+            value: "[]"
+        });
+        listStr = cookieObj.get("datas_cart");
+    }
+    var listObj = JSON.parse(listStr);
+    var ul = $('.ul')
+    var pid = ul.attr("pid");//获取自定义属性
+    var pCount = Number(ul.find('input').val());
+    if(checkObjByPid(pid)) {
+        listObj = updateObjById(pid, pCount);
+        //console.log(listObj);
+        //console.log(cookieObj.get("datas_cart"));
+    } else {
+        var imgSrc = ul.find('img').attr('src');
+        var pName = ul.find('.pName').html();
+        var price = ul.find('.price').html();
+        var obj = {
+            pid: pid,
+            pImg: imgSrc,
+            pName: pName,
+            price: price,
+            pCount: pCount
+        };
+
+        listObj.push(obj);
+        listObj = updateData(listObj);
+        //console.log(listObj);
+        //console.log(listStr);
+        $('#ccount').html( getTotalCount());
+    }
+    $('#ccount').html( getTotalCount());    
+}
+
+</script>
+</body>
+</html>

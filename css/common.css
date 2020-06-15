@@ -1,0 +1,53 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+html{-webkit-text-size-adjust:none;-ms-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none;}
+body,html{margin:0;padding:0;width:100%;}
+body{color:#212121;font-size:14px;font-family:"Source Sans Pro","Helvetica Neue",Arial,sans-serif;}
+dd,dl,dt,form,h1,h2,h3,h4,h5,h6,img,label,li,ol,p,ul,input,select,textarea{margin:0;padding:0;}
+a{outline:0;color:#212121;text-decoration:none;}
+a:hover {text-decoration:underline;}
+li,ol,ul{list-style:none;}
+input:focus,textarea:focus,select:focus,button:focus{outline:0;}
+input::-ms-clear,input::-ms-reveal{display:none;}
+input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset;}
+input::-webkit-input-placeholder{color:#999;}
+input:-ms-input-placeholder{color:#999;}
+input:-moz-placeholder{color:#999;}
+input::-moz-placeholder{color:#999;}
+textarea::-webkit-input-placeholder{color:#999;}
+textarea:-ms-input-placeholder{color:#999;}
+textarea:-moz-placeholder{color:#999;}
+textarea::-moz-placeholder{color:#999;}
+img{max-width:100%;max-height:100%;border:none;}
+table{width:100%;border-collapse:collapse;}
+footer,header,nav,section{display:block;}
+sub{display:inline-block;transform:scale(.9);}
+.clearfloat:after{clear:both;display:block;visibility:hidden;height:0;content:"";}
+.clearfloat{zoom:1;}
+.float_l{float:left;}
+.float_r{float:right;}
+.position_r{position:relative;}
+.position_a{position:absolute;}
+.hidden,.hide{display:none;}
+.btn{display:inline-block;min-width:120px;min-height:32px;line-height:32px;text-align:center;}
+.layout{margin:0 auto;padding:0 40px;width:1200px;}
+
+
+
+.header{ height:50px; background:#333;}
+.header_nav li {cursor:pointer; float:right;padding:0px 25px;line-height:50px; color:#fff;}
+.header_nav li.left{float:left;}
+.layout h3{font-weight:300; font-size:18px;padding:10px;padding-top:20px;}
+.mycar{text-align:right;padding:10px 20px;border-bottom: 1px solid #ddd;}
+.price,.price span{color:red;}
+
+#ccount{display:inline-block;width:20px;height:20px;line-height:20px;background:#8a6d67;
+      text-align:center;border-radius:15px;color:#fff;font-weight: 600;font-size:15px;}
+h3{padding-left:15px;}
+.product_list dl{float:left;margin:0.5%;height:320px;width:24%;text-align:center;line-height: 18px;
+    border:1px solid #ddd;overflow: hidden;}
+.product_list  dl:hover{box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);}
+.product_list dt a { display: block; }
+.product_list dt img{height:200px; width:200px;}
+.details-btn {display:inline-block;width:130px;margin-left:5px;line-height:30px;color:#fff;font-weight: 600;
+      background:#6e544e;}
+.details-btn:hover{background-color: #8a6d67;}
