@@ -33,24 +33,62 @@
 
 <script type="application/ld+json">
     [{
-		"@context" : "https://joyous-quan.github.io/",
-		"@type": "Product",
-		"url": "https://joyous-quan.github.io/details.html?id=1",
-		"name": "5-Bromo-1,3-difluoro-2-nitrobenzene",
-		"productID": "1",
-		"brand": "joyous-quan",
-		"image": "https://joyous-quan.github.io/img/1.png"
-	},{
-		"@context" : "https://joyous-quan.github.io/",
-		"@type": "Product",
-		"url": "https://joyous-quan.github.io/details.html?id=2",
-		"name": "N-Boc-2-Pyrroleboronic acid",
-		"productID": "2",
-		"brand": "joyous-quan",
-		"image": "https://joyous-quan.github.io/img/2.png"
-	}
-	]
-
+        "@context": "https://joyous-quan.github.io",
+        "@type": "WebPage",
+        "url": "https://joyous-quan.github.io/",
+        
+        "brand": "joyous-quan",
+        
+        ,"aggregateRating": {
+            "@type": "AggregateRating",
+            "bestRating": 5,
+            "worstRating": 1,
+            "ratingCount": "136",
+            "ratingValue": "5.0"
+        }
+    },{
+    	"@context": "https://joyous-quan.github.io",
+        "@type": "ProductsList",
+    	"Products": [
+            	{"@context": "https://joyous-quan.github.io",
+                    "@type": "ProductItem",
+                    "position": 1,
+                    "item": {
+                        "@context": "https://joyous-quan.github.io",
+                        "@type": "Product",
+                        "CNname": "5-溴-1,3-二氟-2-硝基苯",
+           				"name": "5-Bromo-1,3-difluoro-2-nitrobenzene",
+            			"productID": "1",
+        				"image": "https://joyous-quan.github.io/img/1.png"
+                    }
+                },
+                {"@context": "https://joyous-quan.github.io",
+                    "@type": "ProductItem",
+                    "position": 2,
+                    "item": {
+                        "@context": "https://joyous-quan.github.io",
+                        "@type": "Product",
+                        "CNname": "1-Boc-吡咯-2-硼酸",
+           				"name": "N-Boc-2-Pyrroleboronic acid",
+            			"productID": "2",
+        				"image": "https://joyous-quan.github.io/img/2.png"
+                    }
+                },
+                {"@context": "https://joyous-quan.github.io",
+                    "@type": "ProductItem",
+                    "position": 1,
+                    "item": {
+                        "@context": "https://joyous-quan.github.io",
+                        "@type": "Product",
+                        "CNname": "4-甲氧基苯基氯甲酸酯",
+           				"name": "4-Methoxyphenyl carbonochloridate",
+            			"productID": "3",
+        				"image": "https://joyous-quan.github.io/img/3.png"
+                    }
+                }
+            ]
+        }
+	}]
 </script>
 <script src="./js/jquery.js"></script>
 <script src="./js/cookie.js"></script>
