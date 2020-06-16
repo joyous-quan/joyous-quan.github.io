@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="robots" content="index,follow">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.ambeed.com/static/img/ambeed.ico" type="image/x-icon">
+	<meta name="description" content="Ambeed provides building blocks, advanced intermediates, amino acids and peptides, catalysts and ligands, natural products, nucleotides etc.">
+	<meta name="keywords" content="building blocks, advanced intermediates, inhibitors, amino acids and peptides, catalysts and ligands, natural products, nucleotides; Polycondensation, Halogenation, Cyanation, Esterification, Nitration Diazotization, Amination, Alkylation, Oxidation, Grignard's reaction, Oxidation, Suzuki Coupling reaction, Lithiation, Friedel-Crafts reaction, Hydrogenation, and Reduction">
+	<!-- Start of Baidu Transcode -->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<meta http-equiv="Cache-Control" content="no-transform"/>
+	<meta name="applicable-device" content="pc,mobile">
+	<meta name="MobileOptimized" content="width"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta name="mobile-agent" content="format=html5;url=http://localhost/"/>
+	<!-- End of Baidu Transcode -->
+
+	
+	<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css?v=2019113000002">
+	<link rel="stylesheet" type="text/css" href="/static/css/common-default.css">
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/common.js"></script>
+	<script>
+		$(function(){
+			//$("#home").load("/templates/modules/home.html");
+		})
+		//根据设备加载不同的样式
+		var setStyle = function(cssArr){
+			var i= 0,len = cssArr.length;
+			for(i;i<len;i++){
+				document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+			}
+		};
+		// 判断是否移动端
+		function goPAGE() {
+			if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+				console.log("mobile");
+				//判断访问环境是 移动端 则加载以下样式
+				setStyle(['/static/css/mobile/header-mobile.css','/static/css/mobile/menu-mobile.css']);
+			}else {
+				console.log("pc")
+				//判断访问环境是 移动端 则加载以下样式
+				setStyle(['/static/css/pc/header.css','/static/css/pc/menu.css']);
+			}
+		}
+		goPAGE();
+	</script>
+</head>
+<body>
+<div id="header"></div>
+
+<div class="layout">
+    <div class="nav-com-title">
+        <p>
+            <a href="/" class="home-logo"><img src="/static/img/home-logo.png" alt=""></a>
+            <a href="/chemistry.html" class="nav-img">Chemistry</a>
+            <a href="/heterocyclic-building-blocks.html" class="nav-img">Heterocyclic Building Blocks</a>
+            <a href="javascript:;" class="current">Acridines</a>
+        </p>
+        <h3>Acridines</h3>
+    </div>
+	<div class="filter-con  margin-top10">
+		<div class="filter-left float-left">
+			<div>
+				<input class="input_check" type="checkbox" id="In-stock"><label for="In-stock"></label> Typically In Stock
+			</div>
+			<div class="tips-kuang">
+				<a href="javascript:;" class="tips-txt btn width130" id="purity">Purity</a>
+				<ul class="tips-content">
+					<img class="top-img" src="/static/img/top.png" alt="">
+                    <li><span>Please Select</span><i class="iconfont icon-dui1"></i>
+                    </li><li><span>99+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>99%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>98+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>98%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>97+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>97%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>96+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>96%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>95+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>95%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>93%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>90+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>90%</span><i class="iconfont icon-dui1"></i></li>
+				</ul>
+			</div>
+			<div class="tips-kuang">
+				<a href="javascript:;" class="tips-txt btn width90" id="size">Size</a>
+				<ul class="tips-content size-ul">
+					<img class="top-img" src="/static/img/top.png" alt="">
+					<li><span>Please Select</span><i class="iconfont icon-dui1"></i>
+                    </li><li><span>1mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>2mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>5mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>10mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>25mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>50mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>100mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>250mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>1g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>5g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>10g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>25g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>100g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>500g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>1000g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>1kg</span><i class="iconfont icon-dui1"></i></li>
+				</ul>
+			</div>
+			
+			<div>
+				<input class="input_check" type="checkbox" id="Sales"><label for="Sales"></label> Sales
+			</div>
+			<!--<div>
+				<input class="input_check" type="checkbox" id="Free-sample"/><label for="Free-sample"></label> Free sample
+			</div>-->
+		</div>
+		<div class="filter-right float-right">
+			<a href="javascript:;" class="a_close">Conditions to empty</a>
+		</div>
+	</div>
+    <div class="content-box">
+        
+            <div class="menu-three-box">
+                    <div class="menu-three-item">
+                        <p class="p_show" onselectstart="return false;"><span>By Parent Nucleus</span><span class="p_show_more">+</span><span class="p_show_less">−</span></p>
+                        <div class="overflowY">
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_aromatic_heterocycles.html" target="_blank" title="Acridines ∩ Aromatic Heterocycles">Aromatic Heterocycles</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_other_aromatic_heterocycles.html" target="_blank" title="Acridines ∩ Other Aromatic Heterocycles">Other Aromatic Heterocycles</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/spiroes_acridines.html" target="_blank" title=" Acridines ∩ Spiroes ">Spiroes</a>
+                                              
+                                          
+                                
+                            
+                        </div>
+                    </div>
+                    <div class="menu-three-item">
+                        <p class="p_show" onselectstart="return false;"><span>By Functional Group</span><span class="p_show_more">+</span><span class="p_show_less">−</span></p>
+                        <div class="overflowY">
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_alkyls.html" target="_blank" title="Acridines ∩ Alkyls">Alkyls</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_amines.html" target="_blank" title="Acridines ∩ Amines">Amines</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_aryls.html" target="_blank" title="Acridines ∩ Aryls">Aryls</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_bromides.html" target="_blank" title="Acridines ∩ Bromides">Bromides</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_carboxylic_acids.html" target="_blank" title="Acridines ∩ Carboxylic Acids">Carboxylic Acids</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_chlorides.html" target="_blank" title="Acridines ∩ Chlorides">Chlorides</a>
+                                              
+                                          
+                                
+                            
+                                
+                                          
+                                              
+                                                  <a href="/acridines_ketones.html" target="_blank" title="Acridines ∩ Ketones">Ketones</a>
+                                              
+                                          
+                                
+                            
+                        </div>
+                    </div> 
+            </div>
+        
+        <div class="single-menu-detail-con">
+            
+                <div class="dv_pro_list">
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/5336-90-3.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/94/5336-90-3.png" alt="Acridine-9-carboxylic acid"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000093666" cas="5336-90-3" ak="A161207" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A161207</span><span>5336-90-3</span>97%</h3>
+                                    <p class="product-name"><a href="/products/5336-90-3.html" target="_blank">Acridine-9-carboxylic acid</a></p>
+                                    <h2>$199.00/10g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/5336-90-3.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/69220-40-2.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/193/69220-40-2.png" alt="4-Chloroacridin-9(10H)-one"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000192667" cas="69220-40-2" ak="A120218" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A120218</span><span>69220-40-2</span>97%</h3>
+                                    <p class="product-name"><a href="/products/69220-40-2.html" target="_blank">4-Chloroacridin-9(10H)-one</a></p>
+                                    <h2>$55.00/100mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/69220-40-2.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/88377-31-5.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/195/88377-31-5.png" alt="5-Methoxy-9-oxo-9,10-dihydroacridine-4-carboxylic acid"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000194905" cas="88377-31-5" ak="A110274" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A110274</span><span>88377-31-5</span>95+%</h3>
+                                    <p class="product-name"><a href="/products/88377-31-5.html" target="_blank">5-Methoxy-9-oxo-9,10-dihydroacridine-4-carboxylic acid</a></p>
+                                    <h2>$1011.00/5g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/88377-31-5.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/578-95-0.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/303/578-95-0.png" alt="Acridin-9(10H)-one"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000302961" cas="578-95-0" ak="A120093" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A120093</span><span>578-95-0</span>98%</h3>
+                                    <p class="product-name"><a href="/products/578-95-0.html" target="_blank">Acridin-9(10H)-one</a></p>
+                                    <h2>$178.00/100g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/578-95-0.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/92638-81-8.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/333/92638-81-8.png" alt="10H-Spiro[acridine-9,9'-fluorene]"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000332495" cas="92638-81-8" ak="A197840" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A197840</span><span>92638-81-8</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/92638-81-8.html" target="_blank">10H-Spiro[acridine-9,9'-fluorene]</a></p>
+                                    <h2>$749.00/5g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/92638-81-8.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/38609-97-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/349/38609-97-1.png" alt="2-(9-Oxoacridin-10(9H)-yl)acetic acid"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000348064" cas="38609-97-1" ak="A573261" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A573261</span><span>38609-97-1</span>99+%</h3>
+                                    <p class="product-name"><a href="/products/38609-97-1.html" target="_blank">2-(9-Oxoacridin-10(9H)-yl)acetic acid</a></p>
+                                    <h2>$392.00/100g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/38609-97-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1207-69-8.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/424/1207-69-8.png" alt="9-Chloroacridine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000423424" cas="1207-69-8" ak="A123325" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A123325</span><span>1207-69-8</span>97%</h3>
+                                    <p class="product-name"><a href="/products/1207-69-8.html" target="_blank">9-Chloroacridine</a></p>
+                                    <h2>$358.00/25g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1207-69-8.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/611-64-3.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/428/611-64-3.png" alt="9-Methylacridine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000427447" cas="611-64-3" ak="A194914" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A194914</span><span>611-64-3</span>98%</h3>
+                                    <p class="product-name"><a href="/products/611-64-3.html" target="_blank">9-Methylacridine</a></p>
+                                    <h2>$210.00/5g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/611-64-3.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1333316-35-0.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/460/1333316-35-0.png" alt="2,7-Dibromo-9,9-dimethyl-9,10-dihydroacridine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000459479" cas="1333316-35-0" ak="A104946" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A104946</span><span>1333316-35-0</span>97%</h3>
+                                    <p class="product-name"><a href="/products/1333316-35-0.html" target="_blank">2,7-Dibromo-9,9-dimethyl-9,10-dihydroacridine</a></p>
+                                    <h2>$89.00/1g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1333316-35-0.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/90-45-9.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/472/90-45-9.png" alt="9-Aminoacridine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000471048" cas="90-45-9" ak="A196593" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A196593</span><span>90-45-9</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/90-45-9.html" target="_blank">9-Aminoacridine</a></p>
+                                    <h2>$237.00/10g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/90-45-9.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/109392-90-7.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/522/109392-90-7.png" alt="Phenyl acridine-9-carboxylate"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000521278" cas="109392-90-7" ak="A376366" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A376366</span><span>109392-90-7</span>95+%</h3>
+                                    <p class="product-name"><a href="/products/109392-90-7.html" target="_blank">Phenyl acridine-9-carboxylate</a></p>
+                                    <h2>$74.00/100mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/109392-90-7.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/602-56-2.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/551/602-56-2.png" alt="9-Phenylacridine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000550302" cas="602-56-2" ak="A137990" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A137990</span><span>602-56-2</span>98%</h3>
+                                    <p class="product-name"><a href="/products/602-56-2.html" target="_blank">9-Phenylacridine</a></p>
+                                    <h2>$24.00/1g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/602-56-2.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/6267-02-3.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/594/6267-02-3.png" alt="9,9-Dimethyl-9,10-dihydroacridine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000593932" cas="6267-02-3" ak="A275348" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A275348</span><span>6267-02-3</span>98%</h3>
+                                    <p class="product-name"><a href="/products/6267-02-3.html" target="_blank">9,9-Dimethyl-9,10-dihydroacridine</a></p>
+                                    <h2>$1754.00/100g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/6267-02-3.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/581-28-2.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/659/581-28-2.png" alt="Acridin-2-amine"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000658134" cas="581-28-2" ak="A145789" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A145789</span><span>581-28-2</span>98%</h3>
+                                    <p class="product-name"><a href="/products/581-28-2.html" target="_blank">Acridin-2-amine</a></p>
+                                    <h2>$106.00/100mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/581-28-2.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/7497-52-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/688/7497-52-1.png" alt="2-Chloroacridin-9(10H)-one"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000687141" cas="7497-52-1" ak="A205854" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A205854</span><span>7497-52-1</span>98%</h3>
+                                    <p class="product-name"><a href="/products/7497-52-1.html" target="_blank">2-Chloroacridin-9(10H)-one</a></p>
+                                    <h2>$267.00/1g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/7497-52-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/25055-86-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/719/25055-86-1.png" alt="3-(3-Methyl-3H-diazirin-3-yl)propanoic acid"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000718162" cas="25055-86-1" ak="A236989" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A236989</span><span>25055-86-1</span>97%</h3>
+                                    <p class="product-name"><a href="/products/25055-86-1.html" target="_blank">3-(3-Methyl-3H-diazirin-3-yl)propanoic acid</a></p>
+                                    <h2>$346.00/250mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/25055-86-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                </div>
+            
+        </div>
+    </div>
+	<div class="clear"></div>
+	<div class="pages">
+        <a href="javascript:void(0)"><img src="/static/img/prev.png" alt=""></a>
+        <span> page 1 of 29</span>
+        <a href="/acridines.html?pagesize=20&amp;pageindex=2"><img src="/static/img/next.png" alt=""></a>
+    </div>
+	<div class="feedback">
+		<p><a class="btn bulk-btn" href="javascript:;" style="width: 200px;">Inquiry</a></p>
+	</div>
+</div>
+
+
+
+<div class="clear height40"></div>
+<div id="footer"></div>
+
+<script>
+	 $(".menu-three-item .p_show").click(function(){
+        $(this).toggleClass("menu_hide");
+        $(this).parent().find('.overflowY').stop().slideToggle();
+    });
+</script>
+</body>
+</html>

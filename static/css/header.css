@@ -1,0 +1,22 @@
+.nav-dl { min-width:14%;}
+.pharmaceutical-dl { width: 23%; }
+ .inhibitors-dl {width: 17%;}
+ .material-dl { width: 17%; }
+ .life-dl { width:15%; }
+ .contact-dl:hover .nav-title span {
+     bottom:10px;
+ }
+.dv_keyword_list p{bottom:0;height:30px;border-top:1px solid #ddd;background: #ffffff;}
+.dv_keyword_list p a.a_top{border:none}
+.dt_keyword_tags a{float:left; height:16px;border-left:1px solid #aaaaaa;margin-top:7px;line-height:16px;padding-left:15px;}
+.dv_keyword_list p a{color:#0272d0;text-decoration:none;}
+.dv_keyword_list p span{padding-left:12px;line-height:20px;color:#999}
+.dv_keyword_list dd{background: #ffffff;height:30px;padding:0 15px;line-height:30px;margin:0!important}
+.dv_keyword_list dd:hover{background:#eee}
+.dv_keyword_list dd:hover .search_record{display:none}
+.dv_keyword_list dd:hover .del_search_record{display:block}
+.dv_keyword_list dd span{float:right;cursor:pointer;color:#999;font-size:12px}
+.dv_keyword_list dd a{display:inline-block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:12px}
+.dv_keyword_list dd a:hover{color:#222}
+.dd_search_history a{width:410px;}
+.del_search_record{display:none}

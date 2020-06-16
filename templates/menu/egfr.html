@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="robots" content="index,follow">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.ambeed.com/static/img/ambeed.ico" type="image/x-icon">
+	<meta name="description" content="Ambeed provides building blocks, advanced intermediates, amino acids and peptides, catalysts and ligands, natural products, nucleotides etc.">
+	<meta name="keywords" content="building blocks, advanced intermediates, inhibitors, amino acids and peptides, catalysts and ligands, natural products, nucleotides; Polycondensation, Halogenation, Cyanation, Esterification, Nitration Diazotization, Amination, Alkylation, Oxidation, Grignard's reaction, Oxidation, Suzuki Coupling reaction, Lithiation, Friedel-Crafts reaction, Hydrogenation, and Reduction">
+	<!-- Start of Baidu Transcode -->
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<meta http-equiv="Cache-Control" content="no-transform"/>
+	<meta name="applicable-device" content="pc,mobile">
+	<meta name="MobileOptimized" content="width"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta name="mobile-agent" content="format=html5;url=http://localhost/"/>
+	<!-- End of Baidu Transcode -->
+
+	
+	<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css?v=2019113000002">
+	<link rel="stylesheet" type="text/css" href="/static/css/common-default.css">
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/common.js"></script>
+	<script>
+		$(function(){
+			//$("#home").load("/templates/modules/home.html");
+		})
+		//根据设备加载不同的样式
+		var setStyle = function(cssArr){
+			var i= 0,len = cssArr.length;
+			for(i;i<len;i++){
+				document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+			}
+		};
+		// 判断是否移动端
+		function goPAGE() {
+			if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+				console.log("mobile");
+				//判断访问环境是 移动端 则加载以下样式
+				setStyle(['/static/css/mobile/header-mobile.css','/static/css/mobile/menu-mobile.css']);
+			}else {
+				console.log("pc")
+				//判断访问环境是 移动端 则加载以下样式
+				setStyle(['/static/css/pc/header.css','/static/css/pc/menu.css']);
+			}
+		}
+		goPAGE();
+	</script>
+</head>
+<body>
+
+	<div id="header"></div>
+<div class="layout">
+    <div class="nav-com-title">
+        <p>
+            <a href="/" class="home-logo"><img src="/static/img/home-logo.png" alt=""></a>
+            <a href="/inhibitors-agonists.html" class="nav-img">Inhibitors/Agonists</a>
+            <a href="/jak-stat-signaling.html" class="nav-img">JAK/STAT Signaling</a>
+            <a href="javascript:;" class="current">EGFR</a>
+        </p>
+        <h3>EGFR</h3>
+    </div>
+	<div class="filter-con  margin-top10">
+		<div class="filter-left float-left">
+			<div>
+				<input class="input_check" type="checkbox" id="In-stock"><label for="In-stock"></label> Typically In Stock
+			</div>
+			<div class="tips-kuang">
+				<a href="javascript:;" class="tips-txt btn width130" id="purity">Purity</a>
+				<ul class="tips-content">
+					<img class="top-img" src="/static/img/top.png" alt="">
+                    <li><span>Please Select</span><i class="iconfont icon-dui1"></i>
+                    </li><li><span>99+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>99%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>98+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>98%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>97+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>97%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>96+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>96%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>95+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>95%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>93%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>90+%</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>90%</span><i class="iconfont icon-dui1"></i></li>
+				</ul>
+			</div>
+			<div class="tips-kuang">
+				<a href="javascript:;" class="tips-txt btn width90" id="size">Size</a>
+				<ul class="tips-content size-ul">
+					<img class="top-img" src="/static/img/top.png" alt="">
+					<li><span>Please Select</span><i class="iconfont icon-dui1"></i>
+                    </li><li><span>1mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>2mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>5mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>10mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>25mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>50mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>100mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>250mg</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>1g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>5g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>10g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>25g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>100g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>500g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>1000g</span><i class="iconfont icon-dui1"></i></li>
+                    <li><span>1kg</span><i class="iconfont icon-dui1"></i></li>
+				</ul>
+			</div>
+			
+			<div>
+				<input class="input_check" type="checkbox" id="Sales"><label for="Sales"></label> Sales
+			</div>
+			<!--<div>
+				<input class="input_check" type="checkbox" id="Free-sample"/><label for="Free-sample"></label> Free sample
+			</div>-->
+		</div>
+		<div class="filter-right float-right">
+			<a href="javascript:;" class="a_close">Conditions to empty</a>
+		</div>
+	</div>
+    <div>
+        
+        <div class="single-menu-detail-con">
+            
+                <div class="dv_pro_list">
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/171179-06-9.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/3/171179-06-9.png" alt="PD158780"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000002373" cas="171179-06-9" ak="A360151" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A360151</span><span>171179-06-9</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/171179-06-9.html" target="_blank">PD158780</a></p>
+                                    <h2>$28.00/1mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/171179-06-9.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/486-35-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/22/486-35-1.png" alt="Daphnetin"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000021181" cas="486-35-1" ak="A811058" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A811058</span><span>486-35-1</span>95+%</h3>
+                                    <p class="product-name"><a href="/products/486-35-1.html" target="_blank">Daphnetin</a></p>
+                                    <h2>$26.00/50mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/486-35-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1092364-38-9.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/58/1092364-38-9.png" alt="Poziotinib"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000057168" cas="1092364-38-9" ak="A719269" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A719269</span><span>1092364-38-9</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/1092364-38-9.html" target="_blank">Poziotinib</a></p>
+                                    <h2>$391.00/50mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1092364-38-9.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/871026-44-7.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/69/871026-44-7.png" alt="TAK-285"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000068717" cas="871026-44-7" ak="A370749" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A370749</span><span>871026-44-7</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/871026-44-7.html" target="_blank">TAK-285</a></p>
+                                    <h2>$85.00/1mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/871026-44-7.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1626387-80-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/97/1626387-80-1.png" alt="AZD3759"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000096379" cas="1626387-80-1" ak="A171107" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A171107</span><span>1626387-80-1</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/1626387-80-1.html" target="_blank">AZD3759</a></p>
+                                    <h2>$59.00/5mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1626387-80-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1374640-70-6.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/154/1374640-70-6.png" alt="CO-1686"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000153850" cas="1374640-70-6" ak="A254041" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A254041</span><span>1374640-70-6</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/1374640-70-6.html" target="_blank">CO-1686</a></p>
+                                    <h2>$490.00/1g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1374640-70-6.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/133550-30-8.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/198/133550-30-8.png" alt="AG-490"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000197781" cas="133550-30-8" ak="A205043" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A205043</span><span>133550-30-8</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/133550-30-8.html" target="_blank">AG-490</a></p>
+                                    <h2>$40.00/10mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/133550-30-8.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1421373-66-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/216/1421373-66-1.png" alt="AZD9291 Mesylate"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000215239" cas="1421373-66-1" ak="A188322" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A188322</span><span>1421373-66-1</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/1421373-66-1.html" target="_blank">AZD9291 Mesylate</a></p>
+                                    <h2>$1494.00/25g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1421373-66-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/183322-45-4.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/228/183322-45-4.png" alt="PD153035 Hydrochloride"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000227510" cas="183322-45-4" ak="A187704" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A187704</span><span>183322-45-4</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/183322-45-4.html" target="_blank">PD153035 Hydrochloride</a></p>
+                                    <h2>$376.00/250mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/183322-45-4.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/388082-77-7.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/273/388082-77-7.png" alt="Lapatinib ditosylate"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000272577" cas="388082-77-7" ak="A208985" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A208985</span><span>388082-77-7</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/388082-77-7.html" target="_blank">Lapatinib ditosylate</a></p>
+                                    <h2>$126.00/1g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/388082-77-7.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1213269-23-8.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/292/1213269-23-8.png" alt="WZ4002"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000291153" cas="1213269-23-8" ak="A222874" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A222874</span><span>1213269-23-8</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/1213269-23-8.html" target="_blank">WZ4002</a></p>
+                                    <h2>$48.00/5mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1213269-23-8.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/497839-62-0.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/297/497839-62-0.png" alt="AEE788"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000296461" cas="497839-62-0" ak="A176210" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A176210</span><span>497839-62-0</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/497839-62-0.html" target="_blank">AEE788</a></p>
+                                    <h2>$237.00/10mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/497839-62-0.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/873837-23-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/397/873837-23-1.png" alt="BMS-599626 Hydrochloride"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000396789" cas="873837-23-1" ak="A316723" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A316723</span><span>873837-23-1</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/873837-23-1.html" target="_blank">BMS-599626 Hydrochloride</a></p>
+                                    <h2>$86.00/5mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/873837-23-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1557267-42-1.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/428/1557267-42-1.png" alt="Avitinib"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000427720" cas="1557267-42-1" ak="A241112" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A241112</span><span>1557267-42-1</span>97%</h3>
+                                    <p class="product-name"><a href="/products/1557267-42-1.html" target="_blank">Avitinib</a></p>
+                                    <h2>$28.00/1mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1557267-42-1.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/1557268-88-8.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/428/1557268-88-8.png" alt="Avitinib Maleate"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000427724" cas="1557268-88-8" ak="A175435" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A175435</span><span>1557268-88-8</span>97%</h3>
+                                    <p class="product-name"><a href="/products/1557268-88-8.html" target="_blank">Avitinib Maleate</a></p>
+                                    <h2>$124.00/10mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/1557268-88-8.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/118409-57-7.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/448/118409-57-7.png" alt="AG 18"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000447952" cas="118409-57-7" ak="A423886" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A423886</span><span>118409-57-7</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/118409-57-7.html" target="_blank">AG 18</a></p>
+                                    <h2>$148.00/250mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/118409-57-7.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/388082-78-8.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/486/388082-78-8.png" alt="Lapatinib ditosylate hydrate"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000485639" cas="388082-78-8" ak="A447246" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A447246</span><span>388082-78-8</span>98%</h3>
+                                    <p class="product-name"><a href="/products/388082-78-8.html" target="_blank">Lapatinib ditosylate hydrate</a></p>
+                                    <h2>$535.00/10g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/388082-78-8.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/848942-61-0.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/533/848942-61-0.png" alt="2-(4-((4-((3-Chloro-2-fluorophenyl)amino)-7-methoxyquinazolin-6-yl)oxy)piperidin-1-yl)-N-methylacetamide"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000532826" cas="848942-61-0" ak="A258461" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A258461</span><span>848942-61-0</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/848942-61-0.html" target="_blank">2-(4-((4-((3-Chloro-2-fluorophenyl)amino)-7-methoxyquinazolin-6-yl)oxy)piperidin-1-yl)-N-methylacetamide</a></p>
+                                    <h2>$34.00/1mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/848942-61-0.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/850140-73-7.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/579/850140-73-7.png" alt="Afatinib dimaleate"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000578026" cas="850140-73-7" ak="A170920" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A170920</span><span>850140-73-7</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/850140-73-7.html" target="_blank">Afatinib dimaleate</a></p>
+                                    <h2>$135.00/1g</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/850140-73-7.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                        <dl class="sales-dl position-r">
+                            <dt>
+                                <div class="menu-detail-img">
+                                    <a href="/products/289499-45-2.html" target="_blank" class="a_img_box"><img src="https://file.ambeed.com/static/upload/proimg/595/289499-45-2.png" alt="Canertinib dihydrochloride"></a>
+                                </div>
+                                <div class="menu-detail-txt">
+                                    <p class="menu-detail-xin">
+                                    <span class="float-left"></span>
+                                    <span class="position-r xin-click">
+                                    <img class="position-r xin-add" onclick="_addFavorites(this)" proid="P000594007" cas="289499-45-2" ak="A239262" src="/static/img/xin-add.png" alt="">
+                                    <span class="position-a xin-tips">click to sign in and save</span>
+                                    <img class="position-a xin-b-shadow" src="/static/img/bottom-green.png" alt="">
+                                    </span>
+                                    </p>
+                                    <h3 class="sales-text"><span>A239262</span><span>289499-45-2</span>98+%</h3>
+                                    <p class="product-name"><a href="/products/289499-45-2.html" target="_blank">Canertinib dihydrochloride</a></p>
+                                    <h2>$96.00/100mg</h2>
+                                </div>
+                            </dt>
+                            <dd class="hover-btn">
+                                <a href="/products/289499-45-2.html" class="btn red-btn float-right show">Detail</a>
+                            </dd>
+                        </dl>
+                    
+                </div>
+            
+        </div>
+    </div>
+	<div class="clear"></div>
+	<div class="pages">
+        <a href="javascript:void(0)"><img src="/static/img/prev.png" alt=""></a>
+        <span> page 1 of 3</span>
+        <a href="/egfr.html?pagesize=20&amp;pageindex=2"><img src="/static/img/next.png" alt=""></a>
+    </div>
+	<div class="feedback">
+		<p><a class="btn bulk-btn" href="javascript:;" style="width: 200px;">Inquiry</a></p>
+	</div>
+</div>
+
+<div class="clear height40"></div>
+	<div id="footer"></div>
+
+</body>
+</html>
