@@ -31,7 +31,9 @@ for (i=0;i<x.length;i++)
   document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
   document.write("</td><td>");
   document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
-  document.write("</td></tr>");
+  document.write("</td><td><a href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
+  document.write(x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue);
+  document.write("<a></td></tr>");
   }
 document.write("</table>");
 </script>
