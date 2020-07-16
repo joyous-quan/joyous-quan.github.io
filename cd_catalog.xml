@@ -8,6 +8,7 @@
 <PRICE>10.90</PRICE>
 <YEAR>1985</YEAR>
 <LINK>https://www.baidu.com/</LINK>
+<LINKNAME>百度</LINKNAME>
 </CD>
 <CD>
 <TITLE>Hide your heart</TITLE>
@@ -17,6 +18,7 @@
 <PRICE>9.90</PRICE>
 <YEAR>1988</YEAR>
 <LINK>https://www.bidepharm.com/</LINK>
+<LINKNAME>毕得</LINKNAME>
 </CD>
 <CD>
 <TITLE>Greatest Hits</TITLE>
@@ -25,7 +27,8 @@
 <COMPANY>RCA</COMPANY>
 <PRICE>9.90</PRICE>
 <YEAR>1982</YEAR>
-<LINK>https://www.baidu.com/</LINK>
+<LINK>https://www.ambeed.com/</LINK>
+<LINKNAME>Ambeed</LINKNAME>
 </CD>
 <CD>
 <TITLE>Still got the blues</TITLE>
@@ -34,6 +37,7 @@
 <COMPANY>Virgin records</COMPANY>
 <PRICE>10.20</PRICE>
 <YEAR>1990</YEAR>
-<LINK>https://www.bidepharm.com/</LINK>
+<LINK>https://www.bldpharm.com/</LINK>
+<LINKNAME>BLDpharm</LINKNAME>
 </CD>
 </CATALOG>
