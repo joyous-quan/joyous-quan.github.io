@@ -10,7 +10,17 @@
 </style>
 </head>
 <body>
-
+<table>
+  <thead>
+    <tr>
+      <th>ARTIST</th>
+      <th>TITLE</th>
+      <th>LINK</th>
+    </tr>
+  </thead>
+  <tbody id="tbody_list">
+  </tbody>
+</table>
 
 
 <script type="text/javascript">
@@ -28,19 +38,15 @@ xmlDoc=xmlhttp.responseXML;
 
 document.write("<table border='1'>");
 var x=xmlDoc.getElementsByTagName("CD");
-for (i=0;i<x.length;i++)
-  {
-  document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
-  document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
-  document.write("</td><td><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
-  document.write(x[i].getElementsByTagName("LINKNAME")[0].childNodes[0].nodeValue);
-  document.write("<a></td></tr>");
-  }
-document.write("</table>");
+for (i=0;i<x.length;i++) {
+  var tr_html = ""
+    tr_html += '<tr><td>' + x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    '</td><td>' + x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    '</td><td><a target="_blank" href="' + x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue'">' + x[i].getElementsByTagName("LINKNAME")[0].childNodes[0].nodeValue + '<a></td></tr>'
+}
+var tbody_html = document.getElementById('tbody_list');
+tbody_html.append(tr_html);
+
 </script>
-
-
 
 </html>
