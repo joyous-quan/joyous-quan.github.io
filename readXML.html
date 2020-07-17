@@ -42,7 +42,7 @@ for (i=0;i<x.length;i++) {
   var tr_html = ""
     tr_html += '<tr><td>' + x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     '</td><td>' + x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    '</td><td><a target="_blank" href="' + x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue'">' + x[i].getElementsByTagName("LINKNAME")[0].childNodes[0].nodeValue + '<a></td></tr>'
+    '</td><td><a target="_blank" href="' + x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue + '">' + x[i].getElementsByTagName("LINKNAME")[0].childNodes[0].nodeValue + '</a></td></tr>'
 }
 var tbody_html = document.getElementById('tbody_list');
 tbody_html.append(tr_html);
