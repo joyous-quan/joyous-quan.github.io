@@ -22,20 +22,23 @@ else
   {// code for IE6, IE5
   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
-xmlhttp.open("GET","test.xml",false);
+xmlhttp.open("GET","cd_catalog.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML;
 
-document.write("<div>");
-var x=xmlDoc.getElementsByTagName("ITEM");
-
-  document.write("<h5>"+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h5>");
-
-  document.write("<p>"+x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue+"</p>");
-  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("REFERENCE")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("REFERENCE")[0].childNodes[0].nodeValue+"<a></p>");
-  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"<a></p>");
-
-document.write("</div>");
+document.write("<table border='1'>");
+var x=xmlDoc.getElementsByTagName("CD");
+for (i=0;i<x.length;i++)
+  {
+  document.write("<tr><td>");
+  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+  document.write("</td><td><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
+  document.write(x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue);
+  document.write("<a></td></tr>");
+  }
+document.write("</table>");
 </script>
 
 
