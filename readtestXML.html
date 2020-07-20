@@ -27,13 +27,13 @@ xmlhttp.send();
 xmlDoc=xmlhttp.responseXML;
 
 document.write("<table border='1'>");
-var x=xmlDoc.getElementsByTagName("CD");
+var x=xmlDoc.getElementsByTagName("ITEM");
 for (i=0;i<x.length;i++)
   {
   document.write("<tr><td>");
-  document.write(x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
   document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+  document.write("</td><td>");
+  document.write(x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue);
   document.write("</td><td><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
   document.write(x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue);
   document.write("<a></td></tr>");
