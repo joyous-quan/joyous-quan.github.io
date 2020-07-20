@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <style type="text/css" media="screen">
-    table{width:100%; border-collapse: collapse;}
-    table td {padding:5px 10px;border:1px solid #ddd;}
+        *{line-height:24px;font-size:14px;}
 </style>
 </head>
 <body>
@@ -30,13 +29,15 @@ document.write("<div>");
 var x=xmlDoc.getElementsByTagName("ITEM");
 for (i=0;i<x.length;i++)
   {
-  document.write("<h5>");
+  document.write("<h3>");
   document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
-  document.write("</h5><p>");
+  document.write("</h3><p>");
   document.write(x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue);
-  document.write("</p><p><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
+  document.write("</p><p><a target='_blank' href='"+x[i].getElementsByTagName("REFERENCE")[0].childNodes[0].nodeValue+"'>");
+  document.write(x[i].getElementsByTagName("REFERENCE")[0].childNodes[0].nodeValue);
+  document.write("</a><p><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
   document.write(x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue);
-  document.write("<a></p>");
+   document.write("</a></p>");
   }
 document.write("</div>");
 </script>
