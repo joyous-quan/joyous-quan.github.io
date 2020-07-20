@@ -27,15 +27,14 @@ xmlhttp.send();
 xmlDoc=xmlhttp.responseXML;
 
 document.write("<div>");
-var x=xmlDoc.getElementsByTagName("item");
-for (i=0;i<x.length;i++)
-  {
-  document.write("<h5>"+x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue+"</h5>");
+var x=xmlDoc.getElementsByTagName("ITEM");
 
-  document.write("<p>"+x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue+"</p>");
-  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("reference")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("reference")[0].childNodes[0].nodeValue+"<a></p>");
-  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"<a></p>");
-  }
+  document.write("<h5>"+x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</h5>");
+
+  document.write("<p>"+x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue+"</p>");
+  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("REFERENCE")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("REFERENCE")[0].childNodes[0].nodeValue+"<a></p>");
+  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"<a></p>");
+
 document.write("</div>");
 </script>
 
