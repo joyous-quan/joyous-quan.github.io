@@ -26,19 +26,19 @@ xmlhttp.open("GET","test.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML;
 
-document.write("<table border='1'>");
+document.write("<div>");
 var x=xmlDoc.getElementsByTagName("ITEM");
 for (i=0;i<x.length;i++)
   {
-  document.write("<tr><td>");
+  document.write("<h5>");
   document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
-  document.write("</td><td>");
+  document.write("</h5><p>");
   document.write(x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue);
-  document.write("</td><td><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
+  document.write("</p><p><a target='_blank' href='"+x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue+"'>");
   document.write(x[i].getElementsByTagName("LINK")[0].childNodes[0].nodeValue);
-  document.write("<a></td></tr>");
+  document.write("<a></p>");
   }
-document.write("</table>");
+document.write("</div>");
 </script>
 
 
