@@ -8,12 +8,5 @@
 		<REFERENCE>Org. Biomol. Chem., 2016,14, 3614-3622</REFERENCE>
 		<LINK>https://en.wikipedia.org/wiki/Isoquinoline</LINK>
 	</ITEM>
-	<ITEM>
-		<TITLE>4721-98-6 ’s effect of  The kinetics and mechanism of the organo-iridium-catalysed enantioselective reduction of imines</TITLE>
-		<DESCRIPTION>4721-98-6,named as 6,7-Dimethoxy-1-methyl-3,4-dihydroisoquinoline,is a isoquinoline compound, with molecular weight of 205.25, molecular formula C12H15NO2,and Pubchem ID 22652 The iridium complex of pentamethylcyclopentadiene and (S,S)-1,2-diphenyl-N?-tosylethane-1,2-diamine is an effective catalyst for the asymmetric transfer hydrogenation of imine substrates under acidic conditions. Using the Ir catalyst and a 5 : 2 ratio of formic acid : triethylamine as the hydride source for the asymmetric transfer hydrogenation of 1-methyl-3,4-dihydroisoquinoline and its 6,7-dimethoxy substituted derivative, in either acetonitrile or dichloromethane, shows unusual enantiomeric excess (ee) profiles for the product amines. The reactions initially give predominantly the (R) enantiomer of the chiral amine products with >90% ee but which then decreases significantly during the reaction. The decrease in ee is not due to racemisation of the product amine, but because the rate of formation of the (R)-enantiomer follows first-order kinetics whereas that for the (S)-enantiomer is zero-order. This difference in reaction order explains the change in selectivity as the reaction proceeds - the rate formation of the (R)-enantiomer decreases exponentially with time while that for the (S)-enantiomer remains constant. A reaction scheme is proposed which requires rate-limiting hydride transfer from the iridium hydride to the iminium ion for the first-order rate of formation of the (R)-enantiomer amine and rate-limiting dissociation of the product for the zero-order rate of formation of the (S)-enantiomer.</DESCRIPTION>
-		<CAS>4721-98-6</CAS>
-		<PUBCHEMID>22652</PUBCHEMID>
-		<REFERENCE>Org. Biomol. Chem., 2016,14, 3614-3622</REFERENCE>
-		<LINK>https://en.wikipedia.org/wiki/Isoquinoline</LINK>
-	</ITEM>
+	
 </ROOT>
