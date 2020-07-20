@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style type="text/css" media="screen">
+    table{width:100%; border-collapse: collapse;}
+    table td {padding:5px 10px;border:1px solid #ddd;}
+</style>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","test.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.write("<div>");
+var x=xmlDoc.getElementsByTagName("item");
+for (i=0;i<x.length;i++)
+  {
+  document.write("<h5>"+x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue+"</h5>");
+
+  document.write("<p>"+x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue+"</p>");
+  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("reference")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("reference")[0].childNodes[0].nodeValue+"<a></p>");
+  document.write("<p><a target='_blank' href='"+x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"'>"+x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"<a></p>");
+  }
+document.write("</div>");
+</script>
+
+
+
+</html>
