@@ -1,0 +1,41 @@
+.single-menu-con{margin:0 -1%;}
+.single-menu-con li{float:left;margin:0 1% 1.2% 1%;padding:14px 6px 12px 10px;width:23%;height:45px;background:#f6f6f6}
+.single-menu-con li a{float:left;display:inline-block;overflow:hidden;padding-left:10px;width:90%;border-left:2px solid #f39800;text-overflow:ellipsis;white-space:nowrap;font-size:16px}
+.single-menu-con li i{display:none;color:#f39800}
+.single-menu-con li:hover{background:#fff;-webkit-box-shadow:0 0 8px rgba(36,50,56,.3);-moz-box-shadow:0 0 8px rgba(36,50,56,.3);box-shadow:0 0 8px rgba(36,50,56,.3)}
+.single-menu-con li:hover a{color:#f39800}
+.single-menu-con li:hover i{display:block}
+.single-submenu-con li{padding:0;}
+.single-submenu-con li a{border:none;padding-left:0;width:100%;padding:14px 6px 12px 10px;}
+.single-submenu-con li:hover {background:#f39800}
+.single-submenu-con li:hover a{color:#222;}
+
+/* filter-con */
+.filter-con{margin-bottom:10px;padding:0 15px 0 10px;height:36px;border-radius:4px;background:#eee}
+.filter-con .filter-left div{float:left;display:inline-block;margin-top:6px;margin-right:10px}
+.filter-con .filter-left label{margin-right:5px;cursor:pointer}
+.tips-kuang{position:relative;height:40px}
+.tips-kuang:hover .tips-content{display:block}
+.filter-con .tips-txt{padding-right:35px;padding-left:6px;width:auto!important;height:24px;min-width:80px;border:1px solid #aaa;background:#fff url(/static/img/down.png) no-repeat right center;text-align:left;font-size:12px;line-height:24px}
+.tips-content{position:absolute;top:40px;left:-40px;z-index:20;display:none;padding:5px 10px;width:160px;border:1px solid #aaa;border-radius:4px;background:#fff;color:#555}
+.tips-content .top-img{position:absolute;top:-16px;left:69px}
+.tips-content li{margin-top:5px;height:18px;cursor:pointer}
+.tips-content .tips-active span{border-bottom:1.5px solid #b6b6b6}
+.tips-content li span{display:inline-block;padding-left:2px}
+.tips-content i{float:right;display:none;color:#555}
+.tips-content li:hover span{text-decoration:underline}
+.tips-content li:hover i{display:block}
+.filter-right a{display:inline-block;padding-top:10px;color:#666}
+.filter-right a:hover{text-decoration:underline}
+
+.content-box .menu-three-box{float:left;width:230px}
+.content-box .menu-three-item{border-bottom:1px solid #eee}
+.p_show{cursor:pointer}
+.content-box .menu-three-item span{font-weight:700;font-size:16px;line-height:30px}
+.p_show_less,.p_show_more{float:right;padding:5px;color:#0272d0;line-height:14px!important;cursor:pointer}
+.menu_hide .p_show_less,.p_show .p_show_more{display:none}
+.menu_hide .p_show_more{display:block}
+.content-box .overflowY{overflow-y:auto;margin-bottom:10px;max-height:205px}
+.menu-three-item a{display:block;color:#666;white-space:nowrap;font-size:12px;line-height:20px}
+.content-box .single-menu-detail-con{float:right;width:958px}
+.content-box .sales-dl{width:24%}
