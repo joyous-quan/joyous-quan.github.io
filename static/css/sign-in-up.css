@@ -1,0 +1,33 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+body{position:relative;width:100%;min-height:100vh;color:#222;font-size:14px;font-family:Arial;}
+img{max-width:100%;max-height:100%;border:none;}
+a{color:#222;text-decoration:none;}
+li,ol,ul{list-style:none;}
+input::-ms-clear,input::-ms-reveal{display:none;}
+button,input{outline:0;border:none;}
+.container{width:100%;}
+.bg-green{width:100%;height:380px;background:#ffe100;text-align:center;}
+.bg-green img{margin-top:60px;}
+.sign-kuang{position:relative;top:-200px;margin:0 auto;width:90%;max-width:420px;}
+h2{margin-bottom:5px;text-align:center;font-size:24px;}
+.sign-con{padding:5% 8% 8%;width:100%;min-height:340px;border:1px solid #ddd;border-radius:5px;background:#fff;color:#666;}
+.sign-con p{margin-top:12px;}
+.ipt_text{margin-top:3px;}
+input[type='password'],input[type='text']{padding:0 10px;width:100%;height:40px;border:1px solid #ddd;border-radius:4px;}
+.forgot{text-align:right;}
+.forgot a,.statement a{display:inline-block;border-bottom:1px solid #333;font-size:14px;}
+.forgot a:hover,.statement a:hover{border-color:#f39800;color:#f39800;}
+input[type='checkbox']{width:16px;height:16px;}
+.checkbox span{padding-left:22px;}
+.font12{font-size:12px;}
+.btn,button{display:inline-block;width:100%;height:40px;border-radius:40px;text-align:center;font-weight:700;font-size:16px;line-height:40px;}
+.green-btn{background:#fdd000;}
+.white-btn{border:1px solid #222;background:#fff;line-height:38px;}
+p.tips{margin:0 0 18px;height:20px;border-bottom:1px solid #ddd;text-align:center;}
+.tips span{position:relative;top:10px;padding:3px 10px;background:#fff;}
+.error,.errorBox{color:red;}
+.cursor{cursor:pointer;}
+.footer-txt{position:absolute;bottom:0;margin:0 auto;padding:10px;width:100%;background:#fff;color:#a0a0a0;text-align:center;font-size:12px;}
+.assistance-txt{display:inline-block;margin-bottom:25px;color:#888;line-height:20px;}
+.sign-con p.ipt{margin-top:3px;padding-bottom:10px;}
+.margin-top20{margin-top:15px;}

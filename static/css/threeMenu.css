@@ -1,0 +1,62 @@
+/* filter-con */
+.filter-con{margin-bottom:10px;padding:0 15px;height:36px;border-radius:4px;background:#eee;font-size:14px;}
+.filter-left div{float:left;margin:7px 10px 0 0;}
+.filter-left div.tips-kuang{position:relative;margin-top:5px;height:36px;font-size:12px;}
+.tips-kuang:hover .tips-content{display:block;}
+.tips-txt{padding-right:35px;padding-left:6px;width:auto!important;height:26px;min-width:80px;border:1px solid #ccc;border-radius:2px;background:#fff url(/static/img/down.png) no-repeat right center;text-align:left;line-height:24px;}
+.tips-content{position:absolute;top:36px;left:-40px;z-index:20;display:none;padding:6px;width:150px;border:1px solid #ccc;border-radius:4px;background:#fff;}
+.tips-content .top-img{position:absolute;top:-16px;left:67px;}
+.tips-content li{margin-top:5px;height:18px;cursor:pointer;}
+.tips-content li span{display:inline-block;padding-left:2px;}
+.tips-content li i{float:right;color:#fff;}
+.tips-content li:hover,.tips-content li:hover i{color:#f39800;}
+.tips-content li:nth-child(2),.tips-content li:nth-child(2):hover{color:#999;cursor:default;}
+.tips-content li:nth-child(2):hover i{color:#fff;}
+.filter-right{padding-top:10px;}
+.filter-right a{color:#666;}
+.filter-right a:hover,.overflowY a:hover{color:#f39800;text-decoration:underline;}
+/*.menu-three-box */
+.content-box .menu-three-box{float:left;width:20%;}
+.menu-three-box .menu-three-item{border-bottom:1px solid #eee;}
+.menu-three-item p,.periodic_min{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.p_show span{font-weight:700;font-size:16px;line-height:30px;}
+.p_show_less,.p_show_more{float:right;padding:0 5px;color:#0272d0;cursor:pointer;}
+.menu_hide .p_show_less,.p_show .p_show_more{display:none;}
+.menu_hide .p_show_more{display:block;}
+.menu-three-item .overflowY{overflow-y:auto;margin-bottom:10px;max-height:200px;}
+.overflowY a{display:block;overflow:hidden;color:#666;text-overflow:ellipsis;white-space:nowrap;line-height:20px;}
+.overflowY label{display:inline-block;width:100%;height:20px;line-height:20px;}
+.overflowY label input[type=checkbox]{position:relative;top:2px;visibility:visible;margin-right:5px;width:13px;height:13px;}
+.CE_search{position:relative;height:40px;}
+.CE_search .CE_ipt{padding:0 35px 0 5px;width:100%;height:30px;border:1px solid #eee;background:#fef2dd;line-height:30px;}
+.CE_search .CE_span{position:absolute;top:0;right:0;display:block;width:30px;height:30px;background:#f39800 url(https://www.ambeed.com/static/img/search.png) no-repeat center;cursor:pointer;}
+.CE_search_tips{position:absolute;top:30px;left:0;z-index:1;display:none;padding:5px;width:100%;background:#fff;-webkit-box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);-moz-box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);font-size:12px;}
+.CE_search_tips a i{color:#f39800;}
+.periodic_min{overflow:hidden;margin-bottom:10px;border:1px solid #ddd;background:#fff;text-align:right;line-height:22px;}
+.periodic_min dd{position:relative;float:left;padding-right:5px;width:20%;height:24px;border:1px solid #fff;background:#eee;color:#999;cursor:default;}
+.periodic_min dd i{font-style:normal;font-size:14px;}
+.periodic_min dd.default_gray{font-weight:700;}
+.periodic_min dd.periodic_dd{background:#fef2dd;color:#222;cursor:pointer;}
+.periodic_min dd.bg_gray{background:#f39800;font-weight:700;}
+.periodic_min dd sup{visibility:hidden;padding-left:5px;line-height:14px;}
+.periodic_min dd.bg_gray sup{visibility:visible;color:#fff;}
+.FW_div label i{padding-right:5px;color:#f39800;}
+.FW_div .FW_span{padding:0 2px;}
+/*.content-box .single-menu-detail-con */
+.content-box .single-menu-detail-con{float:right;width:80%;}
+.content-box .single-menu-detail-con .sales-dl{width:24%;}
+
+
+@media only screen and (max-width:1024px){
+.content-box .single-menu-detail-con{margin:0 auto;width:100%;}
+.content-box .menu-three-box{display:none}
+}
+@media only screen and (max-width:920px){
+.content-box .single-menu-detail-con .sales-dl{width:32.33%;}
+}
+@media only screen and (max-width:650px){
+.content-box .single-menu-detail-con .sales-dl{width:49%;}
+}
+@media only screen and (max-width:480px){
+.content-box .single-menu-detail-con .sales-dl{width:99%;}
+}

@@ -1,0 +1,38 @@
+
+.bg-yellow{overflow:hidden;padding:10px 10px 5px;background-color:#fef6bd;}
+.welcome{position:relative;top:-18px;left:5px;font-size:16px;}
+.bg-yellow li{float:left;padding-left:50px;height:50px;line-height:50px;}
+.bg-yellow li a{display:inline-block;font-size:14px;line-height:18px;}
+.active-inf{border-bottom:1px solid #222;font-weight:700;}
+.bg-gray{padding:12px 10px 0;background:#eee;}
+.bg-gray ul{margin:0 auto;width:auto;}
+.bg-gray li{display:inline-block;}
+.bg-gray li a{display:inline-block;margin:0 15px;padding:0 25px;font-size:14px;min-height:24px;}
+.my-account-con{margin-top:40px;min-height:300px;font-size:14px;}
+.my-account-con table{border-bottom:1px solid #ddd;margin-bottom:25px;width:100%;}
+.my-account-con h4{padding:0 0 5px 10px;border-bottom:1px solid #ddd;}
+.my-account-con td{height:45px;color:#999;padding-left:10px;}
+/*personal-information.html */
+.personal-inf-con td{height:60px;border-top:1px solid #ddd;}
+.personal-inf-con td:nth-child(2){color:#222;}
+.personal-inf-con td input{display:none;padding:5px 10px;font-size:14px;}
+
+/*shipping-address.html */
+.addr-con td span{color:#222;}
+.tips-default{border:none;background:#f39800;}
+
+/*my-order.html */
+.my-inquiry-con{padding:0!important;}
+.my-inquiry-con table{border-right:1px solid #ddd;border-left:1px solid #ddd;}
+.my-inquiry-con thead td{height:45px;border-top:none;background:#eee;color:#999;}
+.my-inquiry-con td{height:60px;border-top:1px solid #ddd;color:#222;}
+.my-inquiry-con td a{color:#f39800;}
+.my-inquiry-con td a:hover{text-decoration:underline;}
+
+/*my-inquiry.html */
+
+/*my-favorites.html */
+.padding-top15{padding-top:10px;}
+.sales-dl{border-color:#ddd;}
+
+/*my-cart.html */

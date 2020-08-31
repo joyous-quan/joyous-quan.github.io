@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>register</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/static/img/ambeed.ico?t=20200615002" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/css/sign-in-up.css">
+<script type="text/javascript" src="/static/js/common-new.js?t=20190916001"></script>
+<script src="/static/h-ui/lib/jquery.validation/jquery.validate.min.js"></script>
+</head>
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body>
+<div class="container">
+<div class="bg-green">
+<a href="/">
+<img src="/static/img/new-logo.png" alt="">
+</a>
+</div>
+<div class="sign-kuang">
+<h2>Create New Account</h2>
+<div class="sign-con">
+<form id="register_form">
+<p> Name </p>
+<input class="ipt_text" type="text" id="name" name="name"/>
+<p class="email password"> Email <span class="font12">(Please use the official email)</span></p>
+<input class="ipt_text" type="text" id="email" maxlength="50" name="email"/>
+<p class="password"> Password <span class="font12">(Passwords must be at least 6 characters.)</span></p>
+<input class="ipt_text" type="password" id="password" maxlength="18" name="password"/>
+<p class="organization password"> Organization </p>
+<input class="ipt_text" type="text" id="organization" name="organization"/>
+<p class="font12 statement">
+By clicking "Create New Account" you agree that you are subject to Ambeed’s Notice of Privacy Practices and <a href="/privacy-policy.html"> Privacy Policy</a>.
+</p>
+</form>
+<p class="errorBox"></p>
+<button class="btn green-btn create-btn" onclick="_register()">Create New Account</button>
+<p class="checkbox" style="font-size: 12px;">
+<input style="visibility:visible;position:static;" type="checkbox" checked>
+<span style="display: inline;padding-left: 0px;line-height: 20px;">Email me about deals, promotions, new products and more.</span>
+</p>
+<p class="tips"><span>Already have an account ?</span></p>
+<a class="btn white-btn sign-btn" href="/user/login.html">Sign In</a>
+</div>
+</div>
+</div>
+<p class="footer-txt">
+Useful Links：SciQuest &nbsp; Aribat &nbsp; SciFindert &nbsp; DiscoveryGate &nbsp; &nbsp; © Copyright 2018-2020 A Pharm, Inc. All Rights Reserved.
+</p>
+
+
+
+
+<script>
+var validato;//表单验证对象
+var chk_email=["qq.com","163.com"];//检查后缀数组
+$(document).ready(function(e) {
+_getRegChkEmail();//获取禁止注册的邮箱后缀
+//添加自定义检查密码的方法
+jQuery.validator.addMethod("isPassword", function(value, element) {
+return /((?=.*[a-zA-Z])(?=.*\d)|(?=[a-zA-Z])(?=.*[#@!~%^&*])|(?=.*\d)(?=.*[#@!~%^&*]))[a-zA-Z\d#@!~%^&*]{6,18}/.test(value)?true:false;
+}, "Passwords must be at least 6 characters.");
+jQuery.validator.addMethod("isEmail", function(value, element) {
+return /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/.test(value)?true:false;
+}, "Enter a valid email address.");
+jQuery.validator.addMethod("chkEmail", function(value, element) {
+var emurl=value.split("@")[1];
+for(var i=0;i<chk_email.length;i++){
+if(emurl.indexOf(chk_email[i])>-1){
+return false;
+}
+}
+return true;
+}, "Please use the official email.");
+validator=$('#register_form').validate({
+rules:{
+name:"required",
+organization:"required",
+email:{
+required: true,
+isEmail: true,
+chkEmail:true
+},
+password:{
+required: true,
+minlength: 6,
+maxlength:18,
+isPassword:true
+}
+},
+messages:{
+name:"Please enter your name.",
+organization:"Please enter your organization.",
+email:{
+required:"Please enter your email address.",
+isEmail:"Enter a valid email address.",
+chkEmail:"Please use the official email."
+},
+password:{
+required:"Please enter your password.",
+minlength:"Passwords must be at least 6 characters.",
+maxlength:"Your password should be 6-18 characters long.",
+isPassword:'The password is relatively simple, it is recommended that you change to a combination of complex passwords, such as letters + numbers.'
+}
+}
+});
+$("#name")[0].focus();
+});
+function _chkName(obj){
+var val=$(obj).val();
+$(obj).removeClass("on").removeClass("off");
+!isempty(val)?$(obj).addClass('on'):$(obj).addClass('off');
+}
+function _chkEm(obj){
+var val=$(obj).val();
+$(obj).removeClass("on").removeClass("off");
+if(!isempty(val)){
+if(_chkEmail(val)){
+var chkok=true;
+var emurl=val.split("@")[1];
+for(var i=0;i<chk_email.length;i++){
+if(emurl.indexOf(chk_email[i])>-1){
+chkok=false;
+break;
+}
+}
+if(chkok){
+$(obj).addClass('on');
+}else{
+$(obj).addClass('off');
+}
+}else{
+$(obj).addClass('off');
+}
+}
+}
+function _chkPwd(obj){
+var val=$(obj).val();
+$(obj).removeClass("on").removeClass("off");
+if(!isempty(val)){
+_chkPassword(val)?$(obj).addClass('on'):$(obj).addClass('off');
+}
+}
+function _register(){
+$(".errorBox,label.error").hide();
+var flag = $("#register_form").valid();
+if(!flag){
+validator.focusInvalid();
+return false;
+}
+var name = $("#name").val();
+var email = $("#email").val();
+var password = $("#password").val();
+var organization = $("#organization").val();
+var params = {"name": name, "email": email, "password": password,"organization":organization};
+_DoAjaxAsyncTrue('POST', params, '/webapi/v1/user/register', function () {
+window.location.href = '/mem/personal-information.html';
+});
+}
+_domKey13(_register);
+//获取禁止注册的邮箱后缀
+function _getRegChkEmail(){
+_DoAjaxAsyncTrue("GET",{},"/webapi/v1/ChkRegEmail",function(res){
+if(res.length>0){
+chk_email=res;
+}
+})
+}
+</script>
+</body>
+</html>
