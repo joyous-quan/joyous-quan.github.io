@@ -169,7 +169,7 @@ table{width:100%;}
 
 /* 弹出层样式 */
 .application-mask,.hazard-statements-mask,.precautionary-statements-mask{position:fixed;top:0;right:0;bottom:0;left:0;z-index:110;overflow:hidden;margin:auto;width:90%;height:90%;max-width:1050px;max-height:620px;border-radius:4px;}
-.products-detail-popups-con{overflow-y:scroll;padding:0 20px;height:90%;}
+.products-detail-popups-con{overflow-y:scroll;padding:0 20px;height:90%;background:#fff;}
 .products-detail-popups-title{padding:10px 25px;background:#ffd76c;text-align:center;font-weight:700;font-size:20px;}
 .products-detail-popups h3{padding:25px 0 5px;text-align:center;font-weight:700;font-size:16px;}
 .bg_tr td{background:#f1e3be;}
