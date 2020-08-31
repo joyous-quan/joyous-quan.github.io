@@ -101,7 +101,7 @@
 	.new-head-top,.head-contact,.structure-btn,.head-sign-box,.fixed-sidebar{display:none!important;}
 
 	.newhead{padding-top:50px;}
-	.head{min-height:50px;background:#333;border:none;}
+	.head{min-height:50px;background:#222;border:none;}
 	/* new-head-middle     search */
 	.new-head-middle{padding:5px 5px 5px 60px;}
 	.head-search{padding-left:45px;width:100%;background:#fff url(/static/img/phone/logo_min.png) no-repeat 4px center;}
