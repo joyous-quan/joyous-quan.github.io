@@ -48,51 +48,15 @@ table{width:100%;}
 .tag_big:hover .big_main_img{display:block;}
 .big_main_img{position:absolute;top:-215px;left:-215px;z-index:4;display:none;width:500px;height:500px;border:1px solid #eee;background:#fff;-webkit-box-shadow:0 0 10px rgba(36,50,56,0.3);-moz-box-shadow:0 0 10px rgba(36,50,56,0.3);box-shadow:0 0 10px rgba(36,50,56,0.3);text-align:center;line-height:500px;}
 
-.HazMat-div {
-    position: relative;
-    z-index: 2;
-    float: right;
-    cursor: pointer;
-    color: #f39800;
-    padding-bottom:5px;
-    color:#222;
-}
-.HazMat-div span {
-    white-space: nowrap;
-}
-.HazMat-div img {
-    width: 18px;
-}
-.HazMat-text {
-    left: 0;
-    top: 24px;
-    max-width:600px;
-    min-width:560%;
-    z-index: 9;
-    padding:5px;
-}
-.HazMat-text p {
-    color: #222;
-    padding-bottom: 6px;
-    font-weight: 400;
-    line-height: 18px;
-}
-.HazMat-text table {
-    border: 1px solid #eee;
-}
-.HazMat-text thead td {
-    background: #eee;
-}
-.HazMat-text td {
-    padding-left: 5px;
-    height: 26px!important;
-    font-size: 12px;
-    line-height: 20px;
-    border-top: 1px solid #eee;
-}
-.HazMat-text::after {
-    left: 45px;
-}
+.HazMat-div{position:relative;z-index:2;float:right;padding-bottom:5px;color:#f39800;color:#222;cursor:pointer;}
+.HazMat-div span{white-space:nowrap;}
+.HazMat-div img{width:18px;}
+.HazMat-text{top:24px;left:0;z-index:9;padding:5px;max-width:600px;min-width:560%;}
+.HazMat-text p{padding-bottom:6px;color:#222;font-weight:400;line-height:18px;}
+.HazMat-text table{border:1px solid #eee;}
+.HazMat-text thead td{background:#eee;}
+.HazMat-text td{padding-left:5px;height:26px!important;border-top:1px solid #eee;font-size:12px;line-height:20px;}
+.HazMat-text::after{left:45px;}
 
 /*details-top-left  dtl-top*/
 .dtl-top .p-details-table{float:right;width:68%;}
@@ -169,13 +133,13 @@ table{width:100%;}
 
 /* 弹出层样式 */
 .application-mask,.hazard-statements-mask,.precautionary-statements-mask{position:fixed;top:0;right:0;bottom:0;left:0;z-index:110;overflow:hidden;margin:auto;width:90%;height:90%;max-width:1050px;max-height:620px;border-radius:4px;}
-.products-detail-popups-con{overflow-y:scroll;padding:0 20px;height:90%;background:#fff;}
+.popups{width:100%;height:100%;background:#fff;}
+.products-detail-popups-con{overflow-y:scroll;padding:0 20px;height:90%;}
 .products-detail-popups-title{padding:10px 25px;background:#ffd76c;text-align:center;font-weight:700;font-size:20px;}
 .products-detail-popups h3{padding:25px 0 5px;text-align:center;font-weight:700;font-size:16px;}
 .bg_tr td{background:#f1e3be;}
 .products-detail-popups-con td{padding:8px 5px 8px 10px;border-bottom:1px solid #eee;}
 .hazard-statements-mask td:nth-child(2),.precautionary-statements-mask td:nth-child(2){border-left:1px solid #eee;}
-
 
 #chat-application{bottom:20px!important;}
 @media only screen and (max-width:1024px){
