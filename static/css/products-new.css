@@ -169,13 +169,13 @@ table{width:100%;}
 
 /* 弹出层样式 */
 .application-mask,.hazard-statements-mask,.precautionary-statements-mask{position:fixed;top:0;right:0;bottom:0;left:0;z-index:110;overflow:hidden;margin:auto;width:90%;height:90%;max-width:1050px;max-height:620px;border-radius:4px;}
-.products-detail-popups-con{overflow-y:scroll;padding:0 20px;height:90%;background:#fff;}
+.popups{width:100%;height:100%;background:#fff;}
+.products-detail-popups-con{overflow-y:scroll;padding:0 20px;height:90%;}
 .products-detail-popups-title{padding:10px 25px;background:#ffd76c;text-align:center;font-weight:700;font-size:20px;}
 .products-detail-popups h3{padding:25px 0 5px;text-align:center;font-weight:700;font-size:16px;}
 .bg_tr td{background:#f1e3be;}
 .products-detail-popups-con td{padding:8px 5px 8px 10px;border-bottom:1px solid #eee;}
 .hazard-statements-mask td:nth-child(2),.precautionary-statements-mask td:nth-child(2){border-left:1px solid #eee;}
-
 
 #chat-application{bottom:20px!important;}
 @media only screen and (max-width:1024px){
