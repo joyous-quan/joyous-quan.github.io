@@ -29,7 +29,6 @@
 
 @media only screen and (max-width:480px){
 	.inquiry-popups{max-height:650px}
-	.products-detail-popups-title{padding:8px 15px;}
 	.inquiry-form{padding:8px 15px 5px;}
 	.textarea-con-small{height:36px;}
 	.textarea-con-small textarea{height:34px;}
