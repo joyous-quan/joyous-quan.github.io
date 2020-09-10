@@ -5,8 +5,10 @@ body{position:relative;padding-bottom:400px;min-height:1000px;min-height:100vh;}
 dd,dl,dt,ul,ol,li,form,h1,h2,h3,h4,h5,h6,img,p,label{margin:0;padding:0;}
 a{color:#222;text-decoration:none;outline:none;}
 li,ul,ol{list-style:none;}
-input,select,textarea{margin:0;padding:0;color:#222;font-size:12px;font-family:Arial,Helvetica,sans-serif;}
-select{-webkit-appearance:none;-ms-appearance:none;-moz-appearance:none;appearance:none;}
+input,select,textarea{padding:0;color:#222;font-size:12px;font-family:Arial,Helvetica,sans-serif;}
+input[type='text'],select,textarea{-webkit-appearance:none;-ms-appearance:none;-moz-appearance:none;appearance:none;}
+input[type='text']{padding-left:5px;}
+select{background:#fff url(/static/img/select-ico.png) no-repeat right center;padding-right:18px;padding-left:4px;}
 input:focus,textarea:focus,select:focus{outline:none;}
 input::-ms-clear,input::-ms-reveal{display:none;}
 input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset;}
@@ -37,7 +39,7 @@ sub,sup{display:inline-block;transform:scale(0.9);-webkit-transform:scale(0.9)}
 .position-r{position:relative;}
 .position-a{position:absolute;}
 .hidden{display:none;}
-
+.del-mask .icon-delete:before{content:'';}
 .inlineBlock{display:inline-block;}
 .errorBox{padding:8px 0;color:#f00;line-height:14px;font-size:12px;} 
 .btn{display:inline-block;height:30px;min-width:60px;border-radius:2px;text-align:center;line-height:30px;}

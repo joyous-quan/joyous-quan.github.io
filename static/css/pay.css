@@ -37,7 +37,7 @@ table{width:100%;color:#333;}
 .p_tabs label.on{background:#ffe100;}
 .dv_tabs_cnt{min-height:50px;}
 .dv_tabs_cnt .p_note{color:#999;}
-.input,.p_po input,.select{margin-right:10px;height:24px;min-width:45px;border:1px solid #d5d5d5;background:#fff;color:#222;text-indent:5px;line-height:24px;}
+.input,.p_po input,.select{margin-right:10px;height:24px;min-width:45px;border:1px solid #d5d5d5;color:#222;line-height:24px;}
 .sel_2nd{width:150px;}
 .dv_tabs_cnt p{margin:10px 0;padding-left:15px;}
 .dv_tabs_cnt .p_32 label{margin-right:20px;display:inline-block;}

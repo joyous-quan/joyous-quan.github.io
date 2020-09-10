@@ -99,14 +99,16 @@ table td .sp_hide{display:none;}
 #footer,.cart_title{display:none;}
 body{padding-bottom:50px;}
 .dv_table_list{padding-bottom:100px;}
-
-.addr-con td{position:relative;display:inline-block;width:50%;padding:10px 0 5px 120px;}
-.addr-con td span,.my-inquiry-con td .sp_hide{position:absolute;left:2px;display:inline-block;color:#999;}
-.my-inquiry-con td .sp_hide{left:15px;}
+.addr-con td{position:relative;display:inline-block;width:50%;padding:10px 0 5px 120px;min-height:30px;}
+.addr-con td span,.my-inquiry-con td .sp_hide{position:absolute;display:inline-block;color:#999;}
+.addr-con td span{left:2px;top:10px;}
+.my-inquiry-con td .sp_hide{left:5px;top:8px;}
 .my-inquiry-con thead {display:none;}
-.my-inquiry-con td {display:inline-block;width:50%;border:none;height:auto;padding:8px 8px 0 130px;vertical-align:top;}
+.my-inquiry-con td {position:relative;display:inline-block;width:50%;border:none;height:auto;padding:8px 8px 0 130px;vertical-align:top;min-height:24px;}
 .my-inquiry-con tr td:last-child {padding-bottom:8px;}
 .my-inquiry-con tr{border:1px solid #ddd;}
+.my-inquiry-con.order_detail td,.order_top1 dd, .order_top2 dd{padding-left:110px;}
+.order_top1 dd i, .order_top2 dd i{width:110px;}
 /*my-account-con addr-con billing-addr-con*/
 .addr-con table{position:relative;}
 .addr-con .edit_td,.addr-con .setDefault_td{position:absolute;bottom:0;width:auto;}
