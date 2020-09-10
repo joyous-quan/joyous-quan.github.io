@@ -1,5 +1,4 @@
 /*  head   */
-.newhead{padding-top:80px;}
 .head{z-index:100;position:fixed;top:0;left:0;width:100%;min-height:80px;background:#fff;}
 .fixed-head{border-bottom:1px solid #eee;-webkit-box-shadow:0 0 5px #aaa;-moz-box-shadow:0 0 5px #aaa;box-shadow:0 0 5px #aaa;}
 
@@ -122,7 +121,7 @@
 	.nav-title{padding-right:40px;height:50px;color:#222;text-align:left;white-space:nowrap;line-height:50px;border-top:none;border-bottom:1px solid #ddd;}
 	.nav-title span{top:0;}
 	.contact-dl .nav-title{border-bottom:none;}
-	.line-span{position:absolute;top:5px0;right:0;display:inline-block;width:40px;height:40px;background:url(/static/img/phone/menu_down.png) no-repeat center;}
+	.line-span{position:absolute;top:5px;right:0;display:inline-block;width:40px;height:40px;background:url(/static/img/phone/menu_down.png) no-repeat center;}
 	.line-span-this{background:url(/static/img/phone/menu_up.png) no-repeat center;}
 	.subnav-dl{position:static;overflow:hidden;padding:10px 0 0;}
 	.subnav-dl dd{width:100%;}
