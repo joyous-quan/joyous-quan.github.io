@@ -213,8 +213,3 @@ body{padding-bottom:0;}
 .pages{padding:30px 0;font-size:12px;line-height:20px;}
 .pages .num{height:20px;min-width:20px;border-radius:20px;}
 }
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-	table td{ border-width:0.5px!important;}
-
-}
