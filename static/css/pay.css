@@ -37,7 +37,7 @@ table{width:100%;color:#333;}
 .p_tabs label.on{background:#ffe100;}
 .dv_tabs_cnt{min-height:50px;}
 .dv_tabs_cnt .p_note{color:#999;}
-.input,.p_po input,.select{margin-right:10px;height:24px;min-width:45px;border:1px solid #d5d5d5;color:#222;line-height:24px;}
+.input,.p_po input,.select{margin-right:10px;height:24px;min-width:45px;border:1px solid #d5d5d5;color:#222;vertical-align:middle;}
 .sel_2nd{width:150px;}
 .dv_tabs_cnt p{margin:10px 0;padding-left:15px;}
 .dv_tabs_cnt .p_32 label{margin-right:20px;display:inline-block;}
@@ -45,7 +45,7 @@ table{width:100%;color:#333;}
 .sp_Collect{position:absolute;left:5px;top:4px;display:inline-block;color:#222;}
 .div_payment{margin-top:10px;}
 .div_payment p.p_32{position:relative;padding-left:145px;margin:10px 0;line-height:16px;}
-.div_payment .p_32 label{position:absolute;left:15px;top:2px;display:inline-block;}
+.div_payment .p_32 label{position:absolute;left:15px;display:inline-block;}
 .p_32 em{display:inline-block;font-style:normal;white-space:nowrap;}
 .div_payment .p_title{padding:0 0 10px 15px;border-bottom:1px solid #fff;font-weight:700;font-size:14px;}
 #cvv,#month,#year{width:60px;}
