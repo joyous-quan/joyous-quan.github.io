@@ -166,8 +166,6 @@ body{padding-bottom:60px;}
 }
 
 @media only screen and (max-width:580px){
-.HazMat-text {min-width:320%;left:auto;right:0;}
-.HazMat-text::after {left:auto;right:45px;}
 .right-download select{margin-right:0;}
 .p-details-main table td{display:inline-block; min-width:42%;padding:5px 0 ;height:auto;max-width:50%;vertical-align:top;}
 .p-details-table table thead td{white-space:nowrap;}
@@ -183,6 +181,8 @@ body{padding-bottom:60px;}
 .hidden-menu .bg-menu-down ,.show-bg-menu .bg-menu-down{display:none;}
 .hide-menu .bg-menu{left:-30%;}
 .hover-text::after{left:20%;}
+.HazMat-text {min-width:320%;left:auto;right:0;}
+.HazMat-text::after {left:auto;right:45px;}
 .hidden-menu .bg-menu-down:last-child ,.show-bg-menu .bg-menu-down:last-child{display:inline-block;}
 .products-detail-popups-con{padding:0 12px;}
 .products-detail-popups-title{padding:8px 15px;font-size:18px;}
