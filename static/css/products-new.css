@@ -185,7 +185,7 @@ body{padding-bottom:60px;}
 .hover-text::after{left:20%;}
 .hidden-menu .bg-menu-down:last-child ,.show-bg-menu .bg-menu-down:last-child{display:inline-block;}
 .products-detail-popups-con{padding:0 12px;}
-.products-detail-popups-title{padding:8px 15px;}
+.products-detail-popups-title{padding:8px 15px;font-size:18px;}
 }
 
 @media only screen and (max-width:380px){
