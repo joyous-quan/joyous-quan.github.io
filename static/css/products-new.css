@@ -169,7 +169,7 @@ body{padding-bottom:60px;}
 .HazMat-text {min-width:320%;left:auto;right:0;}
 .HazMat-text::after {left:auto;right:45px;}
 .right-download select{margin-right:0;}
-.p-details-main table td{display:inline-block; min-width:46%;padding:5px 0 ;height:auto;max-width:50%;vertical-align:top;}
+.p-details-main table td{display:inline-block; min-width:42%;padding:5px 0 ;height:auto;max-width:50%;vertical-align:top;}
 .p-details-table table thead td{white-space:nowrap;}
 .p-details-table table td{padding-left:5px;}
 .p-details-top .inlineBlock{margin-bottom:0;border:none;}
@@ -181,12 +181,15 @@ body{padding-bottom:60px;}
 .right-download div h2{display:none;}
 .delivery-p span{display:block;padding-top:5px;}
 .hidden-menu .bg-menu-down ,.show-bg-menu .bg-menu-down{display:none;}
+.hide-menu .bg-menu{left:-30%;}
+.hover-text::after{left:20%;}
 .hidden-menu .bg-menu-down:last-child ,.show-bg-menu .bg-menu-down:last-child{display:inline-block;}
 .products-detail-popups-con{padding:0 12px;}
 }
 
 @media only screen and (max-width:380px){
 .HazMat-text {min-width:300%;right:-6px;}
+.p-details-main table td{min-width:46%;}
 }
 @media only screen and (max-width:340px){
 .HazMat-text {min-width:266%;}

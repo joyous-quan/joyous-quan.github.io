@@ -100,7 +100,7 @@
 @media only screen and (max-width:1024px){
 	/*phone 模块不显示*/
 	.new-head-top,.head-contact,.structure-btn,.head-sign-box,.fixed-sidebar{display:none!important;}
-
+	.chemistry-dl .subnav-dl, .pharmaceutical-dl .subnav-dl,.subnav-dl{min-width:auto;}
 	.fixed_menu .nav-dl .subnav-dl,.nav-dl:hover .hide-img,.nav-title img,.contact-dl .line-span,.subnav-dl dd a{display:none;}
 
 	.newhead{padding-top:50px;}
@@ -119,12 +119,12 @@
 	.fixed_menu_show{right:0;left:auto;}
 	.nav-menu{overflow-x:hidden;overflow-y:auto;padding:5%;background:#fff;}
 	.nav-menu .nav-dl,.subnav-dl{width:100%!important;}
-	.nav-title{padding-right:40px;color:#222;text-align:left;white-space:nowrap;line-height:40px;border-top:none;border-bottom:1px solid #ddd;}
+	.nav-title{padding-right:40px;height:50px;color:#222;text-align:left;white-space:nowrap;line-height:50px;border-top:none;border-bottom:1px solid #ddd;}
 	.nav-title span{top:0;}
-	,.contact-dl .nav-title{border-bottom:none;}
-	.line-span{position:absolute;top:0;right:0;display:inline-block;width:40px;height:40px;background:url(/static/img/phone/menu_down.png) no-repeat center;}
+	.contact-dl .nav-title{border-bottom:none;}
+	.line-span{position:absolute;top:5px0;right:0;display:inline-block;width:40px;height:40px;background:url(/static/img/phone/menu_down.png) no-repeat center;}
 	.line-span-this{background:url(/static/img/phone/menu_up.png) no-repeat center;}
-	.subnav-dl{position:static;overflow:hidden;padding:0;}
+	.subnav-dl{position:static;overflow:hidden;padding:10px 0 0;}
 	.subnav-dl dd{width:100%;}
 	.subnav-dl dd a.title-a{display:block;padding-left:20px;line-height:40px;}
 

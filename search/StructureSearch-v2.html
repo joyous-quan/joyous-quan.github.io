@@ -38,14 +38,14 @@
 <div class="overflow_x">
 
 <div class="search_tab">
-	<a href="javascript:;" class="struSearch">Structure Search</a>
+	<a href="javascript:;" class="struSearch current">Structure Search</a>
 	<a href="javascript:;" class="molSearch">Mol Search</a>
-	<a href="javascript:;" class="listSearch current">List Search</a>
+	<a href="javascript:;" class="listSearch">List Search</a>
 </div>
 
 <div class="search_content">
 
-<div class="struSearchContent hidden">
+<div class="struSearchContent">
 	<div class="dv_jsDrawEdit">
 		<div class="dv_loadSearchImg">
 			<div class="isIe">
@@ -94,7 +94,7 @@
 	<button onclick="_molSearch()">Search &nbsp;&nbsp;&nbsp;&nbsp;</button>
 </div>
 
-<div class="listSearchContent">
+<div class="listSearchContent hidden">
 	<textarea id="text_list" placeholder="one line by one CAS No. or Catalog No."></textarea>
 	<button onclick="_loadSearchByList()">Search &nbsp;&nbsp;&nbsp;&nbsp;</button>
 	<a class="download" onclick="_download()">Download</a>

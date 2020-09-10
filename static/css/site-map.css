@@ -45,7 +45,7 @@ body{font-size:14px;}
 .distributors_dl dd em a,.dv_boxTxt a{color:#549b35;}
 @media only screen and (max-width:1024px){
 	.kuang-content h3{font-size:20px;}
-	.distributors_map{overflow:auto;}
+	.distributors_map{display:none;}
 }
 @media only screen and (max-width:650px){
 	.contact-us-con p span{min-width:100%;}
