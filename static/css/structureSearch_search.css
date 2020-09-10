@@ -88,10 +88,10 @@ i{font-style:normal;}
 	.search_content_on{position: static;}
 	.heightHide{padding-top:0!important;}
 	.bg_shadow{display:none!important;}
-	.overflow_x{overflow-x:auto;overflow-y:hidden;position:relative;}
+	.overflow_x{overflow-x:auto;overflow-y:hidden;position:relative;min-height:120px;}
 	.dv_price_list,.search_products_box td.phone_td{display:none;}
 	.search_products_box .productsImg_a{width:240px;height:240px;}
-
+}
 
 
 @media only screen and (max-width:680px){
