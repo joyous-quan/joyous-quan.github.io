@@ -45,7 +45,7 @@ table{width:100%;color:#333;}
 .sp_Collect{position:absolute;left:5px;top:4px;display:inline-block;color:#222;}
 .div_payment{margin-top:10px;}
 .div_payment p.p_32{position:relative;padding-left:145px;margin:10px 0;line-height:16px;}
-.div_payment .p_32 label{position:absolute;left:15px;top:3px;display:inline-block;}
+.div_payment .p_32 label{position:absolute;left:15px;top:2px;display:inline-block;}
 .p_32 em{display:inline-block;font-style:normal;white-space:nowrap;}
 .div_payment .p_title{padding:0 0 10px 15px;border-bottom:1px solid #fff;font-weight:700;font-size:14px;}
 #cvv,#month,#year{width:60px;}
@@ -90,11 +90,12 @@ table{width:100%;color:#333;}
 	.dv_order_info dl{padding-left:5px;}
 	.dv_order_info .p_place{position:fixed;bottom:0;right:0;width:100%;padding-right:2%;text-align:right;background:#fff;}
 	.p_place .total_price{display:inline-block;}
-	.dv_tabs_cnt p{padding-left:10px;}
+	.dv_tabs_cnt p{padding-left:5px;}
 	.p_32 em,.p_Collect select{margin-bottom:5px;}
 	.p_lab_list{line-height:18px;}
 	#chat-application{bottom:33px!important;right:0!important;}
 	.order-succe-top b{font-size:18px;}
+	.div_payment .p_32 label{left:5px;}
 }
 @media only screen and (max-width:780px){
 	.dv_pd10 td{width:50%;}
