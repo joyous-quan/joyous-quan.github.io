@@ -84,7 +84,7 @@ table td .sp_hide{display:none;}
 .p_number{min-width:78px;}
 .dd_right .p_size{width:44%;text-align:center;}
 .sp_ipt_number input{float:left;display:inline-block;width:34px;height:22px;outline:0;border:1px solid #ddd;vertical-align:middle;text-align:center;padding:0;}
-.sp_ipt_number b,.sp_ipt_number em{float:left;display:inline-block;width:22px;height:22px;color:#222;text-align:center;font-weight:700;font-size:16px;line-height:22px;cursor:pointer;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}
+.sp_ipt_number b,.sp_ipt_number em{float:left;display:inline-block;width:22px;height:22px;color:#222;text-align:center;font-weight:700;font-size:16px;line-height:22px;cursor:pointer;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0.1);out-line:none;}
 .sp_ipt_number b:hover,.sp_ipt_number em:hover{color:#f39800;}
 .p_price{color:#f22;white-space:nowrap;font-size:14px;text-align:left}
 
