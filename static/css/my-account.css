@@ -162,6 +162,7 @@ body{padding-bottom:50px;}
 .a_del_cart{right:0;}
 .total_price{font-size:20px;}
 .my-account-checkbox .btn-red-full{width:100px;}
+.i_f_content{padding:15px 15px 10px;}
 }
 
 @media only screen and (max-width:320px){
