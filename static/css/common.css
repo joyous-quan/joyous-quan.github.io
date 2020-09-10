@@ -6,6 +6,7 @@ dd,dl,dt,ul,ol,li,form,h1,h2,h3,h4,h5,h6,img,p,label{margin:0;padding:0;}
 a{color:#222;text-decoration:none;outline:none;}
 li,ul,ol{list-style:none;}
 input,select,textarea{margin:0;padding:0;color:#222;font-size:12px;font-family:Arial,Helvetica,sans-serif;}
+select{-webkit-appearance:none;-ms-appearance:none;-moz-appearance:none;appearance:none;}
 input:focus,textarea:focus,select:focus{outline:none;}
 input::-ms-clear,input::-ms-reveal{display:none;}
 input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset;}
