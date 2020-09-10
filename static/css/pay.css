@@ -8,7 +8,7 @@ table{width:100%;color:#333;}
 .dv_enter_address .p_title span{font-weight:700;font-size:14px;line-height:32px;}
 .dv_enter_address .p_title a{position:absolute;top:4px;right:18px;padding:0 15px;min-height:32px;border:1px solid #ddd;border-radius:26px;color:#555;font-size:12px;line-height:30px;}
 .dv_enter_address tr.tr_default{border:2px solid #fdd000;}
-.dv_enter_address tr{cursor:pointer;}
+.dv_enter_address tr{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0.1);out-line:none;}
 .dv_enter_address .tab td{padding:8px 5px;min-width:45px;vertical-align:top;line-height:18px;}
 .dv_enter_address .tab .td_edit{text-align:right;white-space:nowrap;}
 .td_check{max-width:150px;}
