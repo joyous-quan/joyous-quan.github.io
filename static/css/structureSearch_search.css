@@ -1,0 +1,101 @@
+.dv_center{background:#fff}
+.dv_Pharmacutical{min-height:306px;padding:18px 10px 0 10px}
+.dv_Pharmacutical li{margin:0 5px 42px 5px!important}
+.dv_Pharmacutical ul{height:auto}
+.dv_Pharmacutical li .p_list_name{font-size:12px;line-height:26px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%}
+.dv_Pharmacutical ul li a,.dv_Pharmacutical ul li p{color:#555}
+.dv_Pharmacutical li .p_list_name a{color:#549b35}
+.dv_Pharmacutical li .p_list_name a:hover{font-weight:700}
+.dv_jsDrawEdit{height:373px;width:745px;background:#f39800;}
+.dv_jsDrawEdit .btn{float:left;margin-top:5px}
+.dv_jsDrawEdit .btn input{width:100px;height:30px;line-height:30px;border:none;border-radius:4px;font-weight:700;outline:0;background:#58d7d9;margin-right:3px}
+.dv_jsDrawEdit #lost{display:inline-block;}
+.dv_jsDrawEdit #wait{display:inline}
+.dv_draw{width:735px;height:370px;margin:5px 0 0 5px}
+.dv_edit_r{position:absolute;left:540px;top:236px;padding-top:3px;}
+.dv_edit_r .h5{margin:0;line-height:26px;font-size:19px;}
+.dv_edit_r p{line-height:22px;font-size:14px;}
+.dv_edit_r p input{margin-right:2px}
+#similityValue{width:40px;height:20px;line-height:20px;border:none;margin-left:5px;text-indent:5px}
+#lost{background:rgba(0,0,0,0) url(/static/img/structureSearch/images/search_02.png) no-repeat scroll 0 0;border:medium none;height:39px;width:124px}
+.loadCls{min-height:600px;z-index:99}
+.loadCls #dvPage,.p_load{display:none}
+.search_tab{z-index:2;position:absolute;left:750px}
+.search_tab a{display:block;width:125px;height:36px;background:#ddd;text-align:center;line-height:36px;margin:0 6px 5px 0;font-weight:700}
+.search_tab a.current{background:#f39800;color:#fff}
+.search_product_scroll{position:relative}
+.search_content{background:#fff;}
+.search_content_on{position:fixed;top:80px;width:100%;z-index:2;}
+.bg_shadow{display:none;z-index:-1;position:absolute;bottom:-14px;height:15px;width:100%;background:url(/static/img/gray-bottom.png) repeat-x bottom}
+.molSearchContent .inputFile-box{position:relative;overflow:hidden;height:50px;display:block;border:1px solid #ddd;background:url(/static/img/products-details/p-details-download.png) no-repeat 5px center;width:745px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.molSearchContent input{opacity:0;width:100%;height:50px;font-size:12px;background:none;border:none}
+.inputFile-box .ieImg{display:none;position:absolute;top:10px;left:5px;z-index:99}
+.listSearchContent button,.molSearchContent button{margin-top:5px;width:120px;height:40px;line-height:40px;font-size:18px;font-weight:700;border:none;background:#f39800 url(/static/img/search.png) no-repeat 85px center;border-radius:3px;outline: none;}
+.listSearchContent{width:745px}
+.listSearchContent textarea{max-width:745px;min-width:745px;max-height:200px;min-height:200px;border:1px solid #ddd;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:8px 10px}
+.listSearchContent textarea::-webkit-input-placeholder{color:#999}
+.listSearchContent textarea::-moz-placeholder{color:#999}
+.listSearchContent textarea::-ms-input-placeholder{color:#999}
+.search_products_box table{width:100%;border-bottom:1px solid #ddd;margin-top:8px}
+.search_products_box table td{font-size:12px;vertical-align:top;}
+.search_products_box .productsImg_a{display:block;width:260px;height:260px}
+.search_products_box .price_new,.search_products_box .price_old{display:inline-block;min-width:50px}
+.search_products_box .price_old{text-decoration:line-through;color:#999}
+.search_products_box .grayColor{color:#999;min-width:80px;}
+.search_products_box .boldFont{font-weight:700}
+.search_products_box .redColor{color:#ff5722}
+.search_products_box .redColor a{color:#0272d0;text-decoration:underline}
+.search_products_box .HazMat{display:inline-block;background:#ff5722;color:#fff;padding:3px 5px;margin:5px 0}
+.sideButtonCell{height:34px!important}
+#ketcherFrame{height:370px}
+#client_area{height:393px}
+.search_products_box table{position:relative;}
+.dv_price_list{width:420px;position:absolute;right:0;}
+.dv_price_list table{border:none;margin-top:0;}
+.dv_price_list table td{height:26px}
+.dv_price_list table select{height:22px;width:45px;border:1px solid #ddd}
+.search{cursor:pointer}
+.addtocart{background:#f39800;padding:5px 10px;color:#fff;cursor:pointer;margin-right:4px}
+.td_addcart{text-align:right;padding-top:8px}
+.dv_svg{width:100%;height:250px;background:#fff;display:none}
+/*search 动画*/
+@keyframes moving{
+0%{transform:translate(0,0)}
+50%{transform:translate(0,4px)}
+100%{transform:translate(0,0)}
+}
+.move-box{display:inline-block;margin:20px 0 10px;}
+.move-box p{height:22px;color:#f39800;font-weight:700;font-size:16px;line-height:22px;}
+.move-span{display:inline-block;margin-left:3px;width:22px;height:22px;border-radius:2px;background:#f39800;text-align:center;}
+.move-span img{animation:moving 2s infinite;}
+.dv_loadSearchImg{position:absolute;top:5px;left:540px;width:200px;}
+.dv_loadSearchImg .isIe,.dv_loadSearchImg .noIe{width:200px;height:180px;background:#fff;text-align:center;line-height:180px;}
+.isIe,.noIe{display:none;}
+.sp_upload{position:relative;display:inline-block;margin-top:10px;height:30px;border:none;border-radius:4px;background:#58d7d9;color:#222;font-weight:700;line-height:30px;}
+.sp_upload input{position:absolute;top:0;left:0;width:100%;height:100%;font-size:0;opacity:0;cursor:default;}
+.sp_upload img{vertical-align:middle;}
+.download{display:inline-block;margin-top:5px;margin-left:15px;width:120px;height:40px;border-radius:3px;background:#f39800;text-align:center;font-weight:700;font-size:18px;line-height:40px;}
+#link{float:right;display:inline-block;line-height:40px;font-size:14px;}
+#link:hover{text-decoration:underline;}
+.td_quantity{width:50px!important;min-width:50px!important;}
+i{font-style:normal;}
+
+
+
+
+@media only screen and (max-width:1024px){
+	.search_content_on{position: static;}
+	.heightHide{padding-top:0!important;}
+	.bg_shadow{display:none!important;}
+	.overflow_x{overflow:auto hidden;position:relative;}
+	.dv_price_list,.search_products_box td.phone_td{display:none;}
+	.search_products_box .productsImg_a{width:240px;height:240px;}
+
+
+
+@media only screen and (max-width:680px){
+	.search_products_box table:first-child{border-top:1px solid #ddd;}
+	.search_products_box td{display:inline-block;max-width:70%;line-height:24px;}
+	.grayColor{width:20%;}
+	.search_products_box .phone_block{display:block;width:100%;}
+}

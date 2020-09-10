@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Method | Ambeed</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/static/img/ambeed.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css?v=1.0.0">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css?v=1.0.0">
+<link rel="stylesheet" type="text/css" href="/static/css/my-account.css?v=1.0.0">
+<link rel="stylesheet" type="text/css" href="/static/css/pay.css?v=1.0.0">
+<link rel="stylesheet" type="text/css" href="/static/css/inquiry.css?v=1.0.0">
+<link rel="stylesheet" href="/static/css/addAddressBox.css?v=2020070100001"/>
+
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/common.js"></script>
+<script src='/static/layer/layer.js'></script>
+
+</head>
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body class="show-menu-body">
+<!-- header -->
+<header id="header"></header>
+<!-- /header -->
+<div class="dv_zz layout">
+	<div class="nav-com-title">
+		<p>
+		<a href="/" class="home-logo"><img src="/static/img/home-logo.png" alt=""></a>
+		<a href="javascript:;" class="nav-img">My Account</a>
+		<a href="/mem/my-cart.html" class="nav-img a_my_cart">My Cart</a>
+		<a href="javascript:;" class="current">Enter Shipping &amp; Payment Method</a>
+		</p>
+		<h3>Enter Shipping &amp; Payment Method</h3>
+	</div>
+	<div class="dv_center payment-con">
+		<div class="dv_1">
+			<div class="dv_enter_address">
+			<div class="dv_pd10">
+			<p class="p_title borderNone"><span class="floatL clo111111"><i class="i_red">*</i>Billing Address</span><a href="javascript:void(0)" onclick="_addAddressBox('Add New Billing Address',1)">+ Add New Address</a></p>
+			<table class="tab tab_bill" border="0" id="billingtb" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr id="1272" add_country="United States">
+						<td><input class="inlineBlock" type="radio" name="bill">Website Test</td>
+						<td class="td_phone">630-580-1088</td>
+						<td class="td_address">3205 N Wilke Rd, STE 3205-125<input type="hidden" class="hid_address" value="{'add_isdefault': False, 'add_address1': '3205 N Wilke Rd, STE 3205-125', 'add_country': 'United States', 'add_userid': '8613', 'add_type': 2, 'add_id': 1272, 'add_company': 'Ambeed', 'add_time': '2020-09-03 15:10:59', 'add_nsaddid': '', 'add_zipcode': '10001', 'add_isdefaultbill': False, 'add_address2': 'test', 'add_name': 'Website Test', 'add_province': 'New York', 'add_email': 'joyous-quan@outlook.com', 'add_phone': '630-580-1088', 'add_city': 'New York'}"></td>
+						<td class="td_address">test</td>
+						<td>New York</td>
+						<td>United States</td>
+						<td>10001</td>
+						<td class="td_edit">
+							<span class="sp_copy" onclick="_setType(this)">Copy to Shipping Address</span>
+							<span><i></i></span>
+							<span class="sp_default"><a href="javascript:;" cat="1" class="a_setDefault" onclick="_setDefault(this)">Set Default</a></span>
+							<span class="a_editAddress" title="Modify Billing Address" onclick="_getUptAddressInfo(this,1)">Edit</span>
+							<span class="a_delAddress" type="1" onclick="_delConfBox(this)">×</span>
+						</td>
+					</tr>
+					<tr class="tr_default" id="1706" add_country="Canada">
+						<td><input class="inlineBlock" type="radio" name="bill" checked="">test</td>
+						<td class="td_phone">13112344321</td>
+						<td class="td_address">test<input type="hidden" class="hid_address" value="{'add_isdefault': True, 'add_address1': 'test', 'add_country': 'Canada', 'add_userid': '8613', 'add_type': 2, 'add_id': 1706, 'add_company': 'test', 'add_time': '2020-08-27 09:48:08', 'add_nsaddid': '', 'add_zipcode': '10000', 'add_isdefaultbill': True, 'add_address2': '', 'add_name': 'test', 'add_province': 'British Columbia', 'add_email': 'test@test.com', 'add_phone': '13112344321', 'add_city': 'british columia'}"></td>
+						<td class="td_address"></td>
+						<td>british columia</td>
+						<td>Canada</td>
+						<td>10000</td>
+						<td class="td_edit">
+							<span class="sp_copy" onclick="_setType(this)">Copy to Shipping Address</span>
+							<span><i>(default)</i></span>
+							<span class="sp_default"></span>
+							<span class="a_editAddress" title="Modify Billing Address" onclick="_getUptAddressInfo(this,1)">Edit</span>
+							<span class="a_delAddress" type="1" onclick="_delConfBox(this)">×</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="dv_pd10">
+			<p class="p_title borderNone"><span class="floatL"><i class="i_red">*</i>Shipping Address</span><a href="javascript:void(0)" onclick="_addAddressBox('Add New Shipping Address',0)">+ Add New Address</a></p>
+			<table class="tab tab_ship" border="0" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr id="1272" class="" add_country="United States" add_province="New York">
+					<td class="td_check"><span><input type="radio" data-province="New York" class="inlineBlock" name="ship">Daejung Chemicals & Metals Co., Ltd.</span></td>
+					<td class="td_phone">630-580-1088</td>
+					<td class="td_address">3205 N Wilke Rd, STE 3205-125<input type="hidden" class="hid_address" value="{'add_isdefault': False, 'add_address1': '3205 N Wilke Rd, STE 3205-125', 'add_country': 'United States', 'add_userid': '8613', 'add_type': 2, 'add_id': 1272, 'add_company': 'Ambeed', 'add_time': '2020-09-03 15:10:59', 'add_nsaddid': '', 'add_zipcode': '10001', 'add_isdefaultbill': False, 'add_address2': 'test', 'add_name': 'Website Test', 'add_province': 'New York', 'add_email': 'joyous-quan@outlook.com', 'add_phone': '630-580-1088', 'add_city': 'New York'}"></td>
+					<td class="td_address">test</td>
+					<td>New York</td>
+					<td>United States</td>
+					<td>10001</td>
+					<td class="td_edit">
+						<span class="sp_copy" onclick="_setType(this)">Copy to Billing Address</span>
+						<span><i></i></span>
+						<span class="sp_default"><a href="javascript:void(0)" cat="0" class="a_setDefault" onclick="_setDefault(this)">Set Default</a></span>
+						<span class="a_editAddress" title="Modify Billing Address" onclick="_getUptAddressInfo(this,0)">Edit</span>
+						<span class="a_delAddress" type="0" onclick="_delConfBox(this)">×</span>
+					</td>
+				</tr>
+
+				<tr id="1706" class="tr_default" add_country="Canada" add_province="British Columbia">
+					<td class="td_check"><span><input type="radio" data-province="British Columbia" class="inlineBlock" name="ship" checked="">Shigematsu Co., Ltd.</span></td>
+					<td class="td_phone">13112344321</td>
+					<td class="td_address">2-5, 2-chome, Awaji-cho, Chuo-ku, Osaka 541-0047 Japan<input type="hidden" class="hid_address" value="{'add_isdefault': True, 'add_address1': 'test', 'add_country': 'Canada', 'add_userid': '8613', 'add_type': 2, 'add_id': 1706, 'add_company': 'test', 'add_time': '2020-08-27 09:48:08', 'add_nsaddid': '', 'add_zipcode': '10000', 'add_isdefaultbill': True, 'add_address2': '', 'add_name': 'test', 'add_province': 'British Columbia', 'add_email': 'test@test.com', 'add_phone': '13112344321', 'add_city': 'british columia'}"></td>
+					<td class="td_address">211 Bis Avenue, J.F. Kennedy, BP 1140 03100 Montlucon France</td>
+					<td>british columia</td>
+					<td>Canada</td>
+					<td>10000</td>
+					<td class="td_edit">
+						<span class="sp_copy" onclick="_setType(this)">Copy to Billing Address</span>
+						<span><i>(default)</i></span>
+						<span class="sp_default"></span>
+						<span class="a_editAddress" title="Modify Shipping Address" onclick="_getUptAddressInfo(this,0)">Edit</span>
+						<span class="a_delAddress" type="0" onclick="_delConfBox(this)">×</span>
+					</td>
+				</tr>
+
+
+			</tbody></table>
+			</div>
+			</div>
+		</div>
+
+		<div class="dv_2">
+			<div class="dv_yellow_cnt">
+			<table class="tab_mycart" border="0" cellspacing="0" cellpadding="0">
+			<thead>
+			<tr>
+			<td>Cat. No.</td>
+			<td>Product Name</td>
+			<td>CAS No.</td>
+			<td>Size</td>
+			<td>List Price</td>
+			<td>VIP Price</td>
+			<td>Quantity</td>
+			<td>Price</td>
+			<td>Memo</td>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td class="td_am"><span class="sp_hide">Cat. No.: </span>A254551</td>
+			<td class="td_enName"><span class="sp_hide">Product Name: </span><a title="3-Ethynyl-4-fluoroaniline" href="/products/77123-60-5.html" target="_blank">3-Ethynyl-4-fluoroaniline</a></td>
+			<td class="td_cas"><span class="sp_hide">CAS No: </span>77123-60-5</td>
+			<td><span class="sp_hide">Size: </span>250mg</td>
+			<td><span class="sp_hide">List Price: </span>USD 62.0</td>
+			<td><span class="sp_hide">VIP Price: </span>USD 62.0</td>
+			<td><span class="sp_hide">Quantity: </span><span class="quantity">1</span></td>
+			<td><span class="sp_hide">Price: </span>USD <span class="allcoin">62.0</span>
+			<input type="hidden" class="ipt_hid_signalworld" value="">
+			<input type="hidden" class="ipt_hid_class" value="">
+			<input type="hidden" class="ipt_hid_oldprice" value="62.0">
+			<input type="hidden" class="ipt_hid_newprice" value="62.0">
+			</td>
+			<td><span class="sp_hide">Memo: </span><textarea class="memo"></textarea></td>
+			</tr>
+
+			<tr>
+			<td class="td_am"><span class="sp_hide">Cat. No.: </span>A426791</td>
+			<td class="td_enName"><span class="sp_hide">Product Name: </span><a title="Copper(I) trifluoromethanesulfonate benzene complex" href="/products/42152-46-5.html" target="_blank">Copper(I) trifluoromethanesulfonate benzene complex</a></td>
+			<td class="td_cas"><span class="sp_hide">CAS No: </span>42152-46-5</td>
+			<td><span class="sp_hide">Size: </span>5g</td>
+			<td><span class="sp_hide">List Price: </span>USD 168.0</td>
+			<td><span class="sp_hide">VIP Price: </span>USD 168.0</td>
+			<td><span class="sp_hide">Quantity: </span><span class="quantity">3</span></td>
+			<td><span class="sp_hide">Price: </span>USD <span class="allcoin">504.0</span>
+			<input type="hidden" class="ipt_hid_signalworld" value="">
+			<input type="hidden" class="ipt_hid_class" value="">
+			<input type="hidden" class="ipt_hid_oldprice" value="168.0">
+			<input type="hidden" class="ipt_hid_newprice" value="168.0">
+			</td>
+			<td><span class="sp_hide">Memo: </span><textarea class="memo"></textarea></td>
+			</tr>
+
+			<tr>
+			<td class="td_am"><span class="sp_hide">Cat. No.: </span>A367585</td>
+			<td class="td_enName"><span class="sp_hide">Product Name: </span><a title="4-Aminoquinoline-2-one" href="/products/110216-87-0.html" target="_blank">4-Aminoquinoline-2-one</a></td>
+			<td class="td_cas"><span class="sp_hide">CAS No: </span>110216-87-0</td>
+			<td><span class="sp_hide">Size: </span>250mg</td>
+			<td><span class="sp_hide">List Price: </span>USD 111.0</td>
+			<td><span class="sp_hide">VIP Price: </span>USD 111.0</td>
+			<td><span class="sp_hide">Quantity: </span><span class="quantity">2</span></td>
+			<td><span class="sp_hide">Price: </span>USD <span class="allcoin">222.0</span>
+			<input type="hidden" class="ipt_hid_signalworld" value="">
+			<input type="hidden" class="ipt_hid_class" value="">
+			<input type="hidden" class="ipt_hid_oldprice" value="111.0">
+			<input type="hidden" class="ipt_hid_newprice" value="111.0">
+			</td>
+			<td><span class="sp_hide">Memo: </span><textarea class="memo"></textarea></td>
+			</tr>
+			</tbody>
+			</table>
+
+			<div class="div_express">
+				<p class="p_tabs" onselectstart="return false">
+					<label class="labe_fedex on">FedEx</label>
+					<label>Collect Account</label>
+				</p>
+				<div class="dv_tabs_cnt">
+					<div>
+						<p class="p_lab_list p_32"><label><input onclick="_uptAllVal()" type="radio" name="iptFedex" value="18" typeid="5" checked="" feitype="FedEx">USD 18 FedEx 2nd day (Default)</label><label><input onclick="_uptAllVal()" type="radio" name="iptFedex" value="35" typeid="6" feitype="FedEx">USD 35 FedEx Overnight Standard</label><label><input onclick="_uptAllVal()" type="radio" name="iptFedex" value="10" typeid="7" feitype="UPS">USD 10 UPS Ground</label></p>
+
+						<p class="p_note">Please note: Special packaging and Hazmat charges will not appear in your totals in this checkout process. Shipping charge for special cases will be adjusted in invoice as needed.</p>
+					</div>
+					<div class="hidden">
+						<p class="p_note p_Collect p_32"><span class="sp_Collect">Express:&nbsp;&nbsp;</span><select class="select sel_fedex"><option>DHL</option><option selected="">UPS</option><option>FedEx</option></select>
+						<select class="select sel_2nd"><option>2nd Day</option><option>International Priority</option><option>Priority Overnight</option><option>Standard Overnight</option></select>
+						<em><input class="input" id="logisticsNo" type="text">USD <span class="sp_DHLFei">6.5</span></em>
+						</p>
+						<p class="p_note">For collect account, USD <span> 6.5 </span> handling fee will be added for US customers and USD 10 for international customers.</p>
+					</div>
+				</div>
+			</div>
+			<div class="div_payment">
+				<p class="p_title borderNone">Select Payment Method</p>
+				<p class="p_32"><label><input name="iptPay" type="radio" value="1" checked="">Prepay</label><span>A Proforma Invoice will be sent via email with information on how to make payment via bank wire transfer</span>
+				</p>
+				<p class="p_32"><label><input name="iptPay" type="radio" value="2">Net 30</label><span>Credit reference check is needed. Please contact accounting@ambeed.com.</span>
+				</p>
+				<p class="p_32">
+					<label><input name="iptPay" type="radio" value="3" class="creditcard">Pay by Credit Card</label><em><span>Card Type:</span>
+					<select class="select" id="cardtype"><option value="">-----Select-----</option><option value="Visa">Visa</option><option value="Mastercard">Mastercard</option><option value="JCB">JCB</option><option value="Diners Club">Diners Club</option><option value="Discover">Discover</option><option value="American Express">American Express</option></select></em>
+
+					<em><span>Card Number:</span>
+					<input id="cardnum" type="text" class="input" maxlength="20s"></em>
+
+					<em><span>Card Holder:</span>
+					<input id="cardholder" type="text" class="input"></em>
+
+					<em><span>CVV:</span>
+					<input id="cvv" type="text" class="input"></em>
+
+					<em><span style="white-space:initial;">Expiration Date:</span>
+					<select class="select" id="month"><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option selected="selected">09</option><option>10</option><option>11</option><option>12</option></select><select class="select" id="year"><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option></select></em>
+				</p>
+			</div>
+
+			<p class="f12 p_po">Your own PO No.:&nbsp;<input id="po" type="text"><span class="sp_errinfo_right"></span></p>
+			<div class="dv_order_info">
+				<div class="dv_note">
+					<h5>Note: *Tax:</h5>
+					<p>1.Illinois shipping address is estimated at 10% of sales tax rate and may be adjusted on the invoice according to your local rate.</p>
+					<p>2.If you choose to use collect account. $6.50 handling fee will be added for US customers and $10 for international customers.</p>
+					<p>3.If you have any special request for this order, please enter in the comments box below.</p>
+					<div class="dv_textarea positionR"><span class="positionA">Leave Your Message (Optional): </span><textarea id="remark"></textarea></div>
+				</div>
+				<dl class="order_total">
+					<dt>Subtotal ( 3 Items ):</dt>
+					<dd>USD <span id="lab_proallcoin">788.00</span></dd>
+					<dt>Shipping Fee:</dt>
+					<dd>USD <span class="sp_fei">40.00</span></dd>
+					<dt class="promocode">Promo Code:</dt>
+					<dd class="promocode"><input class="ipt_promocode" id="promo_code" onpropertychange="_uptPromoCode()" maxlength="20" onkeyup="_uptPromoCode()" type="text"><img src="/static/img/ok_icon.png"></dd>
+					<dt class="dangerous">HazMat Fee:</dt>
+					<dd class="dangerous">USD <span id="sp_HazMat_fei">0</span></dd>
+					<dt>Bank Fee:</dt>
+					<dd>USD <span id="bank_fee">0.00</span></dd>
+					<dt>Tax%:</dt>
+					<dd id="tax">0%</dd>
+					<dt><strong>Total:</strong></dt>
+					<dd><strong class="total_price">USD <span id="sp_sumcoin">828.00</span></strong></dd>
+					<dd><p class="p_place"><strong class="total_price"><i>Total:</i>USD <span>828.00</span></strong><a href="/pay/orderSuccessfully.html" class="a_btn_he40 abtn" id="PlaceOrder">Place Order</a></p></dd>
+				</dl>
+
+			</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clear height40"></div>
+<!-- footer -->
+<footer id="footer"></footer>
+<script>
+$(".dv_enter_address .tab tr:not(.textC)").click(function(){
+$(this).addClass("tr_default").siblings().removeClass("tr_default");
+$(this).parent().find(".inlineBlock").prop("checked",false);
+$(this).find(".inlineBlock").prop("checked",true);
+})
+
+$(".p_tabs label").click(function(){
+$(this).addClass("on").siblings().removeClass("on");
+$(".dv_tabs_cnt div:eq("+$(this).index()+")").show().siblings().hide();
+
+});
+</script>
+<script>
+
+function _addAddressBox(){
+	var html='<div class="i_f_content a_i_content dv_address_box">'+
+        '<ul>'+
+        '<li class="i_f_ipt marg0">'+
+        '<p class="colorGrey">* Attention Name</p>'+
+        '<input type="text" id="add_name" name="" value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* Phone</p>'+
+        '<input type="text" name="" id="add_phone" value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* Institute/Company Name</p>'+
+        '<input type="text" name="" id="add_company" value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* Country</p>'+
+        '<select id="add_country" class="sel_country underline_ipt a_i_select"></select>'+
+        '</li>'+
+        '<li class="i_f_ipt li_province">'+
+        '<p class="colorGrey">* State/Province</p>'+
+        '<select class="sel_province show underline_ipt a_i_select" id="add_state"></select>'+
+        '<input class="ipt_province dv_text" type="text" id="add_state2">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* City</p>'+
+        '<input type="text" id="add_city" value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* Address1<span style="color: red;float: right;">*Max character length is 35 on address line 1.</span></p>'+
+        '<input type="text" name="" id="add_BAddress1"  value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">Address2</p>'+
+        '<input type="text" name="" id="add_BAddress2" value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* Zip Code</p>'+
+        '<input type="text" name="" id="add_zipcode" value="">'+
+        '</li>'+
+        '<li class="i_f_ipt">'+
+        '<p class="colorGrey">* Email</p>'+
+        '<input type="text" id="add_email" name="" value="">'+
+        '</li>'+
+        '<li style="height: 30px;line-height: 30px;padding-top: 10px;">'+
+        '<span class="float-right">'+
+        '<input class="switch-checkbox" id="switch-checkbox" type="checkbox">'+
+        '<label for="switch-checkbox" class="switch-label">'+
+        '<span class="switch-circle"></span>'+
+        '</label>'+
+        '<span class="switch-checkbox-txt position-r">&nbsp;&nbsp;Set the default address</span>'+
+        '</span>'+
+ 		'</li>'+
+        '</ul>'+
+        '<p class="errorBox">&nbsp;&nbsp;</p>'+
+        '<a class="btn btn-block green-black-btn" onclick=""> Submit </a>'+
+        '</div>';
+aBox._cntbox(html,"Add New Billing Address",400,700);
+}
+
+function _setDefault(obj){
+	aBox._warn("Successfully.");
+/*var addid=$(obj).parent().parent().parent().attr("id");
+_DoAjax("PUT", {"addid":addid,"isdefault":1,cat:$(obj).attr("cat")}, '/webapi/v1/mem/address', function () {
+
+setTimeout(function(){
+window.location.href=window.location.href;
+},2000);
+});*/
+}
+</script>
+</body>
+</html>

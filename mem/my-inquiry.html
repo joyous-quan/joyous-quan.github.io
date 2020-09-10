@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Inquiry | Ambeed</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/static/img/ambeed.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css?v=2020070100001">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css?v=2020070100001">
+<link rel="stylesheet" type="text/css" href="/static/css/my-account.css?v=2020070100001">
+<link rel="stylesheet" href="/static/css/addAddressBox.css?v=2020070100001"/>
+<!-- <script type="text/javascript" src="/static/js/common-new.js?v=2020070100001"></script> -->
+<script src="/static/js/jquery.min.js"></script>
+<script src='/static/layer/layer.js'></script>
+<script src="/static/js/common.js"></script>
+
+</head>
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body class="show-menu-body">
+<!-- header -->
+<header id="header"></header>
+<!-- /header -->
+
+<div class="layout">
+<div class="nav-com-title">
+<p>
+<a href="/" class="home-logo"><img src="/static/img/home-logo.png" alt=""></a>
+<a href="javascript:;" class="nav-img">My Account</a>
+<a href="javascript:;" class="current">My Inquiry</a>
+</p>
+<h3>My Inquiry</h3>
+</div>
+<div class="my-account-title" onselectstart="return false">
+<div class="bg-yellow border-box">
+<div class="float-left">
+<img src="/static/img/people-vip.png" height="50px" width="50px" alt="">
+<span class="welcome">hello, <span class="sp_mem_name">test</span></span>
+</div>
+<ul class="float-right">
+<li><a href="/mem/personal-information.html">Personal Information</a></li>
+<li><a href="/mem/shipping-address.html">Shipping Address</a></li>
+<li><a href="/mem/billing-address.html">Billing Address</a></li>
+</ul>
+</div>
+<div class="bg-gray">
+<ul>
+<li><a href="/mem/my-order.html">Order</a></li>
+<li class="active-inf">|<a href="/mem/my-inquiry.html">Inquiry</a></li>
+<li>|<a href="/mem/my-favorites.html">My Favorites</a></li>
+<li>|<a href="/mem/my-cart.html">My Cart</a></li>
+<!--<li >|<a href="/mem/my-free-sample.html">My Free Sample</a></li>-->
+</ul>
+</div>
+</div>
+<div class="my-account-con my-inquiry my-inquiry-free-sample">
+<h4>My Inquiry </h4>
+<div class="my-inquiry-con">
+<table border="0" cellspacing="0">
+<colgroup>
+<col width="16%">
+<col width="12%">
+<col width="12%">
+<col>
+<col width="8%">
+<col width="10%">
+</colgroup>
+<thead>
+<tr>
+<td>Inquiry Number</td>
+<td>Cat. No.</td>
+<td>CAS No.</td>
+<td>Product Name</td>
+<td>Quantity Required</td>
+<td>Additional Information</td>
+</tr>
+</thead>
+<tbody>
+
+
+<tr>
+<td><span class="sp_hide">Inquiry Number: </span>2020041600005</td>
+<td><span class="sp_hide">Cat. No.: </span>A254551</td>
+<td><span class="sp_hide">CAS No.: </span>77123-60-5</td>
+<td><span class="sp_hide">Product Name: </span><a href="/products/77123-60-5.html" target="_blank" title="3-Ethynyl-4-fluoroaniline"><span>3-Ethynyl-4-fluoroaniline</span></a></td>
+<td><span class="sp_hide">Quantity Required: </span>1</td>
+<td><span class="sp_hide">Additional Information: </span><a href="javascript:;" onclick="_openInfoBox()">details</a><input type="hidden" value=""></td>
+</tr>
+
+
+<tr>
+<td><span class="sp_hide">Inquiry Number: </span>2020041600004</td>
+<td><span class="sp_hide">Cat No.: </span>A254551</td>
+<td><span class="sp_hide">CAS No.: </span>77123-60-5</td>
+<td><span class="sp_hide">Product Name: </span><a href="/products/77123-60-5.html" target="_blank" title="3-Ethynyl-4-fluoroaniline"><span>3-Ethynyl-4-fluoroaniline</span></a></td>
+<td><span class="sp_hide">Quantity Required: </span>1</td>
+<td><span class="sp_hide">Additional Information: </span><a href="javascript:;" onclick="_openInfoBox()">details</a><input type="hidden" value=""></td>
+</tr>
+
+
+
+</tbody>
+</table>
+<div class="pages">
+
+<a href="javascript:void(0)"><img src="/static/img/prev_v2.png" alt=""></a>
+
+<a class="page_active num" href="/mem/my-inquiry?pagesize=20&amp;pageindex=1">1</a>
+
+
+<a href="javascript:void(0)"><img src="/static/img/next_v2.png" alt=""></a>
+<span>&nbsp;&nbsp;&nbsp;page 1 of 1 Pages</span>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="clear height40"></div>
+<!-- footer -->
+<footer id="footer"></footer>
+<script>
+function _openInfoBox(){
+    var html = '<div class="inquiry_detail"><p><b>Online Inquiry</b></p><p>userid：8613</p><p>name：website test</p><p>email：joyous-quan@outlook.com</p><p>country：US</p><p>Organization Name：website test</p><p>phone：630-580-1088</p><p>Po.No：</p><p>Order Information：</p><table><tbody><tr><td><b>Cat No.</b></td><td><b>Product Name</b></td><td><b>CAS No.</b></td><td><b>Size</b></td><td><b>Quantity</b></td><td><b>Price</b></td></tr><tr><td>A254551</td><td>3-Ethynyl-4-fluoroaniline</td><td>77123-60-5</td><td></td><td>1</td><td></td></tr><tr><td colspan="6"><b>Subtotal:</b></td></tr></tbody></table><div><p>User Question: website test</p>Please click the link to view the details： <a href="http://www.ambeed.com" class="green-color" target="_blank">Click here</a></div></div>';
+    aBox._cntbox(html,"Order Inquiry",950,600);
+}
+</script>
+</body>
+</html>
