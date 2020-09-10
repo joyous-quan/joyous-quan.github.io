@@ -109,7 +109,7 @@
 	.new-head-middle{padding:5px 5px 5px 60px;}
 	.head-search{padding-left:45px;width:100%;background:#fff url(/static/img/phone/logo_min.png) no-repeat 4px center;}
 	.head-search-img{right:auto;left:45px;height:40px;background:#fff url(/static/img/search.png) no-repeat center;}
-	.head-search-ipt{padding-right:10px;padding-left:40px;height:40px;background:#fff;text-indent:5px;}
+	.head-search-ipt{padding-right:10px;padding-left:40px!important;height:40px;background:#fff;text-indent:5px;}
 	.dv_keyword_list{top:40px;}
 	/* new-head-bottom     menu */
 	.new-head-bottom{position:fixed;top:5px;left:12px;z-index:102;height:auto;}
