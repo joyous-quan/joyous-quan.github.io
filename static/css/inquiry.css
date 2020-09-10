@@ -11,7 +11,7 @@
 .inquiry-form{padding:20px 20px 15px;}
 .inquiry-form span{color:#888;}
 .ipt{margin:2px 0 8px;min-height:34px;border:1px solid #ddd;border-radius:2px;}
-.ipt input,.ipt select{padding:0 10px;width:100%;height:32px;border:none;border-radius:4px;font-size:12px;line-height:32px;}
+.ipt input,.ipt select{padding:0 10px;width:100%;height:32px;border:none;border-radius:4px;font-size:12px;vertical-align:middle;}
 .ipt-small-con .float-left{width:49%;}
 .margin-right12{margin-right:2%;}
 .textarea-con-small{height:56px;}
