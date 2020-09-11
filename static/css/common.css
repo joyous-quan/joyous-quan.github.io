@@ -94,9 +94,9 @@ sub,sup{display:inline-block;transform:scale(0.9);-webkit-transform:scale(0.9)}
 .nav-com-title{padding-top:10px}
 .nav-com-title a{display:inline-block;height:20px;color:#f39800;vertical-align:middle;font-weight:700;line-height:20px}
 .nav-com-title a.current{color:#999;text-decoration:underline;cursor:default;}
-.nav-com-title a.home-logo{padding-right:18px;background:url(/static/img/menu-right.png) no-repeat right center}
+.nav-com-title a.home-logo{padding-right:18px;background:url(/static/img/menu-right.png) no-repeat right center;background-size:12px;}
 .nav-com-title h3{padding:10px 0 30px;font-size:24px}
-.nav-com-title a.nav-img{padding-right:16px;background:url(/static/img/menu-right.png) no-repeat right center}
+.nav-com-title a.nav-img{padding-right:16px;background:url(/static/img/menu-right.png) no-repeat right center;background-size:12px;}
 .nav-com-title a:hover{text-decoration:underline;}
 /* 一级菜单 */
 .single-menu-con{margin:0 -0.6%;}
