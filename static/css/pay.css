@@ -1,0 +1,118 @@
+table{width:100%;color:#333;}
+.i_red,.tab_mycart .allcoin{padding-right:2px;color:#f33;}
+.dv_zz input[type=radio]{margin-right:4px;position:relative;top:2px;}
+/*.dv_1*/
+.dv_pd10{margin-bottom:10px;padding:5px 0 10px;background:#f5f5f5;}
+.dv_pd10 table{margin:0 1%;width:98%;}
+.dv_enter_address .p_title{position:relative;min-height:40px;padding:0 10px;border-bottom:1px solid #fff;}
+.dv_enter_address .p_title span{font-weight:700;font-size:14px;line-height:32px;}
+.dv_enter_address .p_title a{position:absolute;top:4px;right:18px;padding:0 15px;min-height:32px;border:1px solid #ddd;border-radius:26px;color:#555;font-size:12px;line-height:30px;}
+.dv_enter_address tr.tr_default{border:2px solid #fdd000;}
+.dv_enter_address tr{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0.1);out-line:none;}
+.dv_enter_address .tab td{padding:8px 5px;min-width:45px;vertical-align:top;line-height:18px;}
+.dv_enter_address .tab .td_edit{text-align:right;white-space:nowrap;}
+.td_check{max-width:150px;}
+.td_check span{display:inline-block;}
+.td_phone{white-space:nowrap;}
+.td_address{max-width:200px;}
+.td_edit span{display:inline-block;min-width:20px;color:#05bec1;text-align:left;}
+.td_edit span a{color:#05bec1;}
+.td_edit span i{display:inline-block;min-width:45px;color:#222;}
+.td_edit .a_editAddress{min-width:45px;text-align:center;}
+.a_delAddress{font-weight:700;font-size:18px;}
+.sp_copy{width:140px;}
+.sp_default{width:65px;}
+/*.dv_2*/
+.tab_mycart{border:1px solid #efefef;}
+.tab_mycart thead td{background:#efefef;color:#555;white-space:nowrap;}
+.tab_mycart td{padding:8px 5px;border-bottom:1px solid #efefef;}
+.tab_mycart td a:hover{color:#f39800;}
+.td_cas{white-space:nowrap;}
+.td_enNa{max-width:200px;}
+.td_enName a{display:inline-block;max-width:260px;}
+.memo{padding:5px;width:120px;height:30px;border:1px solid #ddd;vertical-align:middle;resize:none;}
+.div_express,.div_payment{padding:10px 0;background:#efefef;}
+.p_tabs{border-bottom:1px solid #fff;font-size:0;}
+.p_tabs label{display:inline-block;margin-right:10px;padding:10px;min-width:120px;background:#fff;text-align:center;font-weight:700;font-size:14px;cursor:pointer;}
+.p_tabs label.on{background:#ffe100;}
+.dv_tabs_cnt{min-height:50px;}
+.dv_tabs_cnt .p_note{color:#999;}
+.input,.p_po input,.select{margin-right:10px;height:24px;min-width:45px;border:1px solid #d5d5d5;color:#222;vertical-align:middle;}
+.sel_2nd{width:150px;}
+.dv_tabs_cnt p{margin:10px 0;padding-left:15px;}
+.dv_tabs_cnt .p_32 label{margin-right:20px;display:inline-block;}
+.dv_tabs_cnt .p_Collect{position:relative;padding-left:90px;}
+.sp_Collect{position:absolute;left:5px;top:4px;display:inline-block;color:#222;}
+.div_payment{margin-top:10px;}
+.div_payment p.p_32{position:relative;padding-left:145px;margin:10px 0;line-height:16px;}
+.div_payment .p_32 label{position:absolute;left:15px;display:inline-block;}
+.p_32 em{display:inline-block;font-style:normal;white-space:nowrap;}
+.div_payment .p_title{padding:0 0 10px 15px;border-bottom:1px solid #fff;font-weight:700;font-size:14px;}
+#cvv,#month,#year{width:60px;}
+.p_po{padding:10px 0 10px 15px;color:#f33;}
+.dv_order_info{padding-bottom:40px;}
+.dv_order_info dl{position:relative;padding:10px 5px 10px 2%;border:1px solid #ff5226;overflow:visible;}
+.ipt_promocode{padding:5px 0 5px 5px;width:75px;border:1px solid #d5d5d5;font-size:12px;}
+.promocode img{display:none;margin-left:5px;}
+.dv_order_info .dangerous{display:none;}
+.dv_textarea{position:relative;margin-top:5px;padding:5px 8px 5px 185px;border:1px solid #d5d5d5;}
+.dv_textarea span{position:absolute;top:3px;left:8px;}
+.dv_textarea textarea{width:100%;height:50px;border:none;resize:none;}
+.dv_order_info .p_place{position:absolute;right:-1px;bottom:-40px;}
+.p_place .abtn{display:inline-block;padding:0 50px;height:40px;background:#ff5226;color:#fff;font-size:16px;line-height:40px;}
+.p_place .noAddress{background:#999;}
+.order_total dd strong{font-size:14px;}
+.total_price{color:#ff5226;}
+.p_place .total_price{display:none;padding-right:20px;}
+.total_price i{color:#222;font-style:normal;padding-right:5px;}
+
+.order-succe-con .dv_2{border:1px solid #efefef;}
+.order-succe-top{padding-bottom:15px;text-align:center;}
+.order-succe-top img{position:relative;top:10px;right:5px;}
+.order-succe-top b{font-size:20px;}
+.order-succe-top a{display:inline-block;border-bottom:1px solid #f39800;color:#f39800;}
+.order-succe-con table{border:none;}
+.order-succe-con table .allcoin{color:#333;}
+.order-succe-con .dv_order_info dl{float:none;margin:0 auto;border:none;}
+.order-succe-con .dv_order_info .p_place{position:inherit;width:100%;text-align:center;}
+.order-succe-con .p_place .abtn{margin-top:10px;background:#ffe100;color:#222;font-weight:700;font-size:14px;}
+
+@media only screen and (max-width:1024px){
+	.dv_enter_address .tab td{padding:8px 5px 0;}
+	.td_address,.td_check{max-width:100%;}
+	.dv_pd10 td{display:inline-block;width:33.3%;}
+	.dv_pd10 td.td_edit{padding-bottom:8px;}
+	.tab_mycart thead{display:none;}
+	.tab_mycart tr{border-bottom:1px solid  #efefef;}
+	.tab_mycart td{position:relative;display:inline-block;width:50%;padding:10px 0 5px 95px;border:none;vertical-align:top;}
+	.tab_mycart td .sp_hide{position:absolute;left:5px;display:inline-block;min-width:auto;color:#999;}
+	.td_enName a{display:inline;}
+	.dv_order_info dl{padding-left:5px;}
+	.dv_order_info .p_place{position:fixed;bottom:0;right:0;width:100%;padding-right:2%;text-align:right;background:#fff;}
+	.p_place .total_price{display:inline-block;}
+	.dv_tabs_cnt p{padding-left:5px;}
+	.p_32 em,.p_Collect select{margin-bottom:5px;}
+	.p_lab_list{line-height:18px;}
+	#chat-application{bottom:33px!important;right:0!important;}
+	.order-succe-top b{font-size:18px;}
+	.div_payment .p_32 label{left:5px;}
+}
+@media only screen and (max-width:780px){
+	.dv_pd10 td{width:50%;}
+	.dv_pd10 td.td_edit{width:100%;}
+	.input, .p_po input, .select{max-width:120px;margin-right:5px;}
+}
+@media only screen and (max-width:680px){
+	.dv_order_info dl{margin-top:10px;}
+}
+@media only screen and (max-width:480px){
+	.dv_pd10 td{width:100%;}
+	.dv_enter_address .tab .td_edit{white-space:normal;}
+	.tab_mycart td{width:100%;}
+	#month{width:45px;}
+	.div_payment p.p_32{padding-left:135px;}
+}
+
+@media only screen and (max-width:320px){
+	.input, .p_po input, .select{max-width:90px;margin-right:2px;}
+}

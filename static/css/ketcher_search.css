@@ -1,0 +1,60 @@
+body{margin:0;}
+body>div:first-child{position:absolute;width:530px;max-width:530px;}
+a,img{border-color:#e0e0e0;border-width:0;color:#e0e0e0;vertical-align:middle;}
+.hidden{display:none;}
+td{padding:0;}
+table#ketcher_window{position:absolute;z-index:1;width:100%;height:auto;border-color:#fff;border-style:outset;border-width:thin;background-color:#d8e5f8;table-layout:fixed;}
+#main_toolbar{height:30px;}
+#main_toolbar td img{margin:5px 0;}
+.sideButton,.toolButton{border:none;border-radius:5px;background-color:#f3f3f3;cursor:pointer;}
+.toolIcon{width:32px;height:36px;}
+.sideButton{padding:1px;width:32px;}
+.buttonHighlight{border-color:#fff;}
+.buttonDisabled{opacity:.25;}
+.toolDelimiter{width:16px;}
+.buttonPressed,.buttonSelected{background-color:#fff;}
+#client_area{overflow:hidden;width:100%;border-color:#e0e0e0;border-style:inset;border-width:1px;background-color:#fff;text-align:left;}
+#client_area svg{min-width:100%;min-height:100%;}
+#elem_table_area{border-style:none;background-color:#fff;}
+#elem_table_area text{font-weight:700!important;font-size:16px!important;}
+#elem_table_cancel,#elem_table_ok,#read_cancel,#read_ok,#reagenerics_table_cancel,#reagenerics_table_ok,#save_ok{width:60px;height:30px;outline:0;border:1px solid #dadada;background:#fff;color:#343434;text-align:center;line-height:30px;}
+#elem_table_ok,#read_ok,#reagenerics_table_ok,#save_ok{background:#005bac;color:#fff;}
+#rgroup_table_area{border-style:none;background-color:#e0e0e0;}
+#reagenerics_table_area{border-style:none;background-color:#fff;}
+.dropdownButton{position:absolute;top:28px;left:28px;cursor:pointer;}
+.dropdownList{position:absolute;left:6px;z-index:2;border-color:#fff;border-style:outset;border-width:thin;background-color:#fafafa;}
+.dropdownList>table{font-size:.9em;font-family:arial;}
+.dropdownListItem{cursor:default;}
+.dropdownListItem>td>div{float:left;margin-top:-3px;margin-right:2px;width:24px;height:24px;}
+.dropdownListDelimiter{height:2px;background-color:silver;}
+.highlightedItem{background-color:silver;}
+#buffer_frame{display:none;}
+input#input_label{position:absolute;z-index:3;}
+div#window_cover{position:absolute;top:0;left:0;z-index:4;background-color:#000;opacity:.15;}
+div#loading{width:100%;height:100%;background-image:url(loading.gif);background-position:center center;background-repeat:no-repeat;}
+.dialogWindow{position:absolute;top:10%;left:10%;z-index:5;border-color:#f0f0f0;border-style:outset;border-width:thin;background-color:#fff;text-align:center;}
+.dv_periodic{height:30px;text-align:left;text-indent:15px;font-size:14px;line-height:30px;}
+.dialogWindow>div>div:first-child{background-color:#d0d0d0;}
+.elemTableDialog{top:5%;left:5%;}
+.chemicalText{overflow:auto;width:320px;height:320px;white-space:pre;}
+.chemicalText_IE{white-space:pre;}
+.dataSGroupValue{overflow:auto;width:320px;height:200px;}
+.sideButtonCell{height:24px!important;}
+.sideButton{height:24px!important;}
+#main_toolbar td img{margin:0;}
+.toolButtonCell{height:24px!important;}
+.dropdownButton{top:20px;}
+#selector_dropdown_list{top:30px;}
+#bond_dropdown_list{top:60px;}
+#template_dropdown_list{top:115px;}
+#reaction_dropdown_list{top:198px;}
+#rgroup_dropdown_list{top:253px;}
+.dialogWindow{top:0;}
+.chemicalText{height:280px;}
+#ketcher_window td{max-height:26px;}
+#atom_br,#atom_c,#atom_cl,#atom_f,#atom_h,#atom_i,#atom_n,#atom_o,#atom_p,#atom_s,#atom_table{transform:scale(.78);}
+#save_file{top:-1px;left:17%;}
+#open_file{left:17%;}
+#elem_table{top:-33px;left:-88px;transform:scale(.75);}
+#reagenerics_table{top:-13px;left:-45px;transform:scale(.8);}
+.client_area{min-height:328px!important;}

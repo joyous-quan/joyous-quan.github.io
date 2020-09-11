@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="robots" content="index,follow">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="/static/img/ambeed.ico?t=20200615002" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/static/css/sign-in-up.css">
+	<!-- <script type="text/javascript" src="/static/js/common-new.js?t=20190916001"></script>
+	<script src="/static/h-ui/lib/jquery.validation/jquery.validate.min.js"></script> -->
+<style>
+
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="bg-green">
+		<a href="/index.html"><img src="/static/img/new-logo.png" alt=""></a>
+	</div>
+	<div class="sign-kuang">
+		<h2>Sign in to your account</h2>
+		<div class="sign-con">
+			<form id="login_form">
+				<p>Email address</p>
+				<input class="ipt_text" type="text" id="email" maxlength="50" name="email"/>
+				<p class="password">Password</p>
+				<input class="ipt_text" type="password" maxlength="18" id="password" name="password"/>
+				<p class="forgot">
+					<a href="/user/reset-password.html"> Forgot Password ?</a>
+				</p>
+				<p class="checkbox">
+					<input class="input_check" type="checkbox" checked id="keep"/><label for="keep"></label> Keep me signed in? <br>
+					<span class="font12">Uncheck if using a public device.</span>
+				</p>
+			</form>
+			<p class="errorBox">
+			</p>
+			<button class="btn green-btn sign-btn margin-top20 cursor" onclick="_login()">Sign In</button>
+			<p class="tips">
+				<span>Don't have an account ?</span>
+			</p>
+			<a href="/user/register.html" class="btn white-btn create-btn">Create New Account</a>
+		</div>
+	</div>
+</div>
+
+<p class="footer-txt">
+Useful Links：SciQuest &nbsp; Aribat &nbsp; SciFindert &nbsp; DiscoveryGate &nbsp; &nbsp; © Copyright 2018-2020 A Pharm, Inc. All Rights Reserved.
+</p>
+
+
+<script>
+var validato;//表单验证对象
+$(document).ready(function(){
+$(".p_keep label").click(function(){
+$(this).toggleClass("on");
+});
+//添加自定义检查密码的方法
+jQuery.validator.addMethod("isEmail", function(value, element) {
+return /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/.test(value)?true:false;
+}, "Enter a valid email address.");
+validator=$('#login_form').validate({
+rules:{
+email:{
+required: true,
+isEmail: true
+},
+password:{
+required: true,
+minlength: 6
+}
+},
+messages:{
+email:{
+required:"Please enter your email address.",
+isEmail:"Enter a valid email address."
+},
+password:{
+required:"Please enter your password.",
+minlength:"Passwords must be at least 6 characters."
+}
+}
+});
+$("#email")[0].focus();
+});
+function _chkEm(obj){
+var val=$(obj).val();
+$(obj).removeClass("on").removeClass("off");
+if(!isempty(val)){
+_chkEmail(val)?$(obj).addClass('on'):$(obj).addClass('off');
+}
+}
+function _chkPwd(obj){
+var val=$(obj).val();
+$(obj).removeClass("on").removeClass("off");
+if(!isempty(val)){
+val.length>5?$(obj).addClass('on'):$(obj).addClass('off');
+}
+}
+function _login(){
+$(".errorBox,label.error").hide();
+var isSave=$("#keep").is(":checked")?true:false;
+var flag = $("#login_form").valid();
+if(!flag){
+validator.focusInvalid();
+return false;
+}
+var email=$("#email").val();
+var password=$("#password").val();
+var params={"email":email,"password":password,"isSave":isSave};
+_DoAjaxAsyncTrue('POST',params, '/webapi/v1/user/login', function () {
+window.location.href=isempty($.urlGet()['path'])?"/":$.urlGet()['path']; //获取URL的Get参数
+},null,true);
+_imgyzm();
+}
+_domKey13(_login);
+</script>
+</body>
+</html>

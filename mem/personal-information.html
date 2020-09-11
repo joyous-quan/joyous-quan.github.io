@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Information | Ambeed</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="/static/img/ambeed.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css?v=2020070100001">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css?v=2020070100001">
+<link rel="stylesheet" type="text/css" href="/static/css/my-account.css?v=2020070100001">
+<link rel="stylesheet" href="/static/css/addAddressBox.css?v=2020070100001"/>
+<!-- <script type="text/javascript" src="/static/js/common-new.js?v=2020070100001"></script> -->
+<script src="/static/js/jquery.min.js"></script>
+<script src='/static/layer/layer.js'></script>
+<script src="/static/js/common.js"></script>
+
+</head>
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body class="show-menu-body">
+<!-- header -->
+<header id="header"></header>
+<!-- /header -->
+<div class="layout">
+<div class="nav-com-title">
+<p>
+<a href="/" class="home-logo"><img src="/static/img/home-logo.png" alt=""></a>
+<a href="javascript:;" class="nav-img">My Account</a>
+<a href="javascript:;" class="current">Personal Information</a>
+</p>
+<h3>Personal Information</h3>
+</div>
+<div class="my-account-title" onselectstart="return false">
+<div class="bg-yellow border-box">
+<div class="float-left">
+<img src="/static/img/people-vip.png" height="50px" width="50px" alt="">
+<span class="welcome">hello, <span class="sp_mem_name">name</span></span>
+</div>
+<ul class="float-right">
+<li><a href="/mem/personal-information.html"  class="active-inf">Personal Information</a></li>
+<li><a href="/mem/shipping-address.html" >Shipping Address</a></li>
+<li><a href="/mem/billing-address.html" >Billing Address</a></li>
+</ul>
+</div>
+<div class="bg-gray">
+<ul>
+<li ><a href="/mem/my-order.html">Order</a></li>
+<li >|<a href="/mem/my-inquiry.html">Inquiry</a></li>
+<li >|<a href="/mem/my-favorites.html">My Favorites</a></li>
+<li >|<a href="/mem/my-cart.html">My Cart</a></li>
+<!--<li >|<a href="/mem/my-free-sample.html">My Free Sample</a></li>-->
+</ul>
+</div>
+</div>
+<div class="my-account-con personal-inf-con">
+<table border="0" cellspacing="0">
+<colgroup>
+<col width="43%">
+<col width="43%">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td>ID:</td>
+<td colspan="2">8613</td>
+</tr>
+<tr>
+<td>Email:</td>
+<td colspan="2">joyous-quan@outlook.com</td>
+</tr>
+<tr>
+<td>Name:</td>
+<td id="name"><span>quan</span><input value="quan" type="text"/></td>
+<td><a class="color-green a_edit" href="javascript:;">Edit</a></td>
+</tr>
+<tr>
+<td>Organization Name:</td>
+<td id="organization"><span>bide</span><input value="bide" type="text"/></td>
+<td><a class="color-green a_edit" href="javascript:;">Edit</a></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td>******</td>
+<td><a class="color-green" href="javascript:;" onclick="_openUptPwdBox()">Change Password</a></td>
+</tr>
+</tbody>
+</table>
+<div>
+<a href="/user/login.html" class="btn green-black-btn btn-block sign-out-btn">Sign Out</a>
+</div>
+</div>
+</div>
+<div class="clear height40"></div>
+<!-- footer -->
+<footer id="footer"></footer>
+
+
+<script>
+$(document).ready(function(){
+$(".a_edit").click(function(){
+var tstxt=$(this).text();
+var td=$(this).parent().prev();
+if(tstxt=="Confirm"){
+_upt_MemInfo();
+td.find('span').show();
+td.find('input').hide();
+$(this).text('Edit');
+}else{
+td.find('span').hide();
+td.find('input').show();
+$(this).text('Confirm');
+}
+});
+});
+function _upt_MemInfo(){
+var name=$("#name input").val();
+var organization=$("#organization input").val();
+var params={"name":name,"organization":organization};
+if(!isempty(name)&&!isempty(organization)) {
+_DoAjaxAsyncTrue("PUT",params,'/webapi/v1/mem/personalInformation',function(){
+$("#name span").html($("#name input").val());
+$("#organization span").html($("#organization input").val());
+});
+}else{aBox._warn("Name or organization can not be empty");}
+}
+function _openUptPwdBox(){
+var html='<div class="i_f_content a_i_content dv_address_box" style="min-height:auto;">'+
+'<ul>'+
+'<li class="i_f_ipt marg0">'+
+'<p class="colorGrey">* Current Password</p>'+
+'<input type="password" id="oldPwd">'+
+'</li>'+
+'<li class="i_f_ipt">'+
+'<p class="colorGrey">* New Password</p>'+
+'<input type="password" id="newPwd">'+
+'</li>'+
+'<li class="i_f_ipt">'+
+'<p class="colorGrey">* Confirm New Password</p>'+
+'<input type="password" id="confPwd">'+
+'</li></ul>'+
+'<p class="errorBox">&nbsp;&nbsp;</p>'+
+'<p>Must contain at least 6 characters<br/>'+
+'Must contain at least one letter<br/>'+
+'Must contain at least one number<br/><br/></p>'+
+'<a class="btn btn-block green-black-btn" onclick="_changePwd()"> Submit </a>'+
+'</div>';
+aBox._cntbox(html,"Change Password",400,400);
+}
+//修改密码
+function _changePwd(){
+$(".errorBox").html("&nbsp;&nbsp;");
+var oldPwd=$("#oldPwd").val();
+var newPwd=$("#newPwd").val();
+var confPwd=$("#confPwd").val();
+if (isempty(oldPwd)||isempty(newPwd)||isempty(confPwd)){
+$(".errorBox").html("Please enter password");
+return false;
+}
+if(!_chkPassword(newPwd)){
+$(".errorBox").html("The password is relatively simple, it is recommended that you change to a combination of complex passwords, such as letters + numbers.");
+return false;
+}
+if(oldPwd==newPwd){
+$(".errorBox").html("The new password and the original password can not be the same.");
+return false;
+}
+if(newPwd!=confPwd){
+$(".errorBox").html("The two password is inconsistent.");
+return false;
+}
+var params={"CurrentPassword":oldPwd,"NewPassword":newPwd};
+_DoAjaxAsyncTrue("PUT", params, '/webapi/v1/mem/changePassword', function () {
+aBox._warntip("Password reset complete");
+});
+}
+</script>
+</body>
+</html>

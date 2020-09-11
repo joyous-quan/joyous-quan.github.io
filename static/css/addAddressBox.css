@@ -1,0 +1,10 @@
+.i_f_content{padding:20px 25px 10px;font-size:14px;}
+.i_f_ipt{margin-top:8px;}
+.a_i_select,.i_f_ipt input{padding:8px 10px 4px;width:100%;border:none;border-bottom:1px #ddd solid;font-size:14px;}
+.colorGrey{color:#999;}
+.colorGrey span{font-size:12px;}
+.blue_btn{margin:15px 0;width:360px;height:36px;outline:0;border-color:initial;border-style:none;border-width:initial;border-radius:20px;border-image:initial;background-color:#3d7fde;color:#fff;font-size:16px;line-height:36px;cursor:pointer;}
+.blue_btn:hover{background-color:#3a79d2;}
+.marg0{margin:0!important;}
+.ipt_province,.sel_province{display:none;}
+.ipt_province.show,.sel_province.show{display:block;}
