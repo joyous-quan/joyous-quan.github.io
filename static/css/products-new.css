@@ -152,7 +152,7 @@ table{width:100%;}
 .details-top-right{position:absolute;right:2%;padding:0;width:auto;}
 .details-top-left{padding-right:0;width:100%;}
 .dtl-top .p-details-table{padding-top:10px;width:100%;}
-.p-details-table .btn-box{position:fixed;bottom:0;left:0;z-index:1000;padding:5px;width:100%;min-width:320px;background:#f2f2f2;text-align:center;}
+.p-details-table .btn-box{position:fixed;bottom:0;left:0;z-index:10000;padding:5px;width:100%;min-width:320px;background:#f2f2f2;text-align:center;}
 .p-details-main{float:left;padding-right:0;width:100%;}
 .p-details-main table td{min-width:150px;}
 body{padding-bottom:60px;}
