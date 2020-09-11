@@ -42,7 +42,7 @@
 .head-sign-box .head-cart{position:relative;float:right;display:block;width:18%;}
 .head-sign-box .cart-count{z-index:4;position:absolute;top:0;right:0;display:inline-block;visibility:hidden;width:22px;height:22px;border:1px solid #fff;border-radius:22px;background:#000;color:#fff;text-align:center;line-height:20px;}
 .head-sign-box img{vertical-align:middle;}
-.head-cart img{width:34px;height:34px;}
+.head-cart img{width:32px;height:32px;}
 /*new-head-bottom*/
 .phone_menu{display:none;}
 .new-head-bottom{margin-top:80px;height:40px;background:#222;}

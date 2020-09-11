@@ -10,21 +10,20 @@
 .dv_jsDrawEdit .btn{float:left;margin-top:5px}
 .dv_jsDrawEdit .btn input{width:100px;height:30px;line-height:30px;border:none;border-radius:4px;font-weight:700;outline:0;background:#58d7d9;margin-right:3px}
 .dv_jsDrawEdit #lost{display:inline-block;}
-.dv_jsDrawEdit #wait{display:inline}
+.dv_jsDrawEdit #wait{display:inline;}
 .dv_draw{width:735px;height:370px;margin:5px 0 0 5px}
 .dv_edit_r{position:absolute;left:540px;top:236px;padding-top:3px;}
 .dv_edit_r .h5{margin:0;line-height:26px;font-size:19px;}
 .dv_edit_r p{line-height:22px;font-size:14px;white-space:nowrap;}
 .dv_edit_r p input{margin-right:2px}
-#similityValue{width:40px;height:20px;line-height:20px;border:none;margin-left:5px;text-indent:5px}
+#similityValue{width:40px;height:20px;line-height:20px;border:none;margin-left:5px;text-indent:5px;}
 #lost{background:rgba(0,0,0,0) url(/static/img/structureSearch/images/search_02.png) no-repeat scroll 0 0;border:medium none;height:39px;width:124px}
-.loadCls{min-height:600px;z-index:99}
+.loadCls{min-height:600px;z-index:99;}
 .loadCls #dvPage,.p_load{display:none}
-.search_tab{z-index:2;position:absolute;left:750px}
-.search_tab a{display:block;width:120px;height:34px;background:#ddd;text-align:center;line-height:34px;margin-bottom:4px;font-weight:700}
+.search_tab a{margin-bottom:2px;display:inline-block;width:120px;height:34px;background:#ddd;text-align:center;line-height:34px;font-weight:700}
 .search_tab a.current{background:#f39800;color:#fff}
-.search_product_scroll{position:relative}
-.search_content{background:#fff;min-width:870px;}
+.search_product_scroll{}
+.search_content{position:relative;background:#fff;min-width:780px;}
 .search_content_on{position:fixed;top:80px;width:100%;z-index:2;}
 .bg_shadow{display:none;z-index:-1;position:absolute;bottom:-14px;height:15px;width:100%;background:url(/static/img/gray-bottom.png) repeat-x bottom}
 .molSearchContent .inputFile-box{position:relative;overflow:hidden;height:50px;display:block;border:1px solid #ddd;background:url(/static/img/products-details/p-details-download.png) no-repeat 5px center;width:745px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
@@ -82,17 +81,14 @@
 i{font-style:normal;}
 
 
-
-
 @media only screen and (max-width:1024px){
 	.search_content_on{position: static;}
 	.heightHide{padding-top:0!important;}
 	.bg_shadow{display:none!important;}
-	.overflow_x{overflow-x:auto;overflow-y:hidden;position:relative;min-height:120px;}
+	.overflow_x{overflow-x:auto;overflow-y:hidden;position:relative;min-height:130px;}
 	.dv_price_list,.search_products_box td.phone_td{display:none;}
 	.search_products_box .productsImg_a{width:240px;height:240px;}
 }
-
 
 @media only screen and (max-width:680px){
 	.search_products_box table:first-child{border-top:1px solid #ddd;}

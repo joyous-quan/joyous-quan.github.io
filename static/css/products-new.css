@@ -145,6 +145,7 @@ table{width:100%;}
 @media only screen and (max-width:1024px){
 /* 手机端不显示 */
 .dtl-bottom-left,.p-details-side,.dv_synthetic,.h4-border,.details-top-right>img,.tag_big,.dv_2dTo3d,#footer{display:none!important;}
+.inlineBlock h1{font-size:20px;}
 .cat-number-div{left:5px;font-size:14px;font-weight:700;width:95%;}
 .image-box-new{padding-right:0;width:60%;}
 .image-box-new i{display:none;}
@@ -158,7 +159,7 @@ table{width:100%;}
 body{padding-bottom:60px;}
 #chat-application{bottom:-6px!important;}
 .btn-box a{height:36px;line-height:36px;}
-.btn-box .phone_cart{display:inline-block;position:absolute;left:20%;top:-2px;z-index:10;background:url(/static/img/cart.png) no-repeat left top;background-size:34px 34px;width:36px;height:36px;border:none;}
+.btn-box .phone_cart{display:inline-block;position:absolute;left:20%;top:-2px;z-index:10;background:url(/static/img/cart.png) no-repeat left top;background-size:32px 32px;width:36px;height:36px;border:none;}
 .phone_cart i{position:absolute;bottom:-12px;left:0;line-height:20px;font-weight:200;}
 .phone_cart span{position:absolute;width:100%;bottom:10px;right:-10px;border-radius:25px; width:25px;height:25px;background:#f39800;color:#fff;font-weight:700;line-height:25px;}
 .p-details-main table td b{color:#999;}
@@ -171,6 +172,7 @@ body{padding-bottom:60px;}
 .p-details-table table td{padding-left:5px;}
 .p-details-top .inlineBlock{margin-bottom:0;border:none;}
 .image-box-new{width:100%;border:1px solid #f39800;}
+.dv_main_img img{width:90%;}
 .dtl-bottom-right{width:100%;padding:10px 0;}
 .details-top-right{position:static;padding:0;width:100%;}
 .right-download div,.right-download div p{display:inline-block;width:auto;vertical-align:middle;}
