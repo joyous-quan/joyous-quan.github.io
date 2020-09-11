@@ -17,7 +17,7 @@
 .new-head-middle{position:relative;}
 .head-search{position:relative;float:left;width:44%;}
 .head-search-ipt{float:left;padding-right:40px;width:100%;height:36px;border:none;background:#fef2dd;text-indent:10px;vertical-align:middle;}
-.head-search-img{z-index:105;position:absolute;top:0;right:0;width:40px;height:36px;background:#f39800 url(/static/img/search.png);background-position:center;background-repeat:no-repeat;cursor:pointer;}
+.head-search-img{z-index:105;position:absolute;top:0;right:0;width:40px;height:36px;background:#f39800 url(/static/img/search.png);background-size:26px 26px;background-position:center;background-repeat:no-repeat;cursor:pointer;}
 .structure-btn{position:absolute;top:19px;right:-110px;width:106px;border-bottom:1px solid #f39800;color:#f39800;font-size:14px;}
 .dv_keyword_list{position:absolute;top:36px;left:0;display:none;padding-bottom:5px;width:100%;min-height:30px;background:#fff;}
 .dv_keyword_list dd:hover{background:#eee;}
@@ -106,13 +106,13 @@
 	.head{min-height:50px;background:#222;border:none;}
 	/* new-head-middle     search */
 	.new-head-middle{padding:5px 5px 5px 60px;}
-	.head-search{padding-left:45px;width:100%;background:#fff url(/static/img/phone/logo_min.png) no-repeat 4px center;}
-	.head-search-img{right:auto;left:45px;height:40px;background:#fff url(/static/img/search.png) no-repeat center;}
-	.head-search-ipt{padding-right:10px;padding-left:40px!important;height:40px;background:#fff;text-indent:5px;}
+	.head-search{padding-left:45px;width:100%;background:#fff url(/static/img/phone/logo_min.png) no-repeat 4px center;background-size:36px 34px;}
+	.head-search-img{right:auto;left:43px;height:40px;background:#fff url(/static/img/search.png) no-repeat center;background-size:26px 26px;}
+	.head-search-ipt{padding-right:10px;padding-left:40px!important;height:40px;background:#fff;text-indent:0;}
 	.dv_keyword_list{top:40px;}
 	/* new-head-bottom     menu */
 	.new-head-bottom{position:fixed;top:5px;left:12px;z-index:102;height:auto;margin-top:0;}
-	.phone_menu{display:block;width:40px;height:40px;background:url(/static/img/phone/menu.png) no-repeat center;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0.1);out-line:none;}
+	.phone_menu{display:block;width:40px;height:40px;background:url(/static/img/phone/menu.png) no-repeat center;background-size:34px 34px;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0.1);outline:none;}
 	.fixed_menu_mask{position:fixed;top:0;left:0;z-index:9;display:none;width:100%;height:100%;background:#222;opacity:.6;}
 	.fixed_menu{position:fixed;top:0;right:-100%;z-index:10;overflow-y:auto;width:85%;height:100%;min-width:270px;background:#fff;-webkit-transition:all ease .3s;-moz-transition:all ease .3s;-o-transition:all ease .3s;transition:all ease .3s;}
 	.fixed_menu_show{right:0;left:auto;}
@@ -121,8 +121,8 @@
 	.nav-title{padding-right:40px;height:50px;color:#222;text-align:left;white-space:nowrap;line-height:50px;border-top:none;border-bottom:1px solid #ddd;}
 	.nav-title span{top:0;}
 	.contact-dl .nav-title{border-bottom:none;}
-	.line-span{position:absolute;top:5px;right:0;display:inline-block;width:40px;height:40px;background:url(/static/img/phone/menu_down.png) no-repeat center;}
-	.line-span-this{background:url(/static/img/phone/menu_up.png) no-repeat center;}
+	.line-span{position:absolute;top:5px;right:0;display:inline-block;width:40px;height:40px;background:url(/static/img/phone/menu_down.png) no-repeat center;background-size:16px;}
+	.line-span-this{background:url(/static/img/phone/menu_up.png) no-repeat center;background-size:16px;}
 	.subnav-dl{position:static;overflow:hidden;padding:10px 0 0;}
 	.subnav-dl dd{width:100%;}
 	.subnav-dl dd a.title-a{display:block;padding-left:20px;line-height:40px;}

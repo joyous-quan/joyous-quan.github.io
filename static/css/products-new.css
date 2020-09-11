@@ -7,14 +7,13 @@ table{width:100%;}
 /*导航条*/
 .product-detail-com-title{position:relative;margin:10px 0 15px;}
 .product-detail-com-title a{display:inline-block;height:20px;white-space:nowrap;line-height:20px;}
-.home-logo img{position:relative;top:-2px;}
 .bg-menu-down,.home-logo{padding-right:18px;background:url(/static/img/menu-right.png) no-repeat right center;background-size:12px;}
 .bg-menu-down{display:inline-block;padding-right:16px;}
 .hide-bg-menu{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .hide-bg-menu .current{color:#999;text-decoration:underline;}
 .hidden-menu{display:inline-block;visibility:hidden;}
 .show-bg-menu{position:absolute;top:0;}
-.block-a{padding-right:18px;background:url(/static/img/menu-down.png) no-repeat right center;background-size:16px;font-weight:700;}
+.block-a{padding-right:18px;background:url(/static/img/menu-down.png) no-repeat right center;background-size:15px;font-weight:700;}
 .bg-menu a:hover{text-decoration:underline;}
 .dv_no_menu .block-a{padding-right:0;background:none;}
 .hide-menu{position:absolute;top:0;left:50%;min-width:200px;}
