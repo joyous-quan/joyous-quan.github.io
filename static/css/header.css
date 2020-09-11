@@ -17,7 +17,7 @@
 .new-head-middle{position:relative;}
 .head-search{position:relative;float:left;width:44%;}
 .head-search-ipt{float:left;padding-right:40px;width:100%;height:36px;border:none;background:#fef2dd;text-indent:10px;vertical-align:middle;}
-.head-search-img{z-index:105;position:absolute;top:0;right:0;width:40px;height:36px;background:#f39800 url(/static/img/search.png);background-size:26px 26px;background-position:center;background-repeat:no-repeat;cursor:pointer;}
+.head-search-img{z-index:105;position:absolute;top:0;right:0;width:40px;height:36px;background:#f39800 url(/static/img/search.png);background-position:center;background-repeat:no-repeat;cursor:pointer;}
 .structure-btn{position:absolute;top:19px;right:-110px;width:106px;border-bottom:1px solid #f39800;color:#f39800;font-size:14px;}
 .dv_keyword_list{position:absolute;top:36px;left:0;display:none;padding-bottom:5px;width:100%;min-height:30px;background:#fff;}
 .dv_keyword_list dd:hover{background:#eee;}
@@ -42,7 +42,7 @@
 .head-sign-box .head-cart{position:relative;float:right;display:block;width:18%;}
 .head-sign-box .cart-count{z-index:4;position:absolute;top:0;right:0;display:inline-block;visibility:hidden;width:22px;height:22px;border:1px solid #fff;border-radius:22px;background:#000;color:#fff;text-align:center;line-height:20px;}
 .head-sign-box img{vertical-align:middle;}
-
+.head-cart img{width:34px;height:34px;}
 /*new-head-bottom*/
 .phone_menu{display:none;}
 .new-head-bottom{margin-top:80px;height:40px;background:#222;}
@@ -107,7 +107,7 @@
 	/* new-head-middle     search */
 	.new-head-middle{padding:5px 5px 5px 60px;}
 	.head-search{padding-left:45px;width:100%;background:#fff url(/static/img/phone/logo_min.png) no-repeat 4px center;background-size:36px 34px;}
-	.head-search-img{right:auto;left:43px;height:40px;background:#fff url(/static/img/search.png) no-repeat center;background-size:26px 26px;}
+	.head-search-img{right:auto;left:43px;height:40px;background:#fff url(/static/img/phone/search.png) no-repeat center;background-size:26px 26px;}
 	.head-search-ipt{padding-right:10px;padding-left:40px!important;height:40px;background:#fff;text-indent:0;}
 	.dv_keyword_list{top:40px;}
 	/* new-head-bottom     menu */
