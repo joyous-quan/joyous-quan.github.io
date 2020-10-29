@@ -1,0 +1,63 @@
+[
+  {
+    "BDNum": "BD15745",
+    "CAS": "5336-90-3",
+    "Purity": "97%",
+    "Proid": "P000708338",
+    "NameEn": "Acridine-9-carboxylic acid",
+    "NameCn": "9-吖啶羧酸",
+    "price": "￥740.00",
+    "size": "5g",
+    "p_image": "https://file.bidepharm.com/static/upload/proimg/94/5336-90-3.png"
+  },{
+    "BDNum": "BD18330",
+    "CAS": "14323-06-9",
+    "Purity": "98%",
+    "Proid": "P000120593",
+    "NameEn": "Tris(2,2'-bipyridine)ruthenium dichloride",
+    "NameCn": "三(2,2'-联吡啶)二氯化钌",
+    "price": "￥279.00",
+    "size": "1g",
+    "p_image": "https://file.bidepharm.com/static/upload/proimg/121/14323-06-9.png"
+  },{
+    "BDNum": "BD155809",
+    "CAS": "94928-86-6",
+    "Purity": "98%",
+    "Proid": "P000060122",
+    "NameEn": "fac-Tris(2-phenylpyridine)iridium",
+    "NameCn": "fac-三(2-苯基吡啶)合铱",
+    "price": "￥588.00",
+    "size": "250mg",
+    "p_image": "https://file.bidepharm.com/static/upload/proimg/61/94928-86-6.png"
+  },{
+    "BDNum": "BD00779408",
+    "CAS": "864163-80-4",
+    "Purity": "97%",
+    "Proid": "P000786649",
+    "NameEn": "(2,2-Bipyridine)bis[2-(2,4-difluorophenyl)pyridine]iridium(III) Hexafluorophosphate",
+    "NameCn": "(2,2'-联吡啶)双[2-(2,4-二氟苯基)吡啶]铱(III) 六氟磷酸盐",
+    "price": "￥538.00",
+    "size": "100mg",
+    "p_image": "https://file.bidepharm.com/static/upload/proimg/787/864163-80-4.png"
+  },{
+    "BDNum": "BD18330",
+    "CAS": "14323-06-9",
+    "Purity": "98%",
+    "Proid": "P000120593",
+    "NameEn": "Tris(2,2'-bipyridine)ruthenium dichloride",
+    "NameCn": "三(2,2'-联吡啶)二氯化钌",
+    "price": "￥279.00",
+    "size": "1g",
+    "p_image": "https://file.bidepharm.com/static/upload/proimg/121/14323-06-9.png"
+  },{
+    "BDNum": "BD15745",
+    "CAS": "5336-90-3",
+    "Purity": "97%",
+    "Proid": "P000708338",
+    "NameEn": "Acridine-9-carboxylic acid",
+    "NameCn": "9-吖啶羧酸",
+    "price": "￥740.00",
+    "size": "5g",
+    "p_image": "https://file.bidepharm.com/static/upload/proimg/94/5336-90-3.png"
+  }
+]
