@@ -1,0 +1,47 @@
+.integral-con{max-width:1300px;margin:0 auto;background:#e8eff1;}
+.integral-select-con{overflow:hidden;padding:0 1.5% 2%;}
+.integral-select-con ul{float:left;}
+.integral-select li{position:relative;margin-top:10px;padding-left:80px;letter-spacing:1px;}
+.integral-select li span{position:absolute;left:0;line-height:25px;}
+.integral-select li a{display:inline-block;margin:2px;padding:2px 8px;}
+.integral-select .current,.integral-select li a:hover{background:#49b0ed;color:#fff;}
+.integral-select-con .myintegral{float:right;margin-top:20px;line-height:40px;font-size:16px;}
+.myintegral b{display:none;color:#0092d8;}
+.myintegral a{display:none;width:150px;height:40px;background:#0092d8;color:#fff;text-align:center;}
+.integral-gift{overflow:hidden;}
+.integral-gift dl{float:left;margin:1%;padding:1% 1.5%;width:23%;min-height:300px;background:#fff;}
+.integral-gift dl dt{position:relative;height:40px;}
+.integral-gift dl dt p{position:absolute;font-weight:700;font-size:18px;}
+.integral-gift dl .img-box{position:relative;margin-bottom:5px;height:255px;text-align:center;line-height:255px;}
+.integral-gift dl .img-box img{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;}
+.integral-gift dd{color:#0092d8;line-height:28px;}
+.integral-gift dd .btn{float:right;width:50px;height:28px;border:1px solid #0092d8;color:#0092d8;font-weight:700;line-height:26px;}
+.integral-gift dd .btn:hover{background:#0092d8;color:#fff;}
+.rule{margin-top:30px;padding:1% 2% 2%;}
+.rule h3{margin-top:10px;line-height:30px;font-size:16px;}
+.rule p{overflow:hidden;margin-left:18px;padding:5px 0 5px 15px;color:#555;line-height:20px;text-indent:-15px;}
+.a_statement{float:right;color:#0092d8;text-indent:0;}
+.a_statement i{display:inline-block;width:16px;height:16px;text-align:center;line-height:14px;border-radius:16px;border:1px solid #0092d8;margin-right:5px;}
+
+.integral-exchange{width:410px;height:250px;border:10px solid #2d3b4e;border-radius:5px;text-align:center;}
+.integral-exchange p{margin-top:55px;font-size:24px;}
+.integral-exchange .btn{margin:40px 4px 0;width:125px;line-height:40px;font-weight:700;}
+.integral-exchange .btn-cancel{background:#ddd;}
+.integral-exchange .btn-yellow{background:#fdd000;}
+
+
+@media only screen and (max-width:1024px){
+	.integral-gift dl{width:31.3%;}
+	.integral-select li a{padding:2px 6px;}
+}
+@media only screen and (max-width:780px){
+	.integral-select-con .myintegral{margin-top:0;}
+	.integral-gift dl{width:48%;}
+}
+@media only screen and (max-width:480px){
+	.integral-gift dl .img-box{height:220px;line-height:220px;}
+}
+@media only screen and (max-width:320px){
+	.integral-gift dl{width:92%;margin:2% 4%;}
+	.rule{padding:1% 3% 2%;}
+}

@@ -1,0 +1,26 @@
+.common-title span{margin-top:14px;color:#888;font-weight:400;font-size:12px;}
+.loadCls #dvPage,.p_load,.isIe,.noIe{display:none;}
+.dv_jsDrawEdit_box{max-width:100%;overflow-x:auto;}
+.dv_jsDrawEdit{margin:0 auto;margin-bottom:50px;padding:5px 5px 0;width:1100px;background:#0092d8;}
+.dv_draw{width:795px;height:550px;}
+.inlineBlock{display:inline-block!important;}
+.dv_Pharmacutical{padding:18px 10px 0 10px;min-height:306px;}
+.dv_Pharmacutical li{margin:0 5px 42px 5px!important;}
+.dv_Pharmacutical ul{height:auto;}
+.dv_Pharmacutical li .p_list_name{overflow:hidden;width:100%;text-overflow:ellipsis;white-space:nowrap;font-size:12px;line-height:26px;}
+.dv_Pharmacutical ul li a,.dv_Pharmacutical ul li p{color:#555;}
+.dv_Pharmacutical li .p_list_name a{color:#549b35;}
+.dv_Pharmacutical li .p_list_name a:hover{font-weight:700;}
+.dv_loadSearchImg>div{margin-top:20px;}
+.dv_loadSearchImg>div img{max-height:180px;}
+.floatR{float:right;}
+.dv_edit_r{width:26%;}
+.dv_edit_r p{min-height:40px;color:#fff;font-size:16px;}
+.dv_edit_r .h5{margin:30px 0 15px 0;width:90%;height:42px;border-bottom:1.5px solid #fff;color:#fff;font-size:24px;}
+.dv_edit_r input[type='radio']{margin-right:3px;}
+.sp_upload{position:relative;display:inline-block;margin-top:20px;padding:0 20px;height:38px;border:none;border-radius:4px;background:#ffe100;color:#222;font-weight:700;line-height:38px;}
+.sp_upload input{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+.sp_upload img{vertical-align:middle;}
+#lost{width:124px;height:40px;border:medium none;background:rgba(0,0,0,0) url(/static/img/structureSearch/images/search_02.png) no-repeat scroll 0 0;}
+#similityValue{margin-left:5px;padding-left:5px;width:50px;height:24px;outline:0;border:1px solid #fff;background:#0092d8;color:#fff;}
+.dv_jsDrawEdit .btn input{margin-right:3px;width:120px;height:38px;outline:0;border:none;border-radius:4px;background:#ffe100;color:#222;font-weight:700;line-height:38px;}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+	<meta name="force-rendering" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" href="/static/css/common.css?v=202006100001" media="all">
+<link rel="stylesheet" href="/static/css/login.css?v=202006100001" media="all">
+<script type="text/javascript" src="/static/js/jquery.min.js?v=202006100001"></script>
+<script type="text/javascript" src="/static/js/common.js?v=202006100001"></script>
+<script type="text/javascript" src="/static/h-ui/lib/jquery.validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/static/js/sms.js?v=202006100001"></script>
+</head>
+
+<body>
+<input type="hidden" name="_xsrf" value="2|45c51154|31e5a5fedc3dbc27d247bc9a73b5867b|1604020561"/>
+<div class="layout-login">
+<h1 class="title-logo">
+<a href="/">
+<img src="/static/img/logo-blue.png" alt="">
+</a>
+</h1>
+<div class="login-register-con login-con">
+<h2>会员登录</h2>
+<div class="login_title">
+<span class="this_title">账号密码登录</span>
+<span>手机验证码登录</span>
+</div>
+<div class="login_container">
+<form id="login_form" class="password_login" novalidate="novalidate">
+<p>邮箱/电话</p>
+<input type="text" name="email" id="email">
+<p>密码</p>
+<input type="password" name="password" id="password">
+<p class="align-R"><a href="/user/passwordAssistance.html" title="">忘记密码 ?</a></p>
+</form>
+<form id="login_form_code" class="code_login hidden">
+<div class="set_code">
+<p>电话</p>
+<input type="text" name="phone" id="phone">
+<a href="javascript:;" id="sp_code" onclick="sendMessage('#phone','#sp_code',2)">发送验证码</a>
+</div>
+<p>验证码</p>
+<input type="text" name="code" id="code">
+</form>
+</div>
+<p class="checkbox-con">
+<label for="remember"><input class="input_check" type="checkbox" id="remember" checked="">记住登录状态</label>
+</p>
+<p class="errorBox"></p>
+<button type="submit" class="btn btn-blue" onclick="_login()">登 录</button>
+<div class="register-tips"><p>还不是毕得会员？</p></div>
+<a href="/user/register.html" class="btn btn-gray">注 册</a>
+</div>
+</div>
+<script>
+var validato;//表单验证对象
+$(document).ready(function(){
+$('.login_title span').click(function(){
+$(".errorBox").html('').hide();
+var idx = $(this).index();
+$(this).addClass('this_title').siblings().removeClass('this_title');
+$('.login_container form').eq(idx).show().siblings().hide();
+});
+//添加自定义检查密码的方法
+validator=$('#login_form').validate({
+rules:{
+email:{
+required: true
+},
+password:{
+required: true,
+minlength: 6,
+maxlength:18
+}
+},
+messages:{
+email:{
+required:"请输入邮箱地址或手机号"
+},
+password:{
+required:"请输入密码",
+minlength:"密码最少为6个字符",
+maxlength:"密码最多为18个字符"
+}
+}
+});
+$("#email")[0].focus();
+});
+function _login(){
+var this_idx = $(".this_title").index();
+$(".errorBox").html('').hide();
+var params={};
+var isSave=$(".input_check").is(":checked");
+var post_url = "";
+if(this_idx==0){
+var flag = $("#login_form").valid();
+if(!flag){
+validator.focusInvalid();
+return false;
+}
+var email=$("#email").val();
+var password=$("#password").val();
+post_url = "/webapi/v1/user/login";
+params={"email":email,"password":password,"isSave":isSave};
+}else{
+var phone = $("#phone").val();
+var code = $("#code").val();
+if (!/^1[3456789]\d{9}$/.test(phone)) {$(".errorBox").show().html('请输入正确的手机号码');return false;}
+if(isempty(code)){$(".errorBox").show().html('请输入短信验证码');return false;}
+post_url = "/webapi/v1/user/phone_sms_login";
+params={"phone":phone,"code":code,"isSave":isSave};
+}
+_DoAjaxAsyncTrue('POST',params, post_url, function () {
+var href = isempty($.urlGet()['path'])?"/":$.urlGet()['path'];
+var iqid = $.urlGet()['iqid'];
+if(!isempty(iqid)){
+href = href+'?iqid='+iqid;
+}
+window.location.href = href; //获取URL的Get参数
+});
+}
+_domKey13(_login);
+</script>
+</body>
+</html>
