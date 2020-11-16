@@ -122,9 +122,11 @@ div.successful-order-table{border:1px solid #ddd;}
     .mcr-con{padding:0 10px 40px;}
     .mcr-con table td{height:50px;}
     .mcr-bi-title{margin:10px 0 0;}
+    .successful-order-table>table{border:1px solid #ddd;}
     .successful-order-table table td{padding:0 5px 0 0;}
     .successful-order-table table td:nth-child(5){display:none;}
-    .successful-order-table>tbody>tr>td{display:inline-block;width:100%;}
+    .successful-order-table>tbody>tr>td{display:inline-block;width:100%;border:none;}
+    .successful-order-table td table:last-child tr:last-child td{border-bottom:1px solid #ddd;}
     .successful-order-table .img-box{width:75px;height:75px;}
     .td_price,.td_order_info{width:50%!important;padding-top:5px!important;min-height:50px;border-top:none!important;}
     .mc-inquire-card span{padding:5px;}
