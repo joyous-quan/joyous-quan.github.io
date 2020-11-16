@@ -86,11 +86,11 @@ div.mc-inquire-card span{padding:0;font-weight:700;}
 .successful-order-table table tr:first-child td{border:none;}
 .successful-order-table .img-box{display:block;margin-right:5px;width:80px;height:80px;background:#e8f9fe;}
 .successful-order-table .through{color:#999;text-decoration:line-through;}
-.order-products-name{min-height:32px;}
+.successful-order-table p.font12{margin-top:5px;}
 .td_order_info p,.td_price p{margin-top:5px;}
 .td_price b{font-size:14px;}
 .td_order_info a{color:#007bc4;white-space:nowrap;font-weight:700;}
-
+.phone_show{display:none;}
 /*我的订单 详情*/
 .mcr-moi-title li span{display:inline-block;min-width:75px;}
 .mcr-order-info .mcr-addr-title{margin-bottom:15px;}
@@ -122,24 +122,25 @@ div.successful-order-table{border:1px solid #ddd;}
     .mcr-con{padding:0 10px 40px;}
     .mcr-con table td{height:50px;}
     .mcr-bi-title{margin:10px 0 0;}
-    .successful-order-table table td{padding:0;}
+    .successful-order-table table td{padding:0 5px 0 0;}
     .successful-order-table table td:nth-child(5){display:none;}
     .successful-order-table>tbody>tr>td{display:inline-block;width:100%;}
     .successful-order-table .img-box{width:75px;height:75px;}
     .td_price,.td_order_info{width:50%!important;padding-top:5px!important;min-height:50px;border-top:none!important;}
     .mc-inquire-card span{padding:5px;}
+    .phone_show{display:inline-block;
 }
 @media only screen and (max-width:780px){
     .mcr-con table td{height:45px;}
     .successful-order-table .img-box{width:70px;height:70px;}
 }
 @media only screen and (max-width:640px){
-    .mcr-mo-title,.order-products-name,.btn-down-pdf,.mcr-my-order .mcr-addr-title .float-R{display:none;}
+    .mcr-mo-title,.btn-down-pdf,.mcr-my-order .mcr-addr-title .float-R{display:none;}
     .mcr-bi-title li span{visibility:hidden;}
     .mcr-con table td{height:40px;}
     .mc-inquire-card dt span{float:none;display:inline-block;min-width:100px;width:auto;}
     .successful-order-table .img-box{width:65px;height:65px;}
-    .successful-order-table .font12 span{display:inline-block;width:100%;padding-right:0;}
+    .successful-order-table .font12 span{display:inline-block;}
     .successful-trade dl,.order-status{width:100%;}
     .order-status{border-top:1px solid #ddd;padding:10px 0;}
     .order-status h3{margin:0;}
