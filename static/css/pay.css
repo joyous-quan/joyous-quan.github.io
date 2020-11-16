@@ -23,7 +23,7 @@
 .sp_ipt_number{display:inline-block;height:24px;border:1px solid #ddd;background:#f5f5f5;text-align:center;white-space:nowrap;}
 .sp_ipt_number span{display:inline-block;width:24px;height:22px;font-size:16px;cursor:pointer;user-select:none;}
 .sp_ipt_number input{width:30px;height:21px;border-top:none;border-right:1px solid #ddd;border-bottom:none;border-left:1px solid #ddd;text-align:center;font-size:14px;}
-.cart-totle,.sp_ltems,.td-totle-price{color:#f37b1d;}
+.cart-totle,.sp_ltems,.td-totle-price{color:#f37b1d;white-space:nowrap;}
 .cart-payment{overflow:hidden;padding:20px 0;}
 .cart-payment .float-L,.cart-payment .float-R{line-height:36px;}
 .cart-payment .sp_ltems{display:inline-block;min-width:30px;text-align:center;font-weight:700;}

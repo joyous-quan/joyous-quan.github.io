@@ -82,8 +82,8 @@ div.mc-inquire-card span{padding:0;font-weight:700;}
 .successful-order ul{position:relative;overflow:hidden;}
 .successful-order-table td{background:#fff;}
 .successful-order-table>tbody>tr>td{padding:0;border:1px solid #ddd;}
-.successful-order-table table td{padding:5px;border-top:1px solid #ddd;}
-.successful-order-table table tr:first-child td{border:none;}
+.successful-order-table table td{padding:5px;border-bottom:1px solid #ddd;}
+.successful-order-table td table:last-child tr:last-child td{border-bottom:none;}
 .successful-order-table .img-box{display:block;margin-right:5px;width:80px;height:80px;background:#e8f9fe;}
 .successful-order-table .through{color:#999;text-decoration:line-through;}
 .successful-order-table p.font12{margin-top:5px;}
@@ -104,7 +104,7 @@ div.mc-inquire-card span{padding:0;font-weight:700;}
 .order-status{padding-left:2%;width:40%;}
 .order-status h3{margin-top:30px;padding:10px 0 10px 4%;background:url(/static/img/status.png) no-repeat;background-position:left center;color:#0092d8;font-weight:700;font-size:18px;}
 .order-status p{padding:5px 0 5px 4%;}
-.order-details-right{padding:10px;border-top:1px solid #ddd;background:#fff;text-align:right;}
+.order-details-right{padding:10px;background:#fff;text-align:right;}
 .order-details-right p{padding:5px;}
 .order-details-right span{display:inline-block;padding-left:5px;min-width:120px;text-align:left;}
 .order-details-right b{color:#fbb000;font-size:16px;}
@@ -124,8 +124,7 @@ div.successful-order-table{border:1px solid #ddd;}
     .mcr-bi-title{margin:10px 0 0;}
     .successful-order-table table td{padding:0 5px 0 0;}
     .successful-order-table table td:nth-child(5){display:none;}
-    .successful-order-table>table{}
-    .successful-order-table>tbody>tr>td{display:inline-block;width:100%;border:none;}
+    .successful-order-table>tbody>tr>td{display:inline-block;width:100%;}
     .successful-order-table .img-box{width:75px;height:75px;}
     .td_price,.td_order_info{width:50%!important;padding-top:5px!important;min-height:50px;border-top:none!important;}
     .mc-inquire-card span{padding:5px;}
