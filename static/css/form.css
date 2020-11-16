@@ -1,4 +1,4 @@
-.form-popups{width:95%;height:95%;max-width:420px!important;max-height:650px;border-radius:5px;overflow-y:auto;padding-bottom:10px;}
+.form-popups{width:95%;height:95%;max-width:420px!important;max-height:600px;border-radius:5px;overflow-y:auto;padding-bottom:10px;}
 .form-popups-tips{padding:4% 0 2%;color:#007bc4;text-align:center;font-size:12px;}
 .form-box{padding:0 5%;}
 .form-box p{margin:8px 0 2px;color:#999;font-size:12px;}
@@ -13,8 +13,8 @@
 /*产品详情 询单*/
 .form-box ul{overflow:hidden;}
 .form-box ul li{width:49%;}
-.form-box .sp_pro_name_cn{height:80px;}
-.form-box .remark{height:100px;}
+.form-box .sp_pro_name_cn{height:60px;}
+.form-box .remark{height:80px;}
 /*产品详情 弹出层*/
 .mask .statements_popups {width:95%;height:90%;max-width:1000px;max-height:700px;}
 .statements_popups {padding-top:45px;}
