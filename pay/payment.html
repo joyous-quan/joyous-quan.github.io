@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>填写并核对订单信息</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+	<meta name="force-rendering" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" href="/static/css/common.css?t=202006110001" media="all">
+<link rel="stylesheet" href="/static/css/form.css?t=202006110001" media="all">
+<link rel="stylesheet" href="/static/css/pay.css?t=202006110001" media="all">
+<script src="/static/js/jquery.min.js?t=202006110001"></script>
+<script src="/static/js/common.js?t=202006110001"></script>
+<script src="/static/js/address.js?v=20200708001"></script>
+<script src="/static/js/invoice.js?t=202006110001"></script>
+<script src="/static/js/addressToStrOrJson.js?v=202006110001"></script>
+</head>
+<!--[if lt IE 10]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body>
+<input type="hidden" name="_xsrf" value="2|63a78ba3|3043e881a77c4ef61e40ca3928d21f36|1605057514"/>
+<!-- header START -->
+<div id="header"></div>
+
+
+<div class="layout">
+	<div class="breadcrumb">
+		<a href="/">首页</a>
+		<i class="iconfont icon-gengduo"></i>
+		<a href="/user/cart.html">购物车</a>
+		<i class="iconfont icon-gengduo"></i>
+		<a class="current">填写并核对订单信息</a>
+	</div>
+	<h3 class="common-title">填写并核对订单信息</h3>
+	<div class="progress-bar">
+		<ul>
+		<li class="before">
+		<a href="javascript:;">
+		<span>1</span><br>我的购物车
+		</a>
+		</li>
+		<li class="current">
+		<a href="javascript:;">
+		<span>2</span><br>填写核对订单信息
+		</a>
+		</li>
+		<li>
+		<a href="javascript:;">
+		<span>3</span><br>订单支付
+		</a>
+		</li>
+		</ul>
+	</div>
+	<div class="fill-order-con dv_shipp_address">
+<div class="fill-order-addr dv_ship_address">
+<h3 class="float-L" >收货地址 <a class="add-addr-btn" onclick="_addAddressBox('新增收货地址','0')"><span> + </span>使用新地址</a></h3>
+<div class="float-L"><input type="text" class="addrsearch ship_addr" placeholder="请输入收件人姓名"><a class="searchbtn" onclick="_searchAddress(0)"><img src="/static/img/search.png"></a></div>
+<table>
+<colgroup>
+<col width="8%">
+<col width="14%">
+<col width="38%">
+<col width="16%">
+<col width="14%">
+<col width="10%">
+</colgroup>
+<tbody id="shipaddr">
+
+<tr class="tr_default" addid="146593">
+<td><p class="addr-icon">寄送至</p></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="shippAddress" checked="">
+<i class="i_province">上海市</i> <i class="i_city">杨浦区</i>
+</span>
+</td>
+<td><i class="i_address">翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室</i></td>
+<td align="right">（<i class="i_name">website test</i> 收）</td>
+<td><i class="i_phone">13112345678</i>  <i class="i_tel"></i></td>
+<td><span class="default-tips">默认地址</span></td>
+<input type="hidden" class="hid_address" value="{'add_company': '', 'add_province': '上海市', 'add_country': '', 'add_address': '翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室', 'add_tel': '', 'add_phone': '13112345678', 'add_userid': '70097', 'add_group': '', 'add_contactid': '', 'add_isdefault': True, 'add_zipcode': '200000', 'add_type': 0, 'add_city': '杨浦区', 'add_name': 'website test', 'add_email': '', 'add_id': 146593, 'add_time': '2020-11-12 10:31:37', 'add_nsid': '', 'add_isdefaultbill': False}">
+</tr>
+
+<tr addid="146596" class="">
+<td><p class="addr-icon">寄送至</p></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="shippAddress">
+<i class="i_province">北京市</i> <i class="i_city">东城区</i>
+</span>
+</td>
+<td><i class="i_address">102</i></td>
+<td align="right">（<i class="i_name">test</i> 收）</td>
+<td><i class="i_phone">12112345678</i>  <i class="i_tel"></i></td>
+<td></td>
+<input type="hidden" class="hid_address" value="{'add_company': '', 'add_province': '北京市', 'add_country': '', 'add_address': '102', 'add_tel': '', 'add_phone': '12112345678', 'add_userid': '70097', 'add_group': '', 'add_contactid': '', 'add_isdefault': False, 'add_zipcode': '', 'add_type': 0, 'add_city': '东城区', 'add_name': 'test', 'add_email': '', 'add_id': 146596, 'add_time': '2020-11-12 17:21:05', 'add_nsid': '', 'add_isdefaultbill': False}">
+</tr>
+
+<tr addid="99101" class="">
+<td><p class="addr-icon">寄送至</p></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="shippAddress">
+<i class="i_province">上海市</i> <i class="i_city">杨浦区</i>
+</span>
+</td>
+<td><i class="i_address">101号</i></td>
+<td align="right">（<i class="i_name">quan</i> 收）</td>
+<td><i class="i_phone">13112345678</i> <br> <i class="i_tel">020-61629020</i></td>
+<td></td>
+<input type="hidden" class="hid_address" value="{'add_company': '', 'add_province': '上海市', 'add_country': '', 'add_address': '101号', 'add_tel': '020-61629020', 'add_phone': '13112345678', 'add_userid': '70097', 'add_group': '', 'add_contactid': '', 'add_isdefault': False, 'add_zipcode': '200000', 'add_type': 0, 'add_city': '杨浦区', 'add_name': 'quan', 'add_email': '', 'add_id': 99101, 'add_time': '2020-11-12 10:31:50', 'add_nsid': '', 'add_isdefaultbill': False}">
+</tr>
+
+</tbody>
+</table>
+</div>
+<div class="fill-order-addr dv_bill_address">
+<h3 class="float-L" >发票地址 <a class="change-addr-btn" onclick="_addAddressBox('新增发票地址','1')"><span> + </span>使用新地址</a></h3>
+<div class="float-L"><input type="text" class="addrsearch bill_addr" placeholder="请输入收件人姓名"><a class="searchbtn" onclick="_searchAddress(1)"><img src="/static/img/search.png"></a></div>
+<table>
+<colgroup>
+<col width="8%">
+<col width="14%">
+<col width="38%">
+<col width="16%">
+<col width="14%">
+<col width="10%">
+</colgroup>
+<tbody id="billaddr">
+
+<tr class="tr_default" addid="146595">
+<td><p class="addr-icon">寄送至</p></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="billAddress" checked="">
+上海市 杨浦区
+</span>
+</td>
+<td>翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室</td>
+<td align="right">（website test 收）</td>
+<td>13112345678  </td>
+<td><span class="default-tips">默认地址</span></td>
+<input type="hidden" class="hid_address" value="{'add_company': '', 'add_province': '上海市', 'add_country': '', 'add_address': '翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室', 'add_tel': '', 'add_phone': '13112345678', 'add_userid': '70097', 'add_group': '', 'add_contactid': '', 'add_isdefault': False, 'add_zipcode': '200000', 'add_type': 1, 'add_city': '杨浦区', 'add_name': 'website test', 'add_email': '', 'add_id': 146595, 'add_time': '2020-11-12 10:30:34', 'add_nsid': '', 'add_isdefaultbill': True}">
+</tr>
+
+<tr addid="99102">
+<td><p class="addr-icon">寄送至</p></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="billAddress">
+上海市 杨浦区
+</span>
+</td>
+<td>101</td>
+<td align="right">（quan 收）</td>
+<td>13112345678  </td>
+<td></td>
+<input type="hidden" class="hid_address" value="{'add_company': '', 'add_province': '上海市', 'add_country': '', 'add_address': '101', 'add_tel': '', 'add_phone': '13112345678', 'add_userid': '70097', 'add_group': '', 'add_contactid': '', 'add_isdefault': False, 'add_zipcode': '', 'add_type': 1, 'add_city': '杨浦区', 'add_name': 'quan', 'add_email': '', 'add_id': 99102, 'add_time': '2020-11-12 10:30:48', 'add_nsid': '', 'add_isdefaultbill': False}">
+</tr>
+
+</tbody>
+</table>
+</div>
+<div class="fill-order-infor dv_bill_info">
+<h3>发票信息 <a class="add_bill_info" onclick="_addInvoiceBox('添加发票信息',) "><span> + </span>使用新发票抬头</a></h3>
+<table>
+<colgroup>
+<col width="8%">
+<col width="32%">
+<col width="50%">
+<col width="10%">
+</colgroup>
+<thead>
+<tr>
+<td></td>
+<td>
+发票抬头
+</td>
+<td colspan="2">
+纳税识别号
+</td>
+</tr>
+</thead>
+<tbody>
+
+<tr class="tr_default" addid="55162">
+<td></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="billInfo" checked="">
+website test
+</span>
+</td>
+<td>1234567890455 </td>
+<td><span class="default-tips">默认发票</span></td>
+<input type="hidden" class="hid_billInfo" value="{'i_id': 55162, 'i_type': False, 'i_phone': '', 'i_invoiceaddress': '', 'i_bankaddress': '', 'i_userid': '70097', 'i_invoicetitle': 'website test', 'i_time': '2019-08-26 16:53:47', 'i_isdefault': True, 'i_identifynumber': '1234567890455', 'i_banknumber': ''}">
+</tr>
+
+<tr addid="108989">
+<td></td>
+<td>
+<span class="checkbox-con">
+<input type="radio" name="billInfo">
+test
+</span>
+</td>
+<td>1234567890123 </td>
+<td></td>
+<input type="hidden" class="hid_billInfo" value="{'i_id': 108989, 'i_type': False, 'i_phone': '', 'i_invoiceaddress': '', 'i_bankaddress': '', 'i_userid': '70097', 'i_invoicetitle': 'test', 'i_time': '2020-11-12 10:32:37', 'i_isdefault': False, 'i_identifynumber': '1234567890123', 'i_banknumber': ''}">
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+	<div class="fill-order-con">
+		<h3>确认订单信息</h3>
+	</div>
+	<div class="cart-con">
+		<table class="tab_order tab_product">
+			<thead>
+				<tr>
+					<td colspan="2">商品信息</td>
+					<td class="td_phone_none">规格</td>
+					<td class="td_phone_none">单价</td>
+					<td class="td_phone_none">促销价</td>
+					<td class="td_phone_none">VIP价</td>
+					<td class="td_phone_none">数量</td>
+					<td class="td_phone_none">总价</td>
+					<td><span class="sp_phone_none">客户PO/备注</span></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="width110"><a class="img-box" href="/products/148-24-3.html" target="_blank"><img src="https://file.bidepharm.com/static/upload/proimg/151/148-24-3.png"></a></td>
+					<td class="td_hover">
+						<a href="/products/148-24-3.html" target="_blank" class="a_name">8-羟基喹啉</a>
+						<p><span>148-24-3</span><span>BD18450</span>98+%</p>
+						<span class="phone_show"><span class="sp_size">100g</span><span>x 1</span><span class="td-totle-price">￥64.0</span></span>
+					</td>
+					<td class="td_phone_none"><span class="sp_size">100g</span></td>
+					<td class="td_phone_none unit-price">￥64.0</td>
+					<td class="td_phone_none sales-price">￥64.0</td>
+					<td class="td_phone_none vip-price">￥64.0<input type="hidden" value="64.0" class="unitprice"></td>
+					<td class="td_phone_none" align="center">1</td>
+					<td class="td_phone_none" ><span class="td-totle-price">￥<span class="sp_price">64.0</span></span></td>
+					<td class="td_input">
+						<input type="text" class="po" placeholder="请输入客户PO"><br>
+						<textarea class="memo" placeholder="请输入备注"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="/products/148-24-3.html" target="_blank" class="img-box"><img src="https://file.bidepharm.com/static/upload/proimg/151/148-24-3.png"></a></td>
+					<td class="td_hover">
+						<a href="/products/148-24-3.html" target="_blank" class="a_name">8-羟基喹啉</a>
+						<p><span>148-24-3</span><span>BD18450</span>98+%</p>
+						<span class="phone_show"><span class="sp_size">25g</span><span>x 2</span><span class="td-totle-price">￥64.0</span></span>
+					</td>
+					<td class="td_phone_none"><span class="sp_size">25g</span></td>
+					<td class="td_phone_none unit-price">￥32.0</td>
+					<td class="td_phone_none sapes-price">￥32.0</td>
+					<td class="td_phone_none vip-price">￥32.0<input type="hidden" value="32.0" class="unitprice"></td>
+					<td class="td_phone_none" align="center">2</td>
+					<td class="td_phone_none"><span class="td-totle-price">￥<span class="sp_price">64.00</span></span></td>
+					<td class="td_input">
+						<input type="text" class="po" placeholder="请输入客户PO"><br>
+						<textarea class="memo" placeholder="请输入备注"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="/products/90-45-9.html" target="_blank" class="img-box"><img src="https://file.bidepharm.com/static/upload/proimg/472/90-45-9.png"></a></td>
+					<td class="td_hover">
+						<a href="/products/90-45-9.html" target="_blank" class="a_name">吖啶-9-胺</a>
+						<p><span>90-45-9</span><span>BD14518</span>98+%</p>
+						<span class="phone_show"><span class="sp_size">1g</span><span>x 1</span><span class="td-totle-price">￥181.0</span></span>
+					</td>
+					<td class="td_phone_none"><span class="sp_size">1g</span></td>
+					<td class="td_phone_none unit-price">￥181.0</td>
+					<td class="td_phone_none sales-price ">￥181.0</td>
+					<td class="td_phone_none vip-price ">￥181.0<input type="hidden" value="181.0" class="unitprice"></td>
+					<td class="td_phone_none" align="center">1</td>
+					<td class="td_phone_none"><span class="td-totle-price">￥<span class="sp_price">181.0</span></span></td>
+					<td class="td_input">
+						<input type="text" class="po" placeholder="请输入客户PO"><br>
+						<textarea class="memo" placeholder="请输入备注"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="/products/61-70-1.html" target="_blank" class="img-box"><img src="https://file.bidepharm.com/static/upload/proimg/589/61-70-1.png"></a></td>
+					<td class="td_hover">
+						<a href="/products/61-70-1.html" target="_blank" class="a_name">N-甲基吲哚酮</a>
+						<p><span>61-70-1</span><span>BD59390</span>98%</p>
+						<span class="phone_show"><span class="sp_size">250mg</span><span>x 1</span><span class="td-totle-price">￥121.0</span></span>
+					</td>
+					<td class="td_phone_none"><span class="sp_size">250mg</span></td>
+					<td class="td_phone_none unit-price">￥121.0</td>
+					<td class="td_phone_none sales-price ">￥121.0</td>
+					<td class="td_phone_none vip-price ">￥121.0<input type="hidden" value="121.0" class="unitprice"></td>
+					<td class="td_phone_none" align="center">1</td>
+					<td class="td_phone_none"><span class="td-totle-price">￥<span class="sp_price">121.0</span></span></td>
+					<td class="td_input">
+						<input type="text" class="po" placeholder="请输入客户PO"><br>
+						<textarea class="memo" placeholder="请输入备注"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="/products/874948-63-7.html" target="_blank" class="img-box"><img src="https://file.bidepharm.com/static/upload/proimg/226/874948-63-7.png"></a></td>
+					<td class="td_hover">
+						<a href="/products/874948-63-7.html" target="_blank" class="a_name">(S)-3,3′-双(2,4,6-三异丙基苯基)-1,1′-二-2-萘酚环一磷酸酯</a>
+						<p><span>874948-63-7</span><span>BD01269399</span>98+%</p>
+						<span class="phone_show"><span class="sp_size">100mg</span><span>x 1</span><span class="td-totle-price">￥356.0</span></span>
+					</td>
+					<td class="td_phone_none"><span class="sp_size">100mg</span></td>
+					<td class="td_phone_none unit-price">￥356.0</td>
+					<td class="td_phone_none sales-price ">￥356.0</td>
+					<td class="td_phone_none vip-price">￥356.0<input type="hidden" value="356.0" class="unitprice"></td>
+					<td class="td_phone_none" align="center">1</td>
+					<td class="td_phone_none"><span class="td-totle-price">￥<span class="sp_price">356.0</span></span></td>
+					<td class="td_input">
+						<input type="text" class="po" placeholder="请输入客户PO"><br>
+						<textarea class="memo" placeholder="请输入备注"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<ul class="fill-order-payment fill-order-payment-top">
+		<li class="float-L">
+		<p>
+		<b>采购单号（PO号）:</b>
+		<input type="text" name="" id="ipt_po">
+		</p>
+		<p>
+		<span>给我们留言 : </span>
+		<input type="text" name="" id="ipt_remark">
+		</p>
+		</li>
+		<li class="float-R">
+		<p class="p_fei">
+		<span class="express-way">快递方式：</span>
+		<span class="font14">（满100免运费）</span>
+
+		<label class="lab_shunfeng"><input type="radio" name="express" value="sf" checked="checked">顺丰<span>12</span>元</label>
+		<label class="lab_yunda"><input type="radio" name="express" value="yd">韵达<span>8</span>元</label>
+		<label class="lab_shanghai" style="display: inline;"><input type="radio" value="sh" name="express">公司配送<span>0</span>元（仅限上海市区）</label>
+
+		</p>
+		<p class="font14">
+		<label>共<span> <b> 5 </b> </span>件产品</label>
+		<label>产品总额：<span class="price-yellow"><b>￥<i class="i_cartCoin">1010.00</i></b></span></label>
+		</p>
+		<p class="font14">
+		<label>运费：<span class="price-yellow sp_fei">0</span></label>
+		</p>
+		</li>
+	</ul>
+	<ul class="fill-order-payment fill-order-payment-bottom">
+		<li class="float-L">
+		<p class="p_payment">
+		<label class="lab_yue"><input type="radio" name="payment" value="yue" class="balance-ipt" checked="checked">账户余额</label>
+		<label class="lab_zfb"><input type="radio" name="payment" value="zfb">支付宝</label>
+
+		<label class="lab_xx"><input type="radio" name="payment" value="xx"> 线下转账</label>
+		<a class="transfer-details" onclick="_openTransferDetails()">了解详情</a>
+		</p>
+		<p class="account-balance">
+		账户余额：￥<i class="com_mem_balance">0.00</i>
+		</p>
+		</li>
+		<li class="float-R">
+		<p class="sum-payable">
+		应付总额：<b>￥<i class="i_sumCoin">1010.00</i></b>
+		</p>
+		<p>
+		<b>寄送至：</b> &nbsp; <i class="i_add_add">上海市&nbsp;&nbsp;&nbsp;杨浦区&nbsp;&nbsp;&nbsp;翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室</i>
+		</p>
+		<p>
+		<b>收件人：</b><i class="i_add_name">website test&nbsp;&nbsp;&nbsp;13112345678</i>
+		</p>
+		<!-- <p>
+		<label>运费：<span class="sp_fei">0</span></label>
+		</p> -->
+		</li>
+	</ul>
+	<div class="order-payment-btn">
+		<label class="lab_prompt"></label>
+		<a href="/user/cart.html" class="btn">返回购物车</a>
+		<a class="btn btn-yellow btn-pay" onclick="_openCoinPwdBox()">提交订单</a>
+	</div>
+</div>
+
+
+<!-- footer START -->
+<div id="footer"></div>
+
+<!-- style="display:block;" -->
+
+<!-- <div class="mask enter-password-mask" >
+	<div class="mask_bg"></div>
+	<div class="popups password-popups">
+		<h2 class="form-popups-title"><b>余额支付</b></h2>
+		<span class="del-mask" onclick="_closeCoinPwdBox()"><i class="iconfont icon-delete1"></i></span>
+		<div name="payPassword" id="form_paypsw" class="password-con">
+			<div id="payPassword_container" class="alieditContainer clearfix" data-busy="0">
+				<label for="i_payPassword" class="i-block">请输入6位数支付密码</label>
+				<div class="i-block" data-error="i_error">
+					<div class="i-block six-password">
+						<input class="i-text sixDigitPassword" id="coin_password" type="password" autocomplete="off" required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex="" maxlength="6" minlength="6" aria-required="true">
+						<div tabindex="0" class="sixDigitPassword-box" style="width: 204px;">
+							<i style="width: 33px; border-color: transparent;"><b style="visibility: hidden;"></b></i>
+							<i style="width: 33px;"><b style="visibility: hidden;"></b></i>
+							<i style="width: 33px;"><b style="visibility: hidden;"></b></i>
+							<i style="width: 33px;"><b style="visibility: hidden;"></b></i>
+							<i style="width: 33px;"><b style="visibility: hidden;"></b></i>
+							<i style="width: 33px;"><b style="visibility: hidden;"></b></i>
+							<span style="width: 33px; left: 0px; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>
+						</div>
+					</div>
+					<p class="forget-password"><a href="/mem/basic-information.html" target="_blank">忘记密码？</a></p>
+				</div>
+			</div>
+			<p class="errorBox">请输入支付密码</p>
+			<input type="submit" class="btn btn-yellow" onclick="_addOrder()" value="确认付款">
+		</div>
+	</div>
+</div> -->
+
+
+<script>
+var isfree="False";
+var defaultexpressway="";
+//关闭弹框
+function _closeCoinPwdBox(){
+$("#coin_password").val('');
+$('.mask').remove();
+}
+function _openCoinPwdBox(){
+if($(".enter-password-mask").length>0){return false;}
+var html='<div class="mask enter-password-mask"><div class="mask_bg"></div>'+
+'<div class="popups password-popups">'+
+'<h2 class="form-popups-title"><b>余额支付</b></h2>'+
+'<span class="del-mask" onclick="_closeCoinPwdBox()"><i class="iconfont icon-delete1"></i></span>'+
+'<div name="payPassword" id="form_paypsw" class="password-con">'+
+'<div id="payPassword_container" class="alieditContainer clearfix" data-busy="0">'+
+'<label for="i_payPassword" class="i-block">请输入6位数支付密码</label>'+
+'<div class="i-block" data-error="i_error">'+
+'<div class="i-block six-password">'+
+'<input class="i-text sixDigitPassword" id="coin_password" type="password" autocomplete="off" required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex="" maxlength="6" minlength="6" aria-required="true">'+
+'<div tabindex="0" class="sixDigitPassword-box" style="width: 204px;">'+
+'<i style="width: 33px; border-color: transparent;" class="active"><b style="visibility: hidden;"></b></i>'+
+'<i style="width: 33px;"><b style="visibility: hidden;"></b></i>'+
+'<i style="width: 33px;"><b style="visibility: hidden;"></b></i>'+
+'<i style="width: 33px;"><b style="visibility: hidden;"></b></i>'+
+'<i style="width: 33px;"><b style="visibility: hidden;"></b></i>'+
+'<i style="width: 33px;"><b style="visibility: hidden;"></b></i>'+
+'<span style="width: 33px; left: 0px; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>'+
+'</div>'+
+'</div>'+
+'<p class="forget-password">'+
+'<a href="/mem/basic-information.html" target="_blank">忘记密码？</a>'+
+'</p>'+
+'</div>'+
+'</div>'+
+'<p class="errorBox"></p>'+
+'<input type="submit" class="btn btn-yellow" onclick="_addOrder()" value="确认付款">'+
+'</div>'+
+'</div>'+
+'</div>';
+$("body").append(html);
+$(".enter-password-mask").show();
+$("#coin_password")[0].focus();
+_loadPayInput();//加载绑定事件
+}
+
+
+//更新快递方式
+function _uptFeiType(){
+//更新快递方式
+$(".lab_shanghai").hide();
+$(".p_fei input[name='express']").prop("checked",false);
+var province=$(".dv_ship_address .tr_default .i_province").text();//收货地址省份
+var city=$(".dv_ship_address .tr_default .i_city").text();//收货地址省份
+if(province=="上海市"||city=="上海市"){
+$(".lab_shanghai").show();
+$(".lab_shanghai input").prop("checked",true)
+}else{
+if(defaultexpressway=='6988'){
+$(".lab_yunda input").prop("checked",true);
+}else{
+$(".lab_shunfeng input").prop("checked",true);
+}
+}
+}
+
+$('.fill-order-con tr td').on('click', function () {
+_addrClick(this);
+});
+
+function _addrClick(obj){
+$(obj).parent().parent().find(".tr_default").removeClass("tr_default");
+$(obj).parent().parent().find("input[type='radio']").prop("checked", false);
+$(obj).parent().find("input[type='radio']").prop("checked", true);
+$(obj).parent().addClass("tr_default");
+_uptFeiType();//更新快递方式
+setTimeout(function () {
+_uptFei()
+}, 200);
+}
+//更新邮费方式及总金额
+function _uptFei(){
+$("#coin_password").val('');
+//收货地址更新
+var addTr=$(".dv_ship_address .tr_default");
+$(".i_add_add").html(addTr.find(".i_province").text()+"&nbsp;&nbsp;&nbsp;"+addTr.find(".i_city").text()+"&nbsp;&nbsp;&nbsp;"+addTr.find(".i_address").text());
+$(".i_add_name").html(addTr.find(".i_name").text()+"&nbsp;&nbsp;&nbsp;"+addTr.find(".i_phone").text());
+//邮费更新
+var add_fei=$(".p_fei input:checked").val();
+var fei=0;//邮费
+var cartCoin=parseFloat($(".i_cartCoin").text());
+if(cartCoin>=100||add_fei=="sh"||isfree=="True"){//商品金额>=100或收货地址为上海或者为免邮帐户
+$(".sp_fei").html('0');
+}else{
+if(add_fei=="sf"){//顺丰
+fei=12;
+$(".sp_fei").html('12');
+}else if(add_fei=="yd"){//韵达
+fei=8;
+$(".sp_fei").html('8');
+}
+}
+//总价更新
+var sumCoin=(cartCoin+fei).toFixed(2);
+$(".i_sumCoin").text(sumCoin);
+}
+function _loadPayInput(){
+var payPassword = $("#payPassword_container"),
+_this = payPassword.find('i'),
+k=0,j=0,
+password = '' ,
+_cardwrap = $('#cardwrap');
+//点击隐藏的input密码框,在6个显示的密码框的第一个框显示光标
+payPassword.unbind();
+payPassword.on('focus',"input[name='payPassword_rsainput']",function(){
+var _this = payPassword.find('i');
+if(payPassword.attr('data-busy') === '0'){
+//在第一个密码框中添加光标样式
+_this.eq(k).addClass("active");
+_cardwrap.css('visibility','visible');
+payPassword.attr('data-busy','1');
+}
+});
+//change时去除输入框的高亮，用户再次输入密码时需再次点击
+payPassword.on('change',"input[name='payPassword_rsainput']",function(){
+_cardwrap.css('visibility','hidden');
+_this.eq(k).removeClass("active");
+payPassword.attr('data-busy','0');
+}).on('blur',"input[name='payPassword_rsainput']",function(){
+_cardwrap.css('visibility','hidden');
+_this.eq(k).removeClass("active");
+payPassword.attr('data-busy','0');
+});
+//使用keyup事件，绑定键盘上的数字按键和backspace按键
+payPassword.on('keyup',"input[name='payPassword_rsainput']",function(e){
+var e = (e) ? e : window.event;
+//键盘上的数字键按下才可以输入
+//if(e.keyCode == 8 || (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)){
+k = this.value.length;//输入框里面的密码长度
+l = _this.size();//6
+for(;l--;){
+//输入到第几个密码框，第几个密码框就显示高亮和光标（在输入框内有2个数字密码，第三个密码框要显示高亮和光标，之前的显示黑点后面的显示空白，输入和删除都一样）
+if(l === k){
+_this.eq(l).addClass("active");
+_this.eq(l).find('b').css('visibility','hidden');
+}else{
+_this.eq(l).removeClass("active");
+_this.eq(l).find('b').css('visibility', l < k ? 'visible' : 'hidden');
+}
+if(k === 6){
+j = 5;
+}else{
+j = k;
+}
+$('#cardwrap').css('left',j*34+'px');
+}
+//}else{
+//输入其他字符，直接清空
+//var _val = this.value;
+//this.value = _val.replace(/\D/g,'');
+//}
+});
+}
+
+
+
+</script>
+
+</body>
+</html>

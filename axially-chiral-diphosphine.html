@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>轴手性双膦配体现货产品|毕得医药</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" href="/static/css/common.css" media="all">
+<link rel="stylesheet" href="/static/css/menu.css" media="all">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/common.js" ></script>
+<script type="text/javascript" src="/static/js/page.js?t=202006110001"></script>
+<style type="text/css">
+
+.dv_text{padding:10px 0 20px;line-height:24px;}
+.dv_text h2,.dv_text h3{text-align:center;font-weight:700;}
+.dv_text h2{font-size:30px;padding-bottom:20px;}
+.dv_text h3{font-size:18px;padding-bottom:10px;}
+.pro_num{color:#888;}
+@media only screen and (max-width:1024px){.dv_text h2{font-size:26px;padding-bottom:10px;}.dv_text h3{font-size:16px;}}
+@media only screen and (max-width:780px){.dv_text h2{font-size:22px;}}
+@media only screen and (max-width:480px){.dv_text h2{font-size:20px;}}
+</style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="layout">
+        <div class="breadcrumb">
+            <a href="/">首页</a>
+            <i class="iconfont icon-gengduo"></i>
+            <a href="javascript:;" class="current">轴手性双膦配体现货产品</a>
+        </div>
+        <div class="dv_text">
+        <h2>钜惠来袭</h2>
+        <h3>轴手性双膦配体现货产品，全场六折啦！</h3>
+        <p><b>截止时间：</b>2020.11.20</p>
+        <p><b>活动说明：</b></p>
+        <p>1.活动产品：毕得医药官网轴手性双膦配体现货产品。（仅针对现货产品！）</p>
+        <p>2.产品优惠：六折！六折！六折啦！重要的事情说3遍~~~（毕得医药官网牌价的六折，不与其他优惠同享！）</p>
+        <p><b>库存有限，售完即止！欲购从速呀！</b></p>
+        <p>具体活动详情可咨询销售。</p>
+        </div>
+        <p><b>活动产品如下：</b> <span class="float-R pro_num">共 <span>32</span> 个相关产品</span></p>
+        <div class="products-con clearboth dv_pro_list"> 
+            <!-- <dl class="product-card">
+                <dt>
+                    <img class="position_tips_img" src="/static/img/bide_development.png">
+                    <a class="img-box" href="/products/442905-33-1.html">
+                        <img src="https://file.bidepharm.com/static/upload/proimg/155/442905-33-1.png" alt="442905-33-1">
+                        <em class="product-name">
+                            <span class="product-EN-name">(R)-4,4'-Bis(bis(3,5-dimethylphenyl)phosphino)-2,2',6,6'-tetramethoxy-3,3'-bipyridine</span>
+                            <span class="product-CN-name">(R)-2,2',6,6'-四甲氧基-4,4'-联(二(3,5-二甲苯基基)膦基)-3,3'-二联吡啶</span>
+                        </em>
+                    </a>
+                <dt>
+                <dd><span class="float-L">BD20846</span><span>442905-33-1</span><span class="float-R">98%</span></dd>
+                <dd class="border-B">
+                    <b class="float-L">￥468.00</b><span>50mg</span><span class="color-blue float-R">常备现货</span>
+                </dd>
+            </dl> -->
+
+        </div>
+        <div class="page">
+            <a class="" href="javascript:void(0)"><i class="iconfont icon-fanhui"></i></a>
+            <a class="active num" href="acridines_1.html">1</a>
+            <a class=" num" href="acridines_2.html">2</a>
+            <a class=" num" href="acridines_3.html">3</a>
+            <a class=" num" href="acridines_4.html">4</a>
+            <a class=" num" href="acridines_5.html">5</a>
+            <a class=" num" href="acridines_6.html">6</a>
+            <a href="acridines_2.html"><i class="iconfont icon-gengduo"></i></a>
+        </div> 
+    </div>
+
+    <div id="footer"></div>
+
+<script>
+var pro_html = '';
+$(document).ready(function() {
+    $.getJSON("/static/json/products.json?t=" + Math.random(), {}, function(data) {
+        var pro_num = data.length;
+        $.each(data, function(idx, item) {
+            pro_html += '<dl class="product-card"><dt><a class="img-box" href="'+_getProUrl(item.CAS, item.Proid)+'"><img src="'+item.p_image+'" alt="'+item.CAS+'"><em class="product-name"><span class="product-EN-name">'+item.NameEn+'</span><span class="product-CN-name">'+item.NameCn+'</span></em></a></dt><dd><span class="float-L">'+item.BDNum+'</span><span>'+item.CAS+'</span><span class="float-R">'+item.Purity+'</span></dd></dl>'
+        });
+        $('.products-con').html(pro_html);
+        $('.sp_count').html(pro_num)
+    });
+})
+
+//获取产品url
+function _getProUrl(cas, pid) {
+    var url = "javascript:;";
+    if (!isempty(cas) && cas != "N/A") {
+        url = "/products/" + cas + '.html'
+    } else if (!isempty(pid)) {
+        url = "/products/" + pid + '.html'
+    }
+    return url
+}
+
+function isempty (v) {
+    switch (typeof v) { 
+        case undefined : return true;
+        case 'undefined' : return true;
+        case 'string' : if(v.Trim().length == 0||v.Trim()=='undefined') return true; break;
+        case 'boolean' : if(!v) return true; break;
+        case 'number' : if(0 === v) return true; break;
+        case 'object' :
+            if(null === v) return true;
+            if(undefined !== v.length && v.length==0) return true;
+            for(var k in v){return false;} return true;
+            break;
+    } 
+    return false;
+}
+
+String.prototype.Trim = function(){
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+</script>
+
+</body>
+</html>

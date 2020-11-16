@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<meta charset="UTF-8">
+
+<title>会员中心-我的收藏</title>
+
+<input value="my-favorite" style="display: none" id="right-flag">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" href="/static/css/common.css" media="all">
+<link rel="stylesheet" href="/static/css/member-center.css" media="all">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/common.js"></script>
+
+<link rel="stylesheet" href="/static/css/form.css" media="all">
+<style>
+.mcr-products-con .product-card{width:25%;}
+.btn_cancel{
+    display: none;
+    border: none;
+    background: #007bc4;
+    color: #fff;
+    padding: 2px 8px 4px;
+    cursor: pointer;
+}
+.product-card:hover .btn_cancel{
+    display: inline-block;
+}
+
+@media only screen and (max-width:780px){
+
+.mcr-products-con .product-card{width:33.3%;}
+}
+
+@media only screen and (max-width:640px){
+.mcr-products-con .product-card{width:50%;}
+}
+</style>
+
+</head>
+<!--[if lt IE 10]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body class="member_body">
+	<!-- header START -->
+	<div id="header"></div>
+
+<div class="layout member-center-con">
+        <div class="member-center-L phone_none">
+            <h4>会员中心</h4>
+            <ul>
+                <li class="member-nav-title"><span></span>个人信息</li>
+                <li><a id="basic-information" href="/mem/basic-information.html">基本资料</a></li>
+                <li><a id="account-balance" href="/mem/account-balance.html">账户余额</a></li>
+                <li><a id="shipping-address" href="/mem/shipping-address.html">收货地址</a></li>
+                <li><a id="invoice-address" href="/mem/invoice-address.html">发票地址</a></li>
+                <li><a id="invoice-information" href="/mem/invoice-information.html">发票信息</a></li>
+                <li><a id="submember" href="/mem/my-submember.html">子账号管理</a></li>
+            </ul>
+            <div class="border-B"></div>
+            <ul>
+                <li class="member-nav-title"><span></span>我的专区</li>
+                <li><a id="my-integral" href="/mem/my-integral.html">我的积分</a></li>
+                <li><a id="my-favorite" href="/mem/my-favorite.html" class="current">我的收藏</a></li><!-- 
+                <li><a id="my-free-sample" href="/mem/my-free-sample.html">我的样品</a></li> -->
+                <li><a id="my-inquire" href="/mem/my-inquire.html">我的询单</a></li>
+                <li><a id="my-order" href="/mem/my-order.html">我的订单</a></li>
+                <li><a id="my-suggestion" href="/mem/my-suggestion.html">我的反馈</a></li>
+            </ul>
+        </div>
+        <!-- content START -->
+        <div class="member-center-R">
+            
+            <h3 class="mcr-addr-title">我的收藏</h3>
+            <div class="mcr-products-con panel list-group">
+                
+                <dl class="product-card list-group-item">
+                    <dt>
+                        <a class="img-box" target="_blank" href="/products/120-73-0.html">
+                            <img src="https://file.bidepharm.com/static/upload/proimg/568/120-73-0.png" alt="120-73-0">
+                            <em class="product-name">
+                                <span class="product-EN-name">Purine</span>
+                                <span class="product-CN-name">嘌呤</span>
+                            </em>
+                        </a>
+                    </dt>
+                    <dd>
+                        <span class="float-L">BD149554</span><span>120-73-0</span> <span class="float-R">98%</span>
+                    </dd>
+                    <dd><button class="btn_cancel" onclick="_cancel_favorite('2020072300001')">取消收藏</button></dd>
+                </dl>
+                <dl class="product-card list-group-item">
+                    <dt>
+                        <a class="img-box" target="_blank" href="/products/92149-07-0.html">
+                            <img src="https://file.bidepharm.com/static/upload/proimg/98/92149-07-0.png" alt="92149-07-0">
+                            <em class="product-name">
+                                <span class="product-EN-name">4,7-Dimethoxy-1,10-phenanthroline</span>
+                                <span class="product-CN-name">4,7-二甲氧基-1,10-菲咯啉</span>
+                            </em>
+                        </a>
+                    </dt>
+                    <dd>
+                        <span class="float-L">BD157680</span><span>92149-07-0</span> <span class="float-R">97%</span>
+                    </dd>
+                    <dd><button class="btn_cancel" onclick="_cancel_favorite('2020082100002')">取消收藏</button></dd>
+                </dl><dl class="product-card list-group-item">
+                    <dt>
+                        <a class="img-box" target="_blank" href="/products/120-73-0.html">
+                            <img src="https://file.bidepharm.com/static/upload/proimg/568/120-73-0.png" alt="120-73-0">
+                            <em class="product-name">
+                                <span class="product-EN-name">Purine</span>
+                                <span class="product-CN-name">嘌呤</span>
+                            </em>
+                        </a>
+                    </dt>
+                    <dd>
+                        <span class="float-L">BD149554</span><span>120-73-0</span> <span class="float-R">98%</span>
+                    </dd>
+                    <dd><button class="btn_cancel" onclick="_cancel_favorite('2020072300001')">取消收藏</button></dd>
+                </dl>
+                <dl class="product-card list-group-item">
+                    <dt>
+                        <a class="img-box" target="_blank" href="/products/92149-07-0.html">
+                            <img src="https://file.bidepharm.com/static/upload/proimg/98/92149-07-0.png" alt="92149-07-0">
+                            <em class="product-name">
+                                <span class="product-EN-name">4,7-Dimethoxy-1,10-phenanthroline</span>
+                                <span class="product-CN-name">4,7-二甲氧基-1,10-菲咯啉</span>
+                            </em>
+                        </a>
+                    </dt>
+                    <dd>
+                        <span class="float-L">BD157680</span><span>92149-07-0</span> <span class="float-R">97%</span>
+                    </dd>
+                    <dd><button class="btn_cancel" onclick="_cancel_favorite('2020082100002')">取消收藏</button></dd>
+                </dl>
+                <dl class="product-card list-group-item">
+                    <dt>
+                        <a class="img-box" target="_blank" href="/products/92149-07-0.html">
+                            <img src="https://file.bidepharm.com/static/upload/proimg/98/92149-07-0.png" alt="92149-07-0">
+                            <em class="product-name">
+                                <span class="product-EN-name">4,7-Dimethoxy-1,10-phenanthroline</span>
+                                <span class="product-CN-name">4,7-二甲氧基-1,10-菲咯啉</span>
+                            </em>
+                        </a>
+                    </dt>
+                    <dd>
+                        <span class="float-L">BD157680</span><span>92149-07-0</span> <span class="float-R">97%</span>
+                    </dd>
+                    <dd><button class="btn_cancel" onclick="_cancel_favorite('2020082100002')">取消收藏</button></dd>
+                </dl>
+                <dl class="product-card list-group-item">
+                    <dt>
+                        <a class="img-box" target="_blank" href="/products/92149-07-0.html">
+                            <img src="https://file.bidepharm.com/static/upload/proimg/98/92149-07-0.png" alt="92149-07-0">
+                            <em class="product-name">
+                                <span class="product-EN-name">4,7-Dimethoxy-1,10-phenanthroline</span>
+                                <span class="product-CN-name">4,7-二甲氧基-1,10-菲咯啉</span>
+                            </em>
+                        </a>
+                    </dt>
+                    <dd>
+                        <span class="float-L">BD157680</span><span>92149-07-0</span> <span class="float-R">97%</span>
+                    </dd>
+                    <dd><button class="btn_cancel" onclick="_cancel_favorite('2020082100002')">取消收藏</button></dd>
+                </dl>
+                    
+                
+            </div>
+    
+            <div class="page" id="dvPage">
+                <a class="" href="javascript:void(0)"><i class="iconfont icon-fanhui"></i></a>
+                
+                    <a class="active num" href="/mem/my-favorite.html?pagesize=20&amp;pageindex=1">1</a>
+                
+                
+                <a href="javascript:void(0)"><i class="iconfont icon-gengduo"></i></a>
+            </div>
+        
+
+        </div>
+        <!-- content END -->
+    </div>
+    <!-- footer START -->
+    <div id="footer">
+    </div>
+</body>
+</html>
