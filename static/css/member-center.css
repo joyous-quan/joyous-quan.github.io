@@ -124,7 +124,8 @@ div.successful-order-table{border:1px solid #ddd;}
     .mcr-bi-title{margin:10px 0 0;}
     .successful-order-table table td{padding:0 5px 0 0;}
     .successful-order-table table td:nth-child(5){display:none;}
-    .successful-order-table>tbody>tr>td{display:inline-block;width:100%;}
+    .successful-order-table>table{}
+    .successful-order-table>tbody>tr>td{display:inline-block;width:100%;border:none;}
     .successful-order-table .img-box{width:75px;height:75px;}
     .td_price,.td_order_info{width:50%!important;padding-top:5px!important;min-height:50px;border-top:none!important;}
     .mc-inquire-card span{padding:5px;}
