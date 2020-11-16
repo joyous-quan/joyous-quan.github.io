@@ -1,4 +1,4 @@
-.form-popups{width:95%;height:90%;max-width:420px!important;max-height:650px;border-radius:5px;}
+.form-popups{width:95%;height:90%;max-width:420px!important;max-height:650px;border-radius:5px;overflow-y:auto;padding-bottom:10px;}
 .form-popups-tips{padding:4% 0 2%;color:#007bc4;text-align:center;font-size:12px;}
 .form-box{padding:0 5%;}
 .form-box p{margin:8px 0 2px;color:#999;font-size:12px;}
@@ -15,6 +15,16 @@
 .form-box ul li{width:49%;}
 .form-box .sp_pro_name_cn{height:80px;}
 .form-box .remark{height:100px;}
+/*产品详情 弹出层*/
+.mask .statements_popups {width:95%;height:90%;max-width:1000px;max-height:700px;}
+.statements_popups {padding-top:45px;}
+.statements_title{position:absolute;width:100%;height:45px;top:0;left:0;}
+.statements_title h2{font-size:20px;}
+.statements_title .del-mask{top:0;}
+.statements_con{max-height:100%;padding:10px;overflow-y:auto;}
+.statements_con td{border:1px solid #eee;padding:8px;}
+.tr_one td{border:none;padding:20px 10px 10px; text-align:center;font-weight:700;font-size:16px;}
+.tr_bg td{background:#f8fafb}
 
 /*支付页面 支付密码*/
 .password-popups{width:95%;height:90%;max-width:420px!important;max-height:300px;border-radius:5px;}
@@ -38,4 +48,10 @@
 .change-password-popups{height:380px;}
 .change-password-popups .form-box{padding-top:40px;}
 .change-password-popups .btn {margin-top:30px;}
+
+@media only screen and (max-width:1024px){
+.statements_title h2{font-size:18px;}
+.statements_con{font-size:12px;}
+.statements_con td{padding:5px;}
+}
 

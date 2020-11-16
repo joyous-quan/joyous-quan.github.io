@@ -6,6 +6,7 @@ a{color:#333;text-decoration:none;cursor:pointer;}
 li,ul,ol{list-style:none;}
 input,select,textarea,button{padding:0;color:#333;font-size:14px;font-family:"Microsoft Yahei",Arial;}
 select,textarea,input[type='text'],input[type='password'],input[type='number'],input[type='checkbox']{-webkit-appearance:none;-ms-appearance:none;-moz-appearance:none;appearance:none;}
+select,textarea,input[type='text'],input[type='password'],input[type='number']{border-radius:0;}
 textarea{resize:none;}
 input[type='checkbox']{position:relative;top:2px;width:15px;height:15px;border:1px solid #999;border-radius:2px;}
 input[type='checkbox']:checked{background:#fff url(/static/img/right.png) no-repeat;background-position:-1px -1px;}

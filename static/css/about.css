@@ -12,7 +12,8 @@
 /*quality-control.html*/
 .quality-control-con h5{padding:10px 0;font-size:16px;}
 .quality-control-con .float-R p{line-height:24px;}
-.quality-control-con p,.terms-policy-con {margin-bottom:30px;}
+/*terms-policy.html*/
+.terms-policy-con .quality-control-con p{margin-bottom:30px;}
 /*contact-us.html*/
 .contact-us-con h2{font-weight:400;font-size:20px;}
 .contact-us-con dl.float-L{padding-right:5%;width:auto;font-size:16px;}
