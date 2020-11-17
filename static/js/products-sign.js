@@ -27,7 +27,7 @@ $(function(){
         margin: 0,
         nav:false,
         dots:true,
-        //autoplay: true,
+        autoplay: true,
         stopOnHover:true,
         autoplayTimeout: 4000,
         autoplayHoverPause: false,
