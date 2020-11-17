@@ -44,6 +44,8 @@ em,i{font-style:normal;}
 .del-mask{position:absolute;top:0;right:5px;cursor:pointer;}
 .body_mask{padding-top:110px;}
 
+.layui-layer{max-width:95%;max-height:95%;}
+
 /*products card*/
 .single-menu-detail-con{font-size:0;}
 .item .product-card{width:100%;}

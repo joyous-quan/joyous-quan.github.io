@@ -2,7 +2,7 @@
 .menu-con-title{color:#007bc4;font-size:24px;min-height:40px;}
 .example{float:right;color:#333;font-weight:400;font-size:14px;}
 .example a{padding-right:10px;color:#007bc4;}
-.example a:hover,.td_hover a:hover{text-decoration:underline;}
+.example a:hover,.td_product_ifo a:hover{text-decoration:underline;}
 /*cart-con*/
 #cart_totle{position:relative;top:2px;}
 .tab_product{border:1px solid #ddd;}
@@ -15,7 +15,7 @@
 .width30{width:20px;}
 .width110{width:110px;}
 .paddingL20{padding-left:22px;}
-.a_fav,.td_hover span{padding-right:20px;}
+.a_fav,.td_product_ifo span{padding-right:20px;}
 .a_fav,.a_name:hover{color:#007bc4;}
 .a_del{color:#888;}
 .phone_show{display:none;}
@@ -115,17 +115,14 @@
 }
 @media only screen and (max-width:640px){
 	.sp_phone_none,.progress-bar,.a_name,.fav_del{display:none;}
-	.tab_product p{padding:0 0 10px;}
-	.a_fav, .td_hover span{padding-right:15px;}
-	.tab_mycart tr td{position:relative;}
-	.tab_mycart .sp_ipt_number{position:absolute;bottom:5px;right:0;}
-	.tab_mycart span.td-totle-price{position:absolute;bottom:6px;right:100px;min-width:60px;white-space:nowrap;}
-	.tab_mycart .sp_size{position:absolute;bottom:6px;right:170px;}
+	.tab_product p{padding:0;}
+	.a_fav, .td_product_ifo span{padding-right:15px;}
+	.td_product_ifo p>span{padding-top:8px;}
 	.cart-payment .btn{width:130px;}
 	.order-payment-btn .btn{width:180px;}
 }
 @media only screen and (max-width:480px){
-	.tab_product td{padding:5px 0 5px 5px;}
+	.tab_product td{padding:5px 3px;}
 	.cart-payment .float-L{line-height:14px;}
 	.cart-payment .float-R{width:100%;}
 	.cart-payment .btn{width:120px;float:right;}

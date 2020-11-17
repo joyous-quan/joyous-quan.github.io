@@ -13,7 +13,6 @@
 <link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
 <link rel="stylesheet" href="/static/css/common.css?v=202006100001" media="all">
 <link rel="stylesheet" href="/static/css/login.css?v=202006100001" media="all">
-
 </head>
 
 <body>
@@ -87,7 +86,7 @@
 <p class="checkbox-con">
 <label for="accept"><input class="input_check" type="checkbox" id="accept">
 点击提交，表示您理解并接受</label><br>
-<a href="/terms-policy.html" target="_blank">《毕得医药注册条款》</a>，<a href="javascript:;" onclick="bide._cntbox('/activities-that.html','活动声明',820,620,'url')">《活动声明》</a>
+<a href="/terms-policy.html" target="_blank">《毕得医药注册条款》</a>，<a href="javascript:;" onclick="_cntbox()">《活动声明》</a>
 </p>
 <p class="errorBox"></p>
 <button href="javascript:;" type="submit" class="btn btn-blue" onclick="_register()">注 册</button>
@@ -97,9 +96,21 @@
 <a href="/user/login.html" class="btn btn-gray">登 录</a>
 </div>
 </div>
+<script src="/static/js/jquery.min.js?t=202006110001"></script>
 <script src='/static/js/common.js?v=202006100001'></script>
 <script src="/static/h-ui/lib/jquery.validation/jquery.validate.min.js"></script>
+<script src='/static/layer/layer.js?'></script>
 <script>
+function _cntbox(){
+	layer.open({
+		title: '活动声明',
+		area: ['1160px', '800px'],
+	  	type: 2, 
+	 	content: '/activity/activities-that.html' //这里content是一个普通的String
+	});
+}
+
+
 var validato;//表单验证对象
 var chk_email=[];//检查后缀数组
 $(document).ready(function(e) {
@@ -204,9 +215,9 @@ window.location.href=isempty($.urlGet()['path'])?"/":$.urlGet()['path']; //获�
 }
 //获取禁止注册的邮箱后缀
 function _getRegChkEmail(){
-_DoAjaxAsyncTrue("GET",{},"/webapi/v1/ChkRegEmail",function(res){
-chk_email=res;
-})
+//_DoAjaxAsyncTrue("GET",{},"/webapi/v1/ChkRegEmail",function(res){
+//chk_email=res;
+//})
 }
 </script>
 </body>

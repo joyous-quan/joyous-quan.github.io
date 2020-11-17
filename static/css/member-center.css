@@ -61,7 +61,9 @@ div.mc-inquire-card{overflow:hidden;background:#f5f5f5;border:none;}
 div.mc-inquire-card span{padding:0;font-weight:700;}
 .mc-inquire-card dd{margin-top:5px;padding:15px 10px 15px 50px;background:#fff;text-indent:-46px;}
 .mc-inquire-reply span{float:none;padding:0;color:#007bc4;}
-
+.td_product_ifo span{display:inline-block;padding-right:15px;}
+.td_product_ifo p>span{padding-top:8px;}
+.paddingL20{padding-left:20px;}
 /*我的订单*/
 .mcr-addr-title h3{float:left;min-height:25px;}
 .mcr-addr-title h3 a{color:#007bc4;}
@@ -86,13 +88,12 @@ div.mc-inquire-card span{padding:0;font-weight:700;}
 .successful-order-table td table:last-child tr:last-child td{border-bottom:none;}
 .successful-order-table .img-box{display:block;margin-right:5px;width:80px;height:80px;background:#e8f9fe;}
 .successful-order-table .through{color:#999;text-decoration:line-through;}
-.successful-order-table p.font12{margin-top:5px;}
 .td_order_info p,.td_price p{margin-top:5px;}
 .td_price b{font-size:14px;}
 .td_order_info a{color:#007bc4;white-space:nowrap;font-weight:700;}
 .phone_show{display:none;}
 /*我的订单 详情*/
-.mcr-moi-title li span{display:inline-block;min-width:75px;}
+.mcr-moi-title li span{display:inline-block;min-width:100px;}
 .mcr-order-info .mcr-addr-title{margin-bottom:15px;}
 .mcr-addr-title .btn-down-pdf{padding:5px 10px;}
 .successful-trade{overflow:hidden;border:1px solid #ddd;}
@@ -109,6 +110,9 @@ div.mc-inquire-card span{padding:0;font-weight:700;}
 .order-details-right span{display:inline-block;padding-left:5px;min-width:120px;text-align:left;}
 .order-details-right b{color:#fbb000;font-size:16px;}
 div.successful-order-table{border:1px solid #ddd;}
+@media only screen and (max-width:1350px){
+   .mcr-moi-title li span{min-width:90px;}
+}
 
 @media only screen and (max-width:1024px){
     .member_body{background:#f5f5f5;}
@@ -129,13 +133,13 @@ div.successful-order-table{border:1px solid #ddd;}
     .successful-order-table .img-box{width:100px;height:100px;}
     .td_price,.td_order_info{width:50%!important;padding-top:5px!important;min-height:50px;border-top:none!important;}
     .mc-inquire-card span{padding:5px;}
-    .phone_show{display:inline-block;
+    .phone_show{display:inline-block;}
 }
 @media only screen and (max-width:780px){
     .mcr-con table td{height:45px;}
 }
 @media only screen and (max-width:640px){
-    .mcr-mo-title,.btn-down-pdf,.mcr-my-order .mcr-addr-title .float-R,.td_po,.order-products-name{display:none;}
+    .mcr-mo-title,.btn-down-pdf,.mcr-my-order .mcr-addr-title .float-R,.td_po,.a_name{display:none;}
     .mcr-bi-title li span{visibility:hidden;}
     .mcr-con table td{height:40px;}
     .mc-inquire-card dt span{float:none;display:inline-block;min-width:100px;width:auto;}

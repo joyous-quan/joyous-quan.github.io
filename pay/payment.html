@@ -242,7 +242,7 @@ test
 				<td class="width110">
 				<a class="img-box" href="/products/14323-06-9.html" target="_blank"><img src="https://file.bidepharm.com/static/upload/proimg/121/14323-06-9.png"></a>
 				</td>
-				<td class="td_hover">
+				<td class="td_product_ifo">
 				<a class="a_name" href="/products/14323-06-9.html" target="_blank">三(2,2'-联吡啶)二氯化钌</a>
 				<p><span>14323-06-9</span><span>BD18330</span>98%</p>
 				<p class="phone_show"><span class="sp_size">5g x 1</span><span class="td-totle-price">￥1051.2</span></p>
@@ -260,7 +260,7 @@ test
 				<td class="width110">
 				<a class="img-box" href="/products/864163-80-4.html" target="_blank"><img src="https://file.bidepharm.com/static/upload/proimg/787/864163-80-4.png"></a>
 				</td>
-				<td class="td_hover">
+				<td class="td_product_ifo">
 				<a class="a_name" href="/products/864163-80-4.html" target="_blank">(2,2'-联吡啶)双[2-(2,4-二氟苯基)吡啶]铱(III) 六氟磷酸盐</a>
 				<p><span>864163-80-4</span><span>BD00779408</span>80%</p>
 				<p class="phone_show"><span class="sp_size">50mg x 1</span><span class="td-totle-price">￥259.2</span></p>
@@ -278,7 +278,7 @@ test
 				<td class="width110">
 				<a class="img-box" href="/products/94928-86-6.html" target="_blank"><img src="https://file.bidepharm.com/static/upload/proimg/61/94928-86-6.png"></a>
 				</td>
-				<td class="td_hover">
+				<td class="td_product_ifo">
 				<a class="a_name" href="/products/94928-86-6.html" target="_blank">fac-三(2-苯基吡啶)合铱</a>
 				<p><span>94928-86-6</span><span>BD155809</span>98%</p>
 				<p class="phone_show"><span class="sp_size">100mg x 2</span><span class="td-totle-price">￥930.6</span></p>
@@ -296,7 +296,7 @@ test
 				<td class="width110">
 				<a class="img-box" href="/products/14323-06-9.html" target="_blank"><img src="https://file.bidepharm.com/static/upload/proimg/121/14323-06-9.png"></a>
 				</td>
-				<td class="td_hover">
+				<td class="td_product_ifo">
 				<a class="a_name" href="/products/14323-06-9.html" target="_blank">三(2,2'-联吡啶)二氯化钌</a>
 				<p><span>14323-06-9</span><span>BD18330</span>98%</p>
 				<p class="phone_show"><span class="sp_size">1g x 1</span><span class="td-totle-price">￥263.7</span></p>
@@ -314,7 +314,7 @@ test
 				<td class="width110">
 				<a class="img-box" href="/products/5336-90-3.html" target="_blank"><img src="https://file.bidepharm.com/static/upload/proimg/94/5336-90-3.png"></a>
 				</td>
-				<td class="td_hover">
+				<td class="td_product_ifo">
 				<a class="a_name" href="/products/5336-90-3.html" target="_blank">9-吖啶羧酸</a>
 				<p><span>5336-90-3</span><span>BD15745</span>97%</p>
 				<p class="phone_show"><span class="sp_size">1g x 3</span><span class="td-totle-price">￥504.90</span></p>
@@ -394,6 +394,16 @@ test
 <!-- footer START -->
 <div id="footer"></div>
 <script>
+function _openTransferDetails(){
+	layer.open({
+		title: '转账注意事项',
+		area: ['1160px', '800px'],
+	  	type: 2, 
+	 	content: '/pay/transfer-details.html' //这里content是一个普通的String
+	});
+}
+
+
 var isfree="False";
 var defaultexpressway="";
 //关闭弹框
