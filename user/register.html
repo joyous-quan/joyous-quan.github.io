@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>注册</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" href="/static/css/common.css?v=202006100001" media="all">
+<link rel="stylesheet" href="/static/css/login.css?v=202006100001" media="all">
+
+</head>
+
+<body>
+<input type="hidden" name="_xsrf" value="2|5f553a34|2b758e9ec6ad9747c8d797fa6925ad1b|1604020561"/>
+<div class="layout-login">
+<h1 class="title-logo">
+<a href="/index.html">
+<img src="/static/img/logo-blue.png" alt="">
+</a>
+</h1>
+<!-- <div class="login-register-con register-con">
+<form id="register_form">
+<h2>注册会员</h2>
+<p><span class="color-red">*</span> 真实姓名</p>
+<input type="text" id="name" name="name">
+<p><span class="color-red">*</span> 手机号（此手机号可作为您的会员登录名）</p>
+<input type="text" id="phone" name="phone">
+<p>固定电话（区号-电话）</p>
+<div class="tel-input">
+<span class="width60"><input type="text" name="" id="tel_1"></span> -
+<span><input type="text" name="" id="tel_2"></span>
+</div>
+<p>QQ号</p>
+<input type="text" id="qq" name="">
+<p><span class="color-red">*</span> 邮箱（邮箱作为您的会员登录名，注册成功后不可更改)</p>
+<input type="text" id="email" name="email">
+<p><span class="color-red">*</span> 工作单位</p>
+<input type="text" id="organization" name="organization">
+<p><span class="color-red">*</span> 设置密码</p>
+<input type="password" id="oldPwd" name="oldPwd">
+<p><span class="color-red">*</span> 确认密码</p>
+<input type="password" id="newPwd" name="newPwd">
+</form>
+<p class="checkbox-con">
+<label for="accept"><input class="input_check" type="checkbox" id="accept">
+点击提交，表示您理解并接受</label><br>
+<a href="/terms-policy.html" target="_blank">《毕得医药注册条款》</a>，<a href="javascript:;" onclick="bide._cntbox('/activities-that.html','活动声明',820,620,'url')">《活动声明》</a>
+</p>
+<p class="errorBox"></p>
+<button type="submit" class="btn btn-blue" onclick="_register()">注 册</button>
+<div class="register-tips">
+<p>已有毕得会员？</p>
+</div>
+<a href="/user/login.html" class="btn btn-gray">登 录</a>
+</div> -->
+
+
+<div class="login-register-con login-con">
+<form id="register_form" novalidate="novalidate">
+<h2>注册会员</h2>
+<p><span class="color-red">*</span> 真实姓名</p>
+<input type="text" id="name" name="name">
+<p><span class="color-red">*</span> 手机号（此手机号可作为您的会员登录名）</p>
+<input type="text" id="phone" name="phone">
+<p>固定电话（区号-电话）</p>
+<div class="tel-input">
+<span class="width60"><input type="text" name="" id="tel_1"></span> -
+<span><input type="text" name="" id="tel_2"></span>
+</div>
+<p>QQ号</p>
+<input type="text" id="qq" name="">
+<p><span class="color-red">*</span> 邮箱（邮箱作为您的会员登录名，注册成功后不可更改)</p>
+<input type="text" id="email" name="email">
+<p><span class="color-red">*</span> 工作单位</p>
+<input type="text" id="organization" name="organization">
+<p><span class="color-red">*</span> 设置密码</p>
+<input type="password" id="oldPwd" name="oldPwd">
+<p><span class="color-red">*</span> 确认密码</p>
+<input type="password" id="newPwd" name="newPwd">
+</form>
+<p class="checkbox-con">
+<label for="accept"><input class="input_check" type="checkbox" id="accept">
+点击提交，表示您理解并接受</label><br>
+<a href="/terms-policy.html" target="_blank">《毕得医药注册条款》</a>，<a href="javascript:;" onclick="bide._cntbox('/activities-that.html','活动声明',820,620,'url')">《活动声明》</a>
+</p>
+<p class="errorBox"></p>
+<button href="javascript:;" type="submit" class="btn btn-blue" onclick="_register()">注 册</button>
+<div class="register-tips">
+<p>已有毕得会员？</p>
+</div>
+<a href="/user/login.html" class="btn btn-gray">登 录</a>
+</div>
+</div>
+<script src='/static/js/common.js?v=202006100001'></script>
+<script src="/static/h-ui/lib/jquery.validation/jquery.validate.min.js"></script>
+<script>
+var validato;//表单验证对象
+var chk_email=[];//检查后缀数组
+$(document).ready(function(e) {
+_getRegChkEmail();//获取禁止注册的邮箱后缀
+//添加自定义检查密码的方法
+jQuery.validator.addMethod("isPassword", function(value, element) {
+return /^(?!\d+$)(?![a-zA-Z]+$)[\dA-Za-z]{6,18}$/.test(value)?true:false;
+}, "Passwords must be at least 6 characters.");
+//
+jQuery.validator.addMethod('isPhone', function( value, element ){
+// /^1\d{10}$/ 来自支付宝的正则
+return this.optional( element ) || /^1\d{10}$/.test( value );
+}, '请输入正确的手机号码');
+//检查邮箱是否正确
+jQuery.validator.addMethod("isEmail", function(value, element) {
+return /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/.test(value)?true:false;
+}, "Enter a valid email address.");
+//检查新旧密码是否相同
+jQuery.validator.addMethod("isOldPwd", function(value, element) {
+return $("#oldPwd").val()==$("#newPwd").val()?true:false;
+}, "The new password and the original password can not be the same.");
+jQuery.validator.addMethod("chkEmail", function(value, element) {
+var emurl=value.split("@")[1];
+for(var i=0;i<chk_email.length;i++){
+if(emurl.indexOf(chk_email[i])>-1){
+return false;
+}
+}
+return true;
+}, "Only company or institutional email allowed.");
+validator=$('#register_form').validate({
+rules:{
+name:"required",
+phone:{
+required:true,
+isPhone:true
+},
+organization:"required",
+email:{
+required: true,
+isEmail: true,
+chkEmail:true
+},
+oldPwd:{
+required: true,
+minlength: 6,
+maxlength:18,
+isPassword:true
+},
+newPwd:{
+isOldPwd:true
+}
+},
+messages:{
+email:{
+required:"请输入邮箱地址",
+isEmail:"邮箱地址格式错误",
+chkEmail:"只允许公司或机构的电子邮件"
+},
+oldPwd:{
+required:"请输入密码",
+minlength:"密码最少为6个字符",
+maxlength:"密码最多为18个字符",
+isPassword:'密码相对简单，建议您将密码改为复杂的组合，如字母+数字。'
+},
+newPwd:{
+isOldPwd:"2次密码不一致"
+},
+name:"请输入姓名",
+phone:{
+required:"请输入手机号",
+isPhone:"请输入正确的手机号码"
+},
+organization:"请输入工作单位"
+}
+});
+$("#name")[0].focus();
+});
+function _register(){
+$(".errorBox").hide();
+if(!$(".input_check").is(":checked")){
+$(".errorBox").css("display","inline-block").html('请阅读并同意条款');
+return false;
+}
+var flag = $("#register_form").valid();
+if(!flag){
+validator.focusInvalid();
+return false;
+}
+var name = $("#name").val();
+var phone=$("#phone").val();
+var tel=$("#tel_1").val()+$("#tel_2").val();
+var qq=$("#qq").val();
+var email = $("#email").val();
+var password = $("#oldPwd").val();
+var organization = $("#organization").val();
+var params = {"name": name, "email": email, "password": password,"organization":organization,"qq":qq,"tel":tel,"phone":phone};
+if(_chkHasSpecial(params)){_ErrmsgShow('Do not enter special characters.');return false;}
+_DoAjaxAsyncTrue('POST', params, '/webapi/v1/user/register', function () {
+window.location.href=isempty($.urlGet()['path'])?"/":$.urlGet()['path']; //获取URL的Get参数
+});
+}
+//获取禁止注册的邮箱后缀
+function _getRegChkEmail(){
+_DoAjaxAsyncTrue("GET",{},"/webapi/v1/ChkRegEmail",function(res){
+chk_email=res;
+})
+}
+</script>
+</body>
+</html>
