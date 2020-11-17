@@ -1,4 +1,4 @@
-.email-txt,.contact-us-con dl a,.contact-us-con dl span,.wedsite-map-con a:hover{color:#007bc4;}
+.email-txt,.contact-us-con dl a,.contact-us-con dl,.wedsite-map-con a:hover{color:#007bc4;}
 .margin-top15{margin-top:15px;}
 /*about-us.html*/
 .about-con{color:#222;text-align:justify;line-height:28px;}
@@ -15,10 +15,12 @@
 /*terms-policy.html*/
 .terms-policy-con .quality-control-con p{margin-bottom:30px;}
 /*contact-us.html*/
-.contact-us-con h2{font-weight:400;font-size:20px;}
-.contact-us-con dl.float-L{padding-right:5%;width:auto;font-size:16px;}
-.contact-us-con dt{line-height:36px;}
-.contact-us-con dt img{vertical-align:middle;}
+.contact-us-con h2{padding:10px 0;font-weight:400;font-size:20px;}
+.contact-us-con dl{overflow:hidden;}
+.contact-us-con dt{float:left;padding-right:5%;font-size:16px;line-height:26px;}
+.contact-us-con dt p{position:relative;padding-left:70px;padding-top:10px;}
+.contact-us-con p span{position:absolute;left:0;display:inline-block;width:70px;color:#333;}
+.contact-us-con dt img{vertical-align:middle;margin-right:4px;}
 .bide-addr img{margin-top:20px;}
 /*wedsite-map.html*/
 .wedsite-map-con dl{overflow:hidden;margin-bottom:12px;padding:20px;background:#f5f5f5;line-height:34px;}
@@ -154,6 +156,8 @@
 	.patent_certificate_img li{width:50%;}
 }
 @media only screen and (max-width:640px){
+	.contact-us-con h2{font-size:18px;}
+	.contact-us-con dt{font-size:14px;}
 	/*wedsite-map.html*/
 	.wedsite-map-con dl dt,.honor-image-box li strong{font-size:16px;}
 	.wedsite-map-con dl dd{width:50%;}
