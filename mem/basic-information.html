@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>会员中心-基本资料</title>
+<input value="basic-information" style="display:none" id="right-flag">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+
+<link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+<link rel="stylesheet" type="text/css" href="/static/css/form.css">
+<link rel="stylesheet" type="text/css" href="/static/css/member-center.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/common.js"></script>
+<!-- <link rel="stylesheet" href="/static/css/form.css" media="all"> -->
+  <!--   <style>
+        .btn-color-orange {background: #FF7F00;  }
+        fieldset {border: 0;}
+        #msform {width: 400px;text-align: center;position: relative;}
+        #msform input, #msform textarea {padding: 15px;  border: 1px solid #ccc;  border-radius: 3px;  margin-bottom: 10px;  width: 100%;  box-sizing: border-box;  font-family: montserrat;  color: #2C3E50;  font-size: 13px;  }
+        .fs-title {  font-size: 15px;  text-transform: uppercase;  color: #2C3E50;  margin-bottom: 10px;  }
+        .fs-subtitle {  font-weight: normal;  font-size: 13px;  color: #666;  margin-bottom: 20px;  }
+        #msform .action-button {  background: #0f9ae0;  font-weight: bold;  color: white;  border: 0 none;  border-radius: 1px;  cursor: pointer;  }
+        .mcr-title li{   white-space: nowrap;  max-width: 255px;overflow: hidden; text-overflow:ellipsis;}
+        .li_expired_pnt{display: none;}
+        .mcr-member{max-width: 180px!important;}
+    </style> -->
+
+</head>
+<body class="member_body">
+	<!-- header START -->
+	<div id="header"></div>
+	<!-- header END -->
+    <div class="layout member-center-con">
+        
+        <div class="member-center-L phone_none">
+            <h4>会员中心</h4>
+            <ul>
+                <li class="member-nav-title"><span></span>个人信息</li>
+                <li><a id="basic-information" href="/mem/basic-information.html">基本资料</a></li>
+                <li><a id="account-balance" href="/mem/account-balance.html">账户余额</a></li>
+                <li><a id="shipping-address" href="/mem/shipping-address.html">收货地址</a></li>
+                <li><a id="invoice-address" href="/mem/invoice-address.html">发票地址</a></li>
+                <li><a id="invoice-information" href="/mem/invoice-information.html">发票信息</a></li>
+                <li><a id="submember" href="/mem/my-submember.html">子账号管理</a></li>
+            </ul>
+            <div class="border-B"></div>
+            <ul>
+                <li class="member-nav-title"><span></span>我的专区</li>
+                <li><a id="my-integral" href="/mem/my-integral.html">我的积分</a></li>
+                <li><a id="my-favorite" href="/mem/my-favorite.html">我的收藏</a></li><!-- 
+                <li><a id="my-free-sample" href="/mem/my-free-sample.html">我的样品</a></li> -->
+                <li><a id="my-inquire" href="/mem/my-inquire.html">我的询单</a></li>
+                <li><a id="my-order" href="/mem/my-order.html">我的订单</a></li>
+                <li><a id="my-suggestion" href="/mem/my-suggestion.html">我的反馈</a></li>
+            </ul>
+        </div>
+        <!-- content START -->
+        <div class="member-center-R">    
+	    	<input id="userid" value="70097" style="display:none">
+		    <ul class="mcr-title mcr-bi-title">
+		        <li class="mcr-member">
+		            quan
+		        </li>
+		        <li>
+		            <span>|</span>
+		            账户余额：<b>200.00</b> 元
+		        </li>
+		        <li>
+		            <span>|</span>
+		            可用积分：1500
+		        </li>
+		       <!--  <li class="li_expired_pnt">
+		            <span>|</span>
+		            7月1日过期积分：<b></b>
+		        </li> -->
+		        <li class="mcrt-btn">
+		            <a href="/user/login.html" class="btn">退出</a>
+		        </li>
+		    </ul>
+		    <div class="mcr-con mcr-bi-con">
+		        <table>
+		            <colgroup>
+		                <col width="10%">
+		                <col>
+		            </colgroup>
+		            <tbody>
+		            <tr>
+		                <td>用户ID</td>
+		                <td>70097</td>
+		            </tr>
+		            <tr>
+		                <td>真实姓名</td>
+		                <td>quan</td>
+		            </tr>
+		            <tr>
+		                <td>手机号</td>
+		                <td>15180309633</td>
+		            </tr>
+		            <tr>
+		                <td>固定电话</td>
+		                <td></td>
+		            </tr>
+		            <tr>
+		                <td>QQ号</td>
+		                <td></td>
+		            </tr>
+		            <tr>
+		                <td>邮箱</td>
+		                <td>774625218@qq.com</td>
+		            </tr>
+		            <tr>
+		                <td>工作单位</td>
+		                <td>bide</td>
+		            </tr>
+		            <tr>
+		                <td>登录密码</td>
+		                <td class="position-r">****** <button class="float-R btn btn_blue" onclick="_resetPassword('重置登录密码', 0)">重置登录密码</button>
+		                </td>
+		            </tr>
+		            <tr>
+		                <td>支付密码</td>
+	                    <td class="position-r">
+	                        <span class="color-blue">您的支付密码为空</span><span class="color-gray">（支付密码为余额支付所需，请您尽快设置支付密码）</span>
+	                        <button class="float-R btn btn_orange" onclick="_resetPassword('设置支付密码', 2)">设置支付密码</button>
+	                    </td>
+		            </tr>
+		            </tbody>
+		        </table>
+		    </div>
+
+	        <!-- 修改密码 -->
+	        <div class="mask change-password-mask">
+                <div class="mask_bg"></div>
+		        <div class="popups change-password-popups form-popups" id="change-password"></div>
+	        </div>
+        </div>
+
+        <!-- content END -->
+	</div>
+    <!-- footer START -->
+	<div id="footer"></div>
+	<!-- footer END -->
+    
+    <script type="text/javascript">
+    /*$(document).ready(function(){
+        _DoAjaxAsyncTrue("GET",{},"/webapi/v1/getmemberlastyeardeductionpnt",function(res){
+            if(!isempty(res)&&res>0){
+                $(".li_expired_pnt").show();
+                $(".li_expired_pnt b").text(res).attr("title",res);
+            }
+        })
+    })*/
+	function closeMask(){
+		$('.change-password-mask').fadeOut(500);
+	}
+    function _resetPassword(title, type) {
+        var html_string = '<h2 class="form-popups-title">'+ title +'</h2>\n' +
+            '<span class="del-mask" onclick="closeMask()"><i class="iconfont icon-delete"></i></span>' +
+            '<div class="form-box">\n';
+            if (type !== 2){
+            html_string += '<p>原密码</p>\n' +
+            '<input type="password" name="" id="oldpass">\n'
+            }
+            html_string += '<p>新密码</p>\n' +
+            '<input type="password" name="" id="pass">\n' +
+            '<p>确定新密码</p>\n' +
+            '<input type="password" name="" id="cpass">\n' +
+            '<button class="btn btn-blue" onclick="uptPassword('+ type +')">保存</button>\n' +
+            '</div>';
+        
+        var h = (type==2) ? 340 : 390;
+        var type_title = {
+            0: '修改密码',
+            1: '修改支付密码',
+            2: '设置支付密码'
+        };
+        
+        $("#change-password").html(html_string);
+        $(".change-password-mask").css('display', 'block')
+    }
+
+    function uptPassword(type) {
+        if ($("#pass").val() !== $("#cpass").val()) {
+            bide._warntip("请确认新密码与输入新密码相同。");
+            return
+        }
+        var url_dict = {
+            0: "/webapi/v1/user/password",
+            1: "/webapi/v1/mem/payPassword",
+            2: "/webapi/v1/mem/setPayPassword"
+        };
+        _DoAjaxAsyncTrue("PUT", {
+            userid: $("#userid").val(),
+            oldpwd: $("#oldpass").val(),
+            newpwd: $("#pass").val()
+        }, url_dict[type], function (res) {
+            if (res.isok) {
+                bide._warn(res.errmsg);
+                setTimeout(function(){window.location.reload();},2000)
+            } else {
+                bide._warntip(res.errmsg)
+            }
+        })
+    }
+</script>
+
+<script type="text/javascript">
+$(function () {
+    $("#"+$("#right-flag").val()).addClass("current")
+})
+</script>
+</body>
+</html>

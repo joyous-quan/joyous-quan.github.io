@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>会员中心-基本资料</title>
+<input value="basic-information" style="display:none" id="right-flag">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+
+<link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css">
+<link rel="stylesheet" type="text/css" href="/static/css/form.css">
+<link rel="stylesheet" type="text/css" href="/static/css/member-center.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/common.js"></script>
+
+<style type="text/css">
+    .member_body{background:#f5f5f5;}
+    .member_layout{max-width:1300px;margin:0 auto;}
+    .member-title{padding-top:10px;font-size:0;background:#007bc4;}
+    .member-title div{padding:10px;}
+    .member-title a{display:inline-block;width:50%;font-size:14px;}
+    .member_info>span{display:inline-block;font-size:14px;}
+    .member_info span,.member_info a{color:#fff;}
+    .member_info>a{padding:20px 10px 0;}
+    .member_name{padding-left:45px;height:42px;background: url(/static/img/login.png) no-repeat left center;line-height:42px;width:70%;}
+    .member_install{float:right;height:42px;line-height:42px;text-align:center;}
+    .member_install a{width:100%;}
+    .member-title a{text-align:center;}
+    .member-title a span{display:block;font-weight:700;min-height:24px;font-size:16px;}
+    .member_order{background:#fff;border-top-left-radius:8px;border-top-right-radius:8px;}
+    .member_order a{padding:30px 10px 10px;background: url(/static/img/phone/order.png) no-repeat top center;}
+    .member-nav li{margin-top:12px;border-radius:8px;background:#fff}
+    .member-nav li a{display:block;height:50px;line-height:50px;padding:0 15px 0 50px;background: url(/static/img/phone/order.png) no-repeat 15px center;}
+    .member-center-con .btn{width:100%;margin-top:20px;}
+</style>
+
+</head>
+<body class="member_body">
+	<!-- header START -->
+	<div id="header"></div>
+	<!-- header END -->
+        
+    <!-- content START -->
+    <div class="member_layout member-center-con">
+        <input id="userid" value="70097" style="display:none">
+        <div class="member-title">
+            <div class="member_info">
+                <span class="member_name">quan</span>
+                <span class="member_install"><a id="basic-information" href="/mem/basic-information.html"><img src="/static/img/phone/shezhi.png" alt=""></a></span>
+                <a id="my-favorite" href="/mem/my-favorite.html"><span class="member_favorite">6</span>我的收藏</a>
+                <a id="my-integral" href="/mem/my-integral.html"><span class="member_integral">1500</span>我的积分</a>
+            </div>
+            <div class="member_order">
+                <a id="my-inquire" href="/mem/my-inquire.html">我的询单</a>
+                <a id="my-order" href="/mem/my-order.html">我的订单</a>
+            </div>
+        </div>
+        <ul class="member-nav">
+            <li><a id="account-balance" href="/mem/account-balance.html">账户余额</a></li>
+            <li><a id="shipping-address" href="/mem/shipping-address.html">收货地址</a></li>
+            <li><a id="invoice-address" href="/mem/invoice-address.html">发票地址</a></li>
+            <li><a id="invoice-information" href="/mem/invoice-information.html">发票信息</a></li>
+            <li><a id="submember" href="/mem/my-submember.html">子账号管理</a></li>
+            <li><a id="my-suggestion" href="/mem/my-suggestion.html">我的反馈</a></li>
+        </ul>
+        <div class="mcrt-btn textC"><a href="/user/login.html" class="btn">退出</a></div>
+    </div>
+	
+    <!-- footer START -->
+	<div id="footer"></div>
+	<!-- footer END -->
+</body>
+</html>

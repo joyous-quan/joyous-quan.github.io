@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>线下转账</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index,follow">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css?t=202006110001">
+<link rel="stylesheet" href="/static/css/common.css?t=202006110001" media="all">
+<link rel="stylesheet" href="/static/css/pay.css?t=202006110001" media="all">
+<script src="/static/js/jquery.min.js?t=202006110001"></script>
+<script src="/static/js/common.js?t=202006110001"></script>
+</head>
+<!--[if lt IE 10]>
+<link rel="stylesheet" href="/static/css/common_ie.css"/>
+<![endif]-->
+<body>
+<!-- header START -->
+<div id="header"></div>
+
+<div class="layout">
+<div class="breadcrumb">
+<a href="/">首页</a>
+<i class="iconfont icon-gengduo"></i>
+<a href="/user/cart.html">购物车</a>
+<i class="iconfont icon-gengduo"></i>
+<a href="/pay/payment.html">填写并核对订单信息</a>
+<i class="iconfont icon-gengduo"></i>
+<a href="javascript:;" class="current">线下转账</a>
+</div>
+<h3 class="menu-con-title">线下转账</h3>
+<div class="progress-bar successful-trade-bar">
+<ul>
+<li class="before">
+<a href="javascript:;">
+<span>1</span><br>我的购物车
+</a>
+</li>
+<li class="before">
+<a href="javascript:;">
+<span>2</span><br>填写核对订单信息
+</a>
+</li>
+<li class="current">
+<a href="javascript:;">
+<span>3</span><br>线下转账
+</a>
+</li>
+</ul>
+</div>
+<div class="successful-trade">
+<dl class="float-L successful-trade-addr">
+<dt>订单信息</dt>
+<dd class="dd_ship_add">
+收货地址：<label><span>上海市</span><span>杨浦区</span><span>翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室</span><span>(website test)</span><span>13112345678</span></label>
+<input type="hidden" value="add_tel:,add_userid:70097,add_time:2020-11-12 10:31:37,add_type:0,add_email:,add_country:,add_id:146593,add_nsid:,add_isdefault:true,add_zipcode:200000,add_name:website test,add_isdefaultbill:false,add_phone:13112345678,add_group:,add_contactid:,add_city:杨浦区,add_province:上海市,add_address:翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室,add_company:">
+</dd>
+<dd class="dd_bill_add">
+发票地址：<label><span>上海市</span><span>杨浦区</span><span>翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室</span><span>(website test)</span><span>13112345678</span></label>
+<input type="hidden" value="add_tel:,add_userid:70097,add_time:2020-11-12 10:30:34,add_type:1,add_email:,add_country:,add_id:146595,add_nsid:,add_isdefault:false,add_zipcode:200000,add_name:website test,add_isdefaultbill:true,add_phone:13112345678,add_group:,add_contactid:,add_city:杨浦区,add_province:上海市,add_address:翔殷路128号(上海理工大学国家大学科技园)1号楼A座101室,add_company:">
+</dd>
+<dd class="dd_bill_info">
+<label><span><i>发票抬头：</i> website test</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i>纳税人识别号：</i>1234567890455</span></label>
+<input type="hidden" value="i_bankaddress:,i_time:2019-08-26 16:53:47,i_invoiceaddress:,i_type:false,i_isdefault:true,i_identifynumber:1234567890455,i_phone:,i_banknumber:,i_id:55162,i_userid:70097,i_invoicetitle:website test">
+</dd>
+<dd>
+我的留言：<span>test msg</span>
+</dd>
+</dl>
+<div class="float-L order-status">
+<h3><span>订单状态 : </span><span>订单已提交，请尽快完成转账</span></h3>
+<p><span>订单号 : </span><span><a href="/mem/order-info.html?id=BD7009720201118092908">BD7009720201118092908</a></span></p>
+</div>
+</div>
+<div class="successful-order offline-con">
+<ul>
+<li><b>2020-11-18 09:29:09</b></li>
+<li>订单号：BD7009720201118092908</li>
+<li>采购单号：test po</li>
+<li class="contact-customer">联系客服</li>
+</ul>
+<dl class="offline-txt">
+<dt>应付总额：<b>￥3009.6</b></dt>
+<dd><h3>注意事项（转账时需注意以下信息，请牢记）：</h3></dd>
+<dd>
+<p>1. 收款人信息:</p>
+<p class="padding-L18">户名：<b>上海毕得医药科技有限公司</b></p>
+<p class="padding-L18">开户行：<b>民生银行杨浦支行</b></p>
+<p class="padding-L18">账号：<b>0236014170000043</b></p>
+</dd>
+<dd>2. 您的订单号为：<b>BD7009720201118092908</b>，汇款时请将此订单号填写到汇款单【附言】栏内（参考下图）；</dd>
+<dd>3. 订单提交后请及时汇款并确保汇款金额与订单总金额一致，金额不一致，订单将被取消；</dd>
+<dd>4. 完成汇款后，请将汇款底单（或电子回单）截图发送给我公司对应销售人员（新用户按照网站右侧对应联系方式，选择对应地区的销售人员联系）；</dd>
+<dd>5. 在收到款项后的24小时内，我们将确认收款并发货，如您未填写订单号则需要1-5天。若款项汇出5个工作日内未帮您进行订单收款确认,请及时致电客服400-164-7117。</dd>
+<dd class="img-box">
+<img src="/static/img/cankao.png" alt="">
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
