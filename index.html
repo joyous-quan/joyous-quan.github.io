@@ -20,6 +20,10 @@
         .dv_list dl{position:relative;margin-top:20px;min-height:100px;padding-left:120px;line-height:24px;}
         .dv_list dl dt{position:absolute;left:0;top:0;border:1px solid #ddd;width:100px;height:100px;}
         .details-btn{border:1px solid #ddd;padding:5px 15px;}
+        .page{text-align:center;padding:15px;}
+        .prev,.next{cursor:pointer;}
+        .page a,.prev,.next{margin:0 5px;display:inline-block;height:20px;width:20px;background:#f5f5f5;border-radius:4px;text-align:center;user-select:none;}
+        .page .page_on{color:#fff;background:#409eff;}
     </style>
 </head>
 <body class="demo_body">
@@ -35,34 +39,88 @@
             <p>点击影片详情进入对应的影片详情页</p>
             <div class="dv_list">
             </div>
+            <div class="page">
+                
+            </div>
         </div>
     </div>
     <div class="dv_footer layout">
         &copy;2021 <a href="mailto:joyousquan@outlook.com">Contact</a>
     </div>
-    <script>
-        $(function(){
-            $.ajax({
-                type: "GET",
-                url: "./data/douban_movie.json?t=20210201",
-                dataType: "json", 
-                success: function(res) {
-                    //1.加载数据成功 进行字符串拼接
-                    $.each(res,function (idx,item) {
-                        $(".dv_list").append(
-                            "<dl><dt><a href='movie-details.html?id="
-                            + item.id + "'><img src='"
-                            + item.cover + "'></a></dt><dd>《"
-                            + item.title + "》</dd><dd>导演："
-                            + item.directors + "</dd><dd>演员："
-                            + item.casts + "</dd><dd><a class='details-btn' href='movie-details.html?id="
-                            + item.id + "'>影片详情</a></dd></dl>"
-                        )     
-                    })
-                },
-                error: function(){ alert("error") }        
-            });
+<script>
+    var all_data = [];
+    var pageindex = 1;
+    $(document).ready(function() {
+        $.getJSON("./data/douban_movie.json?t=" + Math.random(), {}, function(data) {
+            all_data = data;
+            _toIdxPage(1, false);
         })
-    </script>
+    });
+
+    function _generateArray(start, end) {
+        var res_list = [];
+        for (var i = start; i <= end; i++) {
+            res_list.push(i);
+        }
+        return res_list
+    };
+
+    //加载分页数据
+    function _toIdxPage(idx, is_animate) {
+        if (is_animate == null) {
+            is_animate = true;
+        }
+        var pagesize = 5,
+        list_data = [];
+        if (idx >= 1) {
+            var offset = (idx - 1) * pagesize;
+            if (offset + pagesize >= all_data.length) {
+                list_data = all_data.slice(offset, all_data.length)
+            } else {
+                list_data = all_data.slice(offset, (offset + pagesize))
+            }
+            var dl_html = '';
+            $.each(list_data, function(idx, item) {
+            dl_html += "<dl><dt><a href='movie-details.html?id="
+                    + item.id + "'><img src='"
+                    + item.cover + "'></a></dt><dd>《"
+                    + item.title + "》</dd><dd>导演："
+                    + item.directors + "</dd><dd>演员："
+                    + item.casts + "</dd><dd><a class='details-btn' href='movie-details.html?id="
+                    + item.id + "'>影片详情</a></dd></dl>"
+            })
+            $(".dv_list").html(dl_html);
+            pageindex = idx;
+            var max_page = Math.ceil(all_data.length / pagesize);
+            var prev_idx = (pageindex - 1 < 1 ? 1 : (pageindex - 1));
+            var next_idx = (pageindex + 1 > max_page ? max_page : (pageindex + 1));
+            var page_html = '',
+            page_list = [];
+            if (max_page <= 9) {
+                page_list = _generateArray(1, max_page);
+            } else {
+                if (pageindex <= 5) {
+                    page_list = _generateArray(1, 9);
+                } else if ((pageindex + 4) <= max_page) {
+                    page_list = _generateArray((pageindex - 4), (pageindex + 4));
+                } else {
+                    page_list = _generateArray((max_page - 8), max_page);
+                }
+            }
+            $.each(page_list, function(idx, item) {
+                var active_class = '',
+                onclick_html = 'onclick="_toIdxPage(' + item + ')"';
+                if (pageindex == item) {
+                    active_class = "page_on";
+                    onclick_html = '';
+                }
+                page_html += '<a class="num ' + active_class + '" href="javascript:;" ' + onclick_html + '>' + item + '</a>';
+            })
+            var page_all_html = '<span class="prev" onclick="_toIdxPage(' + prev_idx + ')"> < </span>' + page_html + ((max_page <= 9 || pageindex > (max_page - 5)) ? '' : '<span>...</span>') + '<span class="next" onclick="_toIdxPage(' + next_idx + ')"> > </span>'+'<span> 第 '+ pageindex +' 页，共 '+ max_page +' 页</span>';
+            $(".page").html(page_all_html);
+        }
+    };
+
+</script>
 </body>
 </html>
