@@ -30,7 +30,7 @@ body{padding-bottom:0;}
 /* We Can Provide */
 .phone_priovide{display:none;}
 .index-bg{margin-bottom:40px;padding:10px 24px;background:url(../img/index-bg.png) no-repeat center;background-size:cover;}
-.ul_hot_menu{position:relative;min-height:526px;}
+.ul_hot_menu{position:relative;min-height:530px;}
 .ul_hot_menu li{position:absolute;background:rgba(0,0,0,.4)}
 .ul_hot_menu a{display:block;padding:20px;width:192px;height:192px;font-size:18px;color:#fff;}
 .ul_hot_menu li:hover{z-index:10;}
@@ -59,14 +59,14 @@ body{padding-bottom:0;}
 .bg_c10d2f:hover {background:#c10d2f;}
 
 /* experts-container */
-.experts-container{max-width:80%;margin:0 auto;color:#013f7e;font-weight:700;}
+.experts-container{max-width:80%;margin:0 auto;font-weight:700;}
 .experts-title{padding:10px 0;text-align:center;font-size:24px;}
-.experts-content{display:inline-block;width:100%;}
-.experts-content dd{float:left;width:33.33%;text-align:center;font-size:16px;}
-.experts-content span{display:block;margin:0 auto;height:55px;width:50px;background:url(../img/home-icon.png) no-repeat;background-size:100%;}
-.experts-content .span_inventories{background-position: 0 -3px;}
-.experts-content .span_competitive_price{background-position: 0 -62px;}
-.experts-content .span_delivery{background-position: 0 -116px;}
+.experts-content{text-align:center;}
+.experts-content dd{padding:0 3%;display:inline-block;font-size:18px;line-height:50px;}
+.experts-content span{margin-right:5px;display:block;float:left;height:50px;width:50px;background:url(../img/home-icon.png) no-repeat;background-size:100%;}
+.experts-content .span_inventories{background-position: 0 -6px;}
+.experts-content .span_competitive_price{background-position: 0 -63px;}
+.experts-content .span_delivery{background-position: 0 -120px;}
 
 /* techology */
 .techology ul{overflow:hidden;margin:20px 0;padding:1.5%;border:1px solid #d6d6d6;}
@@ -123,11 +123,13 @@ body{padding-bottom:0;}
     .phone_content .obb-img{background-position:-1246px -15px;}
     .phone_content .ia-img{background-position:-1420px -15px;}
     
+    .experts-container{max-width:100%;}
     .experts-title{font-size:18px;}
-    .experts-content dd{font-size:14px;}
-    .experts-content span{height:50px;width:45px;}
-    .experts-content .span_competitive_price{background-position: 0 -56px;}
-    .experts-content .span_delivery{background-position: 0 -104px;}
+    .experts-content dd{font-size:16px;line-height:45px;}
+    .experts-content span{height:45px;width:45px;}
+    .experts-content .span_inventories{background-position:0px -5px;}
+    .experts-content .span_competitive_price{background-position:0 -57px;}
+    .experts-content .span_delivery{background-position:0 -108px;}
     .techology h2{font-size:24px;}
     .techology_img{padding-top:2%;}
 }
@@ -150,10 +152,12 @@ body{padding-bottom:0;}
     .phone_content .obb-img{background-position:-1089px -13px;}
     .phone_content .ia-img{background-position:-1241px -13px;}
     .bg_lightblue{margin:20px 0;padding:0 20px;}
-    .experts-container{max-width:100%;}
-    .experts-content span{height:45px;width:40px;}
-    .experts-content .span_competitive_price{background-position: 0 -49px;}
-    .experts-content .span_delivery{background-position: 0 -90px;}
+
+    .experts-content dd{padding:0 1%;line-height:40px;}
+    .experts-content span{height:40px;width:40px;margin-right:3px;}
+    .experts-content .span_inventories{background-position:0px -4px;}
+    .experts-content .span_competitive_price{background-position: 0 -51px;}
+    .experts-content .span_delivery{background-position: 0 -96px;}
     .techology{display:none!important;}
 }
 @media only screen and (max-width:650px){
@@ -171,9 +175,10 @@ body{padding-bottom:0;}
     .phone_content .ia-img{background-position:-1062px -10px;}
 
     .experts-title{font-size:16px;}
-    .experts-content span{height:38px;width:35px;}
-    .experts-content .span_competitive_price{background-position: 0 -43px;}
-    .experts-content .span_delivery{background-position: 0 -78px;}   
+    .experts-content dd{line-height:35px;}
+    .experts-content span{height:35px;width:35px;}
+    .experts-content .span_competitive_price{background-position: 0 -45px;}
+    .experts-content .span_delivery{background-position: 0 -85px;}   
 }
 @media only screen and (max-width:480px){
     .priovide_title,.techology h2{font-size:18px;}
@@ -188,12 +193,12 @@ body{padding-bottom:0;}
     .phone_content .obb-img{background-position:-702px -8px;}
     .phone_content .ia-img{background-position:-800px -8px;}
     .phone_content i{font-size:12px;}
-    
+    .index-bg{padding:10px;}
     .experts-title{font-size:14px;}
-    .experts-content dd{padding:0 10px;font-size:12px;}
-    .experts-content span{height:32px;width:30px;}
-    .experts-content .span_competitive_price{background-position: 0 -36px;}
-    .experts-content .span_delivery{background-position: 0 -68px;}
+    .experts-content dd{padding:0 10px;font-size:12px;line-height:30px;}
+    .experts-content span{height:30px;width:30px;}
+    .experts-content .span_competitive_price{background-position: 0 -38px;}
+    .experts-content .span_delivery{background-position: 0 -72px;}
 }
 @media only screen and (max-width:360px){
     .phone_content span{height:68px;width:68px;background-size:750px 75px;}
