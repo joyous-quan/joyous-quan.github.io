@@ -6,7 +6,7 @@
 <meta name="renderer" content="webkit"/>
 <meta name="format-detection" content="telephone=no"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<title>DEMO - js读取本地Excel转json</title>
+<title>DEMO - 本地Excel转JSON数据</title>
 <link rel="shortcut icon" href="../favicon.ico?v=2021041602" type="image/x-icon">
 <script src="../js/jquery.js"></script>
 <script src="../js/xlsx.full.min.js"></script>
@@ -15,31 +15,32 @@
     .demo_main{padding:2% 5%;}
     .title_h2{padding:2% 0;}
     #dv_json{margin:2% 0;padding:20px;min-height:500px;border:1px solid #aaa;}
-    .btn{display:inline-block;padding:10px 20px;border:none;background:#1e9fff;color:#fff;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;}
+    .btn{display:inline-block;padding:10px 20px;border:none;background:#1e9fff;color:#fff;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;outline:none;}
     a.btn{background:#009688;margin-left:40px;}
+
 </style>
 </head>
 <body>
 <div class="demo_body">
     <div class="demo_main">
-        <h2 class="title_h2">js读取本地Excel转JSON</h2>
-        <div><label><input type="file" id="input_file"/></label><button class="btn" id="button">复制JSON数据</button> <a class="btn" href="https://tool.lu/json/" target="_blank">美化JSON数据</a></div>
+        <h2 class="title_h2">本地Excel转JSON数据</h2>
+        <div><label><input type="file" id="input_file"/></label><button class="btn btn-7" id="button">复制JSON数据</button> <a class="btn" href="https://tool.lu/json/" target="_blank">美化JSON数据</a></div>
 		<div id="dv_json"></div>
     </div>
 </div>
 <script>
 //复制JSON
 document.getElementById('button').addEventListener('click',function(){
-    var copyObj = document.getElementById('dv_json')
-    copyHandler(copyObj)
+    var copyObj = document.getElementById('dv_json');
+    copyHandler(copyObj);
 })
 function copyHandler(node){
-    let range = document.createRange()
-    range.selectNodeContents(node)
-    let selection = document.getSelection()
-    selection.removeAllRanges()
-    selection.addRange(range)
-    document.execCommand('Copy')
+    let range = document.createRange();
+    range.selectNodeContents(node);
+    let selection = document.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand('Copy');
 }
 </script>
 
@@ -85,7 +86,7 @@ $(document).ready(function(){
             reader.readAsBinaryString(f);
         }
     })
-    //解析数据
+    //
     function getData(data) {
         $('#dv_json').text(data)
     }
