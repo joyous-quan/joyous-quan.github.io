@@ -9,118 +9,35 @@
     <meta name="robots" content="index,follow">
     <meta name="format-detection" content="telephone=no,email=no">
     <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
-    <title>豆瓣电影列表</title>
-    <link rel="shortcut icon" href="./img/favicon.ico?v=2021041602" type="image/x-icon">
-    <link rel="stylesheet" href="./css/common.css">
-    <!--cookie操作的js库-->
-    <script src="./js/jquery.js"></script>
-    <script src="./js/cookie.js"></script>
-    <script src="./js/server.js"></script>
+    <title>joyous-quan.github.io/</title>
+    <link rel="shortcut icon" href="/img/favicon.ico?v=2021041602" type="image/x-icon">
+    <link rel="stylesheet" href="/css/common.css">
+    <script src="/js/jquery.js"></script>
     <style>
-        .dv_list dl{position:relative;margin-top:20px;min-height:100px;padding-left:120px;line-height:24px;}
-        .dv_list dl dt{position:absolute;left:0;top:0;border:1px solid #ddd;width:100px;height:100px;}
-        .details-btn{border:1px solid #ddd;padding:5px 15px;}
-        .page{text-align:center;padding:15px;}
-        .prev,.next{cursor:pointer;}
-        .page a,.prev,.next{margin:0 5px;display:inline-block;height:20px;width:20px;background:#f5f5f5;border-radius:4px;text-align:center;user-select:none;}
-        .page .page_on{color:#fff;background:#409eff;}
+    .ul_menu{display:inline-block;width:100%;}
+    .ul_menu li{float:left;padding:10px;}
+    .ul_menu li a{display:block;padding:5px 20px;background:#f5f5f5;}
     </style>
 </head>
 <body class="demo_body">
     <div class="demo_header">
         <div class="layout">
-            <strong><a href="/index.html" title="">首页</a></strong><span>/</span>
-            <a href="javascript:history.go(-1);">返回</a> 
+            <a href="/index.html"> 首页 </a>
         </div>
     </div>
     <div class="demo_main">
-        <div class="layout con">
-            <h2 class="title_h2">豆瓣电影列表</h2>
-            <p>点击影片详情进入对应的影片详情页</p>
-            <div class="dv_list">
-            </div>
-            <div class="page">
-                
-            </div>
+        <div class="layout">
+            <h2 class="title_h2">导航分类</h2>
+            <ul class="ul_menu">
+                <li><a href="/page/excel-change-json.html">本地Excel转JSON数据</a></li>
+                <li><a href="/page/json-change-excel.html">JSON数据转Excel表格</a></li>
+                <li><a href="/page/movie-list.html">豆瓣电影列表</a></li>
+            </ul>
         </div>
+        
     </div>
-    <div class="dv_footer layout">
-        &copy;2021 joyous-quan.github.io <a href="mailto:joyousquan@outlook.com">Contact</a>
+    <div class="dv_footer">
+        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyousquan@outlook.com">Contact US</a></p>
     </div>
-<script>
-    var all_data = [];
-    var pageindex = 1;
-    $(document).ready(function() {
-        $.getJSON("./data/douban_movie.json?t=" + Math.random(), {}, function(data) {
-            all_data = data;
-            _toIdxPage(1, false);
-        })
-    });
-
-    function _generateArray(start, end) {
-        var res_list = [];
-        for (var i = start; i <= end; i++) {
-            res_list.push(i);
-        }
-        return res_list
-    };
-
-    //加载分页数据
-    function _toIdxPage(idx, is_animate) {
-        if (is_animate == null) {
-            is_animate = true;
-        }
-        var pagesize = 5,
-        list_data = [];
-        if (idx >= 1) {
-            var offset = (idx - 1) * pagesize;
-            if (offset + pagesize >= all_data.length) {
-                list_data = all_data.slice(offset, all_data.length)
-            } else {
-                list_data = all_data.slice(offset, (offset + pagesize))
-            }
-            var dl_html = '';
-            $.each(list_data, function(idx, item) {
-            dl_html += "<dl><dt><a href='movie-details.html?id="
-                    + item.id + "'><img src='"
-                    + item.cover + "' alt=''></a></dt><dd>《"
-                    + item.title + "》</dd><dd>导演："
-                    + item.directors + "</dd><dd>演员："
-                    + item.casts + "</dd><dd><a class='details-btn' href='/page/movie-details.html?id="
-                    + item.id + "'>影片详情</a></dd></dl>"
-            })
-            $(".dv_list").html(dl_html);
-            pageindex = idx;
-            var max_page = Math.ceil(all_data.length / pagesize);
-            var prev_idx = (pageindex - 1 < 1 ? 1 : (pageindex - 1));
-            var next_idx = (pageindex + 1 > max_page ? max_page : (pageindex + 1));
-            var page_html = '',
-            page_list = [];
-            if (max_page <= 9) {
-                page_list = _generateArray(1, max_page);
-            } else {
-                if (pageindex <= 5) {
-                    page_list = _generateArray(1, 9);
-                } else if ((pageindex + 4) <= max_page) {
-                    page_list = _generateArray((pageindex - 4), (pageindex + 4));
-                } else {
-                    page_list = _generateArray((max_page - 8), max_page);
-                }
-            }
-            $.each(page_list, function(idx, item) {
-                var active_class = '',
-                onclick_html = 'onclick="_toIdxPage(' + item + ')"';
-                if (pageindex == item) {
-                    active_class = "page_on";
-                    onclick_html = '';
-                }
-                page_html += '<a class="num ' + active_class + '"' + onclick_html + '>' + item + '</a>';
-            })
-            var page_all_html = '<span class="prev" onclick="_toIdxPage(' + prev_idx + ')"> < </span>' + page_html + ((max_page <= 9 || pageindex > (max_page - 5)) ? '' : '<span>...</span>') + '<span class="next" onclick="_toIdxPage(' + next_idx + ')"> > </span>'+'<span> 第 '+ pageindex +' 页，共 '+ max_page +' 页</span>';
-            $(".page").html(page_all_html);
-        }
-    };
-
-</script>
 </body>
 </html>

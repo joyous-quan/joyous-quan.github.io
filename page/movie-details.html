@@ -8,73 +8,69 @@
     <meta name="force-rendering" content="webkit">
     <meta name="robots" content="index,follow">
     <meta name="format-detection" content="telephone=no,email=no">
-	<title>电影详情页</title>
-    <link rel="shortcut icon" href="../img/favicon.ico?v=2021041602" type="image/x-icon">
-    <link rel="stylesheet" href="../css/common.css">
+    <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+    <title>joyous-quan.github.io/</title>
+    <link rel="shortcut icon" href="/img/favicon.ico?v=2021041602" type="image/x-icon">
+    <link rel="stylesheet" href="/css/common.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/cookie.js"></script>
+    <script src="/js/server.js"></script>
     <style>
+        .demo_header span{float:right;}
+        .demo_header span a{font-size:14px;}
         .dv_list dl{position:relative;margin-top:20px;min-height:400px;padding-left:260px;line-height:30px;}
-        .dv_list dl dt{position:absolute;left:0;top:30px;border:1px solid #ddd;width:240px;height:240px;}
-        .add-cart{border:1px solid #ddd;padding:5px 15px;}
+        .dv_list dl dt{position:absolute;left:0;top:0;border:1px solid #ddd;width:240px;height:240px;}
     </style>
 </head>
 <body class="demo_body">
     <div class="demo_header">
         <div class="layout">
-            <strong><a href="/index.html" title="">首页</a></strong><span>/</span>
-            <a href="javascript:history.go(-1);">返回</a> 
+            <a href="/index.html" title="">首页</a>
+            <span><a href="javascript:history.go(-1);">返回</a></span>
         </div>
     </div>
     <div class="demo_main">
         <div class="layout">
+            <h2 class="title_h2">豆瓣电影详情页</h2>
             <div class="dv_list details-con">
             </div>
         </div>
     </div>
-
-<!--cookie操作的js库-->
-<script src="../js/jquery.js" ></script>
-<script src="../js/cookie.js"></script>
-<script src="../js/server.js"></script>
-<script>
-$(function(){
-    //获取url中的参数
-    /*function getUrlParam(name) {
-       var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)'); //构造一个含有目标参数的正则表达式对象
-       var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-       if (r != null) return unescape(r[2]); return null; //返回参数值
-    }*/
-    function getUrlParam(name) {
-        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
-        var r = window.location.search.substr(1).match(reg);
-        if(r != null) return unescape(r[2]);
-        return null;
-    }
-    
-
-   //接收URL中的参数Id
-   var id = getUrlParam('id');
-    $.ajax({
-        type:'get',
-        url:'../data/douban_movie.json?t=20210201',
-        dataType:'json',
-        success:function(res,status){
-            $.each(res, function(idx,item) {
-                //根据id获取详情数据
-                if(id == item.id){
-                   var str ="<dl class='dl_list' pid='"+item.id+"'><dt><img src='"
-                        + item.cover + "'></dt><dd>《"
-                        + item.title + "》</dd><dd>导演："
-                        + item.directors + "</dd><dd>演员："
-                        + item.casts + "</dd><dd>评分："
-                        + item.rate + "</dd><dd><button class='add-cart' pid='"+item.id+"'>加入片单</button></li></dd></dl>"
+    <div class="dv_footer">
+        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyousquan@outlook.com">Contact US</a></p>
+    </div>
+    <script>
+        $(function(){
+            //获取url中的参数
+            function getUrlParam(name) {
+                var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+                var r = window.location.search.substr(1).match(reg);
+                if(r != null) return unescape(r[2]);
+                return null;
+            }
+            
+           //接收URL中的参数Id
+           var id = getUrlParam('id');
+            $.ajax({
+                type:'get',
+                url:'../data/douban_movie.json?t=20210201',
+                dataType:'json',
+                success:function(res,status){
+                    $.each(res, function(idx,item) {
+                        //根据id获取详情数据
+                        if(id == item.id){
+                            var str = '<dl class="dl_list" pid="'+item.id+'"><dt><img src="'
+                            + item.cover + '" alt=""></dt><dd>《'
+                            + item.title + '》</dd><dd>导演：'
+                            + item.directors + '</dd><dd>演员：'
+                            + item.casts + '</dd><dd>评分：'
+                            + item.rate + '</dd><dd><button class="btn add-cart" pid="'+item.id+'">加入片单</button></dd></dl>'
+                        }
+                        $('.dv_list').append(str);
+                    });
                 }
-                $('.dv_list').append(str);
-            });
-        }
-    })
-
-});
-
-</script>
+            })
+        });
+    </script>
 </body>
 </html>
