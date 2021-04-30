@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>DEMO - 本地Excel转JSON数据</title>
+<link rel="shortcut icon" href="../favicon.ico?v=2021041602" type="image/x-icon">
+<script src="../js/jquery.js"></script>
+<script src="../js/xlsx.full.min.js"></script>
+<style type="text/css">
+    *{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+    .demo_main{padding:2% 5%;}
+    .title_h2{padding:2% 0;}
+    #dv_json{margin:2% 0;padding:20px;min-height:500px;border:1px solid #aaa;}
+    .btn{display:inline-block;padding:10px 20px;border:none;background:#1e9fff;color:#fff;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;outline:none;}
+    a.btn{background:#009688;margin-left:40px;}
+
+</style>
+</head>
+<body>
+<div class="demo_body">
+    <div class="demo_main">
+        <h2 class="title_h2">本地Excel转JSON数据</h2>
+        <div><label><input type="file" id="input_file"/></label><button class="btn" id="button">复制JSON数据</button> <a class="btn" href="https://tool.lu/json/" target="_blank">去美化JSON数据</a></div>
+		<div id="dv_json"></div>
+    </div>
+</div>
+<script>
+//复制JSON
+document.getElementById('button').addEventListener('click',function(){
+    var copyObj = document.getElementById('dv_json');
+    copyHandler(copyObj);
+})
+function copyHandler(node){
+    let range = document.createRange();
+    range.selectNodeContents(node);
+    let selection = document.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand('Copy');
+}
+</script>
+
+<script>
+$(document).ready(function(){
+    /*FileReader共有4种读取方法：
+    1.readAsArrayBuffer(file)：将文件读取为ArrayBuffer。
+    2.readAsBinaryString(file)：将文件读取为二进制字符串
+    3.readAsDataURL(file)：将文件读取为Data URL
+    4.readAsText(file, [encoding])：将文件读取为文本，encoding缺省值为'UTF-8'*/
+
+    var wb; //读取完成的数据
+    var rABS = false; //是否将文件读取为二进制字符串
+    function fixdata(data) { //文件流转BinaryString
+        var obj = '', l = 0, w = 10240;
+        for (; l < data.byteLength / w; ++l) obj += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w, l * w + w)));
+        obj += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w)));
+        return obj;
+    }
+    $('#input_file').change(function() {
+        if (!this.files) { return; }
+        var f = this.files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var data = e.target.result;
+            if (rABS) {
+                wb = XLSX.read(btoa(fixdata(data)), {
+                    type: 'base64'
+                });
+            } else {
+                wb = XLSX.read(data, {
+                    type: 'binary'
+                });
+            }
+            var dataStr = JSON.stringify(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]));
+            var dataObj = JSON.parse(dataStr);
+            getData(dataStr)
+
+        };
+        if (rABS) {
+            reader.readAsArrayBuffer(f);
+        } else {
+            reader.readAsBinaryString(f);
+        }
+    })
+    //
+    function getData(data) {
+        $('#dv_json').text(data)
+    }
+})
+</script> 
+</body>
+</html>

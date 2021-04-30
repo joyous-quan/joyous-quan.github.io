@@ -10,7 +10,7 @@
     <meta name="format-detection" content="telephone=no,email=no">
     <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
     <title>豆瓣电影列表</title>
-    <link rel="shortcut icon" href="./favicon.ico?v=2021041602" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico?v=2021041602" type="image/x-icon">
     <link rel="stylesheet" href="./css/common.css">
     <!--cookie操作的js库-->
     <script src="./js/jquery.js"></script>
@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="dv_footer layout">
-        &copy;2021 <a href="mailto:joyousquan@outlook.com">Contact</a>
+        &copy;2021 joyous-quan.github.io <a href="mailto:joyousquan@outlook.com">Contact</a>
     </div>
 <script>
     var all_data = [];
@@ -83,10 +83,10 @@
             $.each(list_data, function(idx, item) {
             dl_html += "<dl><dt><a href='movie-details.html?id="
                     + item.id + "'><img src='"
-                    + item.cover + "'></a></dt><dd>《"
+                    + item.cover + "' alt=''></a></dt><dd>《"
                     + item.title + "》</dd><dd>导演："
                     + item.directors + "</dd><dd>演员："
-                    + item.casts + "</dd><dd><a class='details-btn' href='movie-details.html?id="
+                    + item.casts + "</dd><dd><a class='details-btn' href='/page/movie-details.html?id="
                     + item.id + "'>影片详情</a></dd></dl>"
             })
             $(".dv_list").html(dl_html);
@@ -114,7 +114,7 @@
                     active_class = "page_on";
                     onclick_html = '';
                 }
-                page_html += '<a class="num ' + active_class + '" href="javascript:;" ' + onclick_html + '>' + item + '</a>';
+                page_html += '<a class="num ' + active_class + '"' + onclick_html + '>' + item + '</a>';
             })
             var page_all_html = '<span class="prev" onclick="_toIdxPage(' + prev_idx + ')"> < </span>' + page_html + ((max_page <= 9 || pageindex > (max_page - 5)) ? '' : '<span>...</span>') + '<span class="next" onclick="_toIdxPage(' + next_idx + ')"> > </span>'+'<span> 第 '+ pageindex +' 页，共 '+ max_page +' 页</span>';
             $(".page").html(page_all_html);
