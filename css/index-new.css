@@ -29,7 +29,7 @@ body{padding-bottom:0;}
 
 /* We Can Provide */
 .phone_priovide{display:none;}
-.index-bg{margin-bottom:40px;padding:10px 24px;background:url(/static/img/index-new/index-bg.png) no-repeat center;background-size:cover;}
+.index-bg{margin-bottom:40px;padding:10px 24px;background:url(../img/index-bg.png) no-repeat center;background-size:cover;}
 .ul_hot_menu{position:relative;min-height:530px;}
 .ul_hot_menu li{position:absolute;background:rgba(0,0,0,.4);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);}
 .ul_hot_menu a{display:block;padding:20px;width:192px;height:192px;font-size:18px;color:#fff;-webkit-box-shadow:0 0 12px rgba(0,0,0,0.8);-moz-box-shadow:0 0 12px rgba(0,0,0,0.8);box-shadow:0 0 12px rgba(0,0,0,0.8);}
@@ -63,7 +63,7 @@ body{padding-bottom:0;}
 .experts-title{padding:10px 0;text-align:center;font-size:24px;}
 .experts-content{text-align:center;}
 .experts-content dd{padding:0 3%;display:inline-block;font-size:18px;line-height:50px;}
-.experts-content span{margin-right:5px;display:block;float:left;height:50px;width:50px;background:url(/static/img/index-new/home-icon.png?t=20210426) no-repeat;background-size:100%;}
+.experts-content span{margin-right:5px;display:block;float:left;height:50px;width:50px;background:url(../img/home-icon.png?t=20210426) no-repeat;background-size:100%;}
 .experts-content .span_inventories{background-position: 0 -6px;}
 .experts-content .span_competitive_price{background-position: 0 -63px;}
 .experts-content .span_delivery{background-position: 0 -120px;}
