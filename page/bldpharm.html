@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+<style type="text/css" media="screen">
+/* ---- reset ---- */
+*{margin:0 ;padding:0;}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+/* ---- tsparticles container ---- */
+.image_bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bld_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dv_content{position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;height:200px;width:1000px;text-align:center;color:#fff;}
+.dv_content h1{font-size:120px; text-shadow: 2px 2px 5px #fff;}
+.dv_content p{padding-top:10px;font-size:20px;}
+.dv_bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,10,50,0.6);}
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* ---- stats.js ---- */
+.count-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: none;
+}
+
+
+</style>
+</head>
+<body>
+<!-- tsParticles container -->
+<div class="image_bg">
+	<div class="dv_bg"></div>
+	<div class="dv_content">
+		<h1><span style="color:#e6002d;">BLD</span><span style="color:#005bac;">pharm</span></h1>
+		<p>BLDpharm has the quality products you need at the prices you want.</p>
+	</div>
+	<div id="tsparticles"></div>
+</div>
+<!-- tsParticles lib - https://github.com/matteobruni/tsparticles -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
+<!--  -->
+<!-- stats.js lib --><!-- 
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script> -->
+
+<script src="../js/tsparticles.js"></script>
+</body>
+</html>
