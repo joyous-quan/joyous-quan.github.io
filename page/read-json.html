@@ -4,41 +4,82 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="">
-	    <script src="../js/jquery.js"></script>
+	<link rel="stylesheet" href="../layui/css/layui.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../layui/layui.js"></script>
+	<style type="text/css" media="screen">
+		.dv{max-width:1200px;margin:40px auto;}
+	.dv .layui-form	{width:100%!important;}
+	</style>
 </head>
 <body>
-	<table>
+	<!-- <table>
 		<tbody class="tab_tbody">
 			
 		</tbody>
-	</table>
+	</table> -->
+<div class="dv">
+	
 
+<table class="layui-hide" id="test"></table>
+
+</div>
+<script>
+	/*var data = [{"InhibitorName":"STA-21","MechanismofAction":"SH2 domain inhibitor","CancerType":"Breast cancer"},{"InhibitorName":"Stattic","MechanismofAction":"SH2 domain inhibitor","CancerType":"Breast cancer"},{"InhibitorName":"BP-1-102","MechanismofAction":"SH2 domain inhibitor","CancerType":"Gastric cancer, Breast cancer"},{"InhibitorName":"Napabucasin","MechanismofAction":"STAT3 inhibitor","CancerType":"Prostate cancer, Epithelial ovarian cancer, Osteosarcoma"},{"InhibitorName":"Vitexicarpin","MechanismofAction":"STAT3 activation inhibitor","CancerType":"Prostate carcinoma, Gastric cancer, Colon cancer, Lung cancer"},{"InhibitorName":"Galiellalactone","MechanismofAction":"STAT3 DNA-binding inhibitor","CancerType":"Prostate cancer"},{"InhibitorName":"Artesunate","MechanismofAction":"STAT3 DNA-binding inhibitor","CancerType":"Colon cancer, B lymphoma, Bladder cancer"},{"InhibitorName":"STAT3-IN-1","MechanismofAction":"STAT3 acetylation inhibitor","CancerType":"Colon adenocarcinoma, Breast cancer"},{"InhibitorName":"Cryptotanshinone","MechanismofAction":"STAT3 phosphorylation inhibitor","CancerType":"Prostate cancer, Ovarian cancer, Gastric cancer, Liver cancer, Colorectal cancer"},{"InhibitorName":"Brevilin A","MehanismofAction":"JAK kinase inhibitor","CancerType":"Breast cancer, Lung cancer"},{"InhibitorName":"AG-490","MechanismofAction":"JAK kinase inhibitor","CcancerType":"Pancreatic cancer"},{"InhibitorName":"PD153035","MechanismofAction":"RTK inhibitor","CancerType":"Oral squamous carcinoma"},{"InhibitorName":"PP2","MechanismofAction":"Src inhibitor","CancerType":"Intestinal epithelial cell"},{"InhibitorName":"Dasatinib","MechanismofAction":"Src and PDGF inhibitor","CancerType":"Synovial sarcoma, Hepatocellular carcinoma, Glioma, Prostate cancer"},{"InhibitorName":"Sophoraflavanone G","MechanismofAction":"Src and JAK inhibitor","CancerType":"Breast cancer, Prostate cancer, Lymphoma, Human multiple myeloma, Large cell lung cancer, Colorectal carcinoma"}];
+
+	//遍历
+	var tbodyHtml = '',url = '';
+
+	$.each(data, function (idx, item) {
+		var pName = item.InhibitorName.toLowerCase();
+		var newName = pName.replace(/\s+/g,'-');
+		url = 'https://www.csnpharm.com/products/'+ newName + '.html';
+		if(idx%2 == 0){
+			tbodyHtml += '<tr><td style="padding:10px;background:#ffffff;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;"><a target="_blank" style="text-decoration:none;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;" href="'+url+'">'+item.InhibitorName+'</a></td><td style="padding:10px;background:#ffffff;color:#555555;font-family:Arial;font-size:14px;">'+item.MechanismofAction+'</td><td style="padding:10px;background:#ffffff;color:#555555;font-family:Arial;font-size:14px;">'+item.CancerType+'</td></tr>'
+		} else{
+			tbodyHtml += '<tr><td style="padding:10px;background:#fdf5f2;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;"><a target="_blank" style="text-decoration:none;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;" href="'+url+'">'+item.InhibitorName+'</a></td><td style="padding:10px;background:#fdf5f2;color:#555555;font-family:Arial;font-size:14px;">'+item.MechanismofAction+'</td><td style="padding:10px;background:#fdf5f2;color:#555555;font-family:Arial;font-size:14px;">'+item.CancerType+'</td></tr>'
+		}
+	});
+
+	$('.tab_tbody').html(tbodyHtml);//tbody html*/
+</script>
 
 <script>
-var data = [{"InhibitorName":"STA-21","MechanismofAction":"SH2 domain inhibitor","CancerType":"Breast cancer"},{"InhibitorName":"Stattic","MechanismofAction":"SH2 domain inhibitor","CancerType":"Breast cancer"},{"InhibitorName":"BP-1-102","MechanismofAction":"SH2 domain inhibitor","CancerType":"Gastric cancer, Breast cancer"},{"InhibitorName":"Napabucasin","MechanismofAction":"STAT3 inhibitor","CancerType":"Prostate cancer, Epithelial ovarian cancer, Osteosarcoma"},{"InhibitorName":"Vitexicarpin","MechanismofAction":"STAT3 activation inhibitor","CancerType":"Prostate carcinoma, Gastric cancer, Colon cancer, Lung cancer"},{"InhibitorName":"Galiellalactone","MechanismofAction":"STAT3 DNA-binding inhibitor","CancerType":"Prostate cancer"},{"InhibitorName":"Artesunate","MechanismofAction":"STAT3 DNA-binding inhibitor","CancerType":"Colon cancer, B lymphoma, Bladder cancer"},{"InhibitorName":"STAT3-IN-1","MechanismofAction":"STAT3 acetylation inhibitor","CancerType":"Colon adenocarcinoma, Breast cancer"},{"InhibitorName":"Cryptotanshinone","MechanismofAction":"STAT3 phosphorylation inhibitor","CancerType":"Prostate cancer, Ovarian cancer, Gastric cancer, Liver cancer, Colorectal cancer"},{"InhibitorName":"Brevilin A","MechanismofAction":"JAK kinase inhibitor","CancerType":"Breast cancer, Lung cancer"},{"InhibitorName":"AG-490","MechanismofAction":"JAK kinase inhibitor","CancerType":"Pancreatic cancer"},{"InhibitorName":"PD153035","MechanismofAction":"RTK inhibitor","CancerType":"Oral squamous carcinoma"},{"InhibitorName":"PP2","MechanismofAction":"Src inhibitor","CancerType":"Intestinal epithelial cell"},{"InhibitorName":"Dasatinib","MechanismofAction":"Src and PDGF inhibitor","CancerType":"Synovial sarcoma, Hepatocellular carcinoma, Glioma, Prostate cancer"},{"InhibitorName":"Sophoraflavanone G","MechanismofAction":"Src and JAK inhibitor","CancerType":"Breast cancer, Prostate cancer, Lymphoma, Human multiple myeloma, Large cell lung cancer, Colorectal carcinoma"}]
-
-//https://www.csnpharm.com/products
+	var data ={data: [{"InhibitorName":"STA-21","MechanismofAction":"SH2 domain inhibitor","CancerType":"Breast cancer"},{"InhibitorName":"Stattic","MechanismofAction":"SH2 domain inhibitor","CancerType":"Breast cancer"},{"InhibitorName":"BP-1-102","MechanismofAction":"SH2 domain inhibitor","CancerType":"Gastric cancer, Breast cancer"},{"InhibitorName":"Napabucasin","MechanismofAction":"STAT3 inhibitor","CancerType":"Prostate cancer, Epithelial ovarian cancer, Osteosarcoma"},{"InhibitorName":"Vitexicarpin","MechanismofAction":"STAT3 activation inhibitor","CancerType":"Prostate carcinoma, Gastric cancer, Colon cancer, Lung cancer"},{"InhibitorName":"Galiellalactone","MechanismofAction":"STAT3 DNA-binding inhibitor","CancerType":"Prostate cancer"},{"InhibitorName":"Artesunate","MechanismofAction":"STAT3 DNA-binding inhibitor","CancerType":"Colon cancer, B lymphoma, Bladder cancer"},{"InhibitorName":"STAT3-IN-1","MechanismofAction":"STAT3 acetylation inhibitor","CancerType":"Colon adenocarcinoma, Breast cancer"},{"InhibitorName":"Cryptotanshinone","MechanismofAction":"STAT3 phosphorylation inhibitor","CancerType":"Prostate cancer, Ovarian cancer, Gastric cancer, Liver cancer, Colorectal cancer"},{"InhibitorName":"Brevilin A","MechanismofAction":"JAK kinase inhibitor","CancerType":"Breast cancer, Lung cancer"},{"InhibitorName":"AG-490","MechanismofAction":"JAK kinase inhibitor","CancerType":"Pancreatic cancer"},{"InhibitorName":"PD153035","MechanismofAction":"RTK inhibitor","CancerType":"Oral squamous carcinoma"},{"InhibitorName":"PP2","MechanismofAction":"Src inhibitor","CancerType":"Intestinal epithelial cell"},{"InhibitorName":"Dasatinib","MechanismofAction":"Src and PDGF inhibitor","CancerType":"Synovial sarcoma, Hepatocellular carcinoma, Glioma, Prostate cancer"},{"InhibitorName":"Sophoraflavanone G","MechanismofAction":"Src and JAK inhibitor","CancerType":"Breast cancer, Prostate cancer, Lymphoma, Human multiple myeloma, Large cell lung cancer, Colorectal carcinoma"}]};
 
 
-//遍历
-var tbodyHtml = '',url = '';
-
-$.each(data, function (idx, item) {
-	var pName = item.InhibitorName.toLowerCase();
-	var newName = pName.replace(/\s+/g,'-');
-	url = 'https://www.csnpharm.com/products/'+ newName + '.html';
-	if(idx%2 == 0){
-		tbodyHtml += '<tr><td style="padding:10px;background:#ffffff;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;"><a target="_blank" style="text-decoration:none;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;" href="'+url+'">'+item.InhibitorName+'</a></td><td style="padding:10px;background:#ffffff;color:#555555;font-family:Arial;font-size:14px;">'+item.MechanismofAction+'</td><td style="padding:10px;background:#ffffff;color:#555555;font-family:Arial;font-size:14px;">'+item.CancerType+'</td></tr>'
-	} else{
-		tbodyHtml += '<tr><td style="padding:10px;background:#fdf5f2;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;"><a target="_blank" style="text-decoration:none;color:#ea6133;font-family:Arial;font-size:14px;font-weight:700;" href="'+url+'">'+item.InhibitorName+'</a></td><td style="padding:10px;background:#fdf5f2;color:#555555;font-family:Arial;font-size:14px;">'+item.MechanismofAction+'</td><td style="padding:10px;background:#fdf5f2;color:#555555;font-family:Arial;font-size:14px;">'+item.CancerType+'</td></tr>'
-	}
-	
+layui.use('table', function(){
+  var table = layui.table;
+  
+  table.render({
+    elem: '#test'
+    ,url: '../data/user.json'
+    //,width: '100%'
+    ,height: "full-100"
+    ,cols: [[
+      {type:'checkbox',fixed: 'left'}
+      ,{field:'id', width:80, title: 'ID', sort: true,fixed: 'left'}
+      ,{field:'username', width:80, title: '用户名'}
+      ,{field:'sex', width:80, title: '性别'}
+      ,{field:'city', width:80, title: '城市'}
+      ,{field:'sign', width:200, title: '签名'}
+      ,{field:'experience', width:80, title: '积分', sort: true}
+      ,{field:'score', width:80, title: '评分', sort: true}
+      ,{field:'classify', width:80, title: '职业'}
+      ,{field:'wealth', width:120, title: '财富', sort: true}
+      ,{field:'username', width:80, title: '用户名'}
+      ,{field:'sex', width:80, title: '性别'}
+      ,{field:'city', width:80, title: '城市'}
+      ,{field:'sign', width:200,  title: '签名'}
+      ,{field:'experience', width:80, title: '积分', sort: true}
+      ,{field:'score', width:80, title: '评分', sort: true}
+      ,{field:'classify', width:80, title: '职业'}
+      ,{field:'wealth', width:120, title: '财富', sort: true}
+    ]]
+    ,page: true
+  });
 });
-
-$('.tab_tbody').html(tbodyHtml);//tbody html
 </script>
+
 </body>
 </html>
-
-<tbody class="tab_tbody"></tbody>
