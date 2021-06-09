@@ -103,7 +103,7 @@ textarea::-moz-placeholder{color:#d3e6f6;}
 .search_result_list a em{color:#0853dc;}
 .search_result_list li:hover{background:#a7d2f7;}
 
-.language_box{position:relative;}
+.language_box{position:relative;z-index:10;}
 .language_icon{padding-left:35px;background-position:-8px -46px;line-height:40px;cursor:pointer;}
 .language_select,.language_select::after{position:absolute;background:#d3e6f6;}
 .language_select{top:40px;left:-10px;z-index:10;display:none;color:#1a284f;}
@@ -138,7 +138,7 @@ textarea::-moz-placeholder{color:#d3e6f6;}
 .cart_pdel:hover{color:#e84e4d;}
 .cart_pname{word-break:break-all;}
 .cart_pname:hover{color:#4787e8;}
-.cart_pnum {display:inline-block;height:24px;user-select:none;background:#a7d2f7;white-space:nowrap;}
+.cart_pnum {display:inline-block;min-width:72px;height:24px;user-select:none;background:#a7d2f7;white-space:nowrap;}
 .cart_pnum em{float:left;padding:0 6px;width:24px;font-size:18px;text-align:center;cursor:pointer;}
 .cart_ipt_mun{float:left;width:24px;height:24px;border:1px solid #a7d2f7;text-align:center;}
 .cart_ipt_mun[type="number"]::-webkit-outer-spin-button,.cart_ipt_mun[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none;}
@@ -214,8 +214,10 @@ textarea::-moz-placeholder{color:#d3e6f6;}
 	.F16{font-size:14px;line-height:24px;}
 	/**************common.css end**********************/
 	/**************header.css start**********************/
+	.icon_head{background:url(/static/img/header/css_sprites_2.png) no-repeat;background-size:46px 135px;}
 	.head_top{padding-top:20px;}
-	.hide_cart_content{width:82%;}
+	.hide_cart_content{width:84%;}
+	.cart_pimg{width:75px;height:75px;}
 	.foot_box{font-size:12px;text-align:center;}
 	.foot_box .float_r{width:100%;}
 	.backTop{height:104px;width:50px;line-height:16px;}
@@ -224,4 +226,5 @@ textarea::-moz-placeholder{color:#d3e6f6;}
 }
 @media only screen and (max-width:320px){
 	.hide_cart_content,.menu_ul{right:-320px;}
+	.cart_pimg{width:70px;height:70px;}
 }

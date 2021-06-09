@@ -25,10 +25,9 @@
 .owl-next{float:right;}
 
 
-
 .i_left,.i_right{z-index:0;height:250px;color:rgba(255,255,255,.1);text-align:center;line-height:250px;}
-.i_left{margin-right:77%;width:250px;font-size:250px;}
-.i_right{margin-left:75%;width:200px;font-size:300px;}
+.contact_box .i_left{margin-right:77%;width:250px;font-size:250px;}
+.contact_box .i_right{margin-left:75%;width:200px;font-size:300px;}
 .contact_box{overflow:hidden;position:relative;}
 .contact_title .title_line{background:#fff;}
 .contact_title .title_line::after{border:3px solid #fff;background:#bb4999;}
