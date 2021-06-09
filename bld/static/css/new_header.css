@@ -103,14 +103,13 @@ textarea::-moz-placeholder{color:#d3e6f6;}
 .search_result_list a em{color:#0853dc;}
 .search_result_list li:hover{background:#a7d2f7;}
 
-.language_box{position:relative;z-index:10;}
-.language_icon{padding-left:35px;background-position:-8px -46px;line-height:40px;cursor:pointer;}
+.language_icon{position:relative;float:right;padding-left:35px;background-position:-8px -46px;line-height:40px;cursor:pointer;}
 .language_select,.language_select::after{position:absolute;background:#d3e6f6;}
 .language_select{top:40px;left:-10px;z-index:10;display:none;color:#1a284f;}
 .language_select::after{top:-5px;left:42%;z-index:-1;width:10px;height:10px;content:'';-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg);}
 .language_select a{display:block;padding:0 30px;color:#1a284f;line-height:30px;}
 .language_select a:hover{background:#a7d2f7;}
-.language_box:hover .language_select{display:block;}
+.language_icon:hover .language_select{display:block;}
 
 .head_menu{float:left;}
 .menu_ul{display:inline-block;}
