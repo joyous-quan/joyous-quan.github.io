@@ -10,9 +10,10 @@ img,table{max-height:100%;max-width:100%;border:0;}
 table{width:100%;border-collapse:collapse;}
 i,em{font-style:normal;}
 sub,sup{display:inline-block;-webkit-transform:scale(.9);-moz-transform:scale(.9);transform:scale(.9);}
-button,input,select,textarea{margin:0;padding:0;outline:none;color:#333;font-size:14px;font-family:sans-serif,Arial;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+button,input,select,textarea{margin:0;padding:0;outline:none;color:#333;font-size:14px;font-family:sans-serif,Arial;}
 button{cursor:pointer;border:none;}
 textarea{resize:none;}
+input{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 input::-ms-clear,input::-ms-reveal{display:none;}
 input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset;}
 input::-webkit-input-placeholder{color:#d3e6f6;}
