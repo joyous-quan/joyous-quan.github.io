@@ -214,7 +214,7 @@ textarea::-moz-placeholder{color:#d3e6f6;}
 	.F16{font-size:14px;line-height:24px;}
 	/**************common.css end**********************/
 	/**************header.css start**********************/
-	.icon_head{background:url(./img/header/css_sprites_2.png) no-repeat;background-size:46px 135px;}
+	.icon_head{background:url(../img/header/css_sprites_2.png) no-repeat;background-size:46px 135px;}
 	.search_min{background-position:-8px -2px;}
 	.language_icon{background-position:-8px -46px;}
 	.cart_icon{background-position:-8px -90px;}
