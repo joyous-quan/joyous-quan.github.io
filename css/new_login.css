@@ -13,7 +13,7 @@ sub,sup{display:inline-block;-webkit-transform:scale(.9);-moz-transform:scale(.9
 button,input,select,textarea{margin:0;padding:0;outline:none;color:#333;font-size:16px;font-family:sans-serif,Arial;}
 button{cursor:pointer;border:none;}
 textarea{resize:none;}
-input[type="text"],input[type="password"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+input[type="text"],input[type="password"],select{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 input::-ms-clear,input::-ms-reveal{display:none;}
 input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset;}
 input::-webkit-input-placeholder{color:#888;}
@@ -96,7 +96,9 @@ a.btn{display:inline-block;text-align:center;}
 .options_con label{display:inline-block;margin-right:20px;margin-top:0;}
 .options_con input[type="radio"]{margin-right:5px;}
 .see_options{position:relative;cursor:pointer;}
-.see_options:after{position:absolute;right:5px;top:10px;height:6px;width:6px;border-bottom:1px solid #063585;border-left:1px solid #063585;content:"";-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+.see_options:after,.select_icon:after{position:absolute;border-bottom:1px solid #063585;border-left:1px solid #063585;content:"";-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+.see_options:after{right:5px;top:10px;height:6px;width:6px;}
+.select_icon:after{right:15px;top:18px;height:8px;width:8px;}
 .see_options.on:after{top:15px;-webkit-transform:rotate(135deg);transform:rotate(135deg);}
 
 .password_form input{margin-top:2%;}
