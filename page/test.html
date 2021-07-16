@@ -10,121 +10,109 @@
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="http://www.bldpharm.com:8000/static/js/adm/adm_load_css.js?t=202103290002"></script><script language="javascript" src="http://www.bldpharm.com:8000/static/h-ui/lib/jquery/1.9.1/jquery.min.js?t=202103290002"></script><link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui/css/H-ui.min.css?t=202103290002"><link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui.admin/css/H-ui.admin.css?t=202103290002"><link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/lib/Hui-iconfont/1.0.8/iconfont.css?t=202103290002"><link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui.admin/skin/default/skin.css" id="skin"><link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui.admin/css/style.css?t=202103290002">
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui/css/H-ui.min.css?t=202103290002">
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui.admin/css/H-ui.admin.css?t=202103290002">
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/lib/Hui-iconfont/1.0.8/iconfont.css?t=202103290002">
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui.admin/skin/default/skin.css" id="skin">
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/h-ui/h-ui.admin/css/style.css?t=202103290002">
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/css/adm/adm_common.css?t=202105270001"><!-- 
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/css/adm/adm_address.css?t=202105270001"> -->
+
+
 <style>
-tbody td a{white-space: nowrap;}
-.fixed_thead_on{position:fixed;top:0;left:0;right:0;padding:0 20px;}
+.floatL{float:left}
+.floatR{float:right}
+.dv_input2{min-height:30px;line-height:30px;margin-top:10px;color:#555;}
+.dv_input2 span{display:inline-block;vertical-align:middle;font-size:12px}
+.dv_input2 span:before{content:'* ';color:#eb6132}
+.dv_input2 input[type=text],.dv_input2 select,.dv_input2 textarea{display:inline-block;vertical-align:middle;width:100%;height:30px;outline:0;border:1px solid #cecece;text-indent:10px;box-sizing: border-box;}
+.dv_input2 textarea{padding-left:10px;text-indent:0;margin: 0;}
+.dv_input2 input:focus,.dv_input2 textarea:focus{border:1px solid #fdd000!important}
+.dv_input2 .a_btn{display:inline-block;vertical-align:middle;width:295px;height:45px;margin:0;font-size:18px;padding:0}
+.dv_input2 .beforeNone:before{display:none}
+a{text-decoration:none!important}
+input.dv_text{text-indent:15px}
+.dv_input2 input:focus,.dv_input2 textarea:focus{border:1px solid #fdd000!important}
+.a_btn_f3633e{width: 170px;height: 35px;line-height: 35px;display: inline-block;margin-top: 10px;background:#1772e6;color:#fffeff!important;text-align:center;cursor:pointer}
+.noChk span:before{content:''}
+.dv_add_bx .sel_province,.dv_add_bx .ipt_province{display: none!important;}
+.dv_add_bx .show{display: inline-block!important;}
+.dv_add_bx div textarea{height:62px;}
+.dv_copy{float:left;margin-top:15px;}
+.dv_copy label{cursor:pointer;user-select:none;}
+.dv_input2 input[type=checkbox]{width:15px;height:15px;cursor:pointer;}
+.p_ord_add_tips{display: inline-block;width: 770px;vertical-align: top;}
+.p_ord_add_tips span,.p_ord_add_tips label{display: inline-block;vertical-align:top;}
+.p_ord_add_tips label{margin-right: 5px;}
+.p_ord_add_tips span{width: 650px;color: #f2633c;}
+.dv_r_btn{float:right;}
+
+
+hr.line{margin-top: 5px;width: 100%;background: #dedede; border: none;height: 1px;}
+
+
+
+.dv_add_bx .dv_input2{position:relative;-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;width:96%;
+}
+.paddingL80 .dv_input2{padding-left:80px;}
+.paddingL130 .dv_input2{padding-left:130px;}
+.dv_input2 span{position:absolute;left:0;top:0;}
+.paddingL130 span{width:130px;}	
+.paddingL80 span{width:80px;}	
+.floatR .dv_input2{padding-top:30px;}
+
 </style>
 <title>在线订单列表</title>
 <link rel="stylesheet" href="http://www.bldpharm.com:8000/static/h-ui/lib/layer/2.4/theme/default/layer.css?v=3.1.0" id="layuicss-layer"><link href="http://www.bldpharm.com:8000/static/js/adm/My97DatePicker/4.8/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+
+
+
 </head>
 <body>
 	
-<div style="overflow-x:auto;padding:0 20px;">
-	<div style="min-width:1600px;">
-	<div class="fixed_thead">	
-		<table class="layui-hide table table-border table-bordered table-hover table-bg table-sort mw_1800">
-			<colgroup>
-				<col width="160px">
-				<col width="60px">
-				<col width="120px">
-				<col width="60px">
-				<col width="60px">
-				<col width="200px">
-				<col width="120px">
-				<col width="80px">
-				<col width="60px">
-				<col width="60px">
-				<col width="60px">
-				<col width="60px">
-				<col width="80px">
-				<col width="60px">
-				<col width="60px">
-				<col width="60px">
-				<col width="60px">
-				<col width="60px">
-				<col width="80px">
-				<col width="80px">
-			</colgroup>
-			<thead>
-			<tr class="text-c">
-			<th>订单号</th>
-			<th>分公司</th>
-			<th>订购人</th>
-			<th>用户ID</th>
-			<th>关联销售</th>
-			<th>邮箱</th>
-			<th>收货人</th>
-			<th>金额</th>
-			<th>邮费</th>
-			<th>订单状态</th>
-			<th>是否锁定</th>
-			<th>付款状态</th>
-			<th>NS订单号</th>
-			<th>NS订单状态</th>
-			<th>交易号</th>
-			<th>邮件发送次数</th>
-			<th>是否回执</th>
-			<th>来源</th>
-			<th>下单日期</th>
-			<th>操作</th>
-			</tr>
-			</thead>
-		</table>
-	</div>
-	<div>
-		<table class="layui-hide table table-border table-bordered table-hover table-bg table-sort mw_1800">
-		<colgroup>
-			<col width="160px">
-			<col width="60px">
-			<col width="120px">
-			<col width="60px">
-			<col width="60px">
-			<col width="200px">
-			<col width="120px">
-			<col width="80px">
-			<col width="60px">
-			<col width="60px">
-			<col width="60px">
-			<col width="60px">
-			<col width="80px">
-			<col width="60px">
-			<col width="60px">
-			<col width="60px">
-			<col width="60px">
-			<col width="60px">
-			<col width="80px">
-			<col width="80px">
-		</colgroup>
-		<tbody id="tbody"><tr class="text-c"><td>BLD1005220210602172115</td><td>BLD中国</td><td>Stephan Korsgaard Pedersen (STKD) 
-		</td><td>10052</td><td></td><td>purchasing@molport.com</td><td>SIA MolPort</td><td>USD 14.7</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 17:21:16</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD1005220210602172115&amp;status=0','BLD1005220210602172115订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD1005220210602172115')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD1005220210602172115')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD1005220210602172115')">取消订单</a></td></tr><tr class="text-c"><td>BLD876520210602170600</td><td>BLD中国</td><td>Kenshiro Shigematsu 
-		</td><td>8765</td><td></td><td>US000049@addbysystem.com</td><td>Kenshiro Shigematsu 
-		</td><td>USD 2341</td><td>423</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 17:06:00</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD876520210602170600&amp;status=0','BLD876520210602170600订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD876520210602170600')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD876520210602170600')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD876520210602170600')">取消订单</a></td></tr><tr class="text-c"><td>BLD898020210602161947</td><td>BLD印度</td><td>Sweta Rangpariya</td><td>8980</td><td>邹小锋</td><td>IN000118@addbysystem.com</td><td>Sweta Rangpariya</td><td>INR 32687.18</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 16:19:48</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD898020210602161947&amp;status=0','BLD898020210602161947订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD898020210602161947')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD898020210602161947')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD898020210602161947')">取消订单</a></td></tr><tr class="text-c"><td>BLD898020210602160843</td><td>BLD印度</td><td>Sweta Rangpariya</td><td>8980</td><td>邹小锋</td><td>IN000118@addbysystem.com</td><td>Sweta Rangpariya</td><td>INR 61033.14</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 16:08:44</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD898020210602160843&amp;status=0','BLD898020210602160843订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD898020210602160843')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD898020210602160843')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD898020210602160843')">取消订单</a></td></tr><tr class="text-c"><td>BLD898020210602160750</td><td>BLD印度</td><td>Sweta Rangpariya</td><td>8980</td><td>邹小锋</td><td>IN000118@addbysystem.com</td><td>Sweta Rangpariya</td><td>INR 24869.68</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 16:07:50</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD898020210602160750&amp;status=0','BLD898020210602160750订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD898020210602160750')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD898020210602160750')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD898020210602160750')">取消订单</a></td></tr><tr class="text-c"><td>BLD870520210602155533</td><td>BLD印度</td><td>Swetha</td><td>8705</td><td>邹小锋</td><td>IN000034@addbysystem.com</td><td>Swetha 
-		</td><td>INR 20861</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 15:55:33</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD870520210602155533&amp;status=0','BLD870520210602155533订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD870520210602155533')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD870520210602155533')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD870520210602155533')">取消订单</a></td></tr><tr class="text-c"><td>BLD845120210601171825</td><td>BLD中国</td><td>Serhii Uavniuk 
-		</td><td>8451</td><td></td><td>WB000423@addbysystem.com</td><td>Enamine ltd</td><td>USD 5724</td><td>54</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-01 17:18:26</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD845120210601171825&amp;status=0','BLD845120210601171825订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD845120210601171825')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD845120210601171825')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD845120210601171825')">取消订单</a></td></tr><tr class="text-c"><td>BLD845120210601164844</td><td>BLD中国</td><td>Serhii Uavniuk 
-		</td><td>8451</td><td></td><td>WB000423@addbysystem.com</td><td>Enamine ltd</td><td>USD 13833</td><td>54</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-01 16:48:45</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD845120210601164844&amp;status=0','BLD845120210601164844订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD845120210601164844')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD845120210601164844')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD845120210601164844')">取消订单</a></td></tr><tr class="text-c"><td>BLD804420210521140427</td><td>BLD德国</td><td>Svenja Röwer</td><td>8044</td><td>邹小锋</td><td>SVENJA.ROEWER@UNI-MUENSTER.DE</td><td>Uli Gausmann / Andreas Oestermann</td><td>EUR 2023</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-05-21 14:04:27</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD804420210521140427&amp;status=0','BLD804420210521140427订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD804420210521140427')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD804420210521140427')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD804420210521140427')">取消订单</a></td></tr><tr class="text-c"><td>BLD804320210520173718</td><td>BLD中国</td><td>test223</td><td>8043</td><td>yc</td><td>599284@qq.com</td><td>name</td><td>USD 530</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-05-20 17:37:18</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD804320210520173718&amp;status=0','BLD804320210520173718订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD804320210520173718')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD804320210520173718')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD804320210520173718')">取消订单</a></td></tr><tr class="text-c"><td>BLD1005220210602172115</td><td>BLD中国</td><td>Stephan Korsgaard Pedersen (STKD) 
-		</td><td>10052</td><td></td><td>purchasing@molport.com</td><td>SIA MolPort</td><td>USD 14.7</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 17:21:16</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD1005220210602172115&amp;status=0','BLD1005220210602172115订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD1005220210602172115')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD1005220210602172115')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD1005220210602172115')">取消订单</a></td></tr><tr class="text-c"><td>BLD876520210602170600</td><td>BLD中国</td><td>Kenshiro Shigematsu 
-		</td><td>8765</td><td></td><td>US000049@addbysystem.com</td><td>Kenshiro Shigematsu 
-		</td><td>USD 2341</td><td>423</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 17:06:00</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD876520210602170600&amp;status=0','BLD876520210602170600订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD876520210602170600')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD876520210602170600')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD876520210602170600')">取消订单</a></td></tr><tr class="text-c"><td>BLD898020210602161947</td><td>BLD印度</td><td>Sweta Rangpariya</td><td>8980</td><td>邹小锋</td><td>IN000118@addbysystem.com</td><td>Sweta Rangpariya</td><td>INR 32687.18</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 16:19:48</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD898020210602161947&amp;status=0','BLD898020210602161947订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD898020210602161947')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD898020210602161947')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD898020210602161947')">取消订单</a></td></tr><tr class="text-c"><td>BLD898020210602160843</td><td>BLD印度</td><td>Sweta Rangpariya</td><td>8980</td><td>邹小锋</td><td>IN000118@addbysystem.com</td><td>Sweta Rangpariya</td><td>INR 61033.14</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 16:08:44</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD898020210602160843&amp;status=0','BLD898020210602160843订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD898020210602160843')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD898020210602160843')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD898020210602160843')">取消订单</a></td></tr><tr class="text-c"><td>BLD898020210602160750</td><td>BLD印度</td><td>Sweta Rangpariya</td><td>8980</td><td>邹小锋</td><td>IN000118@addbysystem.com</td><td>Sweta Rangpariya</td><td>INR 24869.68</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 16:07:50</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD898020210602160750&amp;status=0','BLD898020210602160750订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD898020210602160750')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD898020210602160750')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD898020210602160750')">取消订单</a></td></tr><tr class="text-c"><td>BLD870520210602155533</td><td>BLD印度</td><td>Swetha</td><td>8705</td><td>邹小锋</td><td>IN000034@addbysystem.com</td><td>Swetha 
-		</td><td>INR 20861</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-02 15:55:33</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD870520210602155533&amp;status=0','BLD870520210602155533订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD870520210602155533')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD870520210602155533')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD870520210602155533')">取消订单</a></td></tr><tr class="text-c"><td>BLD845120210601171825</td><td>BLD中国</td><td>Serhii Uavniuk 
-		</td><td>8451</td><td></td><td>WB000423@addbysystem.com</td><td>Enamine ltd</td><td>USD 5724</td><td>54</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-01 17:18:26</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD845120210601171825&amp;status=0','BLD845120210601171825订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD845120210601171825')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD845120210601171825')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD845120210601171825')">取消订单</a></td></tr><tr class="text-c"><td>BLD845120210601164844</td><td>BLD中国</td><td>Serhii Uavniuk 
-		</td><td>8451</td><td></td><td>WB000423@addbysystem.com</td><td>Enamine ltd</td><td>USD 13833</td><td>54</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-06-01 16:48:45</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD845120210601164844&amp;status=0','BLD845120210601164844订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD845120210601164844')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD845120210601164844')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD845120210601164844')">取消订单</a></td></tr><tr class="text-c"><td>BLD804420210521140427</td><td>BLD德国</td><td>Svenja Röwer</td><td>8044</td><td>邹小锋</td><td>SVENJA.ROEWER@UNI-MUENSTER.DE</td><td>Uli Gausmann / Andreas Oestermann</td><td>EUR 2023</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-05-21 14:04:27</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD804420210521140427&amp;status=0','BLD804420210521140427订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD804420210521140427')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD804420210521140427')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD804420210521140427')">取消订单</a></td></tr><tr class="text-c"><td>BLD804320210520173718</td><td>BLD中国</td><td>test223</td><td>8043</td><td>yc</td><td>599284@qq.com</td><td>name</td><td>USD 530</td><td>0</td><td style="color: red">订单待审核</td><td><span style="color:green;">未锁定</span></td><td><span style="color:red;">预付-未支付</span></td><td></td><td></td><td></td><td>0</td><td><span style="color:red;">否</span></td><td>表格导入</td><td>2021-05-20 17:37:18</td><td><a style="text-decoration:none" href="javascript:;" onclick="creatIframe('/adm/iframe/orderManagement/orderDetail.html?id=BLD804320210520173718&amp;status=0','BLD804320210520173718订单详情')" title="查看编辑"><i class="Hui-iconfont"></i>查看编辑</a><br> <a style="text-decoration:none;margin-left:5px;" onclick="confirmOrder('BLD804320210520173718')" title="确认支付">确认支付</a> <br> <a style="margin-left:5px;" onclick="_reSendEmail('BLD804320210520173718')" title="重发邮件">重发邮件</a><br><a href="javascript:;" onclick="deleOrder('BLD804320210520173718')">取消订单</a></td></tr></tbody>
-		</table>
-	</div>
-	</div>
-</div>
+<div class="page-container" style="padding-left:200px">
+	<div class="layui-layer-shade" id="layui-layer-shade4" times="4" style="z-index: 19891017; background-color: rgb(0, 0, 0); opacity: 0.4;"></div>
+<div class="layui-layer layui-layer-page" id="layui-layer4" type="page" times="4" showtime="0" contype="string" style="z-index: 19891018; width: 1000px; height: 420px; top: 0px; left: 0px;right:0;bottom:0;margin:auto;"><div class="layui-layer-title" style="cursor: move;">添加收货地址</div>
 
+<div id="" class="layui-layer-content"><div style="padding:0 20px;" class="dv_add_bx"><p style="margin:0;margin-top: 5px;font-size: 10px;color: #f2633c;">带*号的不能为空</p>
+	<div class="floatL paddingL130" style="width:42%">
+		<div class="dv_input2" style="margin:0;"><span>Recipient name :</span><input id="add_name" value="" type="text"></div>
+		<div class="dv_input2"><span>Institute/Company :</span><input type="text" value="" id="add_company"></div>
+		<div class="dv_input2"><span>Phone :</span><input id="add_phone" value="" type="text"></div>
+		<div class="dv_input2"><span>Country :</span><select class="sel_country" id="add_country"><option value="">Please Select</option><option value="Afghanistan" rid="1">Afghanistan</option><option value="Aland Islands" rid="2">Aland Islands</option><option value="Albania" rid="3">Albania</option><option value="Algeria" rid="4">Algeria</option><option value="American Samoa" rid="5">American Samoa</option></select></div>
+		<div class="dv_input2 noChk"><span>Province / State :</span><select class="sel_province" id="add_state"></select><input class="dv_text ipt_province show" type="text" value="" id="add_state2"></div>
+		<div class="dv_input2 noChk"><span>City :</span><input type="text" id="add_city" value=""></div>
+		<div class="dv_input2 noChk"><span>Zip Code :</span><input type="text" value="" id="add_zipcode"></div>
+		
+	</div>
+	<div class="floatL paddingL80" style="width:40%">
+		<div class="dv_input2" style="margin:0;"><span>Email :</span><textarea id="add_email" placeholder="多个地址请用‘,’号隔开"></textarea></div>
+		<div class="dv_input2"><span>Address1 :</span><textarea id="add_BAddress1"></textarea></div>
+		<div class="dv_input2 noChk"><span>Address2 :</span><textarea id="add_BAddress2"></textarea></div>
+		<div class="dv_input2 noChk"><span>Address3 :</span><textarea id="add_BAddress3"></textarea></div>
+	</div>
+	<div class="floatR" style="width:18%">
+		<div class="dv_input2 noChk" style="margin:0;"><span>NS地址ID-中国 :</span><input type="text" value="" id="add_nsaddid_cn"></div>
+		<div class="dv_input2 noChk"><span>NS地址ID-印度 :</span><input type="text" value="" id="add_nsaddid_ind"></div>
+		<div class="dv_input2 noChk"><span>NS地址ID-德国 :</span><input type="text" value="" id="add_nsaddid_de"></div>
+		<div class="dv_input2 noChk"><span>NS地址ID-美国 :</span><input type="text" value="" id="add_nsaddid_us"></div>
+	</div>
+
+	<div class="clear"></div>
+	<hr class="floatL line">
+	<div class="dv_r_btn">
+		<div class="dv_input2 dv_copy " style="width:200px;margin-top:15px;"><label><input type="checkbox" class="iscopy"> 复制地址 </label> <label><input style="margin-left:20px;" type="checkbox" class="isdefauly"> 默认地址</label></div>
+		<a href="javascript:void(0)" class="a_btn_f3633e a_btn" onclick="_addAddressToHtml(0)">添加</a>
+	</div>
+</div></div><span class="layui-layer-setwin"><a class="layui-layer-min" href="javascript:;"><cite></cite></a><a class="layui-layer-ico layui-layer-max" href="javascript:;"></a><a class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;"></a></span><span class="layui-layer-resize"></span></div>
+
+
+</div>
 <script>
-$(document).ready(function(){
-	$(window).scroll(function (){
-		var st = $(this).scrollTop();
-		if(st >= 50){
-			$('.fixed_thead').addClass('fixed_thead_on');
-		}else{
-			$('.fixed_thead').removeClass('fixed_thead_on');
-		}
-	})
-})
+
 </script>
 </body>
 </html>

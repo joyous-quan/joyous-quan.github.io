@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="force-rendering" content="webkit">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="Create Account BLDpharm">
+	<meta name="description" content="Create Account BLDpharm">
+	<title>Create Account | BLDpharm</title>
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../css/new_login.css?t=20210715001">
+	<script src="../js/jquery.js?t=20210715001"></script>
+	<script src="../js/jquery.validate.min.js"></script>
+</head>
+<body class="bg_lightblue">
+	<div class="member_box">
+		<div class="member_left bg_purple_blue">
+			<img class="position_center paddingTRBL2" src="../img/logo_line.png" alt="BLDpharm logo">
+		</div>
+		<div class="member_right signup_right">
+			<div class="maxW500 paddingTRBL4 ">
+				<div class="align_c">
+					<a href="/index.html" class="min_logo"><img src="../img/logo_min.png" alt="BLDpharm logo"><sup class="position_tm">TM</sup></a>
+					<p class="F18 paddingTB2">Get better data with conversational forms, surveys,quizzes & more.</p>	
+				</div>
+				<div class="member_form signup_form" id="signupForm">
+					<label><input type="text" placeholder="Name" id="ipt_name"></label>
+					<label><input type="text" placeholder="Email" id="ipt_email"></label>
+					<label><input type="password" placeholder="Password" id="ipt_password"></label>
+					<label><input type="text" placeholder="Company" id="ipt_company"></label>
+					<label><select placeholder="" id="selt_organization">
+						<option value="">Organization</option>
+						<option value="Enterprises">Enterprises</option>
+						<option value="Enterprises">Universities</option>
+						<option value="Enterprises">Academic Institutions</option>
+					</select></label>
+					<label class="lab_check" id="check_service"><input type="checkbox" checked="" name="terms_service" class="ipt_check">I agree to  BLDpharm <a href="" class="color_blue hover_udline">Terms of Service</a></label>
+					<label class="lab_check" id="check_policy"><input type="checkbox" checked="" name="privacy_policy" class="ipt_check">I accept BLDpharm use of my data for the service and everything else described in the <a href="https://www.bldpharm.com/privacy-policy.html" target="_blank" rel="noopener norefferrer" class="color_blue hover_udline">Privacy Policy</a></label>
+					<div class="options_box">
+						<p class="see_options color_blue">See options</p>
+						<div class="options_con lineH32">
+							<p>Get useful tips, inspiration, and offers via e-communication.</p>
+							<p><label><input class="radio_yes" checked="" type="radio" name="marketing">Yes</label><label><input class="radio_no" type="radio" name="marketing">No</label></p>
+							<p id="marketing">Tailor BLDpharm to my needs based on my activity. <a href="https://www.bldpharm.com/privacy-policy.html" class="color_blue hover_udline" target="_blank" rel="noopener norefferrer">See Privacy Policy</a></p>
+							<p><label><input class="radio_yes" checked="" type="radio" name="tailorToNeedsAgreed">Yes</label><label><input class="radio_no" type="radio" name="tailorToNeedsAgreed">No</label></p>
+							<p>Enrich my data with select third parties for more relevant content. <a href="https://www.bldpharm.com/privacy-policy.html" target="_blank" rel="noopener norefferrer" class="color_blue hover_udline">See Privacy Policy</a> </p>
+							<p><label><input class="radio_yes" checked="" type="radio" name="horizontal">Yes</label><label><input class="radio_no" type="radio" name="horizontal">No</label></p>
+							<p class="color_gray">You can update your preferences in your Profile at any time</p>
+						</div>
+					</div>
+					<label><p class="error_txt"></p></label>
+					<button class="btn btn_red" onclick="_registerForm()">Create Account</button>
+					<a href="/login.html" class="btn btn_blue btn_login">Login</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<script>
+
+//获取字符串字节长
+String.prototype.lenB = function(){
+	var cArr = this.match(/[^\x00-\xff]/ig);
+	return this.length + (cArr == null ? 0 : cArr.length);
+}
+String.prototype.Trim = function(){
+	return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+String.prototype.IsEmpty = function(){
+	return this.Trim()=="";
+}
+String.prototype.IsNumeric = function(){
+	return !isNaN(parseFloat(this));
+}
+String.prototype.replaceAll = function (AFindText,ARepText){
+	raRegExp = new RegExp(AFindText,"g");
+	return this.replace(raRegExp,ARepText);
+}
+//判断字符串是否为中文
+String.prototype.IsChinese = function() {
+	var re = /^[\u4E00-\u9FA5]*$/;
+	return re.test(this);
+}
+
+function isempty(v){ 
+	switch (typeof v)
+	{ 
+		case undefined : return true;
+		case 'undefined' : return true;
+		case 'string' : if(v.Trim().length == 0||v.Trim()=='undefined') return true; break;
+		case 'boolean' : if(!v) return true; break;
+		case 'number' : if(0 === v) return true; break;
+		case 'object' :
+			if(null === v) return true;
+			if(undefined !== v.length && v.length==0) return true;
+			for(var k in v){return false;} return true;
+			break;
+	} 
+	return false; 
+}
+
+function _domKey13(funcname){
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            funcname();
+        }
+    })
+}
+
+function _chkEmail(val){
+    return /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/.test(val)?true:false;
+}
+
+function _chkPhone(val){
+    if(isempty(val)){
+		return false;
+	}
+    val=val.replace(/[^0-9]/ig,"");
+	if(val.length>=7&&val.length<=20){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+function _chkPassword(val){
+    return /^(?!\d+$)(?![a-zA-Z]+$)[\dA-Za-z]{6,18}$/.test(val)?true:false;
+}
+
+
+
+
+$(document).ready(function(e) {
+	$('.see_options').click(function(){
+		$(this).toggleClass('on');
+		$('.options_con').slideToggle();
+	})
+	$('input[name=privacy_policy]').click(function () {
+		var boolean1 = $(this).is(':checked');
+		$('.radio_yes').each(function () {
+			$(this).prop('checked', boolean1);
+		})
+	});
+});
+
+function _registerForm(){
+	var isCheck
+	$('.ipt_check').each(function () {
+		return isCheck = $(this).is(':checked');
+	})
+	$(".error_txt").hide();
+	if( isCheck){
+		var name = $("#ipt_name").val();
+		var email = $("#ipt_email").val();
+		var password = $("#ipt_password").val();
+		var company = $("#ipt_company").val();
+		var organization = $("#selt_organization").val();
+		
+		if(name !=''&&email!=''&&password!=''&&company !=''&&organization!=''){
+			var params = {"name": name, "email": email, "password": password,"company":company,"organization":organization};
+			
+		}else if(isempty(name)){
+			$('.error_txt').show().html('Please enter name');
+			$('#ipt_name')[0].focus()
+		}else if(!_chkEmail(email)){
+			$('.error_txt').show().html('Please enter a valid email address');
+			$('#ipt_email')[0].focus()
+		}else if(isempty(password)){
+			$('.error_txt').show().html('Please enter password');
+			$('#ipt_password')[0].focus()
+		}else if(!_chkPassword(password)){
+			$('.error_txt').show().html('The password must be at least 6 digits and consist of numbers and letters');
+			$('#ipt_password')[0].focus()
+		}else if(isempty(company)){
+			$('.error_txt').show().html('Please enter company');
+			$('#ipt_company')[0].focus()
+		}else if(isempty(organization)&& organization!="undefined"){
+			$('.error_txt').show().html('Please select organization');
+			$('#selt_organization')[0].focus()
+		}
+	}else{
+		$(".error_txt").show().html('Please agree to the agreement')
+	}
+}
+
+</script>
+
+</body>
+</html>
