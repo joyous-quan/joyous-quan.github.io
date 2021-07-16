@@ -83,7 +83,7 @@ a.btn{display:inline-block;text-align:center;}
 .member_position_r{position:relative;min-height:100vh;}
 .member_position_r .position_center{max-height:620px;}
 .member_form label{display:block;margin-top:4%;}
-.member_form input[type="text"],.member_form input[type="password"],.member_form select{width:100%;height:52px;border:1px solid #fff;padding:10px;}
+.member_form input[type="text"],.member_form input[type="password"],.member_form select{width:100%;height:52px;border:1px solid #fff;padding:10px;border-radius:0;background:#fff;}
 .member_form input:focus,.member_form select:focus{border-color:#67b9ff;}
 .member_form .btn{margin-top:2%;width:100%;height:52px;font-size:18px;line-height:52px;}
 .lab_check{position:relative;padding-left:20px;cursor:pointer;}
