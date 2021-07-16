@@ -75,7 +75,7 @@ a.btn{display:inline-block;text-align:center;}
 .align_r{text-align:right;}
 .align_c{text-align:center;}
 .position_center{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;}
-
+.position_r{position:relative;}
 .min_logo{position:relative;display:inline-block;}
 .position_tm{position:absolute;top:-4px;}
 .member_box{position:relative;padding-left:38%;min-height:100vh;}
