@@ -1,5 +1,5 @@
 /*index css */
-.index_bg{position:relative;overflow:hidden;z-index:100000;}
+.index_bg{position:relative;overflow:hidden;}
 .index_bg,.position_img,#particles-js,#particles-js canvas{min-height:600px;}
 .index_bg .head_box{position:absolute;top:0;left:0;z-index:1000;width:100%;min-height:100px;background:transparent;}
 .index_bg .head_bottom_box{background:transparent;}
