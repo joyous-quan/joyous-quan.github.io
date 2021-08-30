@@ -170,7 +170,7 @@
 	.menu_div{padding-left:20px;}
 	.head_menu_show{position:relative;z-index:10000;}
 	.head_menu_show .menu_ul{right:0;}
-	.menu_ul{position:fixed;top:0;right:-105%;z-index:991010;padding:20px 10px;width:82%;height:100%;overflow-y:auto;background:#d3e6f6;}
+	.menu_ul{position:fixed;top:0;bottom:0;right:-105%;z-index:991010;padding:20px 10px;width:82%;height:100%;overflow-y:auto;background:#d3e6f6;}
 	.menu_ul li{padding:0 15px;float:none;margin:0;}
 	.menu_ul,.menu_ul li a{color:#1a284f;}
 	.menu_ul li>a{line-height:50px;}
