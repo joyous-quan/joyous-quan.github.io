@@ -16,6 +16,8 @@
 .txt_animation{margin:0 auto;max-width:960px;-webkit-animation:lessen 3s 1 normal;-moz-animation:lessen 3s 1 normal;animation:lessen 3s 1 normal;}
 .txt_p,.position_txt_home p{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
 .btn.on{background:rgba(255,255,255,.8);color:#e84e4d;}
+
+.F0.position_r{z-index:0}
 /*services*/
 .position_txt_home{position:absolute;top:20%;z-index:10;max-width:44%;}
 .position_txt_home .btn{margin-top:2%;width:240px;max-width:100%;border:1px solid #e84e4d;line-height:58px;}
