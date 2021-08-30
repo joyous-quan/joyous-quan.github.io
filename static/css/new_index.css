@@ -1,5 +1,5 @@
 /*index css */
-.index_bg{position:relative;overflow:hidden;z-index:1000;}
+.index_bg{position:relative;overflow:hidden;z-index:100000;}
 .index_bg,.position_img,#particles-js,#particles-js canvas{min-height:600px;}
 .index_bg .head_box{position:absolute;top:0;left:0;z-index:1000;width:100%;min-height:100px;background:transparent;}
 .index_bg .head_bottom_box{background:transparent;}
@@ -17,9 +17,10 @@
 .txt_p,.position_txt_home p{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
 .btn.on{background:rgba(255,255,255,.8);color:#e84e4d;}
 
-.F0.position_r{z-index:0}
+
 /*services*/
-.position_txt_home{position:absolute;top:20%;z-index:10;max-width:44%;}
+.F0.position_r{z-index:0}
+.position_txt_home{position:absolute;top:20%;z-index:2;max-width:44%;}
 .position_txt_home .btn{margin-top:2%;width:240px;max-width:100%;border:1px solid #e84e4d;line-height:58px;}
 .position_txt_home .btn_red:hover{background:transparent;color:#e84e4d;}
 .position_txt_home p{margin:3% 0;line-height:42px;max-height:126px;}
