@@ -1,0 +1,383 @@
+<!-- 
+<link rel="stylesheet" type="text/css" href="http://www.bldpharm.com:8000/static/css/header.css?v=20210820001"> -->
+<script src="/static/js/jquery.min.js?t=20210721001"></script>
+<style type="text/css" media="screen">
+.layout,.width1300{max-width:1800px;margin:0 auto;}
+.mask,.menu_bg{position:fixed;top:0;left:0;display:none;width:100%;height:100%;background:#000;opacity:.5;filter:alpha(opacity=50);}
+.clear{zoom:1;}
+.clear:after{clear:both;display:block;visibility:hidden;height:0;content:" ";}
+.floatL{float:left;}
+.floatR{float:right;}
+.theme_color{color:#147fde;}
+.theme_color:hover{text-decoration:underline;}
+.head{background:#1a284f;position:relative;}
+.head,.head a{color:#fff;}
+.logo_min,.phone_cart{display:none;}
+.head_left{float:left;width:20%;}
+.head_certified{line-height:56px;white-space:nowrap;font-size:14px;}
+.head_right{float:right;width:75%;}
+.head_top{padding:10px 0;}
+.head_top,.head_bottom{display:inline-block;width:100%;}
+.search_option{float:left;}
+.search_option a{display:inline-block;height:40px;line-height:40px;}
+.search_option a.on_search,.search_option a:hover{border-bottom:2px solid #e84e4d;}
+.search_option .list_search{margin:0 30px;}
+.currency,.language,.location{position:relative;float:right;height:40px;line-height:40px;}
+.currency_val{display:inline-block;min-width:30px;cursor:pointer;}
+.language{position:relative;padding-right:40px;background:url(/static/img/index/down.png) no-repeat;background-position:30px 17px;cursor:pointer;}
+.language i{display:inline-block;padding-right:15px;font-style:normal;}
+.language_select{position:absolute;top:35px;left:27%;z-index:10;margin-left:-55px;width:110px;border:none;background:#e84e4d;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .5s ease-out;transition:all .5s ease-out;pointer-events:none;-webkit-clip-path:inset(0 0 100px 0);clip-path:inset(0 0 100px 0);}
+.language_select a{display:block;height:30px;text-align:center;line-height:30px;}
+.language:hover{background:url(/static/img/index/up.png) no-repeat;background-position:30px 17px;}
+.language:hover .language_select{opacity:1;filter:alpha(opacity=100);pointer-events:all;-webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0);}
+.language_select a:hover{background:#fff;color:#e84e4d;}
+.location_line{position:absolute;right:0;top:0;padding:0 15px;font-size:14px;}
+.location{padding-left:35px;padding-right:40px;background:url(/static/img/header/css_sprites.png) no-repeat;background-position:-8px -44px;}
+.location_selt{position:fixed;top:16%;right:0;left:0;z-index:1000;display:none;margin:auto;width:1000px;height:480px;background:#fff;color:#333;}
+.location_selt_title{padding:15px 25px 5px;border-bottom:1px solid #e5e5e5;background:#f8f8f8;font-weight:700;font-size:22px;}
+.location_selt ul{float:left;padding:10px;width:24%;line-height:26px;}
+.location_selt .ul_header_Americas{margin-left:15px;}
+.location_selt ul ol{overflow-y:auto;max-height:370px;}
+.location_selt li a{display:inline-block;margin-right:5px;color:#147fde;font-size:12px;}
+.search_box,.keyword_search_ipt,.search_btn,.head_icons a{height:45px;}
+.search_box{position:relative;float:left;width:70%;background:#fff;}
+.keyword_search_ipt{padding:5px 100px 5px 10px;width:100%;border:none;}
+.search_hide{position:relative;z-index:12;display:none;height:200px;}
+.search_hide,.search_result_List{-webkit-box-shadow:0 5px 10px 0 rgb(0 0 0 / 30%);-moz-box-shadow:0 5px 10px 0 rgba(0,0,0,.3);box-shadow:0 5px 10px 0 rgb(0 0 0 / 30%);}
+.list_search_text{padding:8px 20px 8px 10px;width:100%;height:200px;border:none;line-height:24px;resize:none;}
+.list_search_bg{position:absolute;top:0;right:0;width:20px;height:200px;background:#fff;}
+.search_hide_bg{position:fixed;top:0;right:0;bottom:0;left:0;z-index:10;display:none;background:none;}
+.search_btn_box{position:absolute;top:0;bottom:0;right:0;z-index:15;width:90px;}
+.uploadImg{position:absolute;top:0;bottom:0;display:inline-block;cursor:pointer;}
+.uploadImg img{padding-top:12px;}
+.uploadImg input{position:absolute;top:0;bottom:0;left:0;z-index:-1;width:28px;opacity:0;filter:alpha(opacity=0);}
+.search_btn{float:right;width:50px;background:url(/static/img/head/icon_search.png) no-repeat center;}
+.search_result_List{position:absolute;top:45px;z-index:15;display:none;width:100%;border-top:1px solid #eee;background:#fff;}
+.search_result_List dd{padding:0 10px;line-height:32px;}
+.search_result_List dd a{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.search_result_List dd a i{color:#147fde;font-style:normal;}
+.search_result_List dd:hover{background:#d3e6f6;}
+.search_result_record dd{position:relative;}
+.search_result_record dd a{max-width:78%;}
+.search_result_record dd label{position:absolute;top:0;right:0;}
+.search_result_record label span{display:inline-block;padding:0 8px;cursor:pointer;}
+.search_result_record label span:hover{color:#147fde;}
+.head_icons{position:absolute;right:0;bottom:60px;min-width:16%;max-width:260px;vertical-align:top;text-align:left;white-space:nowrap;}
+.head_icons a,.phone_cart a{display:inline-block;line-height:45px;}
+.head_cart{position:relative;float:right;margin-left:15px;padding-left:36px;width:68px;background:url(/static/img/header/css_sprites.png) no-repeat;background-position:-8px 0;}
+.cart_count{position:absolute;top:-2px;left:16px;display:inline-block;width:22px;height:22px;border-radius:22px;background:#d3e6f6;color:#1a284f;text-align:center;font-style:normal;line-height:22px;}
+.head_icons .head_account,.head_icons .head_login,.head_icons .head_logout{display:none;}
+.head_menu{position:relative;}
+.menu_ul{position:relative;display:inline-block;}
+.menu_ul li{float:left;margin-right:30px;}
+.menu_ul li>a{position:relative;display:block;padding:0 5px;font-weight:700;line-height:60px;}
+.menu_div a{display:block;padding:10px;white-space:nowrap;}
+.menu_hover{position:absolute;z-index:0;display:inline-block;height:60px;border-bottom:4px solid #e6002d;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .4s cubic-bezier(.2,1,.3,1);-moz-transition:all .4s cubic-bezier(.2,1,.3,1);transition:all .4s cubic-bezier(.2,1,.3,1);}
+.squeeze{-webkit-transition:all .6s;-moz-transition:all .6s;transition:all .6s;}
+
+/*breadcrumb*/
+.com_breadcrumb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:50px;}
+.com_breadcrumb span{padding:0 5px;color:#999;font-style:normal;}
+.com_breadcrumb a:hover{color:#147fde;}
+.underline{width:100%;height:1px;background:#e5e5e5;}
+
+@media only screen and (min-width:1025px){
+    .menu{max-width:600px;width:56%;}
+    .menu_div{position:absolute;top:60px;min-width:220px;background:#e84e4d;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .5s ease-out;transition:all .5s ease-out;pointer-events:none;-webkit-clip-path:inset(0 0 160px 0);clip-path:inset(0 0 160px 0);}
+    .menu_div a{padding:15px 20px;color:#fff;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+    .menu_ul li:hover .menu_div{z-index:100;opacity:1;filter:alpha(opacity=1);pointer-events:all;-webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0);}
+    .menu_div a:hover{background:#fff;color:#e84e4d;}
+}
+
+@media only screen and (max-width:1600px){
+    body,button,input,select,textarea{font-size:14px;}
+    .head_certified,.location_line{font-size:12px;}
+    .head_certified{line-height:52px;}
+    .head_top{padding:6px 0 8px;}
+    .head_right{width:72%;}
+
+}
+
+@media only screen and (max-width:1200px){
+    .head_right{width:68%;}
+    .search_box{width:80%;}
+    .search_option .list_search{margin:0 20px;}
+    .head_icons{bottom:8px;}
+}
+
+
+@media only screen and (max-width:1025px){
+    .head_certified,.head_icons,.head_icons .head_cart{display:none;}
+    .phone_none,.uploadImg{display:none;}
+    .logo_min{display:inline-block;position:relative;}
+    .head_left sup{position:absolute;top:-4px;}
+    .phone_cart{display:block;}
+    .head_left{padding-top:15px;width:auto;}
+    .search_option .list_search{margin:0 15px;}
+    .location{padding-right:25px;}
+    .language{padding-right:35px;}
+    .location_line{padding:0 10px;}
+    .language i{padding-right:10px;}
+    .language{background-position:26px 19px;}
+    .head_right{width:88%;padding-bottom:5px;}
+    .head_top{padding-bottom:4px;}
+
+    .menu_bg{z-index:9;}
+    .menu_div{padding-left:20px;}
+    .head_menu_show{position:relative;}
+    .head_menu_show .head_icons{position:static;display:block;padding-left:20px;height:45px;font-weight:700;}
+    .head_menu_show .menu{right:0;}
+    .head_menu_show .cart_count{background:#fff;}
+    .menu{position:fixed;top:0;right:-105%;z-index:1010;overflow-y:auto;padding:20px 10px;width:82%;height:100%;background:#d3e6f6;}
+    .menu_ul li{float:none;margin:0;padding:0 15px;}
+    .head_icons,.head_icons a,.menu_ul,.menu_ul li a{color:#1a284f;}
+    .menu_ul li>a{line-height:50px;}
+    .head_menu_phone{position:absolute;bottom:8px;display:inline-block;padding:5px 0;width:36px;height:40px;background:0 0;line-height:8px;cursor:pointer;user-select:none;}
+    .head_menu_phone i{display:inline-block;width:100%;height:2px;border-radius:2px;background:#d3e6f6;}
+
+}
+
+@media only screen and (max-width:768px){
+    .search_option{display:none}
+    .head_right{width:85%;}
+}
+
+@media only screen and (max-width:568px){
+    .menu_div{padding-left:15px;}
+    .head_left{width:18%;padding-top:10px;}
+    .head_right{width:82%;}
+    .search_box{width:72%;}
+    .search_btn_box{width:45px;}
+    .keyword_search_ipt{padding:5px 50px 5px 5px;}
+    .head_cart{margin-left:0;width:64px;}
+    .head_top{font-size:12px;}
+
+}
+</style>
+
+
+
+<div class="head paddingLR4">
+    <div class="layout clearfloat head_clearfloat">
+
+        <div class="head_left">
+            <i class="head_certified">An ISO 9001, 14001, 45001 certified company</i>
+
+            <a href="/" class="logo_min"><img src="/static/img/logo_min.png?t=20210802" width="36px" alt="BLDpharm LOGO"><sup>TM</sup></a>
+            <a href="/" class="logo phone_none">
+
+                <img src="/static/img/BLD_logo.png?t=202108160005" alt="">
+               <!--  <svg width="231" height="49" class="logo_show">
+                    <image xlink:href="/static/img/BLD_logo.svg?t=202108030002" src="/static/img/BLD_logo.png?t=202108160005" alt="BLDpharm LOGO" width="231" height="49"></image>
+                </svg> -->
+            </a>
+        </div>
+        <div class="head_right">
+            <div class="head_top">
+                <div class="search_option">
+                    <a class="keyword_search on_search" href="javascript:;">Keyword Search</a>
+                    <a class="list_search" href="javascript:;">List Search</a>
+                    <a class="structure_search" href="/structuresearch">Structure Search</a>
+                </div>
+                <div class="currency">
+                    Currency : <span class="currency_val">GBP</span>
+                </div>
+                <div class="language">
+                    <i class="language_text">EN</i>
+                    <label class="language_select">
+                        <a href="/">EN</a>
+                        <a href="https://www.bldpharm.de" target="_blank">DE</a>
+                        <a href="http://fr.bldpharm.com" target="_blank">FR</a>
+                    </label>
+                    <span class="location_line">|</span>
+                </div>
+                <div class="location">
+                    <div class="location_val">
+                        <span class="location_val_span">UK</span>
+                        <div class="location_mask mask"></div>
+                        <div class="location_selt">
+                            <div class="location_selt_title">Location</div>
+                            <ul class="ul_header_Americas">
+                                <li><strong>Americas</strong></li>
+                                <li><ol><li><span key="United States">United States</span>: <a href="javascript:;">USD</a></li><li><span key="Canada">Canada</span>: <a href="javascript:;">USD</a></li><li><span key="Mexico">Mexico</span>: <a href="javascript:;">USD</a></li><li><span key="Brazil">Brazil</span>: <a href="javascript:;">USD</a></li><li><span key="Others_Americas">All Others</span>: <a href="javascript:;">USD</a></li></ol></li>
+                            </ul>
+                            <ul style="width:27%" class="ul_header_Europe">
+                                <li><strong>Europe</strong></li>
+                                <li><ol><li><span key="UK">UK</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a><a href="javascript:;">GBP</a></li><li><span key="Austria">Austria</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Belgium">Belgium</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Bulgaria">Bulgaria</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Cyprus">Cyprus</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Croatia">Croatia</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Czech Republic">Czech Republic</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Denmark">Denmark</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Estonia">Estonia</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Finland">Finland</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="France">France</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Germany">Germany</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Greece">Greece</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Hungary">Hungary</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Ireland">Ireland</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Italy">Italy</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Latvia">Latvia</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Lithuania">Lithuania</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Luxembourg">Luxembourg</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Malta">Malta</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="The Netherlands">The Netherlands</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Poland">Poland</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Portugal">Portugal</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Romania">Romania</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Slovakia">Slovakia</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Slovenia">Slovenia</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Spain">Spain</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Sweden">Sweden</span>: <a href="javascript:;">EUR</a><a href="javascript:;">USD</a></li><li><span key="Others_Europe">All Others</span>: <a href="javascript:;">USD</a></li></ol></li>
+                            </ul>
+                            <ul class="ul_header_Asia_Pacific">
+                                <li><strong>Asia Pacific</strong></li>
+                                <li><ol><li><span key="India">India</span>: <a href="javascript:;">INR</a><a href="javascript:;">USD</a></li><li><span key="Japan">Japan</span>: <a href="javascript:;">USD</a></li><li><span key="China (Mainland)">China (Mainland)</span>: <a href="javascript:;">USD</a></li><li><span key="China (Hong Kong)">China (Hong Kong)</span>: <a href="javascript:;">USD</a></li><li><span key="Korea (South)">Korea (South)</span>: <a href="javascript:;">USD</a></li><li><span key="Australia">Australia</span>: <a href="javascript:;">USD</a></li><li><span key="Singapore">Singapore</span>: <a href="javascript:;">USD</a></li><li><span key="China (Taiwan)">China (Taiwan)</span>: <a href="javascript:;">USD</a></li><li><span key="Others_Asia_Pacific">All Others</span>: <a href="javascript:;">USD</a></li></ol></li>
+                            </ul>
+                            <ul class="ul_header_AME">
+                                <li><strong>Africa &amp; Middle East</strong></li>
+                                <li><ol><li><span key="Egypt">Egypt</span>: <a href="javascript:;">USD</a></li><li><span key="Israel">Israel</span>: <a href="javascript:;">USD</a></li><li><span key="South Africa">South Africa</span>: <a href="javascript:;">USD</a></li><li><span key="Others_AME">All Others</span>: <a href="javascript:;">USD</a></li></ol></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="location_line">|</span>
+                </div>
+            </div>
+            <div class="head_bottom">
+                <div class="search_box">
+                    <div class="search_enter">
+                        <input class="keyword_search_ipt" id="pro_keyword" onpropertychange="searchPro(this.value)" onkeyup="searchPro(this.value)" type="text" placeholder="CAS; Name; Catalog No." autocomplete="off">
+                        <div class="search_hide">
+                            <textarea class="list_search_text" spellcheck="false" placeholder="One line by one keyword"></textarea>
+                            <span class="list_search_bg"></span>
+                        </div>
+                        <div class="search_hide_bg"></div>
+                    </div>
+                    <div class="search_btn_box">
+                        <label class="uploadImg">
+                            <img src="/static/img/head/uploadImg.png">
+                            <input type="file" accept="image/*" onchange="_upadSearchImg(this)">
+                        </label>
+                        <a href="javascript:;" class="search_btn" id="a_header_search" onclick="_openSearchHtml(0)"></a>
+                    </div>
+                    <div class="search_result_List">
+                        <dl class="search_result_tips" id="searchResult_List">
+                        </dl>
+                        <dl class="search_result_record" style="display:none">
+                        </dl>
+                    </div>
+                </div>
+                <div class="float_r phone_cart">
+                    <a href="/user/myCart.html" class="head_cart">Cart <i class="cart_count">2</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="head_menu">
+        <div class="menu_bg"></div>
+        <div class="layout head_menu_container">
+            <span class="head_menu_phone" id="menu_show"><i></i><i></i><i></i></span>
+            <div class="menu popups_transition">
+                <div class="head_icons">
+                    <a href="/mem/myOrders" class="head_account" style="display: inline-block;">My Account</a>
+                    <a href="/user/login.html" class="head_login" style="display: none;">Login</a> / 
+                    <a href="/user/register.html" class="head_login" style="display: none;">Sign up</a>
+                    <a href="/mem/logout" class="head_logout" style="display: inline-block;">Sign Out</a>
+                    <a href="/user/myCart.html" class="head_cart">Cart <i class="cart_count">2</i></a>
+                </div>
+
+                <ul class="menu_ul">
+                    <li class="menu_hover" style="opacity: 0; left: 0px; width: 49px;"></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us.html">About Us</a>
+                        <div class="menu_div">
+                            <a href="/r-d-center.html">Research &amp; Development</a>
+                            <a href="/manufacture.html">Manufacture</a>
+                            <a href="/about/quality-control.html">Quality Control</a>
+                        </div>
+                    </li>
+                    <li><a>Services</a>
+                        <div class="menu_div">
+                            <a href="/scale-up-commercial-manufacture.html">Scale Up Commercial Manufacture</a>
+                            <a href="/custom-synthesis.html">Custom Synthesis</a>
+                            <a href="/product-center.html">Pre-Packaged Inventories</a>
+                        </div>
+                    </li>
+                    <li><a href="/search-home.html">Products</a></li>
+                    <li><a>Contact</a>
+                        <div class="menu_div">
+                            <a href="/contacts-us.html">Contact Us</a>
+                            <a href="/distributors.html">Distributors</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+$(function(){
+    //menu show
+    $('.head_menu_phone').click(function(){
+        $('.head_menu_container').addClass('head_menu_show');
+        $('.menu_bg').show();
+    })
+    $('.menu_bg').click(function(){
+        $('.head_menu_container').removeClass('head_menu_show');
+        $(this).hide();
+    })
+
+
+
+    $('.list_search').click(function(){
+        $("#searchResult_List").html('').hide();
+        $("#pro_keyword,.head .list_search_text").val('');
+        $(this).addClass('on_search').siblings().removeClass('on_search');
+        $('.keyword_search_ipt,.search_result_List').hide();
+        $('.search_hide,.search_hide_bg').show();
+        $("#a_header_search").attr("onclick","_openSearchHtml(1)");
+    })
+    $(".search_hide_bg").click(function(){
+        $(".search_hide,.search_hide_bg").hide();
+        $('.keyword_search_ipt,.search_result_List').show();
+        $(".search_option .keyword_search").addClass("on_search").siblings().removeClass("on_search");
+    })
+    // 2021-08-09 国家弹窗关闭按钮
+    // $(".bld_location_del,.location_mask").click(function(){
+    //     $('.location_mask,.location_selt').hide();
+    // });
+
+    //菜单效果
+    var windowWidth = $(window).width();
+    if(windowWidth > 1025){
+        //二级菜单效果
+        $(".menu_ul>li").on("mouseover", function() {
+            var position = $(this).position();
+            var width = $(this).width();
+            $(".menu_hover").css({
+                    opacity: 1,
+                    left: +position.left,
+                    width: width
+                }).addClass("squeeze"); 
+        });
+        $(".menu_ul>li").on("mouseout", function() {
+            $(".menu_hover")
+                .css({ opacity: 0 })
+                .removeClass("squeeze");
+        });
+    }
+})
+
+//更新footer底部地址信息
+function _uptFooterAddress(){
+    if(isempty(Country)&&!isempty(countryJson)){return false;}
+    var country=Country.split('|')[0];//国家
+    var unit=Country.split('|')[1];//单位
+    var tel='+86-21-61629022',  // 默认 中国
+        email='sales@bldpharm.com',
+        us_ddress='BLD Pharmatech Ltd.<br>No.1 Wangdong Middle Road, Building 5, <br>Songjiang District, Shanghai 201601, <br>China',
+        googleAddressUrl='https://goo.gl/maps/TYZ1hhPRNSyEqnBK9';
+    if(country=="India"){  //印度
+        tel="+91-40-23792222";
+        email="sales-in@bldpharm.com";
+        us_ddress="BLD Pharmatech (India) Pvt Ltd<br>Plot No 87, Apparel Export Park, Gundlapochampally<br>District Malkajgiri Hyderabad - 501401.Telangana</br>India";
+        googleAddressUrl='https://goo.gl/maps/rHjmDcLBDvJFzXDu9';
+    }else{
+        var region=countryJson[country]['region'];//区域
+        if(region=="Americas"){  //美洲
+            tel="+1-330-333-6550";
+            email="sales-usa@bldpharm.com";
+            us_ddress="BLD Pharmatech Co., Limited<br>10999 Reed Hartman Highway, Suite 304B<br> Cincinnati, OH 45242<br> USA";
+            googleAddressUrl='https://goo.gl/maps/GPbaCgKbHwp2Af2r5';
+        }else if(region=="Europe"){ // 欧洲
+            tel="+49-6303-208-2088";
+            email="sales-eu@bldpharm.com";
+            us_ddress="BLD Pharmatech GmbH<br>Trippstadter Str. 110<br>D-67663 Kaiserslautern<br> Germany";
+            googleAddressUrl='https://goo.gl/maps/s24FxfvegWDz8zr36';
+        }
+    }
+    $(".a_com_tel").text(tel).attr("href", "tel:"+tel);
+    $(".foot_contact .foot_tel").text(tel).attr("href", "tel:"+tel);
+    $(".foot_contact .foot_email,.head .head_email").attr("href","mailto:"+email).text(email);
+    $(".a_com_email").text(email).attr("href","mailto:"+email);//公共email
+    $(".foot_contact .foot_addr").html(us_ddress).attr("href",googleAddressUrl);
+}
+
+
+</script>

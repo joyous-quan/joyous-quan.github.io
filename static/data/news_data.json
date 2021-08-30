@@ -1,0 +1,14 @@
+[
+	{
+		"id" : "news_01",
+		"news" : "New BLDpharm.com has launched",
+		"date" : "31 August 2021",
+		"img_url" : "none"
+	},
+	{
+		"id" : "news_02",
+		"news" : "Incoming news",
+		"date" : "31 August 2021",
+		"img_url" : "none"
+	}
+]

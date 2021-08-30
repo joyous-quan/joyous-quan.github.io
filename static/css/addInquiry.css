@@ -1,0 +1,28 @@
+#Container .inquiry_errorBox{margin:5px 0;text-align:left;}
+.dv_inquiry_shade{position:fixed;top:0;left:0;z-index:100;display:none;width:100%;height:100%;cursor:pointer;}
+.dv_conf_free{position:relative;margin-top:5px;padding-left:20px;color:#f00;text-align:left;word-wrap:break-word;word-break:normal;}
+.dv_conf_free input{position:absolute;top:3px;left:0;width:auto;height:auto;}
+.dv_bulk_inquiry .a_inquiay{border-radius:0;box-shadow:none;font-weight:700;margin:10px 0;width:100%;height:46px;border:none;background:#063585;color:#fff;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+.dv_bulk_inquiry .a_inquiay:hover{background:rgba(6,53,138,.8);}
+.closeBox{position:absolute;top:-2px;right:-10px;width:40px;background:none;border:none;color:#333;font-size:30px;}
+.inquiry_errorBox,.ddhide dd{display:none;}
+.ddhide .dd_nodata,.ddhide dd.show{display:block;}
+.layui-layer-content{max-height:90%;max-height:calc(100% - 45px);}
+.dv_bulk_inquiry{padding:10px 25px 0;}
+.label_ipt{position:relative;display:block;padding-left:210px;border-bottom:1px #eee solid;}
+.label_ipt:hover{border-bottom:1px solid #147fde;}
+.label_span{position:absolute;left:0;display:inline-block;width:205px;color:#999;text-align:right;white-space:nowrap;line-height:45px;}
+.dv_bulk_inquiry h2 i,.label_span i{color:red;font-style:normal;}
+.label_ipt input{margin:0;height:45px;width:100%;border:none;text-indent:5px;outline:none;}
+.label_ipt .label_p{margin:0;height:45px;border:none;text-indent:5px;line-height:45px;}
+.label_ipt .label_p:after{position:absolute;top:19px;right:5px;z-index:-1;width:7px;height:7px;border-right:1px solid #333;border-bottom:1px solid #333;content:'';-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg);}
+.dv_inquiry_country{position:relative;height:45px;color:#333;}
+.dv_inquiry_country .dv_inquiry_selcnt{position:absolute;top:44px;left:0;z-index:110;display:none;width:100%;border:1px solid #cecece;background:#fff;}
+.dv_inquiry_selcnt h3{position:relative;height:30px;}
+.dv_inquiry_selcnt h3 img{position:absolute;top:4px;right:7px;width:20px;height:20px;}
+.dv_inquiry_selcnt h3 input{width:100%;height:30px;background:#f6f6f6;text-indent:10px;}
+.dv_inquiry_selcnt h3 input:focus{border-bottom:1px solid #147fde;}
+.dv_inquiry_country dl{overflow-y:scroll;margin-top:-30px;padding-top:35px;max-height:300px;}
+.dv_inquiry_country dl dd{padding-left:10px;text-align:left;line-height:24px;cursor:pointer;}
+.dv_inquiry_country dl dd.on,.dv_inquiry_country dl dd:hover{background:#147fde;color:#fff;}
+.dv_inquiry_country p{position:absolute;z-index:10;width:100%;text-align:left;cursor:pointer;}
