@@ -1,0 +1,58 @@
+﻿<div class="swiper-container F0">
+		<div class="swiper-wrapper color_white">
+			<div class="swiper-slide item"  data-swiper-autoplay="5000">
+				<img class="banner_phone" src="/static/img/banner/phone/iso9001.jpg" alt="ISO9001 & ISO14001 & ISO45001 DUNS: 560440352">
+		    	<img class="banner_pc" src="/static/img/banner/iso9001.jpg" alt="ISO9001 & ISO14001 & ISO45001 DUNS: 560440352">
+		    	<div class="item_txt_box item_iso9001"><p class="item_txt F60"><a href="/static/pdf/bld_iso_9001.pdf" target="_blank" class="a_ISO9001">ISO9001</a> & <a href="/static/pdf/ISO14001-BLD.pdf" target="_blank" class="a_ISO14001">ISO14001</a> & <a href="/static/pdf/ISO45001-BLD.pdf" target="_blank" class="a_ISO45001">ISO45001</a> <br>DUNS: 560440352 </p></div>
+			</div>
+			<div class="swiper-slide item"  data-swiper-autoplay="5000">
+				<img class="banner_phone" src="/static/img/banner/phone/patents.jpg" alt="Patents">
+		    	<img class="banner_pc" src="/static/img/banner/patents.jpg" alt="Patents">
+		    	<div class="item_txt_box item_patents"><p class="item_txt F90">Patents</p></div>
+			</div>
+			<div class="swiper-slide item"  data-swiper-autoplay="5000">
+		    	<img class="banner_phone" src="/static/img/banner/phone/from_mg_to_production.jpg" alt="From lab to pilot">
+		    	<img class="banner_pc" src="/static/img/banner/from_mg_to_production.jpg" alt="From lab to pilot">
+		    	<div class="item_txt_box item_fmg"><p class="item_txt F90">From Lab <br>to Pilot</p></div>
+		    </div>
+		    <div class="swiper-slide item"  data-swiper-autoplay="5000">
+		    	<img class="banner_phone" src="/static/img/banner/phone/advanced_qc_instrument.jpg" alt="Advanced QC Instrument">
+		    	<img class="banner_pc" src="/static/img/banner/advanced_qc_instrument.jpg" alt="Advanced QC Instrument">
+		    	<div class="item_txt_box item_qc"><p class="item_txt F90">Advanced <br>QC Instrument</p></div>
+		    </div>
+		    <div class="swiper-slide item"  data-swiper-autoplay="5000">
+		    	<img class="banner_phone" src="/static/img/banner/phone/worldwide_distributors.jpg" alt="Worldwide Distributors">
+		    	<img class="banner_pc" src="/static/img/banner/worldwide_distributors.jpg" alt="Worldwide Distributors">
+		    	<div class="item_txt_box item_wd"><p class="item_txt F90">Worldwide <br>Distributors</p></div>
+		    </div>
+		    <div class="swiper-slide item"  data-swiper-autoplay="5000">
+		    	<img class="banner_phone" src="/static/img/banner/phone/safety_delivery.jpg" alt="Safety Delivery">
+		    	<img class="banner_pc" src="/static/img/banner/safety_delivery.jpg" alt="Safety Delivery">
+		    	<div class="item_txt_box item_sd"><p class="item_txt F90">Safety <br>Delivery</p></div>
+		    </div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination swiper-pagination-white"></div>
+		<!-- Add Arrows -->
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+	</div>
+
+
+var swiper = new Swiper('.swiper-container', {
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      effect: 'fade',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
