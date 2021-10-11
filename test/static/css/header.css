@@ -29,15 +29,10 @@ ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap
 .dv_footer a:hover{color:#0864ca;}
 
 
-
-
-
 @media only screen and (min-width:1026px){
-
-.hover_li:hover>a{border-color:#f8c807;color:#0864ca;}
-.hover_li:hover .submenu,.submenu_left li.on .submenu_item,.submenu_left li:hover .submenu_item{display:block;}
-.customized li:hover,.submenu_left li.on,ol.submenu a:hover{background:#eee;}
-
+	.hover_li:hover>a{border-color:#f8c807;color:#0864ca;}
+	.hover_li:hover .submenu,.submenu_left li.on .submenu_item,.submenu_left li:hover .submenu_item{display:block;}
+	.customized li:hover,.submenu_left li.on,ol.submenu a:hover{background:#eee;}
 }
 @media only screen and (max-width:1025px){
 	.submenu,.submenu_item{display:block;border:none;}
@@ -62,9 +57,10 @@ ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap
 	.menu_box{padding:16px 0 8px;}
 	.menu_left{width:40%;}
 	.submenu_left li,ol.submenu a{line-height:42px;}
+	.footer_top li:last-child{max-height:120px;}
+	.footer_top li:last-child p{margin-top:-30px;}
 }
 @media only screen and (max-width:480px){
-
 	.menu_left{width:50%;}
-	.submenu_left li,ol.submenu a{line-height:38px;}
+	.submenu_left li,ol.submenu a,.footer_top li{line-height:38px;}
 }

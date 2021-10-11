@@ -59,6 +59,7 @@
 @media only screen and (max-width:1025px){
 	.ul_support li{min-width:220px;}
 	.ul_support a{padding-left:15px;}
+	.dv_product_item a{height:56px;line-height:54px;}
 }
 @media only screen and (max-width:768px){
 	.ul_customized li{padding-left:40px;}
@@ -67,10 +68,17 @@
 
 }
 @media only screen and (max-width:480px){
+	.dv_product_item a{margin:5px 10px 0;height:52px;line-height:50px;}
 	.ul_customized li a{font-size:14px;}
 	.ul_literature{padding:4%;}
 	.ul_literature li{width:150px;margin:10px 0;}
 	.ul_customized li{width:98%;}
 	.ul_support li{min-width:240px;}
 	.ul_support a{padding-left:10px;}
+	.width46,.width52{width:100%;}
+	.width52{margin-top:4%;}
+}
+
+@media only screen and (max-width:320px){
+	.ul_literature{padding:4% 0;}
 }
