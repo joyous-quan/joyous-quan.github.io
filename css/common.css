@@ -14,7 +14,7 @@ input::-webkit-input-placeholder{color:#999;}
 input:-ms-input-placeholder{color:#999;}
 input:-moz-placeholder{color:#999;}
 input::-moz-placeholder{color:#999;}
-input[type="checkbox"],input[type="radio"]{margin:5px;padding:0;}
+input[type="checkbox"],input[type="radio"]{margin:0 5px;padding:0;}
 input[type="text"],textarea{margin:0;padding:5px;}
 input[type="number"]{}
 input[type="file"]{}
@@ -38,6 +38,8 @@ sub{display:inline-block;transform:scale(.9);}
 .btn{display:inline-block;padding:0 15px;min-width:120px;min-height:36px;line-height:36px;font-weight:700;font-size:14px;text-align:center;border-radius:5px;}
 .btn_green{background:#009688;color:#fff;}
 .btn_blue{background:#1e9fff;color:#fff;}
+.paddingTB2{padding:2% 0;}
+
 
 .demo_body{position:relative;padding:80px 0 60px;min-width:320px;min-height:100vh;}
 .layout{margin:0 auto;padding:0 40px;width:1200px;}
