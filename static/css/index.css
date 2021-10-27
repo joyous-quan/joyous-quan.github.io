@@ -55,8 +55,7 @@
 	.ul_customized li{padding-left:40px;}
 	.ul_literature{flex-wrap:wrap;}
 	.ul_literature li{min-width:26%;}
-
-	.width40,.width60{width:100%;}
+	.img_tab tr,.img_tab tr td{display:inline-block;width:100%;}
 }
 @media only screen and (max-width:560px){
 	.ul_customized li a{font-size:14px;}
