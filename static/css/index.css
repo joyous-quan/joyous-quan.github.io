@@ -55,7 +55,8 @@
 	.ul_customized li{padding-left:40px;}
 	.ul_literature{flex-wrap:wrap;}
 	.ul_literature li{min-width:26%;}
-	.img_tab tr,.img_tab tr td{display:inline-block;width:100%;}
+	.width40,.width60{width:100%;}
+	.partner_dynamics h2{padding-top:0;}
 }
 @media only screen and (max-width:560px){
 	.ul_customized li a{font-size:14px;}
@@ -64,4 +65,6 @@
 	.ul_customized li{width:98%;}
 	.ul_support li{min-width:240px;}
 	.ul_support a{padding-left:10px;}
+	.swiper-container{width:126%!important;margin-left:-13%;}
+	.swiper-button-next, .swiper-button-prev{display:none!important;}
 }
