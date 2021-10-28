@@ -20,12 +20,11 @@
 .submenu_product{left:-100px;}
 .submenu_news,.submenu_support{left:-52px;}
 ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap;line-height:50px;}
-
+.phone_menu{display:none;}
 
 /*footer*/
 .footer_top li{float:left;min-width:108px;line-height:40px;margin-top:10px;}
 .footer_bottom{padding:1.5% 0;border-top:1px solid #e5e5e5;}
-
 .dv_footer a:hover{color:#0075bc;}
 
 
@@ -51,8 +50,8 @@ ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap
 	.menu_right_fixed .menu_flex{display:block;position:absolute;top:0;left:0;bottom:0;z-index:10;padding:10px;width:80%;height:100%;background:#fff;overflow-y:auto;}
 	.menu_right_fixed .hover_li{width:100%;}
 	.menu_right_fixed .menu_bg{position:absolute;top:0;left:0;bottom:0;z-index:5;background:rgba(0,0,0,0.4);height:100%;width:100%;}
-	.phone_menu{position:absolute;right:0;cursor:pointer;height:40px;width:40px;padding:8px 0;line-height:4px;}
-	.phone_menu i{display:inline-block;width:100%;height:2px;border-radius:2px;background:#333;}
+	.phone_menu{display:block;position:absolute;right:0;cursor:pointer;height:40px;width:40px;line-height:40px;user-select:none;}
+	.phone_menu img{vertical-align:middle;}
 }
 @media only screen and (max-width:768px){
 	.menu_box{padding:16px 0 8px;}
@@ -65,7 +64,7 @@ ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap
 	.menu_box{padding-bottom:4px;}
 	.menu_left{width:50%;}
 	.submenu_left li,ol.submenu a{line-height:38px;}
-	.phone_menu{padding:8px 3px;}
+	.phone_menu{padding:2px;margin-top:2px;}
 
 	.footer_top li{min-width:32%;line-height:32px}
 	.footer_bottom{font-size:12px;line-height:20px;}
@@ -73,4 +72,5 @@ ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap
 }
 @media only screen and (max-width:320px){
 	.li_contact{max-width:200px;}
+	.phone_menu{margin-top:0;}
 }
