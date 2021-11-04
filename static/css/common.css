@@ -26,9 +26,7 @@ textarea:-moz-placeholder{color:#999;}
 textarea::-moz-placeholder{color:#999;}
 
 /*百分比布局*/
-.maxW1920{max-width:1920px;margin:0 auto;}
 .maxW1300{margin:0 auto;max-width:1300px;}
-.maxW960{margin:0 auto;max-width:960px;}
 .maxH100{max-height:100px;}
 .flex_box{-webkit-display:flex;display:flex;flex-wrap:wrap;}
 .space_between{justify-content:space-between;}
@@ -43,6 +41,7 @@ textarea::-moz-placeholder{color:#999;}
 .F20{font-size:20px;}
 .F18{font-size:18px;}
 .F16{font-size:16px;}
+.F14{font-size:14px;}
 .F0{font-size:0;}
 .FW400{font-weight:400;}
 .FW700{font-weight:700;}
@@ -54,6 +53,7 @@ textarea::-moz-placeholder{color:#999;}
 .bg_4c4f53,.bg_4c4f53 a{color:#e1e8f0;}
 .text_underline,.hover_line:hover{text-decoration:underline;}
 .bg_white{background:#fff;}
+.bg_f6f6f6{background:#f6f6f6;}
 
 /*按钮*/
 a.btn,a.btn_min{display:inline-block;text-align:center;}
@@ -64,6 +64,7 @@ a.btn,a.btn_min{display:inline-block;text-align:center;}
 .btn_lightblue{background:#0075bc;color:#fff;}
 .btn_lightblue:hover{background:#148ed7;}
 .border_radius{border-radius:50px;}
+
 /*公共样式*/
 .head_search input[type="search"]::-webkit-search-cancel-button{display:none;}
 .clear_ipt{display:none;position:absolute;right:0;bottom:0;line-height:50px;background:none;padding:0 10px;color:#fff;font-size:20px;}
@@ -75,7 +76,9 @@ a.btn,a.btn_min{display:inline-block;text-align:center;}
 .clearfloat{zoom:1;}
 .marginTB2{margin:2% 0;}
 .marginB4{margin-bottom:4%;}
+.marginB2{margin-bottom:2%;}
 .paddingTB8{padding:8% 0;}
+.paddingTRBL2{padding:2%;}
 .paddingTRBL4{padding:4%;}
 .paddingTB4{padding:4% 0;}
 .paddingLR12{padding:0 15%;}
@@ -89,8 +92,8 @@ a.btn,a.btn_min{display:inline-block;text-align:center;}
 .align_c{text-align:center;}
 .align_r{text-align:right;}
 .lineH40{line-height:40px;}
-.lingH32{line-height:32px;}
-.lingH26{line-height:26px;}
+.lineH32{line-height:32px;}
+.lineH26{line-height:26px;}
 .nowrap{white-space:nowrap;}
 .flow_hide{overflow:hidden;}
 .no_data{text-align:center;line-height:160px;}
@@ -102,28 +105,38 @@ a.btn,a.btn_min{display:inline-block;text-align:center;}
 .breadcrumb_box{position:relative;text-align:center;}
 .borderBblue{border-bottom:1px solid #1a284f;}
 .dv_content{min-height:80vh;}
-/************** 广告 **********************/
-.bld_msg_box{padding:1% 4%;}
-.bld_msg{position:relative;font-style:italic;line-height:24px;font-size:14px;text-align:center;}
-.btn_del{position:absolute;top:0;right:0;width:40px;background:none;color:#fff;font-size:20px;}
 
 /******************** @media ****************************/
 
-@media only screen and (max-width:1400px){
+
+@media only screen and (min-width:2300px){
+	.maxW1300{max-width:1680px;}
+	body,button,input,select,textarea{font-size:16px;}
+	.F42{font-size:44px;}
+	.F36{font-size:38px;}
+	.F30{font-size:32px;}
+	.F24{font-size:26px;}
+	.F20{font-size:22px;}
+	.F16{font-size:18px;}
+	.F14{font-size:16px;}
+	.lineH40{line-height:44px;}
+	.lineH32{line-height:36px;}
+	.lineH26{line-height:30px;}
+}
+@media only screen and (max-width:1440px){
 	.F42{font-size:38px;}
 	.F36{font-size:32px;}
 }
 @media only screen and (max-width:1025px){
 	body{min-width:100%;}
 	.lineH40{line-height:36px;}
-	.lingH32{line-height:28px;}
-	.lingH26{line-height:22px;}
+	.lineH32{line-height:28px;}
+	.lineH26{line-height:22px;}
 	.F42{font-size:32px;letter-spacing:1px;}
 	.F36{font-size:28px;}
 	.F30{font-size:26px;}
 	.F24{font-size:22px;}
 	.F20{font-size:18px;}
-	.F16{font-size:14px;}
 	.btn{height:45px;line-height:45px;}
 	.btn_min{height:38px;line-height:38px;}
     .btn_border_red,.btn_border_blue{line-height:48px;}
@@ -134,8 +147,10 @@ a.btn,a.btn_min{display:inline-block;text-align:center;}
 	.F36{font-size:24px;}
 	.F24{font-size:20px;}
 	.F18{font-size:16px;}
+	.F16{font-size:14px;}
 }
 @media only screen and (max-width:560px){
+	table 
 	.paddingTB4{padding:6% 0;}
 	.paddingTB2{padding:4% 0;}
 	.paddingT2{padding-top:4%;}
@@ -156,5 +171,5 @@ a.btn,a.btn_min{display:inline-block;text-align:center;}
 	.F36{font-size:18px;}
 }
 @media only screen and (max-width:320px){
-	body,button,input,select,textarea,.F14{font-size:12px;}
+	body,button,input,select,textarea{font-size:12px;}
 }

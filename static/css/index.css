@@ -2,7 +2,7 @@
 .swiper-button-next, .swiper-button-prev{display:none!important;}
 .ul_customized{margin:0 -1%;}
 .ul_customized li{position:relative;float:left;width:30.33%;margin:1.5%;background-size:cover;-webkit-box-shadow:0 0 10px 0 rgba(0,0,0,.3);-moz-box-shadow:0 0 10px 0 rgba(0,0,0,.3);box-shadow:0 0 10px 0 rgba(0,0,0,.3);}
-.ul_customized li a{position:relative;z-index:2;line-height:66px;display:block;font-size:16px;text-align:center;}
+.ul_customized li a{position:relative;z-index:2;line-height:66px;display:block;text-align:center;}
 .li_customized_01{background:url(/static/img/index/customized_01.png) no-repeat left center;}
 .li_customized_02{background:url(/static/img/index/customized_02.png) no-repeat left center;}
 .li_customized_03{background:url(/static/img/index/customized_03.png) no-repeat left center;}
@@ -12,8 +12,8 @@
 .ul_customized li:hover:after{left:100%;}
 .ul_customized li:hover a{color:#fff;}
 
-.dv_product{background:url(/static/img/index/product_bg.png) no-repeat center;}
-.dv_product_item a{display:inline-block;width:200px;height:60px;line-height:58px;padding-left:75px;background-color:#000;border:1px solid #000;margin:10px 10px 10px 0;}
+.dv_product{background:url(/static/img/index/product_bg.png) no-repeat center;background-size:cover;}
+.dv_product_item a{display:inline-block;height:60px;line-height:58px;padding-left:75px;padding-right:15px;white-space:nowrap;background-color:#000;border:1px solid #000;margin:10px 10px 10px 0;}
 .a_product_01{background:url(/static/img/index/product_01.png) no-repeat 10px center;}
 .a_product_02{background:url(/static/img/index/product_02.png) no-repeat 10px center;}
 .a_product_03{background:url(/static/img/index/product_03.png) no-repeat 10px center;}
@@ -39,7 +39,7 @@
 
 .dv_support{background-image:linear-gradient(#fff,#fff,#fff,#f2f2f2);text-align:center;}
 .ul_support li{display:inline-block;width:16%;margin:2% 1.5%;line-height:60px;background:#d9e4e1;border-radius:60px;}
-.ul_support a{display:block;padding-left:10px;background:url(/static/img/index/sprites.png) no-repeat;font-size:16px;}
+.ul_support a{display:block;padding-left:10px;background:url(/static/img/index/sprites.png) no-repeat;}
 .li_case a{background-position:-5px -9px;}
 .li_form a{background-position:-5px -321px;}
 .li_sample a{background-position:-5px -87px;}
@@ -61,7 +61,6 @@
 	.partner_dynamics h2{padding-top:0;}
 }
 @media only screen and (max-width:560px){
-	.ul_customized li a{font-size:14px;}
 	.ul_literature li{width:150px;margin:10px 0;}
 	.ul_customized li{width:98%;}
 	.ul_support li{min-width:240px;}
