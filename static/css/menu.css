@@ -13,6 +13,8 @@
 .form_case{max-width:360px;padding:5%;background:#fff;border-radius:10px;border:1px solid #ddd;}
 .form_case .btn{width:100%;}
 .bg_menu{min-height:200px;background-image:linear-gradient(#fff,#fff,#eff3f9);text-align:center;}
+.ul_nav .width48{display:inline-block;width:48%;}
+
 
 /*interpretation-of-report-documents.html*/
 .aims_tab th{text-align:left;padding:5px 10px;border:1px solid #ddd;background:#eff3f9;}
