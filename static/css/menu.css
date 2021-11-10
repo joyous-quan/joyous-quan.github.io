@@ -29,7 +29,7 @@
 .span_red{border:1px solid #db1604;color:#db1604;}
 .span_green{border:1px solid #339204;color:#339204;}
 
-
+.tab_border td{border:1px solid #ddd;padding:5px 10px;}
 
 
 @media only screen and (max-width:1025px){

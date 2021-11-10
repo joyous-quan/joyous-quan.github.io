@@ -46,12 +46,12 @@ ol.submenu a{padding:0 20px;min-width:200px;text-align:center;white-space:nowrap
 	.li_wechat{display:none;}
 	.submenu,.submenu_item{display:block;border:none;}
 	.submenu_item{margin-left:20px;}
-	.submenu,.customized .submenu_left,.submenu_item{position:static;}
-	.customized .submenu_left,.submenu_item,.customized .first_a{max-width:100%;width:100%;}
+	.submenu,div.submenu .submenu_left,.submenu_item{position:static;}
+	div.submenu .submenu_left,.submenu_item,div.submenu .first_a{max-width:100%;width:100%;}
 	ol.submenu a{text-align:left;line-height:44px;}
 	.menu_left{width:30%;}
 	.submenu_item{padding:5px 20px;}
-	.customized .first_a{padding:0 20px;}
+	div.submenu .first_a{padding:0 20px;}
 	.submenu_left{padding:10px 0;}
 	.submenu_left li{line-height:44px;}
 	.menu_flex,.submenu_right{display:none;}
