@@ -1,5 +1,5 @@
 .page_customized .hover_li_customized>a,.page_support .hover_li_support>a,.page_dynamics .hover_li_dynamics>a{border-color:#f8c807;color:#0075bc;}
-.customized_breadcrumb{min-height:300px;background:url(/static/img/menu/menu_bg.png) no-repeat center;background-size:cover;}
+.customized_breadcrumb{min-height:300px;background:url(/static/img/customized/customized_bg.png) no-repeat center;background-size:cover;}
 .dot{padding-right:8px;font-size:30px;}
 .tab_title{position:relative;z-index:2; margin-top:-50px;}
 .tab_title li{float:left;width:20%;border:1px solid #e5f5ff;border-right:none;min-height:50px;font-size:0;}
@@ -9,16 +9,15 @@
 .tab_title li:hover{background-color:rgba(0,0,0,0.2)}
 .tab_title li.on a{color:#0075bc;}
 .tab_title li.on,.bg_e5f5ff{background:#e5f5ff;}
-.menu_content .btn_min{min-width:160px;}
+.customized_content .btn_min{min-width:160px;}
 .form_case{max-width:360px;padding:5%;background:#fff;border-radius:10px;border:1px solid #ddd;}
 .form_case .btn{width:100%;}
-.bg_menu{min-height:200px;background-image:linear-gradient(#fff,#fff,#eff3f9);text-align:center;}
 .ul_nav .width48{display:inline-block;width:48%;}
 
 
 /*interpretation-of-report-documents.html*/
-.aims_tab th{text-align:left;padding:5px 10px;border:1px solid #ddd;background:#eff3f9;}
-.aims_tab td{padding:5px 10px;border:1px solid #ddd;}
+.aims_tab th{text-align:left;padding:5px 10px;border:1px solid #c6cfdb;background:#d4dfef;}
+.aims_tab td{padding:5px 10px;border:1px solid #c6cfdb;}
 .aims_tab tr:hover{background:#fafafe;}
 
 .lab_contract span{line-height:50px;}
@@ -36,17 +35,15 @@
 	.customized_breadcrumb{min-height:260px;}
 }
 @media only screen and (max-width:768px){
-	.bg_menu{min-height:160px;}
-	.menu_content .width38{margin-top:4%;}
+	.customized_content .width38{margin-top:4%;}
 	.tab_title li a{font-size:15px;padding:5px 0;}
 	.tab_title li br{display:block;}
 }
 @media only screen and (max-width:560px){
-	.bg_menu{min-height:120px;}
 	.customized_breadcrumb{min-height:220px;}
 	.customized_breadcrumb .maxH100{max-height:110px;}
 	.tab_title li a{font-size:14px;}
-	.menu_content .width38{margin-top:6%;}
+	.customized_content .width38{margin-top:6%;}
 }
 @media only screen and (max-width:320px){
 	.tab_title li a{font-size:12px;padding:7px 0;}

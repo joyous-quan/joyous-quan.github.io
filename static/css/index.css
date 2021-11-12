@@ -13,11 +13,10 @@
 .ul_customized li:hover a{color:#fff;}
 
 .dv_product{background:url(/static/img/index/product_bg.png) no-repeat center;background-size:cover;}
-.dv_product_item a{display:inline-block;height:60px;line-height:58px;padding-left:75px;padding-right:15px;white-space:nowrap;background-color:#000;border:1px solid #000;margin:10px 10px 10px 0;}
+.dv_product_item a{display:inline-block;height:60px;line-height:58px;padding-left:70px;padding-right:15px;white-space:nowrap;border:1px solid #ced0da;margin:10px 10px 10px 0;}
 .a_product_01{background:url(/static/img/index/product_01.png) no-repeat 10px center;}
 .a_product_02{background:url(/static/img/index/product_02.png) no-repeat 10px center;}
 .a_product_03{background:url(/static/img/index/product_03.png) no-repeat 10px center;}
-.dv_product_item a:hover{background-color:#151f54;border-color:#fff;}
 
 .width40{width:40%;}
 .width60{width:60%;}
@@ -25,27 +24,26 @@
 .bg_gradient{background-image:radial-gradient(#555555, #000000);}
 .ul_literature{padding-top:3%;-webkit-display:flex;display:flex;justify-content:space-between;}
 .ul_literature li{display:inline-block;margin:10px;max-width:186px;font-size:0;}
-.li_literature:hover{-webkit-box-shadow:-2px 25px 100px -50px rgba(0,0,0,.75);-moz-box-shadow:-2px 25px 100px -50px rgba(0,0,0,.75);box-shadow:-2px 25px 100px -50px rgba(0,0,0,.75);}
 .li_literature:hover .flip-card__container{-webkit-transform:rotateY(-180deg);-moz-transform:rotateY(-180deg);transform:rotateY(-180deg);}
-.li_literature:hover .inside-page{-webkit-box-shadow:inset 15px 0 8px -40px rgba(0,0,0,.1);-moz-box-shadow:inset 15px 0 8px -40px rgba(0,0,0,.1);box-shadow:inset 15px 0 8px -40px rgba(0,0,0,.1);}
+.li_literature:hover,.li_literature:hover .flip-card__container.li_literature:hover .inside-page,.li_literature:hover .card-front{-webkit-box-shadow:0 5px 20px 0 rgba(153,215,255,.9);-moz-box-shadow:0 5px 20px 0 rgba(153,215,255,.9);box-shadow:0 5px 20px 0 rgba(153,215,255,.9);}
 .li_literature{position:relative;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
 .flip-card{position:absolute;top:0;right:0;z-index:100;visibility:hidden;width:100%;height:100%;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;perspective:1000px;-webkit-perspective:1000px;-moz-perspective:1000px;perspective:1000px;}
 .flip-card>*{visibility:visible;}
 .flip-card__container{position:absolute;top:0;right:0;width:100%;height:100%;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;-webkit-transform-origin:left;-moz-transform-origin:left;transform-origin:left;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;transform-style:preserve-3d;}
 .card-back,.card-front{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden;text-align:center;}
 .card-back{-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);transform:rotateY(180deg);}
-.inside-page{position:absolute;top:0;right:0;z-index:1;width:100%;height:100%;text-align:center;box-shadow:inset 320px 0 80px -40px rgba(0,0,0,.25);-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+.inside-page{position:absolute;top:0;right:0;z-index:1;width:100%;height:100%;text-align:center;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
 
 
-.dv_support{background-image:linear-gradient(#fff,#fff,#fff,#f2f2f2);text-align:center;}
-.ul_support li{display:inline-block;width:16%;margin:2% 1.5%;line-height:60px;background:#d9e4e1;border-radius:60px;}
+.dv_support{text-align:center;}
+.ul_support li{display:inline-block;width:16%;margin:2% 1.5%;line-height:60px;background:#d4dfef;border-radius:60px;}
 .ul_support a{display:block;padding-left:10px;background:url(/static/img/index/sprites.png) no-repeat;}
 .li_case a{background-position:-5px -9px;}
 .li_form a{background-position:-5px -321px;}
 .li_sample a{background-position:-5px -87px;}
 .li_msg a{background-position:-5px -165px;}
 .li_guide a{background-position:-5px -244px;}
-.ul_support li:hover{background:#183a80;}
+.ul_support li:hover{background:#183a80;position:relative;top:-5px;-webkit-box-shadow:5px 5px 8px #d4dfef;-moz-box-shadow:5px 5px 8px  #d4dfef;box-shadow:5px 5px 8px  #d4dfef;}
 .ul_support li:hover a{color:#fff;}
 
 
