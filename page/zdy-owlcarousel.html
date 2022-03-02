@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<title>Owl Carousel 自定义分组轮播</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" type="text/css" href="/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="/owlcarousel/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css?t=20220301001">
+	<script src="/js/jquery.js?t=20220301001"></script>
+    <style type="text/css" media="screen">
+        .owl-carousel-container .owl-controls{visibility:hidden;}
+        .owl-carousel-container{position:relative;}
+        #prev,#next{position:absolute;z-index:10;top:34%;width:30px;height:36px;background:#555;opacity:0.8;filter:alpha(;opacity=80);color:#fff;text-align:center;font-size:24px;line-height:28px;border:none;border-radius:5px;cursor:pointer;}
+        #prev{left:0;}
+        #next{right:0;}
+        .item{min-height:200px;line-height:200px;background:#f5f5f5;font-size:30px;text-align:center;}
+    </style>
+</head>
+<body class="demo_body">
+    <div class="demo_header">
+        <div class="layout">
+            <a href="/index.html"> 首页 </a>
+        </div>
+    </div>
+    <div class="demo_main">
+        <div class="layout">
+            <h2 class="title_h2">Owl Carousel 自定义分组轮播</h2>
+			<div class="owl-carousel-container">
+				<div class="owl-carousel owl-theme" id="carousel">
+					<div class="item">01</div>
+					<div class="item">02</div>
+					<div class="item">03</div>
+					<div class="item">04</div>
+					<div class="item">05</div>
+					<div class="item">06</div>
+					<div class="item">07</div>
+					<div class="item">08</div>
+					<div class="item">09</div>
+					<div class="item">10</div>
+					<div class="item">11</div>
+					<div class="item">12</div>
+					<div class="item">13</div>
+				</div>
+				<button id="prev"> < </button>
+				<button id="next"> > </button>
+			</div>
+		</div>
+	</div>
+    <div class="dv_footer">
+        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
+    </div>
+
+
+<script type="text/javascript" src="/owlcarousel/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+	// 初始化轮播图
+    $('#carousel').owlCarousel({
+        margin: 5,
+        nav:false,
+        dots:true,
+        responsive: {
+            0: { items: 2 },
+            580: { items: 3 },
+            780: { items: 4 },
+            1024:{ items: 5 }
+        }
+    });
+
+    var _items = 0;
+    var _width = $(document).width();
+    var _len = $('.item').length;
+    //console.log(_len)
+    // 上页
+    $('#prev').on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings('#next').css({ cursor:'pointer', opacity:'0.8', filter:'alpha(opacity=80)' });
+         _items  -= 1;
+        if ( _items <= 0) {
+            _items = 0;
+            $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+        }
+        //console.log(_items)
+        $('#carousel').trigger('to.owl.carousel', [_items, 300]);
+    });
+    // 下页
+    $('#next').on('click', function(e){
+        e.preventDefault();
+        $(this).siblings('#prev').css({ cursor:'pointer', opacity:'0.8', filter:'alpha(opacity=80)' });
+		_items  += 1;
+        if ( _width >= 1024 ) {
+            
+            if ( _items >=  Math.ceil(_len/5) - 1 ) {
+                _items = Math.ceil(_len/5) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+            //console.log(_width, '_len/5 :'+Math.ceil(_len/5),_items);
+        } else if ( 780 <= _width && _width < 1024 ) {
+            
+            if ( _items >=  Math.ceil(_len/4) - 1 ) {
+                _items = Math.ceil(_len/4) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+            //console.log(_width, '_len/4 :'+Math.ceil(_len/4),_items);
+        } else if ( 580 <= _width && _width < 780 ) {
+            
+            if ( _items >=   Math.ceil(_len/3) - 1 ) {
+                _items = Math.ceil(_len/3) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+           // console.log(_width, '_len/3 :'+Math.ceil(_len/3),_items);
+        }else if ( _width < 580 ) {
+            
+            if ( _items >= Math.ceil(_len/2) - 1 ) {
+                _items = Math.ceil(_len/2) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+            //console.log(_width, '_len/2 :'+Math.ceil(_len/2),_items);
+        }
+        $('#carousel').trigger('to.owl.carousel', [_items, 300]);   
+    });
+    
+})
+</script>
+</body>
+</html>
