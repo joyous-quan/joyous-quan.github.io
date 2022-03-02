@@ -14,8 +14,13 @@
 	<script type="text/javascript" src="https://www.bidepharm.com/static/js/jquery.min.js?t=20220301001"></script>
     <style type="text/css" media="screen">
         .featured-products .owl-controls{visibility:hidden;}
-        #prev,#next{position:relative;z-index:10;}
-    </style> 
+        .featured-products{position:relative;}
+        #prev,#next{display:none;position:absolute;z-index:10;top:45%;width:30px;height:36px;background:#555;opacity:0.8;filter:alpha(;opacity=80);color:#fff;text-align:center;font-size:24px;line-height:28px;border:none;border-radius:5px;cursor:pointer;}
+        #prev{left:0;}
+        #next{right:0;}
+        .featured-products:hover #prev,.featured-products:hover #next{display:inline-block;}
+        .sp_num{position:absolute;z-index:10;font-size:16px;}
+    </style>
 </head>
 <body>
 <div class="layout featured-products">
@@ -23,7 +28,7 @@
 特色产品 <a href="/feature-products.html" target="_blank" class="float-R more">更多 +</a>
 </h3>
 <div class="featured-products-con products-con clearboth">
-<div class="item">
+<div class="item"><span class="sp_num">01</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/864163-80-4.html">
@@ -42,7 +47,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">02</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1092775-62-6.html">
@@ -61,7 +66,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">03</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1072067-44-7.html">
@@ -80,7 +85,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">04</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1338454-03-7.html">
@@ -99,7 +104,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">05</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1335047-34-1.html">
@@ -118,7 +123,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">06</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1309446-14-7.html">
@@ -137,7 +142,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">07</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1359764-39-8.html">
@@ -156,7 +161,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">08</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/182122-13-0.html">
@@ -175,7 +180,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">09</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1389309-54-9.html">
@@ -194,7 +199,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">10</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/874948-63-7.html">
@@ -213,7 +218,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">11</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/106294-60-4.html">
@@ -232,7 +237,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">12</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/666175-40-2.html">
@@ -251,7 +256,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">13</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/1107608-80-9.html">
@@ -270,7 +275,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">14</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/35294-28-1.html">
@@ -289,7 +294,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">15</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/16635-95-3.html">
@@ -308,7 +313,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">16</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/223259-62-9.html">
@@ -327,7 +332,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">17</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/128544-05-8.html">
@@ -346,7 +351,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">18</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/126613-06-7.html">
@@ -365,7 +370,7 @@
 </dd>
 </dl>
 </div>
-<div class="item">
+<div class="item"><span class="sp_num">19</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/442905-33-1.html">
@@ -385,6 +390,44 @@
 </dl>
 </div>
 <div class="item">
+<dl class="product-card"><span class="sp_num">20</span>
+<dt>
+<a class="img-box" href="/products/389130-06-7.html">
+<img src="https://file.bidepharm.com/static/upload/proimg/205/389130-06-7.png" alt="389130-06-7">
+<em class="product-name">
+<span class="product-EN-name">(S)-N,N-Dimethyl-8,9,10,11,12,13,14,15-octahydrodinaphtho[2,1-d:1',2'-f][1,3,2]dioxaphosphepin-4-amine</span>
+<span class="product-CN-name">(S)--N,N-二甲基-8,9,10,11,12,13,14,15-八氢联萘并[2,1-d:1',2'-f][1,3,2]二氧磷杂七环-4-胺</span>
+</em>
+</a>
+</dt>
+<dd>
+<span class="float-L">BD210286</span><span>389130-06-7</span><span class="float-R">98% 99%ee</span>
+</dd>
+<dd class="border-B">
+<span class="float-L"><b>￥2369.00</b></span><span>1g</span><span class="color-blue float-R">常备现货</span>
+</dd>
+</dl>
+</div>
+<div class="item"><span class="sp_num">21</span>
+<dl class="product-card">
+<dt>
+<a class="img-box" href="/products/389130-06-7.html">
+<img src="https://file.bidepharm.com/static/upload/proimg/205/389130-06-7.png" alt="389130-06-7">
+<em class="product-name">
+<span class="product-EN-name">(S)-N,N-Dimethyl-8,9,10,11,12,13,14,15-octahydrodinaphtho[2,1-d:1',2'-f][1,3,2]dioxaphosphepin-4-amine</span>
+<span class="product-CN-name">(S)--N,N-二甲基-8,9,10,11,12,13,14,15-八氢联萘并[2,1-d:1',2'-f][1,3,2]二氧磷杂七环-4-胺</span>
+</em>
+</a>
+</dt>
+<dd>
+<span class="float-L">BD210286</span><span>389130-06-7</span><span class="float-R">98% 99%ee</span>
+</dd>
+<dd class="border-B">
+<span class="float-L"><b>￥2369.00</b></span><span>1g</span><span class="color-blue float-R">常备现货</span>
+</dd>
+</dl>
+</div>
+<div class="item"><span class="sp_num">22</span>
 <dl class="product-card">
 <dt>
 <a class="img-box" href="/products/389130-06-7.html">
@@ -404,64 +447,80 @@
 </dl>
 </div>
 </div>
-<button id="prev">上一页</button>
-<button id="next">下一页</button>
+<button id="prev"> < </button>
+<button id="next"> > </button>
 </div>
 
 
 <script type="text/javascript" src="https://www.bidepharm.com/static/js/tool/owlcarousel/owl.carousel.min.js"></script>
 <script>
 $(document).ready(function(){
-	var owl_option = {
-        //loop: true,
+	// 初始化轮播图
+    $('.featured-products-con').owlCarousel({
         margin: 0,
         nav:false,
         dots:true,
-        //autoplay: true,
-        //stopOnHover:true,
-        //autoplayTimeout: 4000,
-        //autoplayHoverPause: false,
-        //navRewind: true,
-        //navText: [ '<', '>' ],
         responsive: {
             0: { items: 2 },
             580: { items: 3 },
             780: { items: 4 },
             1024:{ items: 5 }
         }
-    }
-    var items = 0;
-    var _width = $(document).width();
-
-    // 初始化轮播图
-    $('.featured-products-con').owlCarousel(owl_option);
-    //console.log($('.owl-stage .item').length)
-
-    $("#next").click(function(e){
-        e.preventDefault();
-        
-        console.log(_width)
-        if (_width >= 1024 ) {
-           items  += 5;
-        } else if (_width < 1024 ) {
-            items  += 1;
-        }
-        //console.log(items);
-        $('.featured-products-con').trigger('to.owl.carousel', [items, 500]);
-         
     });
+
+    var _items = 0;
+    var _width = $(document).width();
+    var _len = $('.item').length;
+    //console.log(_len)
+    // 上页
     $('#prev').on('click', function (e) {
         e.preventDefault();
-        
-        if (_width >= 1024 ) {
-           items  -= 5;
-        } else if ( _width < 1024 ) {
-            items  -= 1;
+        $(this).siblings('#next').css({ cursor:'pointer', opacity:'0.8', filter:'alpha(opacity=80)' });
+         _items  -= 1;
+        if ( _items <= 0) {
+            _items = 0;
+            $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
         }
-        
-        $('.featured-products-con').trigger('to.owl.carousel', [items, 500]);
-        
+        //console.log(_items)
+        $('.featured-products-con').trigger('to.owl.carousel', [_items, 400]);
     });
+    // 下页
+    $('#next').click(function(e){
+        e.preventDefault();
+        $(this).siblings('#prev').css({ cursor:'pointer', opacity:'0.8', filter:'alpha(opacity=80)' });
+
+        if ( _width >= 1024 ) {
+            _items  += 1;
+            if ( _items >=  Math.ceil(_len/5) - 1 ) {
+                _items = Math.ceil(_len/5) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+            //console.log(_width, '_len/5 :'+Math.ceil(_len/5),_items);
+        } else if ( 780 <= _width && _width < 1024 ) {
+            _items  += 1;
+            if ( _items >=  Math.ceil(_len/4) - 1 ) {
+                _items = Math.ceil(_len/4) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+            //console.log(_width, '_len/4 :'+Math.ceil(_len/4),_items);
+        } else if ( 580 <= _width && _width < 780 ) {
+            _items  += 1;
+            if ( _items >=   Math.ceil(_len/3) - 1 ) {
+                _items = Math.ceil(_len/3) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+           // console.log(_width, '_len/3 :'+Math.ceil(_len/3),_items);
+        }else if ( _width < 580 ) {
+            _items  += 1;
+            if ( _items >= Math.ceil(_len/2) - 1 ) {
+                _items = Math.ceil(_len/2) - 1;
+                $(this).css({ cursor:'not-allowed', opacity:'0.4', filter:'alpha(opacity=40)' });
+            }
+            //console.log(_width, '_len/2 :'+Math.ceil(_len/2),_items);
+        }
+        $('.featured-products-con').trigger('to.owl.carousel', [_items, 400]);   
+    });
+    
 })
 </script>
 </body>
