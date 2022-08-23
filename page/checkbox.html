@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<meta name="keywords" content="html,css,js,javascript,joyous-quan.github.io">
+<meta name="description" content="joyous-quan.github.io">
+<title>joyous-quan.github.io</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" href="/css/common.css?t=2022082201">
+<script src="/js/jquery.js"></script>
+</head>
+<body class="demo_body">
+     <div class="demo_header">
+        <div class="layout">
+            <a href="/index.html"> 首页 </a>
+        </div>
+    </div>
+    <div class="demo_main">
+        <div class="layout">
+            <h2 class="title_h2"> checkbox 选择产品</h2>
+            <table>
+                <thead>  
+                    <tr>
+                        <td width="8%"><label><input type="checkbox" id="selt_all">全选</label></td>
+                        <td>编号</td>
+                        <td>产品</td>
+                        <td>数量</td>
+                        <td>单价</td>
+                        <td>折扣</td>
+                        <td>小计</td>
+                    </tr>
+                </thead>
+                <tbody id="pro_tbody">
+                    <tr>
+                        <td>data</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn_box">
+                <p class="paddingTB2">
+                    <b id="pro_num">0</b> 个产品，总额：<b> ¥ </b><b class="price_total">0</b>
+                </p>
+                <!-- <button class="btn btn_blue">加入购物车</button> -->
+            </div>
+        </div>
+    </div>
+    <div class="dv_footer">
+        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact us</a></p>
+    </div>
+
+</body>
+<script>
+var pro_data = [
+    {"product_id":"001","product_name":"苹果","quantity":2, "unit_price":"16","discount":0.88},
+    {"product_id":"002","product_name":"香蕉","quantity":4, "unit_price":"12" ,"discount":0.88},
+    {"product_id":"003","product_name":"草莓","quantity":1, "unit_price":"36","discount":0.88},
+    {"product_id":"004","product_name":"芒果","quantity":1, "unit_price":"24","discount":0.88},
+    {"product_id":"004","product_name":"荔枝","quantity":1, "unit_price":"68","discount":0.88},
+    {"product_id":"004","product_name":"山竹","quantity":3, "unit_price":"43","discount":0.88}
+];
+var tbody_html = '';
+
+$.each(pro_data, function(idx, item) {
+    tbody_html += '<tr>'
+        + '<td><label><input onclick="_checkedPro()" pid="'+ item.product_id +'" type="checkbox" class="selt_item">选择</label></td>'
+        + '<td>'+ (idx + 1) +'</td>'
+        + '<td>'+ item.product_name +'</td>'
+        + '<td><span class="pro_qty">'+ item.quantity +'</span> kg </td>'
+        + '<td>￥ <span class="pro_price">'+ item.unit_price +'</span>/kg</td>'
+        + '<td><span class="pro_dis">'+ item.discount +'</span> 折</td>'
+        + '<td class="td_total">￥ <span class="line_total">'+ (item.quantity *(item.unit_price * item.discount)).toFixed(2)  +'</span></td>'
+        + '</tr>'
+    })
+$('#pro_tbody').html(tbody_html);
+
+//选择产品
+function _checkedPro(){
+    var checkPro = $(".selt_item:checked");
+    var priceTotal = 0, lineTotal = 0;
+    var maxLen = $('.selt_item').length;
+
+    if(checkPro.length > 0){
+        var paramsProId = [], ProId='';
+        checkPro.each(function(idx, item){
+            ProId = $(this).attr("pid");
+            //paramsProId.push(ProId);
+            lineTotal = Number($(this).parent().parent().siblings('.td_total').find('.line_total').text()); 
+            priceTotal += lineTotal;
+        });
+        $('.price_total').html(priceTotal.toFixed(2));
+        $('#pro_num').html($(".selt_item:checked").length);
+
+        //全选
+        if( checkPro.length < maxLen){
+            $("#selt_all").prop("checked", false);
+            console.log(checkPro.length , maxLen)
+        }else if( checkPro.length == maxLen){
+            $("#selt_all").prop("checked", true);
+        }
+
+    }else{
+        $('#pro_num').html(0);
+        $('.price_total').html(0);
+    }
+
+    //console.log($(".selt_item:checked").length, lineTotal)
+}
+
+//全选
+$("#selt_all").click(function(){
+    $(".selt_item").prop("checked", $(this).is(":checked"));
+    _checkedPro();
+})
+
+</script>
+</html>

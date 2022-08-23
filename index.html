@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta name="robots" content="index,follow">
-    <meta name="format-detection" content="telephone=no,email=no">
-    <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
-    <meta name="keywords" content="html,css,js,javascript,joyous-quan.github.io">
-    <meta name="description" content="joyous-quan.github.io">
-    <title>joyous-quan.github.io</title>
-    <link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
-    <link rel="stylesheet" href="/css/common.css?t=2021043002">
-    <script src="/js/jquery.js"></script>
-    <style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<meta name="keywords" content="html,css,js,javascript,joyous-quan.github.io">
+<meta name="description" content="joyous-quan.github.io">
+<title>joyous-quan.github.io</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" href="/css/common.css?t=2022082201">
+<script src="/js/jquery.js"></script>
+<style type="text/css">
     .ul_menu{display:inline-block;width:100%;}
     .ul_menu li{float:left;padding:10px;}
-    .ul_menu li a{display:block;padding:5px 20px;background:#f5f5f5;}
-    </style>
+    .ul_menu li a{display:block;padding:8px 20px;background:#f6e2e2;}
+    .demo_main{min-height:100vh}
+    .demo_header{-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+    .fixed_hide{top:-100%;}
+    .fixed_show{top:0;}
+</style>
 </head>
 <body class="demo_body">
     <div class="demo_header">
@@ -29,16 +33,34 @@
     </div>
     <div class="demo_main">
         <div class="layout">
-            <h2 class="title_h2">本网站DEMO导航分类</h2>
+            <h2 class="title_h2">本网站 DEMO 导航分类</h2>
+            <h3 class="title_h3">JSON & EXCEL</h3>
             <ul class="ul_menu">
-                <li><a href="/page/excel-change-json.html">本地Excel转JSON数据</a></li>
-                <li><a href="/page/json-change-excel.html">JSON数据转Excel表格</a></li>
-                <li><a href="/page/movie-list.html">豆瓣电影列表</a></li>
-                <li><a href="/page/style.html">css样式</a></li>
+                <li><a href="/page/excel-change-json.html">本地 Excel 转 JSON 数据</a></li>
+                <li><a href="/page/json-change-excel.html">JSON 数据转 Excel 表格</a></li>
             </ul>
+            <h3 class="title_h3">数据</h3>
+            <ul class="ul_menu">
+                <li><a href="/page/movie-list.html">豆瓣电影列表数据分页</a></li>
+                <li><a href="/page/checkbox.html">选择框 + - 数据</a></li>
+            </ul>
+            <h3 class="title_h3">轮播图</h3>
+            <ul class="ul_menu">
+                <li><a href="/page/zdy-owlcarousel.html">Owl Carousel 自定义分组轮播</a></li>
+            </ul>
+            <h3 class="title_h3">eCharts 相关</h3>
+            <ul class="ul_menu">
+                <li><a href="/page/echarts.html">eCharts 一个页面引用两个图表</a></li>
+                <li><a href="/page/echarts-radar.html">eCharts 雷达图</a></li>
+            </ul>
+            <!-- <h3 class="title_h3">其他</h3>
+            <ul class="ul_menu">
+                <li><a href="/page/style.html">css 样式</a></li>
+            </ul> -->
 
             <h2 class="title_h2">常用工具网站导航</h2>
             <ul class="ul_menu">
+                <li><a href="https://www.wdku.net/" rel="noopener norefferrer" target="_blank">工具大全</a></li>
                 <li><a href="https://tool.lu/" rel="noopener norefferrer" target="_blank">在线工具</a></li>
                 <li><a href="https://www.toptal.com/developers/css/sprite-generator" rel="noopener norefferrer" target="_blank">合并雪碧图</a></li>
                 <li><a href="https://tinypng.com/" rel="noopener norefferrer" target="_blank">图片压缩尺寸大小</a></li>
@@ -50,5 +72,44 @@
     <div class="dv_footer">
         <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
     </div>
+<script>
+
+windowAddMouseWheel();
+
+function windowAddMouseWheel() {
+    var scrollFunc = function (e) {
+        e = e || window.event;
+        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
+            if (e.wheelDelta > 0) { //当滑轮向上滚动时
+                //console.log("滑轮向上滚动");
+                $('.demo_header').addClass('fixed_show')
+                $('.demo_header').removeClass('fixed_hide')
+            }
+            if (e.wheelDelta < 0) { //当滑轮向下滚动时
+               // console.log("滑轮向下滚动");
+                $('.demo_header').addClass('fixed_hide')
+                $('.demo_header').removeClass('fixed_show')
+            }
+        } else if (e.detail) {  //Firefox滑轮事件
+            if (e.detail> 0) { //当滑轮向上滚动时
+                console.log("滑轮向上滚动");
+                $('.demo_header').addClass('fixed_show')
+                $('.demo_header').removeClass('fixed_hide')
+            }
+            if (e.detail< 0) { //当滑轮向下滚动时
+                console.log("滑轮向下滚动");
+                $('.demo_header').addClass('fixed_hide')
+                $('.demo_header').removeClass('fixed_show')
+            }
+        }
+    };
+    //给页面绑定滑轮滚动事件
+    if (document.addEventListener) {
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    }
+    //滚动滑轮触发scrollFunc方法
+    window.onmousewheel = document.onmousewheel = scrollFunc;
+}
+</script>
 </body>
 </html>

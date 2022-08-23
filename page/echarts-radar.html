@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<title>eCharts radar</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/common.css?t=2022082201">
+<script src="/js/jquery.js?t=20220301001"></script>
+<style type="text/css" media="screen">
+    #echart_radar{display:block;height:800px;width:800px;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;}
+    /*#echart_radar canvas{background:url(/img/radar_bg.png) no-repeat center;background-size:100%;}*/
+    .echart_txt span{display:inline-block;min-width:85px;}
+    .echart_txt .mw-120{min-width:150px}
+</style>
+</head>
+<body class="demo_body">
+    <div class="demo_header">
+        <div class="layout">
+            <a href="/index.html"> 首页 </a>
+        </div>
+    </div>
+    <div class="demo_main">
+        <div class="layout">
+            <h2 class="title_h2">eCharts radar</h2>
+            <p class="text_content">使用<a class="link_a" href="https://echarts.apache.org/zh/index.html" rel="noopener norefferrer" target="_blank"> eCharts </a>可视化图表库</p>
+			<div class="echarts">
+                <div id="echart_radar"></div>
+                <div class="echart_txt">
+                    The colored zone is the suitable physicochemical space for oral bioavailability.
+                    <br><span class="mw-120">LIPO(Lipophility):</span><span> -0.7</span> < <span class="mw-120">XLOGP3</span> < +5.0
+                    <br><span class="mw-120">SIZE:</span><span> 150g/mol</span> < <span class="mw-120">MV</span> < 500g/mol
+                    <br><span class="mw-120">POLAR(Polarity):</span><span> 20Å²</span> < <span class="mw-120">TPSA</span> < 130Å²
+                    <br><span class="mw-120">INSOLU(Insolubility):</span><span> -6</span> < <span class="mw-120">Log S (ESOL)</span> < 0
+                    <br><span class="mw-120">INSATU(Insaturation):</span><span> 0.25</span> < <span class="mw-120">Fraction Csp3</span> < 1
+                    <br><span class="mw-120">FLEX(Flexibility):</span><span> 0</span> < <span class="mw-120">Num. rotatable bonds</span> < 9 
+                    <!-- <br><br>
+                    <br><span>LIPO   </span><span>[ -0.7 ~ 5 ] </span>
+                    <br><span>SIZE   </span><span>[ 150 ~ 500 ]</span>
+                    <br><span>POLAR  </span><span>[ 20 ~ 130 ] </span>
+                    <br><span>INSOLU </span><span>[ -6 ~ 0 ]   </span>
+                    <br><span>INSATU </span><span>[ 0.25 ~ 1 ] </span>
+                    <br><span>FLEX   </span><span>[ 0 ~ 9 ]    </span> -->
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="dv_footer"><p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact us</a></p></div>
+<script type="text/javascript" src="/js/echarts.min.js"></script>
+<script>
+$(document).ready(function(){      
+    //雷达图
+    var echart_radar = document.getElementById('echart_radar');
+    var option;
+    var myChart1 = echarts.init(echart_radar);
+    // 数据参考 http://www.swissadme.ch/index.php#top%20%E8%BE%93%E5%85%A5COc1ccc(c(c1)C(=O)O)C#N
+    //var _radar_val = [1.84, 2, -0.11, 1.87, 70.32, 177.16];//COc1ccc(c(c1)C(=O)O)C#N
+    //var _radar_val = [-2.07, 11, -0.51, 3.08, 374.49, 831.96];//O=C(O)C[C@H](NC(CNC([C@H](CCCCNC(N)=N)N1)=O)=O)C(N[C@@H](CC2=CNC3=C2C=CC=C3)C(N4[C@](CCC4)([H])C(N[C@H](C(N)=O)CSSCCC1=O)=O)=O)=O
+
+    var _radar_lipo   = -2.07;
+    var _radar_flex   = 11;
+    var _radar_insatu = -0.51;
+    var _radar_insolu = 3.08;
+    var _radar_polar  = 374.49;
+    var _radar_size   = 831.96;
+
+    if( _radar_lipo < -3.5 ){
+        _radar_lipo = -3.5
+    }else if( _radar_lipo > 10.4 ){
+        _radar_lipo = 10.4
+    }       
+    if( _radar_flex < 0 ){
+        _radar_flex = 0
+    }else if( _radar_flex > 14.7 ){
+        _radar_flex = 14.7
+    }
+    if( _radar_insatu < -1 ){
+        _radar_insatu = -1
+    }else if( _radar_insatu > 0.23 ){
+        _radar_insatu = 0.23
+    }
+    if( _radar_insolu < 0 ){
+        _radar_insolu = 0
+    }else if( _radar_insolu > 9.8 ){
+        _radar_insolu = 9.8
+    }
+    if( _radar_polar < -35 ){
+        _radar_polar = -35
+    }else if( _radar_polar > 235 ){
+        _radar_polar = 235
+    }
+    if( _radar_size < -25 ){
+        _radar_size = -25
+    }else if( _radar_size > 840 ){
+        _radar_size = 840
+    }
+
+    option  = {
+        color: ['#8bc34a','#a9F0F5','#FF4444'], //'#8bc34a','#a9F0F5',
+        textStyle:{ color:'#333'},
+
+        radar: {
+            indicator: [
+                { name: 'LIPO',   min: -3.5, max: 10.4 }, 
+                { name: 'FLEX',   min: 0,    max: 14.7 }, 
+                { name: 'INSATU', min: -1,   max: 0.23 }, 
+                { name: 'INSOLU', min: 0,    max: 9.8  }, 
+                { name: 'POLAR',  min: -35,  max: 235  }, 
+                { name: 'SIZE',   min: -25,  max: 840  } 
+            ],
+            splitArea: {
+                areaStyle: {
+                    color: ['transparent'],
+                    //color: ['#FFF0F5','#FFF0F5','#FFF0F5','#fff','#fff']  
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: '#999',//'transparent'
+                    type:'dashed'
+                },
+                borderColor:'#8bc34a',
+            }
+        },
+        series: [
+            {
+                //name: '',
+                type: 'radar',
+                tooltip: {
+                    trigger: 'item'  //显示提示框
+                },
+                data: [
+                    {
+                        value: [5, 9, -0.25, 6, 130, 500 ],
+                        name: '参考区间-max',
+                        // areaStyle: {
+                        // }
+                    },
+                    {
+                        value: [-0.7, 0, -1, 0, 20, 150 ],
+                        name: '参考区间-min',
+                        // areaStyle: {
+                        // }
+                    },
+                    {
+                        value: [ _radar_lipo, _radar_flex, _radar_insatu, _radar_insolu, _radar_polar, _radar_size ]
+                        
+                    }
+                ]
+            }
+        ]
+    };
+
+    option && myChart1.setOption(option);
+
+})
+</script>
+</body>
+</html>

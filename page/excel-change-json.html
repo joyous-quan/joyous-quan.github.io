@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta name="robots" content="index,follow">
-    <meta name="format-detection" content="telephone=no,email=no">
-    <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
-    <title>DEMO - 本地Excel转JSON数据</title>
-    <link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
-    <link rel="stylesheet" href="/css/common.css?t=2021043002">
-    <script src="/js/jquery.js"></script>
-    <script src="/js/xlsx.full.min.js"></script>
-    <style type="text/css">
-        #dv_json{margin-top:15px;padding:15px;min-height:500px;border:1px solid #aaa;}
-    </style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<title>DEMO - 本地Excel转JSON数据</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" href="/css/common.css?t=2022082201">
+<script src="/js/jquery.js"></script>
+<script src="/js/xlsx.full.min.js"></script>
+<style type="text/css">
+    #dv_json{margin-top:15px;padding:15px;min-height:500px;border:1px solid #aaa;}
+</style>
 </head>
 <body class="demo_body">
     <div class="demo_header">
@@ -26,75 +26,82 @@
     </div>
     <div class="demo_main">
         <div class="layout">
-            <h2 class="title_h2">本地Excel转JSON数据</h2>
-            <div><label><input type="file" id="input_file"/></label><button class="btn btn_blue" id="button">复制JSON数据</button> <a class="btn btn_green" href="https://tool.lu/json/" target="_blank">去美化JSON数据</a> <a class="btn btn_green" href="/page/json-change-excel.html" target="_blank">JSON数据转Excel</a></div>
+            <h2 class="title_h2">本地 Excel 转 JSON 数据</h2>
+            <p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
+            <div>
+                <label><input type="file" id="input_file"/></label>
+                <button class="btn btn_blue" id="button">复制 JSON 数据</button>
+                <a class="btn btn_gray" href="https://tool.lu/json/" target="_blank">去美化 JSON 数据</a>
+                <a class="float_r btn btn_green" href="/page/json-change-excel.html" target="_blank">JSON 数据转 Excel</a>
+            </div>
             <div id="dv_json"></div>
         </div>
     </div>
     <div class="dv_footer">
         <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
     </div>
-    <script>
-        //复制JSON
-        document.getElementById('button').addEventListener('click',function(){
-            var copyObj = document.getElementById('dv_json');
-            copyHandler(copyObj);
-        })
-        function copyHandler(node){
-            let range = document.createRange();
-            range.selectNodeContents(node);
-            let selection = document.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            document.execCommand('Copy');
+
+<script>
+    //复制JSON
+    document.getElementById('button').addEventListener('click',function(){
+        var copyObj = document.getElementById('dv_json');
+        copyHandler(copyObj);
+    })
+    function copyHandler(node){
+        let range = document.createRange();
+        range.selectNodeContents(node);
+        let selection = document.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('Copy');
+    }
+
+    $(document).ready(function(){
+        /*FileReader共有4种读取方法：
+        1.readAsArrayBuffer(file)：将文件读取为ArrayBuffer。
+        2.readAsBinaryString(file)：将文件读取为二进制字符串
+        3.readAsDataURL(file)：将文件读取为Data URL
+        4.readAsText(file, [encoding])：将文件读取为文本，encoding缺省值为'UTF-8'*/
+
+        var wb; //读取完成的数据
+        var rABS = false; //是否将文件读取为二进制字符串
+        function fixdata(data) { //文件流转BinaryString
+            var obj = '', l = 0, w = 10240;
+            for (; l < data.byteLength / w; ++l) obj += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w, l * w + w)));
+            obj += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w)));
+            return obj;
         }
-
-        $(document).ready(function(){
-            /*FileReader共有4种读取方法：
-            1.readAsArrayBuffer(file)：将文件读取为ArrayBuffer。
-            2.readAsBinaryString(file)：将文件读取为二进制字符串
-            3.readAsDataURL(file)：将文件读取为Data URL
-            4.readAsText(file, [encoding])：将文件读取为文本，encoding缺省值为'UTF-8'*/
-
-            var wb; //读取完成的数据
-            var rABS = false; //是否将文件读取为二进制字符串
-            function fixdata(data) { //文件流转BinaryString
-                var obj = '', l = 0, w = 10240;
-                for (; l < data.byteLength / w; ++l) obj += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w, l * w + w)));
-                obj += String.fromCharCode.apply(null, new Uint8Array(data.slice(l * w)));
-                return obj;
-            }
-            $('#input_file').change(function() {
-                if (!this.files) { return; }
-                var f = this.files[0];
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    var data = e.target.result;
-                    if (rABS) {
-                        wb = XLSX.read(btoa(fixdata(data)), {
-                            type: 'base64'
-                        });
-                    } else {
-                        wb = XLSX.read(data, {
-                            type: 'binary'
-                        });
-                    }
-                    var dataStr = JSON.stringify(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]));
-                    var dataObj = JSON.parse(dataStr);
-                    getData(dataStr)
-
-                };
+        $('#input_file').change(function() {
+            if (!this.files) { return; }
+            var f = this.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var data = e.target.result;
                 if (rABS) {
-                    reader.readAsArrayBuffer(f);
+                    wb = XLSX.read(btoa(fixdata(data)), {
+                        type: 'base64'
+                    });
                 } else {
-                    reader.readAsBinaryString(f);
+                    wb = XLSX.read(data, {
+                        type: 'binary'
+                    });
                 }
-            })
-            //
-            function getData(data) {
-                $('#dv_json').text(data)
+                var dataStr = JSON.stringify(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]));
+                var dataObj = JSON.parse(dataStr);
+                getData(dataStr)
+
+            };
+            if (rABS) {
+                reader.readAsArrayBuffer(f);
+            } else {
+                reader.readAsBinaryString(f);
             }
         })
-    </script> 
+        //
+        function getData(data) {
+            $('#dv_json').text(data)
+        }
+    })
+</script> 
 </body>
 </html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<title>eCharts 一个页面引用两个图表</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/common.css?t=2022082201">
+<script src="/js/jquery.js?t=20220301001"></script>
+<style type="text/css" media="screen">
+    #echart_1,#echart_2{display:inline-block;height:320px;width:49%;} 
+</style>
+</head>
+<body class="demo_body">
+    <div class="demo_header">
+        <div class="layout">
+            <a href="/index.html"> 首页 </a>
+        </div>
+    </div>
+    <div class="demo_main">
+        <div class="layout">
+            <h2 class="title_h2">eCharts 一个页面引用两个图表</h2>
+            <p class="text_content">使用<a class="link_a" href="https://echarts.apache.org/zh/index.html" rel="noopener norefferrer" target="_blank"> eCharts </a>可视化图表库</p>
+            <div class="echarts">
+                <div id="echart_1"></div>
+                <div id="echart_2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="dv_footer">
+        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact us</a></p>
+    </div>
+
+<script type="text/javascript" src="/js/echarts.min.js"></script>
+<script>
+$(document).ready(function(){
+	   
+    //柱状图
+    var echart_publication = document.getElementById('echart_1');
+    var echart_institutes = document.getElementById('echart_2');
+    var charts = [];
+    var option1 , option2;
+
+    //柱状图 1
+    var myChart1 = echarts.init(echart_publication);
+    option1 = {
+        //color: ['#1862bd'],
+        title:{
+            text: '柱状图 1',
+            y: '18', 
+            textStyle:{
+                fontWeight:'bold',
+                fontSize : '16',
+                color : '#666'
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                inverse: false,
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+            }
+        ],
+        dataset: [
+            {
+                dimensions: ['year', 'count'],
+                source: [
+                    ['2010', 10],
+                    ['2011', 4],
+                    ['2012', 7],
+                    ['2013', 14],
+                    ['2014', 11],
+                    ['2015', 6],
+                    ['2016', 20],
+                    ['2017', 17],
+                    ['2018', 13],
+                    ['2019', 27],
+                    ['2020', 16],
+                    ['2021', 22]
+                ]
+            },
+            {
+                transform: {
+                    type: 'sort',
+                    config: { dimension: 'year', order: 'desc' }
+                }
+            }
+        ],
+        series: [
+            {
+                type: 'bar',
+                barWidth: '50%',
+                ensode: {
+                    x: 'year',
+                    y: 'count'
+                },
+                datasetIndex: 1,
+                label: {
+                    show: true,
+                    position: 'top'
+                }
+            }
+        ]
+        
+        
+    };
+    if (option1 && typeof option1 === 'object') {
+        myChart1.setOption(option1);
+    }
+    charts.push(myChart1);
+
+    //柱状图 2
+    var myChart2 = echarts.init(echart_institutes);
+    option2 = {
+        //color: ['#1862bd'],
+        title:{
+            text: '柱状图 2',
+            y: '18', 
+            textStyle:{
+                fontWeight:'bold',
+                fontSize : '16',
+                color : '#666'
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'value',
+            }
+        ],
+        yAxis: [
+            {
+                type: 'category',
+                inverse: true,
+            }
+        ],
+        dataset: [
+            {
+                dimensions: ['name', 'count'],
+                source: [
+                    ['Hannah Krause', 41],
+                    ['Zhao Qian', 20],
+                    ['Jasmin Krause', 52],
+                    ['Li Lei', 37],
+                    ['Karle Neumann', 25],
+                    ['Adrian Groß', 19],
+                    ['Mia Neumann', 71],
+                    ['Böhm Fuchs', 36],
+                    ['Han Meimei', 67]
+                ]
+            },
+            {
+                transform: {
+                    type: 'sort',
+                    config: { dimension: 'count', order: 'desc' }
+                }
+            }
+        ],
+        series: [
+            {
+                type: 'bar',
+                barWidth: '50%',
+                ensode: {
+                    x: 'name',
+                    y: 'count'
+                },
+                datasetIndex: 1,
+                label: {
+                    show: true,
+                    position: 'right'
+                }
+            }
+        ]
+    };
+    if (option2 && typeof option2 === 'object') {
+        myChart2.setOption(option2);
+    }
+    charts.push(myChart2);
+
+    window.onresize = function(){
+        for (var i = 0; i < charts.length; i++) {
+            charts[i].resize()
+        }
+    }
+ 
+})
+</script>
+</body>
+</html>

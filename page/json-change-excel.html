@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta name="robots" content="index,follow">
-    <meta name="format-detection" content="telephone=no,email=no">
-    <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
-    <title>DEMO - JSON数据转Excel表格</title>
-    <link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
-    <link rel="stylesheet" href="/css/common.css?t=2021043002">
-    <script src="/js/jquery.js"></script>
-    <script src="/js/xlsx.full.min.js"></script>
-	<style type="text/css">
-	    .dv_box{display:inline-block;width:100%;}
-	    .dv_left{float:left;width:45%;}
-	    .dv_left textarea{width:98%;min-height:300px;padding:10px;border:1px solid #ddd;}
-	    .dv_left textarea,.dv_right table{margin-top:10px;}
-	    .dv_right{float:right;width:55%;}
-	</style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<title>DEMO - JSON数据转Excel表格</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" href="/css/common.css?t=2022082201">
+<script src="/js/jquery.js"></script>
+<script src="/js/xlsx.full.min.js"></script>
+<style type="text/css">
+    .dv_box{display:inline-block;width:100%;}
+    .dv_left{float:left;width:45%;}
+    .dv_left textarea{width:98%;min-height:300px;padding:10px;border:1px solid #ddd;}
+    .dv_left textarea,.dv_right table{margin-top:10px;}
+    .dv_right{float:right;width:55%;}
+    .dv_right p{line-height:36px;}
+</style>
 </head>
 <body class="demo_body">
 	<div class="demo_header">
@@ -30,17 +31,15 @@
     </div>
     <div class="demo_main">
     	<div class="layout">
-	        <h2 class="title_h2">JSON数据转Excel表格</h2>
-	        <p>1. 请在文本框内输入JSON数据</p>
-	        <p>2. 点击按钮“JSON数据转table格式”</p>
-	        <p>3. 点击按钮“导出Excel文件”</p>
+	        <h2 class="title_h2">JSON 数据转 Excel 表格</h2>
+            <p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
 			<div class="dv_box">
 				<div class="dv_left">
-					<button class="btn btn_blue" onclick = "json_tab()">JSON数据转table格式</button> 请在文本框内输入JSON数据<br>
-					<textarea id="textarea" placeholder="输入JSON数据">[{"product_id":"001","product_name":"苹果","product_price":"10"},{"product_id":"002","product_name":"香蕉","product_price":"8"},{"product_id":"003","product_name":"草莓","product_price":"20"},{"product_id":"004","product_name":"芒果","product_price":"16"}]</textarea>
+					<p><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据</p>
+					<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10"},{"product_id":"002","product_name":"香蕉","product_price":"8"},{"product_id":"003","product_name":"草莓","product_price":"20"},{"product_id":"004","product_name":"芒果","product_price":"16"}]</textarea>
 				</div>
 				<div class="dv_right">
-					<button class="btn btn_green" onclick="excel_export()">导出Excel文件</button><br>
+					<p>展示 JSON 数据 <a class="btn btn_green float_r" href="/page/excel-change-json.html" target="_blank">Excel 转 JSON 数据</a></p>
 					<table id="table">
 						<thead>
 							<tr class="tab_thead">
@@ -56,77 +55,80 @@
     <div class="dv_footer">
         <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
     </div>
-	<script>
-		// 将一个sheet转成最终的excel文件的blob对象，然后利用URL.createObjectURL下载
-		function sheetToBlob(sheet, sheetName) {
-		    sheetName = sheetName || 'sheet1';
-		    var workbook = {
-		        SheetNames: [sheetName],
-		        Sheets: {}
-		    };
-		    workbook.Sheets[sheetName] = sheet; // 生成excel的配置项
 
-		    var wopts = {
-		        bookType: 'xlsx', // 要生成的文件类型
-		        bookSST: false, // 是否生成Shared String Table，官方解释是，如果开启生成速度会下降，但在低版本IOS设备上有更好的兼容性
-		        type: 'binary'
-		    };
-		    var wbout = XLSX.write(workbook, wopts);
-		    var blob = new Blob([strToArrBuf(wbout)], {
-		        type: "application/octet-stream"
-		    }); // 字符串转ArrayBuffer
-		    function strToArrBuf(s) {
-		        var buf = new ArrayBuffer(s.length);
-		        var view = new Uint8Array(buf);
-		        for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
-		        return buf;
-		    }
-		    return blob;
+<script>
+	// 将一个sheet转成最终的excel文件的blob对象，然后利用URL.createObjectURL下载
+	function sheetToBlob(sheet, sheetName) {
+	    sheetName = sheetName || 'sheet1';
+	    var workbook = {
+	        SheetNames: [sheetName],
+	        Sheets: {}
+	    };
+	    workbook.Sheets[sheetName] = sheet; // 生成excel的配置项
+
+	    var wopts = {
+	        bookType: 'xlsx', // 要生成的文件类型
+	        bookSST: false, // 是否生成Shared String Table，官方解释是，如果开启生成速度会下降，但在低版本IOS设备上有更好的兼容性
+	        type: 'binary'
+	    };
+	    var wbout = XLSX.write(workbook, wopts);
+	    var blob = new Blob([strToArrBuf(wbout)], {
+	        type: "application/octet-stream"
+	    }); // 字符串转ArrayBuffer
+	    function strToArrBuf(s) {
+	        var buf = new ArrayBuffer(s.length);
+	        var view = new Uint8Array(buf);
+	        for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+	        return buf;
+	    }
+	    return blob;
+	}
+
+	function openDownloadDialog(url, saveName) {
+	    if (typeof url == 'object' && url instanceof Blob) {
+	        url = URL.createObjectURL(url); // 创建blob地址
+	    }
+	    var aLink = document.createElement('a');
+	    aLink.href = url;
+	    aLink.download = saveName || ''; // HTML5新增的属性，指定保存文件名，可以不要后缀，注意，file:///模式下不会生效
+	    var event;
+	    if (window.MouseEvent) event = new MouseEvent('click');
+	    else {
+	        event = document.createEvent('MouseEvents');
+	        event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+	    }
+	    aLink.dispatchEvent(event);
+	}
+
+	//导出Excel文件
+	function excel_export() {
+	    var table = document.querySelector("#table");
+	    var sheet = XLSX.utils.table_to_sheet(table);//将一个table对象转换成一个sheet对象
+	    openDownloadDialog(sheetToBlob(sheet),'excel.xlsx');//
+	}
+
+	//JSON 转 table
+	function json_tab(){
+		var txtValObj = JSON.parse($('#textarea').val());
+		var tbodyHtml='',theadHtml='';
+
+		for (var key in txtValObj[0]) {
+			theadHtml += '<td>'+key+'</td>';
 		}
+		//遍历
+		$.each(txtValObj, function (idx, item) {
+			tbodyHtml += '<tr>'
+			$.each(item, function (subidx, subitem) {
+				tbodyHtml +='<td>'+subitem+'</td>';
+			})
+			tbodyHtml +='</tr>'
+		});
 
-		function openDownloadDialog(url, saveName) {
-		    if (typeof url == 'object' && url instanceof Blob) {
-		        url = URL.createObjectURL(url); // 创建blob地址
-		    }
-		    var aLink = document.createElement('a');
-		    aLink.href = url;
-		    aLink.download = saveName || ''; // HTML5新增的属性，指定保存文件名，可以不要后缀，注意，file:///模式下不会生效
-		    var event;
-		    if (window.MouseEvent) event = new MouseEvent('click');
-		    else {
-		        event = document.createEvent('MouseEvents');
-		        event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-		    }
-		    aLink.dispatchEvent(event);
-		}
+		$('.tab_thead').html(theadHtml);//thead html
+		$('.tab_tbody').html(tbodyHtml);//tbody html
 
-		//导出Excel文件
-		function excel_export() {
-		    var table = document.querySelector("#table");
-		    var sheet = XLSX.utils.table_to_sheet(table);//将一个table对象转换成一个sheet对象
-		    openDownloadDialog(sheetToBlob(sheet),'excel.xlsx');//
-		}
-
-		//JSON 转 table
-		function json_tab(){
-			var txtValObj = JSON.parse($('#textarea').val());
-			var tbodyHtml='',theadHtml='';
-
-			for (var key in txtValObj[0]) {
-				theadHtml += '<td>'+key+'</td>';
-			}
-			//遍历
-			$.each(txtValObj, function (idx, item) {
-				tbodyHtml += '<tr>'
-				$.each(item, function (subidx, subitem) {
-					tbodyHtml +='<td>'+subitem+'</td>';
-				})
-				tbodyHtml +='</tr>'
-			});
-
-			$('.tab_thead').html(theadHtml);//thead html
-			$('.tab_tbody').html(tbodyHtml);//tbody html
-		};
-	</script>
+		excel_export()
+	};
+</script>
 </body>
 </html>
