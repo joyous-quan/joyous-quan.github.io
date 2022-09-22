@@ -15,6 +15,10 @@
 <link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" href="/css/common.css?t=2022082201">
 <script src="/js/jquery.js"></script>
+<style type="text/css" media="screen">
+    .lab_checkbox input[type="checkbox"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;height:20px;width:20px;border:1px solid #0b1660;cursor:pointer;}
+    .lab_checkbox input[type="checkbox"]:checked{background-color:#dde9cd;background-image:url('/img/check.png');background-repeat:no-repeat;background-position:center;}
+</style>
 </head>
 <body class="demo_body">
      <div class="demo_header">
@@ -28,7 +32,7 @@
             <table>
                 <thead>  
                     <tr>
-                        <td width="8%"><label><input type="checkbox" id="selt_all">全选</label></td>
+                        <td width="8%"><label class="lab_checkbox"><input type="checkbox" id="selt_all">全选</label></td>
                         <td>编号</td>
                         <td>产品</td>
                         <td>数量</td>
@@ -69,7 +73,7 @@ var tbody_html = '';
 
 $.each(pro_data, function(idx, item) {
     tbody_html += '<tr>'
-        + '<td><label><input onclick="_checkedPro()" pid="'+ item.product_id +'" type="checkbox" class="selt_item">选择</label></td>'
+        + '<td><label class="lab_checkbox"><input onclick="_checkedPro()" pid="'+ item.product_id +'" type="checkbox" class="selt_item">选择</label></td>'
         + '<td>'+ (idx + 1) +'</td>'
         + '<td>'+ item.product_name +'</td>'
         + '<td><span class="pro_qty">'+ item.quantity +'</span> kg </td>'

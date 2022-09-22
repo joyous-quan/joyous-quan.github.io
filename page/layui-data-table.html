@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<meta name="renderer" content="webkit">
+	<meta name="force-rendering" content="webkit">
+	<meta name="robots" content="index,follow">
+	<meta name="format-detection" content="telephone=no,email=no">
+	<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+	<title>DEMO - layui 数据表格</title>
+	<link rel="shortcut icon" href="/img/favicon.ico?t=2021043002" type="image/x-icon">
+	<link rel="stylesheet" href="/css/common.css?t=20220922">
+	<link rel="stylesheet" href="/layui/css/layui.css">
+	<script src="/js/jquery.js"></script>
+	<script src="/layui/layui.js"></script>
+	<style type="text/css" media="screen">
+		.demo_header{z-index:1000;}
+		.demo_header a:hover{color:#fff;}
+		.mt-20{margin-top:20px;}
+		.plr-20{padding:0 20px;}
+		.layui-table, .layui-table thead th{text-align:left}
+		.layui-tr-checked{background-color:#f5fdf8;}
+		.layui-table-box ::selection{background:#deefe3;}
+		.layui-table-box ::-moz-selection{background:#deefe3;}
+	</style>	
+</head>
+<body>
+<body class="demo_body">
+	<div class="demo_header">
+		<div class="layout"><a href="/index.html"> 首页 </a></div>
+	</div>
+	<div class="demo_main">
+		<div class="layout">
+			<h2 class="title_h2">layui 数据表格</h2>
+			<p>按 Shift 键多选：</p>
+			<p>按下 Shift 键不松开，点击行，从点击选中的第一行开始计算；若松开 Shift 键，点击行，选中的第一行重新开始计算；点击行，选中、取消行</p>
+			<table class="layui-hide" id="tab_data_test" lay-filter="tab_data_test"></table>
+		</div>
+	</div>
+	<div class="dv_footer">
+        <p class="layout">©2022 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
+    </div>
+</div>
+<script type="text/html" id="toolbarDemo">
+  <div class="layui-btn-container">
+    <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+  </div>
+</script>
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+</script>
+<script>
+layui.use(['table'], function(){
+	var table = layui.table;
+
+	// 创建渲染实例
+	table.render({
+		elem: '#tab_data_test'
+		,url:'/data/layui-data.json' // 此处为静态模拟数据，实际使用时需换成真实接口
+		,toolbar: '#toolbarDemo'
+		,defaultToolbar: ['filter', 'exports']
+		,height: 'full-352' // 最大高度减去其他容器已占有的高度差
+		,cellMinWidth: 80
+		,page:true
+		,limit:15
+		,parseData: function(res){
+			var result;
+			if(this.page.curr){
+				result = res.data.slice(this.limit*(this.page.curr-1),this.limit*this.page.curr)
+			}else{
+				result = res.data.slice(0,this.limit)
+			}
+			return {
+				"code": res.code,
+				"msg": res.msg,
+				"count": res.count,
+				"data": result
+			}
+		}
+		,cols: [[
+			{type:'checkbox',fixed:'left'}
+			,{field:'id',title:'ID',width:80,sort:true}
+			,{field:'username',title:'用户',width:100}
+			,{field:'email',title:'邮箱',width:180}
+			,{field:'sex',title:'性别',width:80,sort:true}
+			,{field:'sign',title:'签名'}
+			,{field:'experience',title:'积分',width:80,sort:true}
+			,{field:'checkin',title:'打卡',width:80,sort:true}
+			,{field:'joinTime',title:'加入时间',width:120}
+			,{fixed:'right',title:'操作',width:100,toolbar:'#barDemo'}
+		]]
+		,done: function(){
+			var id = this.id;
+		}
+		,error: function(res, msg){
+			console.log(res, msg)
+		}
+	});
+  
+	// 工具栏事件
+	table.on('toolbar(tab_data_test)', function(obj){
+		var id = obj.config.id;
+		var checkStatus = table.checkStatus(id);
+		var othis = lay(this);
+		switch(obj.event){
+			case 'getCheckData':
+				var data = checkStatus.data;
+				layer.alert(layui.util.escape(JSON.stringify(data)));
+			break;
+		};
+	});
+	//触发单元格工具事件
+	table.on('tool(tab_data_test)', function(obj){ 
+		var curData = obj.data;
+		var editTrHtml = `
+			<form class="layui-form mt-20 plr-20" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label">用户</label>
+					<div class="layui-input-block">
+						<input type="text" value="${curData.username}" name="username" lay-verify="username" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">邮箱</label>
+					<div class="layui-input-block">
+						<input type="email" value="${curData.email}" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">性别</label>
+					<div class="layui-input-block">
+						<input type="text" value="${curData.sex}" name="sex" lay-verify="sex" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">签名</label>
+					<div class="layui-input-block">
+						<textarea name="sign" lay-verify="sign" class="layui-textarea">${curData.sign}</textarea>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">积分</label>
+					<div class="layui-input-block">
+						<input type="text" value="${curData.experience}" name="experience" lay-verify="experience" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">打卡</label>
+					<div class="layui-input-block">
+						<input type="text" value="${curData.checkin}" name="checkin" lay-verify="checkin" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button type="submit" class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
+						<button type="reset"  class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>`
+		if(obj.event === 'edit'){
+			//console.log(obj.config, curData);
+			layer.open({
+				title: '编辑数据 - '+ curData.id,
+				type: 1,
+				area: ['60%','75%'],
+				content: editTrHtml
+			});
+		}
+	});
+
+	//触发表格复选框选择
+	table.on('checkbox(tab_data_test)', function (data) {
+		var checkStatus = table.checkStatus('tab_data_test');
+		var isChecked = checkStatus.isAll;
+		var otable = $(this).parents('.layui-table-box');
+		//存在固定列
+		var otbody;
+		if (otable.find(".layui-table-fixed.layui-table-fixed-l").length > 0) {
+			otbody = otable.find(".layui-table-fixed.layui-table-fixed-l");
+		} else {
+			otbody = otable.find(".layui-table-body.layui-table-main");
+		}
+		var otrs = otbody.find("tr");
+		var maxLen = otrs.length;
+		
+		if(isChecked){
+			otable.find("tr").addClass('layui-tr-checked');
+		}else{
+			for (var i=0; i < maxLen; i++) {
+				isChecked = otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox input[name='layTableCheckbox']").is(":checked");
+				if(!isChecked){
+					otable.find("tr[data-index=" + i + "]").removeClass('layui-tr-checked');
+				}else{
+					otable.find("tr[data-index=" + i + "]").addClass('layui-tr-checked');
+				}
+			}
+		}
+		//console.log(maxLen,isChecked)
+	});
+});
+
+
+//防止事件冒泡
+$(document).on("click", "td div.laytable-cell-checkbox div.layui-form-checkbox", function (e) {
+	e.stopPropagation();
+});
+//按shift键多选
+$(document).on("click", ".layui-table-body table.layui-table tbody tr", function (e) {
+
+	var otable = $(this).parents('.layui-table-box');
+	//存在固定列
+	var otbody;
+	if (otable.find(".layui-table-fixed.layui-table-fixed-l").length > 0) {
+		otbody = otable.find(".layui-table-fixed.layui-table-fixed-l");
+	} else {
+		otbody = otable.find(".layui-table-body.layui-table-main");
+	}
+	var seltion = window.getSelection();
+	var startNode,endNode,startIdx,endIdx,isChecked;
+
+	var thisIdx = $(this).attr('data-index');
+	var maxLen = otbody.find('tr').length;
+
+	if(navigator.userAgent.indexOf('Firefox') >= 0){
+		startIdx = thisIdx;
+		endIdx = $(seltion.focusNode).parents('tr').attr('data-index');
+	}else{
+		startNode = seltion.getRangeAt(0).startContainer.parentNode;
+		endNode = seltion.getRangeAt(0).endContainer.parentNode;
+		startIdx = $(startNode).parents('tr').attr('data-index');
+		endIdx = $(endNode).parents('tr').attr('data-index');
+	}
+
+	//判断shift键是否按下
+	if( e.shiftKey == true ){
+		for (var i=0; i < maxLen; i++) {
+			if (startIdx <= i && i <= endIdx) {
+				isChecked = otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox input[name='layTableCheckbox']").is(":checked");
+				if(!isChecked){
+					otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox div.layui-form-checkbox i").click();
+					otable.find("tr[data-index=" + i + "]").addClass('layui-tr-checked');
+				}
+			}else if(startIdx <= i <= 0 || endIdx <= i<= maxLen) {
+				isChecked = otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox input[name='layTableCheckbox']").is(":checked");
+				if(isChecked){
+					otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox div.layui-form-checkbox i").click();
+					otable.find("tr[data-index=" + i + "]").removeClass('layui-tr-checked');
+				}
+			}
+		}
+	}else{
+		for (var i=0; i < maxLen; i++) {
+			if(i == thisIdx){
+				isChecked = otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox input[name='layTableCheckbox']").is(":checked");
+				otbody.find("tr[data-index=" + i + "]").find("td div.laytable-cell-checkbox div.layui-form-checkbox i").click();
+				if(!isChecked){
+					otable.find("tr[data-index=" + i + "]").addClass('layui-tr-checked');
+				}else{
+					otable.find("tr[data-index=" + i + "]").removeClass('layui-tr-checked');
+				}
+			}
+		}
+	}
+	//console.log( e.shiftKey, maxLen, startIdx, endIdx,);
+})
+
+</script>
+</body>
+</html>
