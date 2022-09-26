@@ -24,6 +24,7 @@
 		.layui-tr-checked{background-color:#f5fdf8;}
 		.layui-table-box ::selection{background:#deefe3;}
 		.layui-table-box ::-moz-selection{background:#deefe3;}
+		.layui-layer-content{padding:20px 20px 0;}
 	</style>	
 </head>
 <body>
@@ -46,14 +47,17 @@
 <script type="text/html" id="toolbarDemo">
   <div class="layui-btn-container">
     <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+    <button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="multi-row">多行</button>
+    <button class="layui-btn layui-btn-sm layui-btn-primary layui-border-blue" lay-event="default-row">单行</button>
   </div>
 </script>
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 <script>
-layui.use(['table'], function(){
-	var table = layui.table;
+layui.use(['table','form'], function(){
+	var table = layui.table, form = layui.form;
 
 	// 创建渲染实例
 	table.render({
@@ -89,14 +93,8 @@ layui.use(['table'], function(){
 			,{field:'experience',title:'积分',width:80,sort:true}
 			,{field:'checkin',title:'打卡',width:80,sort:true}
 			,{field:'joinTime',title:'加入时间',width:120}
-			,{fixed:'right',title:'操作',width:100,toolbar:'#barDemo'}
+			,{fixed:'right',title:'操作',width:120,toolbar:'#barDemo'}
 		]]
-		,done: function(){
-			var id = this.id;
-		}
-		,error: function(res, msg){
-			console.log(res, msg)
-		}
 	});
   
 	// 工具栏事件
@@ -107,15 +105,34 @@ layui.use(['table'], function(){
 		switch(obj.event){
 			case 'getCheckData':
 				var data = checkStatus.data;
-				layer.alert(layui.util.escape(JSON.stringify(data)));
+				layer.open({
+					title: '获取选中行数据'
+					,type: 1
+					,area: ['80%','60%']
+					,content: layui.util.escape(JSON.stringify(data))
+				});
+			break;
+			case 'multi-row':
+				table.reload('tab_data_test', {
+					// 设置行样式，此处以设置多行高度为例。若为单行，则没必要设置改参数 - 注：v2.7.0 新增
+					lineStyle: 'height: 100px;' 
+				});
+				layer.msg('即通过设置 lineStyle 参数可开启多行');
+			break;
+			case 'default-row':
+				table.reload('tab_data_test', {
+					lineStyle: null // 恢复单行
+				});
+				layer.msg('已设为单行');
 			break;
 		};
 	});
+
 	//触发单元格工具事件
 	table.on('tool(tab_data_test)', function(obj){ 
 		var curData = obj.data;
 		var editTrHtml = `
-			<form class="layui-form mt-20 plr-20" action="">
+			<form class="layui-form" action="#" lay-filter="editForm" id="${curData.id}">
 				<div class="layui-form-item">
 					<label class="layui-form-label">用户</label>
 					<div class="layui-input-block">
@@ -154,24 +171,50 @@ layui.use(['table'], function(){
 				</div>
 				<div class="layui-form-item">
 					<div class="layui-input-block">
-						<button type="submit" class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
-						<button type="reset"  class="layui-btn layui-btn-primary">重置</button>
+						<button type="submit" class="layui-btn" lay-filter="editFormBtn">保存</button>
 					</div>
 				</div>
 			</form>`
 		if(obj.event === 'edit'){
 			//console.log(obj.config, curData);
 			layer.open({
-				title: '编辑数据 - '+ curData.id,
-				type: 1,
-				area: ['60%','75%'],
-				content: editTrHtml
+				title: '编辑数据 - '+ curData.id
+				,type: 1
+				,area: ['60%','75%']
+				,content: editTrHtml
 			});
-		}
+		}else if(obj.event === 'del'){
+			layer.confirm('确定删除么', function(index){
+				obj.del();
+				layer.close(index);
+			});
+		} 
+	});
+
+	//提交事件
+	form.on('submit(editFormBtn)', function(data){
+		var id = $(this).parents('form.layui-form').attr('id')
+		var editData = Object.assign(data.field,{'id':id})
+		//console.log(editData)
+		var that = this;
+		layer.open({
+			title: '保存编辑数据 - ' + id
+			,type: 1
+			,area: ['40%','50%']
+			,content: JSON.stringify(editData)
+			,btn: ['确认', '取消'] //只是为了演示
+			,yes: function(){
+				//$(that).click(); 
+			}
+			,btn2: function(){
+				layer.closeAll();
+			}
+		});
+		return false;
 	});
 
 	//触发表格复选框选择
-	table.on('checkbox(tab_data_test)', function (data) {
+	table.on('checkbox(tab_data_test)', function (obj) {
 		var checkStatus = table.checkStatus('tab_data_test');
 		var isChecked = checkStatus.isAll;
 		var otable = $(this).parents('.layui-table-box');
@@ -208,7 +251,6 @@ $(document).on("click", "td div.laytable-cell-checkbox div.layui-form-checkbox",
 });
 //按shift键多选
 $(document).on("click", ".layui-table-body table.layui-table tbody tr", function (e) {
-
 	var otable = $(this).parents('.layui-table-box');
 	//存在固定列
 	var otbody;
@@ -219,7 +261,6 @@ $(document).on("click", ".layui-table-body table.layui-table tbody tr", function
 	}
 	var seltion = window.getSelection();
 	var startNode,endNode,startIdx,endIdx,isChecked;
-
 	var thisIdx = $(this).attr('data-index');
 	var maxLen = otbody.find('tr').length;
 
@@ -232,7 +273,6 @@ $(document).on("click", ".layui-table-body table.layui-table tbody tr", function
 		startIdx = $(startNode).parents('tr').attr('data-index');
 		endIdx = $(endNode).parents('tr').attr('data-index');
 	}
-
 	//判断shift键是否按下
 	if( e.shiftKey == true ){
 		for (var i=0; i < maxLen; i++) {
