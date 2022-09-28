@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<meta name="keywords" content="html,css,js,javascript,joyous-quan.github.io">
+<meta name="description" content="joyous-quan.github.io">
+<title>Canvas 绘制多边形 - DEMO</title>
+<link rel="shortcut icon" href="/img/favicon.ico?t=20220926001" type="image/x-icon">
+<link rel="stylesheet" href="/css/common.css?t=20220926001">
+<script src="/js/jquery.js"></script>
+<style type="text/css" media="screen">
+	#sidesSelect{width:50px;text-align:center;}
+</style>
+</head>
+<body class="demo_body">
+	<div class="demo_header">
+		<div class="layout">
+			<a href="/index.html"> 首页 </a>
+		</div>
+	</div>
+	<div class="demo_main">
+		<div class="layout">
+			<h2 class="title_h2">Canvas 绘制多边形</h2>
+			<div>
+				<label for="sidesSelect">多边形边数 </label>
+				<select id="sidesSelect">
+					<option selected value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+			</div>
+			<canvas id="canvas" height="300px" width="300px"></canvas>
+		</div>
+	</div>
+
+<script>
+    let canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d'),
+        sidesSelect = document.getElementById('sidesSelect'),
+        Point = function (x, y) {
+            this.x = x;
+            this.y = y;
+        };
+
+    /* 获得多边形的所有外接圆顶点 */
+    function getPolygonPoints(centerX,centerY,radius,sides,startAngle) {
+        let points = [],
+            angle = startAngle || 0;
+        for (let i=0;i<sides;++i){
+            points.push(new Point(centerX+radius*Math.sin(angle), centerY+radius*Math.cos(angle)));
+            angle += 2*Math.PI/sides;
+        }
+        return points;
+    }
+
+    /* 根据每个顶点的位置，创建多边形的路径 */
+    function createPolygonPath(centerX,centerY,radius,sides,startAngle) {
+        let points = getPolygonPoints(centerX,centerY,radius,sides,startAngle);
+
+        context.beginPath();
+        context.moveTo(points[0].x, points[0].y);
+
+        for (let i=0;i<sides;++i){
+            context.lineTo(points[i].x, points[i].y);
+        }
+        context.closePath();
+        console.log( points )
+    }
+
+    /* 绘制多边形 */
+    function drawRubberbandShape() {
+        createPolygonPath(canvas.width/2, canvas.height/2, canvas.width/3, parseInt(sidesSelect.value), 0);
+        context.stroke();
+    }
+    drawRubberbandShape();
+
+    //event
+    sidesSelect.onchange=function () {
+        context.clearRect(0,0,canvas.width, canvas.height);
+        drawRubberbandShape();
+    }
+
+</script>
+</body>
+</html>
+

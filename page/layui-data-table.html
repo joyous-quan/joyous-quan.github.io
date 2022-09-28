@@ -132,7 +132,7 @@ layui.use(['table','form'], function(){
 	table.on('tool(tab_data_test)', function(obj){ 
 		var curData = obj.data;
 		var editTrHtml = `
-			<form class="layui-form" action="#" lay-filter="editForm" id="${curData.id}">
+			<form class="layui-form" action="" lay-filter="editForm" id="${curData.id}">
 				<div class="layui-form-item">
 					<label class="layui-form-label">用户</label>
 					<div class="layui-input-block">
@@ -171,7 +171,7 @@ layui.use(['table','form'], function(){
 				</div>
 				<div class="layui-form-item">
 					<div class="layui-input-block">
-						<button type="submit" class="layui-btn" lay-filter="editFormBtn">保存</button>
+						<button type="submit" class="layui-btn" lay-submit="" lay-filter="editFormBtn">保存</button>
 					</div>
 				</div>
 			</form>`
@@ -180,7 +180,7 @@ layui.use(['table','form'], function(){
 			layer.open({
 				title: '编辑数据 - '+ curData.id
 				,type: 1
-				,area: ['60%','75%']
+				,area: ['40%','60%']
 				,content: editTrHtml
 			});
 		}else if(obj.event === 'del'){
@@ -193,18 +193,17 @@ layui.use(['table','form'], function(){
 
 	//提交事件
 	form.on('submit(editFormBtn)', function(data){
-		var id = $(this).parents('form.layui-form').attr('id')
-		var editData = Object.assign(data.field,{'id':id})
-		//console.log(editData)
-		var that = this;
+		var id = $(this).parents('form.layui-form').attr('id'),
+			editData = Object.assign(data.field,{'id':id});
+
 		layer.open({
 			title: '保存编辑数据 - ' + id
 			,type: 1
-			,area: ['40%','50%']
 			,content: JSON.stringify(editData)
-			,btn: ['确认', '取消'] //只是为了演示
+			,btn: ['确认', '取消']
 			,yes: function(){
-				//$(that).click(); 
+				console.log(editData)
+				layer.closeAll();
 			}
 			,btn2: function(){
 				layer.closeAll();
