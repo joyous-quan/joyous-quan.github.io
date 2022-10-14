@@ -116,6 +116,7 @@ layui.use(['table','form'], function(){
 						idx = res.data[i]['LAY_TABLE_INDEX'];
 						$('.layui-table-body tr[data-index=' + idx + '] input[type="checkbox"]').prop('checked', true);
 						$('.layui-table-body tr[data-index=' + idx + '] input[type="checkbox"]').next().addClass('layui-form-checked');
+						$('.layui-table-body tr[data-index=' + idx + ']').addClass('layui-tr-checked');
 					}
 				}
 			}
