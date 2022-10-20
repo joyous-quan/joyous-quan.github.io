@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +9,39 @@
 <meta name="robots" content="index,follow">
 <meta name="format-detection" content="telephone=no,email=no">
 <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
-<title>DEMO - 本地Excel转JSON数据</title>
+<title>DEMO - 本地 Excel 转 JSON 数据</title>
+
+    <meta property="og:site_name" content="quan.github.io">
+    <meta property="og:url" content="https://joyous-quan.github.io/page/excel-change-json.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Excel 文件 转 JSON 数据">
+    <meta property="og:description" content="Excel 文件 转换为 JSON 数据，jquery，xlsx.full.js，jquery.share.min.js">
+    <meta property="og:updated_time" content="2022-10-20">
+    <meta property="og:image" content="https://joyous-quan.github.io/img/excel-json.png">
+    <meta property="og:image:secure_url" content="https://joyous-quan.github.io/img/excel-json.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@quan.github.io">
+    <meta name="twitter:title" content="Excel 文件 转 JSON 数据">
+    <meta name="twitter:description" content="Excel 文件 转换为 JSON 数据，jquery，xlsx.full.js，jquery.share.min.js">
+    <meta name="twitter:image" content="https://joyous-quan.github.io/img/excel-json.png">
+
+
+
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" href="/static/css/common.css?t=2022082201">
+<link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202110260001">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
 <script type="text/javascript" src="/static/js/xlsx.full.min.js"></script>
+<script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202110260001"></script>
 <style type="text/css">
     #dv_json{margin-top:15px;padding:15px;min-height:500px;border:1px solid #aaa;}
+    #share{display:inline-block;}
+    #share .qrcode{margin:10px auto 0;}
+    .mtb-10{margin:10px 0;}
 </style>
 </head>
 <body class="demo_body">
@@ -35,6 +61,10 @@
                 <a class="float_r btn btn_green" href="/page/json-change-excel.html" target="_blank">JSON 数据转 Excel</a>
             </div>
             <div id="dv_json"></div>
+            <div class="mtb-10">
+                分享到：  
+                <div id="share"></div>
+            </div>
         </div>
     </div>
     <div class="dv_footer">
@@ -42,6 +72,10 @@
     </div>
 
 <script>
+    $(document).ready(function(){
+        // 分享到
+        $('#share').share({ sites: ['facebook', 'twitter', 'linkedin', 'tencent', 'google', 'weibo', 'wechat', 'qzone', 'qq', 'douban', 'diandian'] });
+    })
     //复制JSON
     document.getElementById('button').addEventListener('click',function(){
         var copyObj = document.getElementById('dv_json');
