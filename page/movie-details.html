@@ -54,7 +54,7 @@ $(function(){
    var id = getUrlParam('id');
     $.ajax({
         type:'get',
-        url:'../data/douban_movie.json?t=20210201',
+        url:'/static/data/douban_movie.json?t=20210201',
         dataType:'json',
         success:function(res,status){
             $.each(res, function(idx,item) {

@@ -69,7 +69,7 @@ layui.use(['table','form'], function(){
 	// 创建渲染实例
 	table.render({
 		elem: '#tabDemo'
-		,url:'/data/layui-data.json' // 此处为静态模拟数据，实际使用时需换成真实接口
+		,url:'/static/data/layui-data.json' // 此处为静态模拟数据，实际使用时需换成真实接口
 		,toolbar: '#toolBar'
 		,defaultToolbar: ['filter', 'exports']
 		,height: 'full-372' // 最大高度减去其他容器已占有的高度差
@@ -128,7 +128,7 @@ layui.use(['table','form'], function(){
 			}
 		}
 	});
-  
+
 	// 工具栏事件
 	table.on('toolbar(tabDemo)', function(obj){
 		var tab_id = obj.config.id;
@@ -292,7 +292,53 @@ layui.use(['table','form'], function(){
 		// console.log(curr_data ,chek_data)
 		uptNumExper();//更新选中条和总积分
 	});
+
+	//筛选列
+	table.on('toolbar()', function (obj) {
+		var config = obj.config;
+		var btnElem = $(this);
+		var tableId = config.id;
+		var tableView = config.elem.next();//
+		switch (obj.event) {
+			case 'LAYTABLE_COLS':
+				// 给筛选列添加全选还有反选的功能
+				var panelElem = btnElem.find('.layui-table-tool-panel');
+				var checkboxElem = panelElem.find('[lay-filter="LAY_TABLE_TOOL_COLS"]');
+				var checkboxCheckedElem = panelElem.find('[lay-filter="LAY_TABLE_TOOL_COLS"]:checked');
+				$('<li class="layui-form" lay-filter="LAY_TABLE_TOOL_COLS_FORM">' +
+					'<input type="checkbox" lay-skin="primary" lay-filter="LAY_TABLE_TOOL_COLS_ALL" '+ ((checkboxElem.length === checkboxCheckedElem.length) ? 'checked' : '') + ' title="全选">' +
+					'<span class="LAY_TABLE_TOOL_COLS_Invert_Selection">反选</span></li>')
+				.insertBefore(panelElem.find('li').first())
+				.on('click', '.LAY_TABLE_TOOL_COLS_Invert_Selection', function (event) {
+					layui.stope(event);
+					// 反选逻辑
+					panelElem.find('[lay-filter="LAY_TABLE_TOOL_COLS"]+').click();
+				});
+				form.render('checkbox', 'LAY_TABLE_TOOL_COLS_FORM');
+			break;
+		}
+	});
+
+	// 监听筛选列panel中的全选
+	form.on('checkbox(LAY_TABLE_TOOL_COLS_ALL)', function (obj) {
+		$(obj.elem).closest('ul')
+			.find('[lay-filter="LAY_TABLE_TOOL_COLS"]' + (obj.elem.checked ? ':not(:checked)' : ':checked') + '+').click();
+	});
+	// 监听筛选列panel中的单个记录的change
+	$(document).on('change', 'input[lay-filter="LAY_TABLE_TOOL_COLS"]', function (event) {
+		var elemCurr = $(this);
+		// 筛选列单个点击的时候同步全选的状态
+		$('input[lay-filter="LAY_TABLE_TOOL_COLS_ALL"]')
+			.prop('checked',
+			elemCurr.prop('checked') ? (!$('input[lay-filter="LAY_TABLE_TOOL_COLS"]').not(':checked').length) : false);
+
+		form.render('checkbox', 'LAY_TABLE_TOOL_COLS_FORM');
+	});
+
 });
+
+
+
 
 //删除数组自定义函数
 Array.prototype.remove = function(idx){

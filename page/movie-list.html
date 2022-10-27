@@ -47,7 +47,7 @@
     var all_data = [];
     var pageindex = 1;
     $(document).ready(function() {
-        $.getJSON('/data/douban_movie.json?t=' + Math.random(), {}, function(data) {
+        $.getJSON('/static/data/douban_movie.json?t=' + Math.random(), {}, function(data) {
             all_data = data;
             _toIdxPage(1, false);
         })
