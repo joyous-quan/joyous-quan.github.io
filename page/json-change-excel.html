@@ -9,29 +9,34 @@
 <meta name="robots" content="index,follow">
 <meta name="format-detection" content="telephone=no,email=no">
 <meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<meta name="description" content="JSON 数据转 Excel 表格" />
+<meta name="keywords" content="JSON转Excel, JSON 数据转 Excel 表格, 分享到社交网站, joyous-quan.github.io" />
 <title>JSON 数据转 Excel 表格 | joyous-quan.github.io</title>
 
 <meta property="og:site_name" content="joyous-quan.github.io">
 <meta property="og:url" content="https://joyous-quan.github.io/page/json-change-excel.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="JSON 数据转 Excel 表格 | og">
+<meta property="og:title" content="JSON 数据转 Excel 表格 | joyous-quan.github.io">
 <meta property="og:description" content="JSON 数据转 Excel 表格，jquery，xlsx.full.js，jquery.share.min.js | og">
-<meta property="og:updated_time" content="2022-10-21 15:35">
+<meta property="og:updated_time" content="2022-10-28 10:50">
 <meta property="og:image" content="https://joyous-quan.github.io/img/logo.jpg">
 <!-- twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@joyous-quan.github.io">
-<meta name="twitter:title" content="JSON 数据转 Excel 表格 | twitter">
+<meta name="twitter:title" content="JSON 数据转 Excel 表格 | joyous-quan.github.io">
 <meta name="twitter:description" content="JSON 数据转 Excel 表格，jquery，xlsx.full.js，jquery.share.min.js | twitter">
 <meta name="twitter:image" content="https://joyous-quan.github.io/img/logo.jpg">
+
+<link rel="preconnect" href="https://joyous-quan.github.io">
+<link rel="preconnect" href="https://joyous-quan.github.io" crossorigin>
 <link rel="canonical" href="https://joyous-quan.github.io/page/json-change-excel.html">
 
-<link rel="shortcut icon" href="/static/img/favicon.ico?t=202210211535" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="/static/css/common.css?t=202210211535">
-<link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202210211535">
-<script type="text/javascript" src="/static/js/jquery.js?t=202210211535"></script>
-<script type="text/javascript" src="/static/js/xlsx.full.min.js?t=202210211535"></script>
-<script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202210211535"></script>
+<link rel="shortcut icon" href="/static/img/favicon.ico?t=202210281050" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css?t=202210281050">
+<link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202210281050">
+<script type="text/javascript" src="/static/js/jquery.js?t=202210281050"></script>
+<script type="text/javascript" src="/static/js/xlsx.full.min.js?t=202210281050"></script>
+<script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202210281050"></script>
 <style type="text/css">
 	.dv_box{display:inline-block;width:100%;}
 	.dv_kuang{margin-top:10px;min-height:500px;padding:10px;border:1px solid #aaa;}
@@ -58,7 +63,7 @@
 				<div class="dv_left">
 					<p><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据</p>
 					<div class="dv_kuang">
-						<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10"},{"product_id":"002","product_name":"香蕉","product_price":"8"},{"product_id":"003","product_name":"草莓","product_price":"20"},{"product_id":"004","product_name":"芒果","product_price":"16"}]</textarea>
+						<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10","discount":"95%"},{"product_id":"002","product_name":"香蕉","product_price":"8","discount":"90%"},{"product_id":"003","product_name":"草莓","product_price":"20","discount":"98%"},{"product_id":"004","product_name":"芒果","product_price":"16","discount":"95%"}]</textarea>
 					</div>
 				</div>
 				<div class="dv_right">
@@ -102,7 +107,7 @@
 	    var wopts = {
 	        bookType: 'xlsx', // 要生成的文件类型
 	        bookSST: false, // 是否生成Shared String Table，官方解释是，如果开启生成速度会下降，但在低版本IOS设备上有更好的兼容性
-	        type: 'binary'
+	        type: 'binary' 
 	    };
 	    var wbout = XLSX.write(workbook, wopts);
 	    var blob = new Blob([strToArrBuf(wbout)], {
@@ -136,7 +141,7 @@
 	//导出Excel文件
 	function excel_export() {
 	    var table = document.querySelector("#table");
-	    var sheet = XLSX.utils.table_to_sheet(table);//将一个table对象转换成一个sheet对象
+	    var sheet = XLSX.utils.table_to_sheet(table,{raw:true});//将一个table对象转换成一个sheet对象 //raw:true 数据类型都为文字类型即无需自动转换各种类型
 	    openDownloadDialog(sheetToBlob(sheet),'excel.xlsx');//
 	}
 
