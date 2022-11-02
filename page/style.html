@@ -39,6 +39,12 @@
     .checkbox input[type=checkbox]:checked+label{padding-left:32px;background:#c1e79f;}
     .checkbox input[type=checkbox]:checked+label span{background:#fff;}
 
+    
+    .radiobox label{margin:10px;display:inline-block;cursor:pointer;}
+    .radiobox input[type=radio]{position:relative;width:16px;height:16px;vertical-align:middle;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;border:1px solid #ff7444;border-radius:16px;}
+    .radiobox input[type=radio]::before{position:absolute;top:2px;left:2px;right:2px;bottom:2px;border-radius:16px;background-color:#ffffff;content:'';}
+    .radiobox input[type=radio]:checked::before{background-color:#ff7444;}
+
     /*阴影效果*/
     .dv_shadow div{display:inline-block;width:100px;height:100px;text-align:center;line-height:100px;margin:30px;background-color:#f8e6e6;}
     /* box-shadow: x坐标 y坐标 模糊程度 (可选-阴影的尺寸) 颜色值 (outset,inset); */
@@ -85,7 +91,20 @@
         box-shadow:0 0 10px 5px #ff6600,
         0 0 10px 15px #ffff00;
     }
-
+    /*让网站变灰（filter:grayscale）*/
+    .grayscale {
+        filter: grayscale()
+    }
+    /*透明图片阴影效果*/
+    .dropShadow {
+      filter: drop-shadow(10px 10px 10px #A4BBFF);
+    }
+    /*::first-letter会选中某块级元素第一行的第一个字母。要注意必须为块级元素，也就是说只有在display属性值为block、inline-block、table-cell、list-item或table-caption的元素上才起作用。其他情况下将没有效果。*/
+    .txt_big_first::first-letter {
+        font-size: 40px;
+        font-style:italic;
+        color: aquamarine;
+      }
 </style>
 </head>
 <body class="demo_body">
@@ -112,6 +131,12 @@
             <h2 class="title_h2">checkbox</h2>
             <div class="paddingTB2 checkbox">
                 <input type="checkbox" value="1" id="checkboxInput" name=""/><label for="checkboxInput"><span></span></label>
+            </div>
+
+            <h2 class="title_h2">radio</h2>
+            <div class="paddingTB2 radiobox">
+                <label for="radioInput1"><input type="radio" value="1" id="radioInput1" name="radiotest"/> radio 1</label>
+                <label for="radioInput2"><input type="radio" value="2" id="radioInput2" name="radiotest"/> radio 2</label>
             </div>
 
             
