@@ -15,57 +15,51 @@
 <link rel="stylesheet" type="text/css" href="/static/owlcarousel/owl.theme.default.min.css">
 <link rel="stylesheet" type="text/css" href="/static/css/common.css?t=20220301001">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 <style type="text/css" media="screen">
     .owl-carousel-container .owl-controls{visibility:hidden;}
     .owl-carousel-container{position:relative;}
+    .owl-carousel .owl-item{padding:10px;}
     #prev,#next{position:absolute;z-index:10;top:34%;width:30px;height:36px;background:#555;opacity:0.8;filter:alpha(;opacity=80);color:#fff;text-align:center;font-size:24px;line-height:28px;border:none;border-radius:5px;cursor:pointer;}
     #prev{left:0;}
     #next{right:0;}
-    .item{min-height:200px;line-height:200px;background:#f5f5f5;font-size:30px;text-align:center;}
+    .item{min-height:300px;line-height:300px;background:#f7f7ff;border:1px solid #c7c7d9;box-shadow:0 0 10px  #c7c7d9;font-size:30px;text-align:center;}
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
-        </div>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>Owl Carousel 自定义分组轮播</span>
     </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">Owl Carousel 自定义分组轮播</h2>
-            <p class="text_content">使用<a class="link_a" href="http://owlcarousel2.github.io/OwlCarousel2/" rel="noopener norefferrer" target="_blank"> Owl Carousel </a>轮播图插件 </p>
-			<div class="owl-carousel-container">
-				<div class="owl-carousel owl-theme" id="carousel">
-					<div class="item">01</div>
-					<div class="item">02</div>
-					<div class="item">03</div>
-					<div class="item">04</div>
-					<div class="item">05</div>
-					<div class="item">06</div>
-					<div class="item">07</div>
-					<div class="item">08</div>
-					<div class="item">09</div>
-					<div class="item">10</div>
-					<div class="item">11</div>
-					<div class="item">12</div>
-					<div class="item">13</div>
-				</div>
-				<button id="prev"> < </button>
-				<button id="next"> > </button>
+    <div class="demo_main layout">
+        <h2 class="title_h2">Owl Carousel 自定义分组轮播</h2>
+        <p class="text_content">使用<a class="link_a" href="http://owlcarousel2.github.io/OwlCarousel2/" rel="noopener norefferrer" target="_blank"> Owl Carousel </a>轮播图插件 </p>
+		<div class="owl-carousel-container">
+			<div class="owl-carousel owl-theme" id="carousel">
+				<div class="item">01</div>
+				<div class="item">02</div>
+				<div class="item">03</div>
+				<div class="item">04</div>
+				<div class="item">05</div>
+				<div class="item">06</div>
+				<div class="item">07</div>
+				<div class="item">08</div>
+				<div class="item">09</div>
+				<div class="item">10</div>
+				<div class="item">11</div>
+				<div class="item">12</div>
+				<div class="item">13</div>
 			</div>
+			<button id="prev"> < </button>
+			<button id="next"> > </button>
 		</div>
 	</div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2022 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
-
-
+    <div class="demo_foot" id="demoFooter"></div>
 <script type="text/javascript" src="/static/owlcarousel/owl.carousel.min.js"></script>
 <script>
 $(document).ready(function(){
 	// 初始化轮播图
     $('#carousel').owlCarousel({
-        margin: 5,
         nav:false,
         dots:true,
         responsive: {

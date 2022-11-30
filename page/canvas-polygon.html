@@ -15,35 +15,33 @@
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=20220926001" type="image/x-icon">
 <link rel="stylesheet" href="/static/css/common.css?t=20220926001">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 <style type="text/css" media="screen">
 	#sidesSelect{width:50px;text-align:center;}
 </style>
 </head>
 <body class="demo_body">
-	<div class="demo_header">
-		<div class="layout">
-			<a href="/index.html"> 首页 </a>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>Canvas 绘制多边形</span>
+    </div>
+    <div class="demo_main layout">
+		<h2 class="title_h2">Canvas 绘制多边形</h2>
+		<div>
+			<label for="sidesSelect">多边形边数 </label>
+			<select id="sidesSelect">
+				<option selected value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
 		</div>
+		<canvas id="canvas" height="280px" width="280px"></canvas>
 	</div>
-	<div class="demo_main">
-		<div class="layout">
-			<h2 class="title_h2">Canvas 绘制多边形</h2>
-			<div>
-				<label for="sidesSelect">多边形边数 </label>
-				<select id="sidesSelect">
-					<option selected value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-				</select>
-			</div>
-			<canvas id="canvas" height="300px" width="300px"></canvas>
-		</div>
-	</div>
-
+    <div class="demo_foot" id="demoFooter"></div>
 <script>
     let canvas = document.getElementById('canvas'),
         context = canvas.getContext('2d'),
@@ -75,12 +73,15 @@
             context.lineTo(points[i].x, points[i].y);
         }
         context.closePath();
+        context.strokeStyle = "#fe5009";
+        context.fillStyle = "#fe5009";
+        context.fill()
         console.log( points )
     }
 
     /* 绘制多边形 */
     function drawRubberbandShape() {
-        createPolygonPath(canvas.width/2, canvas.height/2, canvas.width/3, parseInt(sidesSelect.value), 0);
+        createPolygonPath(canvas.width/2, canvas.height/2, canvas.width/2, parseInt(sidesSelect.value), 0);
         context.stroke();
     }
     drawRubberbandShape();

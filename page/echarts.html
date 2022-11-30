@@ -13,29 +13,25 @@
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/static/css/common.css?t=2022082201">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 <style type="text/css" media="screen">
     #echart_1,#echart_2{display:inline-block;height:320px;width:49%;} 
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>eCharts 一个页面引用两个图表</span>
+    </div>
+    <div class="demo_main layout">
+        <h2 class="title_h2">eCharts 一个页面引用两个图表</h2>
+        <p class="text_content">使用<a class="link_a" href="https://echarts.apache.org/zh/index.html" rel="noopener norefferrer" target="_blank"> eCharts </a>可视化图表库</p>
+        <div class="echarts">
+            <div id="echart_1"></div>
+            <div id="echart_2"></div>
         </div>
     </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">eCharts 一个页面引用两个图表</h2>
-            <p class="text_content">使用<a class="link_a" href="https://echarts.apache.org/zh/index.html" rel="noopener norefferrer" target="_blank"> eCharts </a>可视化图表库</p>
-            <div class="echarts">
-                <div id="echart_1"></div>
-                <div id="echart_2"></div>
-            </div>
-        </div>
-    </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact us</a></p>
-    </div>
+    <div class="demo_foot" id="demoFooter"></div>
 
 <script type="text/javascript" src="/static/js/echarts.min.js"></script>
 <script>

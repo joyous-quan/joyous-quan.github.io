@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<meta name="keywords" content="html,css,js,javascript,joyous-quan.github.io">
+<meta name="description" content="joyous-quan.github.io">
+<title>joyous-quan.github.io</title>
+<link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/common.css?t=2022082201">
+<link rel="stylesheet" href="/static/css/animate.css?t=2022082201">
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<style type="text/css">
+    .sign_form .hide{display:none;}
+    .demo_body,.wd_100{display:flex;flex-direction:column;justify-content:center;align-items:center;}
+    .sign_form{position:relative;width:768px;min-height:480px;border-radius:10px;background:#fff;box-shadow:0 0 10px #c7c7d9;}
+    .wd_100{position:absolute;top:0;bottom:0;left:0;width:100%;border-radius:10px;}
+    .wd_50{position:absolute;top:0;bottom:0;width:50%;}
+    .sign_tip .wd_100{color:#fff;}
+    .sign_in,.sign_up{padding:20px;}
+    .sign_tip,.btn_8b8aff{background:#8b8aff;}
+    .lab_ipt,.lab_chek{display:block;margin-top:10px;width:80%;}
+    .lab_ipt input,.lab_chek input[type=checkbox]::before{background-color:#fff;border:1px solid #c7c7d9;}
+    .lab_ipt input{padding:5px 6px;width:100%;height:38px;}
+    .lab_ipt input:focus{border-color:#8b8aff;}
+    .lab_chek{padding-top:10px;line-height:16px;}
+    .lab_chek input[type=checkbox]{position:relative;width:16px;height:16px;vertical-align:middle;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;}
+    .lab_chek input[type=checkbox]::before{position:absolute;top:0;left:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:100%;height:100%;border-radius:3px;content:'';cursor:pointer;text-align:center;font-size:14px;line-height:14px;}
+    .lab_chek input[type=checkbox]:checked::before{background-color:#8b8aff;border-color:#8b8aff;content:'\2713';font-weight:700;color:#fff;}
+    .lab_txt{padding-top:4px;line-height:20px;}
+    .btn{margin-top:20px;cursor:pointer;}
+    .btn_8b8aff{width:80%;height:40px;color:#fff;}
+    .btn_fff{width:40%;height:36px;border:1px solid #fff;background:0 0;color:#fff;}
+    .left{right:auto;left:0;border-bottom-left-radius:10px;border-top-left-radius:10px;}
+    .right{right:0;left:auto;border-top-right-radius:10px;border-bottom-right-radius:10px;}
+</style>
+</head>
+<body class="demo_body">
+    <div class="sign_form">
+        <div class="animate__animated wd_50 sign_in left">
+            <div class="wd_100">
+               <h2>登录</h2>
+                <label class="lab_ipt"><p class="lab_txt">邮箱</p><input type="email" name="email"></label>
+                <label class="lab_ipt"><p class="lab_txt">密码</p><input type="password" name="password"></label>
+                <button class="btn btn_8b8aff">登录</button>
+            </div>
+        </div>
+        <div class="animate__animated wd_50 sign_up hide">
+            <div class="wd_100">
+               <h2>注册</h2>
+                <label class="lab_ipt"><p class="lab_txt">姓名</p><input type="text" name="username"></label>
+                <label class="lab_ipt"><p class="lab_txt">邮箱</p><input type="email" name="email"></label>
+                <label class="lab_ipt"><p class="lab_txt">密码</p><input type="password" name="password"></label>
+                <label class="lab_chek"><input type="checkbox" name="agree">同意本站协议</label>
+                <button class="btn btn_8b8aff">注册</button>
+            </div>
+        </div>
+        <div class="animate__animated wd_50 sign_tip right">
+            <div class="animate__animated wd_100 sign_in_tip hide">
+               <h2>已有帐号？</h2>
+                <p class="mt_20">请使用您的帐号进行登录</p>
+                <button onclick="_go_sign_in()" class="btn btn_fff">去登录</button> 
+            </div>
+            <div class="animate__animated wd_100 sign_up_tip">
+                <h2>没有帐号？</h2>
+                <p class="mt_20">立即注册加入我们，和我们一起开始旅程吧</p>
+                <button onclick="_go_sign_up()" class="btn btn_fff">去注册</button>
+            </div>
+        </div>
+    </div>
+    <div class="demo_foot" id="demoFooter"></div>
+<script>
+    //切换登录form
+    function _go_sign_in(){
+        $('.sign_up_tip').addClass('animate__rotateInDownLeft').removeClass('hide').siblings('.sign_in_tip').removeClass('animate__rotateInDownRight').addClass('hide');
+        $('.sign_in').removeClass('right hide').addClass('animate__fadeInRight left').siblings('.sign_up').addClass('hide');
+        $('.sign_tip').removeClass('animate__fadeInRight left').addClass('animate__fadeInLeft right')
+    }
+    //切换注册form
+    function _go_sign_up(){
+        $('.sign_in_tip').addClass('animate__rotateInDownRight').removeClass('hide').siblings('.sign_up_tip').removeClass('animate__rotateInDownLeft').addClass('hide');
+        $('.sign_up').removeClass('left hide').addClass('animate__fadeInLeft right').siblings('.sign_in').addClass('hide');
+        $('.sign_tip').removeClass('right animate__fadeInLeft ').addClass('animate__fadeInRight left')
+    }
+</script>
+</body>
+</html>

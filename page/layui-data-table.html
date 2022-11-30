@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-	<meta name="renderer" content="webkit">
-	<meta name="force-rendering" content="webkit">
-	<meta name="robots" content="index,follow">
-	<meta name="format-detection" content="telephone=no,email=no">
-	<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
-	<title>DEMO - layui 数据表格</title>
-	<link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
-	<link rel="stylesheet" href="/static/css/common.css?t=20220922">
-	<link rel="stylesheet" href="/static/layui/css/layui.css">
-	<script type="text/javascript" src="/static/js/jquery.js"></script>
-	<script type="text/javascript" src="/static/layui/layui.js"></script>
-	<style type="text/css" media="screen">
-		.demo_header{z-index:1000;}
-		.demo_header a:hover{color:#fff;}
-		.layui-table, .layui-table thead th{text-align:left}
-		.layui-tr-checked{background-color:#f5fdf8;}
-		.layui-table-box ::selection{background:#deefe3;}
-		.layui-table-box ::-moz-selection{background:#deefe3;}
-		.layui-layer-content{padding:20px 20px 0;}
-	</style>	
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no,email=no">
+<meta name="google-site-verification" content="2v2b-8ma3sxVzH8TAl7ebxgM91sxNbXU0Kd5GAVeuCc">
+<title>layui 数据表格 | joyous-quan.github.io</title>
+<link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/common.css?t=20220922">
+<link rel="stylesheet" href="/static/layui/css/layui.css">
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/layui/layui.js"></script>
+<style type="text/css" media="screen">
+	.demo_head{z-index:1000;}
+	.demo_head a:hover{color:#fff;}
+	.layui-table, .layui-table thead th{text-align:left}
+	.layui-tr-checked{background-color:#f5fdf8;}
+	.layui-table-box ::selection{background:#deefe3;}
+	.layui-table-box ::-moz-selection{background:#deefe3;}
+	.layui-layer-content{padding:20px 20px 0;}
+</style>	
 </head>
 <body>
 <body class="demo_body">
-	<div class="demo_header">
-		<div class="layout"><a href="/index.html"> 首页 </a></div>
+    <div class="demo_head" id="demoHeader"></div>
+	<div class="demo_brumb layout">
+		<a href="/">首页</a><i> / </i><span>layui 数据表格</span>
 	</div>
-	<div class="demo_main">
-		<div class="layout">
-			<h2 class="title_h2">layui 数据表格</h2>
-			<p>按 Shift 键多选：</p>
-			<p>按下 Shift 键不松开，点击行，从点击选中的第一行开始计算；若松开 Shift 键，点击行，选中的第一行重新开始计算；点击行，选中、取消行</p>
-			<table class="layui-hide" id="tabDemo" lay-filter="tabDemo"></table>
-			<div class="align_r">
-				选中 <strong id="num">0</strong> 条，
-				总积分： <strong id="total">0</strong>
-			</div>
+	<div class="demo_main layout">
+		<h2 class="title_h2">layui 数据表格</h2>
+		<p>按 Shift 键多选：</p>
+		<p>按下 Shift 键不松开，点击行，从点击选中的第一行开始计算；若松开 Shift 键，点击行，选中的第一行重新开始计算；点击行，选中、取消行</p>
+		<table class="layui-hide" id="tabDemo" lay-filter="tabDemo"></table>
+		<div class="align_r">
+			选中 <strong id="num">0</strong> 条，
+			总积分： <strong id="total">0</strong>
 		</div>
 	</div>
-	<div class="dv_footer">
-        <p class="layout">©2022 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
+    <div class="demo_foot" id="demoFooter"></div>
 </div>
 <script type="text/html" id="toolBar">
 	<div class="layui-btn-container">
@@ -72,7 +70,7 @@ layui.use(['table','form'], function(){
 		,url:'/static/data/layui-data.json' // 此处为静态模拟数据，实际使用时需换成真实接口
 		,toolbar: '#toolBar'
 		,defaultToolbar: ['filter', 'exports']
-		,height: 'full-372' // 最大高度减去其他容器已占有的高度差
+		,height: 'full-404' // 最大高度减去其他容器已占有的高度差
 		,cellMinWidth: 80
 		,page:true
 		,limit:10

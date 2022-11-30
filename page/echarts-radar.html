@@ -13,45 +13,36 @@
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/static/css/common.css?t=2022082201">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
-<style type="text/css" media="screen">
-    #echart_radar{display:block;height:800px;width:800px;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;}
+<script type="text/javascript" src="/static/js/common.js"></script>
+<style type="text/css">
+    #echart_radar{display:block;height:600px;width:600px;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;-khtml-user-select: none;user-select: none;}
     .echart_txt span{display:inline-block;min-width:85px;}
     .echart_txt .mw-120{min-width:150px}
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
-        </div>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>eCharts radar</span>
     </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">eCharts radar</h2>
-            <p class="text_content">使用<a class="link_a" href="https://echarts.apache.org/zh/index.html" rel="noopener norefferrer" target="_blank"> eCharts </a>可视化图表库</p>
-			<div class="echarts">
-                <div id="echart_radar"></div>
-                <div class="echart_txt">
-                    The colored zone is the suitable physicochemical space for oral bioavailability.
-                    <br><span class="mw-120">LIPO(Lipophility):</span><span> -0.7</span> < <span class="mw-120">XLOGP3</span> < +5.0
-                    <br><span class="mw-120">SIZE:</span><span> 150g/mol</span> < <span class="mw-120">MV</span> < 500g/mol
-                    <br><span class="mw-120">POLAR(Polarity):</span><span> 20Å²</span> < <span class="mw-120">TPSA</span> < 130Å²
-                    <br><span class="mw-120">INSOLU(Insolubility):</span><span> -6</span> < <span class="mw-120">Log S (ESOL)</span> < 0
-                    <br><span class="mw-120">INSATU(Insaturation):</span><span> 0.25</span> < <span class="mw-120">Fraction Csp3</span> < 1
-                    <br><span class="mw-120">FLEX(Flexibility):</span><span> 0</span> < <span class="mw-120">Num. rotatable bonds</span> < 9 
-                    <!-- <br><br>
-                    <br><span>LIPO   </span><span>[ -0.7 ~ 5 ] </span>
-                    <br><span>SIZE   </span><span>[ 150 ~ 500 ]</span>
-                    <br><span>POLAR  </span><span>[ 20 ~ 130 ] </span>
-                    <br><span>INSOLU </span><span>[ -6 ~ 0 ]   </span>
-                    <br><span>INSATU </span><span>[ 0.25 ~ 1 ] </span>
-                    <br><span>FLEX   </span><span>[ 0 ~ 9 ]    </span> -->
-                </div>
+    <div class="demo_main layout">
+        <h2 class="title_h2">eCharts radar</h2>
+        <p class="text_content">使用<a class="link_a" href="https://echarts.apache.org/zh/index.html" rel="noopener norefferrer" target="_blank"> eCharts </a>可视化图表库</p>
+        <div class="echarts flex_center">
+            <div id="echart_radar"></div>
+            <div class="echart_txt">
+                The colored zone is the suitable physicochemical space for oral bioavailability.
+                <br><span class="mw-120">LIPO(Lipophility):</span><span> -0.7</span> < <span class="mw-120">XLOGP3</span> < +5.0
+                <br><span class="mw-120">SIZE:</span><span> 150g/mol</span> < <span class="mw-120">MV</span> < 500g/mol
+                <br><span class="mw-120">POLAR(Polarity):</span><span> 20Å²</span> < <span class="mw-120">TPSA</span> < 130Å²
+                <br><span class="mw-120">INSOLU(Insolubility):</span><span> -6</span> < <span class="mw-120">Log S (ESOL)</span> < 0
+                <br><span class="mw-120">INSATU(Insaturation):</span><span> 0.25</span> < <span class="mw-120">Fraction Csp3</span> < 1
+                <br><span class="mw-120">FLEX(Flexibility):</span><span> 0</span> < <span class="mw-120">Num. rotatable bonds</span> < 9 
             </div>
-		</div>
+        </div>
 	</div>
-    <div class="dv_footer"><p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact us</a></p></div>
-<script type="text/javascript" src="/js/echarts.min.js"></script>
+    <div class="demo_foot" id="demoFooter"></div>
+<script type="text/javascript" src="/static/js/echarts.min.js"></script>
 <script>
 $(document).ready(function(){      
     //雷达图
@@ -101,7 +92,7 @@ $(document).ready(function(){
     }
 
     option  = {
-        color: ['#8bc34a','#a9F0F5','#FF4444'], //'#8bc34a','#a9F0F5',
+        color: ['#8bc34a','#a9F0F5','#FF4444'],
         textStyle:{ color:'#333'},
 
         radar: {

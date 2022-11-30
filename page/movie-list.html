@@ -14,35 +14,28 @@
 <link rel="stylesheet" href="/static/css/common.css?t=2022082201">
 <!--cookie操作的js库-->
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/cookie.js"></script>
 <script type="text/javascript" src="/static/js/server.js"></script>
 <style>
-    .dv_list dl{position:relative;margin-top:20px;min-height:100px;padding-left:120px;line-height:24px;}
-    .dv_list dl dt{position:absolute;left:0;top:0;border:1px solid #ddd;width:100px;height:100px;}
-    .details-btn{border:1px solid #ddd;padding:5px 15px;}
+    .dv_list dl{position:relative;margin-top:20px;min-height:110px;padding-left:130px;line-height:24px;}
+    .dv_list dl dt{position:absolute;left:0;top:0;border:1px solid #c7c7d9;width:110px;height:110px;}
+    .details-btn{border:1px solid #c7c7d9;padding:5px 15px;}
+    .details-btn:hover{box-shadow:0 0 5px #c7c7d9;}
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
-        </div>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>豆瓣电影列表</span>
     </div>
-    <div class="demo_main">
-        <div class="layout con">
-            <h2 class="title_h2">豆瓣电影列表</h2>
-            <p>点击影片详情进入对应的影片详情页</p>
-            <div class="dv_list">
-            </div>
-            <div class="page">
-                
-            </div>
-        </div>
+    <div class="demo_main layout ">
+        <h2 class="title_h2">豆瓣电影列表</h2>
+        <p>点击影片详情进入对应的影片详情页</p>
+        <div class="dv_list"></div>
+        <div class="page"></div>
     </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
-    
+    <div class="demo_foot" id="demoFooter"></div> 
 <script>
     var all_data = [];
     var pageindex = 1;
@@ -82,7 +75,7 @@
                     + item.cover + '" alt=""></a></dt><dd>《'
                     + item.title + '》</dd><dd>导演：'
                     + item.directors + '</dd><dd>演员：'
-                    + item.casts + '</dd><dd><a class="details-btn" href="/page/movie-details.html?id='
+                    + item.casts + '</dd><dd class="mt_10"><a class="details-btn" href="/page/movie-details.html?id='
                     + item.id + '">影片详情</a></dd></dl>'
             })
             $('.dv_list').html(dl_html);

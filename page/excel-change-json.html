@@ -12,7 +12,7 @@
 <meta name="keywords" content="Excel转JSON, Excel 转 JSON 数据, 分享到社交网站, joyous-quan.github.io">
 <meta name="description" content="Excel 文件 转换为 JSON 数据，jquery，xlsx.full.js，jquery.share.min.js">
 <title>Excel 转 JSON 数据 | joyous-quan.github.io</title>
-
+<!-- share  meta https://ogp.me/ -->
 <meta property="og:site_name" content="joyous-quan.github.io">
 <meta property="og:url" content="https://joyous-quan.github.io/page/excel-change-json.html">
 <meta property="og:type" content="website">
@@ -29,7 +29,6 @@
 <meta name="twitter:title" content="Excel 文件 转 JSON 数据 | twitter:title">
 <meta name="twitter:description" content="Excel 文件 转换为 JSON 数据，jquery，xlsx.full.js，jquery.share.min.js | twitter:description">
 <meta name="twitter:image" content="https://joyous-quan.github.io/img/logo.jpg">
-
 <link rel="preconnect" href="https://joyous-quan.github.io">
 <link rel="preconnect" href="https://joyous-quan.github.io" crossorigin>
 <link rel="canonical" href="https://joyous-quan.github.io/page/excel-change-json.html">
@@ -38,41 +37,36 @@
 <link rel="stylesheet" href="/static/css/common.css?t=202210251420">
 <link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202210251420">
 <script type="text/javascript" src="/static/js/jquery.js?t=202210251420"></script>
+<script type="text/javascript" src="/static/js/common.js?t=202210281050"></script>
 <script type="text/javascript" src="/static/js/xlsx.full.min.js?t=202210251420"></script>
 <script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202210251420"></script>
 <style type="text/css">
-    #dv_json{margin-top:15px;padding:15px;min-height:500px;border:1px solid #aaa;}
+    #dv_json{margin-top:15px;padding:10px;min-height:500px;border:1px solid #c7c7d9;}
     #share{display:inline-block;}
     #share .qrcode{margin:10px auto 0;}
-    .mtb-10{margin:10px 0;}
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>本地 Excel 转 JSON 数据</span>
+    </div>
+    <div class="demo_main layout">
+        <h2 class="title_h2">本地 Excel 转 JSON 数据</h2>
+        <p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
+        <div>
+            <label><input type="file" id="input_file"/></label>
+            <button class="btn btn_blue" id="button">复制 JSON 数据</button>
+            <a class="btn btn_gray" href="https://tool.lu/json/" target="_blank">去美化 JSON 数据</a>
+            <a class="float_r btn btn_green" href="/page/json-change-excel.html" target="_blank">JSON 数据转 Excel</a>
+        </div>
+        <div id="dv_json"></div>
+        <div class="mt_20">
+            分享到：  
+            <div id="share"></div>
         </div>
     </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">本地 Excel 转 JSON 数据</h2>
-            <p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
-            <div>
-                <label><input type="file" id="input_file"/></label>
-                <button class="btn btn_blue" id="button">复制 JSON 数据</button>
-                <a class="btn btn_gray" href="https://tool.lu/json/" target="_blank">去美化 JSON 数据</a>
-                <a class="float_r btn btn_green" href="/page/json-change-excel.html" target="_blank">JSON 数据转 Excel</a>
-            </div>
-            <div id="dv_json"></div>
-            <div class="mtb-10">
-                分享到：  
-                <div id="share"></div>
-            </div>
-        </div>
-    </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
+    <div class="demo_foot" id="demoFooter"></div>
 
 <script>
     $(document).ready(function(){

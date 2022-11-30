@@ -15,35 +15,181 @@
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" href="/static/css/common.css?t=2022082201">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<style type="text/css">
+    .demo_left{position:relative;padding-right:20px;width:260px;}
+    .left_nav{position:sticky;top:60px;padding:10px 15px 20px;}
+    .left_nav li{border-bottom:1px dashed #c7c7d9;}
+    .left_nav a{display:block;padding:8px 0;line-height:24px;}
+    .demo_right{flex:1;}
+    .txt_ul li span{padding-right:10px;display:inline-block;min-width: 120px;text-align:right;}
+</style>
 </head>
 <body class="demo_body">
-     <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><span>笔记</span>
+    </div>
+    <div class="demo_main layout">
+        <div class="flex_between">
+            <div class="demo_left">
+                <ul class="left_nav demo_card">
+                    <li><a href="#title_excel">EXCEL 排序</a></li>
+                    <li><a href="#title_copy">快速复制文件名</a></li>
+                    <li><a href="#title_sublime">Sublime Text 常用快捷键</a></li>
+                    <li><a href="#title_git">git 相关</a></li>
+                    <li><a href="#title_js">js 相关</a></li>
+                    <li><a href="#title_css">css 相关</a></li>
+                </ul>
+            </div>
+            <div class="demo_right ">
+                <h2 class="title_h2" id="title_excel">EXCEL 排序</h2>
+                <h3 class="title_h3">Sheet1 A列 按 sheet2 A列排序</h3>
+                <div class="text_content">
+                    <p>Sheet2：</p>
+                    <p class="pdl_20">sheet2 B列-B2 下拉填充序列</p>
+                    <p>Sheet1：</p>
+                    <p class="pdl_20">A列 插入列 B1-辅助排序</p>
+                    <p class="pdl_20">B2 输入 <strong>=VLOOKUP(A2,Sheet2!A:B,2,0) </strong> 下拉填充</p>
+                    <p class="pdl_20">点击表格右上 排序和筛选 选择自定义排序</p>
+                    <p class="pdl_20">列： 辅助排序、 排序依据： 数值 、 次序：升序 </p>
+                </div>
+                <h2 class="title_h2" id="title_copy">快速复制文件名</h2>
+                <div class="text_content">
+                    <p>第一步：打开需要批量复制文件名称的文件夹；</p>
+                    <p>第二步：在该文件夹下新建一个txt文件，然后将.txt后缀名修改为.bat，此时直接忽略系统弹出的警告；</p>
+                    <p>第三步：右键打开刚刚改名的.bat文件，选择使用文本编辑器（推荐Notepad++）打开，复制如下内容到文件中，然后保存：</p>
+                    <p><strong>DIR *.*  /B >LIST.TXT</strong></p>
+                    <p>第四步：双击.bat文件，即可在此文件夹下直接生成名字为LIST.TXT的文件名；</p>
+                </div>
+
+                <h2 class="title_h2" id="title_sublime">Sublime Text 常用快捷键</h2>
+                <div class="text_content">
+                    <h3 class="title_h3">选择类</h3>
+                    <ul class="txt_ul">
+                        <li><span>Alt + F3</span>选择全部的相同文本</li>
+                        <li><span>Ctrl + D</span>依次选中光标所占的文本</li>
+                        <li><span>Ctrl + L</span>依次向下选中行</li>
+                        <li><span>Ctrl + Shift + L</span>先选中多行，再按快捷键，会在每行行尾插入光标</li>
+                        <li><span>Ctrl + M</span>光标移动至 括号内 结束或开始的位置</li>
+                        <li><span>Ctrl + Shift + M</span>选择括号内的内容</li>
+                        <li><span>Ctrl + Shift + Enter</span>在上一行插入新行</li>
+                        <li><span>Ctrl + Enter</span>在下一行插入新行</li>
+                        <li><span>Ctrl + ←/→</span>向左/右移动光标</li>
+                        <li><span>Ctrl + Shift + ↑/↓</span>将光标所在行和上/下一行代码互换</li>
+                        <li><span>Shift + ↑/↓/←/→</span>向上/下/左/右选中多行</li>
+                    </ul>
+                    <h3 class="title_h3 mt_20">编辑类</h3>
+                    <ul class="txt_ul">
+                        <li><span>Ctrl + J</span>选择全部的相同文本</li>
+                        <li><span>Ctrl + Shift + D</span>复制光标所在整行，插入到行尾</li>
+                        <li><span>Ctrl + K + K</span>从光标处开始删除代码至行尾</li>
+                        <li><span>Ctrl + Shift + K</span>删除整行</li>
+                        <li><span>Ctrl + F2</span>设置书签</li>
+                        <li><span>Ctrl + T</span>左右字母互换</li>
+                        <li><span>F6</span>单词检测拼写 </li>
+                    </ul>
+                    <h3 class="title_h3 mt_20">显示类</h3>
+                    <ul class="txt_ul">
+                        <li><span>Alt + Shift + N </span> 等分 N 屏( N 字母上方的数字)</li>
+                        <li><span>Ctrl + K + B</span>开启/关闭侧边栏</li>
+                        <li><span>Shift + F11</span>免打扰模式</li>
+                        <li><span>F11 </span>全屏模式</li>
+                    </ul>
+                </div>
+
+                <h2 class="title_h2" id="title_git">git 相关</h2>
+                <div class="text_content">
+                    <h3 class="title_h3">git commit 时出现：please enter the commit message for your changes</h3>
+                    <a href="https://www.cnblogs.com/twoheads/p/9510843.html" title=""></a>
+                    <p>可以看到，默认的提交消息包含最后一次运行 git status 的输出，放在注释行里，另外开头还有一空行，供你输入提交说明。你完全可以去掉这些注释行，不过留着也没关系，多少能帮你回想起这次更新的内容有哪些。（如果觉得这还不够，可以用 -v 选项将修改差异的每一行都包含到注释中来。）退出编辑器时，Git 会丢掉注释行，将说明内容和本次更新提交到仓库。</p>
+                    <p>如果要输入解释的话就需要:</p>
+                    <p>1.按键盘字母 i 进入insert模式</p>
+                    <p>2.修改最上面那行黄色合并信息,可以不修改</p>
+                    <p>3.按键盘左上角"Esc"</p>
+                    <p>4.输入":wq",注意是冒号+wq,按回车键即可</p>
+                </div>
+
+                <h2 class="title_h2" id="title_js">js 相关</h2>
+                <div class="text_content">
+                    <h3 class="title_h3">javascript 错误类型</h3>
+                    <p>Error 是基类型，其他错误类型都是继承该类型，浏览器很少会抛出 Error 类型的错误</p>
+                    <p>InternalError 类型的错误会在底层 javascript 引擎抛出异常时由浏览器抛出</p>
+                    <p>EvalError 类型错误会在使用 eval() 函数发生异常时抛出</p>
+                    <p>RangeError 会在数值越界时抛出</p>
+                    <p>ReferenceError 会在找不到对象时发生</p>
+                    <p>SyntaxError 经常在给eval()传入的字符串包含 javascript 语法错误时发生</p>
+                    <p>TypeError 很常见，主要发生变量不是预期类型，或者访问不存在的方法时等原因导致，尤其是在使用类型特定的操作而变量类型不对时</p>
+                    <p>URIError 只会在使用 encodeURL() 或 decodeURL() 但传入了格式错误的 URL 时发生</p>
+
+                    <p>同一个监听器注册多个处理器 (addEventListener,removeEventListener)</p>
+                    <p class="pdl_20">myElement.onclick = functionA;<br>
+                    myElement.onclick = functionB;<br>
+                    第二行会覆盖第一行，但是下面这种方式就会正常工作了：<br>
+                    myElement.addEventListener('click', functionA);<br>
+                    myElement.addEventListener('click', functionB);</p>
+
+                    <p>当您要在多个元素上设置相同的事件处理程序时，e.target非常有用，并且在发生事件时对所有元素执行某些操作。</p>
+                </div>
+
+                <h2 class="title_h2" id="title_css">css 相关</h2>
+                <div class="text_content">
+                    <p>class 命名，尽量避免公共性质的，如： .footer, #header</p>
+                    <p>会读取某些插件的样式，导致自己的网页出现意外的样式；可用：品牌名-header</p>
+                    <br>
+                    <h3 class="title_h3">media查询 展示不同分辨率的图片</h3>
+                    <a href="https://www.cnblogs.com/PYiP/p/11751377.html" title=""></a>
+                    <p>.avatar{ background-image: url(xx_1x.png); }</p>       
+                    <p>@media only screen and (-webkit-min-device-pixel-ratio:2){
+                             .avatar{ background-image: url(xx_2x.png); }
+                        }</p>        
+                    <p>@media only screen and (-webkit-min-device-pixel-ratio:3){
+                         .avatar{ background-image: url(xx_3x.png); }
+                    }</p>
+                    <br>
+                    <h3 class="title_h3">img 标签属性 srcset</h3>
+                    <p>srcset=" xx_2x.png 2x, xx_3x.png 3x" </p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">EXCEL 排序</h2>
-            <h3 class="title_h3">Sheet1 A列 按 sheet2 A列排序</h3>
-            <div class="text_content">
-                <p>Sheet2：</p>
-                <p class="pdl_20">sheet2 B列-B2 下拉填充序列</p>
-                <p>Sheet1 ：</p>
-                <p class="pdl_20">A列 插入列 B1-辅助排序</p>
-                <p class="pdl_20">B2 输入 <strong>=VLOOKUP(A2,Sheet2!A:B,2,0) </strong> 下拉填充</p>
-                <p class="pdl_20">点击表格右上 排序和筛选 选择自定义排序</p>
-                <p class="pdl_20">列： 辅助排序、 排序依据： 数值 、 次序：升序 </p>
-            </div>
-            <h2 class="title_h2">css 相关</h2>
-            <div class="text_content">
-                <p>class 命名，尽量避免公共性质的，如： .footer, #header</p>
-                <p>会读取某些插件的样式，导致自己的网页出现意外的样式;可用：品牌名-header</p>
-            </div>
-        </div>
-    </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact us</a></p>
-    </div>
+    <div class="demo_foot" id="demoFooter"></div>
+<script>
+    windowAddMouseWheel();
+    function windowAddMouseWheel() {
+        var scrollFunc = function (e) {
+            e = e || window.event;
+            if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
+                if (e.wheelDelta > 0) { //当滑轮向上滚动时
+                    //console.log("滑轮向上滚动");
+                    $('.demo_head').addClass('fixed_show')
+                    $('.demo_head').removeClass('fixed_hide')
+                }
+                if (e.wheelDelta < 0) { //当滑轮向下滚动时
+                   // console.log("滑轮向下滚动");
+                    $('.demo_head').addClass('fixed_hide')
+                    $('.demo_head').removeClass('fixed_show')
+                }
+            } else if (e.detail) {  //Firefox滑轮事件
+                if (e.detail> 0) { //当滑轮向上滚动时
+                    console.log("滑轮向上滚动");
+                    $('.demo_head').addClass('fixed_show')
+                    $('.demo_head').removeClass('fixed_hide')
+                }
+                if (e.detail< 0) { //当滑轮向下滚动时
+                    console.log("滑轮向下滚动");
+                    $('.demo_head').addClass('fixed_hide')
+                    $('.demo_head').removeClass('fixed_show')
+                }
+            }
+        };
+        //给页面绑定滑轮滚动事件
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        }
+        //滚动滑轮触发scrollFunc方法
+        window.onmousewheel = document.onmousewheel = scrollFunc;
+    }
+</script>
 </body>
 </html>

@@ -15,38 +15,32 @@
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" href="/static/css/common.css?t=2022082201">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 <style type="text/css">
     .ul_menu{display:inline-block;width:100%;}
-    .ul_menu li{float:left;padding:10px;}
-    .ul_menu li a{display:block;padding:8px 20px;background:#f6e2e2;}
-    .demo_main{min-height:100vh}
-    .demo_header{-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
-    .fixed_hide{top:-100%;}
-    .fixed_show{top:0;}
+    .ul_menu li{float:left;}
+    .ul_menu li a{display:block;padding:10px 20px;border-radius:4px;}
+    .ul_menu li a:hover{background-color:#f7f7ff;}  
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
-        </div>
-    </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">本网站 DEMO 导航分类</h2>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_main layout">
+        <h2 class="title_h2">本网站 DEMO 导航分类</h2>
+        <div class="text_content">
             <h3 class="title_h3">JSON & EXCEL</h3>
             <ul class="ul_menu">
                 <li><a href="/page/excel-change-json.html">本地 Excel 转 JSON 数据</a></li>
                 <li><a href="/page/json-change-excel.html">JSON 数据转 Excel 表格</a></li>
             </ul>
+            <h3 class="title_h3">layui</h3>
+            <ul class="ul_menu">
+                <li><a href="/page/layui-data-table.html">layui 数据表格</a></li>
+            </ul>
             <h3 class="title_h3">数据</h3>
             <ul class="ul_menu">
                 <li><a href="/page/movie-list.html">豆瓣电影列表数据分页</a></li>
                 <li><a href="/page/checkbox.html">选择框 + - 数据</a></li>
-            </ul>
-            <h3 class="title_h3">layui</h3>
-            <ul class="ul_menu">
-                <li><a href="/page/layui-data-table.html">layui 数据表格</a></li>
             </ul>
             <h3 class="title_h3">轮播图</h3>
             <ul class="ul_menu">
@@ -57,12 +51,17 @@
                 <li><a href="/page/echarts.html">eCharts 一个页面引用两个图表</a></li>
                 <li><a href="/page/echarts-radar.html">eCharts 雷达图</a></li>
             </ul>
-            <h3 class="title_h3">Canvas</h3>
+            <!-- <h3 class="title_h3">Canvas</h3>
             <ul class="ul_menu">
                 <li><a href="/page/canvas-polygon.html">Canvas 绘制多边形</a></li>
             </ul>
-            
-            <h2 class="title_h2">常用工具网站导航</h2>
+            <h3 class="title_h3">其他</h3>
+            <ul class="ul_menu">
+                <li><a href="/page/note.html">笔记</a></li>
+            </ul> -->
+        </div>
+        <h2 class="title_h2">常用工具网站导航</h2>
+        <div class="text_content">
             <ul class="ul_menu">
                 <li><a href="https://www.wdku.net/" rel="noopener norefferrer" target="_blank">工具大全</a></li>
                 <li><a href="https://tool.lu/" rel="noopener norefferrer" target="_blank">在线工具</a></li>
@@ -71,49 +70,44 @@
                 <li><a href="https://www.gaitubao.com/" rel="noopener norefferrer" target="_blank">在线修改图片</a></li>
             </ul>
         </div>
-        
     </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
+    <div class="demo_foot" id="demoFooter"></div>
 <script>
-
-windowAddMouseWheel();
-
-function windowAddMouseWheel() {
-    var scrollFunc = function (e) {
-        e = e || window.event;
-        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
-            if (e.wheelDelta > 0) { //当滑轮向上滚动时
-                //console.log("滑轮向上滚动");
-                $('.demo_header').addClass('fixed_show')
-                $('.demo_header').removeClass('fixed_hide')
+    //windowAddMouseWheel();
+    function windowAddMouseWheel() {
+        var scrollFunc = function (e) {
+            e = e || window.event;
+            if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
+                if (e.wheelDelta > 0) { //当滑轮向上滚动时
+                    //console.log("滑轮向上滚动");
+                    $('.demo_head').addClass('fixed_show')
+                    $('.demo_head').removeClass('fixed_hide')
+                }
+                if (e.wheelDelta < 0) { //当滑轮向下滚动时
+                   // console.log("滑轮向下滚动");
+                    $('.demo_head').addClass('fixed_hide')
+                    $('.demo_head').removeClass('fixed_show')
+                }
+            } else if (e.detail) {  //Firefox滑轮事件
+                if (e.detail> 0) { //当滑轮向上滚动时
+                    console.log("滑轮向上滚动");
+                    $('.demo_head').addClass('fixed_show')
+                    $('.demo_head').removeClass('fixed_hide')
+                }
+                if (e.detail< 0) { //当滑轮向下滚动时
+                    console.log("滑轮向下滚动");
+                    $('.demo_head').addClass('fixed_hide')
+                    $('.demo_head').removeClass('fixed_show')
+                }
             }
-            if (e.wheelDelta < 0) { //当滑轮向下滚动时
-               // console.log("滑轮向下滚动");
-                $('.demo_header').addClass('fixed_hide')
-                $('.demo_header').removeClass('fixed_show')
-            }
-        } else if (e.detail) {  //Firefox滑轮事件
-            if (e.detail> 0) { //当滑轮向上滚动时
-                console.log("滑轮向上滚动");
-                $('.demo_header').addClass('fixed_show')
-                $('.demo_header').removeClass('fixed_hide')
-            }
-            if (e.detail< 0) { //当滑轮向下滚动时
-                console.log("滑轮向下滚动");
-                $('.demo_header').addClass('fixed_hide')
-                $('.demo_header').removeClass('fixed_show')
-            }
+        };
+        //给页面绑定滑轮滚动事件
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
         }
-    };
-    //给页面绑定滑轮滚动事件
-    if (document.addEventListener) {
-        document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        //滚动滑轮触发scrollFunc方法
+        window.onmousewheel = document.onmousewheel = scrollFunc;
     }
-    //滚动滑轮触发scrollFunc方法
-    window.onmousewheel = document.onmousewheel = scrollFunc;
-}
 </script>
 </body>
 </html>

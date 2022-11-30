@@ -12,7 +12,7 @@
 <meta name="description" content="JSON 数据转 Excel 表格" />
 <meta name="keywords" content="JSON转Excel, JSON 数据转 Excel 表格, 分享到社交网站, joyous-quan.github.io" />
 <title>JSON 数据转 Excel 表格 | joyous-quan.github.io</title>
-
+<!-- share  meta https://ogp.me/ -->
 <meta property="og:site_name" content="joyous-quan.github.io">
 <meta property="og:url" content="https://joyous-quan.github.io/page/json-change-excel.html">
 <meta property="og:type" content="website">
@@ -26,7 +26,6 @@
 <meta name="twitter:title" content="JSON 数据转 Excel 表格 | joyous-quan.github.io">
 <meta name="twitter:description" content="JSON 数据转 Excel 表格，jquery，xlsx.full.js，jquery.share.min.js | twitter">
 <meta name="twitter:image" content="https://joyous-quan.github.io/img/logo.jpg">
-
 <link rel="preconnect" href="https://joyous-quan.github.io">
 <link rel="preconnect" href="https://joyous-quan.github.io" crossorigin>
 <link rel="canonical" href="https://joyous-quan.github.io/page/json-change-excel.html">
@@ -35,60 +34,52 @@
 <link rel="stylesheet" type="text/css" href="/static/css/common.css?t=202210281050">
 <link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202210281050">
 <script type="text/javascript" src="/static/js/jquery.js?t=202210281050"></script>
+<script type="text/javascript" src="/static/js/common.js?t=202210281050"></script>
 <script type="text/javascript" src="/static/js/xlsx.full.min.js?t=202210281050"></script>
 <script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202210281050"></script>
 <style type="text/css">
 	.dv_box{display:inline-block;width:100%;}
-	.dv_kuang{margin-top:10px;min-height:500px;padding:10px;border:1px solid #aaa;}
 	.dv_left{float:left;width:38%;}
-	.dv_left textarea{width:100%;min-height:470px;border:none;resize:none;}
+	.dv_left textarea{padding:10px;width:100%;min-height:500px;resize:none;border:1px solid #c7c7d9;}
+	.kuang{min-height:500px;border:1px solid #c7c7d9;}
 	.dv_right{float:right;width:60%;}
 	.dv_right p{line-height:36px;}
 	#share{display:inline-block;}
-	#share .qrcode{margin:10px auto 0;}
-	.mtb-10{margin:10px 0;}
+    #share .qrcode{margin:10px auto 0;}
 </style>
 </head>
 <body class="demo_body">
-	<div class="demo_header">
-        <div class="layout">
-            <a href="/index.html"> 首页 </a>
-        </div>
-    </div>
-    <div class="demo_main">
-    	<div class="layout">
-	        <h2 class="title_h2">JSON 数据转 Excel 表格</h2>
-            <p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
-			<div class="dv_box">
-				<div class="dv_left">
-					<p><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据</p>
-					<div class="dv_kuang">
-						<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10","discount":"95%"},{"product_id":"002","product_name":"香蕉","product_price":"8","discount":"90%"},{"product_id":"003","product_name":"草莓","product_price":"20","discount":"98%"},{"product_id":"004","product_name":"芒果","product_price":"16","discount":"95%"}]</textarea>
-					</div>
-				</div>
-				<div class="dv_right">
-					<p>TABLE 展示 JSON 数据 <a class="btn btn_green float_r" href="/page/excel-change-json.html" target="_blank">Excel 转 JSON 数据</a></p>
-					<div class="dv_kuang">
-						<table id="table">
-							<thead>
-								<tr class="tab_thead">
-								</tr>
-							</thead>
-							<tbody class="tab_tbody">
-							</tbody>
-						</table>
-					</div>
+	<div class="demo_head" id="demoHeader"></div>
+	<div class="demo_brumb layout">
+		<a href="/">首页</a><i> / </i><span>JSON 数据转 Excel 表格</span>
+	</div>
+	<div class="demo_main layout">
+		<h2 class="title_h2">JSON 数据转 Excel 表格</h2>
+		<p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
+		<div class="dv_box">
+			<div class="dv_left">
+				<p class="mb_10"><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据</p>
+				<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10","discount":"95%"},{"product_id":"002","product_name":"香蕉","product_price":"8","discount":"90%"},{"product_id":"003","product_name":"草莓","product_price":"20","discount":"98%"},{"product_id":"004","product_name":"芒果","product_price":"16","discount":"95%"}]</textarea>
+			</div>
+			<div class="dv_right">
+				<p class="mb_10">TABLE 展示 JSON 数据 <a class="btn btn_green float_r" href="/page/excel-change-json.html" target="_blank">Excel 转 JSON 数据</a></p>
+				<div class="kuang">
+					<table class="tab-bbor" id="table">
+						<thead>
+							<tr class="tab_thead">
+							</tr>
+						</thead>
+						<tbody class="tab_tbody">
+						</tbody>
+					</table>
 				</div>
 			</div>
-			<div class="mtb-10">
-                分享到：  
-                <div id="share"></div>
-            </div>
 		</div>
-    </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
+		<div class="mt_20">
+			分享到： <div id="share"></div>
+		</div>
+	</div>
+	<div class="demo_foot" id="demoFooter"></div>
 
 <script>
 	$(document).ready(function(){
@@ -147,26 +138,47 @@
 
 	//JSON 转 table
 	function json_tab(){
-		var txtValObj = JSON.parse($('#textarea').val());
-		var tbodyHtml='',theadHtml='';
-
-		for (var key in txtValObj[0]) {
-			theadHtml += '<td>'+key+'</td>';
+		var str = $('#textarea').val();
+		if(isJSON(str)){
+			var txtValObj = JSON.parse(str);
+			var tbodyHtml = '', theadHtml = '';
+			for (var key in txtValObj[0]) {
+				theadHtml += '<td>'+key+'</td>';
+			}
+			//遍历
+			$.each(txtValObj, function (idx, item) {
+				tbodyHtml += '<tr>'
+				$.each(item, function (subidx, subitem) {
+					tbodyHtml +='<td>'+subitem+'</td>';
+				})
+				tbodyHtml +='</tr>'
+			});
+			$('.tab_thead').html(theadHtml);//thead html
+			$('.tab_tbody').html(tbodyHtml);//tbody html
+			excel_export();
+		}else if(str == ''){
+			alert("请输入 JSON 格式数据")
+		}else{
+			alert("不是正确的 JSON 格式")
 		}
-		//遍历
-		$.each(txtValObj, function (idx, item) {
-			tbodyHtml += '<tr>'
-			$.each(item, function (subidx, subitem) {
-				tbodyHtml +='<td>'+subitem+'</td>';
-			})
-			tbodyHtml +='</tr>'
-		});
-
-		$('.tab_thead').html(theadHtml);//thead html
-		$('.tab_tbody').html(tbodyHtml);//tbody html
-
-		excel_export()
 	};
+	// JSON 格式
+	function isJSON(str) {
+		if (typeof str == 'string') {
+			try {
+				var obj=JSON.parse(str);
+				if(typeof obj == 'object' && obj ){
+					return true;
+				}else{
+					return false;
+				}
+			} catch(e) {
+				console.log('error：'+str+'!!!'+e);
+				return false;
+			}
+		}
+		console.log('It is not a string!')
+	}
 </script>
 </body>
 </html>

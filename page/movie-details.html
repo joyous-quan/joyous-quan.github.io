@@ -13,32 +13,29 @@
 <link rel="shortcut icon" href="/static/img/favicon.ico?t=2021043002" type="image/x-icon">
 <link rel="stylesheet" href="/static/css/common.css?t=2022082201">
 <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/cookie.js"></script>
 <script type="text/javascript" src="/static/js/server.js"></script>
 <style type="text/css">
     .demo_header span{float:right;}
     .demo_header span a{font-size:14px;}
-    .dv_list dl{position:relative;margin-top:20px;min-height:400px;padding-left:260px;line-height:30px;}
+    .dv_list dl{position:relative;margin-top:20px;min-height:260px;padding-left:260px;line-height:36px;}
     .dv_list dl dt{position:absolute;left:0;top:0;border:1px solid #ddd;width:240px;height:240px;}
+    .btn{margin-top:10px;background-color:#f7f7ff;transition:.2s all;box-shadow:0 0 10px #c7c7d9;border-radius:4px;}
 </style>
 </head>
 <body class="demo_body">
-    <div class="demo_header">
-        <div class="layout">
-            <a href="/index.html" title="">首页</a>
-            <span><a href="javascript:history.go(-1);">返回</a></span>
+    <div class="demo_head" id="demoHeader"></div>
+    <div class="demo_brumb layout">
+        <a href="/">首页</a><i> / </i><a href="/page/movie-list.html">豆瓣电影列表</a><i> / </i><span id="curr">送你一朵小红花</span>
+    </div>
+    <div class="demo_main layout">
+        <h2 class="title_h2">豆瓣电影详情页</h2>
+        <div class="dv_list details-con">
+            <dl class="dl_list" pid="35096844"><dt><img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2618247457.jpg" alt=""></dt><dd>《送你一朵小红花》</dd><dd>导演：韩延</dd><dd>演员：易烊千玺,刘浩存,朱媛媛,高亚麟,夏雨</dd><dd>评分：7.4</dd><dd><button class="btn add-cart" pid="35096844">加入片单</button></dd></dl>
         </div>
     </div>
-    <div class="demo_main">
-        <div class="layout">
-            <h2 class="title_h2">豆瓣电影详情页</h2>
-            <div class="dv_list details-con">
-            </div>
-        </div>
-    </div>
-    <div class="dv_footer">
-        <p class="layout">&copy;2021 joyous-quan.github.io <a href="mailto:joyous-quan@outlook.com">Contact US</a></p>
-    </div>
+    <div class="demo_foot" id="demoFooter"></div>
 
 <script>
 $(function(){
@@ -50,7 +47,7 @@ $(function(){
         return null;
     }
     
-   //接收URL中的参数Id
+    //接收URL中的参数Id
    var id = getUrlParam('id');
     $.ajax({
         type:'get',
@@ -59,15 +56,18 @@ $(function(){
         success:function(res,status){
             $.each(res, function(idx,item) {
                 //根据id获取详情数据
+                var title, str;//
                 if(id == item.id){
-                    var str = '<dl class="dl_list" pid="'+item.id+'"><dt><img src="'
+                    title = item.title
+                    str = '<dl class="dl_list" pid="'+item.id+'"><dt><img src="'
                     + item.cover + '" alt=""></dt><dd>《'
                     + item.title + '》</dd><dd>导演：'
                     + item.directors + '</dd><dd>演员：'
                     + item.casts + '</dd><dd>评分：'
                     + item.rate + '</dd><dd><button class="btn add-cart" pid="'+item.id+'">加入片单</button></dd></dl>'
                 }
-                $('.dv_list').append(str);
+                $('.dv_list').html(str);
+                $('#curr').html(title)
             });
         }
     })
