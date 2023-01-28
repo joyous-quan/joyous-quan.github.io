@@ -7,6 +7,7 @@ body{padding:0;min-width:320px;}
 .login-register-con h2{margin-bottom:10px;color:#14263e;font-size:24px;}
 .login-register-con label{display:block;padding-top:8px;}
 .login-register-con p{padding-top:8px;}
+.login-register-con input[type='password'],.login-register-con input[type='text'],.btn{border-radius:0;}
 .login-register-con input[type='password'],.login-register-con input[type='text'],.login-register-con select{margin-top:2px;padding:0 5px;width:100%;height:36px;border:1px solid #ddd;vertical-align:middle;}
 .login-register-con .btn{height:38px;font-weight:700;font-size:16px;line-height:38px;}
 .btn-blue{margin-top:4px;width:100%;background:#007bc4;color:#fff;}
