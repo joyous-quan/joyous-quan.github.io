@@ -20,6 +20,13 @@
     .lab_checkbox input[type=checkbox]{position:relative;width:16px;height:16px;vertical-align:middle;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;}
     .lab_checkbox input[type=checkbox]::before{position:absolute;top:0;left:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:100%;height:100%;border:1px solid #c7c7d9;;border-radius:3px;background-color:#fff;content:'';cursor:pointer;text-align:center;font-size:14px;line-height:14px;}
     .lab_checkbox input[type=checkbox]:checked::before{background-color:#8b8aff;border-color:#8b8aff;content:'\2713';font-weight:700;color:#fff;}
+    .qty_box{display:inline-block;border:1px solid #ddd;background:#f1f1ff;}
+    .qty_box input,.qty_box b{float:left;height:24px;line-height:24px;text-align:center;}
+    .qty_box input{width:30px;border:1px solid #eee;border-top:none;border-bottom:none;}
+    .qty_box b{width:24px;cursor:pointer;user-select:none;}
+    .qty_box b:active{background:#e6e6f5;}
+    .btn_box .pdr_20{display:inline-block;min-width:200px;}
+    .btn_box i{color:#8b8aff;font-style:normal;font-size:16px;}
 </style>
 </head>
 <body class="demo_body">
@@ -33,24 +40,19 @@
             <thead>  
                 <tr>
                     <td width="8%"><label class="lab_checkbox"><input type="checkbox" id="selt_all">全选</label></td>
-                    <td>编号</td>
-                    <td>产品</td>
-                    <td>数量</td>
-                    <td>单价</td>
-                    <td>折扣</td>
-                    <td>小计</td>
+                    <td width="8%">编号</td>
+                    <td width="14%">产品</td>
+                    <td width="15%">单价</td>
+                    <td width="15%">折扣</td>
+                    <td width="20%">数量</td>
+                    <td width="15%">小计</td>
                 </tr>
             </thead>
             <tbody id="pro_tbody">
-                <tr>
-                    <td>data</td>
-                </tr>
             </tbody>
         </table>
-        <div class="btn_box">
-            <p class="mt_20">
-                <b id="pro_num">0</b> 个产品，总额：<b> ¥ </b><b class="price_total">0</b>
-            </p>
+        <div class="btn_box mt_20">
+            <b class="pdr_20"><i id="pro_num">0</i> 个产品，总额： <i>¥</i> <i class="price_total">0</i></b>
         </div>
     </div>
     <div class="demo_foot" id="demoFooter"></div>
@@ -58,7 +60,7 @@
 <script>
 var pro_data = [
     {"product_id":"001","product_name":"苹果","quantity":2, "unit_price":"16","discount":0.88},
-    {"product_id":"002","product_name":"香蕉","quantity":4, "unit_price":"12" ,"discount":0.88},
+    {"product_id":"002","product_name":"香蕉","quantity":4, "unit_price":"12","discount":0.88},
     {"product_id":"003","product_name":"草莓","quantity":1, "unit_price":"36","discount":0.88},
     {"product_id":"004","product_name":"芒果","quantity":1, "unit_price":"24","discount":0.88},
     {"product_id":"004","product_name":"荔枝","quantity":1, "unit_price":"68","discount":0.88},
@@ -67,17 +69,23 @@ var pro_data = [
 var tbody_html = '';
 
 $.each(pro_data, function(idx, item) {
-    tbody_html += '<tr>'
+    tbody_html += '<tr class="pro_tr">'
         + '<td><label class="lab_checkbox"><input onclick="_checkedPro()" pid="'+ item.product_id +'" type="checkbox" class="selt_item">选择</label></td>'
         + '<td>'+ (idx + 1) +'</td>'
         + '<td>'+ item.product_name +'</td>'
-        + '<td><span class="pro_qty">'+ item.quantity +'</span> kg </td>'
         + '<td>￥ <span class="pro_price">'+ item.unit_price +'</span>/kg</td>'
         + '<td><span class="pro_dis">'+ item.discount +'</span> 折</td>'
-        + '<td class="td_total">￥ <span class="line_total">'+ (item.quantity *(item.unit_price * item.discount)).toFixed(2)  +'</span></td>'
+        + '<td><span class="qty_box"><b class="qty_minus" onclick="_proQtyMinus(this)">-</b><input class="pro_qty" type="text" min="1" onpropertychange="_proQtyChange(this)" onkeyup="_proQtyChange(this)" value="'+ item.quantity +'"><b class="qty_add" onclick="_proQtyAdd(this)">+</b></sapn></td>'
+        + '<td>￥ <span class="line_total">'+ (item.quantity *(item.unit_price * item.discount)).toFixed(2)  +'</span></td>'
         + '</tr>'
     })
 $('#pro_tbody').html(tbody_html);
+
+//全选
+$("#selt_all").click(function(){
+    $(".selt_item").prop("checked", $(this).is(":checked"));
+    _checkedPro();
+})
 
 //选择产品
 function _checkedPro(){
@@ -90,33 +98,78 @@ function _checkedPro(){
         checkPro.each(function(idx, item){
             ProId = $(this).attr("pid");
             //paramsProId.push(ProId);
-            lineTotal = Number($(this).parent().parent().siblings('.td_total').find('.line_total').text()); 
+            lineTotal = Number($(this).parents('.pro_tr').find('.line_total').text()); 
             priceTotal += lineTotal;
         });
         $('.price_total').html(priceTotal.toFixed(2));
         $('#pro_num').html($(".selt_item:checked").length);
-
         //全选
         if( checkPro.length < maxLen){
             $("#selt_all").prop("checked", false);
-            console.log(checkPro.length , maxLen)
+            //console.log(checkPro.length, maxLen)
         }else if( checkPro.length == maxLen){
             $("#selt_all").prop("checked", true);
         }
-
     }else{
         $('#pro_num').html(0);
         $('.price_total').html(0);
     }
-
     //console.log($(".selt_item:checked").length, lineTotal)
 }
 
-//全选
-$("#selt_all").click(function(){
-    $(".selt_item").prop("checked", $(this).is(":checked"));
-    _checkedPro();
-})
+//输入框改变数量
+function _proQtyChange(obj){
+    var proQty = Number($(obj).val());
+    var proTr = $(obj).parents('.pro_tr'),
+        proPrice = Number(proTr.find('.pro_price').text()),
+        proDis = Number(proTr.find('.pro_dis').text()),
+        lineTotal = Number(proTr.find('.line_total').text());
+
+    if(proQty<1){
+        proQty = 1
+    }
+    $(obj).val(proQty)
+
+    lineTotal = (proQty *(proPrice * proDis)).toFixed(2);
+    proTr.find('.line_total').text(lineTotal);
+    _checkedPro()
+}
+
+//数量减
+function _proQtyMinus(obj){
+    var proQty = Number($(obj).siblings('.pro_qty').val());
+    var proTr = $(obj).parents('.pro_tr'),
+        proPrice = Number(proTr.find('.pro_price').text()),
+        proDis = Number(proTr.find('.pro_dis').text()),
+        lineTotal = Number(proTr.find('.line_total').text());
+
+    if(proQty>1){
+        proQty -- 
+    }else{
+        proQty = 1
+    }
+    //console.log(proQty,proPrice,proDis,lineTotal)
+    lineTotal = (proQty *(proPrice * proDis)).toFixed(2);
+    $(obj).siblings('.pro_qty').val(proQty);
+    proTr.find('.line_total').text(lineTotal);
+    _checkedPro()
+
+}
+//数量加
+function _proQtyAdd(obj){
+    var proQty = Number($(obj).siblings('.pro_qty').val());
+    var proTr = $(obj).parents('.pro_tr'),
+        proPrice = Number(proTr.find('.pro_price').text()),
+        proDis = Number(proTr.find('.pro_dis').text()),
+        lineTotal = Number(proTr.find('.line_total').text());
+
+    proQty ++ 
+    lineTotal = (proQty *(proPrice * proDis)).toFixed(2);
+    //console.log(proQty,proPrice,proDis,lineTotal)
+    $(obj).siblings('.pro_qty').val(proQty);
+    proTr.find('.line_total').text(lineTotal);
+    _checkedPro()
+}
 
 </script>
 </html>
