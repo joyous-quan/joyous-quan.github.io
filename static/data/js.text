@@ -546,7 +546,7 @@
 		7.4.3 增强的模块模式 
 			适合那些单例必需是某种类型的实例，同时还必须添加某些属性或方法对其加以增强的情况
 
-8. BOM
+8 BOM 
 	8.1 window 对象
 		BOM 的核心对象是 window
 
@@ -594,67 +594,582 @@
 		8.2.1 查询字符串参数
 
 		8.2.2 位置操作
-			location.assign('https://www.bidepharm.com')
+			location.assign('https://www.baidu.com')
 			与下面的效果一样
-			window.location('https://www.bidepharm.com')
-			location.href('https://www.bidepharm.com')
+			window.location('https://www.baidu.com')
+			location.href('https://www.baidu.com') //常用
+
+				location 的属性
+				hash/search/hostname/pathname/port
+				除hash外，每次修改location的属性，页面都会以新URL重新加载
+
+				location.replace('https://www.baidu.com') //不会生成一条新纪录（返回上一页不可用）
+
+				location.reload()     //重新加载（有可能从缓存中加载）
+				location.reload(true) //重新加载（从服务器重新加载）
+
+				最好放代码最后一行
+
+	8.3 navigator 对象
+
+	8.4 screen 对象
+
+	8.5 history 对象
+
+9 客户端检测 
+	常用： 能力检测、怪癖检测、用户代理检测
+
+10 DOM
+	DOM(文档对象模型)是针对HTML和XML文档的一个API（应用程序编程接口）
+
+	10.1 节点层次
+		10.1.1 Node 类型
+
+			Node 类型 12个常量（除IE）
+				ELEMENT_NODE/ATTRIBUTE_NODE/TEXT_NODE/CDATA_SECTION_NODE/ENTITY_REFERENCE_NODE/ENTITY_NODE/
+				PROCESSING_INSTRUCTION_NODE/COMMENT_NODE/DOCUMENT_NODE/DOCUMENT_TYPE_NODE/DOCUMENT_FRAGENT_NODE/NOTATION_NODE
+
+				nodeName 和 nodeValue 属性
+
+			节点关系
+				每个节点都有一个 childNodes 属性
+					fchild = fatherNode.childNodes[0]
+
+					twoChild = fatherNode.childNodes.item[1]
+
+			操作节点
+				fatherNode.appendChild(newNde) //childNodes 末尾添加一个节点
+				fatherNode.insertDefore(newNode, siblingNode)
+				fatherNode.replaceChild(newNode, replaceNode) //替换节点
+				fatherNode.removeChild(removeNode) //移除节点
+
+			其他方法
+				cloneNode(true) //深复制
+				cloneNode(false) //浅复制
+
+				normalize() //处理文档树中的文本节点
+
+		10.1.2 Document 类型
+
+			文档的子节点
+				DocumentType / Element / ProcessingInstructior / Comment
+				documentElement 该属性始终指向 <html> 元素
+				通过 childNodes 列表访问文档元素
+				document.documentElement == document.childNodes[0] == document.firstChild //都指向 <html> 元素
+
+			文档信息
+				document.title  //文档标题
+				document.URL 	//完整的url
+				document.referrer //a来源页面url 
+				document.domain //域名
+
+			查找元素
+				document.getElementById() //IE7及以下不支持
+				document.getElementByTagName() // 
+					nameItem(name属性值) //
+				document.getElementByName(name属性值)
+
+			特殊集合
+				document.anchors //包含文档中所有带 name 特性的 <a> 元素
+				document.forms //包含文档中 <form> 元素
+				document.images //包含文档中 <img> 元素
+				document.links //包含文档中所有带 href 特性的 <a> 元素
+
+			DOM 一致性检测
+
+			文档写入
+				write() / writeln() / open() / close() 
+
+				可向页面动态的加入内容，都接受一个字符串参数 
+				document.write()  原样写入
+				document.writeln() 会在字符串末尾加一个换行符（\n）
+				
+		10.1.3 Element 类型
+			Element 类型用于表现 XML 或 HTML 元素，提供对元素标签名、子节点及特性的访问
+
+			nodeType 值为 1
+			nodeName 值为元素的标签名； 也可使用 tagName （输出的标签全部大写）
+				推荐用法 if( element.tagName.toLowerCase() == 'div' ) {}
+			nodeValue 值为 null
+			parentNode 值可能是 Document 或 Element
+
+			HTML 元素
+				所有元素都存在的以下特性
+				id
+				title
+				lang
+				dir 值为 ltr rtl
+				className
+
+				自定义的特性 以 data-xxx 区分
+
+			取得特性
+				getAttribute()
+				style 与 onclick 两个特殊特性
+
+			设置特性
+				setAttribute()
+				setAttribute("id","myid")
+				所有特性都是属性，所以直接给属性赋值可以设置特性的值
+				div.id = "myid"
+
+			删除特性
+				removeAttribute("id") 彻底删除元素的特性，IE6 及以前的版本不支持
+
+			attributes 属性
+				Element 类型是使用 attributes 属性的唯一一个 DOM 节点类型
+
+			创建元素
+				document.createElement('div')
+				要把新元素添加到文档树，可以使用 appendChild()、insertDefore()、replaceChild() 等方法
+				IE 可以以另一种方式使用document.createElement('<div id="myid"><\/div>') --（其他浏览器读不支持该方式）
+
+				不能设置动态创建的 <iframe> 元素的 name 特性
+				不能通过表单的 reset() 方法重设动态创建的 <input> 元素
+				动态创建的 type 为 reset 的 <button> 元素重设不了表单
+				动态创建的一批 name 相同的单选按钮彼此毫无关系
+
+			元素的子节点  element.childNodes 
+				元素可以有任意数目的子节点和后代节点，因为元素可以是其他元素的子节点
+
+		10.1.4 Text 类型
+			文本节点由 Text 类型表示
+
+			nodeType == 3
+			nodeName == "#text"
+			nodeValue 值为节点所包含的文本
+			parentNode 是一个 Element 
+			没有子节点
+
+			使用以下方法可以操作节点中的文本
+				appendData(text)
+				deleteData(offset, count)
+				insertData(offset, text)
+				replaceData(offset, count, text)
+				splitText(offset)
+				substringData(offset, count)
+
+				element.childNodes.length
+
+				创建文本节点
+					document.createTextNode(要插入节点中的文本)
+
+				规范化文本节点
+					element.normalize()
+
+				分割文本节点
+					element.splitText()
+
+		10.1.5 Comment 类型
+			注释在 DOM 中时通过 Comment 类型来表示的
+
+			nodeType == 8
+			nodeName == '#comment'
+			nodeValue 的值是注释的内容
+			parentNode 可能是 Document 或 Element
+			没有子节点
+
+		10.1.6 CDATASection 类型（只针对XML）
+
+			nodeType == 4
+			nodeName == '#cdata-section'
+			nodeValue 的值是 CDATA 区域中的内容
+			parentNode 可能是 Document 或 Element
+			没有子节点
+
+	10.2 DOM 操作技术
+
+		10.2.1 动态脚步
+			创建动态脚步有两种方式
+				插入外部文件和直接插入 JavaScript 代码
+
+				另一种指定 JavaScript 代码的方式是行内方式
+
+		10.2.2 动态样式
+
+		10.2.3 操作表格
+
+		10.2.4 使用 NodeList
+			NodeList 、 NamedNodeMap 、 HTMLCollection 
+			当文档结构发生变化时，它们都会得到更新
+
+			尽量减少访问 NodeList
+			
+
+11 DOM 扩展
+	11.1 选择符 API
+		核心方法 querySelector() 和 querySelectorAll()
+
+		querySelector(CSS选择符) 如果未匹配到元素，返回 null
+
+		querySelectorAll(CSS选择符) 返回一个 NodeList 对象；如果未匹配到元素， NodeList 是空的
+
+		matchesSelector(CSS选择符) 返回 true / false
+
+	11.2 元素遍历
+
+	11.3 HTML5 
+		11.3.1 余类相关的扩充
+			getElementByClassName() 方法 ； 返回一个 NodeList 对象；
+
+			classList 属性
+
+		11.3.2 焦点管理
+			document.activeElement 属性
+
+			hasFocus() 方法
 
 
+		11.3.3 HTMLDocument 的变化
+			readyState 属性
+				loading 正在加载文档
+				complete 已经加载完文档
+
+			兼容模式
+
+			head 属性
+
+		11.3.4 字符集属性
+			document.charset = 'UFT-8'
+
+		11.3.5 自定义数据属性
+			data-xxx
+
+		11.3.6 插入标记
+			innerHTML
+
+			outerHTML
+
+			insertAdjacentHTML() 
+				//beforebegin afterbegin beforeend afterend
+				element.insertAdjacentHTML('beforebegin', '<p>hello world</p>')
+
+			内存与性能问题
+
+		11.3.7 scrollIntoView() 
+
+	11.4 专有扩展
+		11.4.1 文档模式
+
+		11.4.2 children 属性
+
+		11.4.3 contains() 方法
+
+		11.4.4 插入文本
+			innerText 属性
+			outerText 属性
+
+		11.4.5 滚动
+
+12 DOM2 和 DOM3
 
 
+13 事件
+	javascript与HTML之间的交互是通过事件实现的。事件就是文档或浏览器窗口中发生的一些特定的交互瞬间
+
+	13.1 事件流
+		13.1.1 事件冒泡
+			IE 的事件流叫做事件冒泡，即事件开始由最具体的元素接收，然后逐级向上传播到较为不具体的节点
+			所有浏览器都支持
+
+		13.1.2 事件捕获
+
+		13.1.3 DOM事件流
+			包括三个阶段：事件捕获阶段、处于目标阶段、事件冒泡阶段
+
+	13.2 事件处理程序
+		事件就是用户或浏览器自身执行的某种动作。诸如click、load、mouseover，都是事件的名字。而响应某个事件的函数就叫事件处理程序
+
+		13.2.1 HTML 事件处理程序
+
+		13.2.2 DOM0 级事件处理程序
+
+		13.2.3 DOM2 级事件处理程序
+			addEventListener() 可以添加多个事件处理程序，按顺序执行
+			removeEventListener() 
+			都接受3个参数：要处理的事件名、作为事件处理程序的函数、一个布尔值
+			布尔值为 true, 表示在捕获阶段调用事件处理程序
+			布尔值为 false, 表示在冒泡阶段调用事件处理程序
+
+		13.2.4 IE 事件处理程序
+			attachEvent() 事件名带on，可以添加多个事件处理程序，从下向上执行
+			detachEvent()
+			2个参数：事件处理程序名称、事件处理程序函数
+
+		13.2.5 跨浏览器的事件处理程序
+			addHandler()
+			removeHandler()
+				3个参数：要操作的元素、事件名称、事件处理程序函数
+
+	13.3 事件对象
+		13.3.1 DOM 中的事件对象
+			只有在事件处理程序执行期间，event 对象才会存在；一旦事件处理程序执行完成，event 对象就会被销毁
+
+		13.3.2 IE 中的事件对象
+
+		13.3.3 跨浏览器的事件对象
+
+	13.4 事件类型
+		UI（user interface，用户界面）事件
+			load
+			unload
+			abort
+			error
+			select
+			resize
+			scroll
+
+		焦点事件：主要是 focus blur
+		鼠标事件：mousedown/mouseup/click/dblclick/mouseenter/mouseleave
+			客户区坐标位置：clientX clientY
+			页面坐标位置：pageX pageY
+			屏幕坐标位置：screenX screenY
+			修改键：shiftKey、ctrlKey、altKey、metaKey
+			mouseover mouseout
+
+		滚轮事件：mousewheel
+		文本事件
+			textInput
+		键盘事件
+			keydown/keypress/keyup
+			keyCode/charCode
+		合成事件：当为IME（input method editor，输入法编辑器）输入字符是触发
+		变动事件：当底层DOM结构发生变化时触发
+
+		html5 事件
+			contextmenu 事件
+			beforeunload 事件
+			DOMContentLoaded 事件
+			readystatechange 事件
+			pageshow/pagehide 事件
+			hashchange 事件
+
+		设备事件
+
+		触摸与手势事件
+
+	13.5 内存与性能
+		13.5.1 事件委托
+			适合采用事件委托的事件：click/mousedown/mouseup/keydown/keyup/keypress
+
+		13.5.2 移除事件处理程序
+
+	13.6 模拟事件
+
+14 表单脚本
+	14.1 表单的基础知识
+		acceptCharset: 
+		action
+		elements
+		enctype
+		length
+		method
+		name
+		reset()
+		submit()
+		target
+
+		14.1.1 提交表单
+
+		14.1.2 重置表单
+
+		14.1.3 表单字段
+			共有的表单字段属性
+				disabled
+				form
+				name
+				readOnly
+				tabIndex
+				type
+				value
+			
+			共有的表单字段方法
+				focus()
+				blur()
+
+			共有的表单字段事件
+				focus
+				change
+				blur
+
+	14.2 文本框脚本
+		input
+		textarea
+
+		14.2.1 选择文本
+			选择（select）事件
+			取得选择的文本
+			选择部分文本
+
+		14.2.2 过滤输入
+
+		14.2.3 自动切换焦点
+
+		14.2.4 HTML5 约束验证API
+			必填字段 <input type="text" required>
+			其他输入类型 如 <input type="email">
+			数值范围  <input min="0" max="100" step="5">
+			输入模式  <input type="text" pattern="\d+">
+			检测有效性 checkValidity()
+			禁用验证 <form  method="post" action="" novalidate><input type="text" ></form>
+
+	14.3 选择框脚本
+
+	14.4 表单序列化
+
+	14.5 富文本编辑
+
+15 使用 canvas 绘图
+	15.1 基本用法
+		使用 canvas 元素必需设置 width height 属性
+		使用前首先要检测 getContext() 是否存在
+			if(drawing.getContext){
+				var context = drawing.getContext('2d')
+			}
+
+	15.2 2D 上下文
+		15.2.1 填充和描边
+			fillStyle
+			strokeStyle
+
+		15.2.2 绘制矩形
+			fillRect()
+			strokeRect()
+			clearRect()
+			以上3个方法都接收4个参数：矩形的x坐标、y坐标、宽度、高度
+
+		15.2.3 绘制路径
+			先调用 beginPath() 方法
+			再通过以下方法来实际地绘制路径
+				arc(x,y,radius,startAngle,endAngle,counterclockwise)
+				arcTo(x1,y1,x2,y2,radius)
+				bezierCurveTo()
+				lineTo(x,y)
+				moveTo(x,y)
+				quadraricCurveTo()
+				rect(x,y,width,height)
+
+		15.2.4 绘制文本
+			fillText()
+			strokeText()
+			都接收4个参数：要绘制的文本字符串，x坐标、y坐标、可选的最大像素宽度
+
+		15.2.5 变换
+
+		15.2.6 绘制图像
+			drawImage()
+
+		15.2.7 阴影
+
+		15.2.8 渐变
+
+		15.2.9 模式
+
+		15.2.10 使用图像数据
+
+		15.2.11 合成
+
+	15.3 WebGL
+
+16 HTML5 脚本编程
+	16.1 跨文档消息传递
+		跨文档消息传递（cross-document messaging），有时简称 XDM
+		核心 postMessage() 
+		XDM 已作为一个规范独立出来，现在叫 Web Messaging
+
+	16.2 原生拖放
+		16.2.1 拖放事件
+			拖动某元素时，依次触发下列事件
+				dragstart
+				drag
+				dragend
+			当某个元素被拖动到一个有效的放置目标上时，下列事件依次发生
+				dragenter
+				dragover
+				dragleave 或 drop
+
+		16.2.2 自定义放置目标
+
+		16.2.3 dataTransfer 对象
+
+	16.3 媒体元素
+		video 
+		audio
+
+		16.3.1 属性
+
+		16.3.2 事件
+
+		16.3.3 自定义媒体播放器
+
+		16.3.4 检测编码器的支持情况
+
+		16.3.5 audio 类型
+
+	16.4 历史状态管理
+
+17 错误处理与调试
+
+18 JavaScript 与 XML
+
+19 E4X（ECMAScript for XML）
+
+20 JSON ( Javascript Object Notation, Javascript 对象表示法 )
+	20.1 语法
+		简单值
+		对象
+		数组
+
+	20.2 解析与序列化
+		20.2.1 JSON 对象
+			eval() 存在风险
+
+			JSON.stringify()
+			JSON.parse()
+
+		20.2.2 序列化选项
+			JSON.stringify()
+			toJSON()
+	
+	20.3 解析选项
+		JSON.parse()
+
+21 ajax 与 comet 
+	21.1 XMLHttpRequest 对象（简称XHR）
+		var xhr = new XMLHttpRequest()
+
+		21.1.1 XHR 用法
+			open(method, url, boolean)
+			send(请求主体发送的数据) 如果不传数据，则填 null
+
+			xhr.readyState //1、2、3、4
+			xhr.status //http状态码 200、404 ...
+
+			abort() 在接收响应前，调用该方法取消异步请求
+
+		21.1.2 HTTP 头部信息
 
 
+		21.1.3 GET 请求
+
+		21.1.4 POST 请求
+
+	21.2 XMLHttpRequest 2级
+		21.2.1 FormData
+			var data = new FormData();
+
+		21.2.2 超时设定
+599			
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+22 高级技巧
+	22.1 高级函数
+		22.1.1 安全的类型检测
+			typeof() 
+			instanceof()
+			function isArray(value){ return Object.prototype.toString.call(value) == '[Object Array]' }
+			function isFunction(value){ return Object.prototype.toString.call(value) == '[Object Function]' }
+			function isRegExp(value){ return Object.prototype.toString.call(value) == '[Object RegExp]' }
 
 
 

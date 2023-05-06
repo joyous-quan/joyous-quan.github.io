@@ -99,7 +99,16 @@
       filter: drop-shadow(10px 10px 10px #A4BBFF);
     }
     /*::first-letter会选中某块级元素第一行的第一个字母。要注意必须为块级元素，也就是说只有在display属性值为block、inline-block、table-cell、list-item或table-caption的元素上才起作用。其他情况下将没有效果。*/
-    .txt_big_first::first-letter {font-size: 40px; font-style:italic; color: aquamarine; } </style>
+    .txt_big_first::first-letter {font-size: 40px; font-style:italic; color: aquamarine; }
+    .box{
+      color: #606cbc;
+      background-color: currentColor;
+    }
+    .txt{
+      filter: grayscale(1) contrast(999) invert(1)
+    }
+
+</style>
 </head>
 <body class="demo_body">
     <div class="demo_head" id="demoHeader"></div>
@@ -139,6 +148,11 @@
                 <div class="box-shadow-5">异色内阴影</div>
                 <div class="box-shadow-6">四边异色</div>
                 <div class="box-shadow-7">叠加异色</div>
+            </div>
+
+            <h2 class="title_h2">背景与字体颜色</h2>
+            <div class="box">
+              <span class="txt">背景与字体颜色</span>
             </div>
 
         </div>

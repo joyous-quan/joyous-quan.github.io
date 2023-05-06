@@ -45,6 +45,7 @@
             </div>
             <div class="demo_right ">
                 <h2 class="title_h2" id="title_excel">EXCEL 排序</h2>
+                <!-- =CONCATENATE(A2,". ",B2,", ",C2,".") -->
                 <h3 class="title_h3">Sheet1 A列 按 sheet2 A列排序</h3>
                 <div class="text_content">
                     <p>Sheet2：</p>
@@ -62,6 +63,28 @@
                     <p>第三步：右键打开刚刚改名的.bat文件，选择使用文本编辑器（推荐Notepad++）打开，复制如下内容到文件中，然后保存：</p>
                     <p><strong>DIR *.*  /B >LIST.TXT</strong></p>
                     <p>第四步：双击.bat文件，即可在此文件夹下直接生成名字为LIST.TXT的文件名；</p>
+                </div>
+                <h2 class="title_h2" id="title_copy">批量更改图片名称</h2>
+                <div class="text_content">
+                    <p>第一步：将需要重新命名的图片放在一个文件夹内；</p>
+                    <p>第二步：在该文件夹下新建一个txt文件，<br>
+                        ren 33.png reactions-carboxylic-acids-33.png <br>
+                        ren 33 --- 原文件名   .png --- 文件类型 <br>
+                        reactions-carboxylic-acids-33.png (更改后的名称)
+                    </p>
+                    <p>第三步：然后将.txt后缀名修改为.bat，此时直接忽略系统弹出的警告；</p>
+                    <p>第四步：双击.bat文件运行 --- 文件有“（）” 符号不支持 </p>
+                    <!-- <p>去括号文件.bat</p>
+                    <textarea  rows="10" cols="100">
+                        @Echo Off&SetLocal ENABLEDELAYEDEXPANSION
+                        FOR %%a in (*) do (
+                            set "name=%%a"
+                            set "name=!name: (=!"
+                            set "name=!name:)=!"
+                            ren "%%a" "!name!"
+                        )
+                        exit
+                    </textarea> -->
                 </div>
                 <h2 class="title_h2" id="title_tool">工具类</h2>
                 <div class="text_content">

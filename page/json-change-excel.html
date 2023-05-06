@@ -39,13 +39,12 @@
 <script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202211301545"></script>
 <style type="text/css">
 	.dv_box{display:inline-block;width:100%;}
-	.dv_left{float:left;width:38%;}
-	.dv_left textarea{padding:10px;width:100%;min-height:500px;resize:none;border:1px solid #c7c7d9;}
-	.kuang{min-height:500px;border:1px solid #c7c7d9;}
-	.dv_right{float:right;width:60%;}
+	.dv_left textarea{padding:10px;width:100%;height:200px;resize:none;border:1px solid #c7c7d9;}
+	.kuang{min-height:300px;border:1px solid #c7c7d9;}
 	.dv_right p{line-height:36px;}
 	#share{display:inline-block;}
     #share .qrcode{margin:10px auto 0;}
+    .tab_tbody td{word-break:break-all;background:#fff;}
 </style>
 </head>
 <body class="demo_body">
@@ -58,11 +57,11 @@
 		<p class="text_content">使用<a class="link_a" href="https://sheetjs.com/" rel="noopener norefferrer" target="_blank"> xlsx.full.js </a></p>
 		<div class="dv_box">
 			<div class="dv_left">
-				<p class="mb_10"><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据</p>
+				<p class="mb_10"><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据 <a class="btn btn_green float_r" href="/page/excel-change-json.html" target="_blank">Excel 转 JSON 数据</a></p>
 				<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10","discount":"95%"},{"product_id":"002","product_name":"香蕉","product_price":"8","discount":"90%"},{"product_id":"003","product_name":"草莓","product_price":"20","discount":"98%"},{"product_id":"004","product_name":"芒果","product_price":"16","discount":"95%"}]</textarea>
 			</div>
 			<div class="dv_right">
-				<p class="mb_10">TABLE 展示 JSON 数据 <a class="btn btn_green float_r" href="/page/excel-change-json.html" target="_blank">Excel 转 JSON 数据</a></p>
+				<p class="mb_10">TABLE 展示 JSON 数据 </p>
 				<div class="kuang">
 					<table class="tab-bbor" id="table">
 						<thead>
