@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh_CN">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="JSON 数据转 Excel 表格 | joyous-quan.github.io">
 <meta property="og:description" content="JSON 数据转 Excel 表格，jquery，xlsx.full.js，jquery.share.min.js | og">
-<meta property="og:updated_time" content="2022-11-30 15:45">
+<meta property="og:updated_time" content="2023-09-01 12:45">
 <meta property="og:image" content="https://joyous-quan.github.io/img/logo.jpg">
 <!-- twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -30,13 +30,13 @@
 <link rel="preconnect" href="https://joyous-quan.github.io" crossorigin>
 <link rel="canonical" href="https://joyous-quan.github.io/page/json-change-excel.html">
 
-<link rel="shortcut icon" href="/static/img/favicon.ico?t=202211301545" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="/static/css/common.css?t=202211301545">
-<link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202211301545">
-<script type="text/javascript" src="/static/js/jquery.js?t=202211301545"></script>
-<script type="text/javascript" src="/static/js/common.js?t=202211301545"></script>
-<script type="text/javascript" src="/static/js/xlsx.full.min.js?t=202211301545"></script>
-<script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202211301545"></script>
+<link rel="shortcut icon" href="/static/img/favicon.ico?t=202309011245" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/static/css/common.css?t=202309011245">
+<link rel="stylesheet" type="text/css" href="/static/share/css/share.min.css?t=202309011245">
+<script type="text/javascript" src="/static/js/jquery.js?t=202309011245"></script>
+<script type="text/javascript" src="/static/js/common.js?t=202309011245"></script>
+<script type="text/javascript" src="/static/js/xlsx.full.min.js?t=202309011245"></script>
+<script type="text/javascript" src="/static/share/js/jquery.share.min.js?t=202309011245"></script>
 <style type="text/css">
 	.dv_box{display:inline-block;width:100%;}
 	.dv_left textarea{padding:10px;width:100%;height:200px;resize:none;border:1px solid #c7c7d9;}
@@ -58,7 +58,14 @@
 		<div class="dv_box">
 			<div class="dv_left">
 				<p class="mb_10"><button class="btn btn_blue" onclick="json_tab()">导出 Excel 文件</button> 请在文本框内输入 JSON 数据 <a class="btn btn_green float_r" href="/page/excel-change-json.html" target="_blank">Excel 转 JSON 数据</a></p>
-				<textarea id="textarea" placeholder="输入 JSON 数据">[{"product_id":"001","product_name":"苹果","product_price":"10","discount":"95%"},{"product_id":"002","product_name":"香蕉","product_price":"8","discount":"90%"},{"product_id":"003","product_name":"草莓","product_price":"20","discount":"98%"},{"product_id":"004","product_name":"芒果","product_price":"16","discount":"95%"}]</textarea>
+				<textarea id="textarea" placeholder="输入 JSON 数据">
+[
+	{"product_id":"001","product_name":"苹果","discount":"95%","priceList": [{"price":30,"size":"1kg","currency":"CNY"},{"price":5,"size":"1kg","currency":"USD"}]},
+	{"product_id":"002","product_name":"香蕉","discount":"90%","priceList": [{"price":20,"size":"1kg","currency":"CNY"},{"price":4,"size":"1kg","currency":"USD"}]},
+	{"product_id":"003","product_name":"草莓","discount":"98%","priceList": [{"price":60,"size":"1kg","currency":"CNY"},{"price":10,"size":"1kg","currency":"USD"}]},
+	{"product_id":"004","product_name":"芒果","discount":"95%","priceList": [{"price":42,"size":"1kg","currency":"CNY"},{"price":7,"size":"1kg","currency":"USD"}]}
+]
+				</textarea>
 			</div>
 			<div class="dv_right">
 				<p class="mb_10">TABLE 展示 JSON 数据 </p>
@@ -148,6 +155,33 @@
 			$.each(txtValObj, function (idx, item) {
 				tbodyHtml += '<tr>'
 				$.each(item, function (subidx, subitem) {
+					if(typeof(subitem) == 'object' && subitem.constructor === Object){
+						var subarr = [];
+						for (var key in subitem) {
+							subarr.push(subitem[key]);
+						}
+						subitem = subarr.toString();
+					}else if(typeof(subitem) == 'object' && subitem.constructor === Array){
+						var substr = '';
+						for (var key in subitem) {
+							var subarr = [];
+							if(typeof(subitem[key]) == 'object' && subitem[key].constructor === Object){
+								for (var _key in subitem[key]) {
+									subarr.push(subitem[key][_key]);
+								}
+								var _line = '';
+								if(key == subitem.length-1){
+									_line = '';
+								}else{
+									_line = '|';
+								}
+								substr += subarr.toString() +_line;
+							}else{
+								substr = subitem;
+							}
+						}
+						subitem = substr;
+					}
 					tbodyHtml +='<td>'+subitem+'</td>';
 				})
 				tbodyHtml +='</tr>'
