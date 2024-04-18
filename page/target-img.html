@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <script type="text/javascript" src="/static/js/jquery.js?t=202211301545"></script>
+    <script type="text/javascript" src="/static/js/Tdrag.js?v=20240327001"></script>
+    <script type="text/javascript" src="/static/js/toucher.js?v=20240327001"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        .fixed_btn{margin:5px;position:fixed;z-index:10000;}
+        .fixed_btn button{cursor:pointer;width:24px;height:24px;}
+        #box{position:absolute;cursor:all-scroll;}
+        #box a{position:absolute;display:inline-block;font-size:0;}
+        #box a.on:hover{box-shadow:0 0 10px #fa9430;}
+        @media only screen and (max-width:480px){
+            #box img{height:auto!important;width:auto!important;max-width:100%;}
+        }
+    </style>
+</head>
+<body style="overflow:hidden;">
+    <p class="fixed_btn"><button onclick="zoomIn()"> + </button> <button onclick="zoomOut()"> - </button></p>
+    <div id="box">
+        <img id="targetImg" class="drag" src="/static/img/target/PI3K-Akt-mTOR.jpg" alt="">
+        <div id="diva">
+        </div>
+    </div>
+
+    <script>
+        //box拖拽
+        $(function(){
+            $("#box").Tdrag();
+        });
+        //图片宽高/2
+        var imgObj = document.getElementById('targetImg');
+        var imgWidth = (imgObj.naturalWidth)/2;
+        var imgHeight = (imgObj.naturalHeight)/2;
+        $("#targetImg").css({
+            "width":imgWidth+"px",
+            "height":imgHeight+"px"
+        })
+        //靶点url/位点数据
+        var targetData = [
+             {"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":21.11,"name":"PIK3CA","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":23.97,"name":"PIK3CB","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":26.7,"name":"PIK3CG","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":21.11,"name":"PIK3R1","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":23.97,"name":"PIK3R2","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":26.7,"name":"PIK3R3","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":10.65,"top":35.81,"name":"PTEN","url":"/pten.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":57.55,"top":38.08,"name":"PDK1","url":"/pdk-1.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":50.85,"name":"FOXO1","url":"/foxo.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":53.53,"name":"FOXO3","url":"/foxo.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":56.13,"name":"FOXO4","url":"/foxo.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":45.71,"top":44.81,"name":"AKT","url":"/akt.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":71.14,"top":59.39,"name":"MTOR","url":"/mtor.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":45.87,"top":77.43,"name":"MTOR","url":"/mtor.html"}
+        ]
+        //加载靶点url/位点数据
+        _loadahtml(targetData)
+        function _loadahtml(data){
+            var ahtml = '';
+            $.each(data, function(idx, item) {
+                ahtml += '<a class="on" target="_blank" href="'+item.url+'" style="height:'+item.height+'%;width:'+item.width+'%;border-radius:'+item.radius+'px;left:'+item.left+'%;top:'+item.top+'%;">'+item.name+'</a>'
+            })
+            $("#diva").html(ahtml)
+        }
+        //滚轮控制大小
+        var resizableElement = document.getElementById('box');
+        resizableElement.addEventListener('wheel', function (event){
+            event.preventDefault();
+            if (event.deltaY < 0) { // 滚轮向上
+                zoomIn()
+            } else { // 滚轮向下
+                zoomOut()
+            }
+        });
+        function zoomIn(){
+            var scaleFactor = 1.1; // 定义缩放因子
+            var currentScale = resizableElement.scale || 1;
+
+            resizableElement.scale = currentScale * scaleFactor;
+            if(resizableElement.scale > 1.9){
+                resizableElement.scale = 2;
+            }
+            resizableElement.style.transform = 'scale('+resizableElement.scale+')';
+        }
+        function zoomOut(){
+            var scaleFactor = 1.1; // 定义缩放因子
+            var currentScale = resizableElement.scale || 1;
+
+            resizableElement.scale = currentScale / scaleFactor;
+            if(resizableElement.scale < 0.5){
+                resizableElement.scale = 0.5;
+            }
+            resizableElement.style.transform = 'scale('+resizableElement.scale+')';
+        }
+
+        var start_left,start_top;
+        util.toucher(document.getElementById('box')).on('swipeStart',function(e){
+            start_left = parseInt(this.style.left) || 0;
+            start_top = parseInt(this.style.top) || 0;
+            this.style.transition = 'none';
+            this.style.opacity = 1;
+        }).on('swipe',function(e){
+            this.style.left = (start_left + e.moveX) + 'px';
+            this.style.top = (start_top + e.moveY) + 'px';
+            return false;
+        }).on('swipeEnd',function(e){
+            return false;
+        });
+    </script>
+</body>
+</html>
