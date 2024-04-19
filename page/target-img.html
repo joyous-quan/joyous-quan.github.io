@@ -6,7 +6,6 @@
     <title></title>
     <script type="text/javascript" src="/static/js/jquery.js?t=202211301545"></script>
     <script type="text/javascript" src="/static/js/Tdrag.js?v=20240327001"></script>
-    <script type="text/javascript" src="/static/js/toucher.js?v=20240327001"></script>
     <style type="text/css">
         *{margin:0;padding:0;}
         .fixed_btn{margin:5px;position:fixed;z-index:10000;}
@@ -42,20 +41,20 @@
         })
         //靶点url/位点数据
         var targetData = [
-             {"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":21.11,"name":"PIK3CA","url":"/pi3k.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":23.97,"name":"PIK3CB","url":"/pi3k.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":26.7,"name":"PIK3CG","url":"/pi3k.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":21.11,"name":"PIK3R1","url":"/pi3k.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":23.97,"name":"PIK3R2","url":"/pi3k.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":26.7,"name":"PIK3R3","url":"/pi3k.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":10.65,"top":35.81,"name":"PTEN","url":"/pten.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":57.55,"top":38.08,"name":"PDK1","url":"/pdk-1.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":50.85,"name":"FOXO1","url":"/foxo.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":53.53,"name":"FOXO3","url":"/foxo.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":56.13,"name":"FOXO4","url":"/foxo.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":45.71,"top":44.81,"name":"AKT","url":"/akt.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":71.14,"top":59.39,"name":"MTOR","url":"/mtor.html"}
-            ,{"height":2.26,"radius":20,"width":9.54,"left":45.87,"top":77.43,"name":"MTOR","url":"/mtor.html"}
+            {"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":21.16,"name":"PIK3CA","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":24.03,"name":"PIK3CB","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":40.06,"top":26.77,"name":"PIK3CG","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":21.16,"name":"PIK3R1","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":24.03,"name":"PIK3R2","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":51.35,"top":26.77,"name":"PIK3R3","url":"/pi3k.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":10.65,"top":35.91,"name":"PTEN","url":"/pten.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":57.55,"top":38.18,"name":"PDK1","url":"/pdk-1.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":50.91,"name":"FOXO1","url":"/foxo.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":53.57,"name":"FOXO3","url":"/foxo.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":18.04,"top":56.18,"name":"FOXO4","url":"/foxo.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":45.71,"top":44.93,"name":"AKT","url":"/akt.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":71.14,"top":59.45,"name":"MTOR","url":"/mtor.html"}
+            ,{"height":2.26,"radius":20,"width":9.54,"left":45.87,"top":77.54,"name":"MTOR","url":"/mtor.html"}
         ]
         //加载靶点url/位点数据
         _loadahtml(targetData)
@@ -97,19 +96,122 @@
             resizableElement.style.transform = 'scale('+resizableElement.scale+')';
         }
 
-        var start_left,start_top;
-        util.toucher(document.getElementById('box')).on('swipeStart',function(e){
-            start_left = parseInt(this.style.left) || 0;
-            start_top = parseInt(this.style.top) || 0;
-            this.style.transition = 'none';
-            this.style.opacity = 1;
-        }).on('swipe',function(e){
-            this.style.left = (start_left + e.moveX) + 'px';
-            this.style.top = (start_top + e.moveY) + 'px';
-            return false;
-        }).on('swipeEnd',function(e){
-            return false;
+
+        var firstDistance = 0;
+        function getDistance (start, stop){
+            return Math.sqrt(Math.pow(Math.abs(start.x - stop.x), 2) + Math.pow(Math.abs(start.y - stop.y), 2));
+        }
+
+        resizableElement.addEventListener('touchstart', function (event) {
+            const touches = event.touches;
+
+            if( touches.length > 1){
+                const events1 = touches[0];
+                const events2 = touches[1];
+
+                const one = {
+                    x:events1.pageX,
+                    y:events1.pageY,
+                }
+                const two = {
+                    x:events2.pageX,
+                    y:events2.pageY,
+                }
+                firstDistance = getDistance(one, two)
+            }
+            event.preventDefault();
         });
+
+        resizableElement.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+            const touches = event.touches;
+
+            if( touches.length > 1){
+                const events1 = touches[0];
+                const events2 = touches[1];
+
+                const one = {
+                    x:events1.pageX,
+                    y:events1.pageY,
+                }
+                const two = {
+                    x:events2.pageX,
+                    y:events2.pageY,
+                }
+                const distance = getDistance(one, two);
+                const zoom = distance / firstDistance;
+                content.style.transform = 'scale(' + zoom + ')';
+            }  
+        });
+
+        //移动端拖拽
+        function Touch(ele){
+            var _this=this;
+            this.ele=ele;
+            this.transP={
+                x:0,
+                y:0
+            };
+            this.events={
+                handleEvent:function(event){
+                    switch(event.type){
+                        case 'touchstart':
+                            _this.start(event);
+                            break;
+                        case 'touchmove':
+                            _this.move(event);
+                            break;
+                        case 'touchend':
+                            _this.end(event);
+                            break;
+                    }
+                }
+            }
+        }
+        Touch.prototype = {
+
+            start:function(ev){
+                var touches=ev.targetTouches[0],
+                _this=this;
+                this.disP={
+                    x:touches.pageX-this.transP.x,
+                    y:touches.pageY-this.transP.y,
+                    id:touches.identifier
+                };
+                //console.log('start');
+                _this.ele.addEventListener('touchmove',_this.events,false);
+                _this.ele.addEventListener('touchend',_this.events,false);
+            },
+            move:function(ev){
+                var touches=ev.targetTouches[0];
+                if(touches.identifier== this.disP.id){
+                    //console.log('move');
+                    this.transP={
+                        x:touches.pageX-this.disP.x,
+                        y:touches.pageY-this.disP.y
+                    };
+                    this.ele.style.transform='translate3d('+this.transP.x+'px,'+this.transP.y+'px,0)';
+                    this.ele.style.Webkittransform='translate3d('+this.transP.x+'px,'+this.transP.y+'px,0)';
+                }
+            },
+            end:function(ev){
+                ev=ev||window.event;
+                var _this=this;
+                if(ev.changedTouches[0].identify==this.disP.id){
+                    _this.ele.removeEventListener('touchmove',_this.events,false);
+                    _this.ele.removeEventListener('touchend',_this.events,false);
+                }
+            },
+            init:function(){
+                var _this=this;
+                this.ele.addEventListener('touchstart',_this.events,false);
+            }
+        };
+        window.onload=function(){
+            var box=document.getElementById('box'),
+                touch=new Touch(box);
+            touch.init();
+        };
     </script>
 </body>
 </html>
