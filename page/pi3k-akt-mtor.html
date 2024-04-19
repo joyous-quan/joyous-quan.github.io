@@ -97,10 +97,21 @@ var imgObj = document.getElementById('targetImg');
 var imgWidth = (imgObj.naturalWidth)/2;
 var imgHeight = (imgObj.naturalHeight)/2;
 
+/*pc = [ '629px', '747px' ];
+phone = [ '360px', '427px' ];
+*/
+
+var _area = [];
+if ( $(window).width() < 640) {
+    _area = [ '360px', '427px' ]
+}else{
+    _area = [ '629px', '747px' ]
+}
+
 function _showImage(){
     layer.open({
         type: 2,
-        area: [ '629px', '747px' ],
+        area: _area,
         fix: false, //不固定
         shadeClose: true,
         title: false,
