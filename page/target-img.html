@@ -11,7 +11,7 @@
         .fixed_btn{margin:5px;position:fixed;z-index:10000;}
         .fixed_btn button{cursor:pointer;width:24px;height:24px;}
         #box{position:absolute;cursor:all-scroll;}
-        #box a{position:absolute;display:inline-block;font-size:0;}
+        #box a{position:absolute;display:inline-block;font-size:0;z-index:10;}
         #box a.on:hover{box-shadow:0 0 10px #fa9430;}
         @media only screen and (max-width:480px){
             #box img{height:auto!important;width:auto!important;max-width:100%;}
@@ -22,8 +22,21 @@
     <p class="fixed_btn"><button onclick="zoomIn()"> + </button> <button onclick="zoomOut()"> - </button></p>
     <div id="box">
         <img id="targetImg" class="drag" src="/static/img/target/PI3K-Akt-mTOR.jpg" alt="">
-        <div id="diva">
-        </div>
+        
+        <a class="on" target="_blank" href="/pi3k.html" style="height:2.26%;width:9.54%;border-radius:20px;left:40.06%;top:21.16%;">PIK3CA</a>
+        <a class="on" target="_blank" href="/pi3k.html" style="height:2.26%;width:9.54%;border-radius:20px;left:40.06%;top:24.03%;">PIK3CB</a>
+        <a class="on" target="_blank" href="/pi3k.html" style="height:2.26%;width:9.54%;border-radius:20px;left:40.06%;top:26.77%;">PIK3CG</a>
+        <a class="on" target="_blank" href="/pi3k.html" style="height:2.26%;width:9.54%;border-radius:20px;left:51.35%;top:21.16%;">PIK3R1</a>
+        <a class="on" target="_blank" href="/pi3k.html" style="height:2.26%;width:9.54%;border-radius:20px;left:51.35%;top:24.03%;">PIK3R2</a>
+        <a class="on" target="_blank" href="/pi3k.html" style="height:2.26%;width:9.54%;border-radius:20px;left:51.35%;top:26.77%;">PIK3R3</a>
+        <a class="on" target="_blank" href="/pten.html" style="height:2.26%;width:9.54%;border-radius:20px;left:10.65%;top:35.91%;">PTEN</a>
+        <a class="on" target="_blank" href="/pdk-1.html" style="height:2.26%;width:9.54%;border-radius:20px;left:57.55%;top:38.18%;">PDK1</a>
+        <a class="on" target="_blank" href="/foxo.html" style="height:2.26%;width:9.54%;border-radius:20px;left:18.04%;top:50.91%;">FOXO1</a>
+        <a class="on" target="_blank" href="/foxo.html" style="height:2.26%;width:9.54%;border-radius:20px;left:18.04%;top:53.57%;">FOXO3</a>
+        <a class="on" target="_blank" href="/foxo.html" style="height:2.26%;width:9.54%;border-radius:20px;left:18.04%;top:56.18%;">FOXO4</a>
+        <a class="on" target="_blank" href="/akt.html" style="height:2.26%;width:9.54%;border-radius:20px;left:45.71%;top:44.93%;">AKT</a>
+        <a class="on" target="_blank" href="/mtor.html" style="height:2.26%;width:9.54%;border-radius:20px;left:71.14%;top:59.45%;">MTOR</a>
+        <a class="on" target="_blank" href="/mtor.html" style="height:2.26%;width:9.54%;border-radius:20px;left:45.87%;top:77.54%;">MTOR</a>
     </div>
 
     <script>
@@ -57,7 +70,7 @@
             ,{"height":2.26,"radius":20,"width":9.54,"left":45.87,"top":77.54,"name":"MTOR","url":"/mtor.html"}
         ]
         //加载靶点url/位点数据
-        _loadahtml(targetData)
+        //_loadahtml(targetData)
         function _loadahtml(data){
             var ahtml = '';
             $.each(data, function(idx, item) {
@@ -95,54 +108,6 @@
             }
             resizableElement.style.transform = 'scale('+resizableElement.scale+')';
         }
-
-
-        var firstDistance = 0;
-        function getDistance (start, stop){
-            return Math.sqrt(Math.pow(Math.abs(start.x - stop.x), 2) + Math.pow(Math.abs(start.y - stop.y), 2));
-        }
-
-        resizableElement.addEventListener('touchstart', function (event) {
-            const touches = event.touches;
-
-            if( touches.length > 1){
-                const events1 = touches[0];
-                const events2 = touches[1];
-
-                const one = {
-                    x:events1.pageX,
-                    y:events1.pageY,
-                }
-                const two = {
-                    x:events2.pageX,
-                    y:events2.pageY,
-                }
-                firstDistance = getDistance(one, two)
-            }
-            event.preventDefault();
-        });
-
-        resizableElement.addEventListener('touchmove', function (event) {
-            event.preventDefault();
-            const touches = event.touches;
-
-            if( touches.length > 1){
-                const events1 = touches[0];
-                const events2 = touches[1];
-
-                const one = {
-                    x:events1.pageX,
-                    y:events1.pageY,
-                }
-                const two = {
-                    x:events2.pageX,
-                    y:events2.pageY,
-                }
-                const distance = getDistance(one, two);
-                const zoom = distance / firstDistance;
-                content.style.transform = 'scale(' + zoom + ')';
-            }  
-        });
 
         //移动端拖拽
         function Touch(ele){
