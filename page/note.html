@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <div class="demo_right ">
-                <h2 class="title_h2" id="title_excel">EXCEL 排序</h2>
+                <h2 class="title_h2" id="title_excel">EXCEL 排序 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABm0lEQVR4AcxW0W3CQAx10gxQpHYPRmgnKQPw0Q0IE7QfLNBJYITu0UowQFB4L9KdQuLkfMpBQHk6bHx+Lz7HJJeZP48v4H8t9RSECvz4FXB3UIu8x8DtC63mCrzu5BCDELH73SzAbUi9NgKOn/L8t5Y3DVMJtZz0kZO5cxjluZJjJrLXwCAi9kngHkLLSR85yZ3D2DBwDpC7OQKSo8O3LzvJ7gHw/QDN5QXAOgDNxfNBeW7SEyTATa64Em0BtBtUlSxRntGekEQfVUCi3KY0qoCikF/0hDr5TFkjglQBi285DU29iNymUFWAaWeioJ6Aoe5P5e/q7gkY6v5U/qCAbsCt7V4FHCGGRbKpyCfK5e2uXgBKvOI5twPaE7HtD30P7QNP6XJ4AXB8QMQeq7/aE9E7DV/G9vFfFTwblyZHebbOuPdK7hwDp+R5w7iafCnFaJP1qZAFuf0RwLh650spQJus9JHDC6AxB8wC0Lnq+4HmR2MtrTdjFoDOVd8PNH+dyVdyAdaEsXGjFWBj8gmZgpCgUQGhzZbfQzEXAAAA//+IqhWsAAAABklEQVQDAHc2alCUFbiwAAAAAElFTkSuQmCC" onclick="printDocument()"></h2>
                 <!-- =A2&","&B2&","&C2"." -->
                 <!-- =CONCATENATE(A2,". ",B2,", ",C2,".") -->
                 <h3 class="title_h3">Sheet1 A列 按 sheet2 A列排序</h3>
@@ -222,6 +222,9 @@
         }
         //滚动滑轮触发scrollFunc方法
         window.onmousewheel = document.onmousewheel = scrollFunc;
+    }
+    function printDocument() {
+        window.print();
     }
 </script>
 </body>
