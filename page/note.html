@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="/static/css/common.css?t=202211301545">
 <script type="text/javascript" src="/static/js/jquery.js?t=202211301545"></script>
 <script type="text/javascript" src="/static/js/common.js?t=202211301545"></script>
+<script type="text/javascript" src="/static/js/clipboard.min.js?t=202211301545"></script>
 <style type="text/css">
     .demo_left{position:relative;padding-right:20px;width:260px;}
     .left_nav{position:sticky;top:60px;padding:10px 15px 20px;}
@@ -23,6 +24,7 @@
     .left_nav a{display:block;padding:8px 0;line-height:24px;}
     .demo_right{flex:1;}
     .txt_ul li span{padding-right:10px;display:inline-block;min-width: 120px;text-align:right;}
+    .a_click_log{display:inline-block;}
 </style>
 </head>
 <body class="demo_body">
@@ -31,6 +33,33 @@
         <a href="/">首页</a><i> / </i><span>笔记</span>
     </div>
     <div class="demo_main layout">
+        <div> 
+            <a class="a_click_log" to_href="https://www.bidepharm.com/static/file/催化剂及配体.pdf?t=20251217" href="javascript:;">
+            <dl class="brochure-card">
+            <dt><img src="https://www.bidepharm.com/static/img/brochure/催化剂和配体.png?t=20251217" alt=""></dt>
+            <dd>
+            <h2>催化剂及配体</h2>
+
+            <p style="color:#007bc4;">产品分类</p>
+            <p>手性氮配体、手性氧配体、手性膦配体</p>
+
+            </dd>
+            </dl>
+            </a>
+
+            <a class="a_click_log" to_href="https://www.bidepharm.com/static/file/研发定制.pdf?t=20251217" href="javascript:;">
+            <dl class="brochure-card">
+            <dt><img src="https://www.bidepharm.com/static/img/brochure/研发定制.png?t=20251217" alt=""></dt>
+            <dd>
+            <h2>研发定制</h2>
+
+            <p style="color:#007bc4;">产品分类</p>
+            <p>苯环、萘环、苯并噻唑、噻唑、吡啶</p>
+
+            </dd>
+            </dl>
+            </a>
+        </div>
         <div class="flex_between">
             <div class="demo_left">
                 <ul class="left_nav demo_card">
@@ -43,8 +72,8 @@
                     <li><a href="#title_css">css 相关</a></li>
                 </ul>
             </div>
-            <div class="demo_right ">
-                <h2 class="title_h2" id="title_excel">EXCEL 排序 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABm0lEQVR4AcxW0W3CQAx10gxQpHYPRmgnKQPw0Q0IE7QfLNBJYITu0UowQFB4L9KdQuLkfMpBQHk6bHx+Lz7HJJeZP48v4H8t9RSECvz4FXB3UIu8x8DtC63mCrzu5BCDELH73SzAbUi9NgKOn/L8t5Y3DVMJtZz0kZO5cxjluZJjJrLXwCAi9kngHkLLSR85yZ3D2DBwDpC7OQKSo8O3LzvJ7gHw/QDN5QXAOgDNxfNBeW7SEyTATa64Em0BtBtUlSxRntGekEQfVUCi3KY0qoCikF/0hDr5TFkjglQBi285DU29iNymUFWAaWeioJ6Aoe5P5e/q7gkY6v5U/qCAbsCt7V4FHCGGRbKpyCfK5e2uXgBKvOI5twPaE7HtD30P7QNP6XJ4AXB8QMQeq7/aE9E7DV/G9vFfFTwblyZHebbOuPdK7hwDp+R5w7iafCnFaJP1qZAFuf0RwLh650spQJus9JHDC6AxB8wC0Lnq+4HmR2MtrTdjFoDOVd8PNH+dyVdyAdaEsXGjFWBj8gmZgpCgUQGhzZbfQzEXAAAA//+IqhWsAAAABklEQVQDAHc2alCUFbiwAAAAAElFTkSuQmCC" onclick="printDocument()"></h2>
+            <div class="demo_right">
+                <h2 class="title_h2" id="title_excel">EXCEL 排序</h2>
                 <!-- =A2&","&B2&","&C2"." -->
                 <!-- =CONCATENATE(A2,". ",B2,", ",C2,".") -->
                 <h3 class="title_h3">Sheet1 A列 按 sheet2 A列排序</h3>
@@ -165,8 +194,8 @@
                     <p>当您要在多个元素上设置相同的事件处理程序时，e.target非常有用，并且在发生事件时对所有元素执行某些操作。</p>
                 </div>
 
-                <h2 class="title_h2" id="title_css">css 相关</h2>
-                <div class="text_content">
+                <h2 class="title_h2" id="title_css">css 相关 <button id="copybtn" data-clipboard-target="#textToCopy" data-clipboard-action="copy">一键复制</button></h2>
+                <div class="text_content" id="textToCopy">
                     <p>class 命名，尽量避免公共性质的，如： .footer, #header</p>
                     <p>会读取某些插件的样式，导致自己的网页出现意外的样式；可用：品牌名-header</p>
                     <br>
@@ -226,6 +255,56 @@
     function printDocument() {
         window.print();
     }
+
+    var clipboard = new ClipboardJS('#copybtn');
+    clipboard.on('success', function(e) {
+        alert('复制成功');
+    });
+    clipboard.on('error', function(e) {
+        alert('复制失败');
+    });
+
+function downloadFile(url, filename) {
+  // 检测iOS设备
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  
+  if (isIOS) {
+    // iOS设备使用特殊处理
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank'; // 新窗口打开
+    link.download = filename || 'download';
+    
+    // 创建点击事件
+    const event = new MouseEvent('click', {
+      view: window,
+      bubbles: true,
+      cancelable: true
+    });
+    
+    link.dispatchEvent(event);
+    
+    // 对于某些iOS版本，可能需要新窗口
+    setTimeout(() => {
+      window.open(url, '_blank');
+    }, 100);
+  } else {
+    // 非iOS设备正常下载
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.download = filename || 'download';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+}
+// 使用示例
+$(".a_click_log").click(function(){
+    var href = $(this).attr("to_href");
+    var title = $(this).find('h2').html();
+    downloadFile(href, title);
+});
 </script>
 </body>
 </html>
